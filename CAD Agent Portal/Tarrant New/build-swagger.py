@@ -4,11 +4,13 @@
 Usage: python3 build-swagger.py [--cloud] [input.yaml] [output.html]
 The spec is embedded in the page, so it opens straight from disk (no server needed).
 
---cloud builds the shareable claude.ai Artifact version: Swagger's CSS is inlined (the
-Artifact CSP only allows CDN scripts), tokens and password hashes are redacted, and
-"Try it out" is turned off because the Artifact sandbox blocks calls to the API.
+Every build redacts tokens, password hashes and pre-signed AWS URL credentials.
 
---hosted builds a redacted page for a normal static host (Netlify, GitHub Pages, S3...)
+--cloud builds the shareable claude.ai Artifact version: Swagger's CSS is inlined (the
+Artifact CSP only allows CDN scripts), and "Try it out" is turned off because the
+Artifact sandbox blocks calls to the API.
+
+--hosted builds a page for a normal static host (Netlify, GitHub Pages, S3...)
 with "Try it out" on; the API allows cross-origin calls, so requests work from there.
 """
 import json
@@ -53,6 +55,8 @@ for ops in spec.get("paths", {}).values():
         op.setdefault("security", [{scheme: []}])
 
 JWT = re.compile(r"eyJ[\w-]+\.[\w-]+\.[\w-]+")
+# Pre-signed S3 URLs carry temporary AWS credentials in their query string
+AWS_SIGNED = re.compile(r"(?i)\b(AWSAccessKeyId|Signature|x-amz-security-token|X-Amz-Credential|X-Amz-Signature)=[^&\"'\s]+")
 SECRET_KEYS = {"userpassword", "password", "token"}
 
 
@@ -63,12 +67,11 @@ def redact(node):
     if isinstance(node, list):
         return [redact(v) for v in node]
     if isinstance(node, str):
-        return JWT.sub("<redacted JWT>", node)
+        return AWS_SIGNED.sub(r"\1=<redacted>", JWT.sub("<redacted JWT>", node))
     return node
 
 
-if cloud or hosted:
-    spec = redact(spec)
+spec = redact(spec)
 
 spec_json = json.dumps(spec, default=str, separators=(",", ":")).replace("</", "<\\/")
 title = spec.get("info", {}).get("title", "API Docs")
