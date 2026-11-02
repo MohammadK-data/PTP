@@ -1,0 +1,1824 @@
+{
+ "title": "Dallas Property Data Profile",
+ "eyebrow": "Dallas Central Appraisal District · Data export, BPP detail &amp; certified rolls · Tax years 2026–2027",
+ "intro": "Everything Dallas CAD makes available to us in bulk, from three sources: the DCAD data export (14 related tables, published as the July 23 certified export and as current 2026 and 2027 exports), the business personal property detail file, and the certified appraisal rolls. For each file you get its columns, data types, completeness and value distributions. Column descriptions come from DCAD's <code>TABLES AND FIELD NAMES.xlsx</code> and data dictionary where it has them.",
+ "store_key": "dallas-view",
+ "max_year": 2027,
+ "foot": "Generated {date}. Files were scanned in full with DuckDB; \"Auto-detected on load\" is the type DuckDB assigns when it reads the raw file, and distinct counts there are approximate (HyperLogLog). \"Data type\" is inferred from the values: Code means digits stored as text with leading zeros, so it should stay text. Phone numbers and dates of death are not shown.",
+ "root": "/Users/user2/PTP/CAD Website/Dallas/",
+ "datasets": {
+  "c26-ABATEMENT_EXEMPT": {
+   "path": "Data/DCAD2026_CERTIFIED_07232026/ABATEMENT_EXEMPT.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "label": "Abatements",
+   "about": "Tax abatements by taxing unit: start and end years, percent, base value and exempt amount."
+  },
+  "c26-ACCOUNT_APPRL_YEAR": {
+   "path": "Data/DCAD2026_CERTIFIED_07232026/ACCOUNT_APPRL_YEAR.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "label": "Account values",
+   "about": "The central table, one row per account: land, improvement and total market value, the homestead-capped value, taxing units with their split percents, taxable values and tax ceilings, the tax agent and the state property code."
+  },
+  "c26-ACCOUNT_INFO": {
+   "path": "Data/DCAD2026_CERTIFIED_07232026/ACCOUNT_INFO.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "label": "Owner, address & legal",
+   "about": "One row per account: owner name and mailing address, property address, neighborhood, Mapsco, legal description lines and the deed transfer date.",
+   "notes": [
+    "The DCAD field list marks <code>PHONE_NUM</code> as not available and not used.",
+    "<code>EXCLUDE_OWNER</code> = Y marks accounts whose owner is confidential under Tax Code 25.025/25.026; owner name and mailing address are blank on those rows.",
+    "20 <code>DEED_TXFR_DATE</code> values fall after 2027 (the latest is 05/16/6201), typos for real dates. Dates are <code>MM/DD/YYYY</code>."
+   ]
+  },
+  "c26-ACCOUNT_TIF": {
+   "path": "Data/DCAD2026_CERTIFIED_07232026/ACCOUNT_TIF.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "label": "TIF zones",
+   "about": "Accounts in Tax Increment Finance (TIF) zones: the zone, its years, and the base and current values for each taxing unit.",
+   "notes": [
+    "A few accounts sit in more than one TIF zone, so <code>ACCOUNT_NUM</code> alone is not unique here; use <code>ACCOUNT_NUM</code> + <code>TIF_ZONE_DESC</code>."
+   ]
+  },
+  "c26-ACCT_EXEMPT_VALUE": {
+   "path": "Data/DCAD2026_CERTIFIED_07232026/ACCT_EXEMPT_VALUE.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "label": "Exemption amounts",
+   "about": "One row per exemption on an account, with the amount applied for each taxing unit."
+  },
+  "c26-APPLIED_STD_EXEMPT": {
+   "path": "Data/DCAD2026_CERTIFIED_07232026/APPLIED_STD_EXEMPT.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "label": "Standard exemptions",
+   "about": "Standard exemptions per owner: homestead, over-65, disabled and veteran exemptions, tax ceilings by taxing unit, effective dates and prorations.",
+   "notes": [
+    "<code>01/01/1900</code> is a placeholder for \"no date\" in <code>CITY_CEIL_DT</code>, <code>COUNTY_CEIL_DT</code>, <code>ISD_CEIL_DT</code>, <code>COLLEGE_CEIL_DT</code>, <code>DISABLE_EFF_DT</code>; it shows up as 1900 in the charts."
+   ]
+  },
+  "c26-COM_DETAIL": {
+   "path": "Data/DCAD2026_CERTIFIED_07232026/COM_DETAIL.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "label": "Commercial buildings",
+   "about": "Each commercial taxable object (building): class, year built and remodeled, gross and net leasable area, construction, quality, condition, depreciation and appraisal method.",
+   "notes": [
+    "The DCAD field list marks <code>IMP_VAL</code>, <code>LAND_VAL</code>, <code>MKT_VAL</code> as not available and not used."
+   ]
+  },
+  "c26-FREEPORT_EXEMPTION": {
+   "path": "Data/DCAD2026_CERTIFIED_07232026/FREEPORT_EXEMPTION.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "label": "Freeport",
+   "about": "Accounts with a freeport exemption (goods shipped out of Texas within 175 days), with late application and documentation flags.",
+   "notes": [
+    "Per the DCAD data dictionary the two indicator fields may or may not be filled."
+   ]
+  },
+  "c26-LAND": {
+   "path": "Data/DCAD2026_CERTIFIED_07232026/LAND.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "label": "Land sections",
+   "about": "Each land section of an account: state property code, zoning, dimensions, area, pricing method, unit price, market adjustment, value and agricultural use.",
+   "notes": [
+    "Two rows have a negative <code>DEPTH_DIM</code> and two a negative <code>AREA_SIZE</code>; treat them as data-entry errors."
+   ]
+  },
+  "c26-MULTI_OWNER": {
+   "path": "Data/DCAD2026_CERTIFIED_07232026/MULTI_OWNER.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "label": "Multiple owners",
+   "about": "One row per owner on accounts with more than one owner, with each owner's ownership percent."
+  },
+  "c26-RES_ADDL": {
+   "path": "Data/DCAD2026_CERTIFIED_07232026/RES_ADDL.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "label": "Residential additions",
+   "about": "Additional residential improvements such as detached garages, pools, storage buildings and garage enclosures, with size, value and depreciation."
+  },
+  "c26-RES_DETAIL": {
+   "path": "Data/DCAD2026_CERTIFIED_07232026/RES_DETAIL.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "label": "Residential buildings",
+   "about": "The main improvement (usually the house) on each residential taxable object: class, year built, condition, size, construction, rooms, amenities and depreciation.",
+   "notes": [
+    "One row has a negative <code>ACT_AGE</code> (about −476), a bad year built."
+   ]
+  },
+  "c26-TAXABLE_OBJECT": {
+   "path": "Data/DCAD2026_CERTIFIED_07232026/TAXABLE_OBJECT.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "label": "Taxable objects",
+   "about": "One row per taxable object (building or improvement) on an account. Links accounts to the residential and commercial detail tables."
+  },
+  "c26-TOTAL_EXEMPTION": {
+   "path": "Data/DCAD2026_CERTIFIED_07232026/TOTAL_EXEMPTION.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "label": "Totally exempt",
+   "about": "Accounts that are totally exempt (government, religious, charitable and so on), with the reason. A link table; the values live in the account tables.",
+   "notes": [
+    "Per the DCAD data dictionary this is a link table: it has no values of its own, just a row to join to."
+   ]
+  },
+  "u26-ABATEMENT_EXEMPT": {
+   "path": "Data/DCAD2026_CURRENT/ABATEMENT_EXEMPT.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "c26-ABATEMENT_EXEMPT",
+   "compareLabel": "the July 23 certified export",
+   "label": "Abatements",
+   "about": "Tax abatements by taxing unit: start and end years, percent, base value and exempt amount.",
+   "notes": [
+    "Against the July 23 certified export: 74 rows added, 0 removed and 6 changed (matched on <code>ACCOUNT_NUM</code>, every column compared as trimmed text)."
+   ]
+  },
+  "u26-ACCOUNT_APPRL_YEAR": {
+   "path": "Data/DCAD2026_CURRENT/ACCOUNT_APPRL_YEAR.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "c26-ACCOUNT_APPRL_YEAR",
+   "compareLabel": "the July 23 certified export",
+   "label": "Account values",
+   "about": "The central table, one row per account: land, improvement and total market value, the homestead-capped value, taxing units with their split percents, taxable values and tax ceilings, the tax agent and the state property code.",
+   "notes": [
+    "Against the July 23 certified export: 40,669 rows added, 157 removed and 16,032 changed (matched on <code>ACCOUNT_NUM</code>, every column compared as trimmed text).",
+    "40,669 accounts here are not in the certified export ($17.7B of <code>TOT_VAL</code>, mostly residential) and are not on the certified rolls either; <code>VID_IND</code> is N on all of them, so the export gives no reason. 157 certified accounts are gone. On the accounts in both, <code>TOT_VAL</code> fell by a net $205M: 1,420 went down and 71 went up."
+   ]
+  },
+  "u26-ACCOUNT_INFO": {
+   "path": "Data/DCAD2026_CURRENT/ACCOUNT_INFO.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "c26-ACCOUNT_INFO",
+   "compareLabel": "the July 23 certified export",
+   "label": "Owner, address & legal",
+   "about": "One row per account: owner name and mailing address, property address, neighborhood, Mapsco, legal description lines and the deed transfer date.",
+   "notes": [
+    "Against the July 23 certified export: 40,669 rows added, 157 removed and 401 changed (matched on <code>ACCOUNT_NUM</code>, every column compared as trimmed text).",
+    "The DCAD field list marks <code>PHONE_NUM</code> as not available and not used.",
+    "<code>EXCLUDE_OWNER</code> = Y marks accounts whose owner is confidential under Tax Code 25.025/25.026; owner name and mailing address are blank on those rows.",
+    "20 <code>DEED_TXFR_DATE</code> values fall after 2027 (the latest is 05/16/6201), typos for real dates. Dates are <code>MM/DD/YYYY</code>."
+   ]
+  },
+  "u26-ACCOUNT_TIF": {
+   "path": "Data/DCAD2026_CURRENT/ACCOUNT_TIF.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "c26-ACCOUNT_TIF",
+   "compareLabel": "the July 23 certified export",
+   "label": "TIF zones",
+   "about": "Accounts in Tax Increment Finance (TIF) zones: the zone, its years, and the base and current values for each taxing unit.",
+   "notes": [
+    "Against the July 23 certified export: 1,938 rows added, 0 removed and 641 changed (matched on <code>ACCOUNT_NUM</code> + <code>TIF_ZONE_DESC</code>, every column compared as trimmed text).",
+    "A few accounts sit in more than one TIF zone, so <code>ACCOUNT_NUM</code> alone is not unique here; use <code>ACCOUNT_NUM</code> + <code>TIF_ZONE_DESC</code>."
+   ]
+  },
+  "u26-ACCT_EXEMPT_VALUE": {
+   "path": "Data/DCAD2026_CURRENT/ACCT_EXEMPT_VALUE.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "c26-ACCT_EXEMPT_VALUE",
+   "compareLabel": "the July 23 certified export",
+   "label": "Exemption amounts",
+   "about": "One row per exemption on an account, with the amount applied for each taxing unit.",
+   "notes": [
+    "Against the July 23 certified export: 75,943 rows added, 2,290 removed and 948 changed (matched on <code>ACCOUNT_NUM</code> + <code>EXEMPTION_CD</code>, every column compared as trimmed text)."
+   ]
+  },
+  "u26-APPLIED_STD_EXEMPT": {
+   "path": "Data/DCAD2026_CURRENT/APPLIED_STD_EXEMPT.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "c26-APPLIED_STD_EXEMPT",
+   "compareLabel": "the July 23 certified export",
+   "label": "Standard exemptions",
+   "about": "Standard exemptions per owner: homestead, over-65, disabled and veteran exemptions, tax ceilings by taxing unit, effective dates and prorations.",
+   "notes": [
+    "Against the July 23 certified export: 28,124 rows added, 1,385 removed and 3,253 changed (matched on <code>ACCOUNT_NUM</code> + <code>OWNER_SEQ_NUM</code>, every column compared as trimmed text).",
+    "<code>01/01/1900</code> is a placeholder for \"no date\" in <code>CITY_CEIL_DT</code>, <code>COUNTY_CEIL_DT</code>, <code>ISD_CEIL_DT</code>, <code>COLLEGE_CEIL_DT</code>, <code>DISABLE_EFF_DT</code>; it shows up as 1900 in the charts."
+   ]
+  },
+  "u26-COM_DETAIL": {
+   "path": "Data/DCAD2026_CURRENT/COM_DETAIL.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "c26-COM_DETAIL",
+   "compareLabel": "the July 23 certified export",
+   "label": "Commercial buildings",
+   "about": "Each commercial taxable object (building): class, year built and remodeled, gross and net leasable area, construction, quality, condition, depreciation and appraisal method.",
+   "notes": [
+    "Against the July 23 certified export: 365 rows added, 1 removed and 42 changed (matched on <code>TAX_OBJ_ID</code>, every column compared as trimmed text).",
+    "The DCAD field list marks <code>IMP_VAL</code>, <code>LAND_VAL</code>, <code>MKT_VAL</code> as not available and not used."
+   ]
+  },
+  "u26-FREEPORT_EXEMPTION": {
+   "path": "Data/DCAD2026_CURRENT/FREEPORT_EXEMPTION.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "c26-FREEPORT_EXEMPTION",
+   "compareLabel": "the July 23 certified export",
+   "label": "Freeport",
+   "about": "Accounts with a freeport exemption (goods shipped out of Texas within 175 days), with late application and documentation flags.",
+   "notes": [
+    "Against the July 23 certified export: 27 rows added, 5 removed and 3 changed (matched on <code>ACCOUNT_NUM</code>, every column compared as trimmed text).",
+    "Per the DCAD data dictionary the two indicator fields may or may not be filled."
+   ]
+  },
+  "u26-LAND": {
+   "path": "Data/DCAD2026_CURRENT/LAND.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "c26-LAND",
+   "compareLabel": "the July 23 certified export",
+   "label": "Land sections",
+   "about": "Each land section of an account: state property code, zoning, dimensions, area, pricing method, unit price, market adjustment, value and agricultural use.",
+   "notes": [
+    "Against the July 23 certified export: 40,508 rows added, 4 removed and 72 changed (matched on <code>ACCOUNT_NUM</code> + <code>SECTION_NUM</code>, every column compared as trimmed text).",
+    "Two rows have a negative <code>DEPTH_DIM</code> and two a negative <code>AREA_SIZE</code>; treat them as data-entry errors."
+   ]
+  },
+  "u26-MULTI_OWNER": {
+   "path": "Data/DCAD2026_CURRENT/MULTI_OWNER.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "c26-MULTI_OWNER",
+   "compareLabel": "the July 23 certified export",
+   "label": "Multiple owners",
+   "about": "One row per owner on accounts with more than one owner, with each owner's ownership percent.",
+   "notes": [
+    "Against the July 23 certified export: 5,894 rows added, 456 removed and 24 changed (matched on <code>ACCOUNT_NUM</code> + <code>OWNER_SEQ_NUM</code>, every column compared as trimmed text)."
+   ]
+  },
+  "u26-RES_ADDL": {
+   "path": "Data/DCAD2026_CURRENT/RES_ADDL.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "c26-RES_ADDL",
+   "compareLabel": "the July 23 certified export",
+   "label": "Residential additions",
+   "about": "Additional residential improvements such as detached garages, pools, storage buildings and garage enclosures, with size, value and depreciation.",
+   "notes": [
+    "Against the July 23 certified export: 45,006 rows added, 30 removed and 9 changed (matched on <code>ACCOUNT_NUM</code> + <code>TAX_OBJ_ID</code> + <code>SEQ_NUM</code>, every column compared as trimmed text)."
+   ]
+  },
+  "u26-RES_DETAIL": {
+   "path": "Data/DCAD2026_CURRENT/RES_DETAIL.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "c26-RES_DETAIL",
+   "compareLabel": "the July 23 certified export",
+   "label": "Residential buildings",
+   "about": "The main improvement (usually the house) on each residential taxable object: class, year built, condition, size, construction, rooms, amenities and depreciation.",
+   "notes": [
+    "Against the July 23 certified export: 40,167 rows added, 9 removed and 33 changed (matched on <code>ACCOUNT_NUM</code> + <code>TAX_OBJ_ID</code>, every column compared as trimmed text).",
+    "One row has a negative <code>ACT_AGE</code> (about −476), a bad year built."
+   ]
+  },
+  "u26-TAXABLE_OBJECT": {
+   "path": "Data/DCAD2026_CURRENT/TAXABLE_OBJECT.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "c26-TAXABLE_OBJECT",
+   "compareLabel": "the July 23 certified export",
+   "label": "Taxable objects",
+   "about": "One row per taxable object (building or improvement) on an account. Links accounts to the residential and commercial detail tables.",
+   "notes": [
+    "Against the July 23 certified export: 40,744 rows added, 163 removed and 0 changed (matched on <code>ACCOUNT_NUM</code> + <code>TAX_OBJ_ID</code>, every column compared as trimmed text)."
+   ]
+  },
+  "u26-TOTAL_EXEMPTION": {
+   "path": "Data/DCAD2026_CURRENT/TOTAL_EXEMPTION.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "c26-TOTAL_EXEMPTION",
+   "compareLabel": "the July 23 certified export",
+   "label": "Totally exempt",
+   "about": "Accounts that are totally exempt (government, religious, charitable and so on), with the reason. A link table; the values live in the account tables.",
+   "notes": [
+    "Against the July 23 certified export: 98 rows added, 3 removed and 1 changed (matched on <code>ACCOUNT_NUM</code>, every column compared as trimmed text).",
+    "Per the DCAD data dictionary this is a link table: it has no values of its own, just a row to join to."
+   ]
+  },
+  "u27-ABATEMENT_EXEMPT": {
+   "path": "Data/DCAD2027_CURRENT/ABATEMENT_EXEMPT.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "u26-ABATEMENT_EXEMPT",
+   "compareLabel": "the 2026 current export",
+   "label": "Abatements",
+   "about": "Tax abatements by taxing unit: start and end years, percent, base value and exempt amount.",
+   "notes": [
+    "Appraisal year 2027 has no values yet: <code>TOT_VAL</code> and every base and exemption amount are 0 in every row. Use it for accounts, ownership and property characteristics, not values.",
+    "Appraisal year 2027 work in progress. 917 rows against 937 in the 2026 current export (−20)."
+   ]
+  },
+  "u27-ACCOUNT_APPRL_YEAR": {
+   "path": "Data/DCAD2027_CURRENT/ACCOUNT_APPRL_YEAR.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "u26-ACCOUNT_APPRL_YEAR",
+   "compareLabel": "the 2026 current export",
+   "label": "Account values",
+   "about": "The central table, one row per account: land, improvement and total market value, the homestead-capped value, taxing units with their split percents, taxable values and tax ceilings, the tax agent and the state property code.",
+   "notes": [
+    "Appraisal year 2027 has no values yet: every value column (<code>TOT_VAL</code>, <code>IMPR_VAL</code>, <code>LAND_VAL</code>, the taxable and ceiling values) is 0 in every row. Use it for accounts, ownership and property characteristics, not values.",
+    "Appraisal year 2027 work in progress. 863,867 rows against 847,075 in the 2026 current export (+16,792)."
+   ]
+  },
+  "u27-ACCOUNT_INFO": {
+   "path": "Data/DCAD2027_CURRENT/ACCOUNT_INFO.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "u26-ACCOUNT_INFO",
+   "compareLabel": "the 2026 current export",
+   "label": "Owner, address & legal",
+   "about": "One row per account: owner name and mailing address, property address, neighborhood, Mapsco, legal description lines and the deed transfer date.",
+   "notes": [
+    "Appraisal year 2027 work in progress. 863,867 rows against 847,075 in the 2026 current export (+16,792).",
+    "The DCAD field list marks <code>PHONE_NUM</code> as not available and not used.",
+    "<code>EXCLUDE_OWNER</code> = Y marks accounts whose owner is confidential under Tax Code 25.025/25.026; owner name and mailing address are blank on those rows.",
+    "34 <code>DEED_TXFR_DATE</code> values fall after 2027 (the latest is 05/16/6201), typos for real dates. Dates are <code>MM/DD/YYYY</code>."
+   ]
+  },
+  "u27-ACCOUNT_TIF": {
+   "path": "Data/DCAD2027_CURRENT/ACCOUNT_TIF.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "u26-ACCOUNT_TIF",
+   "compareLabel": "the 2026 current export",
+   "label": "TIF zones",
+   "about": "Accounts in Tax Increment Finance (TIF) zones: the zone, its years, and the base and current values for each taxing unit.",
+   "notes": [
+    "Appraisal year 2027 has no values yet: <code>ACCT_MKT</code> and every base and taxable amount are 0 in every row. Use it for accounts, ownership and property characteristics, not values.",
+    "Appraisal year 2027 work in progress. 42,967 rows against 42,248 in the 2026 current export (+719).",
+    "A few accounts sit in more than one TIF zone, so <code>ACCOUNT_NUM</code> alone is not unique here; use <code>ACCOUNT_NUM</code> + <code>TIF_ZONE_DESC</code>."
+   ]
+  },
+  "u27-ACCT_EXEMPT_VALUE": {
+   "path": "Data/DCAD2027_CURRENT/ACCT_EXEMPT_VALUE.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "u26-ACCT_EXEMPT_VALUE",
+   "compareLabel": "the 2026 current export",
+   "label": "Exemption amounts",
+   "about": "One row per exemption on an account, with the amount applied for each taxing unit.",
+   "notes": [
+    "Appraisal year 2027 has no values yet: every applied exemption amount is 0 in every row. Use it for accounts, ownership and property characteristics, not values.",
+    "Appraisal year 2027 work in progress. 1,583,398 rows against 1,563,666 in the 2026 current export (+19,732)."
+   ]
+  },
+  "u27-APPLIED_STD_EXEMPT": {
+   "path": "Data/DCAD2027_CURRENT/APPLIED_STD_EXEMPT.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "u26-APPLIED_STD_EXEMPT",
+   "compareLabel": "the 2026 current export",
+   "label": "Standard exemptions",
+   "about": "Standard exemptions per owner: homestead, over-65, disabled and veteran exemptions, tax ceilings by taxing unit, effective dates and prorations.",
+   "notes": [
+    "Appraisal year 2027 has no values yet: <code>TOT_VAL</code> is 0 in every row. Use it for accounts, ownership and property characteristics, not values.",
+    "Appraisal year 2027 work in progress. 428,352 rows against 425,265 in the 2026 current export (+3,087).",
+    "<code>01/01/1900</code> is a placeholder for \"no date\" in <code>CITY_CEIL_DT</code>, <code>COUNTY_CEIL_DT</code>, <code>ISD_CEIL_DT</code>, <code>COLLEGE_CEIL_DT</code>, <code>DISABLE_EFF_DT</code>; it shows up as 1900 in the charts."
+   ]
+  },
+  "u27-COM_DETAIL": {
+   "path": "Data/DCAD2027_CURRENT/COM_DETAIL.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "u26-COM_DETAIL",
+   "compareLabel": "the 2026 current export",
+   "label": "Commercial buildings",
+   "about": "Each commercial taxable object (building): class, year built and remodeled, gross and net leasable area, construction, quality, condition, depreciation and appraisal method.",
+   "notes": [
+    "Appraisal year 2027 work in progress. 93,214 rows against 93,297 in the 2026 current export (−83).",
+    "The DCAD field list marks <code>IMP_VAL</code>, <code>LAND_VAL</code>, <code>MKT_VAL</code> as not available and not used."
+   ]
+  },
+  "u27-FREEPORT_EXEMPTION": {
+   "path": "Data/DCAD2027_CURRENT/FREEPORT_EXEMPTION.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "u26-FREEPORT_EXEMPTION",
+   "compareLabel": "the 2026 current export",
+   "label": "Freeport",
+   "about": "Accounts with a freeport exemption (goods shipped out of Texas within 175 days), with late application and documentation flags.",
+   "notes": [
+    "Appraisal year 2027 work in progress. 2,097 rows against 2,109 in the 2026 current export (−12).",
+    "Per the DCAD data dictionary the two indicator fields may or may not be filled."
+   ]
+  },
+  "u27-LAND": {
+   "path": "Data/DCAD2027_CURRENT/LAND.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "u26-LAND",
+   "compareLabel": "the 2026 current export",
+   "label": "Land sections",
+   "about": "Each land section of an account: state property code, zoning, dimensions, area, pricing method, unit price, market adjustment, value and agricultural use.",
+   "notes": [
+    "Appraisal year 2027 has no values yet: <code>VAL_AMT</code>, <code>COST_PER_UOM</code> and <code>ACCT_AG_VAL_AMT</code> are 0 in every row. Use it for accounts, ownership and property characteristics, not values.",
+    "Appraisal year 2027 work in progress. 751,973 rows against 736,479 in the 2026 current export (+15,494).",
+    "Two rows have a negative <code>DEPTH_DIM</code> and two a negative <code>AREA_SIZE</code>; treat them as data-entry errors."
+   ]
+  },
+  "u27-MULTI_OWNER": {
+   "path": "Data/DCAD2027_CURRENT/MULTI_OWNER.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "u26-MULTI_OWNER",
+   "compareLabel": "the 2026 current export",
+   "label": "Multiple owners",
+   "about": "One row per owner on accounts with more than one owner, with each owner's ownership percent.",
+   "notes": [
+    "Appraisal year 2027 work in progress. 112,638 rows against 109,765 in the 2026 current export (+2,873)."
+   ]
+  },
+  "u27-RES_ADDL": {
+   "path": "Data/DCAD2027_CURRENT/RES_ADDL.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "u26-RES_ADDL",
+   "compareLabel": "the 2026 current export",
+   "label": "Residential additions",
+   "about": "Additional residential improvements such as detached garages, pools, storage buildings and garage enclosures, with size, value and depreciation.",
+   "notes": [
+    "Appraisal year 2027 has no values yet: <code>VAL_AMT</code> is 0 in every row. Use it for accounts, ownership and property characteristics, not values.",
+    "Appraisal year 2027 work in progress. 787,240 rows against 773,397 in the 2026 current export (+13,843)."
+   ]
+  },
+  "u27-RES_DETAIL": {
+   "path": "Data/DCAD2027_CURRENT/RES_DETAIL.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "u26-RES_DETAIL",
+   "compareLabel": "the 2026 current export",
+   "label": "Residential buildings",
+   "about": "The main improvement (usually the house) on each residential taxable object: class, year built, condition, size, construction, rooms, amenities and depreciation.",
+   "notes": [
+    "Appraisal year 2027 work in progress. 684,345 rows against 668,701 in the 2026 current export (+15,644).",
+    "One row has a negative <code>ACT_AGE</code> (about −476), a bad year built."
+   ]
+  },
+  "u27-TAXABLE_OBJECT": {
+   "path": "Data/DCAD2027_CURRENT/TAXABLE_OBJECT.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "u26-TAXABLE_OBJECT",
+   "compareLabel": "the 2026 current export",
+   "label": "Taxable objects",
+   "about": "One row per taxable object (building or improvement) on an account. Links accounts to the residential and commercial detail tables.",
+   "notes": [
+    "Appraisal year 2027 work in progress. 879,757 rows against 862,935 in the 2026 current export (+16,822)."
+   ]
+  },
+  "u27-TOTAL_EXEMPTION": {
+   "path": "Data/DCAD2027_CURRENT/TOTAL_EXEMPTION.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "u26-TOTAL_EXEMPTION",
+   "compareLabel": "the 2026 current export",
+   "label": "Totally exempt",
+   "about": "Accounts that are totally exempt (government, religious, charitable and so on), with the reason. A link table; the values live in the account tables.",
+   "notes": [
+    "Appraisal year 2027 work in progress. 21,583 rows against 21,753 in the 2026 current export (−170).",
+    "Per the DCAD data dictionary this is a link table: it has no values of its own, just a row to join to."
+   ]
+  },
+  "bc26-BPP_DETAIL": {
+   "path": "Data/DCAD2026_BPP_DETAIL_CERTIFIED_07232026/DCAD2026_BPP_DETAIL_CURRENT.csv",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "label": "BPP accounts",
+   "about": "One row per business personal property account: business type, rendition status, location, owner, total value this year and last, value by asset category (inventory, furniture and fixtures, equipment, vehicles...) and taxable value by taxing unit.",
+   "notes": [
+    "Dates here are timestamps (<code>2024-01-01 00:00:00</code>), not <code>MM/DD/YYYY</code> like the data export. <code>1900-01-01</code> is a placeholder for \"no date\" (6,210 rows in <code>ESTABLISHED_DT</code>), and 49 <code>ESTABLISHED_DT</code> values fall after 2027 (as late as 7368), typos.",
+    "Field names come from <code>BPP FIELD NAMES.txt</code>, which only lists them; descriptions here are written from the names and <code>BPP Data Explanation.doc</code>.",
+    "The certified folder's file is named <code>DCAD2026_BPP_DETAIL_CURRENT.csv</code>, the same as the current file; the folder name (<code>_CERTIFIED_07232026</code>) is what tells them apart."
+   ]
+  },
+  "bu26-BPP_DETAIL": {
+   "path": "Data/DCAD2026_BPP_DETAIL_CURRENT/DCAD2026_BPP_DETAIL_CURRENT.csv",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "encoding": "CSV, Latin-1",
+   "compare": "bc26-BPP_DETAIL",
+   "compareLabel": "the July 23 certified file",
+   "label": "BPP accounts",
+   "about": "One row per business personal property account: business type, rendition status, location, owner, total value this year and last, value by asset category (inventory, furniture and fixtures, equipment, vehicles...) and taxable value by taxing unit.",
+   "notes": [
+    "Dates here are timestamps (<code>2024-01-01 00:00:00</code>), not <code>MM/DD/YYYY</code> like the data export. <code>1900-01-01</code> is a placeholder for \"no date\" (6,215 rows in <code>ESTABLISHED_DT</code>), and 49 <code>ESTABLISHED_DT</code> values fall after 2027 (as late as 7368), typos.",
+    "Field names come from <code>BPP FIELD NAMES.txt</code>, which only lists them; descriptions here are written from the names and <code>BPP Data Explanation.doc</code>."
+   ]
+  },
+  "r26-REAL_ROLL": {
+   "path": "output/real_roll/REAL_APRL_ROLL_DALLAS_CO_2026.csv",
+   "read": "csv",
+   "encoding": "Fixed-width .DAT, converted to CSV",
+   "label": "Real property roll",
+   "about": "The certified appraisal roll for real property in the fixed-width layout DCAD sends to taxing units: one 3,672-character record per account with values, every exemption amount by taxing unit, ceilings, abatements, prorations and flags.",
+   "notes": [
+    "DCAD ships this as a fixed-width file (<code>REAL_APRL_ROLL_DALLAS_CO_2026.DAT</code>, 3,672 characters per record). It was converted to CSV with <code>etl/bpp_roll_to_csv.py</code> using the positions in <code>Add_Change_File_Format.xls</code>: <code>OCCURS</code> groups are numbered <code>_1</code>…<code>_3</code>, FILLER is dropped, and implied decimals are divided out.",
+    "Numeric (NU) fields are zero-filled in the raw file. The conversion strips leading zeros, so 8-digit <code>MMDDYYYY</code> dates load as numbers (<code>1012026</code> is 01/01/2026) and <code>0</code> means no date. Read them as text and pad to 8 digits before parsing.",
+    "Columns 27–206 are FILLER in this layout; the owner name and mailing address are at the end of the record (<code>OWNER_NAME</code>, <code>OWNER_ADDRESS_LINE_1</code>…<code>5</code>).",
+    "Accounts join to the data export on <code>DCAD_ACCOUNT_NUMBER</code> = <code>ACCOUNT_NUM</code>.",
+    "<code>PROPERTY_LOCATION_ZIP_CODE</code> is 0 in every row; take the property ZIP from <code>ACCOUNT_INFO.PROPERTY_ZIPCODE</code> in the data export. Many exemption amount, percent and date fields are also 0 throughout (shown in the column table)."
+   ]
+  },
+  "r26-BPP_ROLL": {
+   "path": "output/bpp_roll/BPP_APRL_ROLL_DALLAS_CO_2026.csv",
+   "read": "csv",
+   "encoding": "Fixed-width .DAT, converted to CSV",
+   "label": "BPP roll",
+   "about": "The certified appraisal roll for business personal property, same layout as the real property roll, with the BPP-only freeport and goods-in-transit fields filled.",
+   "notes": [
+    "DCAD ships this as a fixed-width file (<code>BPP_APRL_ROLL_DALLAS_CO_2026.DAT</code>, 3,672 characters per record). It was converted to CSV with <code>etl/bpp_roll_to_csv.py</code> using the positions in <code>Add_Change_File_Format.xls</code>: <code>OCCURS</code> groups are numbered <code>_1</code>…<code>_3</code>, FILLER is dropped, and implied decimals are divided out.",
+    "Numeric (NU) fields are zero-filled in the raw file. The conversion strips leading zeros, so 8-digit <code>MMDDYYYY</code> dates load as numbers (<code>1012026</code> is 01/01/2026) and <code>0</code> means no date. Read them as text and pad to 8 digits before parsing.",
+    "Columns 27–206 are FILLER in this layout; the owner name and mailing address are at the end of the record (<code>OWNER_NAME</code>, <code>OWNER_ADDRESS_LINE_1</code>…<code>5</code>).",
+    "Accounts join to the data export on <code>DCAD_ACCOUNT_NUMBER</code> = <code>ACCOUNT_NUM</code>."
+   ]
+  }
+ },
+ "descriptions": {
+  "ACCOUNT_NUM": "DCAD account number / Parcel Identification.",
+  "APPRAISAL_YR": "Appraisal year for data.",
+  "TOT_VAL": "Total value for property.",
+  "CITY_EFF_YR": "Effective year of abatement for city jurisdiction.",
+  "CITY_EXP_YR": "Expiration year of abatement for city jurisdiction.",
+  "CITY_EXEMPTION_PCT": "Exemption percent for city.",
+  "CITY_BASE_VAL": "City base value.",
+  "CITY_VAL_DIF": "Value difference for city.",
+  "CITY_EXEMPTION_AMT": "City abatement exemption amount.",
+  "CNTY_EFF_YR": "Effective year of abatement for county jurisdiction.",
+  "CNTY_EXP_YR": "Expiration year of abatement for county jurisdiction.",
+  "CNTY_EXEMPTION_PCT": "Exemption percent for county.",
+  "CNTY_BASE_VAL": "County base value.",
+  "CNTY_VAL_DIF": "Value difference for county.",
+  "CNTY_EXEMPTION_AMT": "County abatement exemption amount.",
+  "ISD_EFF_YR": "Effective year of abatement for ISD jurisdiction.",
+  "ISD_EXP_YR": "Expiration year of abatement for ISD jurisdiction.",
+  "ISD_EXEMPTION_PCT": "Exemption percent for ISD.",
+  "ISD_BASE_VAL": "ISD base value.",
+  "ISD_VAL_DIF": "Value difference for ISD.",
+  "ISD_EXEMPTION_AMT": "ISD abatement exemption amount.",
+  "COLL_EFF_YR": "Effective year of abatement for college jurisdiction.",
+  "COLL_EXP_YR": "Expiration year of abatement for college jurisdiction.",
+  "COLL_EXEMPTION_PCT": "Exemption percent for college.",
+  "COLL_BASE_VAL": "College base value.",
+  "COLL_VAL_DIF": "Value difference for college.",
+  "COLL_EXEMPTION_AMT": "College abatement exemption amount.",
+  "SPEC_EFF_YR": "Effective year of abatement for special district jurisdiction.",
+  "SPEC_EXP_YR": "Expiration year of abatement for special district jurisdiction.",
+  "SPEC_EXEMPTION_PCT": "Exemption percent for special district.",
+  "SPEC_BASE_VAL": "Special district base value.",
+  "SPEC_VAL_DIF": "Value difference for special district.",
+  "SPEC_EXEMPTION_AMT": "Special district abatement exemption amount.",
+  "IMPR_VAL": "Total value of improvements.",
+  "LAND_VAL": "Total land value.",
+  "LAND_AG_EXEMPT": "Total market value of AG exemption land.",
+  "AG_USE_VAL": "AG value of AG exemption land.",
+  "HMSTD_CAP_VAL": "Capped total value of account.",
+  "REVAL_YR": "Year of last and/or most recent reappraisal.",
+  "PREV_REVAL_YR": "Year of previous reappraisal.",
+  "PREV_MKT_VAL": "Market Value as of previous reappraisal.",
+  "TOT_CONTRIB_AMT": "Total added contributory value of permit activity for current year.",
+  "TAXPAYER_REP": "Name of property tax representative.",
+  "CITY_JURIS_DESC": "City jurisdiction for account.",
+  "COUNTY_JURIS_DESC": "County jurisdiction for account.",
+  "ISD_JURIS_DESC": "ISD jurisdiction for account.",
+  "HOSPITAL_JURIS_DESC": "Hospital jurisdiction for account.",
+  "COLLEGE_JURIS_DESC": "College jurisdiction for account.",
+  "SPECIAL_DIST_JURIS_DESC": "Special district jurisdiction for account.",
+  "CITY_SPLIT_PCT": "Percent of parcel in city jurisdiction.",
+  "COUNTY_SPLIT_PCT": "Percent of parcel in county jurisdiction.",
+  "ISD_SPLIT_PCT": "Percent of parcel in ISD jurisdiction.",
+  "HOSPITAL_SPLIT_PCT": "Percent of parcel in hospital jurisdiction.",
+  "COLLEGE_SPLIT_PCT": "Percent of parcel in college jurisdiction.",
+  "SPECIAL_DIST_SPLIT_PCT": "Percent of parcel in special district jurisdiction.",
+  "CITY_TAXABLE_VAL": "City jurisdiction taxable value.",
+  "COUNTY_TAXABLE_VAL": "County jurisdiction taxable value.",
+  "ISD_TAXABLE_VAL": "ISD jurisdiction taxable value.",
+  "HOSPITAL_TAXABLE_VAL": "Hospital jurisdiction taxable value.",
+  "COLLEGE_TAXABLE_VAL": "College jurisdiction taxable value.",
+  "SPECIAL_DIST_TAXABLE_VAL": "Special district jurisdiction taxable value.",
+  "CITY_CEILING_VALUE": "Tax ceiling for city jurisdiction.",
+  "COUNTY_CEILING_VALUE": "Tax ceiling for county jurisdiction.",
+  "ISD_CEILING_VALUE": "Tax ceiling for ISD jurisdiction.",
+  "HOSPITAL_CEILING_VALUE": "Tax ceiling for hospital jurisdiction.",
+  "COLLEGE_CEILING_VALUE": "Tax ceiling for county jurisdiction.",
+  "SPECIAL_DIST_CEILING_VALUE": "Tax ceiling for special district jurisdiction.",
+  "VID_IND": "Flag indicating account is in value in dispute after certification.",
+  "GIS_PARCEL_ID": "Real property account number/ parcel identifier.",
+  "APPRAISAL_METH_CD": "Appraisal method code (1 = Cost, 2 = Sales, 3 = Income).",
+  "RENDITION_PENALTY": "Flag indication that account had a rendition penalty.",
+  "DIVISION_CD": "RES, COM, AND BPP.",
+  "EXTRNL_CNTY_ACCT": "County tax office account number if applicable.",
+  "EXTRNL_CITY_ACCT": "City tax office account number if applicable.",
+  "P_BUS_TYP_CD": "Primary business type code description.",
+  "BLDG_CLASS_CD": "Primary building class description.",
+  "SPTD_CODE": "State Property Tax Assistance Division/DCAD property classification reference code.",
+  "BIZ_NAME": "Name of business.",
+  "OWNER_NAME1": "Owner name.",
+  "OWNER_NAME2": "Additional Owner Name information if applicable.",
+  "EXCLUDE_OWNER": "Flag to show if account is private per Sec.# 25.025 or 25.026 of Texas Property Tax Code.",
+  "OWNER_ADDRESS_LINE1": "Owner mailing address info (name).",
+  "OWNER_ADDRESS_LINE2": "Owner mailing address info (name).",
+  "OWNER_ADDRESS_LINE3": "Owner mailing address info (street number, street name, suite/unit reference.",
+  "OWNER_ADDRESS_LINE4": "Owner mailing address info (street number, street name, suite/unit reference.",
+  "OWNER_CITY": "Owner mailing address info (city).",
+  "OWNER_STATE": "Owner mailing address info (state).",
+  "OWNER_ZIPCODE": "Owner mailing address info (zip code).",
+  "OWNER_COUNTRY": "Owner mailing address info (country).",
+  "STREET_NUM": "Property address info.",
+  "STREET_HALF_NUM": "Property address info.",
+  "FULL_STREET_NAME": "Property address info.",
+  "BLDG_ID": "Property address info.",
+  "UNIT_ID": "Property address info.",
+  "PROPERTY_CITY": "Property address info.",
+  "PROPERTY_ZIPCODE": "Property address info.",
+  "MAPSCO": "Mapsco Page and Grid.",
+  "NBHD_CD": "DCAD Neighborhood identifier.",
+  "LEGAL1": "Legal description information for property.",
+  "LEGAL2": "Legal description information for property.",
+  "LEGAL3": "Legal description information for property.",
+  "LEGAL4": "Legal description information for owner document (instrument filing reference).",
+  "LEGAL5": "Legal description information for legal description search reference.",
+  "DEED_TXFR_DATE": "Deed Transfer Date.",
+  "PHONE_NUM": "Not available and not used (per the DCAD field list).",
+  "LMA": "DCAD Land Market Area Identifier (Commercial Only).",
+  "IMA": "DCAD Improved Market Area Identifier (Commercial Only).",
+  "TIF_ZONE_DESC": "Description of TIF Zone.",
+  "EFFECTIVE_YR": "Effective year of the TIF.",
+  "EXPIRATION_YR": "Expiration year of the TIF.",
+  "ACCT_MKT": "Market Value of the account.",
+  "CITY_PCT": "City jurisdiction percentage.",
+  "CITY_BASE_MKT": "City jurisdiction base amount.",
+  "CITY_BASE_TAXABLE": "City base taxable value.",
+  "CITY_ACCT_TAXABLE": "City Account taxable.",
+  "CNTY_PCT": "County jurisdiction percent.",
+  "CNTY_BASE_MKT": "County jurisdiction base amount.",
+  "CNTY_BASE_TAXABLE": "County base taxable value.",
+  "CNTY_ACCT_TAXABLE": "County account taxable value.",
+  "ISD_PCT": "ISD jurisdiction percent.",
+  "ISD_BASE_MKT": "ISD jurisdiction base amount.",
+  "ISD_BASE_TAXABLE": "ISD base taxable value.",
+  "ISD_ACCT_TAXABLE": "ISD account taxable value.",
+  "HOSP_PCT": "Hospital jurisdiction percent.",
+  "HOSP_BASE_MKT": "Hospital jurisdiction base amount.",
+  "HOSP_BASE_TAXABLE": "Hospital base taxable value.",
+  "HOSP_ACCT_TAXABLE": "Hospital account taxable value.",
+  "COLL_PCT": "College jurisdiction percent.",
+  "COLL_BASE_MKT": "College jurisdiction base amount.",
+  "COLL_BASE_TAXABLE": "College base taxable value.",
+  "COLL_ACCT_TAXABLE": "College account taxable value.",
+  "SPEC_PCT": "Special District jurisdiction percent.",
+  "SPEC_BASE_MKT": "Special District jurisdiction base amount.",
+  "SPEC_BASE_TAXABLE": "Special District base taxable value.",
+  "SPEC_ACCT_TAXABLE": "Special District account taxable value.",
+  "SORTORDER": "DCAD Sort order.",
+  "EXEMPTION_CD": "DCAD Exemption code.",
+  "EXEMPTION": "Description of Exemption Type.",
+  "CITY_APPLD_VAL": "Amount of exemption for City Jurisdiction.",
+  "CNTY_APPLD_VAL": "Amount of exemption for County Jurisdiction.",
+  "ISD_APPLD_VAL": "Amount of exemption for ISD Jurisdiction.",
+  "HOSPITAL_APPLD_VAL": "Amount of exemption for Hospital Jurisdiction.",
+  "COLLEGE_APPLD_VAL": "Amount of exemption for College Jurisdiction.",
+  "SPCL_APPLIED_VAL": "Amount of exemption for Special District Jurisdiction.",
+  "OWNER_SEQ_NUM": "Owner sequence number 1, 2 or 3 (1 is the primary owner).",
+  "EXEMPT_STATUS_CD": "Exemption status 1 = active, 2 = inherited from prior owner.",
+  "OWNERSHIP_PCT": "percent of ownership for listed owner.",
+  "APPLICANT_NAME": "Name of exemption applicant.",
+  "HOMESTEAD_EFF_DT": "Effective date of homestead exemption. Called HOMESTEAD_EFF_DATE in the DCAD field list.",
+  "OVER65_DESC": "Description of OTHER exemption. Called OTHER_DESC in the DCAD field list.",
+  "DISABLED_DESC": "Description of disabled exemption.",
+  "TAX_DEFERRED_DESC": "Description of tax deferral.",
+  "CITY_CEIL_TAX_VAL": "Amount of city jurisdiction tax ceiling.",
+  "CITY_CEIL_DT": "Effective date of city tax ceiling.",
+  "CITY_CEIL_XFER_PCT": "Percent of transfer of city tax ceiling.",
+  "CITY_CEIL_SET_IND": "Flag to signify city tax ceiling.",
+  "COUNTY_CEIL_TAX_VAL": "Amount of County jurisdiction tax ceiling.",
+  "COUNTY_CEIL_DT": "Effective date of County tax ceiling.",
+  "COUNTY_CEIL_XFER_PCT": "Percent of transfer of County tax ceiling.",
+  "COUNTY_CEIL_SET_IND": "Flag to signify County tax ceiling.",
+  "ISD_CEIL_TAX_VAL": "Amount of ISD jurisdiction tax ceiling.",
+  "ISD_CEIL_DT": "Effective date of ISD tax ceiling.",
+  "ISD_CEIL_XFER_PCT": "Percent of transfer of ISD tax ceiling.",
+  "ISD_CEIL_SET_IND": "Flag to signify ISD tax ceiling.",
+  "COLLEGE_CEIL_TAX_VAL": "Amount of College jurisdiction tax ceiling.",
+  "COLLEGE_CEIL_DT": "Effective date of College tax ceiling.",
+  "COLLEGE_CEIL_XFER_PCT": "Percent of transfer of College tax ceiling.",
+  "COLLEGE_CEIL_SET_IND": "Flag to signify College tax ceiling.",
+  "DISABLE_EFF_DT": "Effective date of disabled exemption.",
+  "VET_EFF_YR": "Veteran exemption effective year.",
+  "VET_DISABLE_PCT": "Veteran exemption disable percent.",
+  "VET_FLAT_AMT": "Veteran exemption flat amount.",
+  "VET2_EFF_YR": "Veteran 2 exemption effective year.",
+  "VET2_DISABLE_PCT": "Veteran 2 exemption disable percent.",
+  "VET2_FLAT_AMT": "Veteran 2 exemption flat amount.",
+  "CAPPED_HS_AMT": "Difference between total value of property and capped appraisal value.",
+  "HS_PCT": "Percentage of homestead exemption.",
+  "PRORATE_IND": "Flag showing if the exemption is prorated for a number of days in year.",
+  "DAYS_TAXABLE": "Number of days account is taxable without exemption if account is prorated.",
+  "PRORATE_EFF_DT": "Effective date of proration.",
+  "PRORATE_EXP_DT": "Expiration date of proration.",
+  "PRORATE_NAME": "Taxpayer name if proration owner.",
+  "OVER65_PCT": "Percentage of OTHER exemption. Called OTHER_PCT in the DCAD field list.",
+  "DISABLEDPCT": "Percentage of disable exemption.",
+  "XFER_IND": "Flag to signify ceiling transfer.",
+  "CIRCUIT_BK_FLG": "Flag to signify circuit breaker cap.",
+  "TAX_OBJ_ID": "DCAD Taxable Object Parcel ID (One account may have multiple taxable objects, i.e. Hotel and a Parking Garage.",
+  "BLDG_CLASS_DESC": "Building class description for listed taxable object.",
+  "YEAR_BUILT": "Year structure was built.",
+  "REMODEL_YR": "Year of remodel if applicable (may often be same year as year built. Called REMODEL_YEAR in the DCAD field list.",
+  "GROSS_BLDG_AREA": "Gross building area.",
+  "FOUNDATION_TYP_DESC": "Foundation type description.",
+  "FOUNDATION_AREA": "Foundation area.",
+  "BASEMENT_DESC": "Basement description.",
+  "BASEMENT_AREA": "Basement area.",
+  "NUM_STORIES": "Number of stories of structure.",
+  "CONSTR_TYP_DESC": "Construction type description.",
+  "HEATING_TYP_DESC": "Heating type description.",
+  "AC_TYP_DESC": "A/C type description.",
+  "NUM_UNITS": "Number of units contained in structure.",
+  "NET_LEASE_AREA": "Net Leasable Area.",
+  "PROPERTY_NAME": "Property name.",
+  "PROPERTY_QUAL_DESC": "Property quality description.",
+  "PROPERTY_COND_DESC": "Property condition description.",
+  "PHYS_DEPR_PCT": "Percent of physical depreciation.",
+  "FUNCT_DEPR_PCT": "Percent of functional depreciation.",
+  "EXTRNL_DEPR_PCT": "Percent of external depreciation.",
+  "TOT_DEPR_PCT": "Total percent of depreciation.",
+  "IMP_VAL": "Not available and not used (per the DCAD field list).",
+  "MKT_VAL": "Not available and not used (per the DCAD field list).",
+  "APPR_METHOD_DESC": "COST, SALES OR INCOME.",
+  "COMPARABILITY_CD": "DCAD comparability class description.",
+  "PCT_COMPLETE": "The percent complete of the structure.",
+  "LATE_APP_IND": "Flag signifying application was late.",
+  "LATE_DOC_IND": "Flag signifying documentation was late.",
+  "SECTION_NUM": "Section number of land pricing entry.",
+  "SPTD_CD": "State Property Tax Assistance Division/DCAD property classification reference code.",
+  "SPTD_DESC": "State Property Tax Assistance Division/DCAD property classification reference description.",
+  "ZONING": "Zoning description.",
+  "FRONT_DIM": "Front dimension if applicable.",
+  "DEPTH_DIM": "Depth dimension if applicable.",
+  "AREA_SIZE": "Land Area Size.",
+  "AREA_UOM_DESC": "Area Unit of Measure (Square Feet or Acre).",
+  "PRICING_METH_DESC": "Standard, Flat Price or Front Foot.",
+  "COST_PER_UOM": "Cost per Unit of Measure.",
+  "MARKET_ADJ_PCT": "Market Adjustment Percentage.",
+  "VAL_AMT": "Market value of land.",
+  "AG_USE_IND": "Agricultural Use Indicator flag.",
+  "ACCT_AG_VAL_AMT": "Value of land applicable to Agricultural Special Use.",
+  "OWNER_NAME": "Owner name.",
+  "SEQ_NUM": "DCAD numeric identifier of the additional improvement.",
+  "IMPR_TYP_DESC": "The description of the type of improvement.",
+  "IMPR_DESC": "Additional text for improvement descriptions.",
+  "YR_BUILT": "The year the improvement was built.",
+  "FLOOR_TYP_DESC": "The description of the type of floor material.",
+  "EXT_WALL_DESC": "Wall type description if applicable.",
+  "DEPRECIATION_PCT": "Depreciation percent.",
+  "EFF_YR_BUILT": "The effective year built based upon remodel factors, etc.",
+  "ACT_AGE": "The actual age of the structure.",
+  "CDU_RATING_DESC": "Desirability rating of the structure. Called DESIRABILITY_RATING in the DCAD field list.",
+  "TOT_MAIN_SF": "Total square footage of main structure.",
+  "TOT_LIVING_AREA_SF": "Total living area square footage of main and additional improvements.",
+  "NUM_STORIES_DESC": "The number of stories of the structure.",
+  "CONSTR_FRAM_TYP_DESC": "Construction frame type description.",
+  "FENCE_TYP_DESC": "Fence type description.",
+  "ROOF_TYP_DESC": "Roof type description (gable, mansard, hip, etc).",
+  "ROOF_MAT_DESC": "Roof material description (composite, tile, etc).",
+  "NUM_FIREPLACES": "Number of fireplaces.",
+  "NUM_KITCHENS": "Number of kitchens.",
+  "NUM_FULL_BATHS": "Number of full baths.",
+  "NUM_HALF_BATHS": "Number of half baths.",
+  "NUM_WET_BARS": "Number of wet bars.",
+  "NUM_BEDROOMS": "Number of bedrooms.",
+  "SPRINKLER_SYS_IND": "Flag to indicate a sprinkler system.",
+  "DECK_IND": "Flag to indicate a deck.",
+  "SPA_IND": "Flag to indicate a spa.",
+  "POOL_IND": "Flag to indicate a pool.",
+  "SAUNA_IND": "Flag to indicate a sauna.",
+  "MBL_HOME_SER_NUM": "Mobile home serial number if applicable.",
+  "MBL_HOME_MANUFCTR": "Mobile home manufacturer name if applicable.",
+  "MBL_HOME_LENGTH": "Mobile home length if applicable.",
+  "MBL_HOME_WIDTH": "Mobile home width if applicable.",
+  "MBL_HOME_SPACE": "Mobile home lot space number if applicable.",
+  "TE_REASON": "Total Exempt type.",
+  "GIS_NUM": "Real property account (GIS parcel) the business is located on.",
+  "REGION": "DCAD appraisal region code.",
+  "ROUTE": "BPP appraisal route code.",
+  "PROPERTY_CLASS": "State property class code (SPTD code, such as L10 commercial BPP).",
+  "BUSINESS_TYPE": "Business type code and description.",
+  "ACCT_STATUS": "Account status for the year (for example CHANGE, NEW, RENDERED).",
+  "RENDERED_CURRENT": "Y when the owner filed a rendition this year.",
+  "RENDERED_CURRENT_STATUS": "Status of this year's rendition (for example ACCEPTED, REJECTED).",
+  "RENDERED_PRIOR": "Y when the owner filed a rendition last year.",
+  "RENDERED_PRIOR_STATUS": "Status of last year's rendition.",
+  "REFUSED_ENTRY_CURRENT": "Y when the appraiser was refused entry this year.",
+  "REFUSED_ENTRY_PRIOR": "Y when the appraiser was refused entry last year.",
+  "PERSON_CONTACTED": "Person the appraiser contacted at the business.",
+  "PERSON_CONTACTED_POSITION": "Job title of the person contacted.",
+  "DBA": "Business name (doing business as).",
+  "STREET_DIR": "Business location street direction.",
+  "STREET_NAME": "Business location street name.",
+  "STREET_SUFFIX": "Business location street suffix.",
+  "SUITE_NUMBER": "Business suite number.",
+  "CITY": "City where the business is located.",
+  "OWNER_PHONE": "Owner phone number.",
+  "MAIL_ADDRESS1": "Owner mailing address line 1.",
+  "MAIL_ADDRESS2": "Owner mailing address line 2.",
+  "MAIL_ADDRESS3": "Owner mailing address line 3.",
+  "MAIL_CITY": "Owner mailing city.",
+  "MAIL_STATE": "Owner mailing state.",
+  "MAIL_ZIP": "Owner mailing ZIP+4.",
+  "PRIVACY_IND": "Y when the owner's address is confidential under Tax Code 25.025/25.026.",
+  "ESTABLISHED_DT": "Date the business was established.",
+  "TAX_CONSULTANT": "Code of the tax consultant (agent) on the account.",
+  "TOT_SF": "Total square feet the business occupies.",
+  "TOT_VAL_CURRENT": "Total market value this year.",
+  "TOT_VAL_PRIOR": "Total market value last year.",
+  "CNTY_TAXABLE_VAL_CURRENT": "Taxable value for the county this year.",
+  "CITY_TAXABLE_VAL_CURRENT": "Taxable value for the city this year.",
+  "ISD_TAXABLE_VAL_CURRENT": "Taxable value for the school district (ISD) this year.",
+  "HOSP_TAXABLE_VAL_CURRENT": "Taxable value for the hospital district this year.",
+  "COLL_TAXABLE_VAL_CURRENT": "Taxable value for the college district this year.",
+  "SPDS_TAXABLE_VAL_CURRENT": "Taxable value for the special district this year.",
+  "CNTY_TAXABLE_VAL_PRIOR": "Taxable value for the county last year.",
+  "CITY_TAXABLE_VAL_PRIOR": "Taxable value for the city last year.",
+  "ISD_TAXABLE_VAL_PRIOR": "Taxable value for the school district (ISD) last year.",
+  "HOSP_TAXABLE_VAL_PRIOR": "Taxable value for the hospital district last year.",
+  "COLL_TAXABLE_VAL_PRIOR": "Taxable value for the college district last year.",
+  "SPDS_TAXABLE_VAL_PRIOR": "Taxable value for the special district last year.",
+  "NOTICE_MAILED_NUM": "Number of appraisal notices mailed.",
+  "EFFECTIVE_AGE": "Effective age of the business assets, in years.",
+  "CNTY_JURIS": "Name of the county the business is in.",
+  "CNTY_ACCT_NUM": "Account number at the county tax office.",
+  "CITY_JURIS": "Name of the city the business is in.",
+  "CITY_ACCT_NUM": "Account number at the city tax office.",
+  "ISD_JURIS": "Name of the school district (ISD) the business is in.",
+  "SPDS_JURIS": "Name of the special district the business is in.",
+  "HOSP_JURIS": "Name of the hospital district the business is in.",
+  "COLL_JURIS": "Name of the college district the business is in.",
+  "APPRAISAL_DT_CURRENT": "Appraisal date for this year's value.",
+  "INVENTORY_VAL_CURRENT": "Market value of inventory this year.",
+  "RAW_MATERIALS_VAL_CURRENT": "Market value of raw materials this year.",
+  "SUPPLIES_VAL_CURRENT": "Market value of supplies this year.",
+  "CONS_GOODS_VAL_CURRENT": "Market value of consigned goods this year.",
+  "FURN_FIX_VAL_CURRENT": "Market value of furniture and fixtures this year.",
+  "MACH_EQUIP_VAL_CURRENT": "Market value of machinery and equipment this year.",
+  "COMPUTERS_VAL_CURRENT": "Market value of computers this year.",
+  "VEHICLES_VAL_CURRENT": "Market value of vehicles this year.",
+  "LEASE_EQUIP_VAL_CURRENT": "Market value of leased equipment this year.",
+  "AIRCRAFT_VAL_CURRENT": "Market value of aircraft this year.",
+  "LH_IMPROVE_VAL_CURRENT": "Market value of leasehold improvements this year.",
+  "MISC_VAL_CURRENT": "Market value of miscellaneous assets this year.",
+  "APPRAISAL_DT_PRIOR": "Appraisal date for last year's value.",
+  "INVENTORY_VAL_PRIOR": "Market value of inventory last year.",
+  "RAW_MATERIALS_VAL_PRIOR": "Market value of raw materials last year.",
+  "SUPPLIES_VAL_PRIOR": "Market value of supplies last year.",
+  "CONS_GOODS_VAL_PRIOR": "Market value of consigned goods last year.",
+  "FURN_FIX_VAL_PRIOR": "Market value of furniture and fixtures last year.",
+  "MACH_EQUIP_VAL_PRIOR": "Market value of machinery and equipment last year.",
+  "COMPUTERS_VAL_PRIOR": "Market value of computers last year.",
+  "VEHICLES_VAL_PRIOR": "Market value of vehicles last year.",
+  "LEASE_EQUIP_VAL_PRIOR": "Market value of leased equipment last year.",
+  "AIRCRAFT_VAL_PRIOR": "Market value of aircraft last year.",
+  "LH_IMPROVE_VAL_PRIOR": "Market value of leasehold improvements last year.",
+  "MISC_VAL_PRIOR": "Market value of miscellaneous assets last year.",
+  "RECORD_TYPE": "Account type: R = residential, C = commercial, P = business personal property (BPP).",
+  "REQUEST_TYPE": "Record request type code from the roll extract (K on the certified roll).",
+  "JURISDICTION_CODE": "Code of the appraisal roll the record was pulled for (DC = Dallas County roll).",
+  "SORT_SEQUENCE": "Sort sequence of the extract; blank on this roll.",
+  "ASSESSMENT_YEAR": "Tax year the values are for.",
+  "DCAD_ACCOUNT_NUMBER": "DCAD account number (17 characters). Joins to ACCOUNT_NUM in the data export tables.",
+  "D_P_BARCODE_WITH_CHECKDIGIT": "USPS delivery-point barcode digits with check digit for the owner mailing address.",
+  "LEGAL_LINE_1": "Legal description line 1 (PERSONAL PROPERTY for BPP).",
+  "LEGAL_LINE_2": "Legal description line 2 (first DBA line for BPP).",
+  "LEGAL_LINE_3": "Legal description line 3 (second DBA line for BPP).",
+  "LEGAL_LINE_4": "Legal description line 4.",
+  "LEGAL_LINE_5": "Legal description line 5.",
+  "TAX_CONSULTANT_CODE": "Code of the property tax consultant (agent) on the account.",
+  "AGR_USE_CODE_TR": "Agricultural-use exemption code: 3 = 1-d, 5 = 1-d-1 open-space.",
+  "COUNTY_AUTHORITY_CODE": "Code of the county taxing unit the account is in.",
+  "CITY_AUTHORITY_CODE": "Code of the city taxing unit the account is in.",
+  "ISD_AUTHORITY_CODE": "Code of the school district (ISD) taxing unit the account is in.",
+  "HOSP_AUTHORITY_CODE": "Code of the hospital district taxing unit the account is in.",
+  "COLL_AUTHORITY_CODE": "Code of the college district taxing unit the account is in.",
+  "SPEC_AUTHORITY_CODE": "Code of the special district taxing unit the account is in.",
+  "STREET_NUMBER": "Property (situs) street number.",
+  "STREET_HALF_NUMBER": "Street half number; for condos, the building number.",
+  "STREET_DIRECTION": "Property street direction prefix.",
+  "PROPERTY_LOCATION_CITY_CODE": "Code of the city the property is in.",
+  "PROPERTY_LOCATION_ZIP_CODE": "Property ZIP code; marked unused (reserved for future use) in the layout.",
+  "ISD_CEILING_AMOUNT_1": "Tax ceiling (frozen tax amount) for the school district (ISD), owner 1; two implied decimals.",
+  "ISD_CEILING_DATE_1": "Date the school district (ISD) tax ceiling was set, owner 1.",
+  "ISD_CEILING_TRANSFER_PERCENT_1": "Percent of the school district (ISD) tax ceiling transferred from a previous homestead, owner 1; two implied decimals.",
+  "ISD_CEILING_AMOUNT_2": "Tax ceiling (frozen tax amount) for the school district (ISD), owner 2; two implied decimals.",
+  "ISD_CEILING_DATE_2": "Date the school district (ISD) tax ceiling was set, owner 2.",
+  "ISD_CEILING_TRANSFER_PERCENT_2": "Percent of the school district (ISD) tax ceiling transferred from a previous homestead, owner 2; two implied decimals.",
+  "ISD_CEILING_AMOUNT_3": "Tax ceiling (frozen tax amount) for the school district (ISD), owner 3; two implied decimals.",
+  "ISD_CEILING_DATE_3": "Date the school district (ISD) tax ceiling was set, owner 3.",
+  "ISD_CEILING_TRANSFER_PERCENT_3": "Percent of the school district (ISD) tax ceiling transferred from a previous homestead, owner 3; two implied decimals.",
+  "COUNTY_CEILING_AMOUNT_1": "Tax ceiling (frozen tax amount) for the county, owner 1; two implied decimals.",
+  "COUNTY_CEILING_DATE_1": "Date the county tax ceiling was set, owner 1.",
+  "COUNTY_CEILING_TRANSFER_PERCENT_1": "Percent of the county tax ceiling transferred from a previous homestead, owner 1; two implied decimals.",
+  "COUNTY_CEILING_AMOUNT_2": "Tax ceiling (frozen tax amount) for the county, owner 2; two implied decimals.",
+  "COUNTY_CEILING_DATE_2": "Date the county tax ceiling was set, owner 2.",
+  "COUNTY_CEILING_TRANSFER_PERCENT_2": "Percent of the county tax ceiling transferred from a previous homestead, owner 2; two implied decimals.",
+  "COUNTY_CEILING_AMOUNT_3": "Tax ceiling (frozen tax amount) for the county, owner 3; two implied decimals.",
+  "COUNTY_CEILING_DATE_3": "Date the county tax ceiling was set, owner 3.",
+  "COUNTY_CEILING_TRANSFER_PERCENT_3": "Percent of the county tax ceiling transferred from a previous homestead, owner 3; two implied decimals.",
+  "CITY_CEILING_AMOUNT_1": "Tax ceiling (frozen tax amount) for the city, owner 1; two implied decimals.",
+  "CITY_CEILING_DATE_1": "Date the city tax ceiling was set, owner 1.",
+  "CITY_CEILING_TRANSFER_PERCENT_1": "Percent of the city tax ceiling transferred from a previous homestead, owner 1; two implied decimals.",
+  "CITY_CEILING_AMOUNT_2": "Tax ceiling (frozen tax amount) for the city, owner 2; two implied decimals.",
+  "CITY_CEILING_DATE_2": "Date the city tax ceiling was set, owner 2.",
+  "CITY_CEILING_TRANSFER_PERCENT_2": "Percent of the city tax ceiling transferred from a previous homestead, owner 2; two implied decimals.",
+  "CITY_CEILING_AMOUNT_3": "Tax ceiling (frozen tax amount) for the city, owner 3; two implied decimals.",
+  "CITY_CEILING_DATE_3": "Date the city tax ceiling was set, owner 3.",
+  "CITY_CEILING_TRANSFER_PERCENT_3": "Percent of the city tax ceiling transferred from a previous homestead, owner 3; two implied decimals.",
+  "COLLEGE_CEILING_AMOUNT_1": "Tax ceiling (frozen tax amount) for the college district, owner 1; two implied decimals.",
+  "COLLEGE_CEILING_DATE_1": "Date the college district tax ceiling was set, owner 1.",
+  "COLLEGE_CEILING_TRANSFER_PERCENT_1": "Percent of the college district tax ceiling transferred from a previous homestead, owner 1; two implied decimals.",
+  "COLLEGE_CEILING_AMOUNT_2": "Tax ceiling (frozen tax amount) for the college district, owner 2; two implied decimals.",
+  "COLLEGE_CEILING_DATE_2": "Date the college district tax ceiling was set, owner 2.",
+  "COLLEGE_CEILING_TRANSFER_PERCENT_2": "Percent of the college district tax ceiling transferred from a previous homestead, owner 2; two implied decimals.",
+  "COLLEGE_CEILING_AMOUNT_3": "Tax ceiling (frozen tax amount) for the college district, owner 3; two implied decimals.",
+  "COLLEGE_CEILING_DATE_3": "Date the college district tax ceiling was set, owner 3.",
+  "COLLEGE_CEILING_TRANSFER_PERCENT_3": "Percent of the college district tax ceiling transferred from a previous homestead, owner 3; two implied decimals.",
+  "NON_EXEMP_IMPV_VALUE": "Value of improvements that are not exempt.",
+  "NON_EXEMP_LAND_VALUE": "Value of land that is not exempt.",
+  "AG_EXEMPT_LAND_VALUE": "Market value of land under agricultural (productivity) valuation.",
+  "TOTAL_ACREAGE": "Total acreage of the account (three implied decimals).",
+  "TOTAL_LAND_VALUE": "Total land market value.",
+  "SPECIAL_ASSESSMENT_VALUE": "Agricultural (productivity) adjustment value: the reduction from ag use valuation.",
+  "TOTAL_IMPROVEMENT_VALUE": "Total improvement market value.",
+  "TOTAL_MARKET_VALUE": "Total market value of the account (BPP accounts only per the layout).",
+  "COUNTY_HMSTD_EXEMPT_AMOUNT": "Homestead exemption amount for the county.",
+  "COUNTY_OVR65_EXEMPT_AMOUNT": "Over-65 exemption amount for the county.",
+  "COUNTY_DISABL_EXEMPT_AMOUNT": "Disabled-person exemption amount for the county.",
+  "COUNTY_DIS_VET_EXEMPT_AMT": "Disabled-veteran exemption amount for the county.",
+  "COUNTY_ABATEMENT_EXEMPT_AMT": "Abatement exemption amount for the county.",
+  "COUNTY_LOW_INCOME_EXEMPT_AMT": "Low-income housing (CHDO) exemption amount for the county.",
+  "COUNTY_HISTORIC_EXEMPT_AMT": "Historic-site exemption amount for the county.",
+  "COUNTY_FREEPORT_EXEMPT_AMT": "Freeport exemption amount for the county.",
+  "COUNTY_POLLUTION_EXEMPT_AMT": "Pollution-control exemption amount for the county.",
+  "COUNTY_TAXABLE_VALUE": "Taxable value for the county after its exemptions.",
+  "CITY_HMSTD_EXEMPT_AMOUNT": "Homestead exemption amount for the city.",
+  "CITY_OVR65_EXEMPT_AMOUNT": "Over-65 exemption amount for the city.",
+  "CITY_DISABL_EXEMPT_AMOUNT": "Disabled-person exemption amount for the city.",
+  "CITY_DISABL_VET_EXEMPT_AMT": "Disabled-veteran exemption amount for the city.",
+  "CITY_ABATEMENT_EXEMPT_AMT": "Abatement exemption amount for the city.",
+  "CITY_LOW_INCOME_EXEMPT_AMT": "Low-income housing (CHDO) exemption amount for the city.",
+  "CITY_HISTORIC_EXEMPT_AMOUNT": "Historic-site exemption amount for the city.",
+  "CITY_FREEPORT_EXEMPT_AMOUNT": "Freeport exemption amount for the city.",
+  "CITY_POLLUTION_EXEMPT_AMT": "Pollution-control exemption amount for the city.",
+  "CITY_TAXABLE_VALUE": "Taxable value for the city after its exemptions.",
+  "ISD_HMSTD_EXEMPT_AMOUNT": "Homestead exemption amount for the school district (ISD).",
+  "ISD_OVR65_EXEMPT_AMOUNT": "Over-65 exemption amount for the school district (ISD).",
+  "ISD_DISABL_EXEMPT_AMOUNT": "Disabled-person exemption amount for the school district (ISD).",
+  "ISD_DISABL_VET_EXEMPT_AMT": "Disabled-veteran exemption amount for the school district (ISD).",
+  "ISD_ABATEMENT_EXEMPT_AMOUNT": "Abatement exemption amount for the school district (ISD).",
+  "ISD_LOW_INCOME_EXEMPT_AMT": "Low-income housing (CHDO) exemption amount for the school district (ISD).",
+  "ISD_HISTORIC_EXEMPT_AMOUNT": "Historic-site exemption amount for the school district (ISD).",
+  "ISD_FREEPORT_EXEMPT_AMOUNT": "Freeport exemption amount for the school district (ISD).",
+  "ISD_POLLUTION_EXEMPT_AMT": "Pollution-control exemption amount for the school district (ISD).",
+  "ISD_TAXABLE_VALUE": "Taxable value for the school district (ISD) after its exemptions.",
+  "HOSP_HMSTD_EXEMPT_AMOUNT": "Homestead exemption amount for the hospital district.",
+  "HOSP_OVR65_EXEMPT_AMOUNT": "Over-65 exemption amount for the hospital district.",
+  "HOSP_DISABL_EXEMPT_AMOUNT": "Disabled-person exemption amount for the hospital district.",
+  "HOSP_DISABL_VET_EXEMPT_AMT": "Disabled-veteran exemption amount for the hospital district.",
+  "HOSP_ABATEMENT_EXEMPT_AMT": "Abatement exemption amount for the hospital district.",
+  "HOSP_LOW_INCOME_EXEMPT_AMT": "Low-income housing (CHDO) exemption amount for the hospital district.",
+  "HOSP_HISTORIC_EXEMPT_AMOUNT": "Historic-site exemption amount for the hospital district.",
+  "HOSP_FREEPORT_EXEMPT_AMOUNT": "Freeport exemption amount for the hospital district.",
+  "HOSP_POLLUTION_EXEMPT_AMT": "Pollution-control exemption amount for the hospital district.",
+  "HOSP_TAXABLE_VALUE": "Taxable value for the hospital district after its exemptions.",
+  "COLL_HMSTD_EXEMPT_AMOUNT": "Homestead exemption amount for the college district.",
+  "COLL_OVR65_EXEMPT_AMOUNT": "Over-65 exemption amount for the college district.",
+  "COLL_DISABL_EXEMPT_AMOUNT": "Disabled-person exemption amount for the college district.",
+  "COLL_DISABL_VET_EXEMPT_AMT": "Disabled-veteran exemption amount for the college district.",
+  "COLL_ABATEMENT_EXEMPT_AMT": "Abatement exemption amount for the college district.",
+  "COLL_LOW_INCOME_EXEMPT_AMT": "Low-income housing (CHDO) exemption amount for the college district.",
+  "COLL_HISTORIC_EXEMPT_AMOUNT": "Historic-site exemption amount for the college district.",
+  "COLL_FREEPORT_EXEMPT_AMOUNT": "Freeport exemption amount for the college district.",
+  "COLL_POLLUTION_EXEMPT_AMT": "Pollution-control exemption amount for the college district.",
+  "COLL_TAXABLE_VALUE": "Taxable value for the college district after its exemptions.",
+  "SPEC_HMSTD_EXEMPT_AMOUNT": "Homestead exemption amount for the special district.",
+  "SPEC_OVR65_EXEMPT_AMOUNT": "Over-65 exemption amount for the special district.",
+  "SPEC_DISABL_EXEMPT_AMOUNT": "Disabled-person exemption amount for the special district.",
+  "SPEC_DISABL_VET_EXEMPT_AMT": "Disabled-veteran exemption amount for the special district.",
+  "SPEC_ABATEMENT_EXEMPT_AMT": "Abatement exemption amount for the special district.",
+  "SPEC_LOW_INCOME_EXEMPT_AMT": "Low-income housing (CHDO) exemption amount for the special district.",
+  "SPEC_HISTORIC_EXEMPT_AMOUNT": "Historic-site exemption amount for the special district.",
+  "SPEC_FREEPORT_EXEMPT_AMOUNT": "Freeport exemption amount for the special district.",
+  "SPEC_POLLUTION_EXEMPT_AMT": "Pollution-control exemption amount for the special district.",
+  "SPEC_TAXABLE_VALUE": "Taxable value for the special district after its exemptions.",
+  "DISABL_VET1_EXEMP_PERCENT_1": "Disability rating percent for disabled-veteran exemption 1, owner 1.",
+  "DISABL_VET2_EXEMP_PERCENT_1": "Disability rating percent for disabled-veteran exemption 2, owner 1.",
+  "DISABL_VET1_FLAT_RATE_1": "Flat exemption amount for disabled-veteran exemption 1, owner 1.",
+  "DISABL_VET2_FLAT_RATE_1": "Flat exemption amount for disabled-veteran exemption 2, owner 1.",
+  "DISABL_VET1_EXEMP_PERCENT_2": "Disability rating percent for disabled-veteran exemption 1, owner 2.",
+  "DISABL_VET2_EXEMP_PERCENT_2": "Disability rating percent for disabled-veteran exemption 2, owner 2.",
+  "DISABL_VET1_FLAT_RATE_2": "Flat exemption amount for disabled-veteran exemption 1, owner 2.",
+  "DISABL_VET2_FLAT_RATE_2": "Flat exemption amount for disabled-veteran exemption 2, owner 2.",
+  "DISABL_VET1_EXEMP_PERCENT_3": "Disability rating percent for disabled-veteran exemption 1, owner 3.",
+  "DISABL_VET2_EXEMP_PERCENT_3": "Disability rating percent for disabled-veteran exemption 2, owner 3.",
+  "DISABL_VET1_FLAT_RATE_3": "Flat exemption amount for disabled-veteran exemption 1, owner 3.",
+  "DISABL_VET2_FLAT_RATE_3": "Flat exemption amount for disabled-veteran exemption 2, owner 3.",
+  "VETERAN_1_EXEMP_FLAG_1": "Disabled-veteran exemption 1 flag (X, M, A, S, C, T or blank), owner 1.",
+  "VETERAN_2_EXEMP_FLAG_1": "Disabled-veteran exemption 2 flag (X, M, A, S, C, T or blank), owner 1.",
+  "DISABLED_PERSON_EXEM_FLAG_1": "Disabled-person exemption flag (X, P, T or blank), owner 1.",
+  "HOMESTEAD_EXEMPTION_FLAG_1": "Homestead exemption flag (X, or P for partial-use homestead), owner 1.",
+  "OVER_65_EXEMPTION_FLAG_1": "Over-65 exemption flag (X, or S for surviving spouse), owner 1.",
+  "TAX_DEFERRAL_FLAG_1": "Tax deferral flag (X, D or blank), owner 1.",
+  "VETERAN_1_EXEMP_FLAG_2": "Disabled-veteran exemption 1 flag (X, M, A, S, C, T or blank), owner 2.",
+  "VETERAN_2_EXEMP_FLAG_2": "Disabled-veteran exemption 2 flag (X, M, A, S, C, T or blank), owner 2.",
+  "DISABLED_PERSON_EXEM_FLAG_2": "Disabled-person exemption flag (X, P, T or blank), owner 2.",
+  "HOMESTEAD_EXEMPTION_FLAG_2": "Homestead exemption flag (X, or P for partial-use homestead), owner 2.",
+  "OVER_65_EXEMPTION_FLAG_2": "Over-65 exemption flag (X, or S for surviving spouse), owner 2.",
+  "TAX_DEFERRAL_FLAG_2": "Tax deferral flag (X, D or blank), owner 2.",
+  "VETERAN_1_EXEMP_FLAG_3": "Disabled-veteran exemption 1 flag (X, M, A, S, C, T or blank), owner 3.",
+  "VETERAN_2_EXEMP_FLAG_3": "Disabled-veteran exemption 2 flag (X, M, A, S, C, T or blank), owner 3.",
+  "DISABLED_PERSON_EXEM_FLAG_3": "Disabled-person exemption flag (X, P, T or blank), owner 3.",
+  "HOMESTEAD_EXEMPTION_FLAG_3": "Homestead exemption flag (X, or P for partial-use homestead), owner 3.",
+  "OVER_65_EXEMPTION_FLAG_3": "Over-65 exemption flag (X, or S for surviving spouse), owner 3.",
+  "TAX_DEFERRAL_FLAG_3": "Tax deferral flag (X, D or blank), owner 3.",
+  "TOTALLY_EXEMPT_CODE": "Totally exempt code: X, U or blank.",
+  "ABATEMENT_FLAG": "Abatement flag: X, Y or blank.",
+  "ABATEMENT_DATA_CNTY": "County abatement applies to: I, T or blank.",
+  "ABATEMENT_DATA_CITY": "City abatement applies to: I, T or blank.",
+  "ABATEMENT_DATA_ISD": "School district (isd) abatement applies to: I, T or blank.",
+  "ABATEMENT_DATA_COLL": "College district abatement applies to: I, T or blank.",
+  "ABATEMENT_DATA_SPEC": "Special district abatement applies to: I, T or blank.",
+  "TIF_FLAG": "Tax increment financing (TIF) zone flag: X, Y or blank.",
+  "HISTORIC_FLAG_1": "Historic exemption 1 applies to: I, L, T or blank.",
+  "HISTORIC_FLAG_2": "Historic exemption 2 applies to: I, L, T or blank.",
+  "HISTORIC_FLAG_3": "Historic exemption 3 applies to: I, L, T or blank.",
+  "HISTORIC_FLAG_4": "Historic exemption 4 applies to: I, L, T or blank.",
+  "TOTALLY_EXEMPT_TYPE": "Type of total exemption.",
+  "MULTIPLE_OWNER_CODE": "Number of owners on the account (1, 2 or 3).",
+  "FREEPORT_FLAG": "Freeport exemption flag: X, Y or blank (BPP only).",
+  "FREEPORT_STATUS": "Freeport status: R, P or blank (BPP only).",
+  "POLLUTION_CONTROL_FLAG": "Pollution-control exemption flag: X, Y or blank.",
+  "COUNTY_SPLIT_EXEMPT_PERCENT": "Percent of the account in the county for exemption splits.",
+  "CITY_SPLIT_EXEMPT_PERCENT": "Percent of the account in the city for exemption splits.",
+  "ISD_SPLIT_EXEMPT_PERCENT": "Percent of the account in the school district for exemption splits.",
+  "SPEC_SPLIT_EXEMPT_PERCENT": "Percent of the account in the special district for exemption splits.",
+  "ABATEMENT_PERCENT_COUNTY": "County abatement percent (two implied decimals).",
+  "ABATEMENT_PERCENT_CITY": "City abatement percent (two implied decimals).",
+  "ABATEMENT_PERCENT_ISD": "School district (isd) abatement percent (two implied decimals).",
+  "ABATEMENT_PERCENT_COLL": "College district abatement percent (two implied decimals).",
+  "ABATEMENT_PERCENT_SPEC": "Special district abatement percent (two implied decimals).",
+  "HISTORIC_PERCENT_1": "Historic exemption 1 percent, per the ordinance.",
+  "HISTORIC_PERCENT_2": "Historic exemption 2 percent, per the ordinance.",
+  "HISTORIC_PERCENT_3": "Historic exemption 3 percent, per the ordinance.",
+  "HISTORIC_PERCENT_4": "Historic exemption 4 percent, per the ordinance.",
+  "FREEPORT_PERCENT": "Freeport exemption percent (two implied decimals; BPP only).",
+  "OWNER_1_PERCENT": "Ownership percent of owner 1.",
+  "OWNER_2_PERCENT": "Ownership percent of owner 2.",
+  "OWNER_3_PERCENT": "Ownership percent of owner 3.",
+  "HOMESTEAD_EXMPT_PCT_OWNER1": "Homestead exemption percent for owner 1.",
+  "HOMESTEAD_EXMPT_PCT_OWNER2": "Homestead exemption percent for owner 2.",
+  "HOMESTEAD_EXMPT_PCT_OWNER3": "Homestead exemption percent for owner 3.",
+  "OVER65_EXMPT_PCT_OWNER1": "Over-65 exemption percent for owner 1.",
+  "OVER65_EXMPT_PCT_OWNER2": "Over-65 exemption percent for owner 2.",
+  "OVER65_EXMPT_PCT_OWNER3": "Over-65 exemption percent for owner 3.",
+  "DISABLE_EXMPT_PCT_OWNER1": "Disabled-person exemption percent for owner 1.",
+  "DISABLE_EXMPT_PCT_OWNER2": "Disabled-person exemption percent for owner 2.",
+  "DISABLE_EXMPT_PCT_OWNER3": "Disabled-person exemption percent for owner 3.",
+  "AGRI_EFFECTIVE_DATE": "Year the agricultural valuation took effect.",
+  "TOTAL_EXEMP_EFFECTIVE_DATE": "Date the total exemption took effect.",
+  "ABATEMENT_CNTY_EFF_DATE": "Year the county abatement starts.",
+  "ABATEMENT_CNTY_EXP_DATE": "Year the county abatement expires.",
+  "ABATEMENT_CITY_EFF_DATE": "Year the city abatement starts.",
+  "ABATEMENT_CITY_EXP_DATE": "Year the city abatement expires.",
+  "ABATEMENT_ISD_EFF_DATE": "Year the school district (ISD) abatement starts.",
+  "ABATEMENT_ISD_EXP_DATE": "Year the school district (ISD) abatement expires.",
+  "ABATEMENT_COLL_EFF_DATE": "Year the college district abatement starts.",
+  "ABATEMENT_COLL_EXP_DATE": "Year the college district abatement expires.",
+  "ABATEMENT_SPEC_EFF_DATE": "Year the special district abatement starts.",
+  "ABATEMENT_SPEC_EXP_DATE": "Year the special district abatement expires.",
+  "HISTORIC_EFFECTIVE_DATE": "Year the historic exemption took effect.",
+  "HISTORIC_EXPIRATION_DATE_1": "Year historic exemption 1 expires.",
+  "HISTORIC_EXPIRATION_DATE_2": "Year historic exemption 2 expires.",
+  "HISTORIC_EXPIRATION_DATE_3": "Year historic exemption 3 expires.",
+  "HISTORIC_EXPIRATION_DATE_4": "Year historic exemption 4 expires.",
+  "FREEPORT_APPL_RECVD_DATE": "Date the freeport application was received (BPP only).",
+  "FREEPORT_APPL_DENIED_DATE": "Date the freeport application was denied (BPP only).",
+  "FREEPORT_APPL_APPRVD_DATE": "Date the freeport application was approved (BPP only).",
+  "FREEPORT_LAST_PROTEST_DATE": "Date of the last freeport protest (BPP only).",
+  "POLLUTION_CNTRL_EFF_DATE_1": "Year the first pollution-control exemption took effect.",
+  "POLLUTION_CNTRL_EFF_DATE_2": "Year the second pollution-control exemption took effect.",
+  "POLLUTION_CNTRL_EFF_DATE_3": "Year the third pollution-control exemption took effect.",
+  "POLLUTION_CNTRL_EFF_DATE_4": "Year the fourth pollution-control exemption took effect.",
+  "POLLUTION_CNTRL_EFF_DATE_5": "Year the fifth pollution-control exemption took effect.",
+  "AG_ROLL_BACK_YEAR": "Year of an agricultural rollback.",
+  "DIS_VET_1_EFF_DATE": "Year disabled-veteran exemption 1 took effect.",
+  "DIS_VET_2_EFF_DATE": "Year disabled-veteran exemption 2 took effect.",
+  "HOMESTEAD_EFFECTIVE_DATE_1": "Date the homestead exemption took effect, owner 1.",
+  "DISABLED_EFFECTIVE_DATE_1": "Date the disabled exemption took effect, owner 1.",
+  "OVER_65_EFFECTIVE_DATE_1": "Date the over-65 exemption took effect, owner 1.",
+  "HOMESTEAD_EFFECTIVE_DATE_2": "Date the homestead exemption took effect, owner 2.",
+  "DISABLED_EFFECTIVE_DATE_2": "Date the disabled exemption took effect, owner 2.",
+  "OVER_65_EFFECTIVE_DATE_2": "Date the over-65 exemption took effect, owner 2.",
+  "HOMESTEAD_EFFECTIVE_DATE_3": "Date the homestead exemption took effect, owner 3.",
+  "DISABLED_EFFECTIVE_DATE_3": "Date the disabled exemption took effect, owner 3.",
+  "OVER_65_EFFECTIVE_DATE_3": "Date the over-65 exemption took effect, owner 3.",
+  "TIF_ZONE_NUMBER": "TIF zone number.",
+  "HISTORIC_ORDINANCE_1_NUMBER": "Ordinance number of historic exemption 1.",
+  "HISTORIC_ORDINANCE_2_NUMBER": "Ordinance number of historic exemption 2.",
+  "HISTORIC_ORDINANCE_3_NUMBER": "Ordinance number of historic exemption 3.",
+  "HISTORIC_ORDINANCE_4_NUMBER": "Ordinance number of historic exemption 4.",
+  "POLLUTION_CONTROL_USE_1": "Use code of the first pollution-control property.",
+  "POLLUTION_CONTROL_USE_2": "Use code of the second pollution-control property.",
+  "POLLUTION_CONTROL_USE_3": "Use code of the third pollution-control property.",
+  "POLLUTION_CONTROL_USE_4": "Use code of the fourth pollution-control property.",
+  "POLLUTION_CONTROL_USE_5": "Use code of the fifth pollution-control property.",
+  "ABATEMENT_GRANTOR": "Taxing unit that granted the abatement.",
+  "HISTORIC_GRANTOR_1": "Taxing unit that granted historic exemption 1.",
+  "HISTORIC_GRANTOR_2": "Taxing unit that granted historic exemption 2.",
+  "HISTORIC_GRANTOR_3": "Taxing unit that granted historic exemption 3.",
+  "HISTORIC_GRANTOR_4": "Taxing unit that granted historic exemption 4.",
+  "CONTRIB_PERMIT_CODE": "Code for the permit that added contributory value.",
+  "COUNTY_EXEMPTION_AMOUNT": "Total exemption amount for the county.",
+  "CITY_EXEMPTION_AMOUNT": "Total exemption amount for the city.",
+  "ISD_EXEMPTION_AMOUNT": "Total exemption amount for the school district (ISD).",
+  "HOSPITAL_EXEMPTION_AMOUNT": "Total exemption amount for the hospital district.",
+  "COLLEGE_EXEMPTION_AMOUNT": "Total exemption amount for the college district.",
+  "SPECIAL_EXEMPTION_AMOUNT": "Total exemption amount for the special district.",
+  "ABATEMENT_BASE_CNTY": "Base value for the county.",
+  "ABATEMENT_LOSS_CNTY": "Value lost to the abatement for the county.",
+  "ABATEMENT_BASE_CITY": "Base value for the city.",
+  "ABATEMENT_LOSS_CITY": "Value lost to the abatement for the city.",
+  "ABATEMENT_BASE_ISD": "Base value for the school district (ISD).",
+  "ABATEMENT_LOSS_ISD": "Value lost to the abatement for the school district (ISD).",
+  "ABATEMENT_BASE_COLL": "Base value for the college district.",
+  "ABATEMENT_LOSS_COLL": "Value lost to the abatement for the college district.",
+  "ABATEMENT_BASE_SPEC": "Base value for the special district.",
+  "ABATEMENT_LOSS_SPEC": "Value lost to the abatement for the special district.",
+  "HISTORIC_BASE_1": "Base value for historic exemption 1.",
+  "HISTORIC_BASE_2": "Base value for historic exemption 2.",
+  "HISTORIC_BASE_3": "Base value for historic exemption 3.",
+  "HISTORIC_BASE_4": "Base value for historic exemption 4.",
+  "HISTORIC_LOSS_1": "Value lost to historic exemption 1.",
+  "HISTORIC_LOSS_2": "Value lost to historic exemption 2.",
+  "HISTORIC_LOSS_3": "Value lost to historic exemption 3.",
+  "HISTORIC_LOSS_4": "Value lost to historic exemption 4.",
+  "FREEPORT_EXEMPTION_VALUE": "Freeport exemption value (BPP only).",
+  "FREEPORT_INVENTORY_VALUE": "Inventory value qualifying for freeport (BPP only).",
+  "FREEPORT_RAW_MATERIALS": "Raw-materials value qualifying for freeport (BPP only).",
+  "POLLUTION_CNTL_ORG_COST_1": "Original cost of the first pollution-control property.",
+  "POLLUTION_CNTL_ORG_COST_2": "Original cost of the second pollution-control property.",
+  "POLLUTION_CNTL_ORG_COST_3": "Original cost of the third pollution-control property.",
+  "POLLUTION_CNTL_ORG_COST_4": "Original cost of the fourth pollution-control property.",
+  "POLLUTION_CNTL_ORG_COST_5": "Original cost of the fifth pollution-control property.",
+  "POLLUTION_CNTL_EXMPT_1": "Exempt amount of the first pollution-control property.",
+  "POLLUTION_CNTL_EXMPT_2": "Exempt amount of the second pollution-control property.",
+  "POLLUTION_CNTL_EXMPT_3": "Exempt amount of the third pollution-control property.",
+  "POLLUTION_CNTL_EXMPT_4": "Exempt amount of the fourth pollution-control property.",
+  "POLLUTION_CNTL_EXMPT_5": "Exempt amount of the fifth pollution-control property.",
+  "CONTRIBUTORY_PERMIT_VALUE": "Value added by permitted work for the year.",
+  "MARKET_REAL_VALUE": "Real property market value.",
+  "CURRENT_JOURNAL_ENTRY": "Current journal-entry (roll change) number.",
+  "PREVIOUS1_JOURNAL_ENTRY": "Previous journal-entry number.",
+  "PREVIOUS2_JOURNAL_ENTRY": "Journal-entry number before the previous one.",
+  "SPTB_CLASS_CODE": "State property class code (SPTD code, such as A11 single-family; see SPTD_CD_XREF.pdf).",
+  "BPP_STATUS_FLAG": "BPP account status flag.",
+  "PRORATA_FLAG_1": "Proration code: 1st letter T (total), O (over-65), S (over-55 spouse) or D (disabled); 2nd letter T (now taxable) or E (now exempt), proration 1.",
+  "PRORATA_NAME_1": "Name on the prorated exemption, proration 1.",
+  "PRORATA_DAYS_1": "Days taxable under the proration, proration 1.",
+  "PRORATED_EFFECTIVE_DATE_1": "Date proration 1 starts.",
+  "PRORATED_REMOVAL_DATE_1": "Date proration 1 ends.",
+  "PRORATA_FLAG_2": "Proration code: 1st letter T (total), O (over-65), S (over-55 spouse) or D (disabled); 2nd letter T (now taxable) or E (now exempt), proration 2.",
+  "PRORATA_NAME_2": "Name on the prorated exemption, proration 2.",
+  "PRORATA_DAYS_2": "Days taxable under the proration, proration 2.",
+  "PRORATED_EFFECTIVE_DATE_2": "Date proration 2 starts.",
+  "PRORATED_REMOVAL_DATE_2": "Date proration 2 ends.",
+  "PRORATA_FLAG_3": "Proration code: 1st letter T (total), O (over-65), S (over-55 spouse) or D (disabled); 2nd letter T (now taxable) or E (now exempt), proration 3.",
+  "PRORATA_NAME_3": "Name on the prorated exemption, proration 3.",
+  "PRORATA_DAYS_3": "Days taxable under the proration, proration 3.",
+  "PRORATED_EFFECTIVE_DATE_3": "Date proration 3 starts.",
+  "PRORATED_REMOVAL_DATE_3": "Date proration 3 ends.",
+  "IMPROVEMENT_SQUARE_FOOTAGE": "Improvement square footage; marked unused in the layout.",
+  "CAPPED_HOMESTEAD_AMOUNT_1": "Capped homestead value, owner 1.",
+  "DEFERRED_CAP_AMOUNT_1": "Deferred cap amount, owner 1.",
+  "CAPPED_HOMESTEAD_AMOUNT_2": "Capped homestead value, owner 2.",
+  "DEFERRED_CAP_AMOUNT_2": "Deferred cap amount, owner 2.",
+  "CAPPED_HOMESTEAD_AMOUNT_3": "Capped homestead value, owner 3.",
+  "DEFERRED_CAP_AMOUNT_3": "Deferred cap amount, owner 3.",
+  "REVALUATION_YEAR": "Year the account was last reappraised.",
+  "PREVIOUS_REVALUATION_YEAR": "Year of the reappraisal before that.",
+  "JE_COMMENT_1": "Journal-entry comment, first part (filled on supplemental rolls only).",
+  "JE_COMMENT_2": "Journal-entry comment, second part (supplemental rolls only).",
+  "ISD_CEILING_SET_FLAG_1": "Y or X when the school district (ISD) itself set the ceiling amount, owner 1.",
+  "ISD_CEILING_SET_FLAG_2": "Y or X when the school district (ISD) itself set the ceiling amount, owner 2.",
+  "ISD_CEILING_SET_FLAG_3": "Y or X when the school district (ISD) itself set the ceiling amount, owner 3.",
+  "COUNTY_CEILING_SET_FLAG_1": "Y or X when the county itself set the ceiling amount, owner 1.",
+  "COUNTY_CEILING_SET_FLAG_2": "Y or X when the county itself set the ceiling amount, owner 2.",
+  "COUNTY_CEILING_SET_FLAG_3": "Y or X when the county itself set the ceiling amount, owner 3.",
+  "CITY_CEILING_SET_FLAG_1": "Y or X when the city itself set the ceiling amount, owner 1.",
+  "CITY_CEILING_SET_FLAG_2": "Y or X when the city itself set the ceiling amount, owner 2.",
+  "CITY_CEILING_SET_FLAG_3": "Y or X when the city itself set the ceiling amount, owner 3.",
+  "COLLEGE_CEILING_SET_FLAG_1": "Y or X when the college district itself set the ceiling amount, owner 1.",
+  "COLLEGE_CEILING_SET_FLAG_2": "Y or X when the college district itself set the ceiling amount, owner 2.",
+  "COLLEGE_CEILING_SET_FLAG_3": "Y or X when the college district itself set the ceiling amount, owner 3.",
+  "CAPPED_DIFFERENCE": "Difference between market value and the capped (homestead-limited) value.",
+  "SB247_PRIVACY_FLAG": "Y when the owner requested privacy under Senate Bill 247.",
+  "FREEPORT_LATE_APPL_FLAG": "Y when the freeport application was late (10% penalty).",
+  "FREEPORT_LATE_DOC_FLAG": "Y when freeport documentation was late (10% penalty).",
+  "RENDITION_PENALTY_FLAG": "Y when the rendition was late (10% penalty).",
+  "SPECIAL_INVENTORY_PENALTY_FLAG": "Y when a special-inventory penalty applies (BPP only).",
+  "LOW_INCOME_FLAG": "X when a low-income housing exemption exists.",
+  "LOW_INCOME_CNTY_EFF_YEAR": "Year the county low-income housing exemption took effect.",
+  "LOW_INCOME_CNTY_PERCENT": "Exemption percent of the county low-income housing exemption (two implied decimals).",
+  "LOW_INCOME_CITY_EFF_YEAR": "Year the city low-income housing exemption took effect.",
+  "LOW_INCOME_CITY_PERCENT": "Exemption percent of the city low-income housing exemption (two implied decimals).",
+  "LOW_INCOME_ISD_EFF_YEAR": "Year the school district (ISD) low-income housing exemption took effect.",
+  "LOW_INCOME_ISD_PERCENT": "Exemption percent of the school district (ISD) low-income housing exemption (two implied decimals).",
+  "LOW_INCOME_HOSP_EFF_YEAR": "Year the hospital district low-income housing exemption took effect.",
+  "LOW_INCOME_HOSP_PERCENT": "Exemption percent of the hospital district low-income housing exemption (two implied decimals).",
+  "LOW_INCOME_COLL_EFF_YEAR": "Year the college district low-income housing exemption took effect.",
+  "LOW_INCOME_COLL_PERCENT": "Exemption percent of the college district low-income housing exemption (two implied decimals).",
+  "LOW_INCOME_SPDS_EFF_YEAR": "Year the special district low-income housing exemption took effect.",
+  "LOW_INCOME_SPDS_PERCENT": "Exemption percent of the special district low-income housing exemption (two implied decimals).",
+  "GIT_EXEMPT_FLAG": "X when a goods-in-transit exemption exists.",
+  "COUNTY_GIT_EXEMPTION_AMOUNT": "Goods-in-transit exemption amount for the county.",
+  "CITY_GIT_EXEMPTION_AMOUNT": "Goods-in-transit exemption amount for the city.",
+  "ISD_GIT_EXEMPTION_AMOUNT": "Goods-in-transit exemption amount for the school district (ISD).",
+  "HOSP_GIT_EXEMPTION_AMOUNT": "Goods-in-transit exemption amount for the hospital district.",
+  "COLL_GIT_EXEMPTION_AMOUNT": "Goods-in-transit exemption amount for the college district.",
+  "SPEC_GIT_EXEMPTION_AMOUNT": "Goods-in-transit exemption amount for the special district.",
+  "GIT_STATUS": "Goods-in-transit application status.",
+  "GIT_PERCENT": "Goods-in-transit exemption percent.",
+  "GIT_APPL_RECVD_DATE": "Date the goods-in-transit application was received.",
+  "GIT_APPL_DENIED_DATE": "Date the goods-in-transit application was denied.",
+  "GIT_APPL_APPRVD_DATE": "Date the goods-in-transit application was approved.",
+  "GIT_LAST_PROTEST_DATE": "Date of the last goods-in-transit protest.",
+  "GIT_EXEMPTION_VALUE": "Goods-in-transit exemption value.",
+  "GIT_INVENTORY_VALUE": "Inventory value covered by goods in transit.",
+  "GIT_RAW_MATERIALS": "Raw-materials value covered by goods in transit.",
+  "GIT_LATE_APPL_FLAG": "Y when the goods-in-transit application was late.",
+  "GIT_LATE_DOC_FLAG": "Y when goods-in-transit documentation was late.",
+  "DEF_ASE_FLAG_OWNER1": "Deferral flag for owner 1.",
+  "DEF_ASE_EFF_DATE_OWNER1": "Deferral start date for owner 1.",
+  "DEF_ASE_REMVL_DATE_OWNER1": "Deferral removal date for owner 1.",
+  "DEF_ASE_FLAG_OWNER2": "Deferral flag for owner 2.",
+  "DEF_ASE_EFF_DATE_OWNER2": "Deferral start date for owner 2.",
+  "DEF_ASE_REMVL_DATE_OWNER2": "Deferral removal date for owner 2.",
+  "DEF_ASE_FLAG_OWNER3": "Deferral flag for owner 3.",
+  "DEF_ASE_EFF_DATE_OWNER3": "Deferral start date for owner 3.",
+  "DEF_ASE_REMVL_DATE_OWNER3": "Deferral removal date for owner 3.",
+  "2525D_FLG": "Tax Code 25.25(d) correction flag (value error found after certification).",
+  "2229_FRAUD": "Tax Code 22.29 rendition fraud penalty flag.",
+  "3301_FRAUD": "Tax Code 33.01 fraud penalty flag.",
+  "LATE_AG_FLG": "Late agricultural application flag.",
+  "AGREED_JDGMNT": "Agreed judgment flag (litigation settled by agreement).",
+  "AG_ROLLBACK_DT": "Date of the agricultural rollback.",
+  "SIC_CD": "BPP industry (SIC) code; 0 for real property.",
+  "BPP_ROUT_CD": "Legacy BPP route code; blank for real property.",
+  "SUBDIVISION": "Subdivision code.",
+  "MAP_VOL": "Plat map volume.",
+  "BLOCK_CD": "Block code from the legal description.",
+  "LOT_CD": "Lot code from the legal description.",
+  "MBL_HOME_LABEL": "Mobile home HUD label number.",
+  "TOTAL_PRORATION_CDX": "Total-exemption proration code.",
+  "TOTAL_PRORATION_TYPE": "Total-exemption proration type.",
+  "TOTAL_PRORATION_EFF_DT": "Date the prorated total exemption starts.",
+  "TOTAL_PRORATION_EXP_DT": "Date the prorated total exemption ends.",
+  "TOTAL_PRORATION_CNTY_AMT": "Prorated total-exemption amount for the county.",
+  "TOTAL_PRORATION_CITY_AMT": "Prorated total-exemption amount for the city.",
+  "TOTAL_PRORATION_ISD_AMT": "Prorated total-exemption amount for the school district (ISD).",
+  "TOTAL_PRORATION_HOSP_AMT": "Prorated total-exemption amount for the hospital district.",
+  "TOTAL_PRORATION_COLL_AMT": "Prorated total-exemption amount for the college district.",
+  "TOTAL_PRORATION_SPDS_AMT": "Prorated total-exemption amount for the special district.",
+  "VETERAN_100_IND": "Indicator for the 100% disabled-veteran homestead exemption.",
+  "VETERAN_100_EFF_DT": "Effective date of the 100% disabled-veteran exemption.",
+  "VETERAN_100_TRANSFER_AMT": "Transferred amount of the 100% disabled-veteran exemption.",
+  "VETERAN_100_CNTY_AMT": "100% disabled-veteran exemption amount for the county.",
+  "VETERAN_100_CITY_AMT": "100% disabled-veteran exemption amount for the city.",
+  "VETERAN_100_ISD_AMT": "100% disabled-veteran exemption amount for the school district (ISD).",
+  "VETERAN_100_HOSP_AMT": "100% disabled-veteran exemption amount for the hospital district.",
+  "VETERAN_100_COLL_AMT": "100% disabled-veteran exemption amount for the college district.",
+  "VETERAN_100_SPDS_AMT": "100% disabled-veteran exemption amount for the special district.",
+  "VET100_PRORATION_CDX": "100% disabled-veteran proration code.",
+  "VET100_PRORATION_TYPE": "100% disabled-veteran proration type.",
+  "VET100_PRORATION_EFF_DT": "Start date of the 100% disabled-veteran proration.",
+  "VET100_PRORATION_EXP_DT": "End date of the 100% disabled-veteran proration.",
+  "VET100_PRORATION_CNTY_AMT": "Prorated 100% disabled-veteran exemption amount for the county.",
+  "VET100_PRORATION_CITY_AMT": "Prorated 100% disabled-veteran exemption amount for the city.",
+  "VET100_PRORATION_ISD_AMT": "Prorated 100% disabled-veteran exemption amount for the school district (ISD).",
+  "VET100_PRORATION_HOSP_AMT": "Prorated 100% disabled-veteran exemption amount for the hospital district.",
+  "VET100_PRORATION_COLL_AMT": "Prorated 100% disabled-veteran exemption amount for the college district.",
+  "VET100_PRORATION_SPDS_AMT": "Prorated 100% disabled-veteran exemption amount for the special district.",
+  "RECORD_PROCESS_TYPE": "B = before change, A = after change (used on change files).",
+  "STATUS_FLAG": "C = change, D = delete (used on change files).",
+  "BPP_INTST_ALLOC_AMT": "BPP interstate allocation amount.",
+  "DIS_VET_HOME_CNTY_AMT": "Donated-homestead disabled-veteran exemption amount for the county.",
+  "DIS_VET_HOME_CITY_AMT": "Donated-homestead disabled-veteran exemption amount for the city.",
+  "DIS_VET_HOME_ISD_AMT": "Donated-homestead disabled-veteran exemption amount for the school district (ISD).",
+  "DIS_VET_HOME_HOSP_AMT": "Donated-homestead disabled-veteran exemption amount for the hospital district.",
+  "DIS_VET_HOME_COLL_AMT": "Donated-homestead disabled-veteran exemption amount for the college district.",
+  "DIS_VET_HOME_SPDS_AMT": "Donated-homestead disabled-veteran exemption amount for the special district.",
+  "DIS_VET_HOME_TYPE_1": "Donated-homestead disabled-veteran type (V = veteran, S = spouse), owner 1.",
+  "DIS_VET_HOME_EFF_DT_1": "Effective date of the donated-homestead disabled-veteran exemption, owner 1.",
+  "DIS_VET_HOME_DISBLD_PCT_1": "Disability percent for the donated-homestead exemption, owner 1.",
+  "DIS_VET_HOME_TRANSFER_AMT_1": "Transferred amount of the donated-homestead exemption, owner 1.",
+  "DIS_VET_HOME_TYPE_2": "Donated-homestead disabled-veteran type (V = veteran, S = spouse), owner 2.",
+  "DIS_VET_HOME_EFF_DT_2": "Effective date of the donated-homestead disabled-veteran exemption, owner 2.",
+  "DIS_VET_HOME_DISBLD_PCT_2": "Disability percent for the donated-homestead exemption, owner 2.",
+  "DIS_VET_HOME_TRANSFER_AMT_2": "Transferred amount of the donated-homestead exemption, owner 2.",
+  "DIS_VET_HOME_TYPE_3": "Donated-homestead disabled-veteran type (V = veteran, S = spouse), owner 3.",
+  "DIS_VET_HOME_EFF_DT_3": "Effective date of the donated-homestead disabled-veteran exemption, owner 3.",
+  "DIS_VET_HOME_DISBLD_PCT_3": "Disability percent for the donated-homestead exemption, owner 3.",
+  "DIS_VET_HOME_TRANSFER_AMT_3": "Transferred amount of the donated-homestead exemption, owner 3.",
+  "VET_HOME_PRORATION_CDX_1": "Proration code for the donated-homestead veteran exemption, owner 1.",
+  "VET_HOME_PRORATION_TYPE_1": "Proration type (HT = now taxable, HE = now exempt) for the donated-homestead veteran exemption, owner 1.",
+  "VET_HOME_PRORATION_EFF_DT_1": "Proration start date for the donated-homestead veteran exemption, owner 1.",
+  "VET_HOME_PRORATION_EXP_DT_1": "Proration end date for the donated-homestead veteran exemption, owner 1.",
+  "VET_HOME_PRORATION_DAYS_TAXABLE_1": "Days taxable for the donated-homestead veteran exemption, owner 1.",
+  "VET_HOME_PRORATION_CDX_2": "Proration code for the donated-homestead veteran exemption, owner 2.",
+  "VET_HOME_PRORATION_TYPE_2": "Proration type (HT = now taxable, HE = now exempt) for the donated-homestead veteran exemption, owner 2.",
+  "VET_HOME_PRORATION_EFF_DT_2": "Proration start date for the donated-homestead veteran exemption, owner 2.",
+  "VET_HOME_PRORATION_EXP_DT_2": "Proration end date for the donated-homestead veteran exemption, owner 2.",
+  "VET_HOME_PRORATION_DAYS_TAXABLE_2": "Days taxable for the donated-homestead veteran exemption, owner 2.",
+  "VET_HOME_PRORATION_CDX_3": "Proration code for the donated-homestead veteran exemption, owner 3.",
+  "VET_HOME_PRORATION_TYPE_3": "Proration type (HT = now taxable, HE = now exempt) for the donated-homestead veteran exemption, owner 3.",
+  "VET_HOME_PRORATION_EFF_DT_3": "Proration start date for the donated-homestead veteran exemption, owner 3.",
+  "VET_HOME_PRORATION_EXP_DT_3": "Proration end date for the donated-homestead veteran exemption, owner 3.",
+  "VET_HOME_PRORATION_DAYS_TAXABLE_3": "Days taxable for the donated-homestead veteran exemption, owner 3.",
+  "JE_REASON_CODES": "Journal-entry reason codes for the roll change.",
+  "QUALIFIED_SURVIVING_SPOUSE_FLAG_1": "Y when a qualified surviving spouse holds the exemption, owner 1.",
+  "ORIGINAL_DISABLED_EFF_DT_1": "Original disabled-exemption effective date, owner 1.",
+  "DATE_OF_DEATH_1": "Date of death of the person who held the exemption, owner 1.",
+  "QUALIFIED_SURVIVING_SPOUSE_FLAG_2": "Y when a qualified surviving spouse holds the exemption, owner 2.",
+  "ORIGINAL_DISABLED_EFF_DT_2": "Original disabled-exemption effective date, owner 2.",
+  "DATE_OF_DEATH_2": "Date of death of the person who held the exemption, owner 2.",
+  "QUALIFIED_SURVIVING_SPOUSE_FLAG_3": "Y when a qualified surviving spouse holds the exemption, owner 3.",
+  "ORIGINAL_DISABLED_EFF_DT_3": "Original disabled-exemption effective date, owner 3.",
+  "DATE_OF_DEATH_3": "Date of death of the person who held the exemption, owner 3.",
+  "CNTY_DISASTER_EXEMPT_AMT": "Temporary disaster exemption amount for the county.",
+  "CITY_DISASTER_EXEMPT_AMT": "Temporary disaster exemption amount for the city.",
+  "ISD_DISASTER_EXEMPT_AMT": "Temporary disaster exemption amount for the school district (ISD).",
+  "HOSP_DISASTER_EXEMPT_AMT": "Temporary disaster exemption amount for the hospital district.",
+  "COLL_DISASTER_EXEMPT_AMT": "Temporary disaster exemption amount for the college district.",
+  "SPEC_DISASTER_EXEMPT_AMT": "Temporary disaster exemption amount for the special district.",
+  "CIRCUIT_BREAKER_FLAG": "Y when the circuit-breaker 20% appraisal cap on non-homestead property applies.",
+  "CNTY_CHILD_CARE_FLAG": "Y when the county child-care facility exemption applies.",
+  "CNTY_CHILD_CARE_EFF_YEAR": "Year the county child-care facility exemption took effect.",
+  "CNTY_CHILD_CARE_EXEMPT_AMT": "Child-care facility exemption amount for the county.",
+  "CITY_CHILD_CARE_FLAG": "Y when the city child-care facility exemption applies.",
+  "CITY_CHILD_CARE_EFF_YEAR": "Year the city child-care facility exemption took effect.",
+  "CITY_CHILD_CARE_EXEMPT_AMT": "Child-care facility exemption amount for the city.",
+  "OWNER_ADDRESS_LINE_1": "Owner mailing address line 1.",
+  "OWNER_ADDRESS_LINE_2": "Owner mailing address line 2.",
+  "OWNER_ADDRESS_LINE_3": "Owner mailing address line 3.",
+  "OWNER_ADDRESS_LINE_4": "Owner mailing address line 4.",
+  "OWNER_ADDRESS_LINE_5": "Owner mailing address line 5.",
+  "ENTITY_FLAG": "Entity flag (Y or N).",
+  "11_145_BPP_EXEMPTION_FLAG": "Y when the Tax Code 11.145 small-BPP exemption applies.",
+  "CNTY_11_145_BPP_EXEMPTION_AMT": "Section 11.145 small-BPP (under $125,000) exemption amount for the county.",
+  "CITY_11_145_BPP_EXEMPTION_AMT": "Section 11.145 small-BPP (under $125,000) exemption amount for the city.",
+  "ISD_11_145_BPP_EXEMPTION_AMT": "Section 11.145 small-BPP (under $125,000) exemption amount for the school district (ISD).",
+  "HOSP_11_145_BPP_EXEMPTION_AMT": "Section 11.145 small-BPP (under $125,000) exemption amount for the hospital district.",
+  "COLL_11_145_BPP_EXEMPTION_AMT": "Section 11.145 small-BPP (under $125,000) exemption amount for the college district.",
+  "SPEC_11_145_BPP_EXEMPTION_AMT": "Section 11.145 small-BPP (under $125,000) exemption amount for the special district.",
+  "ORIGINAL_DISABLED_EFF_DATE_1": "Original disabled-exemption effective date (second layout block), owner 1.",
+  "ORIGINAL_DISABLED_EFF_DATE_2": "Original disabled-exemption effective date (second layout block), owner 2.",
+  "ORIGINAL_DISABLED_EFF_DATE_3": "Original disabled-exemption effective date (second layout block), owner 3."
+ },
+ "descriptions_by_set": {
+  "c26-ACCOUNT_APPRL_YEAR:TOT_VAL": "Total value of property.",
+  "c26-ACCOUNT_INFO:DIVISION_CD": "RES = Residential, COM = Commercial, BPP = Business Personal Property.",
+  "c26-ACCOUNT_TIF:APPRAISAL_YR": "The appraisal year for the data.",
+  "c26-APPLIED_STD_EXEMPT:TOT_VAL": "Total market value of property.",
+  "c26-COM_DETAIL:ACCOUNT_NUM": "DCAD account number.",
+  "c26-COM_DETAIL:LAND_VAL": "Not available and not used (per the DCAD field list).",
+  "c26-FREEPORT_EXEMPTION:APPRAISAL_YR": "DCAD account number.",
+  "c26-FREEPORT_EXEMPTION:ACCOUNT_NUM": "Appraisal year for data.",
+  "c26-MULTI_OWNER:OWNER_NAME": "Name of the listed owner record.",
+  "c26-MULTI_OWNER:OWNERSHIP_PCT": "Ownership percent of the listed owner.",
+  "c26-RES_ADDL:TAX_OBJ_ID": "DCAD Taxable Object Account Number/ Parcel Identification. Usually residential accounts only have one taxable object, i.e. the main home.",
+  "c26-RES_ADDL:CONSTR_TYP_DESC": "The description of the type of construction material.",
+  "c26-RES_ADDL:NUM_STORIES": "Number of stories if applicable.",
+  "c26-RES_ADDL:AREA_SIZE": "Area size if applicable.",
+  "c26-RES_ADDL:VAL_AMT": "Value of the improvement.",
+  "c26-RES_DETAIL:TAX_OBJ_ID": "Particular taxable object of the account. Usually residential accounts only have one taxable object, i.e. the main home.",
+  "c26-RES_DETAIL:BLDG_CLASS_DESC": "The building class description of the residential structure.",
+  "c26-RES_DETAIL:YR_BUILT": "The year the structure was built.",
+  "c26-RES_DETAIL:FOUNDATION_TYP_DESC": "Type of foundation description.",
+  "c26-RES_DETAIL:AC_TYP_DESC": "Air Conditioning type description.",
+  "c26-RES_DETAIL:EXT_WALL_DESC": "Exterior wall type description.",
+  "c26-RES_DETAIL:DEPRECIATION_PCT": "Depreciation percent. Called DEPREPRECIATION_PCT in the DCAD field list.",
+  "c26-RES_DETAIL:NUM_UNITS": "Number of units.",
+  "c26-TAXABLE_OBJECT:TAX_OBJ_ID": "DCAD Taxable Object Account Number/ Parcel Identification.",
+  "c26-TOTAL_EXEMPTION:ACCOUNT_NUM": "DCAD account number.",
+  "u26-ACCOUNT_APPRL_YEAR:TOT_VAL": "Total value of property.",
+  "u26-ACCOUNT_INFO:DIVISION_CD": "RES = Residential, COM = Commercial, BPP = Business Personal Property.",
+  "u26-ACCOUNT_TIF:APPRAISAL_YR": "The appraisal year for the data.",
+  "u26-APPLIED_STD_EXEMPT:TOT_VAL": "Total market value of property.",
+  "u26-COM_DETAIL:ACCOUNT_NUM": "DCAD account number.",
+  "u26-COM_DETAIL:LAND_VAL": "Not available and not used (per the DCAD field list).",
+  "u26-FREEPORT_EXEMPTION:APPRAISAL_YR": "DCAD account number.",
+  "u26-FREEPORT_EXEMPTION:ACCOUNT_NUM": "Appraisal year for data.",
+  "u26-MULTI_OWNER:OWNER_NAME": "Name of the listed owner record.",
+  "u26-MULTI_OWNER:OWNERSHIP_PCT": "Ownership percent of the listed owner.",
+  "u26-RES_ADDL:TAX_OBJ_ID": "DCAD Taxable Object Account Number/ Parcel Identification. Usually residential accounts only have one taxable object, i.e. the main home.",
+  "u26-RES_ADDL:CONSTR_TYP_DESC": "The description of the type of construction material.",
+  "u26-RES_ADDL:NUM_STORIES": "Number of stories if applicable.",
+  "u26-RES_ADDL:AREA_SIZE": "Area size if applicable.",
+  "u26-RES_ADDL:VAL_AMT": "Value of the improvement.",
+  "u26-RES_DETAIL:TAX_OBJ_ID": "Particular taxable object of the account. Usually residential accounts only have one taxable object, i.e. the main home.",
+  "u26-RES_DETAIL:BLDG_CLASS_DESC": "The building class description of the residential structure.",
+  "u26-RES_DETAIL:YR_BUILT": "The year the structure was built.",
+  "u26-RES_DETAIL:FOUNDATION_TYP_DESC": "Type of foundation description.",
+  "u26-RES_DETAIL:AC_TYP_DESC": "Air Conditioning type description.",
+  "u26-RES_DETAIL:EXT_WALL_DESC": "Exterior wall type description.",
+  "u26-RES_DETAIL:DEPRECIATION_PCT": "Depreciation percent. Called DEPREPRECIATION_PCT in the DCAD field list.",
+  "u26-RES_DETAIL:NUM_UNITS": "Number of units.",
+  "u26-TAXABLE_OBJECT:TAX_OBJ_ID": "DCAD Taxable Object Account Number/ Parcel Identification.",
+  "u26-TOTAL_EXEMPTION:ACCOUNT_NUM": "DCAD account number.",
+  "u27-ACCOUNT_APPRL_YEAR:TOT_VAL": "Total value of property.",
+  "u27-ACCOUNT_INFO:DIVISION_CD": "RES = Residential, COM = Commercial, BPP = Business Personal Property.",
+  "u27-ACCOUNT_TIF:APPRAISAL_YR": "The appraisal year for the data.",
+  "u27-APPLIED_STD_EXEMPT:TOT_VAL": "Total market value of property.",
+  "u27-COM_DETAIL:ACCOUNT_NUM": "DCAD account number.",
+  "u27-COM_DETAIL:LAND_VAL": "Not available and not used (per the DCAD field list).",
+  "u27-FREEPORT_EXEMPTION:APPRAISAL_YR": "DCAD account number.",
+  "u27-FREEPORT_EXEMPTION:ACCOUNT_NUM": "Appraisal year for data.",
+  "u27-MULTI_OWNER:OWNER_NAME": "Name of the listed owner record.",
+  "u27-MULTI_OWNER:OWNERSHIP_PCT": "Ownership percent of the listed owner.",
+  "u27-RES_ADDL:TAX_OBJ_ID": "DCAD Taxable Object Account Number/ Parcel Identification. Usually residential accounts only have one taxable object, i.e. the main home.",
+  "u27-RES_ADDL:CONSTR_TYP_DESC": "The description of the type of construction material.",
+  "u27-RES_ADDL:NUM_STORIES": "Number of stories if applicable.",
+  "u27-RES_ADDL:AREA_SIZE": "Area size if applicable.",
+  "u27-RES_ADDL:VAL_AMT": "Value of the improvement.",
+  "u27-RES_DETAIL:TAX_OBJ_ID": "Particular taxable object of the account. Usually residential accounts only have one taxable object, i.e. the main home.",
+  "u27-RES_DETAIL:BLDG_CLASS_DESC": "The building class description of the residential structure.",
+  "u27-RES_DETAIL:YR_BUILT": "The year the structure was built.",
+  "u27-RES_DETAIL:FOUNDATION_TYP_DESC": "Type of foundation description.",
+  "u27-RES_DETAIL:AC_TYP_DESC": "Air Conditioning type description.",
+  "u27-RES_DETAIL:EXT_WALL_DESC": "Exterior wall type description.",
+  "u27-RES_DETAIL:DEPRECIATION_PCT": "Depreciation percent. Called DEPREPRECIATION_PCT in the DCAD field list.",
+  "u27-RES_DETAIL:NUM_UNITS": "Number of units.",
+  "u27-TAXABLE_OBJECT:TAX_OBJ_ID": "DCAD Taxable Object Account Number/ Parcel Identification.",
+  "u27-TOTAL_EXEMPTION:ACCOUNT_NUM": "DCAD account number.",
+  "bc26-BPP_DETAIL:ACCOUNT_NUM": "DCAD BPP account number (17 characters).",
+  "bc26-BPP_DETAIL:APPRAISAL_YR": "Appraisal (tax) year.",
+  "bc26-BPP_DETAIL:STREET_NUM": "Business location street number.",
+  "bc26-BPP_DETAIL:STREET_HALF_NUM": "Business location street half number.",
+  "bu26-BPP_DETAIL:ACCOUNT_NUM": "DCAD BPP account number (17 characters).",
+  "bu26-BPP_DETAIL:APPRAISAL_YR": "Appraisal (tax) year.",
+  "bu26-BPP_DETAIL:STREET_NUM": "Business location street number.",
+  "bu26-BPP_DETAIL:STREET_HALF_NUM": "Business location street half number.",
+  "r26-REAL_ROLL:OWNER_COUNTRY": "Owner mailing country; blank when the owner is in the USA.",
+  "r26-REAL_ROLL:OWNER_ZIPCODE": "Owner mailing ZIP+4 (nine digits, zero-filled).",
+  "r26-REAL_ROLL:STREET_NAME": "Property street name.",
+  "r26-REAL_ROLL:STREET_SUFFIX": "Property street suffix (ST, AVE, DR...).",
+  "r26-REAL_ROLL:SUITE_NUMBER": "Suite number for BPP, condo unit for real property.",
+  "r26-REAL_ROLL:REGION": "DCAD appraisal region.",
+  "r26-REAL_ROLL:PROPERTY_CLASS": "DCAD property class / state code group.",
+  "r26-REAL_ROLL:MBL_HOME_SER_NUM": "Mobile home serial number.",
+  "r26-BPP_ROLL:OWNER_COUNTRY": "Owner mailing country; blank when the owner is in the USA.",
+  "r26-BPP_ROLL:OWNER_ZIPCODE": "Owner mailing ZIP+4 (nine digits, zero-filled).",
+  "r26-BPP_ROLL:STREET_NAME": "Property street name.",
+  "r26-BPP_ROLL:STREET_SUFFIX": "Property street suffix (ST, AVE, DR...).",
+  "r26-BPP_ROLL:SUITE_NUMBER": "Suite number for BPP, condo unit for real property.",
+  "r26-BPP_ROLL:REGION": "DCAD appraisal region.",
+  "r26-BPP_ROLL:PROPERTY_CLASS": "DCAD property class / state code group.",
+  "r26-BPP_ROLL:MBL_HOME_SER_NUM": "Mobile home serial number."
+ },
+ "sources": [
+  {
+   "id": "dcad",
+   "label": "DCAD data export",
+   "sub": "3 exports · 2026 certified, 2026 current, 2027 current · {n} files",
+   "desc": "DCAD's relational data product: 14 CSV tables per export that join on <code>ACCOUNT_NUM</code> (and <code>TAX_OBJ_ID</code> for building detail), with <code>ACCOUNT_APPRL_YEAR</code> as the central table. Field descriptions come from <code>TABLES AND FIELD NAMES.xlsx</code> and <code>DCAD Data Dictionary.rtf</code> shipped with each export; state codes from <code>SPTD_CD_XREF.pdf</code>. Each current-2026 file carries a note with its row-level differences from the certified export.<ul class=\"exports\"><li><b>2026 certified · Jul 23</b>: <code>Data/DCAD2026_CERTIFIED_07232026/</code>, 806,563 accounts</li><li><b>2026 current</b>: <code>Data/DCAD2026_CURRENT/</code>, 847,075 accounts</li><li><b>2027 current</b>: <code>Data/DCAD2027_CURRENT/</code>, 863,867 accounts</li></ul>",
+   "start": "u26-ACCOUNT_APPRL_YEAR",
+   "groups": [
+    {
+     "id": "d-acct",
+     "label": "Accounts & values",
+     "desc": "The central account tables. Everything joins on <code>ACCOUNT_NUM</code>.",
+     "years": [
+      {
+       "label": "2026 certified · Jul 23",
+       "datasets": [
+        "c26-ACCOUNT_APPRL_YEAR",
+        "c26-ACCOUNT_INFO",
+        "c26-MULTI_OWNER",
+        "c26-TAXABLE_OBJECT"
+       ]
+      },
+      {
+       "label": "2026 current",
+       "datasets": [
+        "u26-ACCOUNT_APPRL_YEAR",
+        "u26-ACCOUNT_INFO",
+        "u26-MULTI_OWNER",
+        "u26-TAXABLE_OBJECT"
+       ]
+      },
+      {
+       "label": "2027 current",
+       "datasets": [
+        "u27-ACCOUNT_APPRL_YEAR",
+        "u27-ACCOUNT_INFO",
+        "u27-MULTI_OWNER",
+        "u27-TAXABLE_OBJECT"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "d-res",
+     "label": "Residential",
+     "desc": "House and additional-improvement detail. Joins on <code>ACCOUNT_NUM</code> and <code>TAX_OBJ_ID</code>.",
+     "years": [
+      {
+       "label": "2026 certified · Jul 23",
+       "datasets": [
+        "c26-RES_DETAIL",
+        "c26-RES_ADDL"
+       ]
+      },
+      {
+       "label": "2026 current",
+       "datasets": [
+        "u26-RES_DETAIL",
+        "u26-RES_ADDL"
+       ]
+      },
+      {
+       "label": "2027 current",
+       "datasets": [
+        "u27-RES_DETAIL",
+        "u27-RES_ADDL"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "d-com",
+     "label": "Commercial",
+     "desc": "Commercial building detail, one row per taxable object (<code>TAX_OBJ_ID</code>).",
+     "years": [
+      {
+       "label": "2026 certified · Jul 23",
+       "datasets": [
+        "c26-COM_DETAIL"
+       ]
+      },
+      {
+       "label": "2026 current",
+       "datasets": [
+        "u26-COM_DETAIL"
+       ]
+      },
+      {
+       "label": "2027 current",
+       "datasets": [
+        "u27-COM_DETAIL"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "d-land",
+     "label": "Land",
+     "desc": "Land sections. Joins on <code>ACCOUNT_NUM</code>.",
+     "years": [
+      {
+       "label": "2026 certified · Jul 23",
+       "datasets": [
+        "c26-LAND"
+       ]
+      },
+      {
+       "label": "2026 current",
+       "datasets": [
+        "u26-LAND"
+       ]
+      },
+      {
+       "label": "2027 current",
+       "datasets": [
+        "u27-LAND"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "d-exempt",
+     "label": "Exemptions",
+     "desc": "Exemptions granted and their amounts per taxing unit.",
+     "years": [
+      {
+       "label": "2026 certified · Jul 23",
+       "datasets": [
+        "c26-APPLIED_STD_EXEMPT",
+        "c26-ACCT_EXEMPT_VALUE",
+        "c26-TOTAL_EXEMPTION",
+        "c26-FREEPORT_EXEMPTION"
+       ]
+      },
+      {
+       "label": "2026 current",
+       "datasets": [
+        "u26-APPLIED_STD_EXEMPT",
+        "u26-ACCT_EXEMPT_VALUE",
+        "u26-TOTAL_EXEMPTION",
+        "u26-FREEPORT_EXEMPTION"
+       ]
+      },
+      {
+       "label": "2027 current",
+       "datasets": [
+        "u27-APPLIED_STD_EXEMPT",
+        "u27-ACCT_EXEMPT_VALUE",
+        "u27-TOTAL_EXEMPTION",
+        "u27-FREEPORT_EXEMPTION"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "d-abate",
+     "label": "Abatements & TIF",
+     "desc": "Abatement agreements and Tax Increment Finance zones.",
+     "years": [
+      {
+       "label": "2026 certified · Jul 23",
+       "datasets": [
+        "c26-ABATEMENT_EXEMPT",
+        "c26-ACCOUNT_TIF"
+       ]
+      },
+      {
+       "label": "2026 current",
+       "datasets": [
+        "u26-ABATEMENT_EXEMPT",
+        "u26-ACCOUNT_TIF"
+       ]
+      },
+      {
+       "label": "2027 current",
+       "datasets": [
+        "u27-ABATEMENT_EXEMPT",
+        "u27-ACCOUNT_TIF"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bpp",
+   "label": "BPP detail file",
+   "sub": "2 exports · 2026 certified, 2026 current · 101,094 accounts",
+   "desc": "The separate BPP data product: one comma-delimited file with every BPP account for the year, this year's and last year's values by asset category and taxable values by taxing unit (<code>BPP Data Explanation.doc</code>). The current file is compared with the certified one on its page.",
+   "start": "bu26-BPP_DETAIL",
+   "groups": [
+    {
+     "id": "b-acct",
+     "label": "BPP accounts",
+     "desc": "One flat file of business personal property accounts. Joins to the data export on <code>ACCOUNT_NUM</code>; <code>GIS_NUM</code> is the real property account the business sits on.",
+     "years": [
+      {
+       "label": "2026 certified · Jul 23",
+       "datasets": [
+        "bc26-BPP_DETAIL"
+       ]
+      },
+      {
+       "label": "2026 current",
+       "datasets": [
+        "bu26-BPP_DETAIL"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "roll",
+   "label": "Certified appraisal rolls",
+   "sub": "2026 · real 705,536 + BPP 101,027 accounts",
+   "desc": "The 2026 certified appraisal rolls in the mainframe layout DCAD gives taxing units (<code>REAL_APRL_ROLL_DALLAS_CO_2026.DAT</code>, <code>BPP_APRL_ROLL_DALLAS_CO_2026.DAT</code>), read directly from the .DAT files with the positions in <code>Add_Change_File_Format.xls</code>. They carry exemption amounts per taxing unit that the CSV export does not break out.",
+   "start": "r26-REAL_ROLL",
+   "groups": [
+    {
+     "id": "r-roll",
+     "label": "Certified rolls",
+     "desc": "Fixed-width roll files, one record per account. Both use the same 510-field layout.",
+     "years": [
+      {
+       "label": "2026 certified",
+       "datasets": [
+        "r26-REAL_ROLL",
+        "r26-BPP_ROLL"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
