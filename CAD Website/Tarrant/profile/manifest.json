@@ -5,6 +5,10 @@
  "store_key": "tarrant-view",
  "foot": "Generated {date}. Website files were scanned in full with DuckDB; \"Auto-detected on load\" is the type DuckDB assigns when it reads the raw file, and distinct counts there are approximate (HyperLogLog). Agent Portal statistics come from the example responses saved in Tarrant-New-Docs.yaml, so they describe a sample. \"Data type\" is inferred from the values: Code means digits stored as text with leading zeros, so it should stay text. Tokens, passwords, pre-signed links and personal or contact fields are never shown.",
  "root": "/Users/user2/PTP/CAD Website/Tarrant/",
+ "sample": {
+  "rows": 100,
+  "hide": "^(appellant|asname|sitename)$"
+ },
  "datasets": {
   "y2024": {
    "path": "output/PropertyData_2024.csv",
@@ -87,7 +91,7 @@
     "Has a tax agent on 126,645 rows (19%).",
     "Missing coordinates are written as a run of 32 zeros instead of being left blank, so they load as text and show up as 0 in the stats.",
     "<code>NoticeValue</code> is filled on 554,397 rows (85%).",
-    "<code>SitusCity</code> is filled on every row here but blank in every row of the 2025 file.",
+    "<code>SitusCity</code> has a value on 650,825 of 650,854 rows here (8 of them only spaces) but is blank in every row of the 2025 file.",
     "61 lines have 27 values instead of 28, most likely because a line break inside a text field splits the record. The reader flagged them, so a few dozen rows may be incomplete.",
     "<code>LastSaleDate</code> includes sales after 2024 (up to 2026 in some files), so this 2024 export carries current sale data rather than a snapshot from the 2024 roll."
    ]
@@ -141,9 +145,10 @@
    "compare": "supp24-R",
    "compareLabel": "the 2024 file",
    "notes": [
-    "Has a tax agent on 169,051 rows (26%).",
+    "Has a tax agent (<code>AgentName</code>) on 169,049 rows (26%).",
     "Missing coordinates are written as a run of 32 zeros instead of being left blank, so they load as text and show up as 0 in the stats.",
-    "<code>NoticeValue</code> is filled on 343,776 rows (52%)."
+    "<code>NoticeValue</code> is filled on 343,766 rows (52%).",
+    "The reader rejected 52 lines with missing columns, most likely records split by a line break inside a text field, so 658,393 rows were read from the file's 658,409 data lines."
    ]
   },
   "supp26": {
@@ -296,7 +301,7 @@
    "encoding": "Pipe-delimited, UTF-16",
    "notes": [
     "340,602 protest cases for 164,051 accounts. This file has no <code>TaxYear</code> column; it uses <code>Year</code>, and <code>AccountNumber</code> comes first.",
-    "<code>FinalValue</code> is 0 on 333,349 cases (98%) and <code>Disposition</code> is filled on only 7,243, so most cases have no recorded outcome value. <code>HearingDateTime</code> has a typo date in 1914."
+    "<code>FinalValue</code> is 0 on 333,349 cases (98%) and <code>Disposition</code> is filled on only 7,254 (11 of them only spaces), so most cases have no recorded outcome value. <code>HearingDateTime</code> has a typo date in 1914."
    ]
   },
   "agent-10_Basement": {
@@ -1476,6 +1481,7 @@
   "auth_overrides": {
    "Agent Token": "Email and password (sent by the client; not stored in the spec)"
   },
-  "token_auth_text": "Agent JWT in authorization header"
+  "token_auth_text": "Agent JWT in authorization header",
+  "sensitive_extra": "fileattachments|addedby"
  }
 }

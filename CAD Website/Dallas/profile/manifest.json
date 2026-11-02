@@ -1820,5 +1820,9 @@
     }
    ]
   }
- ]
+ ],
+ "sample": {
+  "rows": 100,
+  "hide": "applicant|person_contacted|^mail_|death|birth"
+ }
 }

@@ -1,16 +1,36 @@
 {
  "title": "Denton Property Data Profile",
- "eyebrow": "Denton Central Appraisal District \u00b7 PACS appraisal export files",
- "intro": "Everything in Denton CAD's 2026 PACS <b>Appraisal Export</b>, downloaded from the CAD website: 20 files per export, in two snapshots \u2014 the <b>certified</b> roll exported July 27 and <b>supplement 3</b> exported October 14. The year switch on every tab picks the snapshot. For each file you get its columns, data types, completeness and value distributions.",
+ "eyebrow": "Denton Central Appraisal District · PACS appraisal export files",
+ "intro": "Everything in Denton CAD's 2026 PACS <b>Appraisal Export</b>, downloaded from the CAD website: 20 files per export, in two snapshots — the <b>certified</b> roll exported July 27 and <b>supplement 3</b> exported October 14. The year switch on every tab picks the snapshot. For each file you get its columns, data types, completeness and value distributions.",
  "store_key": "denton-view",
  "foot": "Generated {date}. Files were scanned in full with DuckDB from the CSVs that <code>etl/denton_appraisal_export_etl.ipynb</code> writes from the raw PACS .TXT files; \"Auto-detected on load\" is the type DuckDB assigns, and distinct counts there are approximate (HyperLogLog). \"Data type\" is inferred from the values: Code means digits stored as text with leading zeros. Personal contact fields beyond the CAD's own public values are never shown.",
  "max_year": 2026,
  "root": "/Users/user2/PTP/CAD Website/Denton/",
+ "sample": {
+  "rows": 100,
+  "hide": "situs_num|mortgage_acct|mbl_hm_(sn|hud_num|title_num)|^operator$|confidential",
+  "show": [
+   "owner_id",
+   "py_owner_id",
+   "appr_owner_id",
+   "jan1_owner_id",
+   "partial_owner",
+   "legal_acreage",
+   "py_confidential_flag",
+   "py_address_suppress_flag",
+   "appr_confidential_flag",
+   "appr_address_suppress_flag",
+   "jan1_confidential_flag",
+   "jan1_address_suppress_flag",
+   "py_addr_ml_deliverable",
+   "mortgage_addr_ml_deliverable"
+  ]
+ },
  "datasets": {
   "c26-info": {
    "path": "output/2026-07-27_2026_APPRAISAL_INFO.csv",
    "read": "csv",
-   "label": "Jul 27 \u00b7 certified",
+   "label": "Jul 27 · certified",
    "about": "One row per property and owner: owner and mailing address, situs, legal description, land/improvement/market/appraised values, exemptions with qualify years, agents and ARB flags.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -110,7 +130,7 @@
   "s26-info": {
    "path": "output/2026-10-14_2026_APPRAISAL_INFO.csv",
    "read": "csv",
-   "label": "Oct 14 \u00b7 supp 3",
+   "label": "Oct 14 · supp 3",
    "about": "One row per property and owner: owner and mailing address, situs, legal description, land/improvement/market/appraised values, exemptions with qualify years, agents and ARB flags.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -212,7 +232,7 @@
   "c26-entinfo": {
    "path": "output/2026-07-27_2026_APPRAISAL_ENTITY_INFO.csv",
    "read": "csv",
-   "label": "1 \u00b7 Values by taxing unit",
+   "label": "1 · Values by taxing unit",
    "about": "One row per property, owner and taxing unit: assessed and taxable value, every exemption amount, homestead cap, freeze ceiling and allocation factors for that unit.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -395,7 +415,7 @@
   "s26-entinfo": {
    "path": "output/2026-10-14_2026_APPRAISAL_ENTITY_INFO.csv",
    "read": "csv",
-   "label": "1 \u00b7 Values by taxing unit",
+   "label": "1 · Values by taxing unit",
    "about": "One row per property, owner and taxing unit: assessed and taxable value, every exemption amount, homestead cap, freeze ceiling and allocation factors for that unit.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -581,7 +601,7 @@
   "c26-enttot": {
    "path": "output/2026-07-27_2026_APPRAISAL_ENTITY_TOTALS.csv",
    "read": "csv",
-   "label": "2 \u00b7 Unit totals",
+   "label": "2 · Unit totals",
    "about": "One row per taxing unit: roll-wide totals of value, counts and exemption amounts.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -741,7 +761,7 @@
   "s26-enttot": {
    "path": "output/2026-10-14_2026_APPRAISAL_ENTITY_TOTALS.csv",
    "read": "csv",
-   "label": "2 \u00b7 Unit totals",
+   "label": "2 · Unit totals",
    "about": "One row per taxing unit: roll-wide totals of value, counts and exemption amounts.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -903,7 +923,7 @@
   "c26-entity": {
    "path": "output/2026-07-27_2026_APPRAISAL_ENTITY.csv",
    "read": "csv",
-   "label": "3 \u00b7 Unit codes",
+   "label": "3 · Unit codes",
    "about": "Lookup of taxing unit ids to their short codes (C01 city, S09 school district, ...).",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -913,7 +933,7 @@
   "s26-entity": {
    "path": "output/2026-10-14_2026_APPRAISAL_ENTITY.csv",
    "read": "csv",
-   "label": "3 \u00b7 Unit codes",
+   "label": "3 · Unit codes",
    "about": "Lookup of taxing unit ids to their short codes (C01 city, S09 school district, ...).",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -925,7 +945,7 @@
   "c26-imprinfo": {
    "path": "output/2026-07-27_2026_APPRAISAL_IMPROVEMENT_INFO.csv",
    "read": "csv",
-   "label": "1 \u00b7 Improvements",
+   "label": "1 · Improvements",
    "about": "One row per improvement (building) on a property: type, state code, homesite flag and value.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -938,7 +958,7 @@
   "s26-imprinfo": {
    "path": "output/2026-10-14_2026_APPRAISAL_IMPROVEMENT_INFO.csv",
    "read": "csv",
-   "label": "1 \u00b7 Improvements",
+   "label": "1 · Improvements",
    "about": "One row per improvement (building) on a property: type, state code, homesite flag and value.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -953,7 +973,7 @@
   "c26-imprdet": {
    "path": "output/2026-07-27_2026_APPRAISAL_IMPROVEMENT_DETAIL.csv",
    "read": "csv",
-   "label": "2 \u00b7 Improvement details",
+   "label": "2 · Improvement details",
    "about": "One row per improvement segment (main area, garage, porch ...): class, year built, area and value.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -968,7 +988,7 @@
   "s26-imprdet": {
    "path": "output/2026-10-14_2026_APPRAISAL_IMPROVEMENT_DETAIL.csv",
    "read": "csv",
-   "label": "2 \u00b7 Improvement details",
+   "label": "2 · Improvement details",
    "about": "One row per improvement segment (main area, garage, porch ...): class, year built, area and value.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -985,7 +1005,7 @@
   "c26-imprattr": {
    "path": "output/2026-07-27_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.csv",
    "read": "csv",
-   "label": "3 \u00b7 Detail attributes",
+   "label": "3 · Detail attributes",
    "about": "One row per attribute of an improvement segment: foundation, roof, flooring, heating, pool and similar, as description/code pairs.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -995,7 +1015,7 @@
   "s26-imprattr": {
    "path": "output/2026-10-14_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.csv",
    "read": "csv",
-   "label": "3 \u00b7 Detail attributes",
+   "label": "3 · Detail attributes",
    "about": "One row per attribute of an improvement segment: foundation, roof, flooring, heating, pool and similar, as description/code pairs.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -1009,7 +1029,7 @@
    "read": {
     "opts": "strict_mode=false, max_line_size=60000000"
    },
-   "label": "4 \u00b7 Sketches",
+   "label": "4 · Sketches",
    "about": "One row per sketched improvement segment: the drawing commands (legacy) or JSON sketch.",
    "encoding": "CSV, UTF-8 (from tab-separated PACS .TXT)",
    "notes": [
@@ -1022,7 +1042,7 @@
    "read": {
     "opts": "strict_mode=false, max_line_size=60000000"
    },
-   "label": "4 \u00b7 Sketches",
+   "label": "4 · Sketches",
    "about": "One row per sketched improvement segment: the drawing commands (legacy) or JSON sketch.",
    "encoding": "CSV, UTF-8 (from tab-separated PACS .TXT)",
    "notes": [
@@ -1035,7 +1055,7 @@
   "c26-mobile": {
    "path": "output/2026-07-27_2026_APPRAISAL_MOBILE_HOME_INFO.csv",
    "read": "csv",
-   "label": "5 \u00b7 Mobile homes",
+   "label": "5 · Mobile homes",
    "about": "Make, model, title, serial and HUD numbers for mobile-home improvements.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -1045,7 +1065,7 @@
   "s26-mobile": {
    "path": "output/2026-10-14_2026_APPRAISAL_MOBILE_HOME_INFO.csv",
    "read": "csv",
-   "label": "5 \u00b7 Mobile homes",
+   "label": "5 · Mobile homes",
    "about": "Make, model, title, serial and HUD numbers for mobile-home improvements.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -1057,7 +1077,7 @@
   "c26-land": {
    "path": "output/2026-07-27_2026_APPRAISAL_LAND_DETAIL.csv",
    "read": "csv",
-   "label": "Jul 27 \u00b7 certified",
+   "label": "Jul 27 · certified",
    "about": "One row per land segment: land type, state code, acreage and square feet, front/depth, pricing method and class, market and ag value.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -1074,7 +1094,7 @@
   "s26-land": {
    "path": "output/2026-10-14_2026_APPRAISAL_LAND_DETAIL.csv",
    "read": "csv",
-   "label": "Oct 14 \u00b7 supp 3",
+   "label": "Oct 14 · supp 3",
    "about": "One row per land segment: land type, state code, acreage and square feet, front/depth, pricing method and class, market and ag value.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -1094,23 +1114,23 @@
   "c26-sb12": {
    "path": "output/2026-07-27_2026_APPRAISAL_SB12.csv",
    "read": "csv",
-   "label": "1 \u00b7 Tax ceilings (SB12)",
+   "label": "1 · Tax ceilings (SB12)",
    "about": "Tax ceiling and limitation history for over-65 / disabled homesteads per school district and year. Tab-separated in the source; several columns are unnamed.",
    "encoding": "CSV, UTF-8 (from tab-separated PACS .TXT)",
    "notes": [
     "Tab-separated in the source, with <code>prop_id</code> not zero-padded: all 179,856 rows match the roll once padded to 12 digits (59,489 properties).",
-    "Three record types: <code>SB12</code> (one row per tax year 2025\u20132026), <code>SUMMARY</code> and <code>NEW_VALUE</code>. The ETL could not identify <code>col_11</code>\u2013<code>col_18</code>; their tooltips are best guesses."
+    "Three record types: <code>SB12</code> (one row per tax year 2025–2026), <code>SUMMARY</code> and <code>NEW_VALUE</code>. The ETL could not identify <code>col_11</code>–<code>col_18</code>; their tooltips are best guesses."
    ]
   },
   "s26-sb12": {
    "path": "output/2026-10-14_2026_APPRAISAL_SB12.csv",
    "read": "csv",
-   "label": "1 \u00b7 Tax ceilings (SB12)",
+   "label": "1 · Tax ceilings (SB12)",
    "about": "Tax ceiling and limitation history for over-65 / disabled homesteads per school district and year. Tab-separated in the source; several columns are unnamed.",
    "encoding": "CSV, UTF-8 (from tab-separated PACS .TXT)",
    "notes": [
     "Tab-separated in the source, with <code>prop_id</code> not zero-padded: all 196,529 rows match the roll once padded to 12 digits (64,927 properties).",
-    "Three record types: <code>SB12</code> (one row per tax year 2025\u20132026), <code>SUMMARY</code> and <code>NEW_VALUE</code>. The ETL could not identify <code>col_11</code>\u2013<code>col_18</code>; their tooltips are best guesses."
+    "Three record types: <code>SB12</code> (one row per tax year 2025–2026), <code>SUMMARY</code> and <code>NEW_VALUE</code>. The ETL could not identify <code>col_11</code>–<code>col_18</code>; their tooltips are best guesses."
    ],
    "compare": "c26-sb12",
    "compareLabel": "the Jul 27 certified export"
@@ -1118,7 +1138,7 @@
   "c26-defer": {
    "path": "output/2026-07-27_2026_APPRAISAL_TAX_DEFERRAL_INFO.csv",
    "read": "csv",
-   "label": "2 \u00b7 Tax deferrals",
+   "label": "2 · Tax deferrals",
    "about": "Properties with a tax deferral (over-65 or disabled): owner, exemption type and deferral dates.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -1128,7 +1148,7 @@
   "s26-defer": {
    "path": "output/2026-10-14_2026_APPRAISAL_TAX_DEFERRAL_INFO.csv",
    "read": "csv",
-   "label": "2 \u00b7 Tax deferrals",
+   "label": "2 · Tax deferrals",
    "about": "Properties with a tax deferral (over-65 or disabled): owner, exemption type and deferral dates.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -1140,7 +1160,7 @@
   "c26-arb": {
    "path": "output/2026-07-27_2026_APPRAISAL_ARB.csv",
    "read": "csv",
-   "label": "1 \u00b7 ARB protests",
+   "label": "1 · ARB protests",
    "about": "Properties with an Appraisal Review Board protest and its status.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -1153,12 +1173,12 @@
   "s26-arb": {
    "path": "output/2026-10-14_2026_APPRAISAL_ARB.csv",
    "read": "csv",
-   "label": "1 \u00b7 ARB protests",
+   "label": "1 · ARB protests",
    "about": "Properties with an Appraisal Review Board protest and its status.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "Only 280 rows (4,494 in the certified export): the file lists protests still open at export time, so settled ones drop out. Statuses: 157 <code>FILED</code>, 118 <code>SCHEDULED</code>.",
-    "52 rows are protests for earlier tax years (2019\u20132025). 39 <code>prop_id</code>s are not on the current roll."
+    "52 rows are protests for earlier tax years (2019–2025). 39 <code>prop_id</code>s are not on the current roll."
    ],
    "compare": "c26-arb",
    "compareLabel": "the Jul 27 certified export",
@@ -1169,11 +1189,11 @@
   "c26-lawsuit": {
    "path": "output/2026-07-27_2026_APPRAISAL_LAWSUIT.csv",
    "read": "csv",
-   "label": "2 \u00b7 Lawsuits",
+   "label": "2 · Lawsuits",
    "about": "Properties under a value lawsuit, one row per property and tax year in suit.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
-    "One row per property and tax year in suit, 2015\u20132026; only 86 rows for 2026 at certification."
+    "One row per property and tax year in suit, 2015–2026; only 86 rows for 2026 at certification."
    ],
    "force": {
     "prop_val_yr": "Integer"
@@ -1182,11 +1202,11 @@
   "s26-lawsuit": {
    "path": "output/2026-10-14_2026_APPRAISAL_LAWSUIT.csv",
    "read": "csv",
-   "label": "2 \u00b7 Lawsuits",
+   "label": "2 · Lawsuits",
    "about": "Properties under a value lawsuit, one row per property and tax year in suit.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
-    "One row per property and tax year in suit, 2015\u20132026. 2026 suits grew from 86 at certification to 2,621."
+    "One row per property and tax year in suit, 2015–2026. 2026 suits grew from 86 at certification to 2,621."
    ],
    "compare": "c26-lawsuit",
    "compareLabel": "the Jul 27 certified export",
@@ -1197,7 +1217,7 @@
   "c26-arblaw": {
    "path": "output/2026-07-27_2026_ARBITRATION_LAWSUIT.csv",
    "read": "csv",
-   "label": "3 \u00b7 Arbitration",
+   "label": "3 · Arbitration",
    "about": "Properties in binding arbitration, one row per property and tax year.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -1210,7 +1230,7 @@
   "s26-arblaw": {
    "path": "output/2026-10-14_2026_ARBITRATION_LAWSUIT.csv",
    "read": "csv",
-   "label": "3 \u00b7 Arbitration",
+   "label": "3 · Arbitration",
    "about": "Properties in binding arbitration, one row per property and tax year.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -1225,7 +1245,7 @@
   "c26-agent": {
    "path": "output/2026-07-27_2026_APPRAISAL_AGENT.csv",
    "read": "csv",
-   "label": "4 \u00b7 Agents",
+   "label": "4 · Agents",
    "about": "Every tax agent on file: id, name and mailing address. Joins to the agent ids on the property roll.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -1235,7 +1255,7 @@
   "s26-agent": {
    "path": "output/2026-10-14_2026_APPRAISAL_AGENT.csv",
    "read": "csv",
-   "label": "4 \u00b7 Agents",
+   "label": "4 · Agents",
    "about": "Every tax agent on file: id, name and mailing address. Joins to the agent ids on the property roll.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -1247,7 +1267,7 @@
   "c26-abs": {
    "path": "output/2026-07-27_2026_APPRAISAL_ABSTRACT_SUBDV.csv",
    "read": "csv",
-   "label": "1 \u00b7 Abstracts & subdivisions",
+   "label": "1 · Abstracts & subdivisions",
    "about": "Lookup of abstract and subdivision codes (abs_subdv_cd on the property roll) to their names.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": []
@@ -1255,7 +1275,7 @@
   "s26-abs": {
    "path": "output/2026-10-14_2026_APPRAISAL_ABSTRACT_SUBDV.csv",
    "read": "csv",
-   "label": "1 \u00b7 Abstracts & subdivisions",
+   "label": "1 · Abstracts & subdivisions",
    "about": "Lookup of abstract and subdivision codes (abs_subdv_cd on the property roll) to their names.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [],
@@ -1265,7 +1285,7 @@
   "c26-state": {
    "path": "output/2026-07-27_2026_APPRAISAL_STATE_CODE.csv",
    "read": "csv",
-   "label": "2 \u00b7 State codes",
+   "label": "2 · State codes",
    "about": "Lookup of Denton's state (property category) codes to the Comptroller PTD category.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -1278,7 +1298,7 @@
   "s26-state": {
    "path": "output/2026-10-14_2026_APPRAISAL_STATE_CODE.csv",
    "read": "csv",
-   "label": "2 \u00b7 State codes",
+   "label": "2 · State codes",
    "about": "Lookup of Denton's state (property category) codes to the Comptroller PTD category.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -1293,7 +1313,7 @@
   "c26-country": {
    "path": "output/2026-07-27_2026_APPRAISAL_COUNTRY_CODE.csv",
    "read": "csv",
-   "label": "3 \u00b7 Country codes",
+   "label": "3 · Country codes",
    "about": "Lookup of country codes used in addresses.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": []
@@ -1301,7 +1321,7 @@
   "s26-country": {
    "path": "output/2026-10-14_2026_APPRAISAL_COUNTRY_CODE.csv",
    "read": "csv",
-   "label": "3 \u00b7 Country codes",
+   "label": "3 · Country codes",
    "about": "Lookup of country codes used in addresses.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [],
@@ -1311,7 +1331,7 @@
   "c26-header": {
    "path": "output/2026-07-27_2026_APPRAISAL_HEADER.csv",
    "read": "csv",
-   "label": "4 \u00b7 Export header",
+   "label": "4 · Export header",
    "about": "One row describing the export: run time, appraisal year, supplement number, PACS and export version.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -1324,7 +1344,7 @@
   "s26-header": {
    "path": "output/2026-10-14_2026_APPRAISAL_HEADER.csv",
    "read": "csv",
-   "label": "4 \u00b7 Export header",
+   "label": "4 · Export header",
    "about": "One row describing the export: run time, appraisal year, supplement number, PACS and export version.",
    "encoding": "CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
@@ -1746,14 +1766,14 @@
   "ov65_prorate_end": "Date the over-65 homestead stops being prorated (blank when it covers the whole year).",
   "ov65s_exempt": "T if the property has the over-65 surviving spouse.",
   "dp_exempt": "T if the property has the disabled person.",
-  "dv1_exempt": "T if the property has the disabled veteran 10\u201329% rating.",
-  "dv1s_exempt": "T if the property has the disabled veteran 10\u201329% surviving spouse.",
-  "dv2_exempt": "T if the property has the disabled veteran 30\u201349% rating.",
-  "dv2s_exempt": "T if the property has the disabled veteran 30\u201349% surviving spouse.",
-  "dv3_exempt": "T if the property has the disabled veteran 50\u201369% rating.",
-  "dv3s_exempt": "T if the property has the disabled veteran 50\u201369% surviving spouse.",
-  "dv4_exempt": "T if the property has the disabled veteran 70\u2013100% rating.",
-  "dv4s_exempt": "T if the property has the disabled veteran 70\u2013100% surviving spouse.",
+  "dv1_exempt": "T if the property has the disabled veteran 10–29% rating.",
+  "dv1s_exempt": "T if the property has the disabled veteran 10–29% surviving spouse.",
+  "dv2_exempt": "T if the property has the disabled veteran 30–49% rating.",
+  "dv2s_exempt": "T if the property has the disabled veteran 30–49% surviving spouse.",
+  "dv3_exempt": "T if the property has the disabled veteran 50–69% rating.",
+  "dv3s_exempt": "T if the property has the disabled veteran 50–69% surviving spouse.",
+  "dv4_exempt": "T if the property has the disabled veteran 70–100% rating.",
+  "dv4s_exempt": "T if the property has the disabled veteran 70–100% surviving spouse.",
   "ex_exempt": "T if the property has the total exemption (fully exempt property).",
   "ex_prorate_begin": "Date the total exemption (fully exempt property) starts being prorated (blank when it covers the whole year).",
   "ex_prorate_end": "Date the total exemption (fully exempt property) stops being prorated (blank when it covers the whole year).",
@@ -1797,14 +1817,14 @@
   "ov65s_qualify_yr": "Year the owner first qualified for the over-65 surviving spouse.",
   "dp_qualify_yr": "Year the owner first qualified for the disabled person.",
   "dps_qualify_yr": "Year the owner first qualified for the disabled person surviving spouse.",
-  "dv1_qualify_yr": "Year the owner first qualified for the disabled veteran 10\u201329% rating.",
-  "dv1s_qualify_yr": "Year the owner first qualified for the disabled veteran 10\u201329% surviving spouse.",
-  "dv2_qualify_yr": "Year the owner first qualified for the disabled veteran 30\u201349% rating.",
-  "dv2s_qualify_yr": "Year the owner first qualified for the disabled veteran 30\u201349% surviving spouse.",
-  "dv3_qualify_yr": "Year the owner first qualified for the disabled veteran 50\u201369% rating.",
-  "dv3s_qualify_yr": "Year the owner first qualified for the disabled veteran 50\u201369% surviving spouse.",
-  "dv4_qualify_yr": "Year the owner first qualified for the disabled veteran 70\u2013100% rating.",
-  "dv4s_qualify_yr": "Year the owner first qualified for the disabled veteran 70\u2013100% surviving spouse.",
+  "dv1_qualify_yr": "Year the owner first qualified for the disabled veteran 10–29% rating.",
+  "dv1s_qualify_yr": "Year the owner first qualified for the disabled veteran 10–29% surviving spouse.",
+  "dv2_qualify_yr": "Year the owner first qualified for the disabled veteran 30–49% rating.",
+  "dv2s_qualify_yr": "Year the owner first qualified for the disabled veteran 30–49% surviving spouse.",
+  "dv3_qualify_yr": "Year the owner first qualified for the disabled veteran 50–69% rating.",
+  "dv3s_qualify_yr": "Year the owner first qualified for the disabled veteran 50–69% surviving spouse.",
+  "dv4_qualify_yr": "Year the owner first qualified for the disabled veteran 70–100% rating.",
+  "dv4s_qualify_yr": "Year the owner first qualified for the disabled veteran 70–100% surviving spouse.",
   "dvhs_qualify_yr": "Year the owner first qualified for the 100% disabled veteran homestead (11.131).",
   "ex_qualify_yr": "Year the owner first qualified for the total exemption (fully exempt property).",
   "ab_qualify_yr": "Year the owner first qualified for the abatement.",
@@ -1826,22 +1846,22 @@
   "ov65s_prorate_end": "Date the over-65 surviving spouse stops being prorated (blank when it covers the whole year).",
   "dp_prorate_begin": "Date the disabled person starts being prorated (blank when it covers the whole year).",
   "dp_prorate_end": "Date the disabled person stops being prorated (blank when it covers the whole year).",
-  "dv1_prorate_begin": "Date the disabled veteran 10\u201329% rating starts being prorated (blank when it covers the whole year).",
-  "dv1_prorate_end": "Date the disabled veteran 10\u201329% rating stops being prorated (blank when it covers the whole year).",
-  "dv1s_prorate_begin": "Date the disabled veteran 10\u201329% surviving spouse starts being prorated (blank when it covers the whole year).",
-  "dv1s_prorate_end": "Date the disabled veteran 10\u201329% surviving spouse stops being prorated (blank when it covers the whole year).",
-  "dv2_prorate_begin": "Date the disabled veteran 30\u201349% rating starts being prorated (blank when it covers the whole year).",
-  "dv2_prorate_end": "Date the disabled veteran 30\u201349% rating stops being prorated (blank when it covers the whole year).",
-  "dv2s_prorate_begin": "Date the disabled veteran 30\u201349% surviving spouse starts being prorated (blank when it covers the whole year).",
-  "dv2s_prorate_end": "Date the disabled veteran 30\u201349% surviving spouse stops being prorated (blank when it covers the whole year).",
-  "dv3_prorate_begin": "Date the disabled veteran 50\u201369% rating starts being prorated (blank when it covers the whole year).",
-  "dv3_prorate_end": "Date the disabled veteran 50\u201369% rating stops being prorated (blank when it covers the whole year).",
-  "dv3s_prorate_begin": "Date the disabled veteran 50\u201369% surviving spouse starts being prorated (blank when it covers the whole year).",
-  "dv3s_prorate_end": "Date the disabled veteran 50\u201369% surviving spouse stops being prorated (blank when it covers the whole year).",
-  "dv4_prorate_begin": "Date the disabled veteran 70\u2013100% rating starts being prorated (blank when it covers the whole year).",
-  "dv4_prorate_end": "Date the disabled veteran 70\u2013100% rating stops being prorated (blank when it covers the whole year).",
-  "dv4s_prorate_begin": "Date the disabled veteran 70\u2013100% surviving spouse starts being prorated (blank when it covers the whole year).",
-  "dv4s_prorate_end": "Date the disabled veteran 70\u2013100% surviving spouse stops being prorated (blank when it covers the whole year).",
+  "dv1_prorate_begin": "Date the disabled veteran 10–29% rating starts being prorated (blank when it covers the whole year).",
+  "dv1_prorate_end": "Date the disabled veteran 10–29% rating stops being prorated (blank when it covers the whole year).",
+  "dv1s_prorate_begin": "Date the disabled veteran 10–29% surviving spouse starts being prorated (blank when it covers the whole year).",
+  "dv1s_prorate_end": "Date the disabled veteran 10–29% surviving spouse stops being prorated (blank when it covers the whole year).",
+  "dv2_prorate_begin": "Date the disabled veteran 30–49% rating starts being prorated (blank when it covers the whole year).",
+  "dv2_prorate_end": "Date the disabled veteran 30–49% rating stops being prorated (blank when it covers the whole year).",
+  "dv2s_prorate_begin": "Date the disabled veteran 30–49% surviving spouse starts being prorated (blank when it covers the whole year).",
+  "dv2s_prorate_end": "Date the disabled veteran 30–49% surviving spouse stops being prorated (blank when it covers the whole year).",
+  "dv3_prorate_begin": "Date the disabled veteran 50–69% rating starts being prorated (blank when it covers the whole year).",
+  "dv3_prorate_end": "Date the disabled veteran 50–69% rating stops being prorated (blank when it covers the whole year).",
+  "dv3s_prorate_begin": "Date the disabled veteran 50–69% surviving spouse starts being prorated (blank when it covers the whole year).",
+  "dv3s_prorate_end": "Date the disabled veteran 50–69% surviving spouse stops being prorated (blank when it covers the whole year).",
+  "dv4_prorate_begin": "Date the disabled veteran 70–100% rating starts being prorated (blank when it covers the whole year).",
+  "dv4_prorate_end": "Date the disabled veteran 70–100% rating stops being prorated (blank when it covers the whole year).",
+  "dv4s_prorate_begin": "Date the disabled veteran 70–100% surviving spouse starts being prorated (blank when it covers the whole year).",
+  "dv4s_prorate_end": "Date the disabled veteran 70–100% surviving spouse stops being prorated (blank when it covers the whole year).",
   "lve_prorate_begin": "Date the leased vehicle exemption (best guess) starts being prorated (blank when it covers the whole year).",
   "lve_prorate_end": "Date the leased vehicle exemption (best guess) stops being prorated (blank when it covers the whole year).",
   "ab_prorate_begin": "Date the abatement starts being prorated (blank when it covers the whole year).",
@@ -2035,14 +2055,14 @@
   "ov65s_allocation_factor": "Share of the over-65 surviving spouse allocated to this owner and taxing unit (1 = all of it).",
   "dp_allocation_factor": "Share of the disabled person allocated to this owner and taxing unit (1 = all of it).",
   "dps_allocation_factor": "Share of the disabled person surviving spouse allocated to this owner and taxing unit (1 = all of it).",
-  "dv1_allocation_factor": "Share of the disabled veteran 10\u201329% rating allocated to this owner and taxing unit (1 = all of it).",
-  "dv1s_allocation_factor": "Share of the disabled veteran 10\u201329% surviving spouse allocated to this owner and taxing unit (1 = all of it).",
-  "dv2_allocation_factor": "Share of the disabled veteran 30\u201349% rating allocated to this owner and taxing unit (1 = all of it).",
-  "dv2s_allocation_factor": "Share of the disabled veteran 30\u201349% surviving spouse allocated to this owner and taxing unit (1 = all of it).",
-  "dv3_allocation_factor": "Share of the disabled veteran 50\u201369% rating allocated to this owner and taxing unit (1 = all of it).",
-  "dv3s_allocation_factor": "Share of the disabled veteran 50\u201369% surviving spouse allocated to this owner and taxing unit (1 = all of it).",
-  "dv4_allocation_factor": "Share of the disabled veteran 70\u2013100% rating allocated to this owner and taxing unit (1 = all of it).",
-  "dv4s_allocation_factor": "Share of the disabled veteran 70\u2013100% surviving spouse allocated to this owner and taxing unit (1 = all of it).",
+  "dv1_allocation_factor": "Share of the disabled veteran 10–29% rating allocated to this owner and taxing unit (1 = all of it).",
+  "dv1s_allocation_factor": "Share of the disabled veteran 10–29% surviving spouse allocated to this owner and taxing unit (1 = all of it).",
+  "dv2_allocation_factor": "Share of the disabled veteran 30–49% rating allocated to this owner and taxing unit (1 = all of it).",
+  "dv2s_allocation_factor": "Share of the disabled veteran 30–49% surviving spouse allocated to this owner and taxing unit (1 = all of it).",
+  "dv3_allocation_factor": "Share of the disabled veteran 50–69% rating allocated to this owner and taxing unit (1 = all of it).",
+  "dv3s_allocation_factor": "Share of the disabled veteran 50–69% surviving spouse allocated to this owner and taxing unit (1 = all of it).",
+  "dv4_allocation_factor": "Share of the disabled veteran 70–100% rating allocated to this owner and taxing unit (1 = all of it).",
+  "dv4s_allocation_factor": "Share of the disabled veteran 70–100% surviving spouse allocated to this owner and taxing unit (1 = all of it).",
   "dvhs_allocation_factor": "Share of the 100% disabled veteran homestead (11.131) allocated to this owner and taxing unit (1 = all of it).",
   "ex_allocation_factor": "Share of the total exemption (fully exempt property) allocated to this owner and taxing unit (1 = all of it).",
   "ab_allocation_factor": "Share of the abatement allocated to this owner and taxing unit (1 = all of it).",
@@ -2372,7 +2392,7 @@
   {
    "id": "web",
    "label": "CAD website files",
-   "sub": "{n} files \u00b7 every property in the county",
+   "sub": "{n} files · every property in the county",
    "start": "s26-info",
    "desc": "PACS Appraisal Export from the Denton CAD website, saved in <code>CAD Website/Denton/Data</code> and converted to CSV in <code>output/</code>. Fixed-width source files (two are tab-separated); every property in the county.",
    "groups": [
@@ -2386,13 +2406,13 @@
      ],
      "years": [
       {
-       "label": "2026 certified \u00b7 Jul 27",
+       "label": "2026 certified · Jul 27",
        "datasets": [
         "c26-info"
        ]
       },
       {
-       "label": "2026 supp 3 \u00b7 Oct 14",
+       "label": "2026 supp 3 · Oct 14",
        "datasets": [
         "s26-info"
        ]
@@ -2413,7 +2433,7 @@
      ],
      "years": [
       {
-       "label": "2026 certified \u00b7 Jul 27",
+       "label": "2026 certified · Jul 27",
        "datasets": [
         "c26-entinfo",
         "c26-enttot",
@@ -2421,7 +2441,7 @@
        ]
       },
       {
-       "label": "2026 supp 3 \u00b7 Oct 14",
+       "label": "2026 supp 3 · Oct 14",
        "datasets": [
         "s26-entinfo",
         "s26-enttot",
@@ -2448,7 +2468,7 @@
      ],
      "years": [
       {
-       "label": "2026 certified \u00b7 Jul 27",
+       "label": "2026 certified · Jul 27",
        "datasets": [
         "c26-imprinfo",
         "c26-imprdet",
@@ -2458,7 +2478,7 @@
        ]
       },
       {
-       "label": "2026 supp 3 \u00b7 Oct 14",
+       "label": "2026 supp 3 · Oct 14",
        "datasets": [
         "s26-imprinfo",
         "s26-imprdet",
@@ -2479,13 +2499,13 @@
      ],
      "years": [
       {
-       "label": "2026 certified \u00b7 Jul 27",
+       "label": "2026 certified · Jul 27",
        "datasets": [
         "c26-land"
        ]
       },
       {
-       "label": "2026 supp 3 \u00b7 Oct 14",
+       "label": "2026 supp 3 · Oct 14",
        "datasets": [
         "s26-land"
        ]
@@ -2504,14 +2524,14 @@
      ],
      "years": [
       {
-       "label": "2026 certified \u00b7 Jul 27",
+       "label": "2026 certified · Jul 27",
        "datasets": [
         "c26-sb12",
         "c26-defer"
        ]
       },
       {
-       "label": "2026 supp 3 \u00b7 Oct 14",
+       "label": "2026 supp 3 · Oct 14",
        "datasets": [
         "s26-sb12",
         "s26-defer"
@@ -2535,7 +2555,7 @@
      ],
      "years": [
       {
-       "label": "2026 certified \u00b7 Jul 27",
+       "label": "2026 certified · Jul 27",
        "datasets": [
         "c26-arb",
         "c26-lawsuit",
@@ -2544,7 +2564,7 @@
        ]
       },
       {
-       "label": "2026 supp 3 \u00b7 Oct 14",
+       "label": "2026 supp 3 · Oct 14",
        "datasets": [
         "s26-arb",
         "s26-lawsuit",
@@ -2570,7 +2590,7 @@
      ],
      "years": [
       {
-       "label": "2026 certified \u00b7 Jul 27",
+       "label": "2026 certified · Jul 27",
        "datasets": [
         "c26-abs",
         "c26-state",
@@ -2579,7 +2599,7 @@
        ]
       },
       {
-       "label": "2026 supp 3 \u00b7 Oct 14",
+       "label": "2026 supp 3 · Oct 14",
        "datasets": [
         "s26-abs",
         "s26-state",
