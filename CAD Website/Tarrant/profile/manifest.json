@@ -1,0 +1,1481 @@
+{
+ "title": "Tarrant Property Data Profile",
+ "eyebrow": "Tarrant Appraisal District · Website files and Agent Portal API",
+ "intro": "Everything Tarrant CAD makes available to us, from two sources: the bulk files downloaded from the CAD website, and the Agent Portal API. For each file or endpoint you get its columns or fields, data types, completeness and value distributions.",
+ "store_key": "tarrant-view",
+ "foot": "Generated {date}. Website files were scanned in full with DuckDB; \"Auto-detected on load\" is the type DuckDB assigns when it reads the raw file, and distinct counts there are approximate (HyperLogLog). Agent Portal statistics come from the example responses saved in Tarrant-New-Docs.yaml, so they describe a sample. \"Data type\" is inferred from the values: Code means digits stored as text with leading zeros, so it should stay text. Tokens, passwords, pre-signed links and personal or contact fields are never shown.",
+ "root": "/Users/user2/PTP/CAD Website/Tarrant/",
+ "datasets": {
+  "y2024": {
+   "path": "output/PropertyData_2024.csv",
+   "read": "csv",
+   "label": "2024",
+   "encoding": "CSV, UTF-8",
+   "notes": [
+    "Values are fixed-width and padded with spaces in the raw file. Trim before loading or comparing.",
+    "<code>Deed_Date</code> uses <code>MM-DD-YYYY</code>; <code>12-31-1900</code> is a placeholder, a few hundred rows say <code>N/A</code>, and some dates fall after 2026 (typos). <code>Spec2</code>/<code>Spec3</code> load as numbers and lose their <code>000</code> padding unless read as text."
+   ]
+  },
+  "y2025": {
+   "path": "output/PropertyData_2025.csv",
+   "read": "csv",
+   "label": "2025",
+   "encoding": "CSV, UTF-8",
+   "compare": "y2024",
+   "notes": [
+    "Values are fixed-width and padded with spaces in the raw file. Trim before loading or comparing.",
+    "<code>Deed_Date</code> uses <code>MM-DD-YYYY</code>; <code>12-31-1900</code> is a placeholder, a few hundred rows say <code>N/A</code>, and some dates fall after 2026 (typos). <code>Spec2</code>/<code>Spec3</code> load as numbers and lose their <code>000</code> padding unless read as text."
+   ]
+  },
+  "y2026": {
+   "path": "output/PropertyData(Delimited)_2026.csv",
+   "read": "csv",
+   "label": "2026",
+   "encoding": "CSV, UTF-8",
+   "compare": "y2025",
+   "notes": [
+    "The layout changed from 2025: dates are ISO <code>YYYY-MM-DD</code>, <code>Account_Num</code> has no leading zeros (loads as a number), <code>Owner_Zip</code> holds ZIP+4 (<code>76102-6311</code>), <code>MAPSCO</code> is prefixed <code>TAR-</code>, and city/state is written <code>FORT WORTH ,  TX</code>.",
+    "894,814 rows (39%) have no Land, Improvement, Total or Appraised value. 863,653 of those are mineral accounts (<code>RP = M</code>).",
+    "286,368 rows have a blank <code>RP</code> code, and <code>Account_Num</code> repeats on 6,685 rows (2,288,133 unique accounts).",
+    "Residential detail columns that were filled in earlier years are blank here, including <code>Garage_Capacity</code>, <code>Central_Heat_Ind</code>, <code>Central_Air_Ind</code> and <code>Ag_Acres</code>."
+   ]
+  },
+  "supp24-C": {
+   "path": "output/PropertyDataSupplemental_C_2024.csv",
+   "read": "csv",
+   "label": "C · Commercial",
+   "about": "Commercial and exempt real property: site class, neighborhood, quality, condition, coordinates, notice value.",
+   "encoding": "CSV, UTF-8",
+   "notes": [
+    "Has a tax agent on 23,598 rows (39%).",
+    "Missing coordinates are written as a run of 32 zeros instead of being left blank, so they load as text and show up as 0 in the stats.",
+    "This is the only supplemental file with a <code>SiteNumber</code> column (29 columns instead of 28).",
+    "<code>LastSaleDate</code> includes sales after 2024 (up to 2026 in some files), so this 2024 export carries current sale data rather than a snapshot from the 2024 roll."
+   ]
+  },
+  "supp24-M": {
+   "path": "output/PropertyDataSupplemental_M_2024.csv",
+   "read": "csv",
+   "label": "M · Mineral",
+   "about": "Mineral interest accounts. Mostly owner party, agent and coordinates; appraisal detail columns are empty.",
+   "encoding": "CSV, UTF-8",
+   "notes": [
+    "Has a tax agent on 23,259 rows (2%).",
+    "<code>NoticeValue</code> is filled on 50,081 rows (4%); it is blank in every row of the 2025 file.",
+    "<code>LastSaleDate</code> runs up to January 2024."
+   ]
+  },
+  "supp24-P": {
+   "path": "output/PropertyDataSupplemental_P_2024.csv",
+   "read": "csv",
+   "label": "P · Business personal property",
+   "about": "Business personal property accounts with NAICS industry codes and notice value.",
+   "encoding": "CSV, UTF-8",
+   "notes": [
+    "Has a tax agent on 15,660 rows (22%).",
+    "Missing coordinates are written as a run of 32 zeros instead of being left blank, so they load as text and show up as 0 in the stats.",
+    "<code>LastSaleDate</code> includes sales after 2024 (up to 2026 in some files), so this 2024 export carries current sale data rather than a snapshot from the 2024 roll."
+   ]
+  },
+  "supp24-R": {
+   "path": "output/PropertyDataSupplemental_R_2024.csv",
+   "read": "csv",
+   "label": "R · Residential",
+   "about": "Residential accounts: site class, neighborhood, quality, condition, effective year, stories, coordinates.",
+   "encoding": "CSV, UTF-8",
+   "notes": [
+    "Has a tax agent on 126,645 rows (19%).",
+    "Missing coordinates are written as a run of 32 zeros instead of being left blank, so they load as text and show up as 0 in the stats.",
+    "<code>NoticeValue</code> is filled on 554,397 rows (85%).",
+    "<code>SitusCity</code> is filled on every row here but blank in every row of the 2025 file.",
+    "61 lines have 27 values instead of 28, most likely because a line break inside a text field splits the record. The reader flagged them, so a few dozen rows may be incomplete.",
+    "<code>LastSaleDate</code> includes sales after 2024 (up to 2026 in some files), so this 2024 export carries current sale data rather than a snapshot from the 2024 roll."
+   ]
+  },
+  "supp-C": {
+   "path": "output/PropertyDataSupplemental_C_2025.csv",
+   "read": "csv",
+   "label": "C · Commercial",
+   "about": "Commercial and exempt real property: site class, neighborhood, quality, condition, coordinates, notice value.",
+   "encoding": "CSV, UTF-8",
+   "compare": "supp24-C",
+   "compareLabel": "the 2024 file",
+   "notes": [
+    "Has a tax agent on 26,933 rows (44%).",
+    "Missing coordinates are written as a run of 32 zeros instead of being left blank, so they load as text and show up as 0 in the stats.",
+    "This is the only supplemental file with a <code>SiteNumber</code> column (29 columns instead of 28)."
+   ]
+  },
+  "supp-M": {
+   "path": "output/PropertyDataSupplemental_M_2025.csv",
+   "read": "csv",
+   "label": "M · Mineral",
+   "about": "Mineral interest accounts. Mostly owner party, agent and coordinates; appraisal detail columns are empty.",
+   "encoding": "CSV, UTF-8",
+   "compare": "supp24-M",
+   "compareLabel": "the 2024 file",
+   "notes": [
+    "Has a tax agent on 25,748 rows (2%).",
+    "<code>AccountNumber</code> loads as a number here because every mineral account is 8 digits with no leading zero. Keep it as text so it still joins to the other files."
+   ]
+  },
+  "supp-P": {
+   "path": "output/PropertyDataSupplemental_P_2025.csv",
+   "read": "csv",
+   "label": "P · Business personal property",
+   "about": "Business personal property accounts with NAICS industry codes and notice value.",
+   "encoding": "CSV, UTF-8",
+   "compare": "supp24-P",
+   "compareLabel": "the 2024 file",
+   "notes": [
+    "Has a tax agent on 17,321 rows (25%).",
+    "Missing coordinates are written as a run of 32 zeros instead of being left blank, so they load as text and show up as 0 in the stats."
+   ]
+  },
+  "supp-R": {
+   "path": "output/PropertyDataSupplemental_R_2025.csv",
+   "read": "csv",
+   "label": "R · Residential",
+   "about": "Residential accounts: site class, neighborhood, quality, condition, effective year, stories, coordinates.",
+   "encoding": "CSV, UTF-8",
+   "compare": "supp24-R",
+   "compareLabel": "the 2024 file",
+   "notes": [
+    "Has a tax agent on 169,051 rows (26%).",
+    "Missing coordinates are written as a run of 32 zeros instead of being left blank, so they load as text and show up as 0 in the stats.",
+    "<code>NoticeValue</code> is filled on 343,776 rows (52%)."
+   ]
+  },
+  "supp26": {
+   "placeholder": true,
+   "label": "Not available yet",
+   "about": "The 2026 supplemental files are not provided on the TAD website yet. Coming soon."
+  },
+  "exempt-2026": {
+   "placeholder": true,
+   "label": "Not available yet",
+   "about": "The 2026 exemptions file is not provided on the TAD website yet. Coming soon."
+  },
+  "agent26": {
+   "placeholder": true,
+   "label": "Not available yet",
+   "about": "The 2026 Agent Summary files are not provided on the TAD website yet. Coming soon."
+  },
+  "exempt-2024": {
+   "path": "Data/PropertyData_Exemptions_2024.txt",
+   "read": "pipe_latin1",
+   "label": "Exemptions 2024",
+   "about": "One row per exemption on an account.",
+   "encoding": "Pipe-delimited, Latin-1",
+   "notes": [
+    "1,050,936 rows for 720,175 accounts: an account with several exemptions has one row for each.",
+    "227,716 rows (22%) have a blank <code>Exemption</code> name.",
+    "<code>Exemption</code> includes the Texas Tax Code section, for example <code>HOMESTEAD GENERAL 11.13(b)</code>."
+   ]
+  },
+  "exempt-2025": {
+   "path": "Data/PropertyData_Exemptions_2025.txt",
+   "read": "pipe_latin1",
+   "label": "Exemptions 2025",
+   "about": "One row per exemption on an account.",
+   "encoding": "Pipe-delimited, Latin-1",
+   "compare": "exempt-2024",
+   "compareLabel": "the 2024 file",
+   "notes": [
+    "1,412,879 rows for 1,080,242 accounts, up from 1,050,936 rows for 720,175 accounts in 2024.",
+    "591,224 rows (42%) have a blank <code>Exemption</code> name, up from 22% in 2024, so most of the growth is accounts listed with no exemption.",
+    "Named exemptions are close to 2024: <code>HOMESTEAD GENERAL 11.13(b)</code> on 415,997 rows (421,421 in 2024) and <code>HOMESTEAD OVER65 11.13 ( c)</code> on 143,973 (139,595)."
+   ]
+  },
+  "agent-1_Account": {
+   "path": "Data/AgentSummaryData_2024/AgentSummaryData_1_Account.txt",
+   "read": "pipe_utf16",
+   "label": "1 · Account",
+   "about": "One row per real property account: neighborhood, market adjustment factor, years, appraisal method, appraised/market/assessed/notice values, state code.",
+   "encoding": "Pipe-delimited, UTF-16",
+   "notes": [
+    "Filled but always zero: <code>DepreciationPercent</code>.",
+    "Two rows have values shifted one column to the right (a stray <code>|</code> in a text field), which is why <code>ASN</code> contains <code>F1</code>.",
+    "Value columns carry 10 decimal places (<code>52500.0000000000</code>). <code>EffectiveYear</code> goes up to 2203, which is a typo."
+   ],
+   "force": {
+    "ASN": "Code (numeric text)"
+   }
+  },
+  "agent-2_Building": {
+   "path": "Data/AgentSummaryData_2024/AgentSummaryData_2_Building.txt",
+   "read": "pipe_utf16",
+   "label": "2 · Building",
+   "about": "Main building per account: improvement type, quality, condition, remodel year, square feet, depreciation.",
+   "encoding": "Pipe-delimited, UTF-16",
+   "notes": [
+    "<code>AppraisedValue</code> has negative values (minimum −8,472,008). <code>ValueAdj</code> is filled on only 49 rows."
+   ]
+  },
+  "agent-3_Feature": {
+   "path": "Data/AgentSummaryData_2024/AgentSummaryData_3_Feature.txt",
+   "read": "pipe_utf16",
+   "label": "3 · Feature",
+   "about": "Secondary improvements such as porches, garages and pools, several per account.",
+   "encoding": "Pipe-delimited, UTF-16",
+   "notes": [
+    "Filled but always zero: <code>FunctionalPercent</code>.",
+    "1,755,641 features across 616,782 accounts. <code>ActualYear</code> and <code>RemodelYear</code> use 9999 as a placeholder, and <code>TotalSqFt</code> has some negative values."
+   ]
+  },
+  "agent-4_CAccount": {
+   "path": "Data/AgentSummaryData_2024/AgentSummaryData_4_CAccount.txt",
+   "read": "pipe_utf16",
+   "label": "4 · Commercial account",
+   "about": "Commercial income-approach inputs: leasable area, rent rates, vacancy, expenses, cap rate, sub-market.",
+   "encoding": "Pipe-delimited, UTF-16",
+   "notes": [
+    "Filled but always zero: <code>DepreciationPercent</code>, <code>CAM</code>.",
+    "Income detail columns (<code>IncomeType</code>, <code>LeaseType</code>, <code>IncomeClass</code> and so on) are filled for only about 3,800 rows (6%). <code>CapRate</code> is filled on 21,813 rows (36%).",
+    "Two rows have values shifted out of place, so <code>Area</code>, <code>ASNLA</code>, <code>RentSpaceArea</code> and <code>OverallEYOC</code> each hold one or two text values."
+   ],
+   "force": {
+    "Area": "Decimal",
+    "ASNLA": "Decimal",
+    "RentSpaceArea": "Decimal",
+    "OverallEYOC": "Integer",
+    "ASN": "Code (numeric text)"
+   }
+  },
+  "agent-5_LandSegment": {
+   "path": "Data/AgentSummaryData_2024/AgentSummaryData_5_LandSegment.txt",
+   "read": "pipe_utf16",
+   "label": "5 · Land segment",
+   "about": "One row per land line: land type, acres, square feet, zoning, calculation method, base rate, land value.",
+   "encoding": "Pipe-delimited, UTF-16",
+   "notes": [
+    "28 lines could not be read and were skipped: a property listing description in the <code>Notes</code> field contains line breaks, which split the record across lines. Two more rows have values shifted out of place.",
+    "<code>SiteRating</code> mixes dollar amounts (<code>60000</code>) with rating codes (<code>Res1H</code>), and <code>LandFactor</code> mixes plain numbers with percentages."
+   ],
+   "force": {
+    "Acres": "Decimal",
+    "BaseRate": "Decimal"
+   }
+  },
+  "agent-6_BuildingPermit": {
+   "path": "Data/AgentSummaryData_2024/AgentSummaryData_6_BuildingPermit.txt",
+   "read": "pipe_utf16",
+   "label": "6 · Building permit",
+   "about": "Permits recorded against accounts: number, date, status, description, amount.",
+   "encoding": "Pipe-delimited, UTF-16",
+   "notes": [
+    "15,234 permits across about 9,950 accounts. <code>PermitDate</code> includes typo dates from 1776 and 9223."
+   ]
+  },
+  "agent-7_XYGeo": {
+   "path": "Data/AgentSummaryData_2024/AgentSummaryData_7_XYGeo.txt",
+   "read": "pipe_utf16",
+   "label": "7 · XY geo",
+   "about": "Latitude and longitude for each account.",
+   "encoding": "Pipe-delimited, UTF-16",
+   "notes": [
+    "Missing coordinates are written as a run of 32 zeros instead of being left blank, so they load as text and show up as 0 in the stats."
+   ]
+  },
+  "agent-8_Exemption": {
+   "path": "Data/AgentSummaryData_2024/AgentSummaryData_8_Exemption.txt",
+   "read": "pipe_utf16",
+   "label": "8 · Exemption",
+   "about": "Exemption amounts per taxing unit (county, hospital, college, ISD, city, water) for each exempt account.",
+   "encoding": "Pipe-delimited, UTF-16",
+   "notes": [
+    "Filled but always zero: <code>YearOfFreeze</code>, <code>CountyCeilingAmt</code>, <code>HospitalCeilingAmt</code>, <code>CollegeCeilingAmt</code>, <code>ISDCeilingAmt</code>, <code>CityCeilingAmt</code>, <code>WaterCeilingAmt</code>.",
+    "Only accounts with an exemption are listed (430,362). All the <code>…CeilingAmt</code> columns and <code>YearOfFreeze</code> are zero."
+   ]
+  },
+  "agent-9_ReviewBoard": {
+   "path": "Data/AgentSummaryData_2024/AgentSummaryData_9_ReviewBoard.txt",
+   "read": "pipe_utf16",
+   "label": "9 · Review board",
+   "about": "Appraisal Review Board protest cases: status, reason, appellant, agent, hearing time, initial and final value.",
+   "encoding": "Pipe-delimited, UTF-16",
+   "notes": [
+    "340,602 protest cases for 164,051 accounts. This file has no <code>TaxYear</code> column; it uses <code>Year</code>, and <code>AccountNumber</code> comes first.",
+    "<code>FinalValue</code> is 0 on 333,349 cases (98%) and <code>Disposition</code> is filled on only 7,243, so most cases have no recorded outcome value. <code>HearingDateTime</code> has a typo date in 1914."
+   ]
+  },
+  "agent-10_Basement": {
+   "path": "Data/AgentSummaryData_2024/AgentSummaryData_10_Basement.txt",
+   "read": "pipe_utf16",
+   "label": "10 · Basement",
+   "about": "Basement improvements with square feet.",
+   "encoding": "Pipe-delimited, UTF-16"
+  },
+  "agent25-1_Account": {
+   "path": "Data/AgentSummaryData_2025/AgentSummaryData_1_Account.txt",
+   "read": "pipe_utf16",
+   "label": "1 · Account",
+   "about": "One row per real property account: neighborhood, market adjustment factor, years, appraisal method, appraised/market/assessed/notice values, state code.",
+   "encoding": "Pipe-delimited, UTF-16",
+   "compare": "agent-1_Account",
+   "compareLabel": "the 2024 file",
+   "notes": [
+    "Every row has <code>TaxYear</code> 2026, even though the folder is named 2025. Check which roll year this export really is before joining it to Property Data 2025.",
+    "Filled but always zero: <code>DepreciationPercent</code>, <code>NoticeValue</code>.",
+    "+11,791 accounts compared with 2024. <code>ActualYear</code> goes up to 2055 and <code>EffectiveYear</code> up to 9999 (placeholders or typos)."
+   ],
+   "force": {
+    "ASN": "Code (numeric text)"
+   }
+  },
+  "agent25-2_Building": {
+   "path": "Data/AgentSummaryData_2025/AgentSummaryData_2_Building.txt",
+   "read": "pipe_utf16",
+   "label": "2 · Building",
+   "about": "Main building per account: improvement type, quality, condition, remodel year, square feet, depreciation.",
+   "encoding": "Pipe-delimited, UTF-16",
+   "compare": "agent-2_Building",
+   "compareLabel": "the 2024 file",
+   "notes": [
+    "Every row has <code>TaxYear</code> 2026, even though the folder is named 2025. Check which roll year this export really is before joining it to Property Data 2025.",
+    "<code>AppraisedValue</code> has negative values (minimum −2,168,219), and <code>RemodelYear</code> has a typo value of 20224."
+   ]
+  },
+  "agent25-3_Feature": {
+   "path": "Data/AgentSummaryData_2025/AgentSummaryData_3_Feature.txt",
+   "read": "pipe_utf16",
+   "label": "3 · Feature",
+   "about": "Secondary improvements such as porches, garages and pools, several per account.",
+   "encoding": "Pipe-delimited, UTF-16",
+   "compare": "agent-3_Feature",
+   "compareLabel": "the 2024 file",
+   "notes": [
+    "Every row has <code>TaxYear</code> 2026, even though the folder is named 2025. Check which roll year this export really is before joining it to Property Data 2025.",
+    "Filled but always zero: <code>FunctionalPercent</code>.",
+    "<code>ActualYear</code>, <code>EffectiveYear</code> and <code>RemodelYear</code> use 9999 as a placeholder; <code>RemodelYear</code> also has −1. <code>TotalSqFt</code> has some negative values."
+   ]
+  },
+  "agent25-4_CAccount": {
+   "path": "Data/AgentSummaryData_2025/AgentSummaryData_4_CAccount.txt",
+   "read": "pipe_utf16",
+   "label": "4 · Commercial account",
+   "about": "Commercial income-approach inputs: leasable area, rent rates, vacancy, expenses, cap rate, sub-market.",
+   "encoding": "Pipe-delimited, UTF-16",
+   "compare": "agent-4_CAccount",
+   "compareLabel": "the 2024 file",
+   "notes": [
+    "Every row has <code>TaxYear</code> 2026, even though the folder is named 2025. Check which roll year this export really is before joining it to Property Data 2025.",
+    "Filled but always zero: <code>DepreciationPercent</code>, <code>CAM</code>, <code>Term</code>.",
+    "Income detail columns (<code>IncomeType</code>, <code>LeaseType</code>, <code>IncomeClass</code> and so on) are filled on under 5% of rows, as in 2024."
+   ],
+   "force": {
+    "Area": "Decimal",
+    "ASNLA": "Decimal",
+    "RentSpaceArea": "Decimal",
+    "OverallEYOC": "Integer",
+    "ASN": "Code (numeric text)"
+   }
+  },
+  "agent25-5_LandSegment": {
+   "path": "Data/AgentSummaryData_2025/AgentSummaryData_5_LandSegment.txt",
+   "read": "pipe_utf16",
+   "label": "5 · Land segment",
+   "about": "One row per land line: land type, acres, square feet, zoning, calculation method, base rate, land value.",
+   "encoding": "Pipe-delimited, UTF-16",
+   "compare": "agent-5_LandSegment",
+   "compareLabel": "the 2024 file",
+   "notes": [
+    "Every row has <code>TaxYear</code> 2026, even though the folder is named 2025. Check which roll year this export really is before joining it to Property Data 2025.",
+    "No lines were skipped this year: <code>Notes</code>, which broke lines in the 2024 file, is blank in every row."
+   ],
+   "force": {
+    "Acres": "Decimal",
+    "BaseRate": "Decimal"
+   }
+  },
+  "agent25-6_BuildingPermit": {
+   "path": "Data/AgentSummaryData_2025/AgentSummaryData_6_BuildingPermit.txt",
+   "read": "pipe_utf16",
+   "label": "6 · Building permit",
+   "about": "Permits recorded against accounts: number, date, status, description, amount.",
+   "encoding": "Pipe-delimited, UTF-16",
+   "compare": "agent-6_BuildingPermit",
+   "compareLabel": "the 2024 file",
+   "notes": [
+    "Every row has <code>TaxYear</code> 2026, even though the folder is named 2025. Check which roll year this export really is before joining it to Property Data 2025.",
+    "41,961 permits, up from 15,234 in 2024. <code>PermitDate</code> still has typo dates from 1776 and 9223."
+   ]
+  },
+  "agent25-7_XYGeo": {
+   "path": "Data/AgentSummaryData_2025/AgentSummaryData_7_XYGeo.txt",
+   "read": "pipe_utf16",
+   "label": "7 · XY geo",
+   "about": "Latitude and longitude for each account.",
+   "encoding": "Pipe-delimited, UTF-16",
+   "compare": "agent-7_XYGeo",
+   "compareLabel": "the 2024 file",
+   "notes": [
+    "Every row has <code>TaxYear</code> 2026, even though the folder is named 2025. Check which roll year this export really is before joining it to Property Data 2025.",
+    "Missing coordinates are written as a run of 32 zeros instead of being left blank, so they load as text and show up as 0 in the stats."
+   ]
+  },
+  "agent25-8_Exemption": {
+   "path": "Data/AgentSummaryData_2025/AgentSummaryData_8_Exemption.txt",
+   "read": "pipe_utf16",
+   "label": "8 · Exemption",
+   "about": "Exemption amounts per taxing unit (county, hospital, college, ISD, city, water) for each exempt account.",
+   "encoding": "Pipe-delimited, UTF-16",
+   "compare": "agent-8_Exemption",
+   "compareLabel": "the 2024 file",
+   "notes": [
+    "Every row has <code>TaxYear</code> 2026, even though the folder is named 2025. Check which roll year this export really is before joining it to Property Data 2025.",
+    "Filled but always zero: <code>HospitalCeilingAmt</code>, <code>ISDCeilingAmt</code>, <code>CityCeilingAmt</code>, <code>WaterCeilingAmt</code>."
+   ]
+  },
+  "agent25-9_ReviewBoard": {
+   "path": "Data/AgentSummaryData_2025/AgentSummaryData_9_ReviewBoard.txt",
+   "read": "pipe_utf16",
+   "label": "9 · Review board",
+   "about": "Appraisal Review Board protest cases: status, reason, appellant, agent, hearing time, initial and final value.",
+   "encoding": "Pipe-delimited, UTF-16",
+   "compare": "agent-9_ReviewBoard",
+   "compareLabel": "the 2024 file",
+   "notes": [
+    "Only 58 cases for 58 accounts, compared with 340,602 cases in the 2024 file. Every case has <code>Year</code> 2026 and the hearings run from September 18 to December 10, 2025, so this looks like a small extract rather than a full protest season."
+   ]
+  },
+  "agent25-10_Basement": {
+   "path": "Data/AgentSummaryData_2025/AgentSummaryData_10_Basement.txt",
+   "read": "pipe_utf16",
+   "label": "10 · Basement",
+   "about": "Basement improvements with square feet.",
+   "encoding": "Pipe-delimited, UTF-16",
+   "compare": "agent-10_Basement",
+   "compareLabel": "the 2024 file",
+   "notes": [
+    "Every row has <code>TaxYear</code> 2026, even though the folder is named 2025. Check which roll year this export really is before joining it to Property Data 2025."
+   ]
+  },
+  "comp-2024": {
+   "path": "output/2024ResidentialCompAttributeData.csv",
+   "read": "csv",
+   "label": "2024",
+   "about": "One row per residential account: market area, improvement type, style, quality, condition, year built, main area, land and feature values, and the sales and equity comp-model values.",
+   "encoding": "CSV, UTF-8 (converted from .xlsx)",
+   "notes": [
+    "One row per <code>PIN</code> (the account number). 48,193 rows have no improvement type, quality or year built: land-only and common-area accounts, whose indicated values equal the land value.",
+    "<code>EffectiveYear</code> goes up to 2203 (a typo)."
+   ]
+  },
+  "comp-2025": {
+   "path": "output/2025ResidentialCompAttributeData.csv",
+   "read": "csv",
+   "label": "2025",
+   "about": "One row per residential account: market area, improvement type, style, quality, condition, year built, main area, land and feature values, and the sales and equity comp-model values.",
+   "encoding": "CSV, UTF-8 (converted from .xlsx)",
+   "compare": "comp-2024",
+   "notes": [
+    "One row per <code>PIN</code> (the account number). 49,019 rows have no improvement type, quality or year built: land-only and common-area accounts, whose indicated values equal the land value.",
+    "659,361 of the 662,187 PINs are in Property Data 2025."
+   ]
+  },
+  "comp-2026": {
+   "path": "output/2026ResidentialCompAttributeData.csv",
+   "read": "csv",
+   "label": "2026",
+   "about": "One row per residential account: market area, improvement type, style, quality, condition, year built, main area, land and feature values, and the sales and equity comp-model values.",
+   "encoding": "CSV, UTF-8 (converted from .xlsx)",
+   "compare": "comp-2025",
+   "renames": {
+    "Tax Year": "TaxYear",
+    "Market Area": "Neighborhood",
+    "Situs Address": "SitusAddress",
+    "Improvement Type": "ImprovementType",
+    "Improvement Style": "ImprovementStyle",
+    "Actual Year Built": "YearBuilt",
+    "Main Area": "ActualArea",
+    "Land Value": "LandValue",
+    "Garage Value": "GarageValue",
+    "Pool Value": "PoolValue",
+    "Outbuilding Value": "OutbuildingValue",
+    "Other Feature Value": "OtherFeatureValue",
+    "Effective Year Built": "EffectiveYear",
+    "Market Indicated Value": "IndicatedSalesValue",
+    "Equity Indicated Value": "IndicatedEquityValue"
+   },
+   "notes": [
+    "Every header was rewritten with spaces (for example <code>Market Area</code> instead of <code>Neighborhood</code>); the values are the same kind. The source workbook has a Data Dictionary sheet, which the column tooltips use.",
+    "47,688 rows have no improvement type. <code>Market Indicated Value</code> is blank on 9,366 rows (nominal and common-area records, per the data dictionary) and 0 on 27,014 more. Both indicated values have some negative amounts (minimum −2,043,770 for equity).",
+    "Indicated values are whole numbers this year; 2024 and 2025 carried four decimal places."
+   ]
+  },
+  "feat-2024": {
+   "path": "output/2024ResidentialFeaturesValue.csv",
+   "read": "csv",
+   "label": "2024",
+   "about": "One row per secondary residential improvement (garage, pool, storage room, porch, outbuilding and so on) with its value.",
+   "encoding": "CSV, UTF-8 (converted from .xlsx)",
+   "notes": [
+    "679,344 rows for 533,693 accounts; an account with a garage and a pool has two rows. Garages are 78% of rows and pools 12%. Every PIN is in Residential Comp Attributes 2024."
+   ]
+  },
+  "feat-2025": {
+   "path": "output/2025ResidentialFeaturesValue.csv",
+   "read": "csv",
+   "label": "2025",
+   "about": "One row per secondary residential improvement (garage, pool, storage room, porch, outbuilding and so on) with its value.",
+   "encoding": "CSV, UTF-8 (converted from .xlsx)",
+   "compare": "feat-2024",
+   "compareLabel": "2024",
+   "notes": [
+    "687,721 rows for 540,319 accounts, with 14 improvement types (16 in 2024). All but 27 PINs are in Residential Comp Attributes 2025."
+   ]
+  },
+  "feat-2026": {
+   "path": "output/2026ResidentialImprovementDetails.csv",
+   "read": "csv",
+   "label": "2026",
+   "about": "Renamed Residential Improvement Details this year. One row per non-main-area improvement with its value.",
+   "encoding": "CSV, UTF-8 (converted from .xlsx)",
+   "compare": "feat-2025",
+   "compareLabel": "2025",
+   "renames": {
+    "ImprovementDetail": "FeatureCdDescr",
+    "ImprovementValue": "FeatureValue"
+   },
+   "notes": [
+    "The file is now called <code>2026ResidentialImprovementDetails</code> (it was <code>ResidentialFeaturesValue</code>). 692,469 rows for 546,980 accounts, with 22 improvement types: per the data dictionary, Parking Space and Elevator rows now come from the feature tables.",
+    "<code>Outbuilding 1</code> rose to 20,259 rows and <code>Outbuilding 2</code> fell to 2,249, so the outbuilding numbering changed. <code>ImprovementValue</code> is a whole number."
+   ]
+  },
+  "api-office-token": {
+   "notes": [
+    "Send the literal value <code>null</code> as the authorization header."
+   ]
+  },
+  "api-agent-token": {
+   "notes": [
+    "The token expires after 12 hours (<code>expirationInSeconds</code> 43200). Every other call sends it raw in the <code>authorization</code> header, with no <code>Bearer</code> prefix."
+   ]
+  },
+  "api-agent-properties": {
+   "notes": [
+    "<code>pID</code> is the CAD account number: it matches <code>Account_Num</code> in the website files (98 of 100 sample properties in the 2026 roll, and all 100 in the 2025 roll once padded to 8 digits). <code>pAccountID</code> is an internal portal ID that matches nothing in the website files.",
+    "The example is page 1 with <code>pageSize=100</code>; step <code>page</code> to get every property. Set <code>includeAppeals</code> to include appeal detail.",
+    "Carries protest workflow data the website files do not have: notice and protest deadline dates, docket times, CAD recommendation and its status, final value, board order date, and when we last downloaded each document."
+   ]
+  },
+  "api-agent-prior-year-appeals": {
+   "notes": [
+    "<code>pID</code> is the CAD account number: it matches <code>Account_Num</code> in the website files (98 of 100 sample properties in the 2026 roll, and all 100 in the 2025 roll once padded to 8 digits). <code>pAccountID</code> is an internal portal ID that matches nothing in the website files.",
+    "Returns the same 71 fields as Agent Properties, for earlier tax years."
+   ]
+  },
+  "api-view-current-fiduciary-info": {
+   "notes": [
+    "Uses <code>pAccountID</code> as <code>property_id</code> in the path, and returns <code>pID</code> (the CAD account number) in the body."
+   ]
+  },
+  "api-appoinment-of-agent": {
+   "notes": [
+    "239 mass AOA jobs in the example history."
+   ]
+  },
+  "api-download-log-success": {
+   "notes": [
+    "One job's results: 4,297 properties. <code>pID</code> here is the CAD account number."
+   ]
+  }
+ },
+ "descriptions": {
+  "RP": "Property type: R = residential, C = commercial, P = business personal property, M = mineral.",
+  "Appraisal_Year": "Tax year the values are for.",
+  "Account_Num": "TAD account number. The key that joins the website files to each other and to the Agent Portal pID.",
+  "Record_Type": "Fixed record-type marker in the export layout (always AAAA).",
+  "Sequence_No": "Record sequence within an account; 000 for the main record.",
+  "PIDN": "TAD property identification number (parcel ID).",
+  "Owner_Name": "Owner of record.",
+  "Owner_Address": "Owner's mailing street address.",
+  "Owner_CityState": "Owner's mailing city and state.",
+  "Owner_Zip": "Owner's mailing ZIP code (ZIP+4 in 2026).",
+  "Owner_Zip4": "Owner's mailing ZIP+4 extension.",
+  "Owner_CRRT": "Postal carrier route for the owner's mailing address.",
+  "Situs_Address": "Physical location address of the property.",
+  "Property_Class": "TAD property class code (for example A1 single-family, F1 commercial, G1 minerals).",
+  "TAD_Map": "Grid reference on the TAD appraisal map.",
+  "MAPSCO": "MAPSCO street-atlas page and grid for the property.",
+  "Exemption_Code": "Exemption codes on the account.",
+  "State_Use_Code": "Texas Comptroller property category (state code), for example A single-family, C1 vacant lot, F1 commercial.",
+  "LegalDescription": "Legal description: subdivision or survey abstract, block and lot.",
+  "Notice_Date": "Date the appraisal notice was mailed.",
+  "County": "County taxing unit code.",
+  "City": "City taxing unit code (000 = not in a city).",
+  "School": "School district (ISD) taxing unit code.",
+  "Num_Special_Dist": "How many special taxing districts the account is in.",
+  "Spec1": "First special taxing district code (hospital, college, water, MUD and so on).",
+  "Spec2": "Second special taxing district code.",
+  "Spec3": "Third special taxing district code.",
+  "Spec4": "Fourth special taxing district code.",
+  "Spec5": "Fifth special taxing district code.",
+  "Deed_Date": "Recording date of the most recent deed.",
+  "Deed_Book": "Deed record volume (book) number.",
+  "Deed_Page": "Deed record page number.",
+  "Land_Value": "Market value of the land.",
+  "Improvement_Value": "Market value of buildings and other improvements.",
+  "Total_Value": "Total market value (land plus improvements).",
+  "Garage_Capacity": "Number of cars the garage holds.",
+  "Num_Bedrooms": "Number of bedrooms.",
+  "Num_Bathrooms": "Number of bathrooms.",
+  "Year_Built": "Year the main building was built.",
+  "Living_Area": "Heated living area in square feet.",
+  "Swimming_Pool_Ind": "X when the property has a swimming pool.",
+  "ARB_Indicator": "Marks accounts with an Appraisal Review Board protest.",
+  "Ag_Code": "Agricultural (open-space) use code.",
+  "Land_Acres": "Land size in acres.",
+  "Land_SqFt": "Land size in square feet.",
+  "Ag_Acres": "Acres that qualify for agricultural (productivity) valuation.",
+  "Ag_Value": "Productivity value of the agricultural land.",
+  "Central_Heat_Ind": "Y when the building has central heat.",
+  "Central_Air_Ind": "Y when the building has central air conditioning.",
+  "Structure_Count": "Number of structures on the account.",
+  "From_Accts": "Accounts this one was split or merged from.",
+  "Appraisal_Date": "Valuation date (January 1 of the tax year).",
+  "Appraised_Value": "Appraised value after limits such as the homestead cap.",
+  "GIS_Link": "ID linking the account to its GIS parcel.",
+  "Instrument_No": "Recording instrument number of the most recent deed.",
+  "Overlap_Flag": "Marks accounts whose parcel overlaps another account.",
+  "Gross_Building_Area": "Gross building area in square feet.",
+  "Total_Net_Rentable_Area": "Net rentable area in square feet (commercial).",
+  "AppraisalYear": "Tax year the values are for.",
+  "AccountNumber": "TAD account number; joins to Account_Num in Property Data.",
+  "AgentName": "Tax agent appointed on the account.",
+  "AgentNumber": "TAD agent number of the appointed tax agent.",
+  "Condition": "Appraiser's condition rating (for example Average, Good).",
+  "DepreciationPercent": "Depreciation applied, as a percent.",
+  "Latitude": "Latitude of the property.",
+  "Longitude": "Longitude of the property.",
+  "EYOC": "Effective year of construction: the age the building is valued at after updates.",
+  "NBHD": "Appraisal neighborhood the property is valued in.",
+  "Quality": "Construction quality rating (for example Average, Good).",
+  "SiteName": "Name given to the site or property.",
+  "SiteClassCd": "Site class code: the property use the appraisal model treats it as.",
+  "SiteClassDescr": "Description of the site class code.",
+  "PartyId": "TAD ID of the owner party.",
+  "LastSaleDate": "Date of the last recorded sale or transfer (1900-01-01 = unknown).",
+  "SiteId": "TAD site ID for the property location.",
+  "SitusCity": "City where the property is located.",
+  "NAICSDescr": "Description of the business's NAICS industry code.",
+  "NAICSCd": "NAICS industry code of the business.",
+  "PercentComplete": "How complete construction was on January 1, as a percent.",
+  "NoticeValue": "Value shown on the appraisal notice.",
+  "SubdivisionName": "Subdivision or addition the property is in.",
+  "NumberofStories": "Number of stories of the main building.",
+  "LandUseCode": "Land use category.",
+  "Country": "Country of the owner's mailing address.",
+  "AddressType": "Kind of owner mailing address (standard, PO box, foreign).",
+  "SiteNumber": "TAD site number for the property location.",
+  "TaxYear": "Tax year the record is for.",
+  "Exemption": "Exemption granted, with its Texas Tax Code section.",
+  "ExemptionPct": "Share of the value exempted, as a percent (for example 100 for a total exemption).",
+  "AIN": "Alternate identification number built from subdivision, block and lot codes.",
+  "NeightborhoodCode": "Appraisal neighborhood code (the column name is misspelled in the file).",
+  "MktAdjFactor": "Market adjustment factor applied to the neighborhood's values.",
+  "ActualYear": "Year actually built.",
+  "EffectiveYear": "Effective year built, after accounting for remodels and condition.",
+  "AppraisalMethod": "Approach used to value the property: Cost, Income, Override and so on.",
+  "AppraisedValue": "Appraised value of the account.",
+  "MarketValue": "Market value of the account.",
+  "AssessedValue": "Assessed value after limits such as the homestead cap.",
+  "StateCode": "Texas Comptroller property category (state code).",
+  "ASN": "Appraisal site number; matches SiteId in the supplemental files.",
+  "BuildingName": "Name of the building on the account.",
+  "BuildingImprovement": "Kind of building (residential single-family, commercial, mobile home and so on).",
+  "RemodelYear": "Year of the last major remodel (0 = none).",
+  "TotalSqFt": "Square footage of this building, feature or basement.",
+  "NormalDepreciation": "Physical depreciation from age, as a percent.",
+  "FunctionalPercent": "Functional obsolescence adjustment, as a percent (negative lowers value).",
+  "ValueAdj": "Additional value adjustment factor applied to the building.",
+  "FeatureName": "Name of the secondary improvement.",
+  "FeatureImprovement": "Kind of secondary improvement (porch, garage, pool, shed and so on).",
+  "LeasableArea": "Leasable area in square feet.",
+  "PGIRate": "Potential gross income rate per square foot per year.",
+  "VacancyCollectionLoss": "Vacancy and collection loss, as a fraction of potential income (0.10 = 10%).",
+  "MiscIncomeRate": "Miscellaneous income per square foot.",
+  "PassThroughIncomeRate": "Expense pass-through income per square foot.",
+  "OperatingExpenses": "Operating expenses, as a fraction of income (0.40 = 40%).",
+  "CapRate": "Capitalization rate, in percent, used to turn net income into value.",
+  "SiteClass": "Site class: the property use the appraisal model treats it as.",
+  "Neighborhood": "Appraisal neighborhood.",
+  "SubMarketArea": "Income sub-market the property is compared within.",
+  "OverallEYOC": "Overall effective year of construction for the property.",
+  "OverallQuality": "Overall construction quality rating.",
+  "OverallCondition": "Overall condition rating.",
+  "ImprStyle": "Improvement style (warehouse, retail, office and so on).",
+  "Area": "Area in square feet for this income line.",
+  "IncomeType": "Income property type (apartment, retail, warehouse and so on).",
+  "IncomeSubtype": "More specific income property type.",
+  "ASName": "Name of the appraisal site.",
+  "ASNLA": "Net leasable area of the appraisal site in square feet.",
+  "RentSpaceArea": "Area of the rented space in square feet.",
+  "Rate": "Rent rate per unit of space.",
+  "CAM": "Common area maintenance charge.",
+  "IncomeYear": "Year the income data is from.",
+  "LeaseType": "Lease structure (triple net, net, gross).",
+  "Basis": "Period the rent rate is quoted for (for example Annual).",
+  "Term": "Lease term in months.",
+  "IncomeFormType": "Source of the rent figures: in-place leases or asking rents.",
+  "IncomeClass": "Income class rating of the property.",
+  "SpaceType": "Unit the space is measured in (leasable area, number of units, gross area).",
+  "ASStreetNumber": "Street number of the appraisal site.",
+  "ASStreetName": "Street name of the appraisal site.",
+  "ASCity": "City of the appraisal site.",
+  "InfoSource": "Where the income data came from (tax agent, market survey and so on).",
+  "AnalysisCode": "Code marking how the income record is used in analysis (for example Valid).",
+  "FinishType": "Interior finish level of the space.",
+  "SiteAIN": "Alternate identification number of the site the land belongs to.",
+  "LandLineId": "ID of this land line.",
+  "LandDetailType": "Kind of land line (for example Market).",
+  "LandName": "Label given to the land line.",
+  "LandType": "Land type the line is valued as.",
+  "Acres": "Size of the land line in acres.",
+  "SquareFeet": "Size of the land line in square feet.",
+  "LandDetailUse": "Agricultural use class of the land (for example native pasture).",
+  "Topography": "Topography of the land (flat, river or stream and so on).",
+  "SiteRating": "Site rating: either a site value or a rating code.",
+  "Zoning": "Zoning code of the land.",
+  "CalcBy": "What the land calculation is based on.",
+  "LandCalculationMethod": "How the land value is calculated (per unit, per square foot, constant plus rate and so on).",
+  "BaseRate": "Base land rate before adjustments.",
+  "Size": "Number of units the base rate is applied to.",
+  "ConstantValue": "Fixed amount added in a constant-plus-rate calculation.",
+  "FixedLumpSum": "Lump-sum dollar adjustment to the land value.",
+  "ValuationModel": "Valuation model the land line uses.",
+  "LandCode": "Land adjustment code (for example floodplain percent).",
+  "AdjType": "Kind of land adjustment applied.",
+  "LandFactor": "Size of the land adjustment, as a number or percent.",
+  "Notes": "Appraiser's notes on the land line.",
+  "TotalAppraisalValue": "Appraised value of the land line after adjustments.",
+  "PermitId": "TAD ID of the permit record.",
+  "PermitNumber": "Permit number issued by the city.",
+  "PermitDate": "Date the permit was issued.",
+  "PermitStatus": "Status of the permit review at TAD.",
+  "PermitDescription": "Description of the permitted work.",
+  "PermitAmount": "Dollar amount on the permit.",
+  "YCoOrdinates": "Latitude of the property.",
+  "XCoOrdinates": "Longitude of the property.",
+  "YearOfFreeze": "Year the tax ceiling (freeze) started.",
+  "Exemptions": "Exemptions on the account.",
+  "CountyCeilingAmt": "County tax ceiling amount.",
+  "CountyExemptionAmt": "Value exempted from county tax.",
+  "Hospital": "Hospital district taxing unit.",
+  "HospitalCeilingAmt": "Hospital district tax ceiling amount.",
+  "HospitalExemptionAmt": "Value exempted from hospital district tax.",
+  "College": "College district taxing unit.",
+  "CollegeCeilingAmt": "College district tax ceiling amount.",
+  "CollegeExemptionAmt": "Value exempted from college district tax.",
+  "ISDName": "School district taxing unit.",
+  "ISDCeilingAmt": "School district tax ceiling amount (over-65 or disabled freeze).",
+  "ISDExemptionAmt": "Value exempted from school district tax.",
+  "CityName": "City taxing unit.",
+  "CityCeilingAmt": "City tax ceiling amount.",
+  "CityExemptionAmt": "Value exempted from city tax.",
+  "Water": "Water district taxing unit.",
+  "WaterCeilingAmt": "Water district tax ceiling amount.",
+  "WaterExemptionAmt": "Value exempted from water district tax.",
+  "CaseNumber": "Appraisal Review Board protest case number.",
+  "CaseStatus": "Current status of the protest case.",
+  "Year": "Tax year of the protest.",
+  "NatureOfProtest": "Reason given for the protest (for example incorrect value, unequal appraisal).",
+  "Appellant": "Who filed the protest: the owner or the agent firm.",
+  "Agency": "TAD agent number of the firm handling the protest.",
+  "HearingDateTime": "Scheduled hearing date and time.",
+  "Disposition": "Outcome of the protest (value change, no change, denied).",
+  "InitialValue": "Value under protest at the start of the case.",
+  "FinalValue": "Value after the protest was resolved.",
+  "ImprovementId": "TAD ID of the improvement.",
+  "ImprovementDescription": "Kind of improvement (Basement).",
+  "ParcelNLA": "Net leasable area of the whole parcel in square feet.",
+  "ParcelGBA": "Gross building area of the whole parcel in square feet.",
+  "FilingAgency": "Agent firm that filed the protest, when different from the handling agent.",
+  "PIN": "Zero-padded property identifier: the TAD account number (same as Account_Num).",
+  "SitusAddress": "Primary situs address when available.",
+  "ImprovementType": "Primary improvement type translated to a public-friendly label when known.",
+  "ImprovementStyle": "Primary improvement style.",
+  "YearBuilt": "Primary improvement actual year built.",
+  "ActualArea": "Residential main-area square footage from improvement detail rows.",
+  "LandValue": "Current land market value total.",
+  "GarageValue": "Residential garage improvement-detail value total.",
+  "PoolValue": "Residential pool improvement-detail value total.",
+  "OutbuildingValue": "Residential outbuilding improvement-detail value total.",
+  "OtherFeatureValue": "Other non-main residential improvement-detail value total.",
+  "IndicatedSalesValue": "Sales comp-model indicated value selected for this tax year and current property version. Blank for nominal/common-area records.",
+  "IndicatedEquityValue": "Equity comp-model indicated value selected for this tax year and current property version. Blank for nominal/common-area records.",
+  "Tax Year": "Property tax year.",
+  "Market Area": "Current property characteristics market area; replaces old Neighborhood terminology.",
+  "Situs Address": "Primary situs address when available.",
+  "Improvement Type": "Primary improvement type translated to a public-friendly label when known.",
+  "Improvement Style": "Primary improvement style.",
+  "Actual Year Built": "Primary improvement actual year built.",
+  "Main Area": "Residential main-area square footage from improvement detail rows.",
+  "Land Value": "Current land market value total.",
+  "Garage Value": "Residential garage improvement-detail value total.",
+  "Pool Value": "Residential pool improvement-detail value total.",
+  "Outbuilding Value": "Residential outbuilding improvement-detail value total.",
+  "Other Feature Value": "Other non-main residential improvement-detail value total.",
+  "Effective Year Built": "Primary improvement effective year built.",
+  "Market Indicated Value": "Sales comp-model indicated value selected for this tax year and current property version. Blank for nominal/common-area records.",
+  "Equity Indicated Value": "Equity comp-model indicated value selected for this tax year and current property version. Blank for nominal/common-area records.",
+  "FeatureCdDescr": "Kind of secondary residential improvement (garage, pool, storage room, porch, outbuilding).",
+  "FeatureValue": "Value of that improvement.",
+  "ImprovementDetail": "Non-main-area residential improvement detail description. Parking Space and residential elevator rows are pulled from the Tarrant feature tables.",
+  "ImprovementValue": "Current improvement-detail value. Parking Space and Elevator use the calculated feature amount from the Tarrant feature tables.",
+  "user.token": "Session token. Sent in the authorization header of every other call.",
+  "user.id": "Portal user ID.",
+  "user.email": "Email address of the portal user.",
+  "user.userPassword": "Password field (returned masked).",
+  "user.fullName": "Full name of the portal user.",
+  "user.officeName": "CAD office the account belongs to.",
+  "user.loginDt": "When this sign-in happened.",
+  "user.initializeUser": "1 when the user still has to finish first-time setup.",
+  "user.resetPassword": "1 when the user must change their password.",
+  "user.inactive": "1 when the portal user is deactivated.",
+  "user.inactiveDt": "When the user was deactivated.",
+  "user.inactiveBy": "Who deactivated the user.",
+  "user.appraiserCd": "Appraiser code, for CAD staff users.",
+  "user.supervisorID": "Supervisor user ID, for CAD staff users.",
+  "user.userType": "Kind of portal user (public for agents and owners).",
+  "user.cellPhone": "Mobile phone number on the profile.",
+  "user.receiveText": "1 when the user receives text messages.",
+  "user.publicUserValidated": "1 when the user's identity has been validated.",
+  "user.publicUserValidatedDt": "When the user was validated.",
+  "user.agentID": "CAD agent ID of our firm.",
+  "user.litigationPartyID": "Litigation party ID (0 = none).",
+  "user.notifyUserAppealChanges": "1 when the user is emailed about appeal changes.",
+  "user.readOnly": "1 when the user can only view, not act.",
+  "user.forceLogOff": "1 when the user's sessions should be ended.",
+  "user.createdBy": "Who created the record.",
+  "user.inserted": "When the user record was created.",
+  "user.updatedBy": "Who last changed the record.",
+  "user.updateDt": "When the record was last changed.",
+  "user.mobileNotificationToken": "Push notification token for the mobile app.",
+  "user.receiveElectronicDeliveryNotice": "1 when notices are delivered electronically instead of by mail.",
+  "user.receiveElectronicDeliveryNoticeMethod": "How electronic notices are delivered (Email).",
+  "user.userContractComplete": "1 when the user has accepted the portal agreement.",
+  "user.userContractCompletedOn": "When the portal agreement was accepted.",
+  "user.databases": "Databases and app settings the user can reach.",
+  "user.expirationDt": "When the token expires.",
+  "user.expirationInSeconds": "Seconds until the token expires (43200 = 12 hours).",
+  "user.modules": "Portal modules the user can use.",
+  "user.moduleIDs": "IDs of the portal modules the user can use.",
+  "user.name": "Name of the portal user.",
+  "user.office": "CAD office the account belongs to.",
+  "user.privatePortalUrl": "Address of the CAD's private (staff) portal.",
+  "user.publicPortalUrl": "Address of the CAD's public portal.",
+  "user.roles": "Roles assigned to the user.",
+  "user.roleIDs": "IDs of the roles assigned to the user.",
+  "user.userrights": "Extra permissions granted to the user.",
+  "agentID": "CAD agent ID of our firm.",
+  "companyName": "Agent firm name.",
+  "contactName": "Contact person at the agent firm.",
+  "activeProperties": "Properties where our appointment is active.",
+  "expiredProperties": "Properties where our appointment has expired.",
+  "closedAppeals": "Protests that are finished.",
+  "openAppeals": "Protests still in progress.",
+  "hasDocketGroups": "1 when hearings are grouped into docket groups.",
+  "userID": "Portal user ID.",
+  "email": "Email address of the portal user.",
+  "fullName": "Full name of the portal user.",
+  "cellPhone": "Mobile phone number on the profile.",
+  "notifyUserAppealChanges": "1 when the user is emailed about appeal changes.",
+  "receiveElectronicDeliveryNotice": "1 when notices are delivered electronically instead of by mail.",
+  "receiveElectronicDeliveryNoticeMethod": "How electronic notices are delivered (Email).",
+  "conferencingConfigurationID": "ID of the meeting configuration.",
+  "defaultGreeting": "Greeting shown when joining an online meeting.",
+  "supportNumber": "Support phone number shown to meeting attendees.",
+  "largeCallVolumeAlert": "Message shown when wait times are long.",
+  "continueHoldingMessage": "Message shown while waiting in the meeting queue.",
+  "meetingStartedMessage": "Message shown when the meeting starts.",
+  "meetingEndedMessage": "Message shown when the meeting ends.",
+  "createdBy": "Who created the record.",
+  "createDt": "When the record was created.",
+  "updatedBy": "Who last changed the record.",
+  "updateDt": "When the record was last changed.",
+  "catchAllFormalRoomID": "Default room for formal (ARB) hearings.",
+  "catchAllInformalRoomID": "Default room for informal meetings.",
+  "useCheckInTimeRange": "1 when check-in is only allowed during set hours.",
+  "allowCheckInStartTime": "Earliest time of day you can check in.",
+  "allowCheckInEndTime": "Latest time of day you can check in.",
+  "allowCheckInWeekend": "1 when check-in is allowed on weekends.",
+  "meetingTypesAllowed": "Kinds of meeting the CAD offers (in person, phone, video).",
+  "portalMeetingTypesAllowed": "Kinds of meeting you can pick through the portal.",
+  "efileURL": "Address of the CAD's e-file site.",
+  "pID": "CAD account number (same as Account_Num in the website files).",
+  "pYear": "Tax year.",
+  "pVersion": "Version of the property record (0 = current).",
+  "pRollCorr": "Roll correction number (0 = original roll).",
+  "propType": "Property type: R real, P business personal, M mineral.",
+  "pAccountID": "Internal portal ID for the property account. Does not match the website files.",
+  "name": "Owner name on the property.",
+  "nameSecondary": "Second owner name line.",
+  "firstName": "Owner first name.",
+  "lastName": "Owner last name.",
+  "spouseFirstName": "Spouse first name.",
+  "spouseLastName": "Spouse last name.",
+  "legalDescription": "Legal description of the property.",
+  "marketArea": "Appraisal market area or neighborhood code.",
+  "streetPrimary": "Property street address.",
+  "dba": "Doing-business-as name, for business accounts.",
+  "caseIDDisplay": "Protest case number as shown in the portal (year-caseID).",
+  "propertyStatus": "Status of our appointment on the property (Active, Expired, Needs AOA).",
+  "protestState": "Where the protest is in its life cycle.",
+  "canSchedule": "Whether a hearing can be scheduled now.",
+  "scheduleType": "Kind of scheduling allowed (Initial, Reschedule).",
+  "protesterScheduledCount": "Hearings already scheduled for this protester.",
+  "noticeDt": "Date the appraisal notice was sent.",
+  "protestDeadlineDt": "Last day to file a protest.",
+  "appealID": "Portal ID of the protest (appeal).",
+  "claimantOpinionOfValue": "Value we gave as our opinion on the protest.",
+  "appealStatus": "Status of the protest (for example Joint Motion 41.47, Resolved Value).",
+  "noticeMarketValue": "Market value on the appraisal notice.",
+  "claimantComments": "Comments entered when the protest was filed.",
+  "docketStartTime": "Scheduled ARB hearing time.",
+  "presentationPublished": "Whether the CAD has published its evidence.",
+  "presentationS3ID": "Storage ID of the CAD's evidence file.",
+  "hasRecommendation": "Whether the CAD has made a settlement offer.",
+  "recommendationID": "ID of the CAD's settlement offer.",
+  "recommendationValue": "Value the CAD offered to settle at.",
+  "showNewRecommendationFlag": "Whether the offer is new since last viewed.",
+  "eFileEligible": "Whether the protest can be e-filed.",
+  "agentStatus": "Status of our appointment on the property.",
+  "viewCaseActivity": "Whether case activity can be viewed.",
+  "appealFinalValue": "Final value after the protest.",
+  "hasNotice": "Whether an appraisal notice is available.",
+  "topLineEligible": "Whether the property qualifies for a top-line (no-change) settlement.",
+  "recommendationStatus": "What happened to the CAD's offer (Accepted, Expired).",
+  "primaryProtester": "Whether we are the main protester on the case.",
+  "protestFiledByAgent": "Whether our firm filed the protest.",
+  "numProtesters": "How many parties protested this property.",
+  "informalDocketStartTime": "Scheduled informal meeting time.",
+  "stateCd": "Texas Comptroller property category (state code).",
+  "canProcessRecommendation": "Whether the CAD's offer can be accepted or rejected now.",
+  "canProcessTopLineRecommendation": "Whether a top-line offer can be acted on now.",
+  "canViewTaxpayerEvidence": "Whether our uploaded evidence can be viewed.",
+  "canWithdrawProtest": "Whether the protest can be withdrawn now.",
+  "canViewCADEvidence": "Whether the CAD's evidence can be downloaded.",
+  "canUploadReviewEvidence": "Whether evidence can be uploaded for the hearing.",
+  "canViewCaseActivity": "Whether the case activity log can be viewed.",
+  "canFileProtest": "Whether a protest can be filed now.",
+  "canCreateAcceptNoChangeTopline": "Whether a no-change top-line settlement can be accepted.",
+  "canSubmitAOA": "Whether an appointment of agent form can be submitted.",
+  "canRevokeAOA": "Whether the appointment of agent can be revoked.",
+  "presentationPublishedDt": "When the CAD published its evidence.",
+  "recommendationDt": "When the CAD made its settlement offer.",
+  "boardOrderDt": "Date of the ARB order determining the protest.",
+  "appraisalNoticeLastDownloadDt": "When we last downloaded the appraisal notice.",
+  "boardOrderLastDownloadDt": "When we last downloaded the board order.",
+  "excelLastDownloadDt": "When the property was last in an Excel export.",
+  "evidenceLastDownloadDt": "When we last downloaded the CAD evidence.",
+  "hearingNoticeLastDownloadDt": "When we last downloaded the hearing notice.",
+  "latestClaimantEvidenceDt": "When we last uploaded evidence.",
+  "netAppraisedValue": "Net appraised value (after caps and limits).",
+  "subType": "Property subtype (for example Residential).",
+  "appealReasons": "Reasons selected for the protest.",
+  "propertyAccountAgentID": "ID of our appointment on this property.",
+  "tag": "Custom tag on the appointment.",
+  "applicationDt": "Date on the appointment of agent form.",
+  "effectiveDt": "Date the appointment takes effect.",
+  "expirationDt": "Date the appointment ends (blank = until revoked).",
+  "mailingsARB": "1 when ARB mail goes to the agent.",
+  "mailingsCAD": "1 when CAD mail goes to the agent.",
+  "mailingsTaxingUnit": "1 when taxing unit mail (tax bills) goes to the agent.",
+  "authorityProtest": "1 when the agent may file and pursue protests.",
+  "authorityResolveTaxMatters": "1 when the agent may settle all property tax matters.",
+  "authorityConfidential": "1 when the agent may see confidential information.",
+  "authorityOther": "1 when the agent has other listed authority.",
+  "authorityOtherDescription": "Description of the other authority.",
+  "agentComment": "Our comment on the appointment.",
+  "fileAttachment": "Files attached to the appointment.",
+  "massCreateProtestID": "Mass protest job that created this record.",
+  "massCreateStatus": "Status of that mass protest job.",
+  "aoaFiled": "1 when the appointment of agent form is on file.",
+  "aoaAgentUploadDt": "When we uploaded the appointment form.",
+  "aoaStaffVerified": "1 when CAD staff verified the appointment.",
+  "aoaStaffVerifiedDt": "When CAD staff verified the appointment.",
+  "aoaStaffVerifiedBy": "CAD staff member who verified it.",
+  "massProcessAoaID": "Mass appointment job that created this record.",
+  "massProcessAoaStatus": "Status of that mass appointment job.",
+  "ownerID": "CAD ID of the property owner.",
+  "address": "Owner mailing address.",
+  "docketGroups": "Docket groups waiting for check-in.",
+  "appeals": "Hearings waiting for check-in.",
+  "activityID": "ID of the activity entry.",
+  "activityType": "Kind of activity (status change, letter, offer, case finalized).",
+  "activity": "Text of the activity entry.",
+  "notifyViaEmail": "1 when the activity triggers an email.",
+  "notificationSent": "1 when the email was sent.",
+  "notificationSentDt": "When the email was sent.",
+  "notificationSentTo": "Who the email was sent to.",
+  "notificationEmail": "Address the email went to.",
+  "s3ID": "Storage ID of the attached file.",
+  "activityDt": "When the activity happened.",
+  "hasAttachment": "Whether the entry has a file to download.",
+  "url": "Temporary download link for the file.",
+  "key": "Storage key of the file.",
+  "expiresIn": "Seconds until the download link expires.",
+  "massID": "ID of the mass job.",
+  "massAction": "What the mass job does (Add, Revoke).",
+  "massStatus": "Status of the mass job.",
+  "propertyCount": "Properties included in the job.",
+  "processedCount": "Properties the job has processed.",
+  "errorCount": "Properties that failed.",
+  "massError": "Error message from the job.",
+  "startDt": "When the job started.",
+  "endDt": "When the job finished.",
+  "agentName": "Agent firm name.",
+  "parameters.pIDList": "Account numbers (pID) included in the job.",
+  "parameters.createEvent": "Whether to log a case activity entry for each property.",
+  "parameters.effectiveDt": "Date the appointment takes effect.",
+  "parameters.mailingsARB": "1 when ARB mail goes to the agent.",
+  "parameters.mailingsCAD": "1 when CAD mail goes to the agent.",
+  "parameters.agentComment": "Our comment on the appointment.",
+  "parameters.expirationDt": "Date the appointments end (blank = until revoked).",
+  "parameters.applicationDt": "Date on the appointment of agent form.",
+  "parameters.fileAttachments": "Signed appointment forms attached to the job.",
+  "parameters.authorityProtest": "1 when the agent may file and pursue protests.",
+  "parameters.mailingsTaxingUnit": "1 when taxing unit mail (tax bills) goes to the agent.",
+  "parameters.authorityConfidential": "1 when the agent may see confidential information.",
+  "parameters.authorityResolveTaxMatters": "1 when the agent may settle all property tax matters.",
+  "downloadID": "ID of the download job.",
+  "downloadStatus": "Status of the download job.",
+  "processName": "What was downloaded (Excel, Evidence, Board Orders, Appraisal Notices).",
+  "downloadMessage": "Message from the download job.",
+  "downloadStartDt": "When the download started.",
+  "downloadEndDt": "When the download finished.",
+  "recordCount": "Properties requested.",
+  "successCount": "Properties downloaded successfully.",
+  "pIDList": "Account numbers (pID) included in the download.",
+  "downloadPropertyID": "ID of this property's line in the download job.",
+  "downloadError": "Why this property failed to download.",
+  "processed": "1 when this property has been processed.",
+  "canViewEvidence": "1 when CAD evidence is available for this property.",
+  "isPrimaryProtester": "1 when we are the main protester.",
+  "massCreateID": "ID of the mass protest job.",
+  "importType": "Who submitted the import (Agent).",
+  "importDt": "When the import was submitted.",
+  "importStatus": "Status of the import.",
+  "protestCount": "Protests created by the import.",
+  "errorMessage": "Error message from the import.",
+  "jobType": "Kind of mass job (Mass Create).",
+  "situs": "Property location address."
+ },
+ "descriptions_by_set": {
+  "agent-1_Account:ActualYear": "Year the main improvement was built.",
+  "agent-2_Building:ActualYear": "Year this building was built.",
+  "agent-2_Building:AppraisedValue": "Appraised value of this building.",
+  "agent-2_Building:Quality": "Quality rating of this building.",
+  "agent-2_Building:Condition": "Condition rating of this building.",
+  "agent-3_Feature:ActualYear": "Year this feature was built (9999 = unknown).",
+  "agent-3_Feature:AppraisedValue": "Appraised value of this feature.",
+  "agent-3_Feature:Quality": "Quality rating of this feature.",
+  "agent-3_Feature:Condition": "Condition rating of this feature.",
+  "agent-3_Feature:RemodelYear": "Year this feature was last remodelled (0 or 9999 = none).",
+  "agent-8_Exemption:County": "County taxing unit on the account.",
+  "comp-2024:TaxYear": "Property tax year.",
+  "comp-2024:Neighborhood": "Current property characteristics market area; replaces old Neighborhood terminology.",
+  "comp-2024:Quality": "Primary improvement quality.",
+  "comp-2024:Condition": "Primary improvement condition.",
+  "comp-2024:EffectiveYear": "Primary improvement effective year built.",
+  "comp-2025:TaxYear": "Property tax year.",
+  "comp-2025:Neighborhood": "Current property characteristics market area; replaces old Neighborhood terminology.",
+  "comp-2025:Quality": "Primary improvement quality.",
+  "comp-2025:Condition": "Primary improvement condition.",
+  "comp-2025:EffectiveYear": "Primary improvement effective year built.",
+  "comp-2026:Quality": "Primary improvement quality.",
+  "comp-2026:Condition": "Primary improvement condition.",
+  "feat-2024:TaxYear": "Property tax year.",
+  "feat-2025:TaxYear": "Property tax year.",
+  "feat-2026:TaxYear": "Property tax year.",
+  "api-agent-confrence-configuration:createdBy": "Who created the configuration.",
+  "api-download-log:errorCount": "Properties that failed to download.",
+  "api-mass-protest-history:startDt": "When the import started.",
+  "api-mass-protest-history:endDt": "When the import finished.",
+  "api-mass-protest-history:errorCount": "Protests that failed to import."
+ },
+ "sources": [
+  {
+   "id": "web",
+   "label": "CAD website files",
+   "sub": "{n} bulk files · every account in the county",
+   "start": "y2026",
+   "desc": "Bulk exports downloaded from the Tarrant CAD website, saved in <code>CAD Website/Tarrant</code>. They cover every account in the county.",
+   "groups": [
+    {
+     "id": "property",
+     "label": "Property Data",
+     "desc": "The certified property roll, one row per account per year, from <code>output/PropertyData_*.csv</code>.",
+     "datasets": [
+      "y2024",
+      "y2025",
+      "y2026"
+     ],
+     "years": [
+      {
+       "label": "2024",
+       "datasets": [
+        "y2024"
+       ]
+      },
+      {
+       "label": "2025",
+       "datasets": [
+        "y2025"
+       ]
+      },
+      {
+       "label": "2026",
+       "datasets": [
+        "y2026"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "supp",
+     "label": "Supplemental",
+     "desc": "Extra appraisal detail from <code>output/PropertyDataSupplemental_&lt;type&gt;_&lt;year&gt;.csv</code>, split by property type (C, M, P, R). Joins to Property Data on the account number. Pick a year, then a file.",
+     "datasets": [
+      "supp24-C",
+      "supp24-M",
+      "supp24-P",
+      "supp24-R",
+      "supp-C",
+      "supp-M",
+      "supp-P",
+      "supp-R",
+      "supp26"
+     ],
+     "years": [
+      {
+       "label": "2024",
+       "datasets": [
+        "supp24-C",
+        "supp24-M",
+        "supp24-P",
+        "supp24-R"
+       ]
+      },
+      {
+       "label": "2025",
+       "datasets": [
+        "supp-C",
+        "supp-M",
+        "supp-P",
+        "supp-R"
+       ]
+      },
+      {
+       "label": "2026",
+       "datasets": [
+        "supp26"
+       ],
+       "pending": true
+      }
+     ]
+    },
+    {
+     "id": "exempt",
+     "label": "Exemptions",
+     "desc": "Exemptions granted on each account, from <code>Data/PropertyData_Exemptions_&lt;year&gt;.txt</code>. One row per exemption; joins to Property Data on <code>Account_Num</code>.",
+     "datasets": [
+      "exempt-2024",
+      "exempt-2025",
+      "exempt-2026"
+     ],
+     "years": [
+      {
+       "label": "2024",
+       "datasets": [
+        "exempt-2024"
+       ]
+      },
+      {
+       "label": "2025",
+       "datasets": [
+        "exempt-2025"
+       ]
+      },
+      {
+       "label": "2026",
+       "datasets": [
+        "exempt-2026"
+       ],
+       "pending": true
+      }
+     ]
+    },
+    {
+     "id": "agent",
+     "label": "Agent Summary",
+     "desc": "The Agent Summary export in <code>Data/AgentSummaryData_2024</code> and <code>Data/AgentSummaryData_2025</code>: ten pipe-delimited UTF-16 text files per year that all join on <code>AccountNumber</code>. Pick a year, then a file.",
+     "datasets": [
+      "agent-1_Account",
+      "agent-2_Building",
+      "agent-3_Feature",
+      "agent-4_CAccount",
+      "agent-5_LandSegment",
+      "agent-6_BuildingPermit",
+      "agent-7_XYGeo",
+      "agent-8_Exemption",
+      "agent-9_ReviewBoard",
+      "agent-10_Basement",
+      "agent25-1_Account",
+      "agent25-2_Building",
+      "agent25-3_Feature",
+      "agent25-4_CAccount",
+      "agent25-5_LandSegment",
+      "agent25-6_BuildingPermit",
+      "agent25-7_XYGeo",
+      "agent25-8_Exemption",
+      "agent25-9_ReviewBoard",
+      "agent25-10_Basement",
+      "agent26"
+     ],
+     "years": [
+      {
+       "label": "2024",
+       "datasets": [
+        "agent-1_Account",
+        "agent-2_Building",
+        "agent-3_Feature",
+        "agent-4_CAccount",
+        "agent-5_LandSegment",
+        "agent-6_BuildingPermit",
+        "agent-7_XYGeo",
+        "agent-8_Exemption",
+        "agent-9_ReviewBoard",
+        "agent-10_Basement"
+       ]
+      },
+      {
+       "label": "2025",
+       "datasets": [
+        "agent25-1_Account",
+        "agent25-2_Building",
+        "agent25-3_Feature",
+        "agent25-4_CAccount",
+        "agent25-5_LandSegment",
+        "agent25-6_BuildingPermit",
+        "agent25-7_XYGeo",
+        "agent25-8_Exemption",
+        "agent25-9_ReviewBoard",
+        "agent25-10_Basement"
+       ]
+      },
+      {
+       "label": "2026",
+       "datasets": [
+        "agent26"
+       ],
+       "pending": true
+      }
+     ]
+    },
+    {
+     "id": "comp",
+     "label": "Residential Comp Attributes",
+     "desc": "Residential comparable-sales attributes from <code>output/&lt;year&gt;ResidentialCompAttributeData.csv</code>, one row per residential account. <code>PIN</code> is the account number.",
+     "datasets": [
+      "comp-2024",
+      "comp-2025",
+      "comp-2026"
+     ],
+     "years": [
+      {
+       "label": "2024",
+       "datasets": [
+        "comp-2024"
+       ]
+      },
+      {
+       "label": "2025",
+       "datasets": [
+        "comp-2025"
+       ]
+      },
+      {
+       "label": "2026",
+       "datasets": [
+        "comp-2026"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "feat",
+     "label": "Residential Features",
+     "desc": "Values of secondary residential improvements: <code>output/&lt;year&gt;ResidentialFeaturesValue.csv</code> for 2024 and 2025, renamed <code>2026ResidentialImprovementDetails.csv</code> for 2026. Joins to Residential Comp Attributes on <code>PIN</code>.",
+     "datasets": [
+      "feat-2024",
+      "feat-2025",
+      "feat-2026"
+     ],
+     "years": [
+      {
+       "label": "2024",
+       "datasets": [
+        "feat-2024"
+       ]
+      },
+      {
+       "label": "2025",
+       "datasets": [
+        "feat-2025"
+       ]
+      },
+      {
+       "label": "2026",
+       "datasets": [
+        "feat-2026"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "api",
+   "label": "Agent Portal API",
+   "sub": "{n} endpoints · properties we represent",
+   "start": "api-agent-properties",
+   "desc": "Calls available through the TrueProdigy Agent Portal at <code>prod-container.trueprodigyapi.com</code>, documented in <code>CAD Agent Portal/Tarrant New/Tarrant-New-Docs.yaml</code>. They return only the properties we represent, plus protest workflow data the website files lack. Field statistics come from the example responses saved in the docs, so they describe a sample. <code>pID</code> is the CAD account number used in the website files.",
+   "groups": "from_api"
+  }
+ ],
+ "api": {
+  "spec": "/Users/user2/PTP/CAD Agent Portal/Tarrant New/Tarrant-New-Docs.yaml",
+  "groups": [
+   {
+    "id": "auth",
+    "label": "Sign-in",
+    "endpoints": [
+     "Office Token",
+     "Agent Token"
+    ]
+   },
+   {
+    "id": "account",
+    "label": "Agent account",
+    "endpoints": [
+     "Agent Info",
+     "Agent Summary",
+     "Agent Profile",
+     "Agent Confrence Configuration"
+    ]
+   },
+   {
+    "id": "props",
+    "label": "Properties & protests",
+    "endpoints": [
+     "Agent Properties",
+     "Agent Prior Year Appeals",
+     "View Current Fiduciary Info"
+    ]
+   },
+   {
+    "id": "docs",
+    "label": "Notices & evidence",
+    "endpoints": [
+     "View Appraisal Notice",
+     "View Notice of Hearing",
+     "View Board Order",
+     "View Cad Evidence"
+    ]
+   },
+   {
+    "id": "hearings",
+    "label": "Hearings & case activity",
+    "endpoints": [
+     "Agent Meetings that need checkin",
+     "Agent Informal Meetings that needs checkin",
+     "Case Activity",
+     "Download Activity Attachment"
+    ]
+   },
+   {
+    "id": "aoa",
+    "label": "Appointment of agent",
+    "endpoints": [
+     "Appoinment of Agent",
+     "Appointment of Agents processed details"
+    ]
+   },
+   {
+    "id": "mass",
+    "label": "Mass downloads",
+    "endpoints": [
+     "Download Log",
+     "Download log Success",
+     "Download log error",
+     "Download file of Download Logs"
+    ]
+   },
+   {
+    "id": "protest",
+    "label": "Mass protests",
+    "endpoints": [
+     "Mass Protest History",
+     "Mass Protest History Properties",
+     "Mass Protest History Errors"
+    ]
+   }
+  ],
+  "labels": {
+   "Agent Confrence Configuration": "Conference configuration",
+   "Appoinment of Agent": "Mass AOA jobs",
+   "Appointment of Agents processed details": "AOA job properties",
+   "Agent Informal Meetings that needs checkin": "Informal meetings to check in",
+   "Agent Meetings that need checkin": "Meetings to check in",
+   "View Cad Evidence": "CAD evidence",
+   "Download log Success": "Download log: completed",
+   "Download log error": "Download log: errored",
+   "Download file of Download Logs": "Download file",
+   "Mass Protest History Properties": "Mass protest properties",
+   "Mass Protest History Errors": "Mass protest errors",
+   "View Current Fiduciary Info": "Fiduciary (agent appointment)"
+  },
+  "about": {
+   "Office Token": "Gets an office token for the Tarrant office. The authorization header is the literal value null.",
+   "Agent Token": "Signs the agent in and returns the user record and the JWT used by every other call.",
+   "Agent Info": "Agent ID, company name and contact name.",
+   "Agent Summary": "Counts of active and expired properties and open and closed appeals for the agent.",
+   "Agent Profile": "The signed-in user's public profile and notification settings.",
+   "Agent Confrence Configuration": "Settings for the virtual hearing (conference) system: greeting, support number and messages.",
+   "Agent Properties": "Every property the agent represents this year, with protest status, deadlines, notice value, recommendation and board order dates. Paged; the body takes filters.",
+   "Agent Prior Year Appeals": "The same property list for prior tax years. Paged; the body takes the same filters.",
+   "View Current Fiduciary Info": "The agent appointment (Form 50-162) on one property: effective and expiration dates and which mailings go to the agent.",
+   "View Appraisal Notice": "Downloads the appraisal notice PDF for a property. The example returned 409 because no notice was available.",
+   "View Notice of Hearing": "Downloads the notice of hearing for a property. The example returned 204 No Content.",
+   "View Board Order": "Returns a link to the ARB board order PDF for a property.",
+   "View Cad Evidence": "Downloads the appraisal district's evidence packet for an appeal.",
+   "Agent Meetings that need checkin": "Formal ARB hearings and docket groups the agent must check in to.",
+   "Agent Informal Meetings that needs checkin": "Informal meetings the agent must check in to.",
+   "Case Activity": "Timeline of events on one appeal, such as filings, notices, evidence uploads and settlements.",
+   "Download Activity Attachment": "Returns a short-lived download link for a file attached to a case activity.",
+   "Appoinment of Agent": "History of mass Appointment of Agent (AOA) jobs: action, status and property and error counts.",
+   "Appointment of Agents processed details": "Properties inside one mass AOA job, filtered by status.",
+   "Download Log": "History of mass evidence and notice download jobs.",
+   "Download log Success": "Properties that downloaded successfully in one mass download job. Paged.",
+   "Download log error": "Properties that failed in one mass download job, with the error. Paged.",
+   "Download file of Download Logs": "Returns the link to the zip file a mass download produced.",
+   "Mass Protest History": "History of mass protest filing jobs: import type, status, protest and error counts.",
+   "Mass Protest History Properties": "Properties filed in one mass protest job.",
+   "Mass Protest History Errors": "Properties that failed in one mass protest job. The example returned 204 No Content."
+  },
+  "filters": {
+   "schema": "agent_properties_with_filter",
+   "endpoints": [
+    "Agent Properties",
+    "Agent Prior Year Appeals"
+   ]
+  },
+  "auth_overrides": {
+   "Agent Token": "Email and password (sent by the client; not stored in the spec)"
+  },
+  "token_auth_text": "Agent JWT in authorization header"
+ }
+}
