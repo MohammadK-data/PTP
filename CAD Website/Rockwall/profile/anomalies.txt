@@ -1,0 +1,3160 @@
+== p26a-info (59,620 rows, 448 cols)
+  - sup_num: filled but always zero
+  - sup_num: a run of zeros is used as a placeholder (['000000000000', 59620])
+  - sup_action: blank in every row
+  - sup_cd: blank in every row
+  - sup_desc: blank in every row
+  - udi_group: a run of zeros is used as a placeholder (['000000000000', 59250])
+  - filler_692: blank in every row
+  - py_addr_line3: only 3 rows filled (0.0%)
+  - py_addr_zip_rt: blank in every row
+  - filler_992: blank in every row
+  - filler_1013: blank in every row
+  - legal_desc2: blank in every row
+  - legal_acreage: a run of zeros is used as a placeholder (['0000000000000000', 41904])
+  - land_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 14628])
+  - land_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 49715])
+  - imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 13973])
+  - imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 56687])
+  - ag_use_val: a run of zeros is used as a placeholder (['000000000000000', 58308])
+  - ag_market: a run of zeros is used as a placeholder (['000000000000000', 58308])
+  - timber_use: filled but always zero
+  - timber_use: a run of zeros is used as a placeholder (['000000000000000', 59620])
+  - timber_market: filled but always zero
+  - timber_market: a run of zeros is used as a placeholder (['000000000000000', 59620])
+  - ten_percent_cap: a run of zeros is used as a placeholder (['000000000000000', 52625])
+  - filler_1961: blank in every row
+  - filler_1982: blank in every row
+  - mortgage_co_id: a run of zeros is used as a placeholder (['000000000000', 59620])
+  - mortage_co_name: blank in every row
+  - mortgage_acct_id: blank in every row
+  - jan1_addr_line2: only 3 rows filled (0.0%)
+  - jan1_addr_line3: only 1 rows filled (0.0%)
+  - jan1_addr_zip_rt: blank in every row
+  - filler_2571: blank in every row
+  - ov65_prorate_begin: only 748 rows filled (1.3%)
+  - ov65_prorate_end: only 2 rows filled (0.0%)
+  - ex_prorate_begin: blank in every row
+  - ex_prorate_end: blank in every row
+  - mineral_state_cd: blank in every row
+  - land_acres: a run of zeros is used as a placeholder (['00000000000000000000', 4286])
+  - entity_agent_id: a run of zeros is used as a placeholder (['000000000000', 57285])
+  - entity_agent_name: only 2,335 rows filled (3.9%)
+  - entity_agent_addr_line1: only 2,335 rows filled (3.9%)
+  - entity_agent_addr_line2: blank in every row
+  - entity_agent_addr_line3: blank in every row
+  - entity_agent_city: only 2,335 rows filled (3.9%)
+  - entity_agent_state: only 2,334 rows filled (3.9%)
+  - entity_agent_country: only 1,975 rows filled (3.3%)
+  - entity_agent_zip: only 2,335 rows filled (3.9%)
+  - entity_agent_cass: only 684 rows filled (1.1%)
+  - entity_agent_rt: blank in every row
+  - filler_3170: blank in every row
+  - ca_agent_id: a run of zeros is used as a placeholder (['000000000000', 49836])
+  - ca_agent_addr_line2: blank in every row
+  - ca_agent_addr_line3: blank in every row
+  - ca_agent_zip_rt: blank in every row
+  - filler_3582: blank in every row
+  - arb_agent_id: a run of zeros is used as a placeholder (['000000000000', 48826])
+  - arb_agent_addr_line2: blank in every row
+  - arb_agent_addr_line3: blank in every row
+  - arb_agent_zip_rt: blank in every row
+  - mineral_type_of_int: blank in every row
+  - mineral_int_pct: filled but always zero
+  - mineral_int_pct: a run of zeros is used as a placeholder (['000000000000000', 59620])
+  - productivity_use_code: blank in every row
+  - timber_78_market: filled but always zero
+  - timber_78_market: a run of zeros is used as a placeholder (['000000000000', 59620])
+  - ag_late_loss: filled but always zero
+  - ag_late_loss: a run of zeros is used as a placeholder (['000000000000', 59620])
+  - late_freeport_penalty: filled but always zero
+  - late_freeport_penalty: a run of zeros is used as a placeholder (['000000000000', 59620])
+  - filler_4127: blank in every row
+  - filler_4129: blank in every row
+  - filler_4134: blank in every row
+  - filler_4176: blank in every row
+  - filler_4228: blank in every row
+  - filler_4248: blank in every row
+  - filler_4268: blank in every row
+  - filler_4288: blank in every row
+  - filler_4289: blank in every row
+  - filler_4290: blank in every row
+  - filler_4360: only 41 rows filled (0.1%)
+  - filler_4385: only 4 rows filled (0.0%)
+  - situs_unit: only 1,051 rows filled (1.8%)
+  - appr_addr_line3: only 5 rows filled (0.0%)
+  - appr_addr_zip_cass_route: blank in every row
+  - appr_confidential_name: blank in every row
+  - py_confidential_name: blank in every row
+  - jan1_confidential_name: blank in every row
+  - filler_5071: blank in every row
+  - rendition_date: only 241 rows filled (0.4%)
+  - rendition_penalty: filled but always zero
+  - rendition_penalty: a run of zeros is used as a placeholder (['000000000000000', 59620])
+  - rendition_penalty_date_paid: blank in every row
+  - rendition_fraud_penalty: filled but always zero
+  - rendition_fraud_penalty: a run of zeros is used as a placeholder (['000000000000000', 59620])
+  - rendition_fraud_penalty_date_paid: blank in every row
+  - filler_5182: blank in every row
+  - dataset_id: a run of zeros is used as a placeholder (['000000000000000', 59620])
+  - exemption_percentage: a run of zeros is used as a placeholder (['000000000000000', 48545])
+  - filler_5436: blank in every row
+  - ex_qualify_yr: filled but always zero
+  - ab_qualify_yr: filled but always zero
+  - en_qualify_yr: filled but always zero
+  - fr_qualify_yr: filled but always zero
+  - ht_qualify_yr: filled but always zero
+  - pro_qualify_yr: filled but always zero
+  - pc_qualify_yr: filled but always zero
+  - ex366_qualify_yr: filled but always zero
+  - ch_qualify_yr: filled but always zero
+  - eco_qualify_yr: filled but always zero
+  - chodo_qualify_yr: filled but always zero
+  - git_qualify_yr: filled but always zero
+  - mortgage_addr_line1: blank in every row
+  - mortgage_addr_line2: blank in every row
+  - mortgage_addr_line3: blank in every row
+  - mortgage_addr_city: blank in every row
+  - mortgage_addr_state: blank in every row
+  - mortgage_addr_country: blank in every row
+  - mortgage_addr_zip: blank in every row
+  - mortgage_addr_zip_cass: blank in every row
+  - mortgage_addr_zip_rt: blank in every row
+  - sic_code: blank in every row
+  - hs_prorate_end: only 10 rows filled (0.0%)
+  - ov65s_prorate_begin: only 6 rows filled (0.0%)
+  - ov65s_prorate_end: blank in every row
+  - dp_prorate_begin: only 9 rows filled (0.0%)
+  - dp_prorate_end: only 2 rows filled (0.0%)
+  - dv1_prorate_begin: blank in every row
+  - dv1_prorate_end: blank in every row
+  - dv1s_prorate_begin: blank in every row
+  - dv1s_prorate_end: blank in every row
+  - dv2_prorate_begin: blank in every row
+  - dv2_prorate_end: blank in every row
+  - dv2s_prorate_begin: blank in every row
+  - dv2s_prorate_end: blank in every row
+  - dv3_prorate_begin: blank in every row
+  - dv3_prorate_end: blank in every row
+  - dv3s_prorate_begin: blank in every row
+  - dv3s_prorate_end: blank in every row
+  - dv4_prorate_begin: blank in every row
+  - dv4_prorate_end: blank in every row
+  - dv4s_prorate_begin: blank in every row
+  - dv4s_prorate_end: blank in every row
+  - lve_prorate_begin: blank in every row
+  - lve_prorate_end: blank in every row
+  - ab_prorate_begin: blank in every row
+  - ab_prorate_end: blank in every row
+  - en_prorate_begin: blank in every row
+  - en_prorate_end: blank in every row
+  - fr_prorate_begin: blank in every row
+  - fr_prorate_end: blank in every row
+  - ht_prorate_begin: blank in every row
+  - ht_prorate_end: blank in every row
+  - pro_prorate_begin: blank in every row
+  - pro_prorate_end: blank in every row
+  - pc_prorate_begin: blank in every row
+  - pc_prorate_end: blank in every row
+  - so_prorate_begin: blank in every row
+  - so_prorate_end: blank in every row
+  - ex366_prorate_begin: blank in every row
+  - ex366_prorate_end: blank in every row
+  - ch_prorate_begin: blank in every row
+  - ch_prorate_end: blank in every row
+  - dps_prorate_begin: blank in every row
+  - dps_prorate_end: blank in every row
+  - eco_prorate_begin: blank in every row
+  - eco_prorate_end: blank in every row
+  - chodo_prorate_begin: blank in every row
+  - chodo_prorate_end: blank in every row
+  - lih_prorate_begin: blank in every row
+  - lih_prorate_end: blank in every row
+  - git_prorate_begin: blank in every row
+  - git_prorate_end: blank in every row
+  - clt_prorate_begin: blank in every row
+  - clt_prorate_end: blank in every row
+  - clt_qualify_yr: filled but always zero
+  - dvhss_prorate_begin: only 4 rows filled (0.0%)
+  - dvhss_prorate_end: blank in every row
+  - omitted_imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 59619])
+  - omitted_imprv_non_hstd_val: filled but always zero
+  - omitted_imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 59620])
+  - dvhs_prorate_begin: only 408 rows filled (0.7%)
+  - dvhs_prorate_end: only 6 rows filled (0.0%)
+  - ex_xd_qualify_yr: filled but always zero
+  - ex_xd_prorate_begin: blank in every row
+  - ex_xd_prorate_end: blank in every row
+  - ex_xf_qualify_yr: filled but always zero
+  - ex_xf_prorate_begin: blank in every row
+  - ex_xf_prorate_end: blank in every row
+  - ex_xg_prorate_begin: blank in every row
+  - ex_xg_prorate_end: blank in every row
+  - ex_xh_qualify_yr: filled but always zero
+  - ex_xh_prorate_begin: blank in every row
+  - ex_xh_prorate_end: blank in every row
+  - ex_xi_prorate_begin: blank in every row
+  - ex_xi_prorate_end: blank in every row
+  - ex_xj_prorate_begin: blank in every row
+  - ex_xj_prorate_end: blank in every row
+  - ex_xl_prorate_begin: only 2 rows filled (0.0%)
+  - ex_xl_prorate_end: blank in every row
+  - ex_xm_qualify_yr: filled but always zero
+  - ex_xm_prorate_begin: blank in every row
+  - ex_xm_prorate_end: blank in every row
+  - ex_xn_prorate_begin: blank in every row
+  - ex_xn_prorate_end: blank in every row
+  - ex_xo_qualify_yr: filled but always zero
+  - ex_xo_prorate_begin: blank in every row
+  - ex_xo_prorate_end: blank in every row
+  - ex_xp_qualify_yr: filled but always zero
+  - ex_xp_prorate_begin: blank in every row
+  - ex_xp_prorate_end: blank in every row
+  - ex_xq_qualify_yr: filled but always zero
+  - ex_xq_prorate_begin: blank in every row
+  - ex_xq_prorate_end: blank in every row
+  - ex_xr_prorate_begin: blank in every row
+  - ex_xr_prorate_end: blank in every row
+  - ex_xs_qualify_yr: filled but always zero
+  - ex_xs_prorate_begin: blank in every row
+  - ex_xs_prorate_end: blank in every row
+  - ex_xt_qualify_yr: filled but always zero
+  - ex_xt_prorate_begin: blank in every row
+  - ex_xt_prorate_end: blank in every row
+  - ex_xu_prorate_begin: blank in every row
+  - ex_xu_prorate_end: blank in every row
+  - ex_xv_prorate_begin: only 27 rows filled (0.0%)
+  - ex_xv_prorate_end: only 1 rows filled (0.0%)
+  - ex_xa_qualify_yr: filled but always zero
+  - ex_xa_prorate_begin: blank in every row
+  - ex_xa_prorate_end: blank in every row
+  - lve_qualify_yr: filled but always zero
+  - ppv_qualify_yr: filled but always zero
+  - ppv_prorate_begin: blank in every row
+  - ppv_prorate_end: blank in every row
+  - dvch_qualify_yr: filled but always zero
+  - dvch_prorate_begin: blank in every row
+  - dvch_prorate_end: blank in every row
+  - dvchs_qualify_yr: filled but always zero
+  - dvchs_prorate_begin: blank in every row
+  - dvchs_prorate_end: blank in every row
+  - masss_prorate_begin: blank in every row
+  - masss_prorate_end: blank in every row
+  - pp_late_interstate_allocation_val: filled but always zero
+  - pp_late_interstate_allocation_val: a run of zeros is used as a placeholder (['000000000000000', 59620])
+  - appraised_val_reflecting_productivity_loss: filled but always zero
+  - appraised_val_reflecting_productivity_loss: a run of zeros is used as a placeholder (['000000000000000', 59620])
+  - assessed_val_reflecting_productivity_loss: filled but always zero
+  - assessed_val_reflecting_productivity_loss: a run of zeros is used as a placeholder (['000000000000000', 59620])
+  - frss_prorate_begin: blank in every row
+  - frss_prorate_end: blank in every row
+  - abmno_qualify_yr: blank in every row
+  - abmno_prorate_begin: blank in every row
+  - abmno_prorate_end: blank in every row
+  - filler_8743: blank in every row
+  - filler_8768: blank in every row
+  - filler_8793: blank in every row
+  - filler_8818: blank in every row
+  - filler_8843: blank in every row
+  - filler_8868: blank in every row
+  - filler_8893: blank in every row
+  - filler_8918: blank in every row
+  - dstr_qualify_yr: blank in every row
+  - dstr_prorate_begin: blank in every row
+  - dstr_prorate_end: blank in every row
+  - late_correction_val: filled but always zero
+  - late_correction_val: a run of zeros is used as a placeholder (['000000000000000', 59620])
+  - dstrs_qualify_yr: blank in every row
+  - dstrs_prorate_begin: blank in every row
+  - dstrs_prorate_end: blank in every row
+  - nhs_cap_loss: a run of zeros is used as a placeholder (['000000000000000', 57291])
+  - ccf_qualify_yr: blank in every row
+  - ccf_prorate_begin: blank in every row
+  - ccf_prorate_end: blank in every row
+  - med_qualify_yr: blank in every row
+  - med_prorate_begin: blank in every row
+  - med_prorate_end: blank in every row
+  - jeti_qualify_yr: blank in every row
+  - jeti_prorate_begin: blank in every row
+  - jeti_prorate_end: blank in every row
+== p26a-entinfo (249,285 rows, 186 cols)
+  - sup_num: filled but always zero
+  - sup_num: a run of zeros is used as a placeholder (['000000000000', 249285])
+  - entity_xref_id: blank in every row
+  - filler_134: blank in every row
+  - taxable_val: a run of zeros is used as a placeholder (['000000000000000', 20413])
+  - ab_amt: filled but always zero
+  - ab_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - en_amt: filled but always zero
+  - en_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - fr_amt: filled but always zero
+  - fr_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - ht_amt: filled but always zero
+  - ht_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - pro_amt: filled but always zero
+  - pro_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - pc_amt: a run of zeros is used as a placeholder (['000000000000000', 249253])
+  - so_amt: a run of zeros is used as a placeholder (['000000000000000', 249249])
+  - ex366_amt: a run of zeros is used as a placeholder (['000000000000000', 247159])
+  - hs_amt: a run of zeros is used as a placeholder (['000000000000000', 215523])
+  - ov65_amt: a run of zeros is used as a placeholder (['000000000000000', 220838])
+  - dp_amt: a run of zeros is used as a placeholder (['000000000000000', 248628])
+  - dv_amt: a run of zeros is used as a placeholder (['000000000000000', 245196])
+  - ex_amt: a run of zeros is used as a placeholder (['000000000000000', 249251])
+  - ch_amt: filled but always zero
+  - ch_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - hs_cap: a run of zeros is used as a placeholder (['000000000000000', 222646])
+  - ag_late_loss: filled but always zero
+  - ag_late_loss: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - freeport_late_loss: filled but always zero
+  - freeport_late_loss: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - hs_state_amt: a run of zeros is used as a placeholder (['000000000000000', 217224])
+  - hs_local_amt: a run of zeros is used as a placeholder (['000000000000000', 247584])
+  - land_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 60010])
+  - land_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 207810])
+  - imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 57534])
+  - imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 238117])
+  - ag_use_val: a run of zeros is used as a placeholder (['000000000000000', 244768])
+  - ag_market_val: a run of zeros is used as a placeholder (['000000000000000', 244768])
+  - tim_use_val: filled but always zero
+  - tim_use_val: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - tim_market_val: filled but always zero
+  - tim_market_val: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - freeze_ceiling: a run of zeros is used as a placeholder (['000000000000000', 224815])
+  - freeze_transfer_date: only 33 rows filled (0.0%)
+  - freeze_previous_tax: a run of zeros is used as a placeholder (['000000000000000', 249264])
+  - freeze_previous_tax_unfrozen: a run of zeros is used as a placeholder (['000000000000000', 249255])
+  - lve_amt: filled but always zero
+  - lve_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - eco_amt: filled but always zero
+  - eco_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - ag_use_val_ne: a run of zeros is used as a placeholder (['000000000000000', 244768])
+  - ag_use_val_ex: filled but always zero
+  - ag_use_val_ex: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - ag_market_ne: a run of zeros is used as a placeholder (['000000000000000', 244768])
+  - ag_market_ex: filled but always zero
+  - ag_market_ex: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - timber_use_ne: filled but always zero
+  - timber_use_ne: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - timber_use_ex: filled but always zero
+  - timber_use_ex: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - timber_market_ne: filled but always zero
+  - timber_market_ne: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - timber_market_ex: filled but always zero
+  - timber_market_ex: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - new_val_hs: a run of zeros is used as a placeholder (['000000000000000', 237663])
+  - new_val_nhs: a run of zeros is used as a placeholder (['000000000000000', 248603])
+  - new_val_p: filled but always zero
+  - new_val_p: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - new_val_taxable: a run of zeros is used as a placeholder (['000000000000000', 237062])
+  - dataset_id: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - chodo_amt: filled but always zero
+  - chodo_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - ent_pct_land_hs: a run of zeros is used as a placeholder (['001000000000000', 235368])
+  - ent_pct_land_nonhs: a run of zeros is used as a placeholder (['001000000000000', 235381])
+  - ent_pct_imprv_hs: a run of zeros is used as a placeholder (['001000000000000', 235369])
+  - ent_pct_imprv_nonhs: a run of zeros is used as a placeholder (['001000000000000', 235362])
+  - ent_pct_ag_use: a run of zeros is used as a placeholder (['001000000000000', 235368])
+  - ent_pct_ag_mkt: a run of zeros is used as a placeholder (['001000000000000', 235368])
+  - ent_pct_tim_use: filled but always zero
+  - ent_pct_tim_use: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - ent_pct_tim_mkt: filled but always zero
+  - ent_pct_tim_mkt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - ent_pct_pers: a run of zeros is used as a placeholder (['000000000000000', 235837])
+  - ent_pct_min: filled but always zero
+  - ent_pct_min: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - ent_pct_auto: filled but always zero
+  - ent_pct_auto: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - lih_amt: a run of zeros is used as a placeholder (['000000000000000', 249281])
+  - git_amt: filled but always zero
+  - git_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - dvhs_amt: a run of zeros is used as a placeholder (['000000000000000', 243842])
+  - tax_increment_imprv_val: a run of zeros is used as a placeholder (['000000000000000', 249273])
+  - tax_increment_land_val: a run of zeros is used as a placeholder (['000000000000000', 249183])
+  - weed_taxable_acres: filled but always zero
+  - weed_taxable_acres: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - hs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ov65_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ov65s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - dp_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - dps_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - dv1_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151907])
+  - dv1s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - dv2_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - dv2s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - dv3_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151905])
+  - dv3s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - dv4_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151888])
+  - dv4s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - dvhs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ex_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ab_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - en_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - fr_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ht_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - pro_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - pc_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - so_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ex366_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ch_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - eco_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - chodo_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - lih_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - git_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - tax_increment_zone_cd: only 991 rows filled (0.4%)
+  - tax_increment_zone_desc: only 991 rows filled (0.4%)
+  - omitted_imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 249281])
+  - omitted_imprv_non_hstd_val: filled but always zero
+  - omitted_imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - clt_amt: filled but always zero
+  - clt_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - clt_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - dvhss_amt: a run of zeros is used as a placeholder (['000000000000000', 249212])
+  - dvhss_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - homestead_group_exemption_factor: a run of zeros is used as a placeholder (['001000000000000', 151410])
+  - ex_xd_amt: filled but always zero
+  - ex_xd_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - ex_xd_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ex_xf_amt: filled but always zero
+  - ex_xf_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - ex_xf_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ex_xg_amt: a run of zeros is used as a placeholder (['000000000000000', 249277])
+  - ex_xg_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ex_xh_amt: filled but always zero
+  - ex_xh_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - ex_xh_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ex_xi_amt: a run of zeros is used as a placeholder (['000000000000000', 249281])
+  - ex_xi_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ex_xj_amt: a run of zeros is used as a placeholder (['000000000000000', 249278])
+  - ex_xj_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ex_xl_amt: a run of zeros is used as a placeholder (['000000000000000', 249177])
+  - ex_xl_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ex_xm_amt: filled but always zero
+  - ex_xm_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - ex_xm_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ex_xn_amt: a run of zeros is used as a placeholder (['000000000000000', 249256])
+  - ex_xn_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ex_xo_amt: filled but always zero
+  - ex_xo_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - ex_xo_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ex_xp_amt: filled but always zero
+  - ex_xp_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - ex_xp_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ex_xq_amt: filled but always zero
+  - ex_xq_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - ex_xq_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ex_xr_amt: a run of zeros is used as a placeholder (['000000000000000', 249196])
+  - ex_xr_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ex_xs_amt: filled but always zero
+  - ex_xs_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - ex_xs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ex_xt_amt: filled but always zero
+  - ex_xt_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - ex_xt_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ex_xu_amt: a run of zeros is used as a placeholder (['000000000000000', 249281])
+  - ex_xu_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ex_xv_amt: a run of zeros is used as a placeholder (['000000000000000', 246263])
+  - ex_xv_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ex_xa_amt: filled but always zero
+  - ex_xa_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - ex_xa_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - lve_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - ppv_amt: filled but always zero
+  - ppv_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - ppv_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - dvch_amt: filled but always zero
+  - dvch_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - dvch_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - dvchs_amt: filled but always zero
+  - dvchs_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - dvchs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - masss_amt: a run of zeros is used as a placeholder (['000000000000000', 249268])
+  - masss_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - pp_late_interstate_allocation_val: filled but always zero
+  - pp_late_interstate_allocation_val: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - frss_amt: a run of zeros is used as a placeholder (['000000000000000', 249274])
+  - frss_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - abmno_amt: filled but always zero
+  - abmno_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - abmno_allocation_factor: filled but always zero
+  - abmno_allocation_factor: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - dstr_amt: filled but always zero
+  - dstr_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - dstr_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - late_correction_val: filled but always zero
+  - late_correction_val: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - dstrs_amt: filled but always zero
+  - dstrs_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - dstrs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - err_exemption_removal_increase: filled but always zero
+  - err_exemption_removal_increase: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - mcr_freeze_ceiling_reduction_amount: filled but always zero
+  - mcr_freeze_ceiling_reduction_amount: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - nhs_cap_loss: a run of zeros is used as a placeholder (['000000000000000', 240358])
+  - ccf_amt: filled but always zero
+  - ccf_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - ccf_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - med_amt: filled but always zero
+  - med_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - med_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+  - jeti_amt: filled but always zero
+  - jeti_amt: a run of zeros is used as a placeholder (['000000000000000', 249285])
+  - jeti_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 151909])
+== p26a-enttot (63 rows, 153 cols)
+  - land_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 9])
+  - land_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 5])
+  - imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 9])
+  - imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 25])
+  - ag_use_val: a run of zeros is used as a placeholder (['000000000000000', 53])
+  - tim_use_val: filled but always zero
+  - tim_use_val: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ag_market_val: a run of zeros is used as a placeholder (['000000000000000', 53])
+  - tim_market_val: filled but always zero
+  - tim_market_val: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - taxable_val: a run of zeros is used as a placeholder (['000000000000000', 4])
+  - mineral_val: filled but always zero
+  - mineral_val: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - personal_val: a run of zeros is used as a placeholder (['000000000000000', 39])
+  - auto_val: filled but always zero
+  - auto_val: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - real_mobile_val: a run of zeros is used as a placeholder (['000000000000000', 4])
+  - num_real_mobile: a run of zeros is used as a placeholder (['000000000000', 4])
+  - num_personal: a run of zeros is used as a placeholder (['000000000000', 37])
+  - num_mineral: filled but always zero
+  - num_mineral: a run of zeros is used as a placeholder (['000000000000', 63])
+  - num_auto: filled but always zero
+  - num_auto: a run of zeros is used as a placeholder (['000000000000', 63])
+  - hs_cap_count: a run of zeros is used as a placeholder (['000000000000', 44])
+  - hs_cap: a run of zeros is used as a placeholder (['000000000000000', 44])
+  - hs_count: a run of zeros is used as a placeholder (['000000000000', 60])
+  - hs_local_amount: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - hs_state_amount: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - ov65_count: a run of zeros is used as a placeholder (['000000000000', 49])
+  - ov65_amt: a run of zeros is used as a placeholder (['000000000000000', 49])
+  - dp_count: a run of zeros is used as a placeholder (['000000000000', 51])
+  - dp_amt: a run of zeros is used as a placeholder (['000000000000000', 51])
+  - dv_count: a run of zeros is used as a placeholder (['000000000000', 45])
+  - dv_amt: a run of zeros is used as a placeholder (['000000000000000', 45])
+  - ab_count: filled but always zero
+  - ab_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ab_amt: filled but always zero
+  - ab_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - fr_count: filled but always zero
+  - fr_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - fr_amt: filled but always zero
+  - fr_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - pc_count: a run of zeros is used as a placeholder (['000000000000', 55])
+  - pc_amt: a run of zeros is used as a placeholder (['000000000000000', 55])
+  - ex366_count: a run of zeros is used as a placeholder (['000000000000', 45])
+  - ex366_amt: a run of zeros is used as a placeholder (['000000000000000', 45])
+  - ht_count: filled but always zero
+  - ht_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ht_amt: filled but always zero
+  - ht_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - so_count: a run of zeros is used as a placeholder (['000000000000', 50])
+  - so_amt: a run of zeros is used as a placeholder (['000000000000000', 50])
+  - ex_count: a run of zeros is used as a placeholder (['000000000000', 55])
+  - ex_amt: a run of zeros is used as a placeholder (['000000000000000', 55])
+  - ch_count: filled but always zero
+  - ch_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ch_amt: filled but always zero
+  - ch_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ag_late_count: filled but always zero
+  - ag_late_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ag_late_loss: filled but always zero
+  - ag_late_loss: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - freeport_late_count: filled but always zero
+  - freeport_late_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - freeport_late_loss: filled but always zero
+  - freeport_late_loss: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - lve_count: filled but always zero
+  - lve_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - lve_amt: filled but always zero
+  - lve_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - sup_num: filled but always zero
+  - sup_num: a run of zeros is used as a placeholder (['000000000000', 63])
+  - eco_count: filled but always zero
+  - eco_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - eco_amt: filled but always zero
+  - eco_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ag_use_val_ne: a run of zeros is used as a placeholder (['000000000000000', 53])
+  - ag_use_val_ex: filled but always zero
+  - ag_use_val_ex: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ag_market_ne: a run of zeros is used as a placeholder (['000000000000000', 53])
+  - ag_market_ex: filled but always zero
+  - ag_market_ex: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - timber_use_ne: filled but always zero
+  - timber_use_ne: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - timber_use_ex: filled but always zero
+  - timber_use_ex: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - timber_market_ne: filled but always zero
+  - timber_market_ne: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - timber_market_ex: filled but always zero
+  - timber_market_ex: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - en_count: filled but always zero
+  - en_count: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - en_amt: filled but always zero
+  - en_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - dataset_id: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - chodo_count: filled but always zero
+  - chodo_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - chodo_amt: filled but always zero
+  - chodo_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - lih_count: a run of zeros is used as a placeholder (['000000000000', 59])
+  - lih_amt: a run of zeros is used as a placeholder (['000000000000000', 59])
+  - git_count: filled but always zero
+  - git_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - git_amt: filled but always zero
+  - git_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - dvhs_count: a run of zeros is used as a placeholder (['000000000000', 45])
+  - dvhs_amt: a run of zeros is used as a placeholder (['000000000000000', 45])
+  - tax_increment_imprv_val: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - tax_increment_land_val: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - weed_taxable_acres: filled but always zero
+  - weed_taxable_acres: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - omitted_imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 59])
+  - omitted_imprv_non_hstd_val: filled but always zero
+  - omitted_imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - clt_count: filled but always zero
+  - clt_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - clt_amt: filled but always zero
+  - clt_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - dvhss_count: a run of zeros is used as a placeholder (['000000000000', 51])
+  - dvhss_amt: a run of zeros is used as a placeholder (['000000000000000', 51])
+  - ex_xd_count: filled but always zero
+  - ex_xd_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xd_amt: filled but always zero
+  - ex_xd_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ex_xf_count: filled but always zero
+  - ex_xf_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xf_amt: filled but always zero
+  - ex_xf_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ex_xg_count: a run of zeros is used as a placeholder (['000000000000', 59])
+  - ex_xg_amt: a run of zeros is used as a placeholder (['000000000000000', 59])
+  - ex_xh_count: filled but always zero
+  - ex_xh_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xh_amt: filled but always zero
+  - ex_xh_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ex_xi_count: a run of zeros is used as a placeholder (['000000000000', 59])
+  - ex_xi_amt: a run of zeros is used as a placeholder (['000000000000000', 59])
+  - ex_xj_count: a run of zeros is used as a placeholder (['000000000000', 59])
+  - ex_xj_amt: a run of zeros is used as a placeholder (['000000000000000', 59])
+  - ex_xl_count: a run of zeros is used as a placeholder (['000000000000', 57])
+  - ex_xl_amt: a run of zeros is used as a placeholder (['000000000000000', 57])
+  - ex_xm_count: filled but always zero
+  - ex_xm_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xm_amt: filled but always zero
+  - ex_xm_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ex_xn_count: a run of zeros is used as a placeholder (['000000000000', 52])
+  - ex_xn_amt: a run of zeros is used as a placeholder (['000000000000000', 52])
+  - ex_xo_count: filled but always zero
+  - ex_xo_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xo_amt: filled but always zero
+  - ex_xo_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ex_xp_count: filled but always zero
+  - ex_xp_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xp_amt: filled but always zero
+  - ex_xp_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ex_xq_count: filled but always zero
+  - ex_xq_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xq_amt: filled but always zero
+  - ex_xq_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ex_xr_count: a run of zeros is used as a placeholder (['000000000000', 55])
+  - ex_xr_amt: a run of zeros is used as a placeholder (['000000000000000', 55])
+  - ex_xs_count: filled but always zero
+  - ex_xs_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xs_amt: filled but always zero
+  - ex_xs_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ex_xt_count: filled but always zero
+  - ex_xt_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xt_amt: filled but always zero
+  - ex_xt_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ex_xu_count: a run of zeros is used as a placeholder (['000000000000', 59])
+  - ex_xu_amt: a run of zeros is used as a placeholder (['000000000000000', 59])
+  - ex_xv_count: a run of zeros is used as a placeholder (['000000000000', 44])
+  - ex_xv_amt: a run of zeros is used as a placeholder (['000000000000000', 44])
+  - ex_xa_count: filled but always zero
+  - ex_xa_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xa_amt: filled but always zero
+  - ex_xa_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ppv_count: filled but always zero
+  - ppv_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ppv_amt: filled but always zero
+  - ppv_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - dvch_count: filled but always zero
+  - dvch_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - dvch_amt: filled but always zero
+  - dvch_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - dvchs_count: filled but always zero
+  - dvchs_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - dvchs_amt: filled but always zero
+  - dvchs_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - masss_count: a run of zeros is used as a placeholder (['000000000000', 54])
+  - masss_amt: a run of zeros is used as a placeholder (['000000000000000', 54])
+  - pp_late_interstate_allocation_count: filled but always zero
+  - pp_late_interstate_allocation_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - pp_late_interstate_allocation_val: filled but always zero
+  - pp_late_interstate_allocation_val: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - frss_count: a run of zeros is used as a placeholder (['000000000000', 58])
+  - frss_amt: a run of zeros is used as a placeholder (['000000000000000', 58])
+  - abmno_count: filled but always zero
+  - abmno_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - abmno_amt: filled but always zero
+  - abmno_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - dstr_count: filled but always zero
+  - dstr_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - dstr_amt: filled but always zero
+  - dstr_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - late_correction_count: filled but always zero
+  - late_correction_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - late_correction_val: filled but always zero
+  - late_correction_val: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - dstrs_count: filled but always zero
+  - dstrs_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - dstrs_amt: filled but always zero
+  - dstrs_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - err_exemption_removal_increase_count: filled but always zero
+  - err_exemption_removal_increase_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - err_exemption_removal_increase: filled but always zero
+  - err_exemption_removal_increase: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - nhs_cap_loss_count: a run of zeros is used as a placeholder (['000000000000', 15])
+  - nhs_cap_loss: a run of zeros is used as a placeholder (['000000000000000', 39])
+  - ccf_count: filled but always zero
+  - ccf_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ccf_amt: filled but always zero
+  - ccf_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - med_count: filled but always zero
+  - med_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - med_amt: filled but always zero
+  - med_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - jeti_count: filled but always zero
+  - jeti_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - jeti_amt: filled but always zero
+  - jeti_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+== p26a-entity (105 rows, 2 cols)
+== p26a-imprinfo (72,479 rows, 11 cols)
+  - omitted_imprv_val: filled but always zero
+  - omitted_imprv_val: a run of zeros is used as a placeholder (['000000000000000', 72479])
+== p26a-imprdet (250,959 rows, 12 cols)
+  - sketch_cmds: blank in every row
+== p26a-imprattr (330,125 rows, 7 cols)
+== p26a-sketch (198,514 rows, 7 cols)
+== p26a-mobile (1,504 rows, 12 cols)
+  - mbl_hm_sn_3: only 7 rows filled (0.5%)
+  - mbl_hm_hud_num_3: only 7 rows filled (0.5%)
+== p26a-land (56,667 rows, 19 cols)
+  - size_acres: a run of zeros is used as a placeholder (['00000000000000', 41698])
+  - effective_front: a run of zeros is used as a placeholder (['00000000000000', 25802])
+  - effective_depth: a run of zeros is used as a placeholder (['00000000000000', 25802])
+  - ag_ls_method: only 1,626 rows filled (2.9%)
+  - ag_ls_class: only 1,490 rows filled (2.6%)
+== p26a-sb12 (30,225 rows, 19 cols)
+  - col_13: negative values (min -11,994.66)
+== p26a-defer (109 rows, 8 cols)
+  - deferral_end_date: blank in every row
+  - last_change_date: blank in every row
+== p26a-arb (22 rows, 6 cols)
+  - ref_id1: blank in every row
+== p26a-lawsuit (396 rows, 5 cols)
+  - ref_id1: blank in every row
+== p26a-arblaw (0 rows, 5 cols)
+  - prop_id: blank in every row
+  - prop_val_yr: only 0 rows filled (0.0%)
+  - prop_val_yr: filled but always zero
+  - geo_id: blank in every row
+  - ref_id1: blank in every row
+  - ref_id2: blank in every row
+== p26a-agent (3,104 rows, 11 cols)
+  - agent_addr_line2: only 1 rows filled (0.0%)
+  - agent_addr_line3: only 1 rows filled (0.0%)
+  - agent_zip_rt: blank in every row
+== p26a-abs (2,056 rows, 2 cols)
+== p26a-state (288 rows, 5 cols)
+== p26a-country (246 rows, 2 cols)
+== p26a-header (1 rows, 12 cols)
+  - supplement_number: filled but always zero
+  - value_option: blank in every row
+  - office_use_only: blank in every row
+== p26b-info (59,659 rows, 449 cols)
+  - sup_num: filled but always zero
+  - sup_num: a run of zeros is used as a placeholder (['000000000000', 59659])
+  - sup_action: blank in every row
+  - sup_cd: blank in every row
+  - sup_desc: blank in every row
+  - udi_group: a run of zeros is used as a placeholder (['000000000000', 59258])
+  - filler_692: blank in every row
+  - py_addr_line3: only 4 rows filled (0.0%)
+  - py_addr_zip_rt: blank in every row
+  - filler_992: blank in every row
+  - filler_1013: blank in every row
+  - legal_desc2: blank in every row
+  - legal_acreage: a run of zeros is used as a placeholder (['0000000000000000', 41934])
+  - land_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 14638])
+  - land_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 49739])
+  - imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 13998])
+  - imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 56742])
+  - ag_use_val: a run of zeros is used as a placeholder (['000000000000000', 58367])
+  - ag_market: a run of zeros is used as a placeholder (['000000000000000', 58367])
+  - timber_use: filled but always zero
+  - timber_use: a run of zeros is used as a placeholder (['000000000000000', 59659])
+  - timber_market: filled but always zero
+  - timber_market: a run of zeros is used as a placeholder (['000000000000000', 59659])
+  - ten_percent_cap: a run of zeros is used as a placeholder (['000000000000000', 52821])
+  - filler_1961: blank in every row
+  - filler_1982: blank in every row
+  - mortgage_co_id: a run of zeros is used as a placeholder (['000000000000', 59659])
+  - mortage_co_name: blank in every row
+  - mortgage_acct_id: blank in every row
+  - jan1_addr_line2: only 3 rows filled (0.0%)
+  - jan1_addr_line3: only 1 rows filled (0.0%)
+  - jan1_addr_zip_rt: blank in every row
+  - filler_2571: blank in every row
+  - ov65_prorate_begin: only 747 rows filled (1.3%)
+  - ov65_prorate_end: only 9 rows filled (0.0%)
+  - ex_prorate_begin: blank in every row
+  - ex_prorate_end: blank in every row
+  - mineral_state_cd: blank in every row
+  - land_acres: a run of zeros is used as a placeholder (['00000000000000000000', 4300])
+  - entity_agent_id: a run of zeros is used as a placeholder (['000000000000', 57172])
+  - entity_agent_name: only 2,487 rows filled (4.2%)
+  - entity_agent_addr_line1: only 2,487 rows filled (4.2%)
+  - entity_agent_addr_line2: blank in every row
+  - entity_agent_addr_line3: blank in every row
+  - entity_agent_city: only 2,487 rows filled (4.2%)
+  - entity_agent_state: only 2,486 rows filled (4.2%)
+  - entity_agent_country: only 2,089 rows filled (3.5%)
+  - entity_agent_zip: only 2,487 rows filled (4.2%)
+  - entity_agent_cass: only 794 rows filled (1.3%)
+  - entity_agent_rt: blank in every row
+  - filler_3170: blank in every row
+  - ca_agent_id: a run of zeros is used as a placeholder (['000000000000', 47260])
+  - ca_agent_addr_line2: blank in every row
+  - ca_agent_addr_line3: blank in every row
+  - ca_agent_zip_rt: blank in every row
+  - filler_3582: blank in every row
+  - arb_agent_id: a run of zeros is used as a placeholder (['000000000000', 45905])
+  - arb_agent_addr_line2: blank in every row
+  - arb_agent_addr_line3: blank in every row
+  - arb_agent_zip_rt: blank in every row
+  - mineral_type_of_int: blank in every row
+  - mineral_int_pct: filled but always zero
+  - mineral_int_pct: a run of zeros is used as a placeholder (['000000000000000', 59659])
+  - productivity_use_code: blank in every row
+  - timber_78_market: filled but always zero
+  - timber_78_market: a run of zeros is used as a placeholder (['000000000000', 59659])
+  - ag_late_loss: a run of zeros is used as a placeholder (['000000000000', 59653])
+  - late_freeport_penalty: filled but always zero
+  - late_freeport_penalty: a run of zeros is used as a placeholder (['000000000000', 59659])
+  - filler_4127: blank in every row
+  - filler_4129: blank in every row
+  - filler_4134: blank in every row
+  - filler_4176: blank in every row
+  - filler_4228: blank in every row
+  - filler_4248: blank in every row
+  - filler_4268: blank in every row
+  - filler_4288: blank in every row
+  - filler_4289: blank in every row
+  - filler_4290: blank in every row
+  - filler_4360: only 40 rows filled (0.1%)
+  - filler_4385: only 4 rows filled (0.0%)
+  - situs_unit: only 1,048 rows filled (1.8%)
+  - appr_addr_line3: only 7 rows filled (0.0%)
+  - appr_addr_zip_cass_route: blank in every row
+  - appr_confidential_name: blank in every row
+  - py_confidential_name: blank in every row
+  - jan1_confidential_name: blank in every row
+  - filler_5071: blank in every row
+  - rendition_date: only 2,058 rows filled (3.4%)
+  - rendition_penalty: a run of zeros is used as a placeholder (['000000000000000', 59516])
+  - rendition_penalty_date_paid: blank in every row
+  - rendition_fraud_penalty: filled but always zero
+  - rendition_fraud_penalty: a run of zeros is used as a placeholder (['000000000000000', 59659])
+  - rendition_fraud_penalty_date_paid: blank in every row
+  - filler_5182: blank in every row
+  - dataset_id: a run of zeros is used as a placeholder (['000000000000000', 59659])
+  - exemption_percentage: a run of zeros is used as a placeholder (['000000000000000', 47708])
+  - filler_5436: blank in every row
+  - ex_qualify_yr: filled but always zero
+  - ab_qualify_yr: filled but always zero
+  - en_qualify_yr: filled but always zero
+  - ht_qualify_yr: filled but always zero
+  - pro_qualify_yr: filled but always zero
+  - pc_qualify_yr: filled but always zero
+  - ex366_qualify_yr: filled but always zero
+  - ch_qualify_yr: filled but always zero
+  - eco_qualify_yr: filled but always zero
+  - chodo_qualify_yr: filled but always zero
+  - git_qualify_yr: filled but always zero
+  - mortgage_addr_line1: blank in every row
+  - mortgage_addr_line2: blank in every row
+  - mortgage_addr_line3: blank in every row
+  - mortgage_addr_city: blank in every row
+  - mortgage_addr_state: blank in every row
+  - mortgage_addr_country: blank in every row
+  - mortgage_addr_zip: blank in every row
+  - mortgage_addr_zip_cass: blank in every row
+  - mortgage_addr_zip_rt: blank in every row
+  - sic_code: blank in every row
+  - hs_prorate_end: only 22 rows filled (0.0%)
+  - ov65s_prorate_begin: only 6 rows filled (0.0%)
+  - ov65s_prorate_end: blank in every row
+  - dp_prorate_begin: only 9 rows filled (0.0%)
+  - dp_prorate_end: only 2 rows filled (0.0%)
+  - dv1_prorate_begin: blank in every row
+  - dv1_prorate_end: blank in every row
+  - dv1s_prorate_begin: blank in every row
+  - dv1s_prorate_end: blank in every row
+  - dv2_prorate_begin: blank in every row
+  - dv2_prorate_end: blank in every row
+  - dv2s_prorate_begin: blank in every row
+  - dv2s_prorate_end: blank in every row
+  - dv3_prorate_begin: blank in every row
+  - dv3_prorate_end: blank in every row
+  - dv3s_prorate_begin: blank in every row
+  - dv3s_prorate_end: blank in every row
+  - dv4_prorate_begin: blank in every row
+  - dv4_prorate_end: blank in every row
+  - dv4s_prorate_begin: blank in every row
+  - dv4s_prorate_end: blank in every row
+  - lve_prorate_begin: blank in every row
+  - lve_prorate_end: blank in every row
+  - ab_prorate_begin: blank in every row
+  - ab_prorate_end: blank in every row
+  - en_prorate_begin: blank in every row
+  - en_prorate_end: blank in every row
+  - fr_prorate_begin: blank in every row
+  - fr_prorate_end: blank in every row
+  - ht_prorate_begin: blank in every row
+  - ht_prorate_end: blank in every row
+  - pro_prorate_begin: blank in every row
+  - pro_prorate_end: blank in every row
+  - pc_prorate_begin: blank in every row
+  - pc_prorate_end: blank in every row
+  - so_prorate_begin: blank in every row
+  - so_prorate_end: blank in every row
+  - ex366_prorate_begin: blank in every row
+  - ex366_prorate_end: blank in every row
+  - ch_prorate_begin: blank in every row
+  - ch_prorate_end: blank in every row
+  - dps_prorate_begin: blank in every row
+  - dps_prorate_end: blank in every row
+  - eco_prorate_begin: blank in every row
+  - eco_prorate_end: blank in every row
+  - chodo_prorate_begin: blank in every row
+  - chodo_prorate_end: blank in every row
+  - lih_prorate_begin: blank in every row
+  - lih_prorate_end: blank in every row
+  - git_prorate_begin: blank in every row
+  - git_prorate_end: blank in every row
+  - clt_prorate_begin: blank in every row
+  - clt_prorate_end: blank in every row
+  - clt_qualify_yr: filled but always zero
+  - dvhss_prorate_begin: only 4 rows filled (0.0%)
+  - dvhss_prorate_end: blank in every row
+  - omitted_imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 59658])
+  - omitted_imprv_non_hstd_val: filled but always zero
+  - omitted_imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 59659])
+  - dvhs_prorate_begin: only 440 rows filled (0.7%)
+  - dvhs_prorate_end: only 8 rows filled (0.0%)
+  - ex_xd_qualify_yr: filled but always zero
+  - ex_xd_prorate_begin: blank in every row
+  - ex_xd_prorate_end: blank in every row
+  - ex_xf_qualify_yr: filled but always zero
+  - ex_xf_prorate_begin: blank in every row
+  - ex_xf_prorate_end: blank in every row
+  - ex_xg_prorate_begin: blank in every row
+  - ex_xg_prorate_end: blank in every row
+  - ex_xh_qualify_yr: filled but always zero
+  - ex_xh_prorate_begin: blank in every row
+  - ex_xh_prorate_end: blank in every row
+  - ex_xi_prorate_begin: blank in every row
+  - ex_xi_prorate_end: blank in every row
+  - ex_xj_prorate_begin: blank in every row
+  - ex_xj_prorate_end: blank in every row
+  - ex_xl_prorate_begin: only 2 rows filled (0.0%)
+  - ex_xl_prorate_end: only 1 rows filled (0.0%)
+  - ex_xm_qualify_yr: filled but always zero
+  - ex_xm_prorate_begin: blank in every row
+  - ex_xm_prorate_end: blank in every row
+  - ex_xn_prorate_begin: blank in every row
+  - ex_xn_prorate_end: blank in every row
+  - ex_xo_qualify_yr: filled but always zero
+  - ex_xo_prorate_begin: blank in every row
+  - ex_xo_prorate_end: blank in every row
+  - ex_xp_qualify_yr: filled but always zero
+  - ex_xp_prorate_begin: blank in every row
+  - ex_xp_prorate_end: blank in every row
+  - ex_xq_qualify_yr: filled but always zero
+  - ex_xq_prorate_begin: blank in every row
+  - ex_xq_prorate_end: blank in every row
+  - ex_xr_prorate_begin: blank in every row
+  - ex_xr_prorate_end: blank in every row
+  - ex_xs_qualify_yr: filled but always zero
+  - ex_xs_prorate_begin: blank in every row
+  - ex_xs_prorate_end: blank in every row
+  - ex_xt_qualify_yr: filled but always zero
+  - ex_xt_prorate_begin: blank in every row
+  - ex_xt_prorate_end: blank in every row
+  - ex_xu_prorate_begin: blank in every row
+  - ex_xu_prorate_end: blank in every row
+  - ex_xv_prorate_begin: only 32 rows filled (0.1%)
+  - ex_xv_prorate_end: only 1 rows filled (0.0%)
+  - ex_xa_qualify_yr: filled but always zero
+  - ex_xa_prorate_begin: blank in every row
+  - ex_xa_prorate_end: blank in every row
+  - lve_qualify_yr: filled but always zero
+  - ppv_qualify_yr: filled but always zero
+  - ppv_prorate_begin: blank in every row
+  - ppv_prorate_end: blank in every row
+  - dvch_qualify_yr: filled but always zero
+  - dvch_prorate_begin: blank in every row
+  - dvch_prorate_end: blank in every row
+  - dvchs_qualify_yr: filled but always zero
+  - dvchs_prorate_begin: blank in every row
+  - dvchs_prorate_end: blank in every row
+  - masss_prorate_begin: blank in every row
+  - masss_prorate_end: blank in every row
+  - pp_late_interstate_allocation_val: filled but always zero
+  - pp_late_interstate_allocation_val: a run of zeros is used as a placeholder (['000000000000000', 59659])
+  - appraised_val_reflecting_productivity_loss: filled but always zero
+  - appraised_val_reflecting_productivity_loss: a run of zeros is used as a placeholder (['000000000000000', 59659])
+  - assessed_val_reflecting_productivity_loss: filled but always zero
+  - assessed_val_reflecting_productivity_loss: a run of zeros is used as a placeholder (['000000000000000', 59659])
+  - frss_prorate_begin: blank in every row
+  - frss_prorate_end: blank in every row
+  - abmno_qualify_yr: blank in every row
+  - abmno_prorate_begin: blank in every row
+  - abmno_prorate_end: blank in every row
+  - filler_8743: blank in every row
+  - filler_8768: blank in every row
+  - filler_8793: blank in every row
+  - filler_8818: blank in every row
+  - filler_8843: blank in every row
+  - filler_8868: blank in every row
+  - filler_8893: blank in every row
+  - filler_8918: blank in every row
+  - dstr_qualify_yr: blank in every row
+  - dstr_prorate_begin: blank in every row
+  - dstr_prorate_end: blank in every row
+  - late_correction_val: filled but always zero
+  - late_correction_val: a run of zeros is used as a placeholder (['000000000000000', 59659])
+  - dstrs_qualify_yr: blank in every row
+  - dstrs_prorate_begin: blank in every row
+  - dstrs_prorate_end: blank in every row
+  - nhs_cap_loss: a run of zeros is used as a placeholder (['000000000000000', 57445])
+  - ccf_qualify_yr: blank in every row
+  - ccf_prorate_begin: blank in every row
+  - ccf_prorate_end: blank in every row
+  - med_qualify_yr: blank in every row
+  - med_prorate_begin: blank in every row
+  - med_prorate_end: blank in every row
+  - jeti_qualify_yr: blank in every row
+  - jeti_prorate_begin: blank in every row
+  - jeti_prorate_end: blank in every row
+  - new vs p26a-info: ['unmapped_tail']
+  - rows 59,620 -> 59,659
+  - arb_agent_zip_cass: filled 11.2% -> 16.5%
+  - ex_xl_prorate_end: type Empty -> Date
+== p26b-entinfo (249,698 rows, 187 cols)
+  - sup_num: filled but always zero
+  - sup_num: a run of zeros is used as a placeholder (['000000000000', 249698])
+  - entity_xref_id: blank in every row
+  - filler_134: blank in every row
+  - taxable_val: a run of zeros is used as a placeholder (['000000000000000', 20509])
+  - ab_amt: filled but always zero
+  - ab_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - en_amt: filled but always zero
+  - en_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - fr_amt: a run of zeros is used as a placeholder (['000000000000000', 249604])
+  - ht_amt: filled but always zero
+  - ht_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - pro_amt: filled but always zero
+  - pro_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - pc_amt: a run of zeros is used as a placeholder (['000000000000000', 249666])
+  - so_amt: a run of zeros is used as a placeholder (['000000000000000', 249628])
+  - ex366_amt: a run of zeros is used as a placeholder (['000000000000000', 247650])
+  - hs_amt: a run of zeros is used as a placeholder (['000000000000000', 215071])
+  - ov65_amt: a run of zeros is used as a placeholder (['000000000000000', 220684])
+  - dp_amt: a run of zeros is used as a placeholder (['000000000000000', 249029])
+  - dv_amt: a run of zeros is used as a placeholder (['000000000000000', 245497])
+  - ex_amt: a run of zeros is used as a placeholder (['000000000000000', 249664])
+  - ch_amt: filled but always zero
+  - ch_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - hs_cap: a run of zeros is used as a placeholder (['000000000000000', 223679])
+  - ag_late_loss: a run of zeros is used as a placeholder (['000000000000000', 249679])
+  - freeport_late_loss: filled but always zero
+  - freeport_late_loss: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - hs_state_amt: a run of zeros is used as a placeholder (['000000000000000', 216790])
+  - hs_local_amt: a run of zeros is used as a placeholder (['000000000000000', 247979])
+  - land_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 60295])
+  - land_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 208167])
+  - imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 57883])
+  - imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 238589])
+  - ag_use_val: a run of zeros is used as a placeholder (['000000000000000', 245250])
+  - ag_market_val: a run of zeros is used as a placeholder (['000000000000000', 245250])
+  - tim_use_val: filled but always zero
+  - tim_use_val: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - tim_market_val: filled but always zero
+  - tim_market_val: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - freeze_ceiling: a run of zeros is used as a placeholder (['000000000000000', 225244])
+  - freeze_transfer_date: only 90 rows filled (0.0%)
+  - freeze_previous_tax: a run of zeros is used as a placeholder (['000000000000000', 249630])
+  - freeze_previous_tax_unfrozen: a run of zeros is used as a placeholder (['000000000000000', 249613])
+  - lve_amt: filled but always zero
+  - lve_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - eco_amt: filled but always zero
+  - eco_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - ag_use_val_ne: a run of zeros is used as a placeholder (['000000000000000', 245250])
+  - ag_use_val_ex: filled but always zero
+  - ag_use_val_ex: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - ag_market_ne: a run of zeros is used as a placeholder (['000000000000000', 245250])
+  - ag_market_ex: filled but always zero
+  - ag_market_ex: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - timber_use_ne: filled but always zero
+  - timber_use_ne: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - timber_use_ex: filled but always zero
+  - timber_use_ex: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - timber_market_ne: filled but always zero
+  - timber_market_ne: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - timber_market_ex: filled but always zero
+  - timber_market_ex: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - new_val_hs: a run of zeros is used as a placeholder (['000000000000000', 238035])
+  - new_val_nhs: a run of zeros is used as a placeholder (['000000000000000', 249001])
+  - new_val_p: filled but always zero
+  - new_val_p: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - new_val_taxable: a run of zeros is used as a placeholder (['000000000000000', 237430])
+  - dataset_id: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - chodo_amt: filled but always zero
+  - chodo_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - ent_pct_land_hs: a run of zeros is used as a placeholder (['001000000000000', 235509])
+  - ent_pct_land_nonhs: a run of zeros is used as a placeholder (['001000000000000', 235522])
+  - ent_pct_imprv_hs: a run of zeros is used as a placeholder (['001000000000000', 235510])
+  - ent_pct_imprv_nonhs: a run of zeros is used as a placeholder (['001000000000000', 235503])
+  - ent_pct_ag_use: a run of zeros is used as a placeholder (['001000000000000', 235502])
+  - ent_pct_ag_mkt: a run of zeros is used as a placeholder (['001000000000000', 235502])
+  - ent_pct_tim_use: filled but always zero
+  - ent_pct_tim_use: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - ent_pct_tim_mkt: filled but always zero
+  - ent_pct_tim_mkt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - ent_pct_pers: a run of zeros is used as a placeholder (['000000000000000', 235966])
+  - ent_pct_min: filled but always zero
+  - ent_pct_min: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - ent_pct_auto: filled but always zero
+  - ent_pct_auto: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - lih_amt: a run of zeros is used as a placeholder (['000000000000000', 249694])
+  - git_amt: filled but always zero
+  - git_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - dvhs_amt: a run of zeros is used as a placeholder (['000000000000000', 243954])
+  - tax_increment_imprv_val: a run of zeros is used as a placeholder (['000000000000000', 249686])
+  - tax_increment_land_val: a run of zeros is used as a placeholder (['000000000000000', 249596])
+  - weed_taxable_acres: filled but always zero
+  - weed_taxable_acres: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - hs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ov65_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ov65s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - dp_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - dps_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - dv1_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156113])
+  - dv1s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - dv2_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - dv2s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - dv3_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156111])
+  - dv3s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - dv4_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156094])
+  - dv4s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - dvhs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ex_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ab_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - en_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - fr_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ht_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - pro_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - pc_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - so_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ex366_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ch_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - eco_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - chodo_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - lih_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - git_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - tax_increment_zone_cd: only 991 rows filled (0.4%)
+  - tax_increment_zone_desc: only 991 rows filled (0.4%)
+  - omitted_imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 249694])
+  - omitted_imprv_non_hstd_val: filled but always zero
+  - omitted_imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - clt_amt: filled but always zero
+  - clt_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - clt_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - dvhss_amt: a run of zeros is used as a placeholder (['000000000000000', 249625])
+  - dvhss_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - homestead_group_exemption_factor: a run of zeros is used as a placeholder (['001000000000000', 155616])
+  - ex_xd_amt: filled but always zero
+  - ex_xd_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - ex_xd_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ex_xf_amt: filled but always zero
+  - ex_xf_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - ex_xf_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ex_xg_amt: a run of zeros is used as a placeholder (['000000000000000', 249690])
+  - ex_xg_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ex_xh_amt: filled but always zero
+  - ex_xh_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - ex_xh_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ex_xi_amt: a run of zeros is used as a placeholder (['000000000000000', 249694])
+  - ex_xi_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ex_xj_amt: a run of zeros is used as a placeholder (['000000000000000', 249691])
+  - ex_xj_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ex_xl_amt: a run of zeros is used as a placeholder (['000000000000000', 249570])
+  - ex_xl_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ex_xm_amt: filled but always zero
+  - ex_xm_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - ex_xm_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ex_xn_amt: a run of zeros is used as a placeholder (['000000000000000', 249670])
+  - ex_xn_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ex_xo_amt: filled but always zero
+  - ex_xo_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - ex_xo_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ex_xp_amt: filled but always zero
+  - ex_xp_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - ex_xp_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ex_xq_amt: filled but always zero
+  - ex_xq_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - ex_xq_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ex_xr_amt: a run of zeros is used as a placeholder (['000000000000000', 249609])
+  - ex_xr_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ex_xs_amt: filled but always zero
+  - ex_xs_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - ex_xs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ex_xt_amt: filled but always zero
+  - ex_xt_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - ex_xt_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ex_xu_amt: a run of zeros is used as a placeholder (['000000000000000', 249694])
+  - ex_xu_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ex_xv_amt: a run of zeros is used as a placeholder (['000000000000000', 246622])
+  - ex_xv_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ex_xa_amt: filled but always zero
+  - ex_xa_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - ex_xa_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - lve_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - ppv_amt: filled but always zero
+  - ppv_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - ppv_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - dvch_amt: filled but always zero
+  - dvch_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - dvch_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - dvchs_amt: filled but always zero
+  - dvchs_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - dvchs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - masss_amt: a run of zeros is used as a placeholder (['000000000000000', 249681])
+  - masss_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - pp_late_interstate_allocation_val: filled but always zero
+  - pp_late_interstate_allocation_val: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - frss_amt: a run of zeros is used as a placeholder (['000000000000000', 249687])
+  - frss_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - abmno_amt: filled but always zero
+  - abmno_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - abmno_allocation_factor: filled but always zero
+  - abmno_allocation_factor: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - dstr_amt: filled but always zero
+  - dstr_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - dstr_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - late_correction_val: filled but always zero
+  - late_correction_val: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - dstrs_amt: filled but always zero
+  - dstrs_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - dstrs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - err_exemption_removal_increase: filled but always zero
+  - err_exemption_removal_increase: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - mcr_freeze_ceiling_reduction_amount: filled but always zero
+  - mcr_freeze_ceiling_reduction_amount: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - nhs_cap_loss: a run of zeros is used as a placeholder (['000000000000000', 241235])
+  - ccf_amt: filled but always zero
+  - ccf_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - ccf_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - med_amt: filled but always zero
+  - med_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - med_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - jeti_amt: filled but always zero
+  - jeti_amt: a run of zeros is used as a placeholder (['000000000000000', 249698])
+  - jeti_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 156115])
+  - new vs p26a-entinfo: ['unmapped_tail']
+  - rows 249,285 -> 249,698
+== p26b-enttot (63 rows, 154 cols)
+  - land_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 9])
+  - land_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 5])
+  - imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 9])
+  - imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 25])
+  - ag_use_val: a run of zeros is used as a placeholder (['000000000000000', 53])
+  - tim_use_val: filled but always zero
+  - tim_use_val: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ag_market_val: a run of zeros is used as a placeholder (['000000000000000', 53])
+  - tim_market_val: filled but always zero
+  - tim_market_val: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - taxable_val: a run of zeros is used as a placeholder (['000000000000000', 4])
+  - mineral_val: filled but always zero
+  - mineral_val: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - personal_val: a run of zeros is used as a placeholder (['000000000000000', 42])
+  - auto_val: filled but always zero
+  - auto_val: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - real_mobile_val: a run of zeros is used as a placeholder (['000000000000000', 4])
+  - num_real_mobile: a run of zeros is used as a placeholder (['000000000000', 4])
+  - num_personal: a run of zeros is used as a placeholder (['000000000000', 40])
+  - num_mineral: filled but always zero
+  - num_mineral: a run of zeros is used as a placeholder (['000000000000', 63])
+  - num_auto: filled but always zero
+  - num_auto: a run of zeros is used as a placeholder (['000000000000', 63])
+  - hs_cap_count: a run of zeros is used as a placeholder (['000000000000', 44])
+  - hs_cap: a run of zeros is used as a placeholder (['000000000000000', 44])
+  - hs_count: a run of zeros is used as a placeholder (['000000000000', 60])
+  - hs_local_amount: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - hs_state_amount: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - ov65_count: a run of zeros is used as a placeholder (['000000000000', 49])
+  - ov65_amt: a run of zeros is used as a placeholder (['000000000000000', 49])
+  - dp_count: a run of zeros is used as a placeholder (['000000000000', 51])
+  - dp_amt: a run of zeros is used as a placeholder (['000000000000000', 51])
+  - dv_count: a run of zeros is used as a placeholder (['000000000000', 45])
+  - dv_amt: a run of zeros is used as a placeholder (['000000000000000', 45])
+  - ab_count: filled but always zero
+  - ab_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ab_amt: filled but always zero
+  - ab_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - fr_count: a run of zeros is used as a placeholder (['000000000000', 56])
+  - fr_amt: a run of zeros is used as a placeholder (['000000000000000', 56])
+  - pc_count: a run of zeros is used as a placeholder (['000000000000', 55])
+  - pc_amt: a run of zeros is used as a placeholder (['000000000000000', 55])
+  - ex366_count: a run of zeros is used as a placeholder (['000000000000', 46])
+  - ex366_amt: a run of zeros is used as a placeholder (['000000000000000', 46])
+  - ht_count: filled but always zero
+  - ht_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ht_amt: filled but always zero
+  - ht_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - so_count: a run of zeros is used as a placeholder (['000000000000', 46])
+  - so_amt: a run of zeros is used as a placeholder (['000000000000000', 46])
+  - ex_count: a run of zeros is used as a placeholder (['000000000000', 55])
+  - ex_amt: a run of zeros is used as a placeholder (['000000000000000', 55])
+  - ch_count: filled but always zero
+  - ch_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ch_amt: filled but always zero
+  - ch_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ag_late_count: a run of zeros is used as a placeholder (['000000000000', 58])
+  - ag_late_loss: a run of zeros is used as a placeholder (['000000000000000', 58])
+  - freeport_late_count: filled but always zero
+  - freeport_late_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - freeport_late_loss: filled but always zero
+  - freeport_late_loss: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - lve_count: filled but always zero
+  - lve_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - lve_amt: filled but always zero
+  - lve_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - sup_num: filled but always zero
+  - sup_num: a run of zeros is used as a placeholder (['000000000000', 63])
+  - eco_count: filled but always zero
+  - eco_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - eco_amt: filled but always zero
+  - eco_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ag_use_val_ne: a run of zeros is used as a placeholder (['000000000000000', 53])
+  - ag_use_val_ex: filled but always zero
+  - ag_use_val_ex: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ag_market_ne: a run of zeros is used as a placeholder (['000000000000000', 53])
+  - ag_market_ex: filled but always zero
+  - ag_market_ex: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - timber_use_ne: filled but always zero
+  - timber_use_ne: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - timber_use_ex: filled but always zero
+  - timber_use_ex: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - timber_market_ne: filled but always zero
+  - timber_market_ne: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - timber_market_ex: filled but always zero
+  - timber_market_ex: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - en_count: filled but always zero
+  - en_count: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - en_amt: filled but always zero
+  - en_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - dataset_id: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - chodo_count: filled but always zero
+  - chodo_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - chodo_amt: filled but always zero
+  - chodo_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - lih_count: a run of zeros is used as a placeholder (['000000000000', 59])
+  - lih_amt: a run of zeros is used as a placeholder (['000000000000000', 59])
+  - git_count: filled but always zero
+  - git_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - git_amt: filled but always zero
+  - git_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - dvhs_count: a run of zeros is used as a placeholder (['000000000000', 45])
+  - dvhs_amt: a run of zeros is used as a placeholder (['000000000000000', 45])
+  - tax_increment_imprv_val: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - tax_increment_land_val: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - weed_taxable_acres: filled but always zero
+  - weed_taxable_acres: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - omitted_imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 59])
+  - omitted_imprv_non_hstd_val: filled but always zero
+  - omitted_imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - clt_count: filled but always zero
+  - clt_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - clt_amt: filled but always zero
+  - clt_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - dvhss_count: a run of zeros is used as a placeholder (['000000000000', 51])
+  - dvhss_amt: a run of zeros is used as a placeholder (['000000000000000', 51])
+  - ex_xd_count: filled but always zero
+  - ex_xd_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xd_amt: filled but always zero
+  - ex_xd_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ex_xf_count: filled but always zero
+  - ex_xf_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xf_amt: filled but always zero
+  - ex_xf_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ex_xg_count: a run of zeros is used as a placeholder (['000000000000', 59])
+  - ex_xg_amt: a run of zeros is used as a placeholder (['000000000000000', 59])
+  - ex_xh_count: filled but always zero
+  - ex_xh_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xh_amt: filled but always zero
+  - ex_xh_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ex_xi_count: a run of zeros is used as a placeholder (['000000000000', 59])
+  - ex_xi_amt: a run of zeros is used as a placeholder (['000000000000000', 59])
+  - ex_xj_count: a run of zeros is used as a placeholder (['000000000000', 59])
+  - ex_xj_amt: a run of zeros is used as a placeholder (['000000000000000', 59])
+  - ex_xl_count: a run of zeros is used as a placeholder (['000000000000', 56])
+  - ex_xl_amt: a run of zeros is used as a placeholder (['000000000000000', 56])
+  - ex_xm_count: filled but always zero
+  - ex_xm_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xm_amt: filled but always zero
+  - ex_xm_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ex_xn_count: a run of zeros is used as a placeholder (['000000000000', 52])
+  - ex_xn_amt: a run of zeros is used as a placeholder (['000000000000000', 52])
+  - ex_xo_count: filled but always zero
+  - ex_xo_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xo_amt: filled but always zero
+  - ex_xo_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ex_xp_count: filled but always zero
+  - ex_xp_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xp_amt: filled but always zero
+  - ex_xp_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ex_xq_count: filled but always zero
+  - ex_xq_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xq_amt: filled but always zero
+  - ex_xq_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ex_xr_count: a run of zeros is used as a placeholder (['000000000000', 55])
+  - ex_xr_amt: a run of zeros is used as a placeholder (['000000000000000', 55])
+  - ex_xs_count: filled but always zero
+  - ex_xs_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xs_amt: filled but always zero
+  - ex_xs_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ex_xt_count: filled but always zero
+  - ex_xt_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xt_amt: filled but always zero
+  - ex_xt_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ex_xu_count: a run of zeros is used as a placeholder (['000000000000', 59])
+  - ex_xu_amt: a run of zeros is used as a placeholder (['000000000000000', 59])
+  - ex_xv_count: a run of zeros is used as a placeholder (['000000000000', 44])
+  - ex_xv_amt: a run of zeros is used as a placeholder (['000000000000000', 44])
+  - ex_xa_count: filled but always zero
+  - ex_xa_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ex_xa_amt: filled but always zero
+  - ex_xa_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - ppv_count: filled but always zero
+  - ppv_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ppv_amt: filled but always zero
+  - ppv_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - dvch_count: filled but always zero
+  - dvch_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - dvch_amt: filled but always zero
+  - dvch_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - dvchs_count: filled but always zero
+  - dvchs_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - dvchs_amt: filled but always zero
+  - dvchs_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - masss_count: a run of zeros is used as a placeholder (['000000000000', 54])
+  - masss_amt: a run of zeros is used as a placeholder (['000000000000000', 54])
+  - pp_late_interstate_allocation_count: filled but always zero
+  - pp_late_interstate_allocation_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - pp_late_interstate_allocation_val: filled but always zero
+  - pp_late_interstate_allocation_val: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - frss_count: a run of zeros is used as a placeholder (['000000000000', 58])
+  - frss_amt: a run of zeros is used as a placeholder (['000000000000000', 58])
+  - abmno_count: filled but always zero
+  - abmno_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - abmno_amt: filled but always zero
+  - abmno_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - dstr_count: filled but always zero
+  - dstr_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - dstr_amt: filled but always zero
+  - dstr_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - late_correction_count: filled but always zero
+  - late_correction_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - late_correction_val: filled but always zero
+  - late_correction_val: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - dstrs_count: filled but always zero
+  - dstrs_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - dstrs_amt: filled but always zero
+  - dstrs_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - err_exemption_removal_increase_count: filled but always zero
+  - err_exemption_removal_increase_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - err_exemption_removal_increase: filled but always zero
+  - err_exemption_removal_increase: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - nhs_cap_loss_count: a run of zeros is used as a placeholder (['000000000000', 18])
+  - nhs_cap_loss: a run of zeros is used as a placeholder (['000000000000000', 39])
+  - ccf_count: filled but always zero
+  - ccf_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - ccf_amt: filled but always zero
+  - ccf_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - med_count: filled but always zero
+  - med_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - med_amt: filled but always zero
+  - med_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - jeti_count: filled but always zero
+  - jeti_count: a run of zeros is used as a placeholder (['000000000000', 63])
+  - jeti_amt: filled but always zero
+  - jeti_amt: a run of zeros is used as a placeholder (['000000000000000', 63])
+  - unmapped_tail: a run of zeros is used as a placeholder (['000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000', 44])
+  - new vs p26a-enttot: ['unmapped_tail']
+  - rows 63 -> 63
+== p26b-entity (106 rows, 2 cols)
+  - rows 105 -> 106
+== p26b-imprinfo (72,472 rows, 11 cols)
+  - omitted_imprv_val: filled but always zero
+  - omitted_imprv_val: a run of zeros is used as a placeholder (['000000000000000', 72472])
+  - rows 72,479 -> 72,472
+== p26b-imprdet (250,957 rows, 12 cols)
+  - sketch_cmds: blank in every row
+  - rows 250,959 -> 250,957
+== p26b-imprattr (330,109 rows, 7 cols)
+  - rows 330,125 -> 330,109
+== p26b-sketch (198,463 rows, 7 cols)
+  - rows 198,514 -> 198,463
+== p26b-mobile (1,201 rows, 12 cols)
+  - mbl_hm_sn_3: only 7 rows filled (0.6%)
+  - mbl_hm_hud_num_3: only 7 rows filled (0.6%)
+  - rows 1,504 -> 1,201
+  - mbl_hm_hud_num_2: filled 24.9% -> 31.1%
+  - mbl_hm_hud_num: filled 71.9% -> 90.0%
+  - mbl_hm_title_num: filled 51.7% -> 64.7%
+  - mbl_hm_make: filled 32.6% -> 40.9%
+  - mbl_hm_sn_2: filled 24.9% -> 31.1%
+  - mbl_hm_sn: filled 73.5% -> 91.9%
+  - mbl_hm_model: filled 71.4% -> 89.3%
+== p26b-land (56,677 rows, 19 cols)
+  - size_acres: a run of zeros is used as a placeholder (['00000000000000', 41709])
+  - effective_front: a run of zeros is used as a placeholder (['00000000000000', 25812])
+  - effective_depth: a run of zeros is used as a placeholder (['00000000000000', 25812])
+  - ag_ls_method: only 1,632 rows filled (2.9%)
+  - ag_ls_class: only 1,506 rows filled (2.7%)
+  - rows 56,667 -> 56,677
+== p26b-sb12 (30,152 rows, 19 cols)
+  - col_13: negative values (min -11,994.66)
+  - rows 30,225 -> 30,152
+== p26b-defer (112 rows, 8 cols)
+  - deferral_end_date: blank in every row
+  - last_change_date: only 1 rows filled (0.9%)
+  - rows 109 -> 112
+  - last_change_date: type Empty -> Date
+== p26b-arb (13,441 rows, 6 cols)
+  - ref_id1: only 10 rows filled (0.1%)
+  - rows 22 -> 13,441
+  - ref_id1: type Empty -> Text
+== p26b-lawsuit (396 rows, 5 cols)
+  - ref_id1: blank in every row
+  - rows 396 -> 396
+== p26b-arblaw (0 rows, 5 cols)
+  - prop_id: blank in every row
+  - prop_val_yr: only 0 rows filled (0.0%)
+  - prop_val_yr: filled but always zero
+  - geo_id: blank in every row
+  - ref_id1: blank in every row
+  - ref_id2: blank in every row
+  - rows 0 -> 0
+== p26b-agent (3,135 rows, 11 cols)
+  - agent_addr_line2: only 1 rows filled (0.0%)
+  - agent_addr_line3: only 1 rows filled (0.0%)
+  - agent_zip_rt: blank in every row
+  - rows 3,104 -> 3,135
+== p26b-abs (2,056 rows, 2 cols)
+  - rows 2,056 -> 2,056
+== p26b-state (288 rows, 5 cols)
+  - rows 288 -> 288
+== p26b-country (246 rows, 2 cols)
+  - rows 246 -> 246
+== p26b-header (1 rows, 12 cols)
+  - supplement_number: filled but always zero
+  - value_option: blank in every row
+  - office_use_only: blank in every row
+  - rows 1 -> 1
+== c26-info (59,536 rows, 449 cols)
+  - sup_num: filled but always zero
+  - sup_num: a run of zeros is used as a placeholder (['000000000000', 59536])
+  - sup_action: blank in every row
+  - sup_cd: blank in every row
+  - sup_desc: blank in every row
+  - udi_group: a run of zeros is used as a placeholder (['000000000000', 59133])
+  - filler_692: blank in every row
+  - py_addr_line3: only 4 rows filled (0.0%)
+  - py_addr_zip_rt: blank in every row
+  - filler_992: blank in every row
+  - filler_1013: blank in every row
+  - legal_desc2: blank in every row
+  - legal_acreage: a run of zeros is used as a placeholder (['0000000000000000', 41808])
+  - land_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 14391])
+  - land_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 49778])
+  - imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 13774])
+  - imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 56734])
+  - ag_use_val: a run of zeros is used as a placeholder (['000000000000000', 58207])
+  - ag_market: a run of zeros is used as a placeholder (['000000000000000', 58207])
+  - timber_use: filled but always zero
+  - timber_use: a run of zeros is used as a placeholder (['000000000000000', 59536])
+  - timber_market: filled but always zero
+  - timber_market: a run of zeros is used as a placeholder (['000000000000000', 59536])
+  - ten_percent_cap: a run of zeros is used as a placeholder (['000000000000000', 53159])
+  - filler_1961: blank in every row
+  - filler_1982: blank in every row
+  - mortgage_co_id: a run of zeros is used as a placeholder (['000000000000', 59536])
+  - mortage_co_name: blank in every row
+  - mortgage_acct_id: blank in every row
+  - jan1_addr_line2: only 3 rows filled (0.0%)
+  - jan1_addr_line3: only 1 rows filled (0.0%)
+  - jan1_addr_zip_rt: blank in every row
+  - filler_2571: blank in every row
+  - ov65_prorate_begin: only 751 rows filled (1.3%)
+  - ov65_prorate_end: only 13 rows filled (0.0%)
+  - ex_prorate_begin: blank in every row
+  - ex_prorate_end: blank in every row
+  - mineral_state_cd: blank in every row
+  - land_acres: a run of zeros is used as a placeholder (['00000000000000000000', 4174])
+  - entity_agent_id: a run of zeros is used as a placeholder (['000000000000', 57027])
+  - entity_agent_name: only 2,509 rows filled (4.2%)
+  - entity_agent_addr_line1: only 2,509 rows filled (4.2%)
+  - entity_agent_addr_line2: blank in every row
+  - entity_agent_addr_line3: blank in every row
+  - entity_agent_city: only 2,509 rows filled (4.2%)
+  - entity_agent_state: only 2,508 rows filled (4.2%)
+  - entity_agent_country: only 2,311 rows filled (3.9%)
+  - entity_agent_zip: only 2,509 rows filled (4.2%)
+  - entity_agent_cass: only 919 rows filled (1.5%)
+  - entity_agent_rt: blank in every row
+  - filler_3170: blank in every row
+  - ca_agent_id: a run of zeros is used as a placeholder (['000000000000', 47028])
+  - ca_agent_addr_line2: blank in every row
+  - ca_agent_addr_line3: blank in every row
+  - ca_agent_zip_rt: blank in every row
+  - filler_3582: blank in every row
+  - arb_agent_id: a run of zeros is used as a placeholder (['000000000000', 45713])
+  - arb_agent_addr_line2: blank in every row
+  - arb_agent_addr_line3: blank in every row
+  - arb_agent_zip_rt: blank in every row
+  - mineral_type_of_int: blank in every row
+  - mineral_int_pct: a run of zeros is used as a placeholder (['000000000000000', 59235])
+  - productivity_use_code: blank in every row
+  - timber_78_market: filled but always zero
+  - timber_78_market: a run of zeros is used as a placeholder (['000000000000', 59536])
+  - ag_late_loss: a run of zeros is used as a placeholder (['000000000000', 59530])
+  - late_freeport_penalty: filled but always zero
+  - late_freeport_penalty: a run of zeros is used as a placeholder (['000000000000', 59536])
+  - filler_4127: blank in every row
+  - filler_4129: blank in every row
+  - filler_4134: blank in every row
+  - filler_4176: blank in every row
+  - filler_4228: blank in every row
+  - filler_4248: blank in every row
+  - filler_4268: blank in every row
+  - filler_4288: blank in every row
+  - filler_4289: blank in every row
+  - filler_4290: blank in every row
+  - filler_4360: only 40 rows filled (0.1%)
+  - filler_4385: only 4 rows filled (0.0%)
+  - situs_unit: only 1,042 rows filled (1.8%)
+  - appr_addr_line3: only 7 rows filled (0.0%)
+  - appr_addr_zip_cass_route: blank in every row
+  - appr_confidential_name: blank in every row
+  - py_confidential_name: blank in every row
+  - jan1_confidential_name: blank in every row
+  - filler_5071: blank in every row
+  - rendition_date: only 1,964 rows filled (3.3%)
+  - rendition_penalty: a run of zeros is used as a placeholder (['000000000000000', 59402])
+  - rendition_penalty_date_paid: blank in every row
+  - rendition_fraud_penalty: filled but always zero
+  - rendition_fraud_penalty: a run of zeros is used as a placeholder (['000000000000000', 59536])
+  - rendition_fraud_penalty_date_paid: blank in every row
+  - filler_5182: blank in every row
+  - dataset_id: a run of zeros is used as a placeholder (['000000000000000', 59536])
+  - exemption_percentage: a run of zeros is used as a placeholder (['000000000000000', 47047])
+  - filler_5436: blank in every row
+  - ex_qualify_yr: filled but always zero
+  - ab_qualify_yr: filled but always zero
+  - en_qualify_yr: filled but always zero
+  - ht_qualify_yr: filled but always zero
+  - pro_qualify_yr: filled but always zero
+  - pc_qualify_yr: filled but always zero
+  - ex366_qualify_yr: filled but always zero
+  - ch_qualify_yr: filled but always zero
+  - eco_qualify_yr: filled but always zero
+  - chodo_qualify_yr: filled but always zero
+  - git_qualify_yr: filled but always zero
+  - mortgage_addr_line1: blank in every row
+  - mortgage_addr_line2: blank in every row
+  - mortgage_addr_line3: blank in every row
+  - mortgage_addr_city: blank in every row
+  - mortgage_addr_state: blank in every row
+  - mortgage_addr_country: blank in every row
+  - mortgage_addr_zip: blank in every row
+  - mortgage_addr_zip_cass: blank in every row
+  - mortgage_addr_zip_rt: blank in every row
+  - sic_code: blank in every row
+  - hs_prorate_end: only 39 rows filled (0.1%)
+  - ov65s_prorate_begin: only 6 rows filled (0.0%)
+  - ov65s_prorate_end: blank in every row
+  - dp_prorate_begin: only 9 rows filled (0.0%)
+  - dp_prorate_end: only 2 rows filled (0.0%)
+  - dv1_prorate_begin: blank in every row
+  - dv1_prorate_end: blank in every row
+  - dv1s_prorate_begin: blank in every row
+  - dv1s_prorate_end: blank in every row
+  - dv2_prorate_begin: blank in every row
+  - dv2_prorate_end: blank in every row
+  - dv2s_prorate_begin: blank in every row
+  - dv2s_prorate_end: blank in every row
+  - dv3_prorate_begin: blank in every row
+  - dv3_prorate_end: blank in every row
+  - dv3s_prorate_begin: blank in every row
+  - dv3s_prorate_end: blank in every row
+  - dv4_prorate_begin: blank in every row
+  - dv4_prorate_end: blank in every row
+  - dv4s_prorate_begin: blank in every row
+  - dv4s_prorate_end: blank in every row
+  - lve_prorate_begin: blank in every row
+  - lve_prorate_end: blank in every row
+  - ab_prorate_begin: blank in every row
+  - ab_prorate_end: blank in every row
+  - en_prorate_begin: blank in every row
+  - en_prorate_end: blank in every row
+  - fr_prorate_begin: blank in every row
+  - fr_prorate_end: blank in every row
+  - ht_prorate_begin: blank in every row
+  - ht_prorate_end: blank in every row
+  - pro_prorate_begin: blank in every row
+  - pro_prorate_end: blank in every row
+  - pc_prorate_begin: blank in every row
+  - pc_prorate_end: blank in every row
+  - so_prorate_begin: blank in every row
+  - so_prorate_end: blank in every row
+  - ex366_prorate_begin: blank in every row
+  - ex366_prorate_end: blank in every row
+  - ch_prorate_begin: blank in every row
+  - ch_prorate_end: blank in every row
+  - dps_prorate_begin: blank in every row
+  - dps_prorate_end: blank in every row
+  - eco_prorate_begin: blank in every row
+  - eco_prorate_end: blank in every row
+  - chodo_prorate_begin: blank in every row
+  - chodo_prorate_end: blank in every row
+  - lih_prorate_begin: blank in every row
+  - lih_prorate_end: blank in every row
+  - git_prorate_begin: blank in every row
+  - git_prorate_end: blank in every row
+  - clt_prorate_begin: blank in every row
+  - clt_prorate_end: blank in every row
+  - clt_qualify_yr: filled but always zero
+  - dvhss_prorate_begin: only 4 rows filled (0.0%)
+  - dvhss_prorate_end: blank in every row
+  - omitted_imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 59535])
+  - omitted_imprv_non_hstd_val: filled but always zero
+  - omitted_imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 59536])
+  - dvhs_prorate_begin: only 466 rows filled (0.8%)
+  - dvhs_prorate_end: only 24 rows filled (0.0%)
+  - ex_xd_qualify_yr: filled but always zero
+  - ex_xd_prorate_begin: blank in every row
+  - ex_xd_prorate_end: blank in every row
+  - ex_xf_qualify_yr: filled but always zero
+  - ex_xf_prorate_begin: blank in every row
+  - ex_xf_prorate_end: blank in every row
+  - ex_xg_prorate_begin: blank in every row
+  - ex_xg_prorate_end: blank in every row
+  - ex_xh_qualify_yr: filled but always zero
+  - ex_xh_prorate_begin: blank in every row
+  - ex_xh_prorate_end: blank in every row
+  - ex_xi_prorate_begin: blank in every row
+  - ex_xi_prorate_end: blank in every row
+  - ex_xj_prorate_begin: blank in every row
+  - ex_xj_prorate_end: blank in every row
+  - ex_xl_prorate_begin: only 2 rows filled (0.0%)
+  - ex_xl_prorate_end: only 1 rows filled (0.0%)
+  - ex_xm_qualify_yr: filled but always zero
+  - ex_xm_prorate_begin: blank in every row
+  - ex_xm_prorate_end: blank in every row
+  - ex_xn_prorate_begin: blank in every row
+  - ex_xn_prorate_end: blank in every row
+  - ex_xo_qualify_yr: filled but always zero
+  - ex_xo_prorate_begin: blank in every row
+  - ex_xo_prorate_end: blank in every row
+  - ex_xp_qualify_yr: filled but always zero
+  - ex_xp_prorate_begin: blank in every row
+  - ex_xp_prorate_end: blank in every row
+  - ex_xq_qualify_yr: filled but always zero
+  - ex_xq_prorate_begin: blank in every row
+  - ex_xq_prorate_end: blank in every row
+  - ex_xr_prorate_begin: blank in every row
+  - ex_xr_prorate_end: blank in every row
+  - ex_xs_qualify_yr: filled but always zero
+  - ex_xs_prorate_begin: blank in every row
+  - ex_xs_prorate_end: blank in every row
+  - ex_xt_qualify_yr: filled but always zero
+  - ex_xt_prorate_begin: blank in every row
+  - ex_xt_prorate_end: blank in every row
+  - ex_xu_prorate_begin: blank in every row
+  - ex_xu_prorate_end: blank in every row
+  - ex_xv_prorate_begin: only 32 rows filled (0.1%)
+  - ex_xv_prorate_end: only 1 rows filled (0.0%)
+  - ex_xa_qualify_yr: filled but always zero
+  - ex_xa_prorate_begin: blank in every row
+  - ex_xa_prorate_end: blank in every row
+  - lve_qualify_yr: filled but always zero
+  - ppv_qualify_yr: filled but always zero
+  - ppv_prorate_begin: blank in every row
+  - ppv_prorate_end: blank in every row
+  - dvch_qualify_yr: filled but always zero
+  - dvch_prorate_begin: blank in every row
+  - dvch_prorate_end: blank in every row
+  - dvchs_qualify_yr: filled but always zero
+  - dvchs_prorate_begin: blank in every row
+  - dvchs_prorate_end: blank in every row
+  - masss_prorate_begin: blank in every row
+  - masss_prorate_end: blank in every row
+  - pp_late_interstate_allocation_val: filled but always zero
+  - pp_late_interstate_allocation_val: a run of zeros is used as a placeholder (['000000000000000', 59536])
+  - appraised_val_reflecting_productivity_loss: filled but always zero
+  - appraised_val_reflecting_productivity_loss: a run of zeros is used as a placeholder (['000000000000000', 59536])
+  - assessed_val_reflecting_productivity_loss: filled but always zero
+  - assessed_val_reflecting_productivity_loss: a run of zeros is used as a placeholder (['000000000000000', 59536])
+  - frss_prorate_begin: blank in every row
+  - frss_prorate_end: blank in every row
+  - abmno_qualify_yr: blank in every row
+  - abmno_prorate_begin: blank in every row
+  - abmno_prorate_end: blank in every row
+  - filler_8743: blank in every row
+  - filler_8768: blank in every row
+  - filler_8793: blank in every row
+  - filler_8818: blank in every row
+  - filler_8843: blank in every row
+  - filler_8868: blank in every row
+  - filler_8893: blank in every row
+  - filler_8918: blank in every row
+  - dstr_qualify_yr: blank in every row
+  - dstr_prorate_begin: blank in every row
+  - dstr_prorate_end: blank in every row
+  - late_correction_val: filled but always zero
+  - late_correction_val: a run of zeros is used as a placeholder (['000000000000000', 59536])
+  - dstrs_qualify_yr: blank in every row
+  - dstrs_prorate_begin: blank in every row
+  - dstrs_prorate_end: blank in every row
+  - nhs_cap_loss: a run of zeros is used as a placeholder (['000000000000000', 57741])
+  - ccf_qualify_yr: blank in every row
+  - ccf_prorate_begin: blank in every row
+  - ccf_prorate_end: blank in every row
+  - med_qualify_yr: blank in every row
+  - med_prorate_begin: blank in every row
+  - med_prorate_end: blank in every row
+  - jeti_qualify_yr: blank in every row
+  - jeti_prorate_begin: blank in every row
+  - jeti_prorate_end: blank in every row
+  - rows 59,659 -> 59,536
+== c26-entinfo (249,401 rows, 187 cols)
+  - sup_num: filled but always zero
+  - sup_num: a run of zeros is used as a placeholder (['000000000000', 249401])
+  - entity_xref_id: blank in every row
+  - filler_134: blank in every row
+  - taxable_val: a run of zeros is used as a placeholder (['000000000000000', 20213])
+  - ab_amt: filled but always zero
+  - ab_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - en_amt: filled but always zero
+  - en_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - fr_amt: a run of zeros is used as a placeholder (['000000000000000', 249307])
+  - ht_amt: filled but always zero
+  - ht_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - pro_amt: filled but always zero
+  - pro_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - pc_amt: a run of zeros is used as a placeholder (['000000000000000', 249376])
+  - so_amt: a run of zeros is used as a placeholder (['000000000000000', 249324])
+  - ex366_amt: filled but always zero
+  - ex366_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - hs_amt: a run of zeros is used as a placeholder (['000000000000000', 214231])
+  - ov65_amt: a run of zeros is used as a placeholder (['000000000000000', 220171])
+  - dp_amt: a run of zeros is used as a placeholder (['000000000000000', 248721])
+  - dv_amt: a run of zeros is used as a placeholder (['000000000000000', 245133])
+  - ex_amt: a run of zeros is used as a placeholder (['000000000000000', 249370])
+  - ch_amt: filled but always zero
+  - ch_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - hs_cap: a run of zeros is used as a placeholder (['000000000000000', 225164])
+  - ag_late_loss: a run of zeros is used as a placeholder (['000000000000000', 249382])
+  - freeport_late_loss: filled but always zero
+  - freeport_late_loss: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - hs_state_amt: a run of zeros is used as a placeholder (['000000000000000', 215969])
+  - hs_local_amt: a run of zeros is used as a placeholder (['000000000000000', 247663])
+  - land_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 59496])
+  - land_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 208504])
+  - imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 57173])
+  - imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 238746])
+  - ag_use_val: a run of zeros is used as a placeholder (['000000000000000', 244827])
+  - ag_market_val: a run of zeros is used as a placeholder (['000000000000000', 244827])
+  - tim_use_val: filled but always zero
+  - tim_use_val: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - tim_market_val: filled but always zero
+  - tim_market_val: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - freeze_ceiling: a run of zeros is used as a placeholder (['000000000000000', 224933])
+  - freeze_transfer_date: only 128 rows filled (0.1%)
+  - freeze_previous_tax: a run of zeros is used as a placeholder (['000000000000000', 249298])
+  - freeze_previous_tax_unfrozen: a run of zeros is used as a placeholder (['000000000000000', 249278])
+  - lve_amt: filled but always zero
+  - lve_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - eco_amt: filled but always zero
+  - eco_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - ag_use_val_ne: a run of zeros is used as a placeholder (['000000000000000', 244827])
+  - ag_use_val_ex: filled but always zero
+  - ag_use_val_ex: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - ag_market_ne: a run of zeros is used as a placeholder (['000000000000000', 244827])
+  - ag_market_ex: filled but always zero
+  - ag_market_ex: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - timber_use_ne: filled but always zero
+  - timber_use_ne: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - timber_use_ex: filled but always zero
+  - timber_use_ex: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - timber_market_ne: filled but always zero
+  - timber_market_ne: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - timber_market_ex: filled but always zero
+  - timber_market_ex: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - new_val_hs: a run of zeros is used as a placeholder (['000000000000000', 237689])
+  - new_val_nhs: a run of zeros is used as a placeholder (['000000000000000', 248697])
+  - new_val_p: filled but always zero
+  - new_val_p: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - new_val_taxable: a run of zeros is used as a placeholder (['000000000000000', 237108])
+  - dataset_id: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - chodo_amt: filled but always zero
+  - chodo_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - ent_pct_land_hs: a run of zeros is used as a placeholder (['001000000000000', 235516])
+  - ent_pct_land_nonhs: a run of zeros is used as a placeholder (['001000000000000', 235532])
+  - ent_pct_imprv_hs: a run of zeros is used as a placeholder (['001000000000000', 235517])
+  - ent_pct_imprv_nonhs: a run of zeros is used as a placeholder (['001000000000000', 235510])
+  - ent_pct_ag_use: a run of zeros is used as a placeholder (['001000000000000', 235509])
+  - ent_pct_ag_mkt: a run of zeros is used as a placeholder (['001000000000000', 235509])
+  - ent_pct_tim_use: filled but always zero
+  - ent_pct_tim_use: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - ent_pct_tim_mkt: filled but always zero
+  - ent_pct_tim_mkt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - ent_pct_pers: a run of zeros is used as a placeholder (['000000000000000', 236119])
+  - ent_pct_min: filled but always zero
+  - ent_pct_min: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - ent_pct_auto: filled but always zero
+  - ent_pct_auto: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - lih_amt: a run of zeros is used as a placeholder (['000000000000000', 249397])
+  - git_amt: filled but always zero
+  - git_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - dvhs_amt: a run of zeros is used as a placeholder (['000000000000000', 243474])
+  - tax_increment_imprv_val: a run of zeros is used as a placeholder (['000000000000000', 249389])
+  - tax_increment_land_val: a run of zeros is used as a placeholder (['000000000000000', 249299])
+  - weed_taxable_acres: filled but always zero
+  - weed_taxable_acres: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - hs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ov65_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ov65s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - dp_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - dps_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - dv1_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158098])
+  - dv1s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - dv2_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - dv2s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - dv3_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158096])
+  - dv3s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - dv4_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158079])
+  - dv4s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - dvhs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ex_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ab_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - en_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - fr_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ht_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - pro_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - pc_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - so_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ex366_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ch_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - eco_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - chodo_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - lih_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - git_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - tax_increment_zone_cd: only 992 rows filled (0.4%)
+  - tax_increment_zone_desc: only 992 rows filled (0.4%)
+  - omitted_imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 249397])
+  - omitted_imprv_non_hstd_val: filled but always zero
+  - omitted_imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - clt_amt: filled but always zero
+  - clt_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - clt_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - dvhss_amt: a run of zeros is used as a placeholder (['000000000000000', 249324])
+  - dvhss_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - homestead_group_exemption_factor: a run of zeros is used as a placeholder (['001000000000000', 157601])
+  - ex_xd_amt: filled but always zero
+  - ex_xd_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - ex_xd_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ex_xf_amt: filled but always zero
+  - ex_xf_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - ex_xf_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ex_xg_amt: a run of zeros is used as a placeholder (['000000000000000', 249393])
+  - ex_xg_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ex_xh_amt: filled but always zero
+  - ex_xh_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - ex_xh_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ex_xi_amt: a run of zeros is used as a placeholder (['000000000000000', 249397])
+  - ex_xi_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ex_xj_amt: a run of zeros is used as a placeholder (['000000000000000', 249394])
+  - ex_xj_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ex_xl_amt: a run of zeros is used as a placeholder (['000000000000000', 249273])
+  - ex_xl_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ex_xm_amt: filled but always zero
+  - ex_xm_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - ex_xm_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ex_xn_amt: a run of zeros is used as a placeholder (['000000000000000', 249374])
+  - ex_xn_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ex_xo_amt: filled but always zero
+  - ex_xo_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - ex_xo_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ex_xp_amt: filled but always zero
+  - ex_xp_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - ex_xp_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ex_xq_amt: filled but always zero
+  - ex_xq_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - ex_xq_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ex_xr_amt: a run of zeros is used as a placeholder (['000000000000000', 249309])
+  - ex_xr_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ex_xs_amt: filled but always zero
+  - ex_xs_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - ex_xs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ex_xt_amt: filled but always zero
+  - ex_xt_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - ex_xt_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ex_xu_amt: a run of zeros is used as a placeholder (['000000000000000', 249397])
+  - ex_xu_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ex_xv_amt: a run of zeros is used as a placeholder (['000000000000000', 246317])
+  - ex_xv_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ex_xa_amt: filled but always zero
+  - ex_xa_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - ex_xa_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - lve_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - ppv_amt: filled but always zero
+  - ppv_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - ppv_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - dvch_amt: filled but always zero
+  - dvch_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - dvch_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - dvchs_amt: filled but always zero
+  - dvchs_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - dvchs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - masss_amt: a run of zeros is used as a placeholder (['000000000000000', 249384])
+  - masss_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - pp_late_interstate_allocation_val: filled but always zero
+  - pp_late_interstate_allocation_val: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - frss_amt: a run of zeros is used as a placeholder (['000000000000000', 249390])
+  - frss_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - abmno_amt: filled but always zero
+  - abmno_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - abmno_allocation_factor: filled but always zero
+  - abmno_allocation_factor: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - dstr_amt: filled but always zero
+  - dstr_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - dstr_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - late_correction_val: filled but always zero
+  - late_correction_val: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - dstrs_amt: filled but always zero
+  - dstrs_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - dstrs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - err_exemption_removal_increase: filled but always zero
+  - err_exemption_removal_increase: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - mcr_freeze_ceiling_reduction_amount: filled but always zero
+  - mcr_freeze_ceiling_reduction_amount: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - nhs_cap_loss: a run of zeros is used as a placeholder (['000000000000000', 242570])
+  - ccf_amt: filled but always zero
+  - ccf_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - ccf_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - med_amt: filled but always zero
+  - med_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - med_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - jeti_amt: filled but always zero
+  - jeti_amt: a run of zeros is used as a placeholder (['000000000000000', 249401])
+  - jeti_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 158100])
+  - rows 249,698 -> 249,401
+== c26-enttot (61 rows, 154 cols)
+  - land_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 7])
+  - land_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 3])
+  - imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 7])
+  - imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 23])
+  - ag_use_val: a run of zeros is used as a placeholder (['000000000000000', 51])
+  - tim_use_val: filled but always zero
+  - tim_use_val: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - ag_market_val: a run of zeros is used as a placeholder (['000000000000000', 51])
+  - tim_market_val: filled but always zero
+  - tim_market_val: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - taxable_val: a run of zeros is used as a placeholder (['000000000000000', 2])
+  - mineral_val: filled but always zero
+  - mineral_val: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - personal_val: a run of zeros is used as a placeholder (['000000000000000', 42])
+  - auto_val: filled but always zero
+  - auto_val: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - real_mobile_val: a run of zeros is used as a placeholder (['000000049476830', 2])
+  - num_real_mobile: a run of zeros is used as a placeholder (['000000000182', 2])
+  - num_personal: a run of zeros is used as a placeholder (['000000000000', 40])
+  - num_mineral: filled but always zero
+  - num_mineral: a run of zeros is used as a placeholder (['000000000000', 61])
+  - num_auto: filled but always zero
+  - num_auto: a run of zeros is used as a placeholder (['000000000000', 61])
+  - hs_cap_count: a run of zeros is used as a placeholder (['000000000000', 42])
+  - hs_cap: a run of zeros is used as a placeholder (['000000000000000', 42])
+  - hs_count: a run of zeros is used as a placeholder (['000000000000', 58])
+  - hs_local_amount: a run of zeros is used as a placeholder (['000000000000000', 60])
+  - hs_state_amount: a run of zeros is used as a placeholder (['000000000000000', 59])
+  - ov65_count: a run of zeros is used as a placeholder (['000000000000', 47])
+  - ov65_amt: a run of zeros is used as a placeholder (['000000000000000', 47])
+  - dp_count: a run of zeros is used as a placeholder (['000000000000', 49])
+  - dp_amt: a run of zeros is used as a placeholder (['000000000000000', 49])
+  - dv_count: a run of zeros is used as a placeholder (['000000000000', 43])
+  - dv_amt: a run of zeros is used as a placeholder (['000000000000000', 43])
+  - ab_count: filled but always zero
+  - ab_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - ab_amt: filled but always zero
+  - ab_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - fr_count: a run of zeros is used as a placeholder (['000000000000', 54])
+  - fr_amt: a run of zeros is used as a placeholder (['000000000000000', 54])
+  - pc_count: a run of zeros is used as a placeholder (['000000000000', 53])
+  - pc_amt: a run of zeros is used as a placeholder (['000000000000000', 53])
+  - ex366_count: filled but always zero
+  - ex366_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - ex366_amt: filled but always zero
+  - ex366_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - ht_count: filled but always zero
+  - ht_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - ht_amt: filled but always zero
+  - ht_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - so_count: a run of zeros is used as a placeholder (['000000000000', 48])
+  - so_amt: a run of zeros is used as a placeholder (['000000000000000', 48])
+  - ex_count: a run of zeros is used as a placeholder (['000000000000', 53])
+  - ex_amt: a run of zeros is used as a placeholder (['000000000000000', 53])
+  - ch_count: filled but always zero
+  - ch_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - ch_amt: filled but always zero
+  - ch_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - ag_late_count: a run of zeros is used as a placeholder (['000000000000', 56])
+  - ag_late_loss: a run of zeros is used as a placeholder (['000000000000000', 56])
+  - freeport_late_count: filled but always zero
+  - freeport_late_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - freeport_late_loss: filled but always zero
+  - freeport_late_loss: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - lve_count: filled but always zero
+  - lve_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - lve_amt: filled but always zero
+  - lve_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - sup_num: filled but always zero
+  - sup_num: a run of zeros is used as a placeholder (['000000000000', 61])
+  - eco_count: filled but always zero
+  - eco_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - eco_amt: filled but always zero
+  - eco_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - ag_use_val_ne: a run of zeros is used as a placeholder (['000000000000000', 51])
+  - ag_use_val_ex: filled but always zero
+  - ag_use_val_ex: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - ag_market_ne: a run of zeros is used as a placeholder (['000000000000000', 51])
+  - ag_market_ex: filled but always zero
+  - ag_market_ex: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - timber_use_ne: filled but always zero
+  - timber_use_ne: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - timber_use_ex: filled but always zero
+  - timber_use_ex: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - timber_market_ne: filled but always zero
+  - timber_market_ne: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - timber_market_ex: filled but always zero
+  - timber_market_ex: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - en_count: filled but always zero
+  - en_count: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - en_amt: filled but always zero
+  - en_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - dataset_id: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - chodo_count: filled but always zero
+  - chodo_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - chodo_amt: filled but always zero
+  - chodo_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - lih_count: a run of zeros is used as a placeholder (['000000000000', 57])
+  - lih_amt: a run of zeros is used as a placeholder (['000000000000000', 57])
+  - git_count: filled but always zero
+  - git_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - git_amt: filled but always zero
+  - git_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - dvhs_count: a run of zeros is used as a placeholder (['000000000000', 43])
+  - dvhs_amt: a run of zeros is used as a placeholder (['000000000000000', 43])
+  - tax_increment_imprv_val: a run of zeros is used as a placeholder (['000000000000000', 59])
+  - tax_increment_land_val: a run of zeros is used as a placeholder (['000000000000000', 59])
+  - weed_taxable_acres: filled but always zero
+  - weed_taxable_acres: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - omitted_imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 57])
+  - omitted_imprv_non_hstd_val: filled but always zero
+  - omitted_imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - clt_count: filled but always zero
+  - clt_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - clt_amt: filled but always zero
+  - clt_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - dvhss_count: a run of zeros is used as a placeholder (['000000000000', 49])
+  - dvhss_amt: a run of zeros is used as a placeholder (['000000000000000', 49])
+  - ex_xd_count: filled but always zero
+  - ex_xd_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - ex_xd_amt: filled but always zero
+  - ex_xd_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - ex_xf_count: filled but always zero
+  - ex_xf_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - ex_xf_amt: filled but always zero
+  - ex_xf_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - ex_xg_count: a run of zeros is used as a placeholder (['000000000000', 57])
+  - ex_xg_amt: a run of zeros is used as a placeholder (['000000000000000', 57])
+  - ex_xh_count: filled but always zero
+  - ex_xh_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - ex_xh_amt: filled but always zero
+  - ex_xh_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - ex_xi_count: a run of zeros is used as a placeholder (['000000000000', 57])
+  - ex_xi_amt: a run of zeros is used as a placeholder (['000000000000000', 57])
+  - ex_xj_count: a run of zeros is used as a placeholder (['000000000000', 57])
+  - ex_xj_amt: a run of zeros is used as a placeholder (['000000000000000', 57])
+  - ex_xl_count: a run of zeros is used as a placeholder (['000000000000', 54])
+  - ex_xl_amt: a run of zeros is used as a placeholder (['000000000000000', 54])
+  - ex_xm_count: filled but always zero
+  - ex_xm_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - ex_xm_amt: filled but always zero
+  - ex_xm_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - ex_xn_count: a run of zeros is used as a placeholder (['000000000000', 50])
+  - ex_xn_amt: a run of zeros is used as a placeholder (['000000000000000', 50])
+  - ex_xo_count: filled but always zero
+  - ex_xo_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - ex_xo_amt: filled but always zero
+  - ex_xo_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - ex_xp_count: filled but always zero
+  - ex_xp_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - ex_xp_amt: filled but always zero
+  - ex_xp_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - ex_xq_count: filled but always zero
+  - ex_xq_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - ex_xq_amt: filled but always zero
+  - ex_xq_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - ex_xr_count: a run of zeros is used as a placeholder (['000000000000', 53])
+  - ex_xr_amt: a run of zeros is used as a placeholder (['000000000000000', 53])
+  - ex_xs_count: filled but always zero
+  - ex_xs_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - ex_xs_amt: filled but always zero
+  - ex_xs_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - ex_xt_count: filled but always zero
+  - ex_xt_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - ex_xt_amt: filled but always zero
+  - ex_xt_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - ex_xu_count: a run of zeros is used as a placeholder (['000000000000', 57])
+  - ex_xu_amt: a run of zeros is used as a placeholder (['000000000000000', 57])
+  - ex_xv_count: a run of zeros is used as a placeholder (['000000000000', 42])
+  - ex_xv_amt: a run of zeros is used as a placeholder (['000000000000000', 42])
+  - ex_xa_count: filled but always zero
+  - ex_xa_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - ex_xa_amt: filled but always zero
+  - ex_xa_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - ppv_count: filled but always zero
+  - ppv_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - ppv_amt: filled but always zero
+  - ppv_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - dvch_count: filled but always zero
+  - dvch_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - dvch_amt: filled but always zero
+  - dvch_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - dvchs_count: filled but always zero
+  - dvchs_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - dvchs_amt: filled but always zero
+  - dvchs_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - masss_count: a run of zeros is used as a placeholder (['000000000000', 52])
+  - masss_amt: a run of zeros is used as a placeholder (['000000000000000', 52])
+  - pp_late_interstate_allocation_count: filled but always zero
+  - pp_late_interstate_allocation_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - pp_late_interstate_allocation_val: filled but always zero
+  - pp_late_interstate_allocation_val: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - frss_count: a run of zeros is used as a placeholder (['000000000000', 56])
+  - frss_amt: a run of zeros is used as a placeholder (['000000000000000', 56])
+  - abmno_count: filled but always zero
+  - abmno_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - abmno_amt: filled but always zero
+  - abmno_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - dstr_count: filled but always zero
+  - dstr_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - dstr_amt: filled but always zero
+  - dstr_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - late_correction_count: filled but always zero
+  - late_correction_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - late_correction_val: filled but always zero
+  - late_correction_val: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - dstrs_count: filled but always zero
+  - dstrs_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - dstrs_amt: filled but always zero
+  - dstrs_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - err_exemption_removal_increase_count: filled but always zero
+  - err_exemption_removal_increase_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - err_exemption_removal_increase: filled but always zero
+  - err_exemption_removal_increase: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - nhs_cap_loss_count: a run of zeros is used as a placeholder (['000000000000', 17])
+  - nhs_cap_loss: a run of zeros is used as a placeholder (['000000000000000', 37])
+  - ccf_count: filled but always zero
+  - ccf_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - ccf_amt: filled but always zero
+  - ccf_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - med_count: filled but always zero
+  - med_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - med_amt: filled but always zero
+  - med_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - jeti_count: filled but always zero
+  - jeti_count: a run of zeros is used as a placeholder (['000000000000', 61])
+  - jeti_amt: filled but always zero
+  - jeti_amt: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - unmapped_tail: a run of zeros is used as a placeholder (['000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000', 41])
+  - rows 63 -> 61
+== c26-entity (106 rows, 2 cols)
+  - rows 106 -> 106
+== c26-imprinfo (72,472 rows, 11 cols)
+  - omitted_imprv_val: filled but always zero
+  - omitted_imprv_val: a run of zeros is used as a placeholder (['000000000000000', 72472])
+  - rows 72,472 -> 72,472
+== c26-imprdet (250,957 rows, 12 cols)
+  - sketch_cmds: blank in every row
+  - rows 250,957 -> 250,957
+== c26-imprattr (330,112 rows, 7 cols)
+  - rows 330,109 -> 330,112
+== c26-sketch (198,449 rows, 7 cols)
+  - rows 198,463 -> 198,449
+== c26-mobile (1,200 rows, 12 cols)
+  - mbl_hm_sn_3: only 7 rows filled (0.6%)
+  - mbl_hm_hud_num_3: only 7 rows filled (0.6%)
+  - rows 1,201 -> 1,200
+== c26-land (56,677 rows, 19 cols)
+  - effective_front: a run of zeros is used as a placeholder (['00000000000000', 25812])
+  - effective_depth: a run of zeros is used as a placeholder (['00000000000000', 25812])
+  - ag_ls_method: only 1,635 rows filled (2.9%)
+  - ag_ls_class: only 1,509 rows filled (2.7%)
+  - rows 56,677 -> 56,677
+== c26-sb12 (30,178 rows, 19 cols)
+  - col_13: negative values (min -11,994.66)
+  - rows 30,152 -> 30,178
+== c26-defer (112 rows, 8 cols)
+  - deferral_end_date: blank in every row
+  - last_change_date: only 2 rows filled (1.8%)
+  - rows 112 -> 112
+== c26-arb (97 rows, 6 cols)
+  - ref_id1: blank in every row
+  - rows 13,441 -> 97
+  - ref_id1: type Text -> Empty
+== c26-lawsuit (396 rows, 5 cols)
+  - ref_id1: blank in every row
+  - rows 396 -> 396
+== c26-arblaw (0 rows, 5 cols)
+  - prop_id: blank in every row
+  - prop_val_yr: only 0 rows filled (0.0%)
+  - prop_val_yr: filled but always zero
+  - geo_id: blank in every row
+  - ref_id1: blank in every row
+  - ref_id2: blank in every row
+  - rows 0 -> 0
+== c26-agent (3,694 rows, 11 cols)
+  - agent_addr_line2: only 1 rows filled (0.0%)
+  - agent_addr_line3: only 1 rows filled (0.0%)
+  - agent_zip_rt: blank in every row
+  - rows 3,135 -> 3,694
+  - agent_country: filled 95.0% -> 80.6%
+== c26-abs (2,056 rows, 2 cols)
+  - rows 2,056 -> 2,056
+== c26-state (288 rows, 5 cols)
+  - rows 288 -> 288
+== c26-country (246 rows, 2 cols)
+  - rows 246 -> 246
+== c26-header (1 rows, 12 cols)
+  - supplement_number: filled but always zero
+  - value_option: blank in every row
+  - office_use_only: blank in every row
+  - rows 1 -> 1
+== s26-info (59,549 rows, 449 cols)
+  - sup_num: a run of zeros is used as a placeholder (['000000000000', 58482])
+  - sup_action: blank in every row
+  - sup_cd: only 1,067 rows filled (1.8%)
+  - sup_desc: only 1,058 rows filled (1.8%)
+  - udi_group: a run of zeros is used as a placeholder (['000000000000', 59128])
+  - filler_692: blank in every row
+  - py_addr_line3: only 5 rows filled (0.0%)
+  - py_addr_zip_rt: blank in every row
+  - filler_992: blank in every row
+  - filler_1013: blank in every row
+  - legal_desc2: blank in every row
+  - legal_acreage: a run of zeros is used as a placeholder (['0000000000000000', 41818])
+  - land_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 14347])
+  - land_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 49838])
+  - imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 13774])
+  - imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 56752])
+  - ag_use_val: a run of zeros is used as a placeholder (['000000000000000', 58216])
+  - ag_market: a run of zeros is used as a placeholder (['000000000000000', 58216])
+  - timber_use: filled but always zero
+  - timber_use: a run of zeros is used as a placeholder (['000000000000000', 59549])
+  - timber_market: filled but always zero
+  - timber_market: a run of zeros is used as a placeholder (['000000000000000', 59549])
+  - ten_percent_cap: a run of zeros is used as a placeholder (['000000000000000', 53201])
+  - filler_1961: blank in every row
+  - filler_1982: blank in every row
+  - mortgage_co_id: a run of zeros is used as a placeholder (['000000000000', 59549])
+  - mortage_co_name: blank in every row
+  - mortgage_acct_id: blank in every row
+  - jan1_owner_id: a run of zeros is used as a placeholder (['000000000000', 1239])
+  - jan1_addr_line2: only 3 rows filled (0.0%)
+  - jan1_addr_line3: only 1 rows filled (0.0%)
+  - jan1_addr_zip_rt: blank in every row
+  - filler_2571: blank in every row
+  - ov65_prorate_begin: only 762 rows filled (1.3%)
+  - ov65_prorate_end: only 24 rows filled (0.0%)
+  - ex_prorate_begin: blank in every row
+  - ex_prorate_end: blank in every row
+  - mineral_state_cd: blank in every row
+  - land_acres: a run of zeros is used as a placeholder (['00000000000000000000', 4172])
+  - entity_agent_id: a run of zeros is used as a placeholder (['000000000000', 57040])
+  - entity_agent_name: only 2,509 rows filled (4.2%)
+  - entity_agent_addr_line1: only 2,509 rows filled (4.2%)
+  - entity_agent_addr_line2: blank in every row
+  - entity_agent_addr_line3: blank in every row
+  - entity_agent_city: only 2,509 rows filled (4.2%)
+  - entity_agent_state: only 2,508 rows filled (4.2%)
+  - entity_agent_country: only 2,311 rows filled (3.9%)
+  - entity_agent_zip: only 2,509 rows filled (4.2%)
+  - entity_agent_cass: only 919 rows filled (1.5%)
+  - entity_agent_rt: blank in every row
+  - filler_3170: blank in every row
+  - ca_agent_id: a run of zeros is used as a placeholder (['000000000000', 47112])
+  - ca_agent_addr_line2: blank in every row
+  - ca_agent_addr_line3: blank in every row
+  - ca_agent_zip_rt: blank in every row
+  - filler_3582: blank in every row
+  - arb_agent_id: a run of zeros is used as a placeholder (['000000000000', 45797])
+  - arb_agent_addr_line2: blank in every row
+  - arb_agent_addr_line3: blank in every row
+  - arb_agent_zip_rt: blank in every row
+  - mineral_type_of_int: blank in every row
+  - mineral_int_pct: a run of zeros is used as a placeholder (['000000000000000', 59248])
+  - productivity_use_code: blank in every row
+  - timber_78_market: filled but always zero
+  - timber_78_market: a run of zeros is used as a placeholder (['000000000000', 59549])
+  - ag_late_loss: a run of zeros is used as a placeholder (['000000000000', 59543])
+  - late_freeport_penalty: filled but always zero
+  - late_freeport_penalty: a run of zeros is used as a placeholder (['000000000000', 59549])
+  - filler_4127: blank in every row
+  - filler_4129: blank in every row
+  - filler_4134: blank in every row
+  - filler_4176: blank in every row
+  - filler_4228: blank in every row
+  - filler_4248: blank in every row
+  - filler_4268: blank in every row
+  - filler_4288: blank in every row
+  - filler_4289: blank in every row
+  - filler_4290: blank in every row
+  - filler_4360: only 39 rows filled (0.1%)
+  - filler_4385: only 4 rows filled (0.0%)
+  - situs_unit: only 1,042 rows filled (1.7%)
+  - appr_addr_line3: only 9 rows filled (0.0%)
+  - appr_addr_zip_cass_route: blank in every row
+  - appr_confidential_name: blank in every row
+  - py_confidential_name: blank in every row
+  - jan1_confidential_name: blank in every row
+  - filler_5071: blank in every row
+  - rendition_date: only 1,963 rows filled (3.3%)
+  - rendition_penalty: a run of zeros is used as a placeholder (['000000000000000', 59415])
+  - rendition_penalty_date_paid: blank in every row
+  - rendition_fraud_penalty: filled but always zero
+  - rendition_fraud_penalty: a run of zeros is used as a placeholder (['000000000000000', 59549])
+  - rendition_fraud_penalty_date_paid: blank in every row
+  - filler_5182: blank in every row
+  - dataset_id: a run of zeros is used as a placeholder (['000000000000000', 59549])
+  - exemption_percentage: a run of zeros is used as a placeholder (['000000000000000', 47041])
+  - filler_5436: blank in every row
+  - ex_qualify_yr: filled but always zero
+  - ab_qualify_yr: filled but always zero
+  - en_qualify_yr: filled but always zero
+  - ht_qualify_yr: filled but always zero
+  - pro_qualify_yr: filled but always zero
+  - pc_qualify_yr: filled but always zero
+  - ex366_qualify_yr: filled but always zero
+  - ch_qualify_yr: filled but always zero
+  - eco_qualify_yr: filled but always zero
+  - chodo_qualify_yr: filled but always zero
+  - git_qualify_yr: filled but always zero
+  - mortgage_addr_line1: blank in every row
+  - mortgage_addr_line2: blank in every row
+  - mortgage_addr_line3: blank in every row
+  - mortgage_addr_city: blank in every row
+  - mortgage_addr_state: blank in every row
+  - mortgage_addr_country: blank in every row
+  - mortgage_addr_zip: blank in every row
+  - mortgage_addr_zip_cass: blank in every row
+  - mortgage_addr_zip_rt: blank in every row
+  - sic_code: blank in every row
+  - hs_prorate_end: only 81 rows filled (0.1%)
+  - ov65s_prorate_begin: only 6 rows filled (0.0%)
+  - ov65s_prorate_end: blank in every row
+  - dp_prorate_begin: only 9 rows filled (0.0%)
+  - dp_prorate_end: only 3 rows filled (0.0%)
+  - dv1_prorate_begin: blank in every row
+  - dv1_prorate_end: blank in every row
+  - dv1s_prorate_begin: blank in every row
+  - dv1s_prorate_end: blank in every row
+  - dv2_prorate_begin: blank in every row
+  - dv2_prorate_end: blank in every row
+  - dv2s_prorate_begin: blank in every row
+  - dv2s_prorate_end: blank in every row
+  - dv3_prorate_begin: blank in every row
+  - dv3_prorate_end: blank in every row
+  - dv3s_prorate_begin: blank in every row
+  - dv3s_prorate_end: blank in every row
+  - dv4_prorate_begin: blank in every row
+  - dv4_prorate_end: blank in every row
+  - dv4s_prorate_begin: blank in every row
+  - dv4s_prorate_end: blank in every row
+  - lve_prorate_begin: blank in every row
+  - lve_prorate_end: blank in every row
+  - ab_prorate_begin: blank in every row
+  - ab_prorate_end: blank in every row
+  - en_prorate_begin: blank in every row
+  - en_prorate_end: blank in every row
+  - fr_prorate_begin: blank in every row
+  - fr_prorate_end: blank in every row
+  - ht_prorate_begin: blank in every row
+  - ht_prorate_end: blank in every row
+  - pro_prorate_begin: blank in every row
+  - pro_prorate_end: blank in every row
+  - pc_prorate_begin: blank in every row
+  - pc_prorate_end: blank in every row
+  - so_prorate_begin: blank in every row
+  - so_prorate_end: blank in every row
+  - ex366_prorate_begin: blank in every row
+  - ex366_prorate_end: blank in every row
+  - ch_prorate_begin: blank in every row
+  - ch_prorate_end: blank in every row
+  - dps_prorate_begin: blank in every row
+  - dps_prorate_end: only 1 rows filled (0.0%)
+  - eco_prorate_begin: blank in every row
+  - eco_prorate_end: blank in every row
+  - chodo_prorate_begin: blank in every row
+  - chodo_prorate_end: blank in every row
+  - lih_prorate_begin: blank in every row
+  - lih_prorate_end: blank in every row
+  - git_prorate_begin: blank in every row
+  - git_prorate_end: blank in every row
+  - clt_prorate_begin: blank in every row
+  - clt_prorate_end: blank in every row
+  - clt_qualify_yr: filled but always zero
+  - dvhss_prorate_begin: only 4 rows filled (0.0%)
+  - dvhss_prorate_end: only 2 rows filled (0.0%)
+  - omitted_imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 59548])
+  - omitted_imprv_non_hstd_val: filled but always zero
+  - omitted_imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 59549])
+  - dvhs_prorate_begin: only 554 rows filled (0.9%)
+  - dvhs_prorate_end: only 43 rows filled (0.1%)
+  - ex_xd_qualify_yr: filled but always zero
+  - ex_xd_prorate_begin: blank in every row
+  - ex_xd_prorate_end: blank in every row
+  - ex_xf_qualify_yr: filled but always zero
+  - ex_xf_prorate_begin: blank in every row
+  - ex_xf_prorate_end: blank in every row
+  - ex_xg_prorate_begin: blank in every row
+  - ex_xg_prorate_end: blank in every row
+  - ex_xh_qualify_yr: filled but always zero
+  - ex_xh_prorate_begin: blank in every row
+  - ex_xh_prorate_end: blank in every row
+  - ex_xi_prorate_begin: blank in every row
+  - ex_xi_prorate_end: blank in every row
+  - ex_xj_prorate_begin: blank in every row
+  - ex_xj_prorate_end: blank in every row
+  - ex_xl_prorate_begin: only 2 rows filled (0.0%)
+  - ex_xl_prorate_end: only 1 rows filled (0.0%)
+  - ex_xm_qualify_yr: filled but always zero
+  - ex_xm_prorate_begin: blank in every row
+  - ex_xm_prorate_end: blank in every row
+  - ex_xn_prorate_begin: blank in every row
+  - ex_xn_prorate_end: blank in every row
+  - ex_xo_qualify_yr: filled but always zero
+  - ex_xo_prorate_begin: blank in every row
+  - ex_xo_prorate_end: blank in every row
+  - ex_xp_qualify_yr: filled but always zero
+  - ex_xp_prorate_begin: blank in every row
+  - ex_xp_prorate_end: blank in every row
+  - ex_xq_qualify_yr: filled but always zero
+  - ex_xq_prorate_begin: blank in every row
+  - ex_xq_prorate_end: blank in every row
+  - ex_xr_prorate_begin: blank in every row
+  - ex_xr_prorate_end: blank in every row
+  - ex_xs_qualify_yr: filled but always zero
+  - ex_xs_prorate_begin: blank in every row
+  - ex_xs_prorate_end: blank in every row
+  - ex_xt_qualify_yr: filled but always zero
+  - ex_xt_prorate_begin: blank in every row
+  - ex_xt_prorate_end: blank in every row
+  - ex_xu_prorate_begin: blank in every row
+  - ex_xu_prorate_end: blank in every row
+  - ex_xv_prorate_begin: only 34 rows filled (0.1%)
+  - ex_xv_prorate_end: only 2 rows filled (0.0%)
+  - ex_xa_qualify_yr: filled but always zero
+  - ex_xa_prorate_begin: blank in every row
+  - ex_xa_prorate_end: blank in every row
+  - lve_qualify_yr: filled but always zero
+  - ppv_qualify_yr: filled but always zero
+  - ppv_prorate_begin: blank in every row
+  - ppv_prorate_end: blank in every row
+  - dvch_qualify_yr: filled but always zero
+  - dvch_prorate_begin: blank in every row
+  - dvch_prorate_end: blank in every row
+  - dvchs_qualify_yr: filled but always zero
+  - dvchs_prorate_begin: blank in every row
+  - dvchs_prorate_end: blank in every row
+  - masss_prorate_begin: blank in every row
+  - masss_prorate_end: blank in every row
+  - pp_late_interstate_allocation_val: filled but always zero
+  - pp_late_interstate_allocation_val: a run of zeros is used as a placeholder (['000000000000000', 59549])
+  - appraised_val_reflecting_productivity_loss: filled but always zero
+  - appraised_val_reflecting_productivity_loss: a run of zeros is used as a placeholder (['000000000000000', 59549])
+  - assessed_val_reflecting_productivity_loss: filled but always zero
+  - assessed_val_reflecting_productivity_loss: a run of zeros is used as a placeholder (['000000000000000', 59549])
+  - frss_prorate_begin: blank in every row
+  - frss_prorate_end: blank in every row
+  - abmno_qualify_yr: blank in every row
+  - abmno_prorate_begin: blank in every row
+  - abmno_prorate_end: blank in every row
+  - filler_8743: blank in every row
+  - filler_8768: blank in every row
+  - filler_8793: blank in every row
+  - filler_8818: blank in every row
+  - filler_8843: blank in every row
+  - filler_8868: blank in every row
+  - filler_8893: blank in every row
+  - filler_8918: blank in every row
+  - dstr_qualify_yr: blank in every row
+  - dstr_prorate_begin: blank in every row
+  - dstr_prorate_end: blank in every row
+  - late_correction_val: filled but always zero
+  - late_correction_val: a run of zeros is used as a placeholder (['000000000000000', 59549])
+  - dstrs_qualify_yr: blank in every row
+  - dstrs_prorate_begin: blank in every row
+  - dstrs_prorate_end: blank in every row
+  - nhs_cap_loss: a run of zeros is used as a placeholder (['000000000000000', 57781])
+  - ccf_qualify_yr: blank in every row
+  - ccf_prorate_begin: blank in every row
+  - ccf_prorate_end: blank in every row
+  - med_qualify_yr: blank in every row
+  - med_prorate_begin: blank in every row
+  - med_prorate_end: blank in every row
+  - jeti_qualify_yr: blank in every row
+  - jeti_prorate_begin: blank in every row
+  - jeti_prorate_end: blank in every row
+  - rows 59,536 -> 59,549
+  - dvhss_prorate_end: type Empty -> Date
+  - dps_prorate_end: type Empty -> Date
+  - sup_desc: type Empty -> Text
+  - sup_cd: type Empty -> Text
+== s26-entinfo (249,479 rows, 187 cols)
+  - sup_num: a run of zeros is used as a placeholder (['000000000000', 244907])
+  - entity_xref_id: blank in every row
+  - filler_134: blank in every row
+  - taxable_val: a run of zeros is used as a placeholder (['000000000000000', 20233])
+  - ab_amt: filled but always zero
+  - ab_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - en_amt: filled but always zero
+  - en_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - fr_amt: a run of zeros is used as a placeholder (['000000000000000', 249385])
+  - ht_amt: filled but always zero
+  - ht_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - pro_amt: filled but always zero
+  - pro_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - pc_amt: a run of zeros is used as a placeholder (['000000000000000', 249454])
+  - so_amt: a run of zeros is used as a placeholder (['000000000000000', 249402])
+  - ex366_amt: filled but always zero
+  - ex366_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - hs_amt: a run of zeros is used as a placeholder (['000000000000000', 213886])
+  - ov65_amt: a run of zeros is used as a placeholder (['000000000000000', 219934])
+  - dp_amt: a run of zeros is used as a placeholder (['000000000000000', 248800])
+  - dv_amt: a run of zeros is used as a placeholder (['000000000000000', 245091])
+  - ex_amt: a run of zeros is used as a placeholder (['000000000000000', 249448])
+  - ch_amt: filled but always zero
+  - ch_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - hs_cap: a run of zeros is used as a placeholder (['000000000000000', 225355])
+  - ag_late_loss: a run of zeros is used as a placeholder (['000000000000000', 249456])
+  - freeport_late_loss: filled but always zero
+  - freeport_late_loss: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - hs_state_amt: a run of zeros is used as a placeholder (['000000000000000', 215639])
+  - hs_local_amt: a run of zeros is used as a placeholder (['000000000000000', 247726])
+  - land_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 59308])
+  - land_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 208799])
+  - imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 57201])
+  - imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 238843])
+  - ag_use_val: a run of zeros is used as a placeholder (['000000000000000', 244873])
+  - ag_market_val: a run of zeros is used as a placeholder (['000000000000000', 244873])
+  - tim_use_val: filled but always zero
+  - tim_use_val: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - tim_market_val: filled but always zero
+  - tim_market_val: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - freeze_ceiling: a run of zeros is used as a placeholder (['000000000000000', 224977])
+  - freeze_transfer_date: only 167 rows filled (0.1%)
+  - freeze_previous_tax: a run of zeros is used as a placeholder (['000000000000000', 249347])
+  - freeze_previous_tax_unfrozen: a run of zeros is used as a placeholder (['000000000000000', 249319])
+  - lve_amt: a run of zeros is used as a placeholder (['000000000000000', 249463])
+  - eco_amt: filled but always zero
+  - eco_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - ag_use_val_ne: a run of zeros is used as a placeholder (['000000000000000', 244873])
+  - ag_use_val_ex: filled but always zero
+  - ag_use_val_ex: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - ag_market_ne: a run of zeros is used as a placeholder (['000000000000000', 244873])
+  - ag_market_ex: filled but always zero
+  - ag_market_ex: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - timber_use_ne: filled but always zero
+  - timber_use_ne: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - timber_use_ex: filled but always zero
+  - timber_use_ex: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - timber_market_ne: filled but always zero
+  - timber_market_ne: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - timber_market_ex: filled but always zero
+  - timber_market_ex: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - new_val_hs: a run of zeros is used as a placeholder (['000000000000000', 237751])
+  - new_val_nhs: a run of zeros is used as a placeholder (['000000000000000', 248779])
+  - new_val_p: filled but always zero
+  - new_val_p: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - new_val_taxable: a run of zeros is used as a placeholder (['000000000000000', 237174])
+  - dataset_id: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - chodo_amt: filled but always zero
+  - chodo_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - ent_pct_land_hs: a run of zeros is used as a placeholder (['001000000000000', 235601])
+  - ent_pct_land_nonhs: a run of zeros is used as a placeholder (['001000000000000', 235617])
+  - ent_pct_imprv_hs: a run of zeros is used as a placeholder (['001000000000000', 235602])
+  - ent_pct_imprv_nonhs: a run of zeros is used as a placeholder (['001000000000000', 235595])
+  - ent_pct_ag_use: a run of zeros is used as a placeholder (['001000000000000', 235594])
+  - ent_pct_ag_mkt: a run of zeros is used as a placeholder (['001000000000000', 235594])
+  - ent_pct_tim_use: filled but always zero
+  - ent_pct_tim_use: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - ent_pct_tim_mkt: filled but always zero
+  - ent_pct_tim_mkt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - ent_pct_pers: a run of zeros is used as a placeholder (['000000000000000', 236204])
+  - ent_pct_min: filled but always zero
+  - ent_pct_min: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - ent_pct_auto: filled but always zero
+  - ent_pct_auto: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - lih_amt: a run of zeros is used as a placeholder (['000000000000000', 249475])
+  - git_amt: filled but always zero
+  - git_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - dvhs_amt: a run of zeros is used as a placeholder (['000000000000000', 243131])
+  - tax_increment_imprv_val: a run of zeros is used as a placeholder (['000000000000000', 249465])
+  - tax_increment_land_val: a run of zeros is used as a placeholder (['000000000000000', 249355])
+  - weed_taxable_acres: filled but always zero
+  - weed_taxable_acres: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - hs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ov65_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ov65s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - dp_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - dps_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - dv1_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159928])
+  - dv1s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - dv2_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - dv2s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - dv3_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159926])
+  - dv3s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - dv4_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159909])
+  - dv4s_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - dvhs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ex_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ab_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - en_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - fr_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ht_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - pro_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - pc_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - so_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ex366_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ch_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - eco_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - chodo_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - lih_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - git_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - tax_increment_zone_cd: only 1,016 rows filled (0.4%)
+  - tax_increment_zone_desc: only 1,016 rows filled (0.4%)
+  - omitted_imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 249475])
+  - omitted_imprv_non_hstd_val: filled but always zero
+  - omitted_imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - clt_amt: filled but always zero
+  - clt_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - clt_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - dvhss_amt: a run of zeros is used as a placeholder (['000000000000000', 249402])
+  - dvhss_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - homestead_group_exemption_factor: a run of zeros is used as a placeholder (['001000000000000', 159445])
+  - ex_xd_amt: filled but always zero
+  - ex_xd_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - ex_xd_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ex_xf_amt: filled but always zero
+  - ex_xf_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - ex_xf_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ex_xg_amt: a run of zeros is used as a placeholder (['000000000000000', 249471])
+  - ex_xg_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ex_xh_amt: filled but always zero
+  - ex_xh_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - ex_xh_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ex_xi_amt: a run of zeros is used as a placeholder (['000000000000000', 249475])
+  - ex_xi_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ex_xj_amt: a run of zeros is used as a placeholder (['000000000000000', 249472])
+  - ex_xj_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ex_xl_amt: a run of zeros is used as a placeholder (['000000000000000', 249351])
+  - ex_xl_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ex_xm_amt: filled but always zero
+  - ex_xm_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - ex_xm_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ex_xn_amt: a run of zeros is used as a placeholder (['000000000000000', 249452])
+  - ex_xn_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ex_xo_amt: filled but always zero
+  - ex_xo_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - ex_xo_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ex_xp_amt: filled but always zero
+  - ex_xp_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - ex_xp_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ex_xq_amt: filled but always zero
+  - ex_xq_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - ex_xq_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ex_xr_amt: a run of zeros is used as a placeholder (['000000000000000', 249390])
+  - ex_xr_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ex_xs_amt: filled but always zero
+  - ex_xs_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - ex_xs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ex_xt_amt: filled but always zero
+  - ex_xt_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - ex_xt_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ex_xu_amt: a run of zeros is used as a placeholder (['000000000000000', 249475])
+  - ex_xu_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ex_xv_amt: a run of zeros is used as a placeholder (['000000000000000', 246387])
+  - ex_xv_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ex_xa_amt: filled but always zero
+  - ex_xa_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - ex_xa_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - lve_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - ppv_amt: filled but always zero
+  - ppv_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - ppv_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - dvch_amt: filled but always zero
+  - dvch_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - dvch_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - dvchs_amt: filled but always zero
+  - dvchs_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - dvchs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - masss_amt: a run of zeros is used as a placeholder (['000000000000000', 249462])
+  - masss_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - pp_late_interstate_allocation_val: filled but always zero
+  - pp_late_interstate_allocation_val: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - frss_amt: a run of zeros is used as a placeholder (['000000000000000', 249468])
+  - frss_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - abmno_amt: filled but always zero
+  - abmno_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - abmno_allocation_factor: filled but always zero
+  - abmno_allocation_factor: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - dstr_amt: filled but always zero
+  - dstr_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - dstr_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - late_correction_val: filled but always zero
+  - late_correction_val: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - dstrs_amt: filled but always zero
+  - dstrs_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - dstrs_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - err_exemption_removal_increase: filled but always zero
+  - err_exemption_removal_increase: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - mcr_freeze_ceiling_reduction_amount: filled but always zero
+  - mcr_freeze_ceiling_reduction_amount: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - nhs_cap_loss: a run of zeros is used as a placeholder (['000000000000000', 242768])
+  - ccf_amt: filled but always zero
+  - ccf_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - ccf_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - med_amt: filled but always zero
+  - med_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - med_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - jeti_amt: filled but always zero
+  - jeti_amt: a run of zeros is used as a placeholder (['000000000000000', 249479])
+  - jeti_allocation_factor: a run of zeros is used as a placeholder (['001000000000000', 159930])
+  - rows 249,401 -> 249,479
+== s26-enttot (62 rows, 154 cols)
+  - land_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 6])
+  - land_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 4])
+  - imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 8])
+  - imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 24])
+  - ag_use_val: a run of zeros is used as a placeholder (['000000000000000', 51])
+  - tim_use_val: filled but always zero
+  - tim_use_val: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - ag_market_val: a run of zeros is used as a placeholder (['000000000000000', 51])
+  - tim_market_val: filled but always zero
+  - tim_market_val: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - taxable_val: a run of zeros is used as a placeholder (['000000000000000', 2])
+  - mineral_val: filled but always zero
+  - mineral_val: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - personal_val: a run of zeros is used as a placeholder (['000000000000000', 43])
+  - auto_val: filled but always zero
+  - auto_val: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - real_mobile_val: a run of zeros is used as a placeholder (['000000078461376', 2])
+  - num_real_mobile: a run of zeros is used as a placeholder (['000000000497', 2])
+  - num_personal: a run of zeros is used as a placeholder (['000000000000', 41])
+  - num_mineral: filled but always zero
+  - num_mineral: a run of zeros is used as a placeholder (['000000000000', 62])
+  - num_auto: filled but always zero
+  - num_auto: a run of zeros is used as a placeholder (['000000000000', 62])
+  - hs_cap_count: a run of zeros is used as a placeholder (['000000000000', 43])
+  - hs_cap: a run of zeros is used as a placeholder (['000000000000000', 43])
+  - hs_count: a run of zeros is used as a placeholder (['000000000000', 59])
+  - hs_local_amount: a run of zeros is used as a placeholder (['000000000000000', 61])
+  - hs_state_amount: a run of zeros is used as a placeholder (['000000000000000', 60])
+  - ov65_count: a run of zeros is used as a placeholder (['000000000000', 48])
+  - ov65_amt: a run of zeros is used as a placeholder (['000000000000000', 48])
+  - dp_count: a run of zeros is used as a placeholder (['000000000000', 50])
+  - dp_amt: a run of zeros is used as a placeholder (['000000000000000', 50])
+  - dv_count: a run of zeros is used as a placeholder (['000000000000', 44])
+  - dv_amt: a run of zeros is used as a placeholder (['000000000000000', 44])
+  - ab_count: filled but always zero
+  - ab_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - ab_amt: filled but always zero
+  - ab_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - fr_count: a run of zeros is used as a placeholder (['000000000000', 55])
+  - fr_amt: a run of zeros is used as a placeholder (['000000000000000', 55])
+  - pc_count: a run of zeros is used as a placeholder (['000000000000', 54])
+  - pc_amt: a run of zeros is used as a placeholder (['000000000000000', 54])
+  - ex366_count: filled but always zero
+  - ex366_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - ex366_amt: filled but always zero
+  - ex366_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - ht_count: filled but always zero
+  - ht_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - ht_amt: filled but always zero
+  - ht_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - so_count: a run of zeros is used as a placeholder (['000000000000', 49])
+  - so_amt: a run of zeros is used as a placeholder (['000000000000000', 49])
+  - ex_count: a run of zeros is used as a placeholder (['000000000000', 54])
+  - ex_amt: a run of zeros is used as a placeholder (['000000000000000', 54])
+  - ch_count: filled but always zero
+  - ch_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - ch_amt: filled but always zero
+  - ch_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - ag_late_count: a run of zeros is used as a placeholder (['000000000000', 56])
+  - ag_late_loss: a run of zeros is used as a placeholder (['000000000000000', 56])
+  - freeport_late_count: filled but always zero
+  - freeport_late_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - freeport_late_loss: filled but always zero
+  - freeport_late_loss: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - lve_count: a run of zeros is used as a placeholder (['000000000000', 46])
+  - lve_amt: a run of zeros is used as a placeholder (['000000000000000', 46])
+  - eco_count: filled but always zero
+  - eco_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - eco_amt: filled but always zero
+  - eco_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - ag_use_val_ne: a run of zeros is used as a placeholder (['000000000000000', 51])
+  - ag_use_val_ex: filled but always zero
+  - ag_use_val_ex: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - ag_market_ne: a run of zeros is used as a placeholder (['000000000000000', 51])
+  - ag_market_ex: filled but always zero
+  - ag_market_ex: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - timber_use_ne: filled but always zero
+  - timber_use_ne: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - timber_use_ex: filled but always zero
+  - timber_use_ex: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - timber_market_ne: filled but always zero
+  - timber_market_ne: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - timber_market_ex: filled but always zero
+  - timber_market_ex: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - en_count: filled but always zero
+  - en_count: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - en_amt: filled but always zero
+  - en_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - dataset_id: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - chodo_count: filled but always zero
+  - chodo_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - chodo_amt: filled but always zero
+  - chodo_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - lih_count: a run of zeros is used as a placeholder (['000000000000', 58])
+  - lih_amt: a run of zeros is used as a placeholder (['000000000000000', 58])
+  - git_count: filled but always zero
+  - git_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - git_amt: filled but always zero
+  - git_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - dvhs_count: a run of zeros is used as a placeholder (['000000000000', 44])
+  - dvhs_amt: a run of zeros is used as a placeholder (['000000000000000', 44])
+  - tax_increment_imprv_val: a run of zeros is used as a placeholder (['000000000000000', 59])
+  - tax_increment_land_val: a run of zeros is used as a placeholder (['000000000000000', 59])
+  - weed_taxable_acres: filled but always zero
+  - weed_taxable_acres: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - omitted_imprv_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 58])
+  - omitted_imprv_non_hstd_val: filled but always zero
+  - omitted_imprv_non_hstd_val: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - clt_count: filled but always zero
+  - clt_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - clt_amt: filled but always zero
+  - clt_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - dvhss_count: a run of zeros is used as a placeholder (['000000000000', 50])
+  - dvhss_amt: a run of zeros is used as a placeholder (['000000000000000', 50])
+  - ex_xd_count: filled but always zero
+  - ex_xd_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - ex_xd_amt: filled but always zero
+  - ex_xd_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - ex_xf_count: filled but always zero
+  - ex_xf_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - ex_xf_amt: filled but always zero
+  - ex_xf_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - ex_xg_count: a run of zeros is used as a placeholder (['000000000000', 58])
+  - ex_xg_amt: a run of zeros is used as a placeholder (['000000000000000', 58])
+  - ex_xh_count: filled but always zero
+  - ex_xh_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - ex_xh_amt: filled but always zero
+  - ex_xh_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - ex_xi_count: a run of zeros is used as a placeholder (['000000000000', 58])
+  - ex_xi_amt: a run of zeros is used as a placeholder (['000000000000000', 58])
+  - ex_xj_count: a run of zeros is used as a placeholder (['000000000000', 58])
+  - ex_xj_amt: a run of zeros is used as a placeholder (['000000000000000', 58])
+  - ex_xl_count: a run of zeros is used as a placeholder (['000000000000', 55])
+  - ex_xl_amt: a run of zeros is used as a placeholder (['000000000000000', 55])
+  - ex_xm_count: filled but always zero
+  - ex_xm_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - ex_xm_amt: filled but always zero
+  - ex_xm_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - ex_xn_count: a run of zeros is used as a placeholder (['000000000000', 51])
+  - ex_xn_amt: a run of zeros is used as a placeholder (['000000000000000', 51])
+  - ex_xo_count: filled but always zero
+  - ex_xo_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - ex_xo_amt: filled but always zero
+  - ex_xo_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - ex_xp_count: filled but always zero
+  - ex_xp_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - ex_xp_amt: filled but always zero
+  - ex_xp_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - ex_xq_count: filled but always zero
+  - ex_xq_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - ex_xq_amt: filled but always zero
+  - ex_xq_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - ex_xr_count: a run of zeros is used as a placeholder (['000000000000', 54])
+  - ex_xr_amt: a run of zeros is used as a placeholder (['000000000000000', 54])
+  - ex_xs_count: filled but always zero
+  - ex_xs_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - ex_xs_amt: filled but always zero
+  - ex_xs_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - ex_xt_count: filled but always zero
+  - ex_xt_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - ex_xt_amt: filled but always zero
+  - ex_xt_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - ex_xu_count: a run of zeros is used as a placeholder (['000000000000', 58])
+  - ex_xu_amt: a run of zeros is used as a placeholder (['000000000000000', 58])
+  - ex_xv_count: a run of zeros is used as a placeholder (['000000000000', 43])
+  - ex_xv_amt: a run of zeros is used as a placeholder (['000000000000000', 43])
+  - ex_xa_count: filled but always zero
+  - ex_xa_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - ex_xa_amt: filled but always zero
+  - ex_xa_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - ppv_count: filled but always zero
+  - ppv_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - ppv_amt: filled but always zero
+  - ppv_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - dvch_count: filled but always zero
+  - dvch_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - dvch_amt: filled but always zero
+  - dvch_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - dvchs_count: filled but always zero
+  - dvchs_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - dvchs_amt: filled but always zero
+  - dvchs_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - masss_count: a run of zeros is used as a placeholder (['000000000000', 53])
+  - masss_amt: a run of zeros is used as a placeholder (['000000000000000', 53])
+  - pp_late_interstate_allocation_count: filled but always zero
+  - pp_late_interstate_allocation_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - pp_late_interstate_allocation_val: filled but always zero
+  - pp_late_interstate_allocation_val: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - frss_count: a run of zeros is used as a placeholder (['000000000000', 57])
+  - frss_amt: a run of zeros is used as a placeholder (['000000000000000', 57])
+  - abmno_count: filled but always zero
+  - abmno_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - abmno_amt: filled but always zero
+  - abmno_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - dstr_count: filled but always zero
+  - dstr_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - dstr_amt: filled but always zero
+  - dstr_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - late_correction_count: filled but always zero
+  - late_correction_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - late_correction_val: filled but always zero
+  - late_correction_val: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - dstrs_count: filled but always zero
+  - dstrs_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - dstrs_amt: filled but always zero
+  - dstrs_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - err_exemption_removal_increase_count: filled but always zero
+  - err_exemption_removal_increase_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - err_exemption_removal_increase: filled but always zero
+  - err_exemption_removal_increase: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - nhs_cap_loss_count: a run of zeros is used as a placeholder (['000000000000', 18])
+  - nhs_cap_loss: a run of zeros is used as a placeholder (['000000000000000', 38])
+  - ccf_count: filled but always zero
+  - ccf_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - ccf_amt: filled but always zero
+  - ccf_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - med_count: filled but always zero
+  - med_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - med_amt: filled but always zero
+  - med_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - jeti_count: filled but always zero
+  - jeti_count: a run of zeros is used as a placeholder (['000000000000', 62])
+  - jeti_amt: filled but always zero
+  - jeti_amt: a run of zeros is used as a placeholder (['000000000000000', 62])
+  - unmapped_tail: a run of zeros is used as a placeholder (['000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000', 42])
+  - rows 61 -> 62
+== s26-entity (111 rows, 2 cols)
+  - rows 106 -> 111
+== s26-imprinfo (72,476 rows, 11 cols)
+  - omitted_imprv_val: filled but always zero
+  - omitted_imprv_val: a run of zeros is used as a placeholder (['000000000000000', 72476])
+  - rows 72,472 -> 72,476
+== s26-imprdet (250,965 rows, 12 cols)
+  - sketch_cmds: blank in every row
+  - rows 250,957 -> 250,965
+== s26-imprattr (330,104 rows, 7 cols)
+  - rows 330,112 -> 330,104
+== s26-sketch (199,699 rows, 7 cols)
+  - rows 198,449 -> 199,699
+== s26-mobile (1,200 rows, 12 cols)
+  - mbl_hm_sn_3: only 7 rows filled (0.6%)
+  - mbl_hm_hud_num_3: only 7 rows filled (0.6%)
+  - rows 1,200 -> 1,200
+== s26-land (56,683 rows, 19 cols)
+  - effective_front: a run of zeros is used as a placeholder (['00000000000000', 25818])
+  - effective_depth: a run of zeros is used as a placeholder (['00000000000000', 25818])
+  - ag_ls_method: only 1,642 rows filled (2.9%)
+  - ag_ls_class: only 1,511 rows filled (2.7%)
+  - rows 56,677 -> 56,683
+== s26-sb12 (30,229 rows, 19 cols)
+  - col_13: negative values (min -11,994.66)
+  - rows 30,178 -> 30,229
+== s26-defer (111 rows, 8 cols)
+  - deferral_end_date: blank in every row
+  - last_change_date: only 3 rows filled (2.7%)
+  - rows 112 -> 111
+== s26-arb (30 rows, 6 cols)
+  - ref_id1: blank in every row
+  - rows 97 -> 30
+  - ref_id2: filled 59.8% -> 70.0%
+== s26-lawsuit (396 rows, 5 cols)
+  - ref_id1: blank in every row
+  - rows 396 -> 396
+== s26-arblaw (0 rows, 5 cols)
+  - prop_id: blank in every row
+  - prop_val_yr: only 0 rows filled (0.0%)
+  - prop_val_yr: filled but always zero
+  - geo_id: blank in every row
+  - ref_id1: blank in every row
+  - ref_id2: blank in every row
+  - rows 0 -> 0
+== s26-agent (3,695 rows, 11 cols)
+  - agent_addr_line2: only 1 rows filled (0.0%)
+  - agent_addr_line3: only 1 rows filled (0.0%)
+  - agent_zip_rt: blank in every row
+  - rows 3,694 -> 3,695
+== s26-abs (2,095 rows, 2 cols)
+  - rows 2,056 -> 2,095
+== s26-state (288 rows, 5 cols)
+  - rows 288 -> 288
+== s26-country (246 rows, 2 cols)
+  - rows 246 -> 246
+== s26-header (1 rows, 12 cols)
+  - value_option: blank in every row
+  - office_use_only: blank in every row
+  - rows 1 -> 1
