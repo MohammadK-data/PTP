@@ -20,8 +20,10 @@ Columns returned (one row per prop_id):
                           market_value of the FINAL export's APPRAISAL_INFO (default 2026-3, 2026-10-14)
                        -> if not protested: market_value = final_value = current ownerMarketValue (reduction 0)
     final_source       'appeal', '2026-3 export' or 'no protest'
-    owner_pct          total ownerPct of the owners in the JSON record; below 100 (e.g. one 50% owner) all
-                       values are that share, and the appeal's whole-property values are scaled to it
+    owner_count, owner_pct   owners listed in the JSON record and their total ownerPct
+    basis_adjusted     True when an appeal value was converted to the record's basis: on multi-owner
+                       properties an appeal value can be the whole property or one owner's share while
+                       ownerValue lists each owner's share (see basis_factor)
     reduction          market_value - final_value
     reduction_pct      (final_value - market_value) / final_value
     agent_id, agent_name          current appraisal (CA) agent, from the FINAL export
@@ -41,6 +43,7 @@ APPRAISAL_INFO.TXT is scanned once and its needed columns cached in output/slim/
 
 import csv
 import json
+import math
 from pathlib import Path
 
 import pandas as pd
@@ -159,23 +162,36 @@ def _appeals(ids):
                 return sum(vals) if vals else None
 
             cur = owner_sum("ownerMarketValue")
-            pct = sum(o.get("ownerPct") or 0 for o in rec.get("owners") or [])
-            share = pct / 100 if 0 < pct < 99.99 else 1.0
+            pcts = [o.get("ownerPct") or 0 for o in rec.get("owners") or []]
+            pct = sum(pcts)
             row = {"prop_id": pid, "net_appraised": owner_sum("ownerNetAppraisedValue"),
-                   "current_market": cur, "owner_pct": round(pct, 4) if pct else None}
+                   "current_market": cur, "owner_count": len(pcts), "owner_pct": round(pct, 4) if pct else None}
 
-            def to_share(v, always_whole):
-                """When the record lists only part of the ownership (e.g. one 50% owner), ownerValue holds that
-                share but appeal values can be for the whole property: finalMarketValue always is, while
-                initialMarketValue usually is the share (530958: 166,073 initial vs 332,146 final) and
-                sometimes the whole (6457). Put appeal values on the share basis, like appraised_value."""
-                if v is None or share == 1.0:
+            def basis_factor(v, initial=False):
+                """Factor that puts an appeal value on the same basis as the current values (the total of the
+                owners listed in the record). Each owner's ownerValue holds only that owner's share, while an
+                appeal value can be for the listed owners, the whole property, or the one owner who appealed:
+                  530958  only one 50% owner listed, final 332,146 = whole property      -> x0.5
+                  6457    one 50% owner listed, initial 439,378 = whole property         -> x0.5
+                  7554    two 50% owners listed, initial 122,610 = one owner's share     -> x2
+                  586     two 50% owners listed, initial/final = whole = listed total    -> x1
+                Picks the candidate basis that lands closest to the current market value (for the initial value,
+                among those not below it)."""
+                positive = [q for q in pcts if q > 0]
+                if not v or not cur or not positive or (len(positive) == 1 and pct >= 99.99):
+                    return 1.0
+                cands = [1.0, pct / 100] + [pct / q for q in set(positive)]
+                if initial:
+                    # a protest doesn't raise the value: prefer bases where notice >= current (36804: 28/72% owners,
+                    # initial 1,968,868 -> 28% share = 7,031,671 notice, not 72% = 2,734,539 below the 4,219,003 final)
+                    cands = [f_ for f_ in cands if v * f_ >= cur - 2] or cands
+                return min(cands, key=lambda f_: (abs(math.log(v * f_ / cur)), f_ != 1.0))
+
+            def on_basis(v, f_):
+                if v is None or f_ == 1.0:
                     return v
-                if cur is not None and abs(v * share - cur) <= 2:      # whole value of the current market
-                    return cur
-                if always_whole or (cur is not None and abs(v * share - cur) < abs(v - cur)):
-                    return round(v * share)
-                return v
+                x = v * f_
+                return cur if abs(x - cur) <= 2 else round(x)
 
             # CLERICAL records are CAD value corrections, not protests (usually a copy of an AGREEMENT,
             # sometimes the only record, e.g. 1008022) -> ignored
@@ -186,16 +202,20 @@ def _appeals(ids):
                 # initial value from the first appeal; final from the latest finalized one
                 # (unfinalized appeals, e.g. SCHEDULED / FILED, carry finalMarketValue = 0)
                 done = [a for a in aps if a.get("finalized") and a.get("finalMarketValue")]
+                fi = basis_factor(aps[0].get("initialMarketValue"), initial=True)
+                ff = basis_factor(done[-1]["finalMarketValue"]) if done else 1.0
                 row.update({
-                    "initial_market": to_share(aps[0].get("initialMarketValue"), always_whole=False),
-                    "final_market": to_share(done[-1]["finalMarketValue"], always_whole=True) if done else None,
+                    "initial_market": on_basis(aps[0].get("initialMarketValue"), fi),
+                    "final_market": on_basis(done[-1]["finalMarketValue"], ff) if done else None,
+                    "basis_adjusted": fi != 1.0 or ff != 1.0,
                     "appeal_id": aps[0].get("appealID"),
                     "appeal_type": aps[0].get("appealType"),
                     "appeal_status": " / ".join(dict.fromkeys((x.get("appealStatus") or "").strip() for x in aps)),
                     "appeal_count": len(aps),
                 })
             rows.append(row)
-    cols = ["prop_id", "net_appraised", "current_market", "owner_pct", "initial_market", "final_market",
+    cols = ["prop_id", "net_appraised", "current_market", "owner_count", "owner_pct", "basis_adjusted",
+            "initial_market", "final_market",
             "appeal_id", "appeal_type", "appeal_status", "appeal_count"]
     return pd.DataFrame(rows, columns=cols).set_index("prop_id")
 
@@ -233,7 +253,9 @@ def get_values(ids, final_export=FINAL_EXPORT, out_csv=None):
     res["appeal_type"] = appeal["appeal_type"]
     res["appeal_status"] = appeal["appeal_status"]
     res["appeal_count"] = appeal["appeal_count"].astype("Int64")
+    res["owner_count"] = appeal["owner_count"].astype("Int64")
     res["owner_pct"] = appeal["owner_pct"]
+    res["basis_adjusted"] = appeal["basis_adjusted"].fillna(False).astype(bool)
     res["has_appeal"] = appeal["appeal_id"].notna()
     res["in_final"] = final["sup_num"].notna()
     res = res.reset_index()
