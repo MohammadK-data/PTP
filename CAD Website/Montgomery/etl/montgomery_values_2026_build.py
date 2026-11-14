@@ -18,10 +18,12 @@ Rules
               Open      not finalized (WH, EXP-NC, PROT, PROT-SCHD, R, EF_TL ...)
               ARB       DECISION.A / DECISION.D, or adjustment type F
               No-show   NS, HD.NAA, HD.ANN
-              Withdrawn EF_WD
-              Dismissed ERR, INVALID
-              Informal  TLCC, TLCNC, SW / SW-*, EF_AC, AC, EF_TL(NC), EXP-C, STB, NC, or adjustment type I
-              Other     anything else finalized (C, DP, REOPENED ...)
+              Withdrawn EF_WD, AC (agent cancelled), C (property owner cancelled)
+              Dismissed ERR, INVALID, DP (duplicate protest)
+              Informal  TLCC, TLCNC, SW / SW-*, EF_AC, EF_TL(NC), EXP-C, STB, NC, or adjustment type I
+              Other     anything else finalized (REOPENED ...)
+              Code meanings for AC, C, DP and HD.NAA are MCAD's own descriptions in the developers' protest file
+              (AC 2% reduced, C 3%: cancellations, not settlements).
     Neighborhood = JSON marketArea, else certified hood_cd.
 
 Output: output/montgomery_values_2026.csv
@@ -59,10 +61,10 @@ def main():
     a["fin"] = a.finalized.isin(["1", "1.0", "True"])
     st = a.appealStatus.str.strip()
     adj = a.valueDecisionAdjustmentType
-    informal = st.isin(["TLCC", "TLCNC", "EF_AC", "AC", "EF_TL", "EF_TLNC", "EXP-C", "NC"]) | st.str.startswith("SW") | \
+    informal = st.isin(["TLCC", "TLCNC", "EF_AC", "EF_TL", "EF_TLNC", "EXP-C", "NC"]) | st.str.startswith("SW") | \
         st.str.startswith("STB")
     a["path"] = np.select(
-        [~a.fin, st.isin(["NS", "HD.NAA", "HD.ANN"]), st.eq("EF_WD"), st.isin(["ERR", "INVALID"]),
+        [~a.fin, st.isin(["NS", "HD.NAA", "HD.ANN"]), st.isin(["EF_WD", "AC", "C"]), st.isin(["ERR", "INVALID", "DP"]),
          st.str.startswith("DECISION") | adj.eq("F"), informal | adj.eq("I")],
         ["Open", "No-show", "Withdrawn", "Dismissed", "ARB", "Informal"], default="Other")
     a["rank"] = a.path.map({"Informal": 0, "ARB": 0, "Other": 1, "Open": 2, "No-show": 3, "Withdrawn": 3, "Dismissed": 3})

@@ -17,9 +17,9 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
-OURS = {"tarrant": {"1487"}, "travis": {"1863738", "1898343", "1898284"}, "montgomery": {"654513"}, "denton": {"245"}}
-CAD = {"tarrant": "TAD", "travis": "TCAD", "montgomery": "MCAD", "denton": "DCAD"}
-EXPORT = {"travis": "Oct 6", "montgomery": "Aug 4", "denton": "Jul 27"}
+OURS = {"tarrant": {"1487"}, "travis": {"1863738", "1898343", "1898284"}, "montgomery": {"654513"}, "denton": {"245"}, "dallas": {"306"}, "rockwall": {"1044073", "1044084"}}
+CAD = {"tarrant": "TAD", "travis": "TCAD", "montgomery": "MCAD", "denton": "DCAD", "dallas": "DCAD", "rockwall": "RCAD"}
+EXPORT = {"travis": "Oct 6", "montgomery": "Aug 4", "denton": "Jul 27", "dallas": "Oct 30", "rockwall": "Oct 9"}
 
 
 def n(x):
