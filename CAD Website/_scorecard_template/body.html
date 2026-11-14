@@ -1,0 +1,134 @@
+<style>
+.wrap{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.pager{display:flex;gap:10px;align-items:center;font-size:13px;color:var(--ink-2);flex-wrap:wrap}
+.pill{font:600 11px/1 "Montserrat",sans-serif;padding:4px 7px;border-radius:3px;background:var(--line-2);color:var(--ink-2);letter-spacing:.03em}
+.pill.inf{background:color-mix(in srgb,var(--inf) 16%,transparent);color:var(--inf)}
+.pill.arb{background:color-mix(in srgb,var(--arb) 16%,transparent);color:var(--arb)}
+.pill.bad{background:color-mix(in srgb,var(--bad) 14%,transparent);color:var(--bad)}
+.pill.warn{background:color-mix(in srgb,var(--warn) 16%,transparent);color:var(--warn)}
+.flow .step .s{font-size:12.5px;color:var(--ink-2)}
+.flow .step.us{border-color:var(--us);background:var(--us-soft)}
+.flow .step.us .v{color:var(--us-ink)}
+td.wrapcell{white-space:normal;min-width:160px;text-align:left}
+</style>
+<div id="tip" role="tooltip"></div>
+<div class="wrap">
+<header class="top">
+  <div style="display:flex;flex-direction:column;gap:8px">
+    <span class="eyebrow" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><span style="font:800 15px/1 Montserrat,sans-serif;letter-spacing:.02em;color:var(--us);text-transform:none">Property Tax Protest</span><span>Agent 1863738 · Travis Central Appraisal District (TCAD)</span></span>
+    <h1>2026 Protest Scorecard vs. the Competition</h1>
+  </div>
+  <div class="meta">
+    <span>Data</span><b class="mono">Protax JSON Oct 6 · certified roll Oct 6</b>
+    <span>Years</span><b>2026</b>
+    <span>Scope</span><b>Every 2026 protest</b>
+    <span>Unit</span><b>Property (one row each)</b>
+  </div>
+</header>
+<nav class="toc" aria-label="Sections">
+  <a href="#summary">Summary</a><a href="#explorer">Benchmark explorer</a><a href="#matched">Like-for-like</a><a href="#path">ARB vs. informal</a><a href="#wins">Wins by value</a><a href="#accounts">Our accounts</a><a href="#checks">Data checks</a><a href="#method">Method &amp; open questions</a>
+</nav>
+<div class="yearbar">
+  <span class="eyebrow yb-lab">Page settings</span>
+  <div class="fgroup"><label class="eyebrow" for="f-win">Count as a win</label><select id="f-win"></select></div>
+  <p class="note yb-note">Sets every win rate on the page. It never changes dollars.</p>
+</div>
+<div class="draftnote"><b>Draft for review.</b> Built from TCAD's protax JSON export (Oct 6, 2026), 2026 appeals only, one row per property. Values the JSON doesn't have (appeals still open, a few missing notice values) come from the Oct 6 certified appraisal export. <b>Measured on market value:</b> notice = the appeal's initial market value, final = its final market value. <b>Ours</b> means the 2026 appeal was filed by agent 1863738 (or 1898343 / 1898284, also listed as Property Tax Protest). Open appeals and suspect values are left out of rates and dollars. Details under <a href="#method">Method &amp; open questions</a>.</div>
+
+<div class="kpis" id="kpis"></div>
+
+<section id="summary">
+  <div class="sec-head"><span class="eyebrow">Summary</span><h2>What the Travis data says about our 2026 season</h2></div>
+  <div class="findings" id="findings"></div>
+</section>
+
+<section id="explorer">
+  <div class="sec-head"><span class="eyebrow">Benchmark explorer</span><h2>Compare us against the top 16 agents</h2>
+  <p class="lede">Every number updates with the filters. Click a column header to sort. Reduction % is total dollars cut divided by total notice value. Avg % / property averages each account's own cut, counting no-change accounts as 0%.</p></div>
+  <div class="panel">
+    <div class="filters">
+      <div class="fgroup"><span class="eyebrow">Property type</span><div class="seg" id="f-sub"></div></div>
+      <div class="fgroup"><span class="eyebrow">Homestead</span><div class="seg" id="f-hs"></div></div>
+      <div class="fgroup"><span class="eyebrow">Resolution path</span><div class="seg" id="f-path"></div></div>
+      <div class="fgroup"><label class="eyebrow" for="f-tier">Notice market value</label><select id="f-tier"></select></div>
+      <div class="fgroup"><label class="eyebrow" for="f-metric">Chart metric</label><select id="f-metric"></select></div>
+    </div>
+    <div class="chart" id="exp-chart"></div>
+    <div class="tbl-wrap"><table id="exp-tbl"><thead></thead><tbody></tbody></table></div>
+    <p class="note">"Other agents" rolls up every agent outside the top 16. "No agent · other appellant" is appeals filed by someone TCAD lists as neither owner nor agent. Groups are by the agent who filed the deciding appeal.</p>
+  </div>
+</section>
+
+
+
+<section id="matched">
+  <div class="sec-head"><span class="eyebrow">Like-for-like</span><h2>Same neighborhoods, same kind of home</h2>
+  <p class="lede">Headline averages mix very different books. Here each of our residential accounts ($200K–$2M notice) is compared with what each competitor got in the <b>same TCAD neighborhood (market area) code</b>. A neighborhood needs at least three of their accounts to count. This is the fairest read of our results.</p></div>
+  <div class="tbl-wrap"><table id="m-tbl"><thead><tr><th>Compared against</th><th>Matched accts</th><th>Neighborhoods</th><th>Our win rate</th><th>Their win rate</th><th>Our avg reduction</th><th>Their avg reduction</th><th>Our edge (pp)</th><th>Their informal share</th><th>$ gap on our book</th></tr></thead><tbody></tbody></table></div>
+  <p class="note">"$ gap on our book" is how much more (or less) market value we would have cut if our accounts had received that peer's average reduction for their neighborhood. Positive means they outperformed us. Win rates here always count any reduction.</p>
+  <div class="panel"><h3>Neighborhood scorecard</h3><p class="small muted">Every TCAD neighborhood where we closed a residential account ($200K–$2M), against all other agents in the same neighborhood. Sort by any column or search a code.</p>
+    <div class="filters"><div class="fgroup"><label class="eyebrow" for="g-min">Min. our accounts</label><select id="g-min"><option>1</option><option selected>3</option><option>5</option><option>10</option></select></div><div class="fgroup"><label class="eyebrow" for="g-q">Search</label><input id="g-q" placeholder="Neighborhood code, e.g. K1009A" autocomplete="off"></div></div>
+    <div class="tbl-wrap" style="max-height:520px;overflow:auto"><table id="g-tbl"><thead></thead><tbody></tbody></table></div><p class="note" id="g-note"></p></div>
+</section>
+
+<section id="path">
+  <div class="sec-head"><span class="eyebrow">Protest path</span><h2 id="path-h">ARB vs. informal</h2>
+  <p class="lede" id="path-lede"></p></div>
+  <div class="grid2">
+    <div class="panel"><h3>Resolution mix by firm</h3><div class="legend"><span><i style="background:var(--inf)"></i>Informal (joint motion)</span><span><i style="background:var(--arb)"></i>Formal ARB hearing</span><span><i style="background:var(--oth)"></i>No-show / withdrawn</span></div><div class="chart" id="mix-chart"></div></div>
+    <div class="panel"><h3>Average reduction by path</h3><p class="small muted">Each firm's average % cut on informal and ARB cases. Residential, firms with 20+ cases on a path.</p><div class="legend"><span><i style="background:var(--inf)"></i>Informal</span><span><i style="background:var(--arb)"></i>Formal ARB</span></div><div class="chart" id="db-chart"></div></div>
+  </div>
+</section>
+
+<section id="wins">
+  <div class="sec-head"><span class="eyebrow">Wins by value</span><h2>Where we won and where we lagged</h2></div>
+  <div class="grid2">
+    <div class="panel"><h3>Win rate by notice value, residential</h3><div class="legend"><span><i style="background:var(--us)"></i>Property Tax Protest</span><span><i style="background:var(--agents)"></i>All other agents</span><span><i style="background:var(--own)"></i>Ownwell</span></div><div class="chart" id="tier-chart"></div></div>
+    <div class="panel"><h3>Average reduction by notice value, residential</h3><div class="tbl-wrap"><table id="tier-tbl"><thead><tr><th>Tier</th><th>Our accts</th><th>Our win</th><th>Our avg</th><th>Others' avg</th><th>Ownwell avg</th><th>Our $ cut</th></tr></thead><tbody></tbody></table></div></div>
+  </div>
+  <div class="grid2">
+    <div class="panel"><h3>Biggest wins</h3><div class="tbl-wrap"><table id="big-tbl"><thead><tr><th>Account</th><th>Address</th><th>Notice</th><th>Final</th><th>Cut</th><th>%</th><th>Path</th></tr></thead><tbody></tbody></table></div></div>
+    <div class="panel"><h3>No reduction</h3><p class="small muted" id="nr-sub"></p><div class="tbl-wrap" style="max-height:420px;overflow:auto"><table id="nr-tbl"><thead><tr><th>Account</th><th>Address</th><th>Notice</th><th>Status</th><th>Neighborhood</th><th>Others' win there</th><th>Others' avg there</th></tr></thead><tbody></tbody></table></div></div>
+  </div>
+</section>
+
+<section id="accounts">
+  <div class="sec-head"><span class="eyebrow">Our accounts</span><h2>Every property we protested in 2026</h2>
+  <p class="lede">One row per property: 2026 notice, final value and how the appeal ended. Search a property ID or address. "Also on file" lists other agents TCAD shows on the account.</p></div>
+  <div class="panel">
+    <div class="filters">
+      <div class="fgroup"><label class="eyebrow" for="a-q">Search</label><input id="a-q" placeholder="Account or address" autocomplete="off"></div>
+      <div class="fgroup"><span class="eyebrow">Outcome</span><div class="seg" id="a-out"></div></div>
+      <div class="fgroup"><span class="eyebrow">Path</span><div class="seg" id="a-path"></div></div>
+      <div class="fgroup"><span class="eyebrow">Shared case</span><div class="seg" id="a-sh"></div></div>
+    </div>
+    <div class="tbl-wrap" style="max-height:640px;overflow:auto"><table id="a-tbl"><thead></thead><tbody></tbody></table></div>
+    <div class="pager" id="a-pager"></div>
+  </div>
+</section>
+
+<section id="checks">
+  <div class="sec-head"><span class="eyebrow">Data checks</span><h2>How the files were cleaned and checked</h2></div>
+  <div class="flow" id="chk-flow"></div>
+  <div class="grid2">
+    <div class="panel"><h3>What was removed or merged</h3><ul class="plain" id="chk-list"></ul></div>
+    <div class="panel"><h3 id="sh-h"></h3><p class="small muted" id="sh-note"></p><div class="tbl-wrap"><table id="sh-tbl"><thead><tr><th>Other agent on file</th><th>Our accounts</th></tr></thead><tbody></tbody></table></div></div>
+  </div>
+</section>
+
+<section id="method">
+  <div class="sec-head"><span class="eyebrow">Method &amp; open questions</span><h2>How the numbers were built</h2></div>
+  <div class="defs">
+    <div class="def"><b>One row per property</b>Every property in the protax JSON (493,110) appears once. A property with a 2026 appeal of type P counts as protested. When there are several 2026 appeals, one decides the result: ours first, then a finalized appeal, then the latest one.</div>
+    <div class="def"><b>Values</b>Notice = the first 2026 appeal's initial market value. Final = the latest finalized appeal's final market value. Multi-owner properties are put on the owners' basis (rule from travis_values.py). Missing values come from the Oct 6 certified roll, which matches the JSON final on 99.7% of closed appeals.</div>
+    <div class="def"><b>Win and reduction</b>A win is any cut from notice to final (or the threshold picked above). Reduction % = total cut ÷ total notice. Avg % / property averages each property's own cut. Fee estimate = 1% of our market cut, before collections and caps.</div>
+    <div class="def"><b>Paths</b>Informal = ORDT, EF_AS and I (TCAD marks these as informal decisions). Formal ARB = ORD2 to ORD13 and other formal orders. No-show = FTA. Withdrawn = W, EF_WD. Dismissed = D, LD. Open = not finalized on Oct 6.</div>
+  </div>
+  <div class="panel"><h3>Open questions</h3><ul class="plain">
+    <li><b>Which agent IDs are ours?</b> This page counts 1863738, 1898343 and 1898284, all listed by TCAD as Property Tax Protest. 1897915 ("Property Tax Protest AKA Watchtower Protest") is treated as another firm.</li>
+    <li><b>Agent of record vs. filer.</b> We are on file for about 2,400 more properties where someone else (often Ownwell) filed the 2026 appeal, or nobody did. Those count for the filer, not for us.</li>
+    <li><b>2026 only.</b> No prior-year values are used, so there is no year-over-year section.</li>
+    <li><b>No assessed values.</b> The page measures market value; capped (taxable) value and tax savings are not shown.</li>
+  </ul></div>
+</section>
+</div>
