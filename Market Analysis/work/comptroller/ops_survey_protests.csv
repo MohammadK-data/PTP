@@ -1,0 +1,817 @@
+county,year,question,value
+Dallas,2024,9.1. HOW MANY protests to the ARB were filed in 2024?,206170
+Dallas,2024,9.1.1. Single-Family Residential,120199
+Dallas,2024,9.1.2. Multi-Family Residential,9449
+Dallas,2024,9.1.3. Commercial Real,20234
+Dallas,2024,9.1.4. Commercial Personal,9913
+Dallas,2024,9.1.5. Industrial Real,465
+Dallas,2024,9.1.6. Industrial Personal,384
+Dallas,2024,9.1.7. Utilities,314
+Dallas,2024,9.1.8. Oil and Gas,49
+Dallas,2024,9.1.9. All other property categories,45163
+Dallas,2024,"9.2. Of the total NUMBER of protests filed in 2024, HOW MANY were submitted through an online protest system? If the appraisal district does not have an online protest system, please enter 0.",137231
+Dallas,2024,"9.3. Of the total NUMBER of protests filed in 2024, HOW MANY were filed by persons designated as agents?",156823
+Dallas,2024,"9.4. Of the total NUMBER of protests filed in 2024, HOW MANY involved the same property that was the subject of a protest in 2023?",130838
+Dallas,2024,"9.4.1. Of the total NUMBER of protests filed in 2024, HOW MANY involved the same property that was the subject of a protest in both 2023 and 2022?",102124
+Dallas,2024,9.5. State the total amount of appraised VALUE noticed for all protests filed for 2024.,308005196689
+Dallas,2024,9.5.1. Single-Family Residential,85710364970
+Dallas,2024,9.5.2. Multi-Family Residential,70550272410
+Dallas,2024,9.5.3. Commercial Real and Personal,135482022899
+Dallas,2024,9.5.4. Industrial Real and Personal,8087201780
+Dallas,2024,9.5.5. Utilities,2376070120
+Dallas,2024,9.5.6. Oil and Gas,12597070
+Dallas,2024,9.5.7. All other property categories,5786667440
+Dallas,2024,9.6. HOW MANY 2024 protests were scheduled for hearings before the ARB or panels? Include live hearings and telephone hearings. (The answer may not be more than the total NUMBER in 9.1.),206170
+Dallas,2024,"9.6.1. Of the total NUMBER of ARB hearings scheduled in 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared in person.",51630
+Dallas,2024,"9.6.2. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared by affidavit.",31255
+Dallas,2024,"9.6.3. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared remotely, such as by telephone or videoconference.",111688
+Dallas,2024,"9.6.4. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings for which no one appeared in person, by telephone or by written affidavit on behalf of the property owner.",11597
+Dallas,2024,"9.6.5. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before special panels as defined by Tax Code Section 6.425?",0
+Dallas,2024,"9.6.6. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before single member panels as defined by Tax Code Section 41.45(b-4)?",13550
+Dallas,2024,"9.6.7. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before multi-member panels as defined by Tax Code Section 41.45(d)?",192620
+Dallas,2024,"9.7. Did the appraisal district offer an informal process (that is, through meetings, teleconferences or online with appraisal district staff) to resolve concerns, inquiries or protests filed in 2024? If yes, go to next; if no, go to 9.11.",Yes
+Dallas,2024,"9.8. Of the total NUMBER of concerns, inquiries or protests filed in 2024, HOW MANY were resolved through an informal process and did not reach the ARB? (This total NUMBER should match the combined total of NUMBERS for 9.8.1 and 9.8.2; include those resolved with or without a value reduction.)",53652
+Dallas,2024,9.8.1. Single-Family Residential,32191
+Dallas,2024,9.8.2. All other categories,21461
+Dallas,2024,"9.9. Of the total NUMBER of concerns, inquiries or protests resolved through the informal process in 2024, HOW MANY resulted in a reduction in value? (This total NUMBER should match the combined total of NUMBER for 9.9.1 and 9.9.2.)",27618
+Dallas,2024,9.9.1. Single-Family Residential,19064
+Dallas,2024,9.9.2. All other categories,8554
+Dallas,2024,"9.10. State the total amount of VALUE reduction that resulted from concerns, inquiries or protests resolved through the informal process in 2024 (exclude value reductions resulting from exemptions or special appraisal determinations). (This total AMOUNT should match the combined total AMOUNT for 9.10.1 and 9.10.2.)",4310257910
+Dallas,2024,9.10.1. Single-Family Residential,766601960
+Dallas,2024,9.10.2. All other categories,3543655950
+Dallas,2024,9.11. State the total NUMBER of protests filed in 2024 that resulted in a written ARB determination. (This NUMBER should match the combined total of NUMBERS for 9.11.1 and 9.11.2 and may not exceed the total NUMBER in 9.6.),128650
+Dallas,2024,9.11.1. Single-Family Residential,90389
+Dallas,2024,9.11.2. All other categories,38261
+Dallas,2024,"9.11.3. Of the total NUMBER of protests which resulted in written ARB determinations in 2024, state the total NUMBER that resulted in a reduction in value (exclude value reductions resulting from exemptions or special appraisal determinations). (This total should match the combined total NUMBER for 9.11.4 and 9.11.5.)",85717
+Dallas,2024,9.11.4. Single-Family Residential,64484
+Dallas,2024,9.11.5. All other categories,21233
+Dallas,2024,9.11.6. State the total amount of VALUE reduction that resulted from all ARB determinations in 2024 (exclude value reductions resulting from exemptions and special appraisal determinations). This total AMOUNT should match the combined total AMOUNT for 9.11.7 and 9.11.8.,27563226887
+Dallas,2024,9.11.7. Single-Family Residential,2806516160
+Dallas,2024,9.11.8. All other categories,24756710727
+Dallas,2024,9.12. State the total NUMBER of ARB determinations appealed to binding arbitration in 2024.,1393
+Dallas,2024,9.13. State the total NUMBER of ARB determinations appealed to the State Office of Administrative Hearings (SOAH) in 2024.,2
+Denton,2024,9.1. HOW MANY protests to the ARB were filed in 2024?,123032
+Denton,2024,9.1.1. Single-Family Residential,82382
+Denton,2024,9.1.2. Multi-Family Residential,2430
+Denton,2024,9.1.3. Commercial Real,5654
+Denton,2024,9.1.4. Commercial Personal,1670
+Denton,2024,9.1.5. Industrial Real,144
+Denton,2024,9.1.6. Industrial Personal,118
+Denton,2024,9.1.7. Utilities,1199
+Denton,2024,9.1.8. Oil and Gas,3396
+Denton,2024,9.1.9. All other property categories,26039
+Denton,2024,"9.2. Of the total NUMBER of protests filed in 2024, HOW MANY were submitted through an online protest system? If the appraisal district does not have an online protest system, please enter 0.",44565
+Denton,2024,"9.3. Of the total NUMBER of protests filed in 2024, HOW MANY were filed by persons designated as agents?",87876
+Denton,2024,"9.4. Of the total NUMBER of protests filed in 2024, HOW MANY involved the same property that was the subject of a protest in 2023?",91903
+Denton,2024,"9.4.1. Of the total NUMBER of protests filed in 2024, HOW MANY involved the same property that was the subject of a protest in both 2023 and 2022?",69413
+Denton,2024,9.5. State the total amount of appraised VALUE noticed for all protests filed for 2024.,98328713982
+Denton,2024,9.5.1. Single-Family Residential,43299043240
+Denton,2024,9.5.2. Multi-Family Residential,17406766923
+Denton,2024,9.5.3. Commercial Real and Personal,26827606649
+Denton,2024,9.5.4. Industrial Real and Personal,1825369202
+Denton,2024,9.5.5. Utilities,1867873833
+Denton,2024,9.5.6. Oil and Gas,338888010
+Denton,2024,9.5.7. All other property categories,6763166125
+Denton,2024,9.6. HOW MANY 2024 protests were scheduled for hearings before the ARB or panels? Include live hearings and telephone hearings. (The answer may not be more than the total NUMBER in 9.1.),110997
+Denton,2024,"9.6.1. Of the total NUMBER of ARB hearings scheduled in 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared in person.",96258
+Denton,2024,"9.6.2. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared by affidavit.",2868
+Denton,2024,"9.6.3. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared remotely, such as by telephone or videoconference.",11871
+Denton,2024,"9.6.4. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings for which no one appeared in person, by telephone or by written affidavit on behalf of the property owner.",5741
+Denton,2024,"9.6.5. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before special panels as defined by Tax Code Section 6.425?",0
+Denton,2024,"9.6.6. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before single member panels as defined by Tax Code Section 41.45(b-4)?",6272
+Denton,2024,"9.6.7. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before multi-member panels as defined by Tax Code Section 41.45(d)?",104725
+Denton,2024,"9.7. Did the appraisal district offer an informal process (that is, through meetings, teleconferences or online with appraisal district staff) to resolve concerns, inquiries or protests filed in 2024? If yes, go to next; if no, go to 9.11.",Yes
+Denton,2024,"9.8. Of the total NUMBER of concerns, inquiries or protests filed in 2024, HOW MANY were resolved through an informal process and did not reach the ARB? (This total NUMBER should match the combined total of NUMBERS for 9.8.1 and 9.8.2; include those resolved with or without a value reduction.)",56561
+Denton,2024,9.8.1. Single-Family Residential,30141
+Denton,2024,9.8.2. All other categories,26420
+Denton,2024,"9.9. Of the total NUMBER of concerns, inquiries or protests resolved through the informal process in 2024, HOW MANY resulted in a reduction in value? (This total NUMBER should match the combined total of NUMBER for 9.9.1 and 9.9.2.)",18592
+Denton,2024,9.9.1. Single-Family Residential,730
+Denton,2024,9.9.2. All other categories,17862
+Denton,2024,"9.10. State the total amount of VALUE reduction that resulted from concerns, inquiries or protests resolved through the informal process in 2024 (exclude value reductions resulting from exemptions or special appraisal determinations). (This total AMOUNT should match the combined total AMOUNT for 9.10.1 and 9.10.2.)",2221169525
+Denton,2024,9.10.1. Single-Family Residential,31096046
+Denton,2024,9.10.2. All other categories,2190073479
+Denton,2024,9.11. State the total NUMBER of protests filed in 2024 that resulted in a written ARB determination. (This NUMBER should match the combined total of NUMBERS for 9.11.1 and 9.11.2 and may not exceed the total NUMBER in 9.6.),66471
+Denton,2024,9.11.1. Single-Family Residential,52241
+Denton,2024,9.11.2. All other categories,14230
+Denton,2024,"9.11.3. Of the total NUMBER of protests which resulted in written ARB determinations in 2024, state the total NUMBER that resulted in a reduction in value (exclude value reductions resulting from exemptions or special appraisal determinations). (This total should match the combined total NUMBER for 9.11.4 and 9.11.5.)",10435
+Denton,2024,9.11.4. Single-Family Residential,1181
+Denton,2024,9.11.5. All other categories,9254
+Denton,2024,9.11.6. State the total amount of VALUE reduction that resulted from all ARB determinations in 2024 (exclude value reductions resulting from exemptions and special appraisal determinations). This total AMOUNT should match the combined total AMOUNT for 9.11.7 and 9.11.8.,10783065318
+Denton,2024,9.11.7. Single-Family Residential,50168430
+Denton,2024,9.11.8. All other categories,10732896888
+Denton,2024,9.12. State the total NUMBER of ARB determinations appealed to binding arbitration in 2024.,207
+Denton,2024,9.13. State the total NUMBER of ARB determinations appealed to the State Office of Administrative Hearings (SOAH) in 2024.,0
+Fort Bend,2024,9.1. HOW MANY protests to the ARB were filed in 2024?,126406
+Fort Bend,2024,9.1.1. Single-Family Residential,98319
+Fort Bend,2024,9.1.2. Multi-Family Residential,242
+Fort Bend,2024,9.1.3. Commercial Real,5863
+Fort Bend,2024,9.1.4. Commercial Personal,4066
+Fort Bend,2024,9.1.5. Industrial Real,175
+Fort Bend,2024,9.1.6. Industrial Personal,147
+Fort Bend,2024,9.1.7. Utilities,2299
+Fort Bend,2024,9.1.8. Oil and Gas,166
+Fort Bend,2024,9.1.9. All other property categories,15129
+Fort Bend,2024,"9.2. Of the total NUMBER of protests filed in 2024, HOW MANY were submitted through an online protest system? If the appraisal district does not have an online protest system, please enter 0.",101442
+Fort Bend,2024,"9.3. Of the total NUMBER of protests filed in 2024, HOW MANY were filed by persons designated as agents?",107446
+Fort Bend,2024,"9.4. Of the total NUMBER of protests filed in 2024, HOW MANY involved the same property that was the subject of a protest in 2023?",117584
+Fort Bend,2024,"9.4.1. Of the total NUMBER of protests filed in 2024, HOW MANY involved the same property that was the subject of a protest in both 2023 and 2022?",106423
+Fort Bend,2024,9.5. State the total amount of appraised VALUE noticed for all protests filed for 2024.,91909545617
+Fort Bend,2024,9.5.1. Single-Family Residential,50042471402
+Fort Bend,2024,9.5.2. Multi-Family Residential,8216147250
+Fort Bend,2024,9.5.3. Commercial Real and Personal,22445852837
+Fort Bend,2024,9.5.4. Industrial Real and Personal,2912383696
+Fort Bend,2024,9.5.5. Utilities,2798341709
+Fort Bend,2024,9.5.6. Oil and Gas,23021420
+Fort Bend,2024,9.5.7. All other property categories,5471327303
+Fort Bend,2024,9.6. HOW MANY 2024 protests were scheduled for hearings before the ARB or panels? Include live hearings and telephone hearings. (The answer may not be more than the total NUMBER in 9.1.),102830
+Fort Bend,2024,"9.6.1. Of the total NUMBER of ARB hearings scheduled in 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared in person.",14118
+Fort Bend,2024,"9.6.2. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared by affidavit.",3163
+Fort Bend,2024,"9.6.3. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared remotely, such as by telephone or videoconference.",2075
+Fort Bend,2024,"9.6.4. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings for which no one appeared in person, by telephone or by written affidavit on behalf of the property owner.",8318
+Fort Bend,2024,"9.6.5. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before special panels as defined by Tax Code Section 6.425?",0
+Fort Bend,2024,"9.6.6. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before single member panels as defined by Tax Code Section 41.45(b-4)?",25481
+Fort Bend,2024,"9.6.7. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before multi-member panels as defined by Tax Code Section 41.45(d)?",77349
+Fort Bend,2024,"9.7. Did the appraisal district offer an informal process (that is, through meetings, teleconferences or online with appraisal district staff) to resolve concerns, inquiries or protests filed in 2024? If yes, go to next; if no, go to 9.11.",Yes
+Fort Bend,2024,"9.8. Of the total NUMBER of concerns, inquiries or protests filed in 2024, HOW MANY were resolved through an informal process and did not reach the ARB? (This total NUMBER should match the combined total of NUMBERS for 9.8.1 and 9.8.2; include those resolved with or without a value reduction.)",67522
+Fort Bend,2024,9.8.1. Single-Family Residential,53151
+Fort Bend,2024,9.8.2. All other categories,14371
+Fort Bend,2024,"9.9. Of the total NUMBER of concerns, inquiries or protests resolved through the informal process in 2024, HOW MANY resulted in a reduction in value? (This total NUMBER should match the combined total of NUMBER for 9.9.1 and 9.9.2.)",59696
+Fort Bend,2024,9.9.1. Single-Family Residential,50391
+Fort Bend,2024,9.9.2. All other categories,9305
+Fort Bend,2024,"9.10. State the total amount of VALUE reduction that resulted from concerns, inquiries or protests resolved through the informal process in 2024 (exclude value reductions resulting from exemptions or special appraisal determinations). (This total AMOUNT should match the combined total AMOUNT for 9.10.1 and 9.10.2.)",1914659572
+Fort Bend,2024,9.10.1. Single-Family Residential,1107141488
+Fort Bend,2024,9.10.2. All other categories,807518084
+Fort Bend,2024,9.11. State the total NUMBER of protests filed in 2024 that resulted in a written ARB determination. (This NUMBER should match the combined total of NUMBERS for 9.11.1 and 9.11.2 and may not exceed the total NUMBER in 9.6.),41926
+Fort Bend,2024,9.11.1. Single-Family Residential,33813
+Fort Bend,2024,9.11.2. All other categories,8113
+Fort Bend,2024,"9.11.3. Of the total NUMBER of protests which resulted in written ARB determinations in 2024, state the total NUMBER that resulted in a reduction in value (exclude value reductions resulting from exemptions or special appraisal determinations). (This total should match the combined total NUMBER for 9.11.4 and 9.11.5.)",31995
+Fort Bend,2024,9.11.4. Single-Family Residential,27520
+Fort Bend,2024,9.11.5. All other categories,4475
+Fort Bend,2024,9.11.6. State the total amount of VALUE reduction that resulted from all ARB determinations in 2024 (exclude value reductions resulting from exemptions and special appraisal determinations). This total AMOUNT should match the combined total AMOUNT for 9.11.7 and 9.11.8.,6394338404
+Fort Bend,2024,9.11.7. Single-Family Residential,758072666
+Fort Bend,2024,9.11.8. All other categories,5636265738
+Fort Bend,2024,9.12. State the total NUMBER of ARB determinations appealed to binding arbitration in 2024.,435
+Fort Bend,2024,9.13. State the total NUMBER of ARB determinations appealed to the State Office of Administrative Hearings (SOAH) in 2024.,4
+Hays,2024,9.1. HOW MANY protests to the ARB were filed in 2024?,43778
+Hays,2024,9.1.1. Single-Family Residential,24493
+Hays,2024,9.1.2. Multi-Family Residential,841
+Hays,2024,9.1.3. Commercial Real,2111
+Hays,2024,9.1.4. Commercial Personal,552
+Hays,2024,9.1.5. Industrial Real,0
+Hays,2024,9.1.6. Industrial Personal,118
+Hays,2024,9.1.7. Utilities,49
+Hays,2024,9.1.8. Oil and Gas,0
+Hays,2024,9.1.9. All other property categories,15614
+Hays,2024,"9.2. Of the total NUMBER of protests filed in 2024, HOW MANY were submitted through an online protest system? If the appraisal district does not have an online protest system, please enter 0.",8544
+Hays,2024,"9.3. Of the total NUMBER of protests filed in 2024, HOW MANY were filed by persons designated as agents?",32428
+Hays,2024,"9.4. Of the total NUMBER of protests filed in 2024, HOW MANY involved the same property that was the subject of a protest in 2023?",39924
+Hays,2024,"9.4.1. Of the total NUMBER of protests filed in 2024, HOW MANY involved the same property that was the subject of a protest in both 2023 and 2022?",33082
+Hays,2024,9.5. State the total amount of appraised VALUE noticed for all protests filed for 2024.,35295253482
+Hays,2024,9.5.1. Single-Family Residential,14171595637
+Hays,2024,9.5.2. Multi-Family Residential,4846484065
+Hays,2024,9.5.3. Commercial Real and Personal,6153583452
+Hays,2024,9.5.4. Industrial Real and Personal,63446621
+Hays,2024,9.5.5. Utilities,428040170
+Hays,2024,9.5.6. Oil and Gas,0
+Hays,2024,9.5.7. All other property categories,9632103537
+Hays,2024,9.6. HOW MANY 2024 protests were scheduled for hearings before the ARB or panels? Include live hearings and telephone hearings. (The answer may not be more than the total NUMBER in 9.1.),42848
+Hays,2024,"9.6.1. Of the total NUMBER of ARB hearings scheduled in 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared in person.",1103
+Hays,2024,"9.6.2. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared by affidavit.",103
+Hays,2024,"9.6.3. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared remotely, such as by telephone or videoconference.",651
+Hays,2024,"9.6.4. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings for which no one appeared in person, by telephone or by written affidavit on behalf of the property owner.",1203
+Hays,2024,"9.6.5. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before special panels as defined by Tax Code Section 6.425?",0
+Hays,2024,"9.6.6. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before single member panels as defined by Tax Code Section 41.45(b-4)?",5278
+Hays,2024,"9.6.7. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before multi-member panels as defined by Tax Code Section 41.45(d)?",37570
+Hays,2024,"9.7. Did the appraisal district offer an informal process (that is, through meetings, teleconferences or online with appraisal district staff) to resolve concerns, inquiries or protests filed in 2024? If yes, go to next; if no, go to 9.11.",Yes
+Hays,2024,"9.8. Of the total NUMBER of concerns, inquiries or protests filed in 2024, HOW MANY were resolved through an informal process and did not reach the ARB? (This total NUMBER should match the combined total of NUMBERS for 9.8.1 and 9.8.2; include those resolved with or without a value reduction.)",40761
+Hays,2024,9.8.1. Single-Family Residential,22743
+Hays,2024,9.8.2. All other categories,18018
+Hays,2024,"9.9. Of the total NUMBER of concerns, inquiries or protests resolved through the informal process in 2024, HOW MANY resulted in a reduction in value? (This total NUMBER should match the combined total of NUMBER for 9.9.1 and 9.9.2.)",38642
+Hays,2024,9.9.1. Single-Family Residential,21032
+Hays,2024,9.9.2. All other categories,17610
+Hays,2024,"9.10. State the total amount of VALUE reduction that resulted from concerns, inquiries or protests resolved through the informal process in 2024 (exclude value reductions resulting from exemptions or special appraisal determinations). (This total AMOUNT should match the combined total AMOUNT for 9.10.1 and 9.10.2.)",3108649862
+Hays,2024,9.10.1. Single-Family Residential,1105068421
+Hays,2024,9.10.2. All other categories,2003581441
+Hays,2024,9.11. State the total NUMBER of protests filed in 2024 that resulted in a written ARB determination. (This NUMBER should match the combined total of NUMBERS for 9.11.1 and 9.11.2 and may not exceed the total NUMBER in 9.6.),1857
+Hays,2024,9.11.1. Single-Family Residential,1582
+Hays,2024,9.11.2. All other categories,275
+Hays,2024,"9.11.3. Of the total NUMBER of protests which resulted in written ARB determinations in 2024, state the total NUMBER that resulted in a reduction in value (exclude value reductions resulting from exemptions or special appraisal determinations). (This total should match the combined total NUMBER for 9.11.4 and 9.11.5.)",1474
+Hays,2024,9.11.4. Single-Family Residential,1211
+Hays,2024,9.11.5. All other categories,263
+Hays,2024,9.11.6. State the total amount of VALUE reduction that resulted from all ARB determinations in 2024 (exclude value reductions resulting from exemptions and special appraisal determinations). This total AMOUNT should match the combined total AMOUNT for 9.11.7 and 9.11.8.,170763568
+Hays,2024,9.11.7. Single-Family Residential,102389277
+Hays,2024,9.11.8. All other categories,68374291
+Hays,2024,9.12. State the total NUMBER of ARB determinations appealed to binding arbitration in 2024.,106
+Hays,2024,9.13. State the total NUMBER of ARB determinations appealed to the State Office of Administrative Hearings (SOAH) in 2024.,0
+Montgomery,2024,9.1. HOW MANY protests to the ARB were filed in 2024?,97674
+Montgomery,2024,9.1.1. Single-Family Residential,61723
+Montgomery,2024,9.1.2. Multi-Family Residential,574
+Montgomery,2024,9.1.3. Commercial Real,5461
+Montgomery,2024,9.1.4. Commercial Personal,2045
+Montgomery,2024,9.1.5. Industrial Real,231
+Montgomery,2024,9.1.6. Industrial Personal,301
+Montgomery,2024,9.1.7. Utilities,880
+Montgomery,2024,9.1.8. Oil and Gas,294
+Montgomery,2024,9.1.9. All other property categories,26165
+Montgomery,2024,"9.2. Of the total NUMBER of protests filed in 2024, HOW MANY were submitted through an online protest system? If the appraisal district does not have an online protest system, please enter 0.",52945
+Montgomery,2024,"9.3. Of the total NUMBER of protests filed in 2024, HOW MANY were filed by persons designated as agents?",79280
+Montgomery,2024,"9.4. Of the total NUMBER of protests filed in 2024, HOW MANY involved the same property that was the subject of a protest in 2023?",71308
+Montgomery,2024,"9.4.1. Of the total NUMBER of protests filed in 2024, HOW MANY involved the same property that was the subject of a protest in both 2023 and 2022?",51315
+Montgomery,2024,9.5. State the total amount of appraised VALUE noticed for all protests filed for 2024.,60236498743
+Montgomery,2024,9.5.1. Single-Family Residential,30280625748
+Montgomery,2024,9.5.2. Multi-Family Residential,6902629163
+Montgomery,2024,9.5.3. Commercial Real and Personal,15742123215
+Montgomery,2024,9.5.4. Industrial Real and Personal,2129304519
+Montgomery,2024,9.5.5. Utilities,306272171
+Montgomery,2024,9.5.6. Oil and Gas,38411730
+Montgomery,2024,9.5.7. All other property categories,4837132197
+Montgomery,2024,9.6. HOW MANY 2024 protests were scheduled for hearings before the ARB or panels? Include live hearings and telephone hearings. (The answer may not be more than the total NUMBER in 9.1.),89147
+Montgomery,2024,"9.6.1. Of the total NUMBER of ARB hearings scheduled in 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared in person.",78181
+Montgomery,2024,"9.6.2. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared by affidavit.",1638
+Montgomery,2024,"9.6.3. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared remotely, such as by telephone or videoconference.",17854
+Montgomery,2024,"9.6.4. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings for which no one appeared in person, by telephone or by written affidavit on behalf of the property owner.",6932
+Montgomery,2024,"9.6.5. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before special panels as defined by Tax Code Section 6.425?",0
+Montgomery,2024,"9.6.6. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before single member panels as defined by Tax Code Section 41.45(b-4)?",9389
+Montgomery,2024,"9.6.7. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before multi-member panels as defined by Tax Code Section 41.45(d)?",88285
+Montgomery,2024,"9.7. Did the appraisal district offer an informal process (that is, through meetings, teleconferences or online with appraisal district staff) to resolve concerns, inquiries or protests filed in 2024? If yes, go to next; if no, go to 9.11.",Yes
+Montgomery,2024,"9.8. Of the total NUMBER of concerns, inquiries or protests filed in 2024, HOW MANY were resolved through an informal process and did not reach the ARB? (This total NUMBER should match the combined total of NUMBERS for 9.8.1 and 9.8.2; include those resolved with or without a value reduction.)",27816
+Montgomery,2024,9.8.1. Single-Family Residential,8470
+Montgomery,2024,9.8.2. All other categories,19346
+Montgomery,2024,"9.9. Of the total NUMBER of concerns, inquiries or protests resolved through the informal process in 2024, HOW MANY resulted in a reduction in value? (This total NUMBER should match the combined total of NUMBER for 9.9.1 and 9.9.2.)",24466
+Montgomery,2024,9.9.1. Single-Family Residential,7546
+Montgomery,2024,9.9.2. All other categories,16920
+Montgomery,2024,"9.10. State the total amount of VALUE reduction that resulted from concerns, inquiries or protests resolved through the informal process in 2024 (exclude value reductions resulting from exemptions or special appraisal determinations). (This total AMOUNT should match the combined total AMOUNT for 9.10.1 and 9.10.2.)",1118442233
+Montgomery,2024,9.10.1. Single-Family Residential,313881070
+Montgomery,2024,9.10.2. All other categories,804561163
+Montgomery,2024,9.11. State the total NUMBER of protests filed in 2024 that resulted in a written ARB determination. (This NUMBER should match the combined total of NUMBERS for 9.11.1 and 9.11.2 and may not exceed the total NUMBER in 9.6.),55743
+Montgomery,2024,9.11.1. Single-Family Residential,44730
+Montgomery,2024,9.11.2. All other categories,11013
+Montgomery,2024,"9.11.3. Of the total NUMBER of protests which resulted in written ARB determinations in 2024, state the total NUMBER that resulted in a reduction in value (exclude value reductions resulting from exemptions or special appraisal determinations). (This total should match the combined total NUMBER for 9.11.4 and 9.11.5.)",42209
+Montgomery,2024,9.11.4. Single-Family Residential,36914
+Montgomery,2024,9.11.5. All other categories,5295
+Montgomery,2024,9.11.6. State the total amount of VALUE reduction that resulted from all ARB determinations in 2024 (exclude value reductions resulting from exemptions and special appraisal determinations). This total AMOUNT should match the combined total AMOUNT for 9.11.7 and 9.11.8.,3911275630
+Montgomery,2024,9.11.7. Single-Family Residential,1698364809
+Montgomery,2024,9.11.8. All other categories,2212910821
+Montgomery,2024,9.12. State the total NUMBER of ARB determinations appealed to binding arbitration in 2024.,532
+Montgomery,2024,9.13. State the total NUMBER of ARB determinations appealed to the State Office of Administrative Hearings (SOAH) in 2024.,0
+Rockwall,2024,9.1. HOW MANY protests to the ARB were filed in 2024?,13010
+Rockwall,2024,9.1.1. Single-Family Residential,8761
+Rockwall,2024,9.1.2. Multi-Family Residential,34
+Rockwall,2024,9.1.3. Commercial Real,740
+Rockwall,2024,9.1.4. Commercial Personal,293
+Rockwall,2024,9.1.5. Industrial Real,16
+Rockwall,2024,9.1.6. Industrial Personal,67
+Rockwall,2024,9.1.7. Utilities,55
+Rockwall,2024,9.1.8. Oil and Gas,0
+Rockwall,2024,9.1.9. All other property categories,3044
+Rockwall,2024,"9.2. Of the total NUMBER of protests filed in 2024, HOW MANY were submitted through an online protest system? If the appraisal district does not have an online protest system, please enter 0.",6219
+Rockwall,2024,"9.3. Of the total NUMBER of protests filed in 2024, HOW MANY were filed by persons designated as agents?",8557
+Rockwall,2024,"9.4. Of the total NUMBER of protests filed in 2024, HOW MANY involved the same property that was the subject of a protest in 2023?",8574
+Rockwall,2024,"9.4.1. Of the total NUMBER of protests filed in 2024, HOW MANY involved the same property that was the subject of a protest in both 2023 and 2022?",5676
+Rockwall,2024,9.5. State the total amount of appraised VALUE noticed for all protests filed for 2024.,8873131673
+Rockwall,2024,9.5.1. Single-Family Residential,4626146683
+Rockwall,2024,9.5.2. Multi-Family Residential,475934863
+Rockwall,2024,9.5.3. Commercial Real and Personal,2438078855
+Rockwall,2024,9.5.4. Industrial Real and Personal,166899252
+Rockwall,2024,9.5.5. Utilities,213427205
+Rockwall,2024,9.5.6. Oil and Gas,0
+Rockwall,2024,9.5.7. All other property categories,952644815
+Rockwall,2024,9.6. HOW MANY 2024 protests were scheduled for hearings before the ARB or panels? Include live hearings and telephone hearings. (The answer may not be more than the total NUMBER in 9.1.),8572
+Rockwall,2024,"9.6.1. Of the total NUMBER of ARB hearings scheduled in 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared in person.",3276
+Rockwall,2024,"9.6.2. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared by affidavit.",70
+Rockwall,2024,"9.6.3. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared remotely, such as by telephone or videoconference.",5226
+Rockwall,2024,"9.6.4. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings for which no one appeared in person, by telephone or by written affidavit on behalf of the property owner.",690
+Rockwall,2024,"9.6.5. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before special panels as defined by Tax Code Section 6.425?",0
+Rockwall,2024,"9.6.6. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before single member panels as defined by Tax Code Section 41.45(b-4)?",1492
+Rockwall,2024,"9.6.7. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before multi-member panels as defined by Tax Code Section 41.45(d)?",7080
+Rockwall,2024,"9.7. Did the appraisal district offer an informal process (that is, through meetings, teleconferences or online with appraisal district staff) to resolve concerns, inquiries or protests filed in 2024? If yes, go to next; if no, go to 9.11.",Yes
+Rockwall,2024,"9.8. Of the total NUMBER of concerns, inquiries or protests filed in 2024, HOW MANY were resolved through an informal process and did not reach the ARB? (This total NUMBER should match the combined total of NUMBERS for 9.8.1 and 9.8.2; include those resolved with or without a value reduction.)",1118
+Rockwall,2024,9.8.1. Single-Family Residential,620
+Rockwall,2024,9.8.2. All other categories,498
+Rockwall,2024,"9.9. Of the total NUMBER of concerns, inquiries or protests resolved through the informal process in 2024, HOW MANY resulted in a reduction in value? (This total NUMBER should match the combined total of NUMBER for 9.9.1 and 9.9.2.)",1015
+Rockwall,2024,9.9.1. Single-Family Residential,553
+Rockwall,2024,9.9.2. All other categories,462
+Rockwall,2024,"9.10. State the total amount of VALUE reduction that resulted from concerns, inquiries or protests resolved through the informal process in 2024 (exclude value reductions resulting from exemptions or special appraisal determinations). (This total AMOUNT should match the combined total AMOUNT for 9.10.1 and 9.10.2.)",84234662
+Rockwall,2024,9.10.1. Single-Family Residential,34121496
+Rockwall,2024,9.10.2. All other categories,50113166
+Rockwall,2024,9.11. State the total NUMBER of protests filed in 2024 that resulted in a written ARB determination. (This NUMBER should match the combined total of NUMBERS for 9.11.1 and 9.11.2 and may not exceed the total NUMBER in 9.6.),4762
+Rockwall,2024,9.11.1. Single-Family Residential,3554
+Rockwall,2024,9.11.2. All other categories,1208
+Rockwall,2024,"9.11.3. Of the total NUMBER of protests which resulted in written ARB determinations in 2024, state the total NUMBER that resulted in a reduction in value (exclude value reductions resulting from exemptions or special appraisal determinations). (This total should match the combined total NUMBER for 9.11.4 and 9.11.5.)",3018
+Rockwall,2024,9.11.4. Single-Family Residential,2382
+Rockwall,2024,9.11.5. All other categories,636
+Rockwall,2024,9.11.6. State the total amount of VALUE reduction that resulted from all ARB determinations in 2024 (exclude value reductions resulting from exemptions and special appraisal determinations). This total AMOUNT should match the combined total AMOUNT for 9.11.7 and 9.11.8.,242595872
+Rockwall,2024,9.11.7. Single-Family Residential,79405922
+Rockwall,2024,9.11.8. All other categories,163189950
+Rockwall,2024,9.12. State the total NUMBER of ARB determinations appealed to binding arbitration in 2024.,45
+Rockwall,2024,9.13. State the total NUMBER of ARB determinations appealed to the State Office of Administrative Hearings (SOAH) in 2024.,0
+Tarrant,2024,9.1. HOW MANY protests to the ARB were filed in 2024?,172216
+Tarrant,2024,9.1.1. Single-Family Residential,120907
+Tarrant,2024,9.1.2. Multi-Family Residential,4688
+Tarrant,2024,9.1.3. Commercial Real,17822
+Tarrant,2024,9.1.4. Commercial Personal,3593
+Tarrant,2024,9.1.5. Industrial Real,635
+Tarrant,2024,9.1.6. Industrial Personal,120
+Tarrant,2024,9.1.7. Utilities,1636
+Tarrant,2024,9.1.8. Oil and Gas,4334
+Tarrant,2024,9.1.9. All other property categories,18481
+Tarrant,2024,"9.2. Of the total NUMBER of protests filed in 2024, HOW MANY were submitted through an online protest system? If the appraisal district does not have an online protest system, please enter 0.",157144
+Tarrant,2024,"9.3. Of the total NUMBER of protests filed in 2024, HOW MANY were filed by persons designated as agents?",156080
+Tarrant,2024,"9.4. Of the total NUMBER of protests filed in 2024, HOW MANY involved the same property that was the subject of a protest in 2023?",131527
+Tarrant,2024,"9.4.1. Of the total NUMBER of protests filed in 2024, HOW MANY involved the same property that was the subject of a protest in both 2023 and 2022?",99077
+Tarrant,2024,9.5. State the total amount of appraised VALUE noticed for all protests filed for 2024.,205896154065
+Tarrant,2024,9.5.1. Single-Family Residential,85593161228
+Tarrant,2024,9.5.2. Multi-Family Residential,39614122731
+Tarrant,2024,9.5.3. Commercial Real and Personal,59085836181
+Tarrant,2024,9.5.4. Industrial Real and Personal,5135218436
+Tarrant,2024,9.5.5. Utilities,12324076677
+Tarrant,2024,9.5.6. Oil and Gas,138590156
+Tarrant,2024,9.5.7. All other property categories,4005148656
+Tarrant,2024,9.6. HOW MANY 2024 protests were scheduled for hearings before the ARB or panels? Include live hearings and telephone hearings. (The answer may not be more than the total NUMBER in 9.1.),155653
+Tarrant,2024,"9.6.1. Of the total NUMBER of ARB hearings scheduled in 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared in person.",2965
+Tarrant,2024,"9.6.2. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared by affidavit.",569
+Tarrant,2024,"9.6.3. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared remotely, such as by telephone or videoconference.",671
+Tarrant,2024,"9.6.4. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings for which no one appeared in person, by telephone or by written affidavit on behalf of the property owner.",151448
+Tarrant,2024,"9.6.5. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before special panels as defined by Tax Code Section 6.425?",0
+Tarrant,2024,"9.6.6. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before single member panels as defined by Tax Code Section 41.45(b-4)?",78937
+Tarrant,2024,"9.6.7. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before multi-member panels as defined by Tax Code Section 41.45(d)?",76716
+Tarrant,2024,"9.7. Did the appraisal district offer an informal process (that is, through meetings, teleconferences or online with appraisal district staff) to resolve concerns, inquiries or protests filed in 2024? If yes, go to next; if no, go to 9.11.",Yes
+Tarrant,2024,"9.8. Of the total NUMBER of concerns, inquiries or protests filed in 2024, HOW MANY were resolved through an informal process and did not reach the ARB? (This total NUMBER should match the combined total of NUMBERS for 9.8.1 and 9.8.2; include those resolved with or without a value reduction.)",224517
+Tarrant,2024,9.8.1. Single-Family Residential,178137
+Tarrant,2024,9.8.2. All other categories,46380
+Tarrant,2024,"9.9. Of the total NUMBER of concerns, inquiries or protests resolved through the informal process in 2024, HOW MANY resulted in a reduction in value? (This total NUMBER should match the combined total of NUMBER for 9.9.1 and 9.9.2.)",201291
+Tarrant,2024,9.9.1. Single-Family Residential,173682
+Tarrant,2024,9.9.2. All other categories,27609
+Tarrant,2024,"9.10. State the total amount of VALUE reduction that resulted from concerns, inquiries or protests resolved through the informal process in 2024 (exclude value reductions resulting from exemptions or special appraisal determinations). (This total AMOUNT should match the combined total AMOUNT for 9.10.1 and 9.10.2.)",27161869267
+Tarrant,2024,9.10.1. Single-Family Residential,9467229369
+Tarrant,2024,9.10.2. All other categories,17694639898
+Tarrant,2024,9.11. State the total NUMBER of protests filed in 2024 that resulted in a written ARB determination. (This NUMBER should match the combined total of NUMBERS for 9.11.1 and 9.11.2 and may not exceed the total NUMBER in 9.6.),4205
+Tarrant,2024,9.11.1. Single-Family Residential,2665
+Tarrant,2024,9.11.2. All other categories,1540
+Tarrant,2024,"9.11.3. Of the total NUMBER of protests which resulted in written ARB determinations in 2024, state the total NUMBER that resulted in a reduction in value (exclude value reductions resulting from exemptions or special appraisal determinations). (This total should match the combined total NUMBER for 9.11.4 and 9.11.5.)",3228
+Tarrant,2024,9.11.4. Single-Family Residential,2289
+Tarrant,2024,9.11.5. All other categories,939
+Tarrant,2024,9.11.6. State the total amount of VALUE reduction that resulted from all ARB determinations in 2024 (exclude value reductions resulting from exemptions and special appraisal determinations). This total AMOUNT should match the combined total AMOUNT for 9.11.7 and 9.11.8.,489352955
+Tarrant,2024,9.11.7. Single-Family Residential,190874313
+Tarrant,2024,9.11.8. All other categories,298478642
+Tarrant,2024,9.12. State the total NUMBER of ARB determinations appealed to binding arbitration in 2024.,736
+Tarrant,2024,9.13. State the total NUMBER of ARB determinations appealed to the State Office of Administrative Hearings (SOAH) in 2024.,4
+Travis,2024,9.1. HOW MANY protests to the ARB were filed in 2024?,186871
+Travis,2024,9.1.1. Single-Family Residential,140325
+Travis,2024,9.1.2. Multi-Family Residential,8967
+Travis,2024,9.1.3. Commercial Real,8298
+Travis,2024,9.1.4. Commercial Personal,3340
+Travis,2024,9.1.5. Industrial Real,25
+Travis,2024,9.1.6. Industrial Personal,593
+Travis,2024,9.1.7. Utilities,577
+Travis,2024,9.1.8. Oil and Gas,0
+Travis,2024,9.1.9. All other property categories,24746
+Travis,2024,"9.2. Of the total NUMBER of protests filed in 2024, HOW MANY were submitted through an online protest system? If the appraisal district does not have an online protest system, please enter 0.",148129
+Travis,2024,"9.3. Of the total NUMBER of protests filed in 2024, HOW MANY were filed by persons designated as agents?",158704
+Travis,2024,"9.4. Of the total NUMBER of protests filed in 2024, HOW MANY involved the same property that was the subject of a protest in 2023?",152976
+Travis,2024,"9.4.1. Of the total NUMBER of protests filed in 2024, HOW MANY involved the same property that was the subject of a protest in both 2023 and 2022?",124890
+Travis,2024,9.5. State the total amount of appraised VALUE noticed for all protests filed for 2024.,277259837709
+Travis,2024,9.5.1. Single-Family Residential,121271390448
+Travis,2024,9.5.2. Multi-Family Residential,56390670698
+Travis,2024,9.5.3. Commercial Real and Personal,76680265187
+Travis,2024,9.5.4. Industrial Real and Personal,4680792024
+Travis,2024,9.5.5. Utilities,2228206747
+Travis,2024,9.5.6. Oil and Gas,0
+Travis,2024,9.5.7. All other property categories,16008512605
+Travis,2024,9.6. HOW MANY 2024 protests were scheduled for hearings before the ARB or panels? Include live hearings and telephone hearings. (The answer may not be more than the total NUMBER in 9.1.),40815
+Travis,2024,"9.6.1. Of the total NUMBER of ARB hearings scheduled in 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared in person.",17167
+Travis,2024,"9.6.2. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared by affidavit.",1162
+Travis,2024,"9.6.3. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings at which a property owner or his or her representative appeared remotely, such as by telephone or videoconference.",15847
+Travis,2024,"9.6.4. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings for which no one appeared in person, by telephone or by written affidavit on behalf of the property owner.",6639
+Travis,2024,"9.6.5. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before special panels as defined by Tax Code Section 6.425?",0
+Travis,2024,"9.6.6. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before single member panels as defined by Tax Code Section 41.45(b-4)?",1651
+Travis,2024,"9.6.7. Of the total NUMBER of ARB hearings scheduled for 2024, state the NUMBER of hearings scheduled before multi-member panels as defined by Tax Code Section 41.45(d)?",32525
+Travis,2024,"9.7. Did the appraisal district offer an informal process (that is, through meetings, teleconferences or online with appraisal district staff) to resolve concerns, inquiries or protests filed in 2024? If yes, go to next; if no, go to 9.11.",Yes
+Travis,2024,"9.8. Of the total NUMBER of concerns, inquiries or protests filed in 2024, HOW MANY were resolved through an informal process and did not reach the ARB? (This total NUMBER should match the combined total of NUMBERS for 9.8.1 and 9.8.2; include those resolved with or without a value reduction.)",23844
+Travis,2024,9.8.1. Single-Family Residential,18217
+Travis,2024,9.8.2. All other categories,5627
+Travis,2024,"9.9. Of the total NUMBER of concerns, inquiries or protests resolved through the informal process in 2024, HOW MANY resulted in a reduction in value? (This total NUMBER should match the combined total of NUMBER for 9.9.1 and 9.9.2.)",20636
+Travis,2024,9.9.1. Single-Family Residential,17784
+Travis,2024,9.9.2. All other categories,2852
+Travis,2024,"9.10. State the total amount of VALUE reduction that resulted from concerns, inquiries or protests resolved through the informal process in 2024 (exclude value reductions resulting from exemptions or special appraisal determinations). (This total AMOUNT should match the combined total AMOUNT for 9.10.1 and 9.10.2.)",1867178285
+Travis,2024,9.10.1. Single-Family Residential,963196402
+Travis,2024,9.10.2. All other categories,903981883
+Travis,2024,9.11. State the total NUMBER of protests filed in 2024 that resulted in a written ARB determination. (This NUMBER should match the combined total of NUMBERS for 9.11.1 and 9.11.2 and may not exceed the total NUMBER in 9.6.),149911
+Travis,2024,9.11.1. Single-Family Residential,116657
+Travis,2024,9.11.2. All other categories,33254
+Travis,2024,"9.11.3. Of the total NUMBER of protests which resulted in written ARB determinations in 2024, state the total NUMBER that resulted in a reduction in value (exclude value reductions resulting from exemptions or special appraisal determinations). (This total should match the combined total NUMBER for 9.11.4 and 9.11.5.)",133861
+Travis,2024,9.11.4. Single-Family Residential,113660
+Travis,2024,9.11.5. All other categories,20201
+Travis,2024,9.11.6. State the total amount of VALUE reduction that resulted from all ARB determinations in 2024 (exclude value reductions resulting from exemptions and special appraisal determinations). This total AMOUNT should match the combined total AMOUNT for 9.11.7 and 9.11.8.,29340111928
+Travis,2024,9.11.7. Single-Family Residential,10507289650
+Travis,2024,9.11.8. All other categories,18832822278
+Travis,2024,9.12. State the total NUMBER of ARB determinations appealed to binding arbitration in 2024.,849
+Travis,2024,9.13. State the total NUMBER of ARB determinations appealed to the State Office of Administrative Hearings (SOAH) in 2024.,12
+Dallas,2025,9.1. HOW MANY protests to the ARB were filed in 2025?,230276
+Dallas,2025,9.1.1. Single-Family Residential,162902
+Dallas,2025,9.1.2. Multi-Family Residential,11344
+Dallas,2025,9.1.3. Commercial Real,22652
+Dallas,2025,9.1.4. Commercial Personal,544
+Dallas,2025,9.1.5. Industrial Real,11348
+Dallas,2025,9.1.6. Industrial Personal,506
+Dallas,2025,9.1.7. Utilities,943
+Dallas,2025,9.1.8. Oil and Gas,190
+Dallas,2025,9.1.9. All other property categories,19847
+Dallas,2025,"9.2. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY were submitted through an online protest system? If the appraisal district does not have an online protest system, please enter 0. Do not leave blank.",56287
+Dallas,2025,"9.3. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY were filed by persons designated as agents?",182524
+Dallas,2025,"9.4. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY involved the same property that was the subject of a protest in 2024?",172411
+Dallas,2025,"9.4.1. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY involved the same property that was the subject of a protest in both 2024 and 2023?",149051
+Dallas,2025,9.5. State the total amount of APPRAISED VALUE noticed for all protests filed for 2025.,337510008380
+Dallas,2025,9.5.1. Single-Family Residential,105885507540
+Dallas,2025,9.5.2. Multi-Family Residential,66521662040
+Dallas,2025,9.5.3. Commercial Real and Personal,103437502610
+Dallas,2025,9.5.4. Industrial Real and Personal,2532085710
+Dallas,2025,9.5.5. Utilities,47766532260
+Dallas,2025,9.5.6. Oil and Gas,3592980
+Dallas,2025,9.5.7. All other property categories,11363125240
+Dallas,2025,9.6. HOW MANY 2025 protests were scheduled for hearings before the ARB or panels? Include live hearings and telephone hearings. (The answer may not be more than the TOTAL NUMBER in 9.1.),228182
+Dallas,2025,"9.6.1. Of the TOTAL NUMBER of ARB hearings scheduled in 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared in person.",48896
+Dallas,2025,"9.6.2. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared by affidavit.",113191
+Dallas,2025,"9.6.3. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared remotely, such as by telephone or videoconference.",145815
+Dallas,2025,"9.6.4. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings for which no one appeared in person, by telephone or by written affidavit on behalf of the property owner.",18165
+Dallas,2025,"9.6.5. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before special panels as defined by Tax Code Section 6.425?",0
+Dallas,2025,"9.6.6. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before single member panels as defined by Tax Code Section 41.45(b-4)?",8862
+Dallas,2025,"9.6.7. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before multi-member panels as defined by Tax Code Section 41.45(d)?",219320
+Dallas,2025,"9.7. Did the appraisal district offer an informal process (that is, through meetings, teleconferences or online with appraisal district staff) to resolve concerns, inquiries or protests filed in 2025? If yes, go to next; if no, go to 9.11.",Yes
+Dallas,2025,"9.8. Of the TOTAL NUMBER of concerns, inquiries or protests filed in 2025, HOW MANY were resolved through an informal process and did not reach the ARB? (This TOTAL NUMBER should match the combined total of NUMBERS for 9.8.1 and 9.8.2; include those resolved with or without a value reduction.)",46457
+Dallas,2025,9.8.1. Single-Family Residential,22592
+Dallas,2025,9.8.2. All other categories,23865
+Dallas,2025,"9.9. Of the TOTAL NUMBER of concerns, inquiries or protests resolved through the informal process in 2025, HOW MANY resulted in a reduction in value? (This TOTAL NUMBER should match the combined total of NUMBER for 9.9.1 and 9.9.2.)",42768
+Dallas,2025,9.9.1. Single-Family Residential,20983
+Dallas,2025,9.9.2. All other categories,21785
+Dallas,2025,"9.10. State the total amount of VALUE reduction that resulted from concerns, inquiries or protests resolved through the informal process in 2025 (exclude value reductions resulting from exemptions or special appraisal determinations). (This TOTAL AMOUNT should match the combined total AMOUNT for 9.10.1 and 9.10.2.)",30676140270
+Dallas,2025,9.10.1. Single-Family Residential,6726730188
+Dallas,2025,9.10.2. All other categories,23949410082
+Dallas,2025,9.11. State the TOTAL NUMBER of protests filed in 2025 that resulted in a written ARB determination. (This NUMBER should match the combined total of NUMBERS for 9.11.1 and 9.11.2 and may not exceed the TOTAL NUMBER in 9.6.),127153
+Dallas,2025,9.11.1. Single-Family Residential,72626
+Dallas,2025,9.11.2. All other categories,54527
+Dallas,2025,"9.11.3. Of the TOTAL NUMBER of protests which resulted in written ARB determinations in 2025, state the TOTAL NUMBER that resulted in a reduction in value (exclude value reductions resulting from exemptions or special appraisal determinations). (This total should match the combined TOTAL NUMBER for 9.11.4 and 9.11.5.)",104204
+Dallas,2025,9.11.4. Single-Family Residential,57404
+Dallas,2025,9.11.5. All other categories,46800
+Dallas,2025,9.11.6. State the total amount of VALUE reduction that resulted from all ARB determinations in 2025 (exclude value reductions resulting from exemptions and special appraisal determinations). This TOTAL AMOUNT should match the combined TOTAL AMOUNT for 9.11.7 and 9.11.8.,92442503758
+Dallas,2025,9.11.7. Single-Family Residential,31950525653
+Dallas,2025,9.11.8. All other categories,60491978105
+Dallas,2025,9.12. State the TOTAL NUMBER of ARB determinations appealed to binding arbitration in 2025.,2495
+Dallas,2025,9.13. State the TOTAL NUMBER of ARB determinations appealed to the State Office of Administrative Hearings (SOAH) in 2025.,1
+Denton,2025,9.1. HOW MANY protests to the ARB were filed in 2025?,143285
+Denton,2025,9.1.1. Single-Family Residential,103987
+Denton,2025,9.1.2. Multi-Family Residential,2836
+Denton,2025,9.1.3. Commercial Real,6832
+Denton,2025,9.1.4. Commercial Personal,1927
+Denton,2025,9.1.5. Industrial Real,117
+Denton,2025,9.1.6. Industrial Personal,98
+Denton,2025,9.1.7. Utilities,804
+Denton,2025,9.1.8. Oil and Gas,1945
+Denton,2025,9.1.9. All other property categories,24739
+Denton,2025,"9.2. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY were submitted through an online protest system? If the appraisal district does not have an online protest system, please enter 0. Do not leave blank.",121276
+Denton,2025,"9.3. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY were filed by persons designated as agents?",108544
+Denton,2025,"9.4. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY involved the same property that was the subject of a protest in 2024?",94261
+Denton,2025,"9.4.1. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY involved the same property that was the subject of a protest in both 2024 and 2023?",72137
+Denton,2025,9.5. State the total amount of APPRAISED VALUE noticed for all protests filed for 2025.,114242236125
+Denton,2025,9.5.1. Single-Family Residential,56543904430
+Denton,2025,9.5.2. Multi-Family Residential,18748430318
+Denton,2025,9.5.3. Commercial Real and Personal,29586702418
+Denton,2025,9.5.4. Industrial Real and Personal,2672149258
+Denton,2025,9.5.5. Utilities,452829378
+Denton,2025,9.5.6. Oil and Gas,651486080
+Denton,2025,9.5.7. All other property categories,5586734243
+Denton,2025,9.6. HOW MANY 2025 protests were scheduled for hearings before the ARB or panels? Include live hearings and telephone hearings. (The answer may not be more than the TOTAL NUMBER in 9.1.),131158
+Denton,2025,"9.6.1. Of the TOTAL NUMBER of ARB hearings scheduled in 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared in person.",58988
+Denton,2025,"9.6.2. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared by affidavit.",2669
+Denton,2025,"9.6.3. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared remotely, such as by telephone or videoconference.",69501
+Denton,2025,"9.6.4. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings for which no one appeared in person, by telephone or by written affidavit on behalf of the property owner.",8135
+Denton,2025,"9.6.5. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before special panels as defined by Tax Code Section 6.425?",0
+Denton,2025,"9.6.6. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before single member panels as defined by Tax Code Section 41.45(b-4)?",11559
+Denton,2025,"9.6.7. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before multi-member panels as defined by Tax Code Section 41.45(d)?",119599
+Denton,2025,"9.7. Did the appraisal district offer an informal process (that is, through meetings, teleconferences or online with appraisal district staff) to resolve concerns, inquiries or protests filed in 2025? If yes, go to next; if no, go to 9.11.",Yes
+Denton,2025,"9.8. Of the TOTAL NUMBER of concerns, inquiries or protests filed in 2025, HOW MANY were resolved through an informal process and did not reach the ARB? (This TOTAL NUMBER should match the combined total of NUMBERS for 9.8.1 and 9.8.2; include those resolved with or without a value reduction.)",47902
+Denton,2025,9.8.1. Single-Family Residential,24623
+Denton,2025,9.8.2. All other categories,23279
+Denton,2025,"9.9. Of the TOTAL NUMBER of concerns, inquiries or protests resolved through the informal process in 2025, HOW MANY resulted in a reduction in value? (This TOTAL NUMBER should match the combined total of NUMBER for 9.9.1 and 9.9.2.)",35928
+Denton,2025,9.9.1. Single-Family Residential,22964
+Denton,2025,9.9.2. All other categories,12964
+Denton,2025,"9.10. State the total amount of VALUE reduction that resulted from concerns, inquiries or protests resolved through the informal process in 2025 (exclude value reductions resulting from exemptions or special appraisal determinations). (This TOTAL AMOUNT should match the combined total AMOUNT for 9.10.1 and 9.10.2.)",3213263485
+Denton,2025,9.10.1. Single-Family Residential,701020399
+Denton,2025,9.10.2. All other categories,2512243086
+Denton,2025,9.11. State the TOTAL NUMBER of protests filed in 2025 that resulted in a written ARB determination. (This NUMBER should match the combined total of NUMBERS for 9.11.1 and 9.11.2 and may not exceed the TOTAL NUMBER in 9.6.),87563
+Denton,2025,9.11.1. Single-Family Residential,73454
+Denton,2025,9.11.2. All other categories,14109
+Denton,2025,"9.11.3. Of the TOTAL NUMBER of protests which resulted in written ARB determinations in 2025, state the TOTAL NUMBER that resulted in a reduction in value (exclude value reductions resulting from exemptions or special appraisal determinations). (This total should match the combined TOTAL NUMBER for 9.11.4 and 9.11.5.)",82491
+Denton,2025,9.11.4. Single-Family Residential,71829
+Denton,2025,9.11.5. All other categories,10662
+Denton,2025,9.11.6. State the total amount of VALUE reduction that resulted from all ARB determinations in 2025 (exclude value reductions resulting from exemptions and special appraisal determinations). This TOTAL AMOUNT should match the combined TOTAL AMOUNT for 9.11.7 and 9.11.8.,13551296931
+Denton,2025,9.11.7. Single-Family Residential,3227886734
+Denton,2025,9.11.8. All other categories,10323410197
+Denton,2025,9.12. State the TOTAL NUMBER of ARB determinations appealed to binding arbitration in 2025.,613
+Denton,2025,9.13. State the TOTAL NUMBER of ARB determinations appealed to the State Office of Administrative Hearings (SOAH) in 2025.,
+Fort Bend,2025,9.1. HOW MANY protests to the ARB were filed in 2025?,137814
+Fort Bend,2025,9.1.1. Single-Family Residential,111971
+Fort Bend,2025,9.1.2. Multi-Family Residential,553
+Fort Bend,2025,9.1.3. Commercial Real,5916
+Fort Bend,2025,9.1.4. Commercial Personal,3256
+Fort Bend,2025,9.1.5. Industrial Real,150
+Fort Bend,2025,9.1.6. Industrial Personal,34
+Fort Bend,2025,9.1.7. Utilities,1961
+Fort Bend,2025,9.1.8. Oil and Gas,139
+Fort Bend,2025,9.1.9. All other property categories,13834
+Fort Bend,2025,"9.2. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY were submitted through an online protest system? If the appraisal district does not have an online protest system, please enter 0. Do not leave blank.",116678
+Fort Bend,2025,"9.3. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY were filed by persons designated as agents?",122747
+Fort Bend,2025,"9.4. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY involved the same property that was the subject of a protest in 2024?",103102
+Fort Bend,2025,"9.4.1. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY involved the same property that was the subject of a protest in both 2024 and 2023?",84609
+Fort Bend,2025,9.5. State the total amount of APPRAISED VALUE noticed for all protests filed for 2025.,97466938393
+Fort Bend,2025,9.5.1. Single-Family Residential,56989853931
+Fort Bend,2025,9.5.2. Multi-Family Residential,7795473425
+Fort Bend,2025,9.5.3. Commercial Real and Personal,22666968637
+Fort Bend,2025,9.5.4. Industrial Real and Personal,2096641883
+Fort Bend,2025,9.5.5. Utilities,3065123460
+Fort Bend,2025,9.5.6. Oil and Gas,11806537
+Fort Bend,2025,9.5.7. All other property categories,4841070520
+Fort Bend,2025,9.6. HOW MANY 2025 protests were scheduled for hearings before the ARB or panels? Include live hearings and telephone hearings. (The answer may not be more than the TOTAL NUMBER in 9.1.),124433
+Fort Bend,2025,"9.6.1. Of the TOTAL NUMBER of ARB hearings scheduled in 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared in person.",8764
+Fort Bend,2025,"9.6.2. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared by affidavit.",1880
+Fort Bend,2025,"9.6.3. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared remotely, such as by telephone or videoconference.",1334
+Fort Bend,2025,"9.6.4. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings for which no one appeared in person, by telephone or by written affidavit on behalf of the property owner.",5178
+Fort Bend,2025,"9.6.5. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before special panels as defined by Tax Code Section 6.425?",0
+Fort Bend,2025,"9.6.6. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before single member panels as defined by Tax Code Section 41.45(b-4)?",35163
+Fort Bend,2025,"9.6.7. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before multi-member panels as defined by Tax Code Section 41.45(d)?",89270
+Fort Bend,2025,"9.7. Did the appraisal district offer an informal process (that is, through meetings, teleconferences or online with appraisal district staff) to resolve concerns, inquiries or protests filed in 2025? If yes, go to next; if no, go to 9.11.",Yes
+Fort Bend,2025,"9.8. Of the TOTAL NUMBER of concerns, inquiries or protests filed in 2025, HOW MANY were resolved through an informal process and did not reach the ARB? (This TOTAL NUMBER should match the combined total of NUMBERS for 9.8.1 and 9.8.2; include those resolved with or without a value reduction.)",80264
+Fort Bend,2025,9.8.1. Single-Family Residential,68752
+Fort Bend,2025,9.8.2. All other categories,11512
+Fort Bend,2025,"9.9. Of the TOTAL NUMBER of concerns, inquiries or protests resolved through the informal process in 2025, HOW MANY resulted in a reduction in value? (This TOTAL NUMBER should match the combined total of NUMBER for 9.9.1 and 9.9.2.)",75425
+Fort Bend,2025,9.9.1. Single-Family Residential,67738
+Fort Bend,2025,9.9.2. All other categories,7687
+Fort Bend,2025,"9.10. State the total amount of VALUE reduction that resulted from concerns, inquiries or protests resolved through the informal process in 2025 (exclude value reductions resulting from exemptions or special appraisal determinations). (This TOTAL AMOUNT should match the combined total AMOUNT for 9.10.1 and 9.10.2.)",1887516299
+Fort Bend,2025,9.10.1. Single-Family Residential,1358970215
+Fort Bend,2025,9.10.2. All other categories,528546084
+Fort Bend,2025,9.11. State the TOTAL NUMBER of protests filed in 2025 that resulted in a written ARB determination. (This NUMBER should match the combined total of NUMBERS for 9.11.1 and 9.11.2 and may not exceed the TOTAL NUMBER in 9.6.),36326
+Fort Bend,2025,9.11.1. Single-Family Residential,27041
+Fort Bend,2025,9.11.2. All other categories,9285
+Fort Bend,2025,"9.11.3. Of the TOTAL NUMBER of protests which resulted in written ARB determinations in 2025, state the TOTAL NUMBER that resulted in a reduction in value (exclude value reductions resulting from exemptions or special appraisal determinations). (This total should match the combined TOTAL NUMBER for 9.11.4 and 9.11.5.)",14564
+Fort Bend,2025,9.11.4. Single-Family Residential,12919
+Fort Bend,2025,9.11.5. All other categories,1645
+Fort Bend,2025,9.11.6. State the total amount of VALUE reduction that resulted from all ARB determinations in 2025 (exclude value reductions resulting from exemptions and special appraisal determinations). This TOTAL AMOUNT should match the combined TOTAL AMOUNT for 9.11.7 and 9.11.8.,4432264374
+Fort Bend,2025,9.11.7. Single-Family Residential,570589084
+Fort Bend,2025,9.11.8. All other categories,3861675290
+Fort Bend,2025,9.12. State the TOTAL NUMBER of ARB determinations appealed to binding arbitration in 2025.,581
+Fort Bend,2025,9.13. State the TOTAL NUMBER of ARB determinations appealed to the State Office of Administrative Hearings (SOAH) in 2025.,1
+Hays,2025,9.1. HOW MANY protests to the ARB were filed in 2025?,51970
+Hays,2025,9.1.1. Single-Family Residential,33423
+Hays,2025,9.1.2. Multi-Family Residential,2004
+Hays,2025,9.1.3. Commercial Real,1284
+Hays,2025,9.1.4. Commercial Personal,411
+Hays,2025,9.1.5. Industrial Real,805
+Hays,2025,9.1.6. Industrial Personal,603
+Hays,2025,9.1.7. Utilities,16
+Hays,2025,9.1.8. Oil and Gas,0
+Hays,2025,9.1.9. All other property categories,13424
+Hays,2025,"9.2. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY were submitted through an online protest system? If the appraisal district does not have an online protest system, please enter 0. Do not leave blank.",42645
+Hays,2025,"9.3. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY were filed by persons designated as agents?",31400
+Hays,2025,"9.4. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY involved the same property that was the subject of a protest in 2024?",38602
+Hays,2025,"9.4.1. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY involved the same property that was the subject of a protest in both 2024 and 2023?",34101
+Hays,2025,9.5. State the total amount of APPRAISED VALUE noticed for all protests filed for 2025.,34208347042
+Hays,2025,9.5.1. Single-Family Residential,15627025747
+Hays,2025,9.5.2. Multi-Family Residential,4322191556
+Hays,2025,9.5.3. Commercial Real and Personal,2383807216
+Hays,2025,9.5.4. Industrial Real and Personal,619855307
+Hays,2025,9.5.5. Utilities,401222355
+Hays,2025,9.5.6. Oil and Gas,0
+Hays,2025,9.5.7. All other property categories,10854244861
+Hays,2025,9.6. HOW MANY 2025 protests were scheduled for hearings before the ARB or panels? Include live hearings and telephone hearings. (The answer may not be more than the TOTAL NUMBER in 9.1.),51970
+Hays,2025,"9.6.1. Of the TOTAL NUMBER of ARB hearings scheduled in 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared in person.",4430
+Hays,2025,"9.6.2. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared by affidavit.",67
+Hays,2025,"9.6.3. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared remotely, such as by telephone or videoconference.",351
+Hays,2025,"9.6.4. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings for which no one appeared in person, by telephone or by written affidavit on behalf of the property owner.",1429
+Hays,2025,"9.6.5. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before special panels as defined by Tax Code Section 6.425?",0
+Hays,2025,"9.6.6. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before single member panels as defined by Tax Code Section 41.45(b-4)?",4224
+Hays,2025,"9.6.7. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before multi-member panels as defined by Tax Code Section 41.45(d)?",47746
+Hays,2025,"9.7. Did the appraisal district offer an informal process (that is, through meetings, teleconferences or online with appraisal district staff) to resolve concerns, inquiries or protests filed in 2025? If yes, go to next; if no, go to 9.11.",Yes
+Hays,2025,"9.8. Of the TOTAL NUMBER of concerns, inquiries or protests filed in 2025, HOW MANY were resolved through an informal process and did not reach the ARB? (This TOTAL NUMBER should match the combined total of NUMBERS for 9.8.1 and 9.8.2; include those resolved with or without a value reduction.)",45693
+Hays,2025,9.8.1. Single-Family Residential,31907
+Hays,2025,9.8.2. All other categories,13786
+Hays,2025,"9.9. Of the TOTAL NUMBER of concerns, inquiries or protests resolved through the informal process in 2025, HOW MANY resulted in a reduction in value? (This TOTAL NUMBER should match the combined total of NUMBER for 9.9.1 and 9.9.2.)",38541
+Hays,2025,9.9.1. Single-Family Residential,34901
+Hays,2025,9.9.2. All other categories,3640
+Hays,2025,"9.10. State the total amount of VALUE reduction that resulted from concerns, inquiries or protests resolved through the informal process in 2025 (exclude value reductions resulting from exemptions or special appraisal determinations). (This TOTAL AMOUNT should match the combined total AMOUNT for 9.10.1 and 9.10.2.)",3120482276
+Hays,2025,9.10.1. Single-Family Residential,948443065
+Hays,2025,9.10.2. All other categories,2172039211
+Hays,2025,9.11. State the TOTAL NUMBER of protests filed in 2025 that resulted in a written ARB determination. (This NUMBER should match the combined total of NUMBERS for 9.11.1 and 9.11.2 and may not exceed the TOTAL NUMBER in 9.6.),4848
+Hays,2025,9.11.1. Single-Family Residential,4591
+Hays,2025,9.11.2. All other categories,257
+Hays,2025,"9.11.3. Of the TOTAL NUMBER of protests which resulted in written ARB determinations in 2025, state the TOTAL NUMBER that resulted in a reduction in value (exclude value reductions resulting from exemptions or special appraisal determinations). (This total should match the combined TOTAL NUMBER for 9.11.4 and 9.11.5.)",3721
+Hays,2025,9.11.4. Single-Family Residential,3525
+Hays,2025,9.11.5. All other categories,196
+Hays,2025,9.11.6. State the total amount of VALUE reduction that resulted from all ARB determinations in 2025 (exclude value reductions resulting from exemptions and special appraisal determinations). This TOTAL AMOUNT should match the combined TOTAL AMOUNT for 9.11.7 and 9.11.8.,243153999
+Hays,2025,9.11.7. Single-Family Residential,190808933
+Hays,2025,9.11.8. All other categories,52345066
+Hays,2025,9.12. State the TOTAL NUMBER of ARB determinations appealed to binding arbitration in 2025.,137
+Hays,2025,9.13. State the TOTAL NUMBER of ARB determinations appealed to the State Office of Administrative Hearings (SOAH) in 2025.,1
+Montgomery,2025,9.1. HOW MANY protests to the ARB were filed in 2025?,106388
+Montgomery,2025,9.1.1. Single-Family Residential,75316
+Montgomery,2025,9.1.2. Multi-Family Residential,554
+Montgomery,2025,9.1.3. Commercial Real,5467
+Montgomery,2025,9.1.4. Commercial Personal,2035
+Montgomery,2025,9.1.5. Industrial Real,208
+Montgomery,2025,9.1.6. Industrial Personal,176
+Montgomery,2025,9.1.7. Utilities,812
+Montgomery,2025,9.1.8. Oil and Gas,339
+Montgomery,2025,9.1.9. All other property categories,21481
+Montgomery,2025,"9.2. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY were submitted through an online protest system? If the appraisal district does not have an online protest system, please enter 0. Do not leave blank.",56619
+Montgomery,2025,"9.3. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY were filed by persons designated as agents?",88560
+Montgomery,2025,"9.4. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY involved the same property that was the subject of a protest in 2024?",73079
+Montgomery,2025,"9.4.1. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY involved the same property that was the subject of a protest in both 2024 and 2023?",57902
+Montgomery,2025,9.5. State the total amount of APPRAISED VALUE noticed for all protests filed for 2025.,61359856628
+Montgomery,2025,9.5.1. Single-Family Residential,35030396495
+Montgomery,2025,9.5.2. Multi-Family Residential,6296832189
+Montgomery,2025,9.5.3. Commercial Real and Personal,15492568356
+Montgomery,2025,9.5.4. Industrial Real and Personal,1430806755
+Montgomery,2025,9.5.5. Utilities,680137798
+Montgomery,2025,9.5.6. Oil and Gas,44222210
+Montgomery,2025,9.5.7. All other property categories,2384892825
+Montgomery,2025,9.6. HOW MANY 2025 protests were scheduled for hearings before the ARB or panels? Include live hearings and telephone hearings. (The answer may not be more than the TOTAL NUMBER in 9.1.),88331
+Montgomery,2025,"9.6.1. Of the TOTAL NUMBER of ARB hearings scheduled in 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared in person.",71924
+Montgomery,2025,"9.6.2. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared by affidavit.",865
+Montgomery,2025,"9.6.3. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared remotely, such as by telephone or videoconference.",15542
+Montgomery,2025,"9.6.4. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings for which no one appeared in person, by telephone or by written affidavit on behalf of the property owner.",5805
+Montgomery,2025,"9.6.5. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before special panels as defined by Tax Code Section 6.425?",0
+Montgomery,2025,"9.6.6. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before single member panels as defined by Tax Code Section 41.45(b-4)?",5171
+Montgomery,2025,"9.6.7. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before multi-member panels as defined by Tax Code Section 41.45(d)?",83160
+Montgomery,2025,"9.7. Did the appraisal district offer an informal process (that is, through meetings, teleconferences or online with appraisal district staff) to resolve concerns, inquiries or protests filed in 2025? If yes, go to next; if no, go to 9.11.",Yes
+Montgomery,2025,"9.8. Of the TOTAL NUMBER of concerns, inquiries or protests filed in 2025, HOW MANY were resolved through an informal process and did not reach the ARB? (This TOTAL NUMBER should match the combined total of NUMBERS for 9.8.1 and 9.8.2; include those resolved with or without a value reduction.)",9033
+Montgomery,2025,9.8.1. Single-Family Residential,6386
+Montgomery,2025,9.8.2. All other categories,2647
+Montgomery,2025,"9.9. Of the TOTAL NUMBER of concerns, inquiries or protests resolved through the informal process in 2025, HOW MANY resulted in a reduction in value? (This TOTAL NUMBER should match the combined total of NUMBER for 9.9.1 and 9.9.2.)",20147
+Montgomery,2025,9.9.1. Single-Family Residential,8104
+Montgomery,2025,9.9.2. All other categories,12043
+Montgomery,2025,"9.10. State the total amount of VALUE reduction that resulted from concerns, inquiries or protests resolved through the informal process in 2025 (exclude value reductions resulting from exemptions or special appraisal determinations). (This TOTAL AMOUNT should match the combined total AMOUNT for 9.10.1 and 9.10.2.)",906988520
+Montgomery,2025,9.10.1. Single-Family Residential,368463109
+Montgomery,2025,9.10.2. All other categories,538525411
+Montgomery,2025,9.11. State the TOTAL NUMBER of protests filed in 2025 that resulted in a written ARB determination. (This NUMBER should match the combined total of NUMBERS for 9.11.1 and 9.11.2 and may not exceed the TOTAL NUMBER in 9.6.),68810
+Montgomery,2025,9.11.1. Single-Family Residential,58008
+Montgomery,2025,9.11.2. All other categories,10802
+Montgomery,2025,"9.11.3. Of the TOTAL NUMBER of protests which resulted in written ARB determinations in 2025, state the TOTAL NUMBER that resulted in a reduction in value (exclude value reductions resulting from exemptions or special appraisal determinations). (This total should match the combined TOTAL NUMBER for 9.11.4 and 9.11.5.)",58492
+Montgomery,2025,9.11.4. Single-Family Residential,54053
+Montgomery,2025,9.11.5. All other categories,4439
+Montgomery,2025,9.11.6. State the total amount of VALUE reduction that resulted from all ARB determinations in 2025 (exclude value reductions resulting from exemptions and special appraisal determinations). This TOTAL AMOUNT should match the combined TOTAL AMOUNT for 9.11.7 and 9.11.8.,4974241879
+Montgomery,2025,9.11.7. Single-Family Residential,2758618517
+Montgomery,2025,9.11.8. All other categories,2215623362
+Montgomery,2025,9.12. State the TOTAL NUMBER of ARB determinations appealed to binding arbitration in 2025.,1218
+Montgomery,2025,9.13. State the TOTAL NUMBER of ARB determinations appealed to the State Office of Administrative Hearings (SOAH) in 2025.,1
+Rockwall,2025,9.1. HOW MANY protests to the ARB were filed in 2025?,15318
+Rockwall,2025,9.1.1. Single-Family Residential,10709
+Rockwall,2025,9.1.2. Multi-Family Residential,35
+Rockwall,2025,9.1.3. Commercial Real,808
+Rockwall,2025,9.1.4. Commercial Personal,255
+Rockwall,2025,9.1.5. Industrial Real,18
+Rockwall,2025,9.1.6. Industrial Personal,53
+Rockwall,2025,9.1.7. Utilities,57
+Rockwall,2025,9.1.8. Oil and Gas,0
+Rockwall,2025,9.1.9. All other property categories,3383
+Rockwall,2025,"9.2. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY were submitted through an online protest system? If the appraisal district does not have an online protest system, please enter 0. Do not leave blank.",11501
+Rockwall,2025,"9.3. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY were filed by persons designated as agents?",11172
+Rockwall,2025,"9.4. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY involved the same property that was the subject of a protest in 2024?",9376
+Rockwall,2025,"9.4.1. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY involved the same property that was the subject of a protest in both 2024 and 2023?",6841
+Rockwall,2025,9.5. State the total amount of APPRAISED VALUE noticed for all protests filed for 2025.,9481618688
+Rockwall,2025,9.5.1. Single-Family Residential,5592856784
+Rockwall,2025,9.5.2. Multi-Family Residential,450775541
+Rockwall,2025,9.5.3. Commercial Real and Personal,2316233657
+Rockwall,2025,9.5.4. Industrial Real and Personal,170995259
+Rockwall,2025,9.5.5. Utilities,218917010
+Rockwall,2025,9.5.6. Oil and Gas,0
+Rockwall,2025,9.5.7. All other property categories,731840437
+Rockwall,2025,9.6. HOW MANY 2025 protests were scheduled for hearings before the ARB or panels? Include live hearings and telephone hearings. (The answer may not be more than the TOTAL NUMBER in 9.1.),11743
+Rockwall,2025,"9.6.1. Of the TOTAL NUMBER of ARB hearings scheduled in 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared in person.",2934
+Rockwall,2025,"9.6.2. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared by affidavit.",417
+Rockwall,2025,"9.6.3. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared remotely, such as by telephone or videoconference.",7784
+Rockwall,2025,"9.6.4. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings for which no one appeared in person, by telephone or by written affidavit on behalf of the property owner.",608
+Rockwall,2025,"9.6.5. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before special panels as defined by Tax Code Section 6.425?",0
+Rockwall,2025,"9.6.6. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before single member panels as defined by Tax Code Section 41.45(b-4)?",4571
+Rockwall,2025,"9.6.7. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before multi-member panels as defined by Tax Code Section 41.45(d)?",7172
+Rockwall,2025,"9.7. Did the appraisal district offer an informal process (that is, through meetings, teleconferences or online with appraisal district staff) to resolve concerns, inquiries or protests filed in 2025? If yes, go to next; if no, go to 9.11.",Yes
+Rockwall,2025,"9.8. Of the TOTAL NUMBER of concerns, inquiries or protests filed in 2025, HOW MANY were resolved through an informal process and did not reach the ARB? (This TOTAL NUMBER should match the combined total of NUMBERS for 9.8.1 and 9.8.2; include those resolved with or without a value reduction.)",9032
+Rockwall,2025,9.8.1. Single-Family Residential,5812
+Rockwall,2025,9.8.2. All other categories,3220
+Rockwall,2025,"9.9. Of the TOTAL NUMBER of concerns, inquiries or protests resolved through the informal process in 2025, HOW MANY resulted in a reduction in value? (This TOTAL NUMBER should match the combined total of NUMBER for 9.9.1 and 9.9.2.)",7168
+Rockwall,2025,9.9.1. Single-Family Residential,4857
+Rockwall,2025,9.9.2. All other categories,2311
+Rockwall,2025,"9.10. State the total amount of VALUE reduction that resulted from concerns, inquiries or protests resolved through the informal process in 2025 (exclude value reductions resulting from exemptions or special appraisal determinations). (This TOTAL AMOUNT should match the combined total AMOUNT for 9.10.1 and 9.10.2.)",376897572
+Rockwall,2025,9.10.1. Single-Family Residential,178414751
+Rockwall,2025,9.10.2. All other categories,198482821
+Rockwall,2025,9.11. State the TOTAL NUMBER of protests filed in 2025 that resulted in a written ARB determination. (This NUMBER should match the combined total of NUMBERS for 9.11.1 and 9.11.2 and may not exceed the TOTAL NUMBER in 9.6.),6102
+Rockwall,2025,9.11.1. Single-Family Residential,4971
+Rockwall,2025,9.11.2. All other categories,1131
+Rockwall,2025,"9.11.3. Of the TOTAL NUMBER of protests which resulted in written ARB determinations in 2025, state the TOTAL NUMBER that resulted in a reduction in value (exclude value reductions resulting from exemptions or special appraisal determinations). (This total should match the combined TOTAL NUMBER for 9.11.4 and 9.11.5.)",4162
+Rockwall,2025,9.11.4. Single-Family Residential,3682
+Rockwall,2025,9.11.5. All other categories,480
+Rockwall,2025,9.11.6. State the total amount of VALUE reduction that resulted from all ARB determinations in 2025 (exclude value reductions resulting from exemptions and special appraisal determinations). This TOTAL AMOUNT should match the combined TOTAL AMOUNT for 9.11.7 and 9.11.8.,213906393
+Rockwall,2025,9.11.7. Single-Family Residential,102279656
+Rockwall,2025,9.11.8. All other categories,111626737
+Rockwall,2025,9.12. State the TOTAL NUMBER of ARB determinations appealed to binding arbitration in 2025.,59
+Rockwall,2025,9.13. State the TOTAL NUMBER of ARB determinations appealed to the State Office of Administrative Hearings (SOAH) in 2025.,
+Tarrant,2025,9.1. HOW MANY protests to the ARB were filed in 2025?,193743
+Tarrant,2025,9.1.1. Single-Family Residential,141490
+Tarrant,2025,9.1.2. Multi-Family Residential,5094
+Tarrant,2025,9.1.3. Commercial Real,19614
+Tarrant,2025,9.1.4. Commercial Personal,4409
+Tarrant,2025,9.1.5. Industrial Real,659
+Tarrant,2025,9.1.6. Industrial Personal,168
+Tarrant,2025,9.1.7. Utilities,1589
+Tarrant,2025,9.1.8. Oil and Gas,3619
+Tarrant,2025,9.1.9. All other property categories,17101
+Tarrant,2025,"9.2. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY were submitted through an online protest system? If the appraisal district does not have an online protest system, please enter 0. Do not leave blank.",179957
+Tarrant,2025,"9.3. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY were filed by persons designated as agents?",184037
+Tarrant,2025,"9.4. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY involved the same property that was the subject of a protest in 2024?",127043
+Tarrant,2025,"9.4.1. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY involved the same property that was the subject of a protest in both 2024 and 2023?",103250
+Tarrant,2025,9.5. State the total amount of APPRAISED VALUE noticed for all protests filed for 2025.,237489009977
+Tarrant,2025,9.5.1. Single-Family Residential,94430886847
+Tarrant,2025,9.5.2. Multi-Family Residential,40995839992
+Tarrant,2025,9.5.3. Commercial Real and Personal,76930290029
+Tarrant,2025,9.5.4. Industrial Real and Personal,5700492879
+Tarrant,2025,9.5.5. Utilities,13540422787
+Tarrant,2025,9.5.6. Oil and Gas,12596809
+Tarrant,2025,9.5.7. All other property categories,5878480634
+Tarrant,2025,9.6. HOW MANY 2025 protests were scheduled for hearings before the ARB or panels? Include live hearings and telephone hearings. (The answer may not be more than the TOTAL NUMBER in 9.1.),142884
+Tarrant,2025,"9.6.1. Of the TOTAL NUMBER of ARB hearings scheduled in 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared in person.",2182
+Tarrant,2025,"9.6.2. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared by affidavit.",608
+Tarrant,2025,"9.6.3. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared remotely, such as by telephone or videoconference.",535
+Tarrant,2025,"9.6.4. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings for which no one appeared in person, by telephone or by written affidavit on behalf of the property owner.",139559
+Tarrant,2025,"9.6.5. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before special panels as defined by Tax Code Section 6.425?",0
+Tarrant,2025,"9.6.6. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before single member panels as defined by Tax Code Section 41.45(b-4)?",68779
+Tarrant,2025,"9.6.7. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before multi-member panels as defined by Tax Code Section 41.45(d)?",68817
+Tarrant,2025,"9.7. Did the appraisal district offer an informal process (that is, through meetings, teleconferences or online with appraisal district staff) to resolve concerns, inquiries or protests filed in 2025? If yes, go to next; if no, go to 9.11.",Yes
+Tarrant,2025,"9.8. Of the TOTAL NUMBER of concerns, inquiries or protests filed in 2025, HOW MANY were resolved through an informal process and did not reach the ARB? (This TOTAL NUMBER should match the combined total of NUMBERS for 9.8.1 and 9.8.2; include those resolved with or without a value reduction.)",244403
+Tarrant,2025,9.8.1. Single-Family Residential,200278
+Tarrant,2025,9.8.2. All other categories,44125
+Tarrant,2025,"9.9. Of the TOTAL NUMBER of concerns, inquiries or protests resolved through the informal process in 2025, HOW MANY resulted in a reduction in value? (This TOTAL NUMBER should match the combined total of NUMBER for 9.9.1 and 9.9.2.)",222761
+Tarrant,2025,9.9.1. Single-Family Residential,193388
+Tarrant,2025,9.9.2. All other categories,29373
+Tarrant,2025,"9.10. State the total amount of VALUE reduction that resulted from concerns, inquiries or protests resolved through the informal process in 2025 (exclude value reductions resulting from exemptions or special appraisal determinations). (This TOTAL AMOUNT should match the combined total AMOUNT for 9.10.1 and 9.10.2.)",36912820777
+Tarrant,2025,9.10.1. Single-Family Residential,16075969347
+Tarrant,2025,9.10.2. All other categories,20836851430
+Tarrant,2025,9.11. State the TOTAL NUMBER of protests filed in 2025 that resulted in a written ARB determination. (This NUMBER should match the combined total of NUMBERS for 9.11.1 and 9.11.2 and may not exceed the TOTAL NUMBER in 9.6.),3325
+Tarrant,2025,9.11.1. Single-Family Residential,1470
+Tarrant,2025,9.11.2. All other categories,1855
+Tarrant,2025,"9.11.3. Of the TOTAL NUMBER of protests which resulted in written ARB determinations in 2025, state the TOTAL NUMBER that resulted in a reduction in value (exclude value reductions resulting from exemptions or special appraisal determinations). (This total should match the combined TOTAL NUMBER for 9.11.4 and 9.11.5.)",1860
+Tarrant,2025,9.11.4. Single-Family Residential,947
+Tarrant,2025,9.11.5. All other categories,913
+Tarrant,2025,9.11.6. State the total amount of VALUE reduction that resulted from all ARB determinations in 2025 (exclude value reductions resulting from exemptions and special appraisal determinations). This TOTAL AMOUNT should match the combined TOTAL AMOUNT for 9.11.7 and 9.11.8.,618700693
+Tarrant,2025,9.11.7. Single-Family Residential,65169370
+Tarrant,2025,9.11.8. All other categories,553531323
+Tarrant,2025,9.12. State the TOTAL NUMBER of ARB determinations appealed to binding arbitration in 2025.,219
+Tarrant,2025,9.13. State the TOTAL NUMBER of ARB determinations appealed to the State Office of Administrative Hearings (SOAH) in 2025.,
+Travis,2025,9.1. HOW MANY protests to the ARB were filed in 2025?,210052
+Travis,2025,9.1.1. Single-Family Residential,161418
+Travis,2025,9.1.2. Multi-Family Residential,9158
+Travis,2025,9.1.3. Commercial Real,11798
+Travis,2025,9.1.4. Commercial Personal,3394
+Travis,2025,9.1.5. Industrial Real,17
+Travis,2025,9.1.6. Industrial Personal,596
+Travis,2025,9.1.7. Utilities,579
+Travis,2025,9.1.8. Oil and Gas,0
+Travis,2025,9.1.9. All other property categories,23092
+Travis,2025,"9.2. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY were submitted through an online protest system? If the appraisal district does not have an online protest system, please enter 0. Do not leave blank.",149062
+Travis,2025,"9.3. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY were filed by persons designated as agents?",180720
+Travis,2025,"9.4. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY involved the same property that was the subject of a protest in 2024?",166575
+Travis,2025,"9.4.1. Of the TOTAL NUMBER of protests filed in 2025, HOW MANY involved the same property that was the subject of a protest in both 2024 and 2023?",141894
+Travis,2025,9.5. State the total amount of APPRAISED VALUE noticed for all protests filed for 2025.,286392946702
+Travis,2025,9.5.1. Single-Family Residential,129318387553
+Travis,2025,9.5.2. Multi-Family Residential,60563006678
+Travis,2025,9.5.3. Commercial Real and Personal,72764518330
+Travis,2025,9.5.4. Industrial Real and Personal,5661631726
+Travis,2025,9.5.5. Utilities,10394202
+Travis,2025,9.5.6. Oil and Gas,0
+Travis,2025,9.5.7. All other property categories,18075008213
+Travis,2025,9.6. HOW MANY 2025 protests were scheduled for hearings before the ARB or panels? Include live hearings and telephone hearings. (The answer may not be more than the TOTAL NUMBER in 9.1.),172030
+Travis,2025,"9.6.1. Of the TOTAL NUMBER of ARB hearings scheduled in 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared in person.",15765
+Travis,2025,"9.6.2. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared by affidavit.",1572
+Travis,2025,"9.6.3. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings at which a property owner or his or her representative appeared remotely, such as by telephone or videoconference.",6731
+Travis,2025,"9.6.4. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings for which no one appeared in person, by telephone or by written affidavit on behalf of the property owner.",7731
+Travis,2025,"9.6.5. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before special panels as defined by Tax Code Section 6.425?",0
+Travis,2025,"9.6.6. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before single member panels as defined by Tax Code Section 41.45(b-4)?",0
+Travis,2025,"9.6.7. Of the TOTAL NUMBER of ARB hearings scheduled for 2025, state the NUMBER of hearings scheduled before multi-member panels as defined by Tax Code Section 41.45(d)?",172030
+Travis,2025,"9.7. Did the appraisal district offer an informal process (that is, through meetings, teleconferences or online with appraisal district staff) to resolve concerns, inquiries or protests filed in 2025? If yes, go to next; if no, go to 9.11.",Yes
+Travis,2025,"9.8. Of the TOTAL NUMBER of concerns, inquiries or protests filed in 2025, HOW MANY were resolved through an informal process and did not reach the ARB? (This TOTAL NUMBER should match the combined total of NUMBERS for 9.8.1 and 9.8.2; include those resolved with or without a value reduction.)",170688
+Travis,2025,9.8.1. Single-Family Residential,140628
+Travis,2025,9.8.2. All other categories,30060
+Travis,2025,"9.9. Of the TOTAL NUMBER of concerns, inquiries or protests resolved through the informal process in 2025, HOW MANY resulted in a reduction in value? (This TOTAL NUMBER should match the combined total of NUMBER for 9.9.1 and 9.9.2.)",155387
+Travis,2025,9.9.1. Single-Family Residential,138055
+Travis,2025,9.9.2. All other categories,17332
+Travis,2025,"9.10. State the total amount of VALUE reduction that resulted from concerns, inquiries or protests resolved through the informal process in 2025 (exclude value reductions resulting from exemptions or special appraisal determinations). (This TOTAL AMOUNT should match the combined total AMOUNT for 9.10.1 and 9.10.2.)",21696501029
+Travis,2025,9.10.1. Single-Family Residential,9550667394
+Travis,2025,9.10.2. All other categories,12145833635
+Travis,2025,9.11. State the TOTAL NUMBER of protests filed in 2025 that resulted in a written ARB determination. (This NUMBER should match the combined total of NUMBERS for 9.11.1 and 9.11.2 and may not exceed the TOTAL NUMBER in 9.6.),24094
+Travis,2025,9.11.1. Single-Family Residential,14203
+Travis,2025,9.11.2. All other categories,9891
+Travis,2025,"9.11.3. Of the TOTAL NUMBER of protests which resulted in written ARB determinations in 2025, state the TOTAL NUMBER that resulted in a reduction in value (exclude value reductions resulting from exemptions or special appraisal determinations). (This total should match the combined TOTAL NUMBER for 9.11.4 and 9.11.5.)",19553
+Travis,2025,9.11.4. Single-Family Residential,12875
+Travis,2025,9.11.5. All other categories,6678
+Travis,2025,9.11.6. State the total amount of VALUE reduction that resulted from all ARB determinations in 2025 (exclude value reductions resulting from exemptions and special appraisal determinations). This TOTAL AMOUNT should match the combined TOTAL AMOUNT for 9.11.7 and 9.11.8.,10825460084
+Travis,2025,9.11.7. Single-Family Residential,2892509236
+Travis,2025,9.11.8. All other categories,7932950848
+Travis,2025,9.12. State the TOTAL NUMBER of ARB determinations appealed to binding arbitration in 2025.,944
+Travis,2025,9.13. State the TOTAL NUMBER of ARB determinations appealed to the State Office of Administrative Hearings (SOAH) in 2025.,7

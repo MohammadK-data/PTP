@@ -1,0 +1,4 @@
+county,year,total_accounts,accounts_cat_A,accounts_cat_B,accounts_cat_M,mineral_accounts,homes_A_homestead,homes_A_with_agent,homes_A_protested,homes_A_protested_by_agent,homes_A_protested_by_owner,homes_A_ptp_agent,homes_A_ptp_protested,all_protests,all_agent_protests,source_roll_file,source_agent_file,source_protest_file,roll_version_date
+Fort Bend,2024,417560,274919,933,5925,14700,201672,,,,,,,,,2026_08_19_1831_PropertyExport.txt; 2026_08_19_1831_OwnerExport.txt; 2026_08_19_1831_ExemptionExport.txt,,,2026-08-19
+Fort Bend,2025,427789,284010,904,6129,14840,211038,,,,,,,,,2026_08_17_1646_PropertyExport.txt; 2026_08_17_1646_OwnerExport.txt; 2026_08_17_1646_ExemptionExport.txt,,,2026-08-17
+Fort Bend,2026,440798,290491,924,6330,14977,218235,,,,,,,,,2026_07_07_1746_PropertyExport.txt; 2026_07_07_1746_OwnerExport.txt; 2026_07_07_1746_ExemptionExport.txt,,,2026-07-07

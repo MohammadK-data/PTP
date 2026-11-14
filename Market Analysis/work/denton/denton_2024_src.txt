@@ -1,0 +1,4 @@
+source_roll_file=https://dentoncad.net/data/_uploaded/files/datafiles/2024/CertifiedDataAllProperty/CertifiedDataAll.zip -> 2024-07-22_008084_APPRAISAL_INFO.TXT
+source_agent_file=same export: APPRAISAL_INFO arb_agent_id or ca_agent_id (no dates) + 2024-07-22_008084_APPRAISAL_AGENT.TXT
+source_protest_file=https://dentoncad.net/data/_uploaded/files/datafiles/2024/CertifiedDataProTax/ProTax_ARBExport.txt (2024-07-22)
+roll_version_date=2024-07-22

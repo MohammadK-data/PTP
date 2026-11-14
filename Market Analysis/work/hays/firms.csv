@@ -1,0 +1,15 @@
+county,year,firm,agent_ids,homes_A_agent_of_record,homes_A_protests_filed,all_accounts_agent_of_rec
+Hays,2026,Ownwell,A0120363,14740,,16988
+Hays,2026,Home Tax Shield,A0108804,1964,,2134
+Hays,2026,Five Stone Property Tax,A0076668,1957,,2224
+Hays,2026,Texas ProTax,A8646,1259,,3541
+Hays,2026,O'Connor & Associates,A1069,1166,,1530
+Hays,2026,Texas Tax Protest,A0046718,1141,,1287
+Hays,2026,Gill Denson,A0107403,652,,1002
+Hays,2026,Ryan LLC,A0108459;A0115980;A0115981;A0115984;A0115996;A0116018;A0146021;A0167074;A0168540;A0175515;A1089;A1112;A1117,450,,3942
+Hays,2026,Resolute Property Tax Solutions,A0087805,297,,395
+Hays,2026,TaxProtestMap,A0138556,143,,151
+Hays,2026,Lone Oak Property Tax Service,A0010522,138,,1051
+Hays,2026,Property Tax Protest,A0180641,93,,102
+Hays,2026,All other agents,304 other IDs,1531,,7945
+Hays,2026,Owners (self-filed),,,,

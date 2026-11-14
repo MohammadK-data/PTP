@@ -1,0 +1,123 @@
+county,year,firm,agent_ids,homes_A_agent_of_record,homes_A_protests_filed,all_accounts_agent_of_rec
+Montgomery,2024,O'Connor & Associates,113,14822,,17361
+Montgomery,2024,Ownwell,627223,6993,,7595
+Montgomery,2024,Bettencourt Tax Advisors,391656,2699,,3572
+Montgomery,2024,Texas Tax Protest,482918,2571,,2690
+Montgomery,2024,Elliott Wellman,232,1641,,4325
+Montgomery,2024,Rainbolt,476539,986,,1093
+Montgomery,2024,Assessment Advisors,421,942,,2021
+Montgomery,2024,Mclean Paula R,283,931,,1182
+Montgomery,2024,Ryan LLC,52;91;174;211;273;340978;361153;376263;392110;395160;434146;442600;442605;443219;443265;443686;444129;444981;459752;460421;460673;461789;463292;464861;471590;474621;481347;481952;484444;490233;494867;496571;496577;496634;496683;496695;496955;512055;517631;537829;541854;541970;542214;547126;547128;552544;571422;571979;587113;599137;601787;625954;629659;629860;630551;662676;691442;691929;692667;693041;694220;700557,767,,3781
+Montgomery,2024,Advaloremtax Net,342,725,,879
+Montgomery,2024,Rainbolt & Alexander,350;666685,549,,1505
+Montgomery,2024,Harding & Carbone,28,516,,1114
+Montgomery,2024,Quatro Tax,13;361114;514700,468,,842
+Montgomery,2024,Refund Advisory,365144,431,,437
+Montgomery,2024,The Ray Tax Group,418349;482232,375,,398
+Montgomery,2024,B R Lawson,310,342,,434
+Montgomery,2024,Ambrose & Assoc,399965,300,,807
+Montgomery,2024,Mclean & Associates,496668,299,,378
+Montgomery,2024,Cantrell Mcculloch,339322,275,,312
+Montgomery,2024,Gill Denson,594347;626589,259,,284
+Montgomery,2024,Home Tax Shield,613756,241,,245
+Montgomery,2024,Ad Valorem Advisors,267;381285,234,,5308
+Montgomery,2024,Property Tax Protest,412;654513,221,,235
+Montgomery,2024,Mb Property Tax Solutions,689886,207,,215
+Montgomery,2024,Vanguard Property Tax Appeals,570604,205,,205
+Montgomery,2024,Tax Recourse,405947,195,,275
+Montgomery,2024,Appeal Property Tax Com,377584,180,,207
+Montgomery,2024,W B Lockhart,297927,169,,1021
+Montgomery,2024,Beauchamp & Associates,351296;434152,128,,218
+Montgomery,2024,Jg Property Tax Jorge Galaviz,581409,127,,361
+Montgomery,2024,Texas ProTax,132,125,,257
+Montgomery,2024,Century Property Consultants,96,118,,146
+Montgomery,2024,Kasabov Tax Advisors,493645,109,,125
+Montgomery,2024,Lane Property Tax Advocates,393580,107,,233
+Montgomery,2024,Ad Valorem Tax Management,353442,102,,165
+Montgomery,2024,Smith Blair,338579,100,,105
+Montgomery,2024,All other agents,,2927,,17730
+Montgomery,2025,Ownwell,627223,19318,,20765
+Montgomery,2025,O'Connor & Associates,113,13835,,16299
+Montgomery,2025,Texas Tax Protest,482918,2852,,3213
+Montgomery,2025,Bettencourt Tax Advisors,391656,2823,,4017
+Montgomery,2025,Elliott Wellman,232,1787,,4342
+Montgomery,2025,Ryan LLC,52;91;174;211;273;340978;361153;376263;392110;395160;434143;434146;442605;443219;443265;443686;444129;444981;447721;459752;460421;463292;464861;471590;481347;481952;484444;490233;494867;496571;496577;496634;496683;496695;496955;512055;517631;541970;542214;547126;547128;570620;571422;571979;599137;601787;625954;629860;630551;691442;691929;692667;693041;694220;700557;700596;700600;700621;700625;700627,1235,,5088
+Montgomery,2025,Rainbolt,476539,1152,,1277
+Montgomery,2025,Mclean Paula R,283,937,,1151
+Montgomery,2025,Advaloremtax Net,342,750,,935
+Montgomery,2025,Rainbolt & Alexander,350,643,,1320
+Montgomery,2025,Harding & Carbone,28;700584,593,,1498
+Montgomery,2025,Property Tax Protest,654513,389,,412
+Montgomery,2025,Ad Valorem Advisors,267,379,,6517
+Montgomery,2025,Gill Denson,626589,366,,408
+Montgomery,2025,B R Lawson,310,360,,445
+Montgomery,2025,The Ray Tax Group,482232,330,,353
+Montgomery,2025,Vanguard Property Tax Appeals,570604,315,,315
+Montgomery,2025,Mb Property Tax Solutions,689886,310,,331
+Montgomery,2025,Quatro Tax,13;361114;514700,303,,587
+Montgomery,2025,Mclean & Associates,496668,295,,363
+Montgomery,2025,Home Tax Shield,613756,276,,282
+Montgomery,2025,Cantrell Mcculloch,339322,272,,330
+Montgomery,2025,Ambrose & Assoc,399965,257,,759
+Montgomery,2025,W B Lockhart,297927,249,,798
+Montgomery,2025,Assessment Advisors,421,217,,948
+Montgomery,2025,Tax Recourse,405947,214,,312
+Montgomery,2025,Appeal Property Tax Com,377584,171,,193
+Montgomery,2025,Texas ProTax,132,150,,325
+Montgomery,2025,Beauchamp & Associates,351296,133,,205
+Montgomery,2025,Cochran,45;700592,126,,1863
+Montgomery,2025,Jg Property Tax Jorge Galaviz,581409,123,,237
+Montgomery,2025,Kasabov Tax Advisors,493645,111,,128
+Montgomery,2025,Lane Property Tax Advocates,393580,106,,256
+Montgomery,2025,Texas Property Tax Reductions,481654,105,,111
+Montgomery,2025,Fahrenthold Andrea Real Estate Support,625362,103,,266
+Montgomery,2025,All other agents,,2824,,17529
+Montgomery,2026,Ownwell,627223,28712,28287,30531
+Montgomery,2026,O'Connor & Associates,113,15245,14179,17851
+Montgomery,2026,Texas Tax Protest,482918,3813,3086,4468
+Montgomery,2026,Bettencourt Tax Advisors,391656;700631,2956,2798,4841
+Montgomery,2026,Resolute Property Tax Solutions,462404,2521,2219,2800
+Montgomery,2026,Ryan LLC,52;91;174;211;273;335315;340978;361153;376263;392110;395160;434143;434146;442600;442605;443219;443265;443686;444129;444981;459752;460421;463292;464861;471590;481347;481952;484444;490233;494867;496571;496577;496634;496683;496695;496955;512055;517631;537829;541970;542214;547126;547128;570620;571422;571979;587113;599137;599236;601787;625954;629860;630551;691442;691929;692667;693041;694220;700557;700593;700596;700600;700620;700621;700625;700627,2428,2350,7180
+Montgomery,2026,Elliott Wellman,232,2152,2135,4661
+Montgomery,2026,Home Tax,621031,1639,1635,1698
+Montgomery,2026,Ad Valorem Advisors,267,1508,206,10625
+Montgomery,2026,Rainbolt,476539,1232,1220,1381
+Montgomery,2026,Mclean Paula R,283,1053,1038,1277
+Montgomery,2026,Advaloremtax Net,342,820,812,1013
+Montgomery,2026,Rainbolt & Alexander,350,775,768,1890
+Montgomery,2026,Novotny,60,739,710,972
+Montgomery,2026,Property Tax Protest,654513,657,588,692
+Montgomery,2026,Harding & Carbone,28;700584,646,624,1772
+Montgomery,2026,Gill Denson,626589,629,619,743
+Montgomery,2026,The Ray Tax Group,482232,444,350,589
+Montgomery,2026,Vanguard Property Tax Appeals,570604,404,382,410
+Montgomery,2026,B R Lawson,310,402,379,505
+Montgomery,2026,Mb Property Tax Solutions,689886,399,385,430
+Montgomery,2026,Republic Property Tax Com,392785,362,300,430
+Montgomery,2026,Ambrose & Assoc,399965,353,335,1299
+Montgomery,2026,Tax Recourse,405947,326,303,466
+Montgomery,2026,Mclean & Associates,496668,304,301,365
+Montgomery,2026,Home Tax Shield,613756,272,266,277
+Montgomery,2026,Cantrell Mcculloch,339322,270,269,327
+Montgomery,2026,Cochran,45;700592,267,215,2595
+Montgomery,2026,Saveonhousetaxes Com,446260,259,246,277
+Montgomery,2026,Quatro Tax,13;361114;514700;700772,257,110,570
+Montgomery,2026,Abode Money,700756,195,183,203
+Montgomery,2026,Appeal Property Tax Com,377584,182,182,204
+Montgomery,2026,Beauchamp & Associates,351296,173,164,247
+Montgomery,2026,Assessment Advisors,421,168,108,902
+Montgomery,2026,Texas ProTax,132,146,143,394
+Montgomery,2026,Roberts Tax Appeals,357380,141,134,173
+Montgomery,2026,Property Tax Consultants,159;382;405429,141,132,197
+Montgomery,2026,Ad Valorem Tax Management,353442,136,122,195
+Montgomery,2026,Fahrenthold Andrea Real Estate Support,625362,130,128,357
+Montgomery,2026,Deloitte Tax,135;247;344;359934;598879;599723,125,125,1320
+Montgomery,2026,Century Property Consultants,96,117,105,158
+Montgomery,2026,W B Lockhart,297927,115,85,616
+Montgomery,2026,Salcedo Juan Jose,542041,107,93,119
+Montgomery,2026,Texas Property Tax Reductions,481654,105,50,113
+Montgomery,2026,Property Consulting Group,318664,103,101,154
+Montgomery,2026,Ponce & Associates,523852,101,97,120
+Montgomery,2026,Kasabov Tax Advisors,493645,100,92,118
+Montgomery,2026,All other agents,,3088,2549,19126
+Montgomery,2026,Owners (self-filed),,,11167,

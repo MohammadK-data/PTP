@@ -1,0 +1,4 @@
+source_roll_file=https://dentoncad.net/data/_uploaded/files/datafiles/2025/CertifiedDataAllProperty/Denton_AppraisalDataExtracts_ALL(CERTIFIED).zip -> 2025-07-28_2025_APPRAISAL_INFO.TXT
+source_agent_file=https://dentoncad.net/data/_uploaded/files/datafiles/2025/CertifiedDataJSON/Denton_AppraisalDataExtract_JSON_ALL(CERTIFIED).zip (owners[].agents, dated)
+source_protest_file=same 2025 certified JSON (appeals pYear 2025, excl. CLERICAL)
+roll_version_date=2025-07-28

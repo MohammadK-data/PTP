@@ -1,0 +1,4 @@
+county,year,homes_A,seg_agent,seg_owner_alone,seg_lapsed,seg_never,seg_lapsed_or_never,seg_ptp
+Travis,2024,345645,,,,,,
+Travis,2025,350589,,,,,,
+Travis,2026,353498,157145,20889,,,175464,2162

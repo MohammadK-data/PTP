@@ -1,0 +1,4 @@
+county,year,total_accounts,accounts_cat_A,accounts_cat_B,accounts_cat_M,mineral_accounts,homes_A_homestead,homes_A_with_agent,homes_A_protested,homes_A_protested_by_agent,homes_A_protested_by_owner,homes_A_ptp_agent,homes_A_ptp_protested,all_protests,all_agent_protests,source_roll_file,source_agent_file,source_protest_file,roll_version_date
+Hays,2024,125971,78692,1080,2988,0,55229,,,,,,,,,2024 Certified Export-PROPERTY.zip; 2024 Certified Export-OWNER.zip; 2024 Certified Export-IMPROVEMENTS.zip; 2024 Certified Export-LAND.zip,,,2024-07-26
+Hays,2025,131319,82072,1148,3045,0,58180,,,,,,,,,2025-CERTIFIED-PROPERTY.zip; 2025-CERTIFIED-OWNER.zip; 2025-CERTIFIED-IMPROVEMENT.zip; 2025-CERTIFIED-LAND.zip,,,2025-07-30
+Hays,2026,134600,85944,1173,3079,0,60493,25529,,,,93,,,,2026_07_18_2127_PropertyExport.txt; 2026_07_18_2127_OwnerExport.txt; 2026_07_18_2127_ExemptionExport.txt,2026_07_18_2127_OwnerExport.txt (CAAgentID/ARBAgentID); 2026_07_18_2127_AgentExport.txt,,2026-07-18

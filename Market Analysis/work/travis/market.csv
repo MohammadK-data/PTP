@@ -1,0 +1,4 @@
+county,year,total_accounts,accounts_cat_A,accounts_cat_B,accounts_cat_M,mineral_accounts,homes_A_homestead,homes_A_with_agent,homes_A_protested,homes_A_protested_by_agent,homes_A_protested_by_owner,homes_A_ptp_agent,homes_A_ptp_protested,all_protests,all_agent_protests,source_roll_file,source_agent_file,source_protest_file,roll_version_date
+Travis,2024,483009,345645,12443,11507,0,252908,,,,,,,,,227EARS082824 (2).zip / 227EARS082824.csv,,,2024-08-28
+Travis,2025,488302,350589,12341,11932,5,252994,,,,,,,,,227EARS090425.zip / 227EARS090425.csv,,,2025-09-04
+Travis,2026,493246,353498,13166,11679,5,248549,157145,175680,152721,22818,2162,1130,226989,198273,2026 Certified Appraisal Export Supp 0_07182026.zip / PROP.TXT,Travis-protaxExport-20261006.json (owners[].agents),"Travis-protaxExport-20261006.json (appeals[], 2026, type P)",2026-07-18

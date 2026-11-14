@@ -1,0 +1,4 @@
+county,year,homes_A,seg_agent,seg_owner_alone,seg_lapsed,seg_never,seg_lapsed_or_never,seg_ptp
+Montgomery,2024,225536,,,,,,221
+Montgomery,2025,240294,,,,,,389
+Montgomery,2026,250354,75263,10878,,,164213,657
