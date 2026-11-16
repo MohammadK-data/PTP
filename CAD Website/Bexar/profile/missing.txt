@@ -1,0 +1,513 @@
+PACS Property ID | ag-shared
+Year | ag-arbletter ag-feat ag-impr ag-income ag-land ag-propdata ag-protester ag-saleimpr ag-saleland ag-shared
+Shared CAD Code | ag-shared
+Shared CAD Prop ID | ag-shared
+pp_late_freeport_count | enttot
+pp_late_freeport_val | enttot info
+bsi_count | enttot
+bsi_amt | enttot
+qvss_count | enttot
+qvss_amt | enttot
+fdhs_count | enttot
+fdhs_amt | enttot
+145b_count | enttot
+145b_amt | enttot
+145d_count | enttot
+145d_amt | enttot
+145d1_count | enttot
+145d1_amt | enttot
+145f_count | enttot
+145f_amt | enttot
+feed_count | enttot
+feed_amt | enttot
+Personal_prop_id | ag-bpplink
+Linked_real_prop_id | ag-bpplink
+Property ID | ag-arbletter ag-comments ag-events ag-feat ag-impr ag-income ag-land ag-permitprop ag-propdata ag-protester ag-saleimpr ag-saleland ag-sales
+NBHD Economic Area | ag-income
+Property Type | ag-income ag-permit
+Class | ag-income ps26s
+Level Code | ag-income
+Gross Building Area | ag-income
+Net Rentable Area | ag-income
+Property Name | ag-income
+Comment | ag-comments ag-impr ag-income ag-land ag-sales
+Prop_id | ag-bpp ag-inq ag-inqletter ag-notice ps26s
+Prop_val_yr | ag-bpp ag-inq ag-inqletter
+Case_id | ag-inq ag-inqletter
+Letter_name | ag-inqletter
+Create_dt | ag-inqletter
+Sup_num | ag-bpp ag-notice
+Seg_id | ag-bpp
+Active_flag | ag-bpp
+Segment_type | ag-bpp
+Segment_value | ag-bpp
+Segment_quality | ag-bpp
+Segment_density | ag-bpp
+Segment_area | ag-bpp
+Penalty_amount | ag-bpp
+Penalty_amount_override | ag-bpp
+Penalty_amount_dt | ag-bpp
+Permit ID | ag-permit ag-permitprop
+Improvement ID | ag-feat ag-impr ag-saleimpr
+Sale ID | ag-saleimpr ag-saleland ag-sales
+Improvement Type | ag-saleimpr
+State Code | ag-impr ag-land ag-saleimpr ag-saleland
+Homesite Flag | ag-impr ag-land ag-saleimpr ag-saleland
+Improvement Value | ag-impr ag-saleimpr
+Land ID | ag-land ag-saleland
+Land Type | ag-saleland
+Size Acres | ag-saleland
+Market Value | ag-land ag-saleland
+Ag Value | ag-land ag-saleland
+Ag Loss | ag-land ag-saleland
+Ag Table | ag-saleland
+Notice_yr | ag-notice
+An_prev_yr | ag-notice
+Notice_num | ag-notice
+Owner_id | ag-notice ps26s
+Sup_yr | ag-notice
+An_appraised_val | ag-notice
+An_prev_appraised_val | ag-notice
+An_prev_assessed_val | ag-notice
+An_assessed_val | ag-notice
+An_prev_market_val | ag-notice
+An_market_val | ag-notice
+An_imprv_hstd_val | ag-notice
+An_prev_imprv_hstd_val | ag-notice
+An_land_hstd_val | ag-notice
+An_prev_land_hstd_val | ag-notice
+An_ag_land_mkt_val | ag-notice
+An_prev_ag_land_mkt_val | ag-notice
+An_ag_land_use_val | ag-notice
+An_prev_ag_land_use_val | ag-notice
+An_imprv_non_hstd_val | ag-notice
+An_prev_imprv_non_hstd_val | ag-notice
+An_land_non_hstd_val | ag-notice
+An_prev_land_non_hstd_val | ag-notice
+An_ag_market | ag-notice
+An_prev_ag_market_val | ag-notice
+An_timber_market | ag-notice
+An_prev_timber_market_val | ag-notice
+An_timber_use | ag-notice
+An_prev_timber_use | ag-notice
+An_ten_percent_cap | ag-notice
+An_prev_ten_percent_cap | ag-notice
+An_pers_prop_mineral_value | ag-notice
+An_prev_pers_prop_mineral_value | ag-notice
+Exemption | ag-notice
+Prev_exemption | ag-notice
+Comment Type | ag-comments
+Case ID | ag-arbletter ag-protester
+Protest by Name | ag-protester
+Protest by Type | ag-protester
+Primary Protester | ag-protester
+Geo_id | ag-inq ps26s
+Appraiser_nm | ag-inq
+Hood_cd | ag-inq
+File_as_name | ag-inq
+State_cd | ag-inq ps26s
+Prop_type_cd | ag-inq
+Legal_desc | ag-inq ps26s
+Entities | ag-inq
+Exemptions | ag-inq ps26s
+Situs | ag-inq
+Agent_name | ag-inq ps26s
+Inq_type | ag-inq
+Inq_status | ag-inq
+Inq_nature | ag-inq
+Inq_assigned_reason_cd | ag-inq
+Inq_taxpayer_comments | ag-inq
+Inq_appraiser_comments | ag-inq
+Inq_by_type | ag-inq
+Inq_appraisal_staff | ag-inq
+Appraiser_meeting_date_time | ag-inq
+Appraiser_meeting_appraiser_comments | ag-inq
+Appraiser_meeting_Taxpayer_Comments | ag-inq
+Inq_operator_Comments | ag-inq
+Begin_land_hstd_val | ag-inq
+Begin_land_non_hstd_val | ag-inq
+Begin_imprv_hstd_val | ag-inq
+Begin_imprv_non_hstd_val | ag-inq
+Begin_ag_use_val | ag-inq
+Begin_ag_market | ag-inq
+Begin_timber_use | ag-inq
+Begin_timber_market | ag-inq
+Begin_market | ag-inq
+Begin_appraised_val | ag-inq
+Begin_ten_percent_cap | ag-inq
+Begin_assessed_val | ag-inq
+Begin_rendered_val | ag-inq
+Begin_exemptions | ag-inq
+Begin_entities | ag-inq
+Final_land_hstd_val | ag-inq
+Final_land_non_hstd_val | ag-inq
+Final_imprv_hstd_val | ag-inq
+Final_imprv_non_hstd_val | ag-inq
+Final_ag_use_val | ag-inq
+Final_ag_market | ag-inq
+Final_timber_use | ag-inq
+Final_timber_market | ag-inq
+Final_market | ag-inq
+Final_appraised_val | ag-inq
+Final_ten_percent_cap | ag-inq
+Final_assessed_val | ag-inq
+Final_rendered_val | ag-inq
+Final_exemptions | ag-inq
+Final_entities | ag-inq
+bsi_exempt | info
+bsi_qualify_yr | info
+bsi_prorate_begin | info
+bsi_prorate_end | info
+qvss_exempt | info
+qvss_qualify_yr | info
+qvss_prorate_begin | info
+qvss_prorate_end | info
+fdhs_exempt | info
+fdhs_qualify_yr | info
+fdhs_prorate_begin | info
+fdhs_prorate_end | info
+145b_exempt | info
+145b_qualify_yr | info
+145b_prorate_begin | info
+145b_prorate_end | info
+145d_exempt | info
+145d_qualify_yr | info
+145d_prorate_begin | info
+145d_prorate_end | info
+145d1_exempt | info
+145d1_qualify_yr | info
+145d1_prorate_begin | info
+145d1_prorate_end | info
+145f_exempt | info
+145f_qualify_yr | info
+145f_prorate_begin | info
+145f_prorate_end | info
+personal_property_group | info
+Supplement # | ag-impr ag-land
+Land Type Code | ag-land
+Late Ag Apply Flag | ag-land
+Market Pricing Method | ag-land
+Market Pricing Table | ag-land
+Market Unit Price | ag-land
+Width Front | ag-land
+Width Back | ag-land
+Depth Right | ag-land
+Depth Left | ag-land
+Size in Sq Ft | ag-land
+Size in Acres | ag-land
+Legal Acreage | ag-land
+Number of Lots | ag-land
+Effective Size Acres | ag-land
+Size Useable Acres | ag-land
+Size Useable Sqft | ag-land
+Ag Pricing Method | ag-land
+Ag Pricing Table | ag-land
+Ag Unit Price | ag-land
+Calculated Market Value | ag-land
+Ag Apply Flag | ag-land
+Ag Use Code | ag-land
+Entities and Percentages | ag-land
+Adjustments and Percentages | ag-impr ag-land
+feed_exempt | info
+feed_qualify_yr | info
+feed_prorate_begin | info
+feed_prorate_end | info
+Buyer Name | ag-sales
+Seller Name | ag-sales
+Deed Type | ag-sales
+Deed Volume | ag-sales
+Deed Date | ag-sales
+Deed Page | ag-sales
+Deed Number | ag-sales
+Recorded Date | ag-sales
+Consideration | ag-sales
+Buyer ID | ag-sales
+Seller ID | ag-sales
+Sale Price | ag-sales
+Sale Date | ag-sales
+Adjust Code | ag-sales
+Adjust Percentage | ag-sales
+Adjust Amount | ag-sales
+Adjust Reason | ag-sales
+Confirmed By | ag-sales
+Confirmed Date | ag-sales
+Confirmed Source | ag-sales
+Confirmed Sale Price | ag-sales
+Buyer Confidence Level | ag-sales
+Seller Confidence Level | ag-sales
+Confirm Comment | ag-sales
+Financing Code | ag-sales
+Amount Financed | ag-sales
+Interest Rate | ag-sales
+Finance Years | ag-sales
+2nd Amount Financed | ag-sales
+2nd Interest Rate | ag-sales
+2nd Finance Years | ag-sales
+Amount Down | ag-sales
+Finance Comment | ag-sales
+Sale Type | ag-sales
+Sale Ratio Type | ag-sales
+Sale State Code | ag-sales
+School Entity | ag-sales
+City Entity | ag-sales
+Sale Class | ag-sales
+Sale Sub Class | ag-sales
+Sale Comment | ag-sales
+Sale Realtor | ag-sales
+Sale Year Built | ag-sales
+Sale Imprv Unit Price | ag-sales
+Sale Living Area | ag-sales
+Sale Land Acres | ag-sales
+Sale Land Sqft | ag-sales
+Sale Land Front Foot | ag-sales
+Sale Land Depth | ag-sales
+Sale Land Unit Price | ag-sales
+Sale Land Type Code | ag-sales
+Sup Num | ag-feat
+Improvement Detail ID | ag-feat
+Feature Type | ag-feat
+Feature Description | ag-feat
+Letter Name | ag-arbletter
+Letter Date/Time | ag-arbletter
+Year Built | ag-propdata
+Living Area | ag-propdata
+Land Sqft | ag-propdata
+Land Acres | ag-propdata
+Region | ag-propdata
+Neighborhood | ag-propdata
+Map ID | ag-propdata
+Land # of Lots | ag-propdata
+Effective Year Built | ag-impr ag-propdata
+Number of Improvements | ag-propdata
+Last Appraiser | ag-propdata
+Next Appraiser | ag-propdata
+Land Appraiser | ag-propdata
+Value Appraiser | ag-propdata
+Neighborhood Appraiser | ag-propdata
+Subdivision Appraiser | ag-propdata
+Category Appraiser | ag-propdata
+Next Appraisal Reason | ag-propdata
+Property Comment | ag-propdata
+Property Remarks | ag-propdata
+Valuation Method Code | ag-propdata
+Zoning | ag-propdata
+Event Year | ag-events
+Event Date | ag-events
+Event Type | ag-events
+Event Description | ag-events
+Permit # | ag-permit
+Issuer | ag-permit
+Issued To | ag-permit
+Permit Status Code | ag-permit
+Issue Date | ag-permit
+Issue Limit Date | ag-permit
+Issuer Phone | ag-permit
+Issuer Xref | ag-permit
+Res / Com | ag-permit
+Number | ag-permit
+Prefix | ag-permit
+Street | ag-permit
+Suffix | ag-permit
+Unit Type | ag-permit
+Unit Number | ag-permit
+Subdivision | ag-permit
+Plat | ag-permit
+Block | ag-permit
+Lot | ag-permit
+City | ag-permit ps26s
+Building Inspection | ag-permit
+Electrical Inspection | ag-permit
+Mechanical Inspection | ag-permit
+Plumbing Inspection | ag-permit
+Permit Type Code | ag-permit
+Permit Sub Type Code | ag-permit
+Number of Floors | ag-permit
+Number of Units | ag-permit
+CAD Permit Status | ag-permit
+Dim 1 | ag-permit
+Builder | ag-permit
+Value | ag-permit
+Dim 2 | ag-permit
+Builder's Phone | ag-permit
+Date Worked | ag-permit
+Dim 3 | ag-permit
+Appraiser | ag-permit
+Date Completed | ag-permit
+Area | ag-permit
+Land Use | ag-permit
+Percent Complete Override | ag-permit
+Percent Complete | ag-impr ag-permit
+Comments | ag-permit
+Permit Source | ag-permit
+Last Changed | ag-permit
+Active | ag-permit
+1017259 | ps26a
+2026 | ps26a
+"05019-104-0190" | ps26a
+2944757 | ps26a
+"HOLM VELMA" | ps26a
+" " | ps26a
+"102 CASTLE BREEZE DR" | ps26a
+" "_1 | ps26a
+"SEGUIN" | ps26a
+"TX" | ps26a
+"US   " | ps26a
+"78155" | ps26a
+"8787" | ps26a
+2005 | ps26a
+1608 | ps26a
+0.1540 | ps26a
+172170 | ps26a
+58310 | ps26a
+"A1" | ps26a
+230480 | ps26a
+"JUDSON ISD" | ps26a
+"CITY OF SELMA" | ps26a
+"" | ps26a
+"16306" | ps26a
+" "_2 | ps26a
+"APPALOOSA OAK" | ps26a
+" "_3 | ps26a
+" "_4 | ps26a
+"RETAMA OLD POLO OFFICE/HANGAR/STABLES/VET OFC" | ps26a
+"LA  AG  OP  PA" | ps26a
+" "_5 | ps26a
+"AS" | ps26a
+"SL" | ps26a
+"3" | ps26a
+"2" | ps26a
+"0" | ps26a
+0 | ps26a
+0_1 | ps26a
+0_2 | ps26a
+0_3 | ps26a
+"001" | ps26a
+"93507" | ps26a
+"CB 5019A  BLK  4  LOT  19         (RETAMA SPRINGS SUBD UT-1)" | ps26a
+"78154" | ps26a
+1 | ps26a
+"03/06/2015" | ps26a
+" "_6 | ps26a
+" "_7 | ps26a
+" "_8 | ps26a
+" "_9 | ps26a
+" "_10 | ps26a
+" "_11 | ps26a
+" "_12 | ps26a
+"     " | ps26a
+" "_13 | ps26a
+" "_14 | ps26a
+183720 | ps26a
+0_4 | ps26a
+58310_1 | ps26a
+0_5 | ps26a
+0_6 | ps26a
+242030 | ps26a
+" "_15 | ps26a
+"520B5" | ps26a
+1608_1 | ps26a
+"A" | ps26a
+"HP" | ps26a
+Prop_yr | ps26s
+Owner_name | ps26s
+Addr_line1 | ps26s
+Addr_line2 | ps26s
+Addr_line3 | ps26s
+Addr_city | ps26s
+Addr_state | ps26s
+Country_cd | ps26s
+Zip | ps26s
+Zip+4 | ps26s
+Yr_blt | ps26s
+Sq_ft | ps26s
+Land_acres | ps26s
+Imprv_hstd_val | ps26s
+Land_hstd_val | ps26s
+Market_val | ps26s
+School | ps26s
+Situs_num | ps26s
+Situs_street_prefix | ps26s
+Situs_street | ps26s
+Situs_street_sufix | ps26s
+Situs_unit | ps26s
+Dba_name | ps26s
+Imprv_Type | ps26s
+Ext_Wall | ps26s
+Roof | ps26s
+Foundation | ps26s
+Bedrooms | ps26s
+Whole_Bath | ps26s
+Half_Bath | ps26s
+Imprv_non_hstd_val | ps26s
+Land_non_hstd_val | ps26s
+AG_Use_val | ps26s
+AG_Market | ps26s
+Property_use_cd | ps26s
+Neighboorhood_Code | ps26s
+Situs_Zip | ps26s
+Num_Units | ps26s
+Last_Deed_Date | ps26s
+Agent_iD | ps26s
+Agent_Addr_L1 | ps26s
+Agent_Addr_L2 | ps26s
+Agent_Addr_L3 | ps26s
+Agent_Addr_city | ps26s
+Agent_Addr_state | ps26s
+Agent_CO_code | ps26s
+Agent_Zip | ps26s
+Agent_Zip+4 | ps26s
+Prior_Imp_HS_val | ps26s
+Prior_ Imp_non_HS_val | ps26s
+Prior LD_HS val | ps26s
+Prior LD non_HS_val | ps26s
+Prior AG_mkt | ps26s
+Prior Mkt val | ps26s
+BPP Late_Rend_penalty | ps26s
+MAPSCO | ps26s
+Sq_Ft_HVI | ps26s
+SubClass | ps26s
+Improvement Type Code | ag-impr
+Description | ag-impr
+# of Improvements | ag-impr
+# of Stories | ag-impr
+Base Depreciation % | ag-impr
+Base Depr. Comment | ag-impr
+Physical % | ag-impr
+Physical Comment | ag-impr
+Functional % | ag-impr
+Functional Comment | ag-impr
+Economic % | ag-impr
+Economic Comment | ag-impr
+Percent Complete Comment | ag-impr
+Total Detail Value | ag-impr
+Improvement Value Source | ag-impr
+Entity and Percentages | ag-impr
+Detail ID | ag-impr
+Detail Number of Units | ag-impr
+Detail Number of Stories | ag-impr
+Detail Class Code | ag-impr
+Detail Method Code | ag-impr
+Detail Sub Class Code | ag-impr
+Detail Unit Price | ag-impr
+Detail Add Factor | ag-impr
+Detail Area | ag-impr
+Detail Base Depreciation % | ag-impr
+Detail Physical % | ag-impr
+Detail Physical Comment | ag-impr
+Detail Functional % | ag-impr
+Detail Functional Comment | ag-impr
+Detail Economic % | ag-impr
+Detail Economic Comment | ag-impr
+Detail Size Adjustment % | ag-impr
+Detail Percent Complete | ag-impr
+Detail % Complete Comment | ag-impr
+Detail Value | ag-impr
+Detail Value Source | ag-impr
+Detail Use Unit Price for % Base Flag | ag-impr
+Detail Stories Multiplier Flag | ag-impr
+Detail Calculated Value | ag-impr
+Detail Condition Code | ag-impr
+Detail Actual Year Built | ag-impr
+Detail Effective Year Built | ag-impr
+Detail Age | ag-impr
+Detail Adjustments and Percentages | ag-impr
