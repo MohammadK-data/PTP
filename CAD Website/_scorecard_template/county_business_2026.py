@@ -147,7 +147,9 @@ def render(county, v):
     else:
         f = funnel_json(county, v)
         flow = "".join([
-            step("Properties listing us as agent", n(f["listed"]), f"{cad} owner records, any time ({n(f['active'])} active on {EXPORT[county]}, {n(f['expired'])} expired)"),
+            step("Properties listing us as agent", n(f["listed"]),
+                 f"Agent of record on {cad}'s {EXPORT[county]} roll. Clients who left before then don't show here" if county == "bexar"
+                 else f"{cad} owner records, any time ({n(f['active'])} active on {EXPORT[county]}, {n(f['expired'])} expired)"),
             step("We filed the 2026 protest", n(f["filed_us"]), "Counted as ours on this page"),
             step("Someone else filed", n(f["filed_other"]), "Counted for the firm or owner who filed"),
             step("Nobody protested", n(f["not_protested"]), "No 2026 protest on the property"),

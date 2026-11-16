@@ -93,6 +93,13 @@ def main():
     a["sf"] = a.prop_id.map(pdx.sf).fillna("")
     a["city"] = a.situs.str.extract(r"\s{2,}([A-Z][A-Z .'-]+?),\s*TX", expand=False).fillna("").str.strip()
     a["zip"] = a.situs.str.extract(r"TX\s+(\d{5})", expand=False).fillna("")
+    # city: Oct 15 roll situs city first, then the protest address, then the most common city for the zip
+    ctx = OUT / "bexar_context_2026.json"
+    if ctx.exists():
+        cj = json.loads(ctx.read_text())
+        rc = a.prop_id.map(cj["city"]).fillna("")
+        a["city"] = rc.where(rc.ne(""), a.city.str.upper())
+        a["city"] = a.city.where(a.city.ne(""), a.zip.map(cj["zipCity"])).fillna("")
     a["HS"] = a.exemptions.str.contains(r"\bHS\b").astype(int)
     a["hmon"] = pd.to_datetime(a.docket_start.str[:10], format="%m/%d/%Y", errors="coerce").dt.month
     a["resT"] = a.path.map({"Informal": "Informal settlement", "ARB": "ARB hearing", "No-show": "Dismissed / no-show",
@@ -125,8 +132,24 @@ def main():
     out["check_values"] = ~out.path.eq("Open") & ((out.notice_value.fillna(0) <= 0) | (out.final_value > out.notice_value * 1.25))
     out["outcome"] = np.select([out.path.eq("Open"), out.reduction > 0, out.reduction < 0], ["Open", "Reduced", "Increased"], "No change")
     out["est_fee_1pct"] = (out.reduction.clip(lower=0) * 0.01).where(out.is_ours & out.path.ne("Open"))
+    # properties that list us on the Oct 15 roll but had no 2026 value protest (protested = False), so the
+    # Book & totals funnel starts from every property listing us, as on the other counties
+    lst = r[r.ca_agent_id.isin(OUR_IDS) | r.arb_agent_id.isin(OUR_IDS)]
+    lst = lst[~lst.index.isin(set(out.pID))]
+    if len(lst):
+        lids = [[x for x in dict.fromkeys([c, b]) if x] for c, b in zip(lst.ca_agent_id, lst.arb_agent_id)]
+        extra = pd.DataFrame({"pID": lst.index, "protested": False, "is_ours": False, "appealedByType": "", "agent": "",
+                              "agent_name": "", "agent_ids_all": [" | ".join(x) for x in lids],
+                              "agents_current": [" | ".join(f"{agz.get(i, i)} ({i})" for i in x) for x in lids],
+                              "agents_all": [" | ".join(f"{agz.get(i, i)} ({i})" for i in x) for x in lids],
+                              "path": "", "status": "", "source": "BCAD appraisal export Oct 15",
+                              "roll_value": pd.to_numeric(lst.market_value, errors="coerce").values,
+                              "situs": (lst.situs_num + " " + lst.situs_street).str.strip().values,
+                              "owner": lst.py_owner_name.values, "city": lst.situs_city.str.upper().values,
+                              "outcome": "Not protested"})
+        out = pd.concat([out, extra], ignore_index=True)
     out.to_csv(OUT / "bexar_values_2026.csv", index=False)
-    o = out[out.is_ours]
+    o = out[out.is_ours.astype(bool)]
     oc = o[o.path.ne("Open") & ~o.check_values]
     listed = r.index[r.ca_agent_id.isin(OUR_IDS) | r.arb_agent_id.isin(OUR_IDS)]
     print(f"bexar_values_2026.csv: {len(out):,} | ours {len(o)} {o.path.value_counts().to_dict()} | win {(oc.reduction > 0).mean():.1%} "

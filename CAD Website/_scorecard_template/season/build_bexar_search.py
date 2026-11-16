@@ -132,8 +132,10 @@ opn = [[0, ni[nb], fi[f], len(g)] for (nb, f), g in res[res.op].groupby(["nb", "
 ol = [[0, r.account, ni[r.nb], int(r.notice_value), None if r.op else int(r.final_value), None if r.op else int(max(r.reduction, 0)),
        {"ARB": "ARB hearing"}.get(r.path, r.path), bool(r.win), bool(r.op), None if r.op else int(round(max(r.reduction, 0) * 0.01))]
       for r in res[res.is_ours].itertuples()]
+NBN = json.loads((ROOT / "Bexar/output/bexar_context_2026.json").read_text())["nbNames"]   # BCAD 2026 neighborhood names
+lab = lambda c: " · ".join(x for x in [NBN.get(c, "").title(), city.get(c) if isinstance(city.get(c), str) else ""] if x) or None
 (SITE / "lookup").mkdir(parents=True, exist_ok=True)
 (SITE / "lookup/bexar.json").write_text(json.dumps({"years": [2026], "firms": firms, "us": 0, "tiers": LT,
-    "nbs": [[c, city.get(c) if isinstance(city.get(c), str) else None] for c in nbs], "rows": rows, "open": opn, "ours": ol},
+    "nbs": [[c, lab(c)] for c in nbs], "rows": rows, "open": opn, "ours": ol},
     separators=(",", ":"), ensure_ascii=False))
 print("lookup nbs", len(nbs), "ours", len(ol), "firms", len(firms))

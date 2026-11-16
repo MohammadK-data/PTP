@@ -32,7 +32,7 @@ const SEC=Object.fromEntries(SECS.map(k=>[k,{y:LASTY,c:PREVY,w:'any',linked:true
 const sv=k=>{CW=SEC[k].w;return SEC[k]};
 const C=D.cols, rows=D.cube.map(r=>Object.fromEntries(C.map((c,i)=>[c,r[i]])));
 const tiers=['<$300K','$300-500K','$500-750K','$750K-1M','$1-2M','$2-5M','$5M+'];
-const st={sub:'Residential',hs:'all',path:'all',tier:'300+',metric:'win',sort:'n',dir:'desc'};
+const st={sub:'Residential',hs:'all',path:'all',tier:'300+',metric:'win',sort:'n',dir:'desc'};Object.assign(st,CFG.filterDefault||{});
 const METRICS=[['win','Win rate',v=>fmt.pct(v)],['redPct','Mkt reduction %',v=>fmt.pct(v,2)],['avgPct','Avg % / property',v=>fmt.pct(v,2)],['asPct','Assessed reduction %',v=>fmt.pct(v,2)],['carry','Assessed carry-through',v=>fmt.pct(v,0)],
  ['rM','Mkt value cut',fmt.usd],['perWin','$ per win',fmt.usd],['cutPerProp','$ cut per property',fmt.usd],['n','Properties',fmt.int],['avgStart','Avg starting value',fmt.usd],['hsShare','Homestead share',v=>fmt.pct(v,0)],['bigShare','Share $1M+',v=>fmt.pct(v,0)],
  ['inf','Informal share',v=>fmt.pct(v,0)],['arb','ARB share',v=>fmt.pct(v,0)],['infWin','Informal win rate',v=>fmt.pct(v)],['arbWin','ARB win rate',v=>fmt.pct(v)],['othShare','Withdrawn / no-show share',v=>fmt.pct(v,1)],
@@ -132,6 +132,7 @@ if(!CFG.assessed)COLS.splice(COLS.findIndex(c=>c[0]=='asPct'),1);if(CFG.path===f
 const F2={n:fmt.int,win:v=>fmt.pct(v),dwin:v=>v==null?'–':(v>=0?'+':'−')+Math.abs(v*100).toFixed(1)+' pp',dred:v=>v==null?'–':(v>=0?'+':'−')+Math.abs(v*100).toFixed(2)+' pp',redPct:v=>fmt.pct(v,2),avgPct:v=>fmt.pct(v,2),asPct:v=>fmt.pct(v,2),rM:fmt.usd,perWin:fmt.usd,inf:v=>fmt.pct(v,0),arb:v=>fmt.pct(v,0)};
 function renderExplorer(){
   const {y:SY,c:SC,w:SW}=sv('explorer');
+  scopeNote($('#exp-scope'),SY,st);
   const {list,all}=agg(SY),prev=SC?agg(SC):{list:[],all:{n:0}};const pm=Object.fromEntries(prev.list.map(r=>[r.A,r]));
   list.forEach(r=>{const p=pm[r.A];r.prev=p&&p.n?p:null;r.dwin=r.prev?r.win-p.win:null;r.dred=r.prev?r.redPct-p.redPct:null});all.prev=prev.all.n?prev.all:null;all.dwin=all.prev?all.win-prev.all.win:null;all.dred=all.prev?all.redPct-prev.all.redPct:null;
   $('#exp-h').textContent=CFG.firms?`Compare us against the top ${D.firms.length-1} agents, ${SY}`:`Compare us against ${CFG.values?'every other account':'other agents and owners'}, ${SY}`;
@@ -174,7 +175,12 @@ function lineChart(el,{title,cats,series,fmt:f,zero=false,h=170,w=320,zeroLine=f
   const cw=cats.length>1?iw/(cats.length-1):iw;
   cats.forEach((c,i)=>{const html=`<b>${title?esc(title)+' · ':''}${c||''}</b><br>`+series.map(s=>`${esc(s.name)}: <b>${f(s.vals[i])}</b>`).join('<br>');g+=`<rect x="${Math.max(pad.l,X(i)-cw/2)}" y="${pad.t}" width="${cw}" height="${ih}" fill="transparent" data-tip="${esc(html)}"/>`});
   el.innerHTML=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(title||'chart')}">${title?`<text x="0" y="14" style="font-weight:600;fill:var(--ink);font-size:12.5px">${esc(title)}</text>`:''}${g}</svg>`;bindTips(el)}
-const yst={sub:'Residential',hs:'all',path:'all',tier:'300+',metric:'win',cmp:HASOWN?['All other agents',OWN]:['All other agents','Owners (self-filed)']};
+const yst={sub:'Residential',hs:'all',path:'all',tier:'300+',metric:'win',cmp:HASOWN?['All other agents',OWN]:['All other agents','Owners (self-filed)']};Object.assign(yst,CFG.filterDefault||{});
+function scopeNote(el,y,f){
+  if(!el)return;const n=a=>{const u=a.list.find(r=>r.A==US);return u?u.n:0};
+  const tot=n(agg(y,{sub:'all',hs:'all',path:'all',tier:'all'})),cur=n(agg(y,f));
+  const on=[f.sub!='all'?f.sub:'',f.hs=='1'?'Homesteads':f.hs=='0'?'Non-homestead':'',f.path!='all'?(f.path=='ARB'?'Formal ARB':f.path):'',f.tier=='300+'?'$300K and up':f.tier!='all'?f.tier:''].filter(Boolean);
+  el.innerHTML=tot?`Showing <b>${fmt.int(cur)}</b> of our ${fmt.int(tot)} properties with a ${y} result${on.length?` · filters on: ${esc(on.join(' · '))}`:' · no filters on'}.`:''}
 const CMP_COLORS={'All other agents':'var(--agents)','Owners (self-filed)':'#8c6d3f','Other agents':'#a0a7a3'};
 const PAL=['#7a5cc9','#2a78d6','#c2185b','#00897b','#6d4c41','#5c6bc0','#f9a825','#8e24aa','#0277bd','#558b2f','#d84315','#37474f','#ad1457','#1565c0','#2e7d32','#795548'];
 const cmpOptions=()=>CFG.firms?['All other agents',...(HASOWN?[OWN]:[]),'Owners (self-filed)','Other agents',...D.firms.filter(f=>f!=US&&f!=OWN)]:['All other agents','Owners (self-filed)'];
@@ -197,6 +203,7 @@ function renderYoY(){
   const series=ents.map(e=>({name:nice(e),color:e==US?'var(--us)':cmpColor(e),bold:e==US,vals:per.map(b=>b[e]?b[e][m]??null:null)}));
   $('#y-legend').innerHTML=ents.map(e=>`<span><i style="background:${e==US?'var(--us)':cmpColor(e)}"></i>${nice(e)}</span>`).join('');
   lineChart($('#y-chart'),{title:lab,cats:YEARS,series,fmt:f,w:900,h:320});
+  scopeNote($('#y-scope'),YEARS[YEARS.length-1],yst);
   const t=$('#y-tbl');t.querySelector('thead').innerHTML=`<tr><th>${lab}</th>${YEARS.map(y=>`<th>${y}</th>`).join('')}<th>Change ${YEARS[0]}–${YEARS[YEARS.length-1]}</th></tr>`;
   const chg=(a,b)=>a==null||b==null?'–':(['win','redPct','avgPct','asPct','carry','hsShare','bigShare','inf','arb','infWin','arbWin','othShare','capShare','dupShare'].includes(m)?`${b-a>=0?'+':'−'}${Math.abs((b-a)*100).toFixed(1)} pp`:(a?`${b/a-1>=0?'+':'−'}${Math.abs((b/a-1)*100).toFixed(0)}%`:'–'));
   t.querySelector('tbody').innerHTML=ents.map((e,i)=>{const v=series[i].vals;return `<tr class="${e==US?'us':''}"><td>${nice(e)}</td>${v.map(x=>`<td class="num">${x==null?'–':f(x)}</td>`).join('')}<td class="num">${chg(v[0],v[v.length-1])}</td></tr>`}).join('');

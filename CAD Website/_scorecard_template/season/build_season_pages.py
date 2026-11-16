@@ -255,6 +255,10 @@ def page(county, D):
            "hide": [["results", "this section needs assessed (capped) values at the start and end of each protest, plus tax rates. The files don't have both."],
                     ["context", "this section needs the full appraisal roll for every season."],
                     ["pipeline", "the season files don't carry weekly completion dates for every filer."]]}
+    if T.get("filterDefault"):
+        CFG["filterDefault"] = T["filterDefault"]
+    if D.get("context"):
+        CFG["hide"] = [x for x in CFG["hide"] if x[0] != "context"]
     if len(D["seasons"]) < 2:
         CFG["hide"].append(["book", "only one season is available, so there is nothing to compare."])
     elif not D.get("bookflow"):
@@ -269,7 +273,12 @@ def page(county, D):
     h = h.replace("<h2>Property Tax Protest, 2023–2026</h2>", f"<h2>Property Tax Protest, {yrs}</h2>")
     bf = f"{D['seasons'][1]}–{D['seasons'][-1]}" if len(D["seasons"]) > 1 else yrs
     h = h.replace('<span class="chip">2024–2026 · all seasons</span>', f'<span class="chip">{bf} · all seasons</span>')
-    items = "".join(f"<li>{x}</li>" for x in T["method"] + COMMON_METHOD)
+    common = [x.replace(" market context,", "") for x in COMMON_METHOD] if D.get("context") else COMMON_METHOD
+    items = "".join(f"<li>{x}</li>" for x in T["method"] + common)
+    if D.get("context"):
+        cy = [r[0] for r in D["context"]]
+        h = re.sub(r'(<section id="context">.*?<span class="chip">).*?(</span>)',
+                   lambda m: m.group(1) + (f"{cy[0]} only" if len(cy) == 1 else f"{cy[0]}–{cy[-1]}") + m.group(2), h, count=1, flags=re.S)
     h = re.sub(r'(<section id="method">.*?<ul class="plain">).*?(</ul>\s*</section>)', lambda m: m.group(1) + items + m.group(2), h, count=1, flags=re.S)
     data = json.dumps(D, separators=(",", ":"), allow_nan=False).replace("</", "<\\/")
     script = f"<script>\nconst D={data};\nconst CFG={json.dumps(CFG)};\n{code}</script>"

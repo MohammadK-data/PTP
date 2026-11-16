@@ -5,6 +5,7 @@ Oct 26 2026, value protests only, one row per property per season). We have Bexa
 
 Run:  .venv/bin/python -I "CAD Website/_scorecard_template/season/build_bexar_page.py" <outdir>
 """
+import json
 import sys
 from pathlib import Path
 
@@ -36,10 +37,13 @@ def seasons():
 
 bsp.TEXT["bexar"] = dict(
     name="Bexar", agent="Agent 3619474 · Bexar Appraisal District (BCAD)", data="BCAD agent export Oct 26, 2026 · appraisal export Oct 15",
-    years="2022–2026", nb="BCAD neighborhood code", own=True,
+    years="2022–2026", nb="BCAD neighborhood", own=True, filterDefault={"sub": "all", "tier": "all"},
     draft="<b>Draft for review.</b> Every season comes from BCAD's own agent export (Oct 26, 2026): its ARB file lists every protest back to 1998 with filer, agent, status and starting and final market value. Value protests only. <b>We had no Bexar protests before 2026:</b> agent 3619474 first appears on 2026 protests, so 2022–2025 show the market only. Only 439 of 181,187 2026 protests are still open. Details under <a href=\"#method\">Method &amp; open questions</a>.",
     method=["<b>Source.</b> <span class=\"mono\">FID_ARBExport.txt</span> in BCAD's 2026 agent export (Oct 26), the PACS ProTax ARB layout. Value protests only (type 25PROT); exemption, 25.25, litigation and arbitration filings are left out. Year built and size from <span class=\"mono\">FID_PropDataExport.txt</span>; agents of record, owner and address from the Oct 15 appraisal export.",
-            "<b>Our properties.</b> Protests filed under agent \"PROPERTY TAX PROTEST\" (BCAD agent 3619474). 60800 is an older ID with no protests in 2022–2026. 565 properties list us on the Oct 15 roll; 550 were protested by us in 2026.",
+            "<b>Our properties.</b> Protests filed under agent \"PROPERTY TAX PROTEST\" (BCAD agent 3619474). 60800 is an older ID with no protests in 2022–2026. <b>565 properties list us</b> as agent on the Oct 15 roll: we filed on 550, another filer on 1, and 14 had no 2026 value protest. BCAD only shows today's agent, so clients who left before Oct 15 are not in the 565.",
+            "<b>Filters.</b> The benchmark explorer and year-over-year open on all property types and all values, so they match the 550 in the headline; the line under each filter row says how many of our properties the current filters leave.",
+            "<b>Neighborhoods and cities.</b> Names from BCAD's 2026 neighborhood code list. City from the Oct 15 roll's property address, then the protest address, then the most common city for the ZIP code.",
+            "<b>Market context (2026 only).</b> Residential accounts (state code A*), the 10% homestead cap and the 20% circuit breaker from the Oct 15 roll (794,985 properties); notice change = the March 28 notice-run market value vs. the prior-year market value on that file. 2022–2025 have no full roll in the BCAD files, so they have no row.",
             "<b>Status codes (BCAD list).</b> Informal = value agreements (VA, EVA, VANC, VASP) and pre-arbitration settlements; Formal ARB = board orders (ORD.A / ORD.D, including bulk-affidavit orders); No-show = PFNS; Withdrawn = PFWD; Other = no jurisdiction (ORD-NJ), 25.25 motions, litigation; DELDUP duplicates dropped.",
             "<b>Firms.</b> The ARB file names the filing agent but not its ID, so firms are grouped by name."])
 
@@ -50,6 +54,11 @@ if __name__ == "__main__":
     R = pd.concat([bsp.finish(p) for p in seasons()], ignore_index=True)
     D = sd.build(R, as_of="2026-11-16")
     D["bookflow"], D["lost"] = None, None          # no Bexar clients before 2026
+    cj = json.loads((ROOT / "Bexar/output/bexar_context_2026.json").read_text())   # bexar_context_2026.py
+    D["context"], D["protestRate"] = cj["context"], cj["protestRate"]
+    D["nbNames"] = {k: v.title() for k, v in cj["nbNames"].items()}
+    used = {r[0] for y in D["nb"].values() for r in y}
+    print(f"  neighborhood names: {len(used & set(D['nbNames'])):,} of {len(used):,} codes on the page")
     (out / "bexar.html").write_text(bsp.page("bexar", D), encoding="utf-8")
     U = {y: D["yearsT"]["any"][str(y)]["us"] for y in D["seasons"]}
     print("  ours by season:", {y: (u["props"], round(u["won"] / u["props"], 3) if u["props"] else None,
