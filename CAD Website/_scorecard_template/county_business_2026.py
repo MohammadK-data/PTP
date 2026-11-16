@@ -17,9 +17,9 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
-OURS = {"tarrant": {"1487"}, "travis": {"1863738", "1898343", "1898284"}, "montgomery": {"654513"}, "denton": {"245"}, "dallas": {"306"}, "rockwall": {"1044073", "1044084"}}
-CAD = {"tarrant": "TAD", "travis": "TCAD", "montgomery": "MCAD", "denton": "DCAD", "dallas": "DCAD", "rockwall": "RCAD"}
-EXPORT = {"travis": "Oct 6", "montgomery": "Aug 4", "denton": "Jul 27", "dallas": "Oct 30", "rockwall": "Oct 9"}
+OURS = {"tarrant": {"1487"}, "travis": {"1863738", "1898343", "1898284"}, "montgomery": {"654513"}, "denton": {"245"}, "dallas": {"306"}, "rockwall": {"1044073", "1044084"}, "bexar": {"3619474", "60800"}}
+CAD = {"tarrant": "TAD", "travis": "TCAD", "montgomery": "MCAD", "denton": "DCAD", "dallas": "DCAD", "rockwall": "RCAD", "bexar": "BCAD"}
+EXPORT = {"travis": "Oct 6", "montgomery": "Aug 4", "denton": "Jul 27", "dallas": "Oct 30", "rockwall": "Oct 9", "bexar": "Oct 15"}
 
 
 def n(x):
@@ -73,7 +73,7 @@ def funnel_json(county, v):
         for nm, k in re.findall(r"([^|]+?) \((\d+)\)", s):
             names.setdefault(k, nm.strip())
     other = L[prot[listed] & ~ours[listed]].copy()
-    by = np.where(other.agent.ne(""), other.agent.map(lambda k: names.get(k, f"Agent {k}")),
+    by = np.where(other.agent.ne(""), other.agent.map(lambda k: names.get(k, f"Agent {k}" if k.isdigit() else k.removeprefix("name:"))),
                   np.where(other.appealedByType.str.upper().str.startswith("O"), "The owner", "Other appellant"))
     top = pd.Series(by).value_counts()
     lst = (L.is_ours.eq("True"))
