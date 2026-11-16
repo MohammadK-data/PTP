@@ -3,10 +3,6 @@
 const REVIEW = { db: null, user: null, me: null, canWrite: true, fk: null, unsub: [], decisions: {}, notes: {}, pending: new Set() };
 const RV_STATUS = [['need', 'Need'], ['maybe', 'Maybe'], ['drop', 'Drop']];
 const RV_LABEL = { need: 'Need', maybe: 'Maybe', drop: 'Drop' };
-// Optional suggested decisions baked into the page (add_column_review.py --seed): {fileKey: {col: [status, comment]}}.
-// A team decision saved in the db overrides the suggestion; the comment shows as the first note, by Claude.
-const RV_SEED = typeof REVIEW_SEED !== 'undefined' ? REVIEW_SEED : { at: 0, files: {} };
-const rvSeed = (fk, col) => (RV_SEED.files[fk] || {})[col];
 
 const rvSeg = s => String(s).replace(/[^A-Za-z0-9_.:@-]/g, c => '+' + c.codePointAt(0).toString(16) + '+');
 function rvDocId(fk, col) {
@@ -130,17 +126,12 @@ function rvThread(n, col, list, who) {
 async function rvRender(fk) {
   const panels = rvPanels(fk);
   if (!panels.length) return;
-  const dbDec = REVIEW.decisions[fk] || {}, dbNotes = REVIEW.notes[fk] || {};
-  const dec = new Proxy(dbDec, { get: (o, col) => o[col] || (rvSeed(fk, col) && { status: rvSeed(fk, col)[0], by: 'claude', at: RV_SEED.at }) });
-  const notes = new Proxy(dbNotes, { get: (o, col) => {
-    const sd = rvSeed(fk, col);
-    return sd && sd[1] ? [{ text: sd[1], by: 'claude', at: RV_SEED.at, id: '' }, ...(o[col] || [])] : o[col];
-  } });
+  const dec = REVIEW.decisions[fk] || {}, notes = REVIEW.notes[fk] || {};
   const ids = new Set();
-  Object.values(dbDec).forEach(x => x.by && ids.add(x.by));
-  Object.values(dbNotes).forEach(l => l.forEach(x => x.by && ids.add(x.by)));
+  Object.values(dec).forEach(x => x.by && ids.add(x.by));
+  Object.values(notes).forEach(l => l.forEach(x => x.by && ids.add(x.by)));
   const ps = REVIEW.user && ids.size ? await REVIEW.user.profiles([...ids]) : {};
-  const who = id => id === 'claude' ? 'Claude (suggested)' : (ps[id] && ps[id].name) || (id && id === REVIEW.me ? 'You' : 'Someone');
+  const who = id => (ps[id] && ps[id].name) || (id && id === REVIEW.me ? 'You' : 'Someone');
   panels.forEach(p => {
     const counts = { need: 0, maybe: 0, drop: 0, open: 0 };
     let noted = 0;

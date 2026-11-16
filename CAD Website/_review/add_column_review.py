@@ -4,10 +4,7 @@ Adds a Need / Maybe / Drop decision and a notes thread to every column table. Th
 next to the original as <county>/profile/review/<county>-column-review.html; the original page
 is not touched. Publish the copy with capabilities {"db": {}, "user": {"scopes": ["profile"]}}.
 
-Usage: python3 add_column_review.py [--seed seed.json] <profile.html> [<profile.html> ...]
-
---seed bakes suggested decisions into the copy: {"at": <ms>, "files": {<file key>: {<column>: [status, comment]}}}.
-Each column then shows the suggestion and its comment (as a note by Claude) until the team saves its own decision.
+Usage: python3 add_column_review.py <profile.html> [<profile.html> ...]
 """
 import pathlib
 import re
@@ -29,7 +26,7 @@ def replace_once(s, old, new):
     return s.replace(old, new)
 
 
-def build(src: pathlib.Path, seed: str = "") -> pathlib.Path:
+def build(src: pathlib.Path) -> pathlib.Path:
     s = src.read_text()
     county = re.search(r"<title>(\w+) Property Data Profile</title>", s).group(1)
     s = replace_once(s, f"<title>{county} Property Data Profile</title>", f"<title>{county} Column Review</title>")
@@ -37,7 +34,7 @@ def build(src: pathlib.Path, seed: str = "") -> pathlib.Path:
     s = replace_once(s, "  </header>", INTRO + "  </header>")
     s = replace_once(s, "  return built[key] = p;", "  built[key] = p;\n  reviewEnhance(key, p);\n  return p;")
     s = replace_once(s, "\n  current = key;\n", "\n  current = key;\n  reviewShow(key);\n")
-    s = replace_once(s, "\n<script>\nconst DATA = ", f"\n<script>\n{seed}{JS}</script>\n\n<script>\nconst DATA = ")
+    s = replace_once(s, "\n<script>\nconst DATA = ", f"\n<script>\n{JS}</script>\n\n<script>\nconst DATA = ")
     out = src.parent / "review" / f"{county.lower()}-column-review.html"
     out.parent.mkdir(exist_ok=True)
     out.write_text(s)
@@ -45,10 +42,5 @@ def build(src: pathlib.Path, seed: str = "") -> pathlib.Path:
 
 
 if __name__ == "__main__":
-    args, seed = sys.argv[1:], ""
-    if "--seed" in args:
-        i = args.index("--seed")
-        seed = "const REVIEW_SEED = " + pathlib.Path(args[i + 1]).read_text().replace("</", "<\\/") + ";\n"
-        del args[i:i + 2]
-    for arg in args:
-        print(build(pathlib.Path(arg), seed))
+    for arg in sys.argv[1:]:
+        print(build(pathlib.Path(arg)))
