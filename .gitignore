@@ -232,3 +232,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Scorecard data export (export_scorecard_data.py; large CSVs, keep local)
+CAD Website/Scorecard Data/
