@@ -163,18 +163,8 @@ def fill_notice(df, values, label, only_not_protested=True):
 
 
 # ---- run one county --------------------------------------------------------------------------------------
-def run(county, load_roll, source, roll_date):
-    t0 = time.time()
-    folder = OUT / county
-    folder.mkdir(parents=True, exist_ok=True)
-    slug = county.lower().replace(" ", "_")
-
-    inp = load_input()
-    mine = inp[inp.county_clean.eq(county) & inp.has_account].copy()
-    print(f"[{county}] {len(mine):,} input rows with an account; loading roll: {source}", flush=True)
-    mine["key"] = mine.account_number.map(norm_acct)
-
-    roll = load_roll()
+def prep_roll(roll):
+    """One row per account, with every standard column present and addresses whitespace-collapsed."""
     roll["key"] = roll.key.map(norm_acct)
     roll = roll.drop_duplicates("key", keep="last")
     for c, default in {"ptd_state_code": None, "state_code_desc": "", **{a: "" for a in ADDR},
@@ -185,10 +175,11 @@ def run(county, load_roll, source, roll_date):
     roll = roll.fillna({"state_code": "", "ptd_state_code": "", "state_code_desc": ""})
     for a in ADDR:
         roll[a] = roll[a].fillna("").astype(str).str.replace(r"\s+", " ", regex=True).str.strip()
-    print(f"[{county}] roll has {len(roll):,} accounts ({time.time() - t0:.0f}s)", flush=True)
+    return roll
 
-    m = mine.merge(roll, on="key", how="left", indicator=True)
-    m["found_in_cad"] = m.pop("_merge").eq("both").map({True: "Y", False: "N"})
+
+def add_results(m, county):
+    """Category, input-vs-CAD differences and the notice-vs-latest reduction, for rows with found_in_cad Y/N."""
     cls = [classify(p or s, d, county) if f == "Y" else ("", "")
            for p, s, d, f in zip(m.ptd_state_code, m.state_code, m.state_code_desc, m.found_in_cad)]
     m["property_category"] = [c[0] for c in cls]
@@ -206,6 +197,26 @@ def run(county, load_roll, source, roll_date):
     m.loc[m.reduction == 0, "value_result"] = "No change"
     m.loc[m.reduction < 0, "value_result"] = "Increased"
     m["value_result"] = m.value_result.fillna("")
+    return m
+
+
+def run(county, load_roll, source, roll_date):
+    t0 = time.time()
+    folder = OUT / county
+    folder.mkdir(parents=True, exist_ok=True)
+    slug = county.lower().replace(" ", "_")
+
+    inp = load_input()
+    mine = inp[inp.county_clean.eq(county) & inp.has_account].copy()
+    print(f"[{county}] {len(mine):,} input rows with an account; loading roll: {source}", flush=True)
+    mine["key"] = mine.account_number.map(norm_acct)
+
+    roll = prep_roll(load_roll())
+    print(f"[{county}] roll has {len(roll):,} accounts ({time.time() - t0:.0f}s)", flush=True)
+
+    m = mine.merge(roll, on="key", how="left", indicator=True)
+    m["found_in_cad"] = m.pop("_merge").eq("both").map({True: "Y", False: "N"})
+    m = add_results(m, county)
     m["roll_source"] = source
     m["roll_date"] = roll_date
 
