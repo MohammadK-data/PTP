@@ -4,7 +4,7 @@ in parallel (a slow or failing county does not block the others). Output: Market
 Run all:        /Users/user2/PTP/.venv/bin/python -I "Market Analysis/etl/active_manual_2026/run_all.py"
 Run some:       ... run_all.py dallas tarrant
 Run one county: /Users/user2/PTP/.venv/bin/python -I "Market Analysis/etl/active_manual_2026/dallas.py"
-Summary only:   ... run_all.py --summary
+Summary only:   ... run_all.py --summary   (also rewrites the all-county found / not found files)
 """
 import subprocess
 import sys
@@ -85,6 +85,26 @@ def summary(d, rep):
     print(s.to_string(index=False))
 
 
+def merge():
+    """All counties in one file: found (found_in_cad = Y) and not found. Shared columns first, then each
+    county's own columns (blank for other counties)."""
+    parts = []
+    for county, script in SCRIPTS.items():
+        f = OUT / county / f"{script}_manual_2026.csv"
+        if f.exists():
+            parts.append(pd.read_csv(f, dtype=str, keep_default_na=False))
+    cols = []
+    for p in parts:
+        cols += [c for c in p.columns if c not in cols]
+    tail = ["all_rows_in_input", "salesforce_ids", "roll_source", "roll_date"]
+    cols = [c for c in cols if c not in tail] + tail
+    m = pd.concat(parts, ignore_index=True).reindex(columns=cols).fillna("")
+    found, nf = m[m.found_in_cad.eq("Y")], m[m.found_in_cad.eq("N")]
+    found.to_csv(OUT / "manual_all_counties_found_2026.csv", index=False)
+    nf.to_csv(OUT / "manual_all_counties_not_found_2026.csv", index=False)
+    print(f"merged: {len(found):,} found, {len(nf):,} not found across {len(parts)} counties")
+
+
 if __name__ == "__main__":
     args = [a.lower() for a in sys.argv[1:]]
     OUT.mkdir(parents=True, exist_ok=True)
@@ -92,3 +112,4 @@ if __name__ == "__main__":
     if "--summary" not in args:
         run(set(args))
     summary(d, rep)
+    merge()
