@@ -31,6 +31,7 @@ One JSON file per county drives everything. `examples/` has a complete, working 
       "raw": "PROP.TXT",                                  // the file's name inside the CAD download; default: path's file name
       "layout": "File #2 · Property (layout .xlsx)",      // what documents it; default: the catalog file's "layout"
       "nav_label": "Property",                            // optional sidebar name
+      "sample_rows": 25,                                  // optional; fewer sample rows for very wide rows (drawings as JSON), to stay under the 16 MB page limit
       "table": "owners.agents", "json_path": "owners.agents"  // set by add_tables.py; table name, JSON list path
     },
     "supp26": {"placeholder": true, "label": "Not available yet",

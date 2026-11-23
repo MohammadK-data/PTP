@@ -94,6 +94,8 @@ is the same; don't copy its groups, keys or file list - every county's are its o
    - Serve the folder locally (a `python3 -m http.server --directory <folder>` entry in `.claude/launch.json`,
      then `preview_start`) and run `scripts/verify_page.js` in the browser tool: expect `bad: []` and no console
      errors. Hover one column name. Delete the launch.json entry afterwards.
+   - Check the page size: an artifact must stay under 16 MB. If a few tables with huge rows (sketch JSON) push it over,
+     set their `sample_rows` lower and rerun `profile_files.py --sample-only` for them; never cut values.
    - Grep the HTML for `eyJ` (JWTs), `X-Amz-` (pre-signed links), `password` and email addresses. The page keeps
      them as published; tell the user what and where before publishing.
 10. **Publish the profile page.** Load `artifact-design` if this session hasn't. Publish with icon `chart`.

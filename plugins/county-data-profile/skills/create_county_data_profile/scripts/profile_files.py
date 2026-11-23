@@ -59,9 +59,11 @@ def load(m, key, con, stream=False):
     return path, src, cols, rejected, rej_sample
 
 
-def take_sample(m, con, cols):
-    """`sample` entry: N random rows (repeatable), values unchanged."""
-    n = m.get("sample", {}).get("rows", 100)
+def take_sample(m, con, cols, key=None):
+    """`sample` entry: N random rows (repeatable), values unchanged. A dataset's own "sample_rows" overrides the
+    manifest's "sample": {"rows": N}, for tables whose rows are very large (drawings as JSON) and would push the page
+    past the artifact size limit."""
+    n = (m["datasets"].get(key, {}).get("sample_rows") if key else None) or m.get("sample", {}).get("rows", 100)
     sel = ", ".join(esc(c) for c in cols)
     rows = con.execute(f"SELECT {sel} FROM v USING SAMPLE reservoir({n} ROWS) REPEATABLE (42)").fetchall()
     return dict(rows=[list(r) for r in rows])
@@ -72,7 +74,7 @@ def sample_one(m, key, out):
     con.execute("SET threads=8")
     load(m, key, con, stream=True)
     result = json.load(open(out))
-    result[key]["sample"] = take_sample(m, con, [c["name"] for c in result[key]["columns"]])
+    result[key]["sample"] = take_sample(m, con, [c["name"] for c in result[key]["columns"]], key)
     json.dump(result, open(out, "w"), default=str)
     print(f"sampled {key}: {len(result[key]['sample']['rows'])} rows", flush=True)
 
@@ -155,7 +157,7 @@ def profile_one(m, key, out):
             info["hist"] = dict(kind="year", bins=bins)
         colinfo.append(info)
         print(" ", c, typ, flush=True)
-    sample = take_sample(m, con, cols)
+    sample = take_sample(m, con, cols, key)
     result = json.load(open(out)) if os.path.exists(out) else {}
     result[key] = dict(file=d["path"], size=os.path.getsize(path), rows=nrows, rejected=rejected,
                        rej_sample=rej_sample, columns=colinfo, sample=sample)
