@@ -1,6 +1,6 @@
 {
   "name": "county-data-profile",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Profile a Texas county appraisal district's published data (export files, JSON special exports, multi-record submissions, reports, portal API) into a data profile Artifact and a team column-review workspace that maps every table to the CAD website file it comes from. County-agnostic: everything county-specific is read from the county's own files and website.",
   "author": { "name": "Property Tax Protest" }
 }

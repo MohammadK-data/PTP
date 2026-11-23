@@ -47,12 +47,13 @@ def load(m, key, con, stream=False):
     path = os.path.join(m["root"], d["path"])
     q = lambda sql: con.execute(sql).fetchall()
     print("==", key, path, flush=True)
-    src = f"read_csv('{path}', {opts(d)}, header=true"
+    o = opts(d)
+    src = f"read_csv('{path}', {o}" + ("" if "header=" in o else ", header=true")   # a headerless file sets header=false
     if stream:
         con.execute(f"CREATE VIEW v AS SELECT * FROM {src}, all_varchar=true)")
         return path, src, [r[0] for r in q("DESCRIBE v")], None, None
     con.execute(f"CREATE OR REPLACE TABLE v AS SELECT * FROM {src}, all_varchar=true, store_rejects=true)")
-    rejected = q("SELECT count(*) FROM reject_errors")[0][0]
+    rejected = q("SELECT count(DISTINCT line) FROM reject_errors")[0][0]   # one bad line can log several errors
     rej_sample = [list(r) for r in q("SELECT line, error_type, left(csv_line, 160) FROM reject_errors LIMIT 3")]
     cols = [r[0] for r in q("DESCRIBE v")]
     return path, src, cols, rejected, rej_sample

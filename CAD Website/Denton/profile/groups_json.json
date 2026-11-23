@@ -1,0 +1,6 @@
+[{"id": "json-prop", "label": "JSON · Property", "desc": "Top-level property fields and the one-to-few lists that describe the property.",
+  "match": ["property", "propertyIdentification", "propertyLegalDescription", "propertyCharacteristics", "propertyProfile", "situses", "tags", "smartgroups", "links"]},
+ {"id": "json-own", "label": "JSON · Owners & Taxing Units", "desc": "Owners, their agents, exemptions, values and taxable values per taxing unit.", "match": ["owners", "taxingunits"]},
+ {"id": "json-val", "label": "JSON · Valuations", "desc": "Valuations and the cost-approach detail behind them: improvements, segments, features and land.", "match": ["valuations"]},
+ {"id": "json-hist", "label": "JSON · History", "desc": "Deeds, sales, permits, inspections, notes and events recorded on the property.", "match": ["deeds", "sales", "permits", "inspections", "notes", "events"]},
+ {"id": "json-appeal", "label": "JSON · Appeals", "desc": "Protests (appeals) with hearing, decision and value details.", "match": ["appeals"]}]

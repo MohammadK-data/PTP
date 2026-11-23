@@ -1,0 +1,883 @@
+{
+ "page": {
+  "label": "Denton CAD · Data Downloads",
+  "url": "https://www.dentoncad.com/data-downloads",
+  "short": "DCAD",
+  "checked": "2026-11-23"
+ },
+ "groups": [
+  {
+   "name": "2026",
+   "files": [
+    {
+     "name": "2026 Certified Data – All Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2026/CertifiedDataAllProperty/",
+     "status": "used",
+     "note": "The certified export of Jul 27, 2026: 20 PACS files, read with the PACS appraisal export layout.",
+     "contents": [
+      "2026-07-27_2026_APPRAISAL_ABSTRACT_SUBDV.TXT",
+      "2026-07-27_2026_APPRAISAL_AGENT.TXT",
+      "2026-07-27_2026_APPRAISAL_ARB.TXT",
+      "2026-07-27_2026_APPRAISAL_COUNTRY_CODE.TXT",
+      "2026-07-27_2026_APPRAISAL_ENTITY.TXT",
+      "2026-07-27_2026_APPRAISAL_ENTITY_INFO.TXT",
+      "2026-07-27_2026_APPRAISAL_ENTITY_TOTALS.TXT",
+      "2026-07-27_2026_APPRAISAL_HEADER.TXT",
+      "2026-07-27_2026_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+      "2026-07-27_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+      "2026-07-27_2026_APPRAISAL_IMPROVEMENT_INFO.TXT",
+      "2026-07-27_2026_APPRAISAL_INFO.TXT",
+      "2026-07-27_2026_APPRAISAL_LAND_DETAIL.TXT",
+      "2026-07-27_2026_APPRAISAL_LAWSUIT.TXT",
+      "2026-07-27_2026_APPRAISAL_MOBILE_HOME_INFO.TXT",
+      "2026-07-27_2026_APPRAISAL_SB12.TXT",
+      "2026-07-27_2026_APPRAISAL_SKETCH_INFO.TXT",
+      "2026-07-27_2026_APPRAISAL_STATE_CODE.TXT",
+      "2026-07-27_2026_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+      "2026-07-27_2026_ARBITRATION_LAWSUIT.TXT",
+      "780f6f18-89ba-11f1-b117-0242ac11000c_exportTotals.pdf"
+     ],
+     "export": "2026-certified-data-all-property"
+    },
+    {
+     "name": "2026 Certified Data – Mineral Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2026/CertifiedDataMineral/",
+     "status": "data"
+    },
+    {
+     "name": "2026 Certified Data – Mobile Homes",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2026/CertifiedDataMobileHome/",
+     "status": "data"
+    },
+    {
+     "name": "2026 Certified Data – Business Personal Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2026/CertifiedDataPersonal/",
+     "status": "data"
+    },
+    {
+     "name": "2026 Certified Data – Residential (Real) Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2026/CertifiedDataReal/",
+     "status": "data"
+    },
+    {
+     "name": "2026 Certified Data – JSON",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2026/CertifiedDataJSON/",
+     "status": "used",
+     "note": "One JSON object per property (export of Jul 27, 2026). Each nested list is its own table on this page.",
+     "contents": [
+      "Denton-protaxExport-20260727.json"
+     ],
+     "export": "2026-certified-data-json"
+    },
+    {
+     "name": "Appraisal Export Layout (JSON - NEW)",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2026/AppraisalExportLayout/",
+     "status": "layout",
+     "note": "Field list of the JSON export. Our copy is dated Jan 24, 2025; its descriptions are the column tooltips of the JSON tables.",
+     "contents": [
+      "PublicJSON_FileLayout_20250124.xlsx"
+     ]
+    }
+   ],
+   "section": "Data Extracts",
+   "desc": "The 2026 certified roll: PACS fixed-width exports by property class, the JSON export and its layout."
+  },
+  {
+   "name": "2025",
+   "files": [
+    {
+     "name": "2025 Certified Data – All Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2025/CertifiedDataAllProperty/",
+     "status": "used",
+     "note": "Only the agent and header files of this download (export of Jul 28, 2025) are kept locally.",
+     "export": "2025-certified-data-all-property"
+    },
+    {
+     "name": "2025 Certified Data – Mineral Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2025/CertifiedDataMineral/",
+     "status": "data"
+    },
+    {
+     "name": "2025 Certified Data – Mobile Homes",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2025/CertifiedDataMobileHome/",
+     "status": "data"
+    },
+    {
+     "name": "2025 Certified Data – Business Personal Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2025/CertifiedDataPersonal/",
+     "status": "data"
+    },
+    {
+     "name": "2025 Certified Data – Residential (Real) Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2025/CertifiedDataReal/",
+     "status": "data"
+    },
+    {
+     "name": "2025 Preliminary Data – Mineral Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2025/PreliminaryDataMineral/",
+     "status": "data"
+    },
+    {
+     "name": "2025 Preliminary Data – Mobile Homes",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2025/PreliminaryDataMobileHome/",
+     "status": "data"
+    },
+    {
+     "name": "2025 Certified Data – JSON",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2025/CertifiedDataJSON/",
+     "status": "data"
+    },
+    {
+     "name": "Appraisal Export Layout",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2025/AppraisalExportLayout/",
+     "status": "layout"
+    }
+   ],
+   "section": "Data Extracts",
+   "desc": "The 2025 certified roll by property class, the JSON export, and preliminary mineral and mobile-home data."
+  },
+  {
+   "name": "2024",
+   "files": [
+    {
+     "name": "2024 Certified Data – All Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2024/CertifiedDataAllProperty/",
+     "status": "used",
+     "note": "Only the agent and header files of this download (export of Jul 22, 2024) are kept locally.",
+     "export": "2024-certified-data-all-property"
+    },
+    {
+     "name": "2024 Certified Data – Mineral Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2024/CertifiedDataMineral/",
+     "status": "data"
+    },
+    {
+     "name": "2024 Certified Data – Mobile Homes",
+     "url": "https://www.dentoncad.com/content/ab9d98b27aba490cbfc4d58f72b92c3c/2024%20Certified%20Data%20%E2%80%93%20Mobile%20Homes",
+     "status": "data"
+    },
+    {
+     "name": "2024 Certified Data – Business Personal Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2024/CertifiedDataPersonal/",
+     "status": "data"
+    },
+    {
+     "name": "2024 Certified Data – Residential (Real) Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2024/CertifiedDataReal/",
+     "status": "data"
+    },
+    {
+     "name": "2024 Certified Data – ProTax",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2024/CertifiedDataProTax/",
+     "status": "used",
+     "contents": [
+      "ProTax_ARBExport.txt"
+     ],
+     "export": "2024-certified-data-protax"
+    },
+    {
+     "name": "Appraisal Export Layout",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2024/Appraisal%20Export%20Layout/",
+     "status": "layout"
+    }
+   ],
+   "section": "Data Extracts",
+   "desc": "The 2024 certified roll by property class and the ProTax protest export."
+  },
+  {
+   "name": "2023",
+   "files": [
+    {
+     "name": "2023 Certified Data – All Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2023/CertifiedData-All%20Property/",
+     "status": "data"
+    },
+    {
+     "name": "2023 Certified Data – Mineral Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2023/CertifiedDataMineral/",
+     "status": "data"
+    },
+    {
+     "name": "2023 Certified Data – Mobile Homes",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2023/CertifiedDataMobileHome/",
+     "status": "data"
+    },
+    {
+     "name": "2023 Certified Data – Business Personal Property",
+     "url": "https://www.dentoncad.com/content/ab9d98b27aba490cbfc4d58f72b92c3c/2023%20Certified%20Data%20%E2%80%93%20Business%20Personal%20Property",
+     "status": "data"
+    },
+    {
+     "name": "2023 Certified Data – Residential (Real) Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2023/CertifiedDataReal/",
+     "status": "data"
+    },
+    {
+     "name": "2023 Certified Data – ProTax",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2023/CertifiedDataProTax/",
+     "status": "used",
+     "contents": [
+      "ProTax_ARBExport.txt"
+     ],
+     "export": "2023-certified-data-protax"
+    },
+    {
+     "name": "Appraisal Export Layout",
+     "url": "https://docs.google.com/spreadsheets/d/19jzFbBq8bVrSChJN17n2GLVFH6oUacFw/edit",
+     "status": "layout",
+     "site": "Google Sheets"
+    }
+   ],
+   "section": "Data Extracts",
+   "desc": "The 2023 certified roll by property class and the ProTax protest export."
+  },
+  {
+   "name": "2022",
+   "files": [
+    {
+     "name": "2022 Certified Data – All Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2022/CertifiedData-All%20Property/",
+     "status": "data"
+    },
+    {
+     "name": "2022 Certified Data – Mineral Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2022/CertifiedDataMineral/",
+     "status": "data"
+    },
+    {
+     "name": "2022 Certified Data – Mobile Homes",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2022/CertifiedDataMobileHome/",
+     "status": "data"
+    },
+    {
+     "name": "2022 Certified Data – Business Personal Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2022/CertifiedDataPersonal/",
+     "status": "data"
+    },
+    {
+     "name": "2022 Certified Data – Residential (Real) Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2022/CertifiedDataReal/",
+     "status": "data"
+    },
+    {
+     "name": "2022 Certified Data – ProTax",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2022/CertifiedDataProTax/",
+     "status": "used",
+     "contents": [
+      "ProTax_ARBExport.txt"
+     ],
+     "export": "2022-certified-data-protax"
+    },
+    {
+     "name": "Appraisal Export Layout (8.0.25)",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2022/Appraisal%20Export%20Layout%20-%208.0.25.xlsx",
+     "status": "layout"
+    }
+   ],
+   "section": "Data Extracts",
+   "desc": "The 2022 certified roll by property class and the ProTax protest export."
+  },
+  {
+   "name": "2021",
+   "files": [
+    {
+     "name": "2021 Certified Data – All Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2021/CertifiedData-All%20Property/",
+     "status": "data"
+    },
+    {
+     "name": "2021 Certified Data – Mineral Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2021/CertifiedDataMineral/",
+     "status": "data"
+    },
+    {
+     "name": "2021 Certified Data – Mobile Homes",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2021/CertifiedDataMobileHome/",
+     "status": "data"
+    },
+    {
+     "name": "2021 Certified Data – Business Personal Property",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2021/CertifiedDataPersonal/",
+     "status": "data"
+    },
+    {
+     "name": "2021 Certified Data – ProTax",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2021/CertifiedProTax/",
+     "status": "data"
+    },
+    {
+     "name": "Appraisal Export Layout",
+     "url": "https://docs.google.com/spreadsheets/d/1V7Fcv62T3RAt9CUpEXvZXwCUlNJSrEPH/edit",
+     "status": "layout",
+     "site": "Google Sheets"
+    }
+   ],
+   "section": "Data Extracts",
+   "desc": "The 2021 certified roll by property class and the ProTax protest export. The residential link on the website has no address."
+  },
+  {
+   "name": "Roll Corrections",
+   "files": [
+    {
+     "name": "Current Roll Corrections",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/Roll%20Corrections/",
+     "status": "used",
+     "note": "Profiled from supplement 3, exported Oct 14, 2026. The folder holds the current corrections, which may be newer.",
+     "contents": [
+      "2026-10-14_2026_APPRAISAL_ABSTRACT_SUBDV.TXT",
+      "2026-10-14_2026_APPRAISAL_AGENT.TXT",
+      "2026-10-14_2026_APPRAISAL_ARB.TXT",
+      "2026-10-14_2026_APPRAISAL_COUNTRY_CODE.TXT",
+      "2026-10-14_2026_APPRAISAL_ENTITY.TXT",
+      "2026-10-14_2026_APPRAISAL_ENTITY_INFO.TXT",
+      "2026-10-14_2026_APPRAISAL_ENTITY_TOTALS.TXT",
+      "2026-10-14_2026_APPRAISAL_HEADER.TXT",
+      "2026-10-14_2026_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+      "2026-10-14_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+      "2026-10-14_2026_APPRAISAL_IMPROVEMENT_INFO.TXT",
+      "2026-10-14_2026_APPRAISAL_INFO.TXT",
+      "2026-10-14_2026_APPRAISAL_LAND_DETAIL.TXT",
+      "2026-10-14_2026_APPRAISAL_LAWSUIT.TXT",
+      "2026-10-14_2026_APPRAISAL_MOBILE_HOME_INFO.TXT",
+      "2026-10-14_2026_APPRAISAL_SB12.TXT",
+      "2026-10-14_2026_APPRAISAL_SKETCH_INFO.TXT",
+      "2026-10-14_2026_APPRAISAL_STATE_CODE.TXT",
+      "2026-10-14_2026_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+      "2026-10-14_2026_ARBITRATION_LAWSUIT.TXT",
+      "Pasted 2026-10-29 at 5.27.28 PM.textClipping",
+      "f3a357dc-c7fb-11f1-af65-0242ac110007_exportTotals.pdf"
+     ],
+     "export": "current-roll-corrections"
+    }
+   ],
+   "section": "Data Extracts",
+   "desc": "Supplemental exports with roll corrections made after certification.",
+   "drive": "https://drive.google.com/drive/folders/1iopZsXRIHI9U1r-DzkeSym614EhWUXSE"
+  },
+  {
+   "name": "GIS Data",
+   "files": [
+    {
+     "name": "File Geodatabase Export (Updated weekly)",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/gis/nightly_geodatabase.gdb.zip",
+     "status": "data"
+    },
+    {
+     "name": "Appraisal Data table in CSV format",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/gis/nightly_appraisals.zip",
+     "status": "data"
+    },
+    {
+     "name": "State Codes and Descriptions",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/gis/StateCodeDesc.pdf",
+     "status": "not"
+    },
+    {
+     "name": "Exemption Codes and Descriptions",
+     "url": "https://www.dentoncad.com/data-downloads",
+     "status": "not",
+     "note": "Links to a Google Drive file from the website."
+    },
+    {
+     "name": "Land Type Codes and Descriptions",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/gis/LandTypeCodes.pdf",
+     "status": "not"
+    },
+    {
+     "name": "Taxing Entity Codes and Descriptions",
+     "url": "https://dentoncad.net/data/_uploaded/files/datafiles/gis/entity_codes.xlsx",
+     "status": "data"
+    },
+    {
+     "name": "Download Shapefiles",
+     "url": "https://drive.google.com/drive/folders/1gFOmzEJ-W69DfkuQwIDr05vNAFnV36bQ",
+     "status": "data",
+     "site": "Google Drive"
+    }
+   ],
+   "section": "GIS Data",
+   "desc": "Weekly GIS exports joined to appraisal data, code lists and shapefiles. Approximate boundaries, not a survey."
+  }
+ ],
+ "tables": {
+  "c26-info": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_APPRAISAL_INFO.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)",
+   "title": "Property Roll"
+  },
+  "c26-entinfo": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_APPRAISAL_ENTITY_INFO.TXT",
+   "layout": "File #3 · Property-Entity Association (APPRAISAL_ENTITY_INFO.TXT)",
+   "title": "Values by taxing unit"
+  },
+  "c26-enttot": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_APPRAISAL_ENTITY_TOTALS.TXT",
+   "layout": "File #4 · Entity Totals (APPRAISAL_ENTITY_TOTALS.TXT)",
+   "title": "Unit totals"
+  },
+  "c26-entity": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_APPRAISAL_ENTITY.TXT",
+   "layout": "File #14 · Entity (APPRAISAL_ENTITY.TXT)",
+   "title": "Unit codes"
+  },
+  "c26-imprinfo": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_APPRAISAL_IMPROVEMENT_INFO.TXT",
+   "layout": "File #7 · Improvements (APPRAISAL_IMPROVEMENT_INFO.TXT)",
+   "title": "Improvements"
+  },
+  "c26-imprdet": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+   "layout": "File #8 · Improvement Detail (APPRAISAL_IMPROVEMENT_DETAIL.TXT)",
+   "title": "Improvement details"
+  },
+  "c26-imprattr": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+   "layout": "File #9 · Improvement Features (APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT)",
+   "title": "Detail attributes"
+  },
+  "c26-sketch": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_APPRAISAL_SKETCH_INFO.TXT",
+   "layout": "File #20 · Sketches (APPRAISAL_SKETCH_INFO.TXT)",
+   "title": "Sketches"
+  },
+  "c26-mobile": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_APPRAISAL_MOBILE_HOME_INFO.TXT",
+   "layout": "File #18 · Mobile Home Info (APPRAISAL_MOBILE_HOME_INFO.TXT)",
+   "title": "Mobile homes"
+  },
+  "c26-land": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_APPRAISAL_LAND_DETAIL.TXT",
+   "layout": "File #10 · Land (APPRAISAL_LAND_DETAIL.TXT)",
+   "title": "Land"
+  },
+  "c26-sb12": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_APPRAISAL_SB12.csv",
+   "layout": "",
+   "title": "Tax ceilings (SB12)"
+  },
+  "c26-defer": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+   "layout": "File #19 · Tax Deferral  Info (APPRAISAL_TAX_DEFERRAL_INFO.TXT)",
+   "title": "Tax deferrals"
+  },
+  "c26-arb": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_APPRAISAL_ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)",
+   "title": "ARB protests"
+  },
+  "c26-lawsuit": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_APPRAISAL_LAWSUIT.TXT",
+   "layout": "File #13 · Active Lawsuit Properties (APPRAISAL_LAWSUIT.TXT)",
+   "title": "Lawsuits"
+  },
+  "c26-arblaw": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_ARBITRATION_LAWSUIT.TXT",
+   "layout": "File #17 · Properties in Arbitration (ARBITRATION_LAWSUIT.TXT)",
+   "title": "Arbitration"
+  },
+  "c26-agent": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_APPRAISAL_AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)",
+   "title": "Agents"
+  },
+  "c26-abs": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_APPRAISAL_ABSTRACT_SUBDV.TXT",
+   "layout": "File #5 · Abstract/Subdivision List (APPRAISAL_ABSTRACT_SUBDV.TXT)",
+   "title": "Abstracts & subdivisions"
+  },
+  "c26-state": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_APPRAISAL_STATE_CODE.TXT",
+   "layout": "File #6 · Property Tax Division Codes (APPRAISAL_STATE_CODE.TXT)",
+   "title": "State codes"
+  },
+  "c26-country": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_APPRAISAL_COUNTRY_CODE.TXT",
+   "layout": "File #16 · Country Codes (APPRAISAL_COUNTRY_CODE.TXT)",
+   "title": "Country codes"
+  },
+  "c26-header": {
+   "download": "2026-certified-data-all-property",
+   "raw": "2026-07-27_2026_APPRAISAL_HEADER.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)",
+   "title": "Export header"
+  },
+  "jc-appeals": {
+   "download": "2026-certified-data-json",
+   "raw": "appeals[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · appeals",
+   "title": "appeals"
+  },
+  "jc-deeds": {
+   "download": "2026-certified-data-json",
+   "raw": "deeds[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · deeds",
+   "title": "deeds"
+  },
+  "jc-events": {
+   "download": "2026-certified-data-json",
+   "raw": "events[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · events",
+   "title": "events"
+  },
+  "jc-inspections": {
+   "download": "2026-certified-data-json",
+   "raw": "inspections[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · inspections",
+   "title": "inspections"
+  },
+  "jc-notes": {
+   "download": "2026-certified-data-json",
+   "raw": "notes[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · notes",
+   "title": "notes"
+  },
+  "jc-permits": {
+   "download": "2026-certified-data-json",
+   "raw": "permits[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · permits",
+   "title": "permits"
+  },
+  "jc-sales": {
+   "download": "2026-certified-data-json",
+   "raw": "sales[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · sales",
+   "title": "sales"
+  },
+  "jc-links": {
+   "download": "2026-certified-data-json",
+   "raw": "links[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · links",
+   "title": "links"
+  },
+  "jc-property": {
+   "download": "2026-certified-data-json",
+   "raw": "property",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · property",
+   "title": "property"
+  },
+  "jc-propertycharacteristics": {
+   "download": "2026-certified-data-json",
+   "raw": "propertyCharacteristics[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · propertyCharacteristics",
+   "title": "propertyCharacteristics"
+  },
+  "jc-propertyidentification": {
+   "download": "2026-certified-data-json",
+   "raw": "propertyIdentification[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · propertyIdentification",
+   "title": "propertyIdentification"
+  },
+  "jc-propertylegaldescription": {
+   "download": "2026-certified-data-json",
+   "raw": "propertyLegalDescription[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · propertyLegalDescription",
+   "title": "propertyLegalDescription"
+  },
+  "jc-propertyprofile": {
+   "download": "2026-certified-data-json",
+   "raw": "propertyProfile[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · propertyProfile",
+   "title": "propertyProfile"
+  },
+  "jc-situses": {
+   "download": "2026-certified-data-json",
+   "raw": "situses[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · situses",
+   "title": "situses"
+  },
+  "jc-smartgroups": {
+   "download": "2026-certified-data-json",
+   "raw": "smartgroups[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · smartgroups",
+   "title": "smartgroups"
+  },
+  "jc-tags": {
+   "download": "2026-certified-data-json",
+   "raw": "tags[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · tags",
+   "title": "tags"
+  },
+  "jc-owners": {
+   "download": "2026-certified-data-json",
+   "raw": "owners[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · owners",
+   "title": "owners"
+  },
+  "jc-owners-agents": {
+   "download": "2026-certified-data-json",
+   "raw": "owners[].agents[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · owners.agents",
+   "title": "owners › agents"
+  },
+  "jc-owners-exemptions": {
+   "download": "2026-certified-data-json",
+   "raw": "owners[].exemptions[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · owners.exemptions",
+   "title": "owners › exemptions"
+  },
+  "jc-owners-ownertaxable": {
+   "download": "2026-certified-data-json",
+   "raw": "owners[].ownerTaxable[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · owners.ownerTaxable",
+   "title": "owners › ownerTaxable"
+  },
+  "jc-owners-ownertaxable-exemptions": {
+   "download": "2026-certified-data-json",
+   "raw": "owners[].ownerTaxable[].exemptions[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · owners.ownerTaxable.exemptions",
+   "title": "owners › ownerTaxable › exemptions"
+  },
+  "jc-owners-ownervalue": {
+   "download": "2026-certified-data-json",
+   "raw": "owners[].ownerValue[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · owners.ownerValue",
+   "title": "owners › ownerValue"
+  },
+  "jc-taxingunits": {
+   "download": "2026-certified-data-json",
+   "raw": "taxingunits[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · taxingunits",
+   "title": "taxingunits"
+  },
+  "jc-valuations": {
+   "download": "2026-certified-data-json",
+   "raw": "valuations[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · valuations",
+   "title": "valuations"
+  },
+  "jc-valuations-details-cost-local-improvements": {
+   "download": "2026-certified-data-json",
+   "raw": "valuations[].details[].cost-local[].improvements[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · valuations.details.cost-local.improvements",
+   "title": "valuations › details › cost-local › improvements"
+  },
+  "jc-valuations-details-cost-local-improvements-adjustments": {
+   "download": "2026-certified-data-json",
+   "raw": "valuations[].details[].cost-local[].improvements[].adjustments[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · valuations.details.cost-local.improvements.adjustments",
+   "title": "valuations › details › cost-local › improvements › adjustments"
+  },
+  "jc-valuations-details-cost-local-improvements-details": {
+   "download": "2026-certified-data-json",
+   "raw": "valuations[].details[].cost-local[].improvements[].details[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · valuations.details.cost-local.improvements.details",
+   "title": "valuations › details › cost-local › improvements › details"
+  },
+  "jc-valuations-details-cost-local-improvements-details-adjustments": {
+   "download": "2026-certified-data-json",
+   "raw": "valuations[].details[].cost-local[].improvements[].details[].adjustments[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · valuations.details.cost-local.improvements.details.adjustments",
+   "title": "valuations › details › cost-local › improvements › details › adjustments"
+  },
+  "jc-valuations-details-cost-local-improvements-details-features": {
+   "download": "2026-certified-data-json",
+   "raw": "valuations[].details[].cost-local[].improvements[].details[].features[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · valuations.details.cost-local.improvements.details.features",
+   "title": "valuations › details › cost-local › improvements › details › features"
+  },
+  "jc-valuations-details-cost-local-land": {
+   "download": "2026-certified-data-json",
+   "raw": "valuations[].details[].cost-local[].land[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · valuations.details.cost-local.land",
+   "title": "valuations › details › cost-local › land"
+  },
+  "jc-valuations-details-cost-local-land-adjustments": {
+   "download": "2026-certified-data-json",
+   "raw": "valuations[].details[].cost-local[].land[].adjustments[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · valuations.details.cost-local.land.adjustments",
+   "title": "valuations › details › cost-local › land › adjustments"
+  },
+  "jc-valuations-details-cost-local-land-notes": {
+   "download": "2026-certified-data-json",
+   "raw": "valuations[].details[].cost-local[].land[].notes[]",
+   "layout": "PublicJSON_FileLayout (JSON layout workbook) · valuations.details.cost-local.land.notes",
+   "title": "valuations › details › cost-local › land › notes"
+  },
+  "c25-header": {
+   "download": "2025-certified-data-all-property",
+   "raw": "2025-07-28_2025_APPRAISAL_HEADER.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)",
+   "title": "Export header"
+  },
+  "c25-agent": {
+   "download": "2025-certified-data-all-property",
+   "raw": "2025-07-28_2025_APPRAISAL_AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)",
+   "title": "Agents"
+  },
+  "c24-header": {
+   "download": "2024-certified-data-all-property",
+   "raw": "2024-07-22_008084_APPRAISAL_HEADER.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)",
+   "title": "Export header"
+  },
+  "c24-agent": {
+   "download": "2024-certified-data-all-property",
+   "raw": "2024-07-22_008084_APPRAISAL_AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)",
+   "title": "Agents"
+  },
+  "pt24": {
+   "download": "2024-certified-data-protax",
+   "raw": "ProTax_ARBExport.txt",
+   "layout": "Header row in the file",
+   "title": "ProTax ARB Export"
+  },
+  "pt23": {
+   "download": "2023-certified-data-protax",
+   "raw": "ProTax_ARBExport.txt",
+   "layout": "Header row in the file",
+   "title": "ProTax ARB Export"
+  },
+  "pt22": {
+   "download": "2022-certified-data-protax",
+   "raw": "ProTax_ARBExport.txt",
+   "layout": "No header row and no published layout; columns are numbered",
+   "title": "ProTax ARB Export"
+  },
+  "s26-info": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_APPRAISAL_INFO.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)",
+   "title": "Property Roll"
+  },
+  "s26-entinfo": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_APPRAISAL_ENTITY_INFO.TXT",
+   "layout": "File #3 · Property-Entity Association (APPRAISAL_ENTITY_INFO.TXT)",
+   "title": "Values by taxing unit"
+  },
+  "s26-enttot": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_APPRAISAL_ENTITY_TOTALS.TXT",
+   "layout": "File #4 · Entity Totals (APPRAISAL_ENTITY_TOTALS.TXT)",
+   "title": "Unit totals"
+  },
+  "s26-entity": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_APPRAISAL_ENTITY.TXT",
+   "layout": "File #14 · Entity (APPRAISAL_ENTITY.TXT)",
+   "title": "Unit codes"
+  },
+  "s26-imprinfo": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_APPRAISAL_IMPROVEMENT_INFO.TXT",
+   "layout": "File #7 · Improvements (APPRAISAL_IMPROVEMENT_INFO.TXT)",
+   "title": "Improvements"
+  },
+  "s26-imprdet": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+   "layout": "File #8 · Improvement Detail (APPRAISAL_IMPROVEMENT_DETAIL.TXT)",
+   "title": "Improvement details"
+  },
+  "s26-imprattr": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+   "layout": "File #9 · Improvement Features (APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT)",
+   "title": "Detail attributes"
+  },
+  "s26-sketch": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_APPRAISAL_SKETCH_INFO.TXT",
+   "layout": "File #20 · Sketches (APPRAISAL_SKETCH_INFO.TXT)",
+   "title": "Sketches"
+  },
+  "s26-mobile": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_APPRAISAL_MOBILE_HOME_INFO.TXT",
+   "layout": "File #18 · Mobile Home Info (APPRAISAL_MOBILE_HOME_INFO.TXT)",
+   "title": "Mobile homes"
+  },
+  "s26-land": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_APPRAISAL_LAND_DETAIL.TXT",
+   "layout": "File #10 · Land (APPRAISAL_LAND_DETAIL.TXT)",
+   "title": "Land"
+  },
+  "s26-sb12": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_APPRAISAL_SB12.csv",
+   "layout": "",
+   "title": "Tax ceilings (SB12)"
+  },
+  "s26-defer": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+   "layout": "File #19 · Tax Deferral  Info (APPRAISAL_TAX_DEFERRAL_INFO.TXT)",
+   "title": "Tax deferrals"
+  },
+  "s26-arb": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_APPRAISAL_ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)",
+   "title": "ARB protests"
+  },
+  "s26-lawsuit": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_APPRAISAL_LAWSUIT.TXT",
+   "layout": "File #13 · Active Lawsuit Properties (APPRAISAL_LAWSUIT.TXT)",
+   "title": "Lawsuits"
+  },
+  "s26-arblaw": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_ARBITRATION_LAWSUIT.TXT",
+   "layout": "File #17 · Properties in Arbitration (ARBITRATION_LAWSUIT.TXT)",
+   "title": "Arbitration"
+  },
+  "s26-agent": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_APPRAISAL_AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)",
+   "title": "Agents"
+  },
+  "s26-abs": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_APPRAISAL_ABSTRACT_SUBDV.TXT",
+   "layout": "File #5 · Abstract/Subdivision List (APPRAISAL_ABSTRACT_SUBDV.TXT)",
+   "title": "Abstracts & subdivisions"
+  },
+  "s26-state": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_APPRAISAL_STATE_CODE.TXT",
+   "layout": "File #6 · Property Tax Division Codes (APPRAISAL_STATE_CODE.TXT)",
+   "title": "State codes"
+  },
+  "s26-country": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_APPRAISAL_COUNTRY_CODE.TXT",
+   "layout": "File #16 · Country Codes (APPRAISAL_COUNTRY_CODE.TXT)",
+   "title": "Country codes"
+  },
+  "s26-header": {
+   "download": "current-roll-corrections",
+   "raw": "2026-10-14_2026_APPRAISAL_HEADER.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)",
+   "title": "Export header"
+  }
+ },
+ "drive": {
+  "label": "Google Drive · County Playbooks › Denton › CAD Reports",
+  "checked": "2026-11-23",
+  "url": "https://drive.google.com/drive/folders/1OSUMzUacqv51HXycxIj7fidisyK4qwI9"
+ }
+}

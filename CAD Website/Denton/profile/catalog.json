@@ -1,0 +1,365 @@
+{
+ "page": {
+  "label": "Denton CAD · Data Downloads",
+  "url": "https://www.dentoncad.com/data-downloads",
+  "short": "DCAD",
+  "checked": "2026-11-23"
+ },
+ "sections": [
+  {
+   "name": "Data Extracts",
+   "groups": [
+    {
+     "name": "2026",
+     "desc": "The 2026 certified roll: PACS fixed-width exports by property class, the JSON export and its layout.",
+     "files": [
+      {
+       "name": "2026 Certified Data – All Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2026/CertifiedDataAllProperty/",
+       "role": "data",
+       "tables": [
+        "c26-*"
+       ],
+       "local": "Data/2026 CERTIFIED DATA - ALL PROPERTIES",
+       "note": "The certified export of Jul 27, 2026: 20 PACS files, read with the PACS appraisal export layout."
+      },
+      {
+       "name": "2026 Certified Data – Mineral Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2026/CertifiedDataMineral/",
+       "role": "data"
+      },
+      {
+       "name": "2026 Certified Data – Mobile Homes",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2026/CertifiedDataMobileHome/",
+       "role": "data"
+      },
+      {
+       "name": "2026 Certified Data – Business Personal Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2026/CertifiedDataPersonal/",
+       "role": "data"
+      },
+      {
+       "name": "2026 Certified Data – Residential (Real) Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2026/CertifiedDataReal/",
+       "role": "data"
+      },
+      {
+       "name": "2026 Certified Data – JSON",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2026/CertifiedDataJSON/",
+       "role": "data",
+       "tables": [
+        "jc-*"
+       ],
+       "contents": [
+        "Denton-protaxExport-20260727.json"
+       ],
+       "note": "One JSON object per property (export of Jul 27, 2026). Each nested list is its own table on this page."
+      },
+      {
+       "name": "Appraisal Export Layout (JSON - NEW)",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2026/AppraisalExportLayout/",
+       "role": "layout",
+       "contents": [
+        "PublicJSON_FileLayout_20250124.xlsx"
+       ],
+       "note": "Field list of the JSON export. Our copy is dated Jan 24, 2025; its descriptions are the column tooltips of the JSON tables."
+      }
+     ]
+    },
+    {
+     "name": "2025",
+     "desc": "The 2025 certified roll by property class, the JSON export, and preliminary mineral and mobile-home data.",
+     "files": [
+      {
+       "name": "2025 Certified Data – All Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2025/CertifiedDataAllProperty/",
+       "role": "data",
+       "tables": [
+        "c25-*"
+       ],
+       "note": "Only the agent and header files of this download (export of Jul 28, 2025) are kept locally."
+      },
+      {
+       "name": "2025 Certified Data – Mineral Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2025/CertifiedDataMineral/",
+       "role": "data"
+      },
+      {
+       "name": "2025 Certified Data – Mobile Homes",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2025/CertifiedDataMobileHome/",
+       "role": "data"
+      },
+      {
+       "name": "2025 Certified Data – Business Personal Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2025/CertifiedDataPersonal/",
+       "role": "data"
+      },
+      {
+       "name": "2025 Certified Data – Residential (Real) Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2025/CertifiedDataReal/",
+       "role": "data"
+      },
+      {
+       "name": "2025 Preliminary Data – Mineral Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2025/PreliminaryDataMineral/",
+       "role": "data"
+      },
+      {
+       "name": "2025 Preliminary Data – Mobile Homes",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2025/PreliminaryDataMobileHome/",
+       "role": "data"
+      },
+      {
+       "name": "2025 Certified Data – JSON",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2025/CertifiedDataJSON/",
+       "role": "data"
+      },
+      {
+       "name": "Appraisal Export Layout",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2025/AppraisalExportLayout/",
+       "role": "layout"
+      }
+     ]
+    },
+    {
+     "name": "2024",
+     "desc": "The 2024 certified roll by property class and the ProTax protest export.",
+     "files": [
+      {
+       "name": "2024 Certified Data – All Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2024/CertifiedDataAllProperty/",
+       "role": "data",
+       "tables": [
+        "c24-*"
+       ],
+       "note": "Only the agent and header files of this download (export of Jul 22, 2024) are kept locally."
+      },
+      {
+       "name": "2024 Certified Data – Mineral Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2024/CertifiedDataMineral/",
+       "role": "data"
+      },
+      {
+       "name": "2024 Certified Data – Mobile Homes",
+       "url": "https://www.dentoncad.com/content/ab9d98b27aba490cbfc4d58f72b92c3c/2024%20Certified%20Data%20%E2%80%93%20Mobile%20Homes",
+       "role": "data"
+      },
+      {
+       "name": "2024 Certified Data – Business Personal Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2024/CertifiedDataPersonal/",
+       "role": "data"
+      },
+      {
+       "name": "2024 Certified Data – Residential (Real) Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2024/CertifiedDataReal/",
+       "role": "data"
+      },
+      {
+       "name": "2024 Certified Data – ProTax",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2024/CertifiedDataProTax/",
+       "role": "data",
+       "tables": [
+        "pt24"
+       ],
+       "local": "Data/denton_prior_download/protax_2024"
+      },
+      {
+       "name": "Appraisal Export Layout",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2024/Appraisal%20Export%20Layout/",
+       "role": "layout"
+      }
+     ]
+    },
+    {
+     "name": "2023",
+     "desc": "The 2023 certified roll by property class and the ProTax protest export.",
+     "files": [
+      {
+       "name": "2023 Certified Data – All Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2023/CertifiedData-All%20Property/",
+       "role": "data"
+      },
+      {
+       "name": "2023 Certified Data – Mineral Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2023/CertifiedDataMineral/",
+       "role": "data"
+      },
+      {
+       "name": "2023 Certified Data – Mobile Homes",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2023/CertifiedDataMobileHome/",
+       "role": "data"
+      },
+      {
+       "name": "2023 Certified Data – Business Personal Property",
+       "url": "https://www.dentoncad.com/content/ab9d98b27aba490cbfc4d58f72b92c3c/2023%20Certified%20Data%20%E2%80%93%20Business%20Personal%20Property",
+       "role": "data"
+      },
+      {
+       "name": "2023 Certified Data – Residential (Real) Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2023/CertifiedDataReal/",
+       "role": "data"
+      },
+      {
+       "name": "2023 Certified Data – ProTax",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2023/CertifiedDataProTax/",
+       "role": "data",
+       "tables": [
+        "pt23"
+       ],
+       "local": "Data/denton_prior_download/protax_2023"
+      },
+      {
+       "name": "Appraisal Export Layout",
+       "url": "https://docs.google.com/spreadsheets/d/19jzFbBq8bVrSChJN17n2GLVFH6oUacFw/edit",
+       "role": "layout",
+       "link_label": "Google Sheets"
+      }
+     ]
+    },
+    {
+     "name": "2022",
+     "desc": "The 2022 certified roll by property class and the ProTax protest export.",
+     "files": [
+      {
+       "name": "2022 Certified Data – All Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2022/CertifiedData-All%20Property/",
+       "role": "data"
+      },
+      {
+       "name": "2022 Certified Data – Mineral Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2022/CertifiedDataMineral/",
+       "role": "data"
+      },
+      {
+       "name": "2022 Certified Data – Mobile Homes",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2022/CertifiedDataMobileHome/",
+       "role": "data"
+      },
+      {
+       "name": "2022 Certified Data – Business Personal Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2022/CertifiedDataPersonal/",
+       "role": "data"
+      },
+      {
+       "name": "2022 Certified Data – Residential (Real) Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2022/CertifiedDataReal/",
+       "role": "data"
+      },
+      {
+       "name": "2022 Certified Data – ProTax",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2022/CertifiedDataProTax/",
+       "role": "data",
+       "tables": [
+        "pt22"
+       ],
+       "local": "Data/denton_prior_download/protax_2022"
+      },
+      {
+       "name": "Appraisal Export Layout (8.0.25)",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2022/Appraisal%20Export%20Layout%20-%208.0.25.xlsx",
+       "role": "layout"
+      }
+     ]
+    },
+    {
+     "name": "2021",
+     "desc": "The 2021 certified roll by property class and the ProTax protest export. The residential link on the website has no address.",
+     "files": [
+      {
+       "name": "2021 Certified Data – All Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2021/CertifiedData-All%20Property/",
+       "role": "data"
+      },
+      {
+       "name": "2021 Certified Data – Mineral Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2021/CertifiedDataMineral/",
+       "role": "data"
+      },
+      {
+       "name": "2021 Certified Data – Mobile Homes",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2021/CertifiedDataMobileHome/",
+       "role": "data"
+      },
+      {
+       "name": "2021 Certified Data – Business Personal Property",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2021/CertifiedDataPersonal/",
+       "role": "data"
+      },
+      {
+       "name": "2021 Certified Data – ProTax",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/2021/CertifiedProTax/",
+       "role": "data"
+      },
+      {
+       "name": "Appraisal Export Layout",
+       "url": "https://docs.google.com/spreadsheets/d/1V7Fcv62T3RAt9CUpEXvZXwCUlNJSrEPH/edit",
+       "role": "layout",
+       "link_label": "Google Sheets"
+      }
+     ]
+    },
+    {
+     "name": "Roll Corrections",
+     "desc": "Supplemental exports with roll corrections made after certification.",
+     "files": [
+      {
+       "name": "Current Roll Corrections",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/Roll%20Corrections/",
+       "role": "data",
+       "tables": [
+        "s26-*"
+       ],
+       "local": "Data/2026-3",
+       "note": "Profiled from supplement 3, exported Oct 14, 2026. The folder holds the current corrections, which may be newer."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "GIS Data",
+   "groups": [
+    {
+     "name": "GIS Data",
+     "desc": "Weekly GIS exports joined to appraisal data, code lists and shapefiles. Approximate boundaries, not a survey.",
+     "files": [
+      {
+       "name": "File Geodatabase Export (Updated weekly)",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/gis/nightly_geodatabase.gdb.zip",
+       "role": "data"
+      },
+      {
+       "name": "Appraisal Data table in CSV format",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/gis/nightly_appraisals.zip",
+       "role": "data"
+      },
+      {
+       "name": "State Codes and Descriptions",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/gis/StateCodeDesc.pdf"
+      },
+      {
+       "name": "Exemption Codes and Descriptions",
+       "url": "https://www.dentoncad.com/data-downloads",
+       "note": "Links to a Google Drive file from the website."
+      },
+      {
+       "name": "Land Type Codes and Descriptions",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/gis/LandTypeCodes.pdf"
+      },
+      {
+       "name": "Taxing Entity Codes and Descriptions",
+       "url": "https://dentoncad.net/data/_uploaded/files/datafiles/gis/entity_codes.xlsx",
+       "role": "data"
+      },
+      {
+       "name": "Download Shapefiles",
+       "url": "https://drive.google.com/drive/folders/1gFOmzEJ-W69DfkuQwIDr05vNAFnV36bQ",
+       "role": "data",
+       "link_label": "Google Drive"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
