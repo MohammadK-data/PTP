@@ -1,0 +1,684 @@
+{
+ "page": {
+  "label": "Dallas CAD · Data Products",
+  "url": "https://www.dallascad.org/DataProducts.aspx",
+  "short": "DCAD",
+  "checked": "2026-11-23"
+ },
+ "groups": [
+  {
+   "name": "Current and Prior Appraisal data for all accounts",
+   "files": [
+    {
+     "name": "2027 Data Files (Most Current Ownership)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2027_CURRENT.zip",
+     "status": "used",
+     "contents": [
+      "ABATEMENT_EXEMPT.CSV",
+      "ACCOUNT_APPRL_YEAR.CSV",
+      "ACCOUNT_INFO.CSV",
+      "ACCOUNT_TIF.CSV",
+      "ACCT_EXEMPT_VALUE.CSV",
+      "APPLIED_STD_EXEMPT.CSV",
+      "COM_DETAIL.CSV",
+      "DCAD Data Dictionary.rtf",
+      "DCAD_Certified_READ_ME.rtf",
+      "FREEPORT_EXEMPTION.CSV",
+      "LAND.CSV",
+      "MULTI_OWNER.CSV",
+      "RES_ADDL.CSV",
+      "RES_DETAIL.CSV",
+      "SPTD_CD_XREF.pdf",
+      "TABLES AND FIELD NAMES.xlsx",
+      "TAXABLE_OBJECT.CSV",
+      "TOTAL_EXEMPTION.CSV",
+      "~$TABLES AND FIELD NAMES.xlsx"
+     ],
+     "export": "2027-data-files-most-current-ownership"
+    },
+    {
+     "name": "2026 Certified Data Files with Supplemental Changes (Comma Delimited)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2026_CURRENT.ZIP",
+     "status": "used",
+     "contents": [
+      "ABATEMENT_EXEMPT.CSV",
+      "ACCOUNT_APPRL_YEAR.CSV",
+      "ACCOUNT_INFO.CSV",
+      "ACCOUNT_TIF.CSV",
+      "ACCT_EXEMPT_VALUE.CSV",
+      "APPLIED_STD_EXEMPT.CSV",
+      "COM_DETAIL.CSV",
+      "DCAD Data Dictionary.rtf",
+      "DCAD_Certified_READ_ME.rtf",
+      "FREEPORT_EXEMPTION.CSV",
+      "LAND.CSV",
+      "MULTI_OWNER.CSV",
+      "RES_ADDL.CSV",
+      "RES_DETAIL.CSV",
+      "SPTD_CD_XREF.pdf",
+      "TABLES AND FIELD NAMES.xlsx",
+      "TAXABLE_OBJECT.CSV",
+      "TOTAL_EXEMPTION.CSV"
+     ],
+     "export": "2026-certified-data-files-with-supplemen"
+    },
+    {
+     "name": "2025 Certified Data Files with Supplemental Changes (Comma Delimited)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2025_CURRENT.ZIP",
+     "status": "used",
+     "note": "Only ACCOUNT_APPRL_YEAR and APPLIED_STD_EXEMPT from this download are kept locally.",
+     "contents": [
+      "ACCOUNT_APPRL_YEAR.CSV",
+      "APPLIED_STD_EXEMPT.CSV"
+     ],
+     "export": "2025-certified-data-files-with-supplemen"
+    },
+    {
+     "name": "2024 Certified Data Files with Supplemental Changes (Comma Delimited)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2024_CURRENT.ZIP",
+     "status": "used",
+     "note": "Only ACCOUNT_APPRL_YEAR and APPLIED_STD_EXEMPT from this download are kept locally.",
+     "contents": [
+      "ACCOUNT_APPRL_YEAR.CSV",
+      "APPLIED_STD_EXEMPT.CSV",
+      "DCAD_Certified_READ_ME.rtf"
+     ],
+     "export": "2024-certified-data-files-with-supplemen"
+    },
+    {
+     "name": "2023 Certified Data Files with Supplemental Changes (Comma Delimited)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2023_CURRENT.ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2022 Certified Data Files with Supplemental Changes (Comma Delimited)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2022_CURRENT.zip",
+     "status": "data"
+    }
+   ],
+   "section": "Data Products",
+   "desc": "DCAD's relational data product per year: 14 CSV tables that join on ACCOUNT_NUM, with supplemental changes applied, plus 2027 with the latest ownership."
+  },
+  {
+   "name": "Business Personal Property (BPP) Detail",
+   "files": [
+    {
+     "name": "2026 BPP Detailed Value Data File with Supplemental Changes (Comma Delimited)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2026_BPP_DETAIL_CURRENT.zip",
+     "status": "used",
+     "contents": [
+      "BPP Data Explanation.doc",
+      "BPP FIELD NAMES.txt",
+      "DCAD2026_BPP_DETAIL_CURRENT.csv"
+     ],
+     "export": "2026-bpp-detailed-value-data-file-with-s"
+    },
+    {
+     "name": "2025 BPP Detailed Value Data File with Supplemental Changes (Comma Delimited)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2025_BPP_DETAIL_CURRENT.zip",
+     "status": "data"
+    },
+    {
+     "name": "2024 BPP Detailed Value Data File with Supplemental Changes (Comma Delimited)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2024_BPP_DETAIL_CURRENT.zip",
+     "status": "data"
+    },
+    {
+     "name": "2023 BPP Detailed Value Data File with Supplemental Changes (Comma Delimited)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2023_BPP_DETAIL_CURRENT.zip",
+     "status": "data"
+    },
+    {
+     "name": "2022 BPP Detailed Value Data File with Supplemental Changes (Comma Delimited)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2022_BPP_DETAIL_CURRENT.ZIP",
+     "status": "data"
+    }
+   ],
+   "section": "Data Products",
+   "desc": "One flat file per year of every business personal property account, with values by asset category and taxing unit."
+  },
+  {
+   "name": "Appraisal Data at Certification",
+   "files": [
+    {
+     "name": "2026 Real Property Certified Appraisal Roll (Fixed Format 07/24/2026)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2026_REAL_PROPERTY_CERT_APPR_ROLL.zip",
+     "status": "used",
+     "contents": [
+      "Add_Change_File_Format.xls",
+      "REAL_APRL_ROLL_DALLAS_CO_2026.DAT"
+     ],
+     "export": "2026-real-property-certified-appraisal-r"
+    },
+    {
+     "name": "2026 Certified Data Files at Certification (Comma Delimited 07/24/2026)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2026_CERTIFIED_07232026.zip",
+     "status": "used",
+     "contents": [
+      "ABATEMENT_EXEMPT.CSV",
+      "ACCOUNT_APPRL_YEAR.CSV",
+      "ACCOUNT_INFO.CSV",
+      "ACCOUNT_TIF.CSV",
+      "ACCT_EXEMPT_VALUE.CSV",
+      "APPLIED_STD_EXEMPT.CSV",
+      "COM_DETAIL.CSV",
+      "DCAD Data Dictionary.rtf",
+      "DCAD_Certified_READ_ME.rtf",
+      "FREEPORT_EXEMPTION.CSV",
+      "LAND.CSV",
+      "MULTI_OWNER.CSV",
+      "RES_ADDL.CSV",
+      "RES_DETAIL.CSV",
+      "SPTD_CD_XREF.pdf",
+      "TABLES AND FIELD NAMES.xlsx",
+      "TAXABLE_OBJECT.CSV",
+      "TOTAL_EXEMPTION.CSV"
+     ],
+     "export": "2026-certified-data-files-at-certificati"
+    },
+    {
+     "name": "2026 BPP Detailed Value Data File at Certification (Comma Delimited 07/24/2026)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2026_BPP_DETAIL_CERTIFIED_07232026.zip",
+     "status": "used",
+     "contents": [
+      "BPP Data Explanation.doc",
+      "BPP FIELD NAMES.txt",
+      "DCAD2026_BPP_DETAIL_CURRENT.csv"
+     ],
+     "export": "2026-bpp-detailed-value-data-file-at-cer"
+    },
+    {
+     "name": "2026 BPP Certified Appraisal Roll (Fixed Format 07/24/2026)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2026_BPP_CERTIFIED_APPRAISAL_ROLL.zip",
+     "status": "used",
+     "contents": [
+      "Add_Change_File_Format.xls",
+      "BPP_APRL_ROLL_DALLAS_CO_2026.DAT"
+     ],
+     "export": "2026-bpp-certified-appraisal-roll-fixed-"
+    },
+    {
+     "name": "2025 Real Property Certified Appraisal Roll (Fixed Format 07/24/2025)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2025_REAL_PROPERTY_CERT_APPR_ROLL.zip",
+     "status": "data"
+    },
+    {
+     "name": "2025 Certified Data Files at Certification (Comma Delimited 07/24/2025)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2025_CERTIFIED_07242025.zip",
+     "status": "data"
+    },
+    {
+     "name": "2025 BPP Detailed Value Data File at Certification (Comma Delimited 07/24/2025)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2025_BPP_DETAIL_CERTIFIED_07242025.zip",
+     "status": "data"
+    },
+    {
+     "name": "2025 BPP Certified Appraisal Roll (Fixed Format 07/24/2025)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2025_BPP_CERTIFIED_APPRAISAL_ROLL.zip",
+     "status": "data"
+    },
+    {
+     "name": "2024 Real Property Certified Appraisal Roll (Fixed Format 07/25/2024)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2024_REAL_PROPERTY_CERT_APPR_ROLL.zip",
+     "status": "data"
+    },
+    {
+     "name": "2024 Certified Data Files at Certification (Comma Delimited 07/25/2024)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2024_CERTIFIED_07252024.zip",
+     "status": "data"
+    },
+    {
+     "name": "2024 BPP Detailed Value Data File at Certification (Comma Delimited 07/25/2024)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2024_BPP_DETAIL_CERTIFIED_07252024.zip",
+     "status": "data"
+    },
+    {
+     "name": "2024 BPP Certified Appraisal Roll (Fixed Format 07/25/2024)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2024_BPP_CERTIFIED_APPRAISAL_ROLL.zip",
+     "status": "data"
+    },
+    {
+     "name": "2023 Real Property Certified Appraisal Roll (Fixed Format 07/25/2023)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2023_REAL_PROPERTY_CERT_APPR_ROLL.zip",
+     "status": "data"
+    },
+    {
+     "name": "2023 Certified Data Files at Certification (Comma Delimited 07/25/2023)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2023_CERTIFIED_07252023.zip",
+     "status": "data"
+    },
+    {
+     "name": "2023 BPP Detailed Value Data File at Certification (Comma Delimited 07/25/2023)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2023_BPP_DETAIL_CERTIFIED_07252023.zip",
+     "status": "data"
+    },
+    {
+     "name": "2023 BPP Certified Appraisal Roll (Fixed Format 07/25/2023)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2023_BPP_CERTIFIED_APPRAISAL_ROLL.zip",
+     "status": "data"
+    },
+    {
+     "name": "2022 Real Property Certified Appraisal Roll (Fixed Format 07/25/2022)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2022_REAL_PROPERTY_CERT_APPR_ROLL.zip",
+     "status": "data"
+    },
+    {
+     "name": "2022 Certified Data Files at Certification (Comma Delimited 07/25/2022)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2022_CERTIFIED_07252022.ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2022 BPP Detailed Value Data File at Certification (Comma Delimited 07/25/2022)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2022_BPP_DETAIL_CERTIFIED_07252022.ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2022 BPP Certified Appraisal Roll (Fixed Format 07/25/2022)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2022_BPP_CERTIFIED_APPRAISAL_ROLL.zip",
+     "status": "data"
+    }
+   ],
+   "section": "Data Products",
+   "desc": "Snapshots taken at certification in July: the relational CSVs, the BPP detail file, and the fixed-format real and BPP appraisal rolls."
+  },
+  {
+   "name": "Appraisal Review Board (ARB) Data",
+   "files": [
+    {
+     "name": "2022 - 2026 Active Appraisal Review Board Data Files (Comma Delimited)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CARB_CURRENT.zip",
+     "status": "used",
+     "contents": [
+      "ARB Data Descriptions 08-16-16.xlsx",
+      "ARB_CURRENT.csv"
+     ],
+     "export": "2022-2026-active-appraisal-review-board-"
+    },
+    {
+     "name": "2022 - 2026 Archived History of Appraisal Review Board Data Files (Comma Delimited)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CARB_ARCHIVE.zip",
+     "status": "used",
+     "contents": [
+      "ARB Data Descriptions 08-16-16.xlsx",
+      "ARB_ARCHIVE.CSV",
+      "~$ARB Data Descriptions 08-16-16.xlsx"
+     ],
+     "export": "2022-2026-archived-history-of-appraisal-"
+    }
+   ],
+   "section": "Data Products",
+   "desc": "Protests filed with the ARB, 2022–2026: the active file and the archived history."
+  },
+  {
+   "name": "Annual Appraisal Notice Data",
+   "files": [
+    {
+     "name": "2026 Mail 1 Appraisal Notice Data (RES and COM)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CMAIL1_APPRAISAL_NOTICE_DATA_2026.zip",
+     "status": "data"
+    },
+    {
+     "name": "2026 Mail 2 Appraisal Notice Data (BPP)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CMAIL2_APPRAISAL_NOTICE_DATA_2026.zip",
+     "status": "data"
+    },
+    {
+     "name": "2026 Mail 3 Appraisal Notice Data (RES, COM, and BPP)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CMAIL3_APPRAISAL_NOTICE_DATA_2026.zip",
+     "status": "data"
+    },
+    {
+     "name": "2025 Mail 1 Appraisal Notice Data (RES and COM)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CMAIL1_APPRAISAL_NOTICE_DATA_2025.zip",
+     "status": "data"
+    },
+    {
+     "name": "2025 Mail 2 Appraisal Notice Data (BPP)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CMAIL2_APPRAISAL_NOTICE_DATA_2025.zip",
+     "status": "data"
+    },
+    {
+     "name": "2025 Mail 3 Appraisal Notice Data (RES, COM, and BPP)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CMAIL3_APPRAISAL_NOTICE_DATA_2025.zip",
+     "status": "data"
+    },
+    {
+     "name": "2024 Mail 1 Appraisal Notice Data (RES and COM)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CMAIL1_APPRAISAL_NOTICE_DATA_2024.zip",
+     "status": "data"
+    },
+    {
+     "name": "2024 Mail 2 Appraisal Notice Data (BPP)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CMAIL2_APPRAISAL_NOTICE_DATA_2024.zip",
+     "status": "data"
+    },
+    {
+     "name": "2024 Mail 3 Appraisal Notice Data (RES, COM, and BPP)",
+     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CMAIL3_APPRAISAL_NOTICE_DATA_2024.zip",
+     "status": "data"
+    }
+   ],
+   "section": "Data Products",
+   "desc": "Data behind the appraisal notices mailed each spring, in three mailings per year."
+  }
+ ],
+ "tables": {
+  "u27-ABATEMENT_EXEMPT": {
+   "download": "2027-data-files-most-current-ownership",
+   "raw": "ABATEMENT_EXEMPT.CSV",
+   "layout": "",
+   "title": "Abatements"
+  },
+  "u27-ACCOUNT_APPRL_YEAR": {
+   "download": "2027-data-files-most-current-ownership",
+   "raw": "ACCOUNT_APPRL_YEAR.CSV",
+   "layout": "",
+   "title": "Account values"
+  },
+  "u27-ACCOUNT_INFO": {
+   "download": "2027-data-files-most-current-ownership",
+   "raw": "ACCOUNT_INFO.CSV",
+   "layout": "",
+   "title": "Owner, address & legal"
+  },
+  "u27-ACCOUNT_TIF": {
+   "download": "2027-data-files-most-current-ownership",
+   "raw": "ACCOUNT_TIF.CSV",
+   "layout": "",
+   "title": "TIF zones"
+  },
+  "u27-ACCT_EXEMPT_VALUE": {
+   "download": "2027-data-files-most-current-ownership",
+   "raw": "ACCT_EXEMPT_VALUE.CSV",
+   "layout": "",
+   "title": "Exemption amounts"
+  },
+  "u27-APPLIED_STD_EXEMPT": {
+   "download": "2027-data-files-most-current-ownership",
+   "raw": "APPLIED_STD_EXEMPT.CSV",
+   "layout": "",
+   "title": "Standard exemptions"
+  },
+  "u27-COM_DETAIL": {
+   "download": "2027-data-files-most-current-ownership",
+   "raw": "COM_DETAIL.CSV",
+   "layout": "",
+   "title": "Commercial buildings"
+  },
+  "u27-FREEPORT_EXEMPTION": {
+   "download": "2027-data-files-most-current-ownership",
+   "raw": "FREEPORT_EXEMPTION.CSV",
+   "layout": "",
+   "title": "Freeport"
+  },
+  "u27-LAND": {
+   "download": "2027-data-files-most-current-ownership",
+   "raw": "LAND.CSV",
+   "layout": "",
+   "title": "Land sections"
+  },
+  "u27-MULTI_OWNER": {
+   "download": "2027-data-files-most-current-ownership",
+   "raw": "MULTI_OWNER.CSV",
+   "layout": "",
+   "title": "Multiple owners"
+  },
+  "u27-RES_ADDL": {
+   "download": "2027-data-files-most-current-ownership",
+   "raw": "RES_ADDL.CSV",
+   "layout": "",
+   "title": "Residential additions"
+  },
+  "u27-RES_DETAIL": {
+   "download": "2027-data-files-most-current-ownership",
+   "raw": "RES_DETAIL.CSV",
+   "layout": "",
+   "title": "Residential buildings"
+  },
+  "u27-TAXABLE_OBJECT": {
+   "download": "2027-data-files-most-current-ownership",
+   "raw": "TAXABLE_OBJECT.CSV",
+   "layout": "",
+   "title": "Taxable objects"
+  },
+  "u27-TOTAL_EXEMPTION": {
+   "download": "2027-data-files-most-current-ownership",
+   "raw": "TOTAL_EXEMPTION.CSV",
+   "layout": "",
+   "title": "Totally exempt"
+  },
+  "u26-ABATEMENT_EXEMPT": {
+   "download": "2026-certified-data-files-with-supplemen",
+   "raw": "ABATEMENT_EXEMPT.CSV",
+   "layout": "",
+   "title": "Abatements"
+  },
+  "u26-ACCOUNT_APPRL_YEAR": {
+   "download": "2026-certified-data-files-with-supplemen",
+   "raw": "ACCOUNT_APPRL_YEAR.CSV",
+   "layout": "",
+   "title": "Account values"
+  },
+  "u26-ACCOUNT_INFO": {
+   "download": "2026-certified-data-files-with-supplemen",
+   "raw": "ACCOUNT_INFO.CSV",
+   "layout": "",
+   "title": "Owner, address & legal"
+  },
+  "u26-ACCOUNT_TIF": {
+   "download": "2026-certified-data-files-with-supplemen",
+   "raw": "ACCOUNT_TIF.CSV",
+   "layout": "",
+   "title": "TIF zones"
+  },
+  "u26-ACCT_EXEMPT_VALUE": {
+   "download": "2026-certified-data-files-with-supplemen",
+   "raw": "ACCT_EXEMPT_VALUE.CSV",
+   "layout": "",
+   "title": "Exemption amounts"
+  },
+  "u26-APPLIED_STD_EXEMPT": {
+   "download": "2026-certified-data-files-with-supplemen",
+   "raw": "APPLIED_STD_EXEMPT.CSV",
+   "layout": "",
+   "title": "Standard exemptions"
+  },
+  "u26-COM_DETAIL": {
+   "download": "2026-certified-data-files-with-supplemen",
+   "raw": "COM_DETAIL.CSV",
+   "layout": "",
+   "title": "Commercial buildings"
+  },
+  "u26-FREEPORT_EXEMPTION": {
+   "download": "2026-certified-data-files-with-supplemen",
+   "raw": "FREEPORT_EXEMPTION.CSV",
+   "layout": "",
+   "title": "Freeport"
+  },
+  "u26-LAND": {
+   "download": "2026-certified-data-files-with-supplemen",
+   "raw": "LAND.CSV",
+   "layout": "",
+   "title": "Land sections"
+  },
+  "u26-MULTI_OWNER": {
+   "download": "2026-certified-data-files-with-supplemen",
+   "raw": "MULTI_OWNER.CSV",
+   "layout": "",
+   "title": "Multiple owners"
+  },
+  "u26-RES_ADDL": {
+   "download": "2026-certified-data-files-with-supplemen",
+   "raw": "RES_ADDL.CSV",
+   "layout": "",
+   "title": "Residential additions"
+  },
+  "u26-RES_DETAIL": {
+   "download": "2026-certified-data-files-with-supplemen",
+   "raw": "RES_DETAIL.CSV",
+   "layout": "",
+   "title": "Residential buildings"
+  },
+  "u26-TAXABLE_OBJECT": {
+   "download": "2026-certified-data-files-with-supplemen",
+   "raw": "TAXABLE_OBJECT.CSV",
+   "layout": "",
+   "title": "Taxable objects"
+  },
+  "u26-TOTAL_EXEMPTION": {
+   "download": "2026-certified-data-files-with-supplemen",
+   "raw": "TOTAL_EXEMPTION.CSV",
+   "layout": "",
+   "title": "Totally exempt"
+  },
+  "u25-ACCOUNT_APPRL_YEAR": {
+   "download": "2025-certified-data-files-with-supplemen",
+   "raw": "ACCOUNT_APPRL_YEAR.CSV",
+   "layout": "",
+   "title": "Account values"
+  },
+  "u25-APPLIED_STD_EXEMPT": {
+   "download": "2025-certified-data-files-with-supplemen",
+   "raw": "APPLIED_STD_EXEMPT.CSV",
+   "layout": "",
+   "title": "Standard exemptions"
+  },
+  "u24-ACCOUNT_APPRL_YEAR": {
+   "download": "2024-certified-data-files-with-supplemen",
+   "raw": "ACCOUNT_APPRL_YEAR.CSV",
+   "layout": "",
+   "title": "Account values"
+  },
+  "u24-APPLIED_STD_EXEMPT": {
+   "download": "2024-certified-data-files-with-supplemen",
+   "raw": "APPLIED_STD_EXEMPT.CSV",
+   "layout": "",
+   "title": "Standard exemptions"
+  },
+  "bu26-BPP_DETAIL": {
+   "download": "2026-bpp-detailed-value-data-file-with-s",
+   "raw": "DCAD2026_BPP_DETAIL_CURRENT.csv",
+   "layout": "",
+   "title": "BPP accounts"
+  },
+  "r26-REAL_ROLL": {
+   "download": "2026-real-property-certified-appraisal-r",
+   "raw": "REAL_APRL_ROLL_DALLAS_CO_2026.DAT",
+   "layout": "",
+   "title": "Real property roll"
+  },
+  "c26-ABATEMENT_EXEMPT": {
+   "download": "2026-certified-data-files-at-certificati",
+   "raw": "ABATEMENT_EXEMPT.CSV",
+   "layout": "",
+   "title": "Abatements"
+  },
+  "c26-ACCOUNT_APPRL_YEAR": {
+   "download": "2026-certified-data-files-at-certificati",
+   "raw": "ACCOUNT_APPRL_YEAR.CSV",
+   "layout": "",
+   "title": "Account values"
+  },
+  "c26-ACCOUNT_INFO": {
+   "download": "2026-certified-data-files-at-certificati",
+   "raw": "ACCOUNT_INFO.CSV",
+   "layout": "",
+   "title": "Owner, address & legal"
+  },
+  "c26-ACCOUNT_TIF": {
+   "download": "2026-certified-data-files-at-certificati",
+   "raw": "ACCOUNT_TIF.CSV",
+   "layout": "",
+   "title": "TIF zones"
+  },
+  "c26-ACCT_EXEMPT_VALUE": {
+   "download": "2026-certified-data-files-at-certificati",
+   "raw": "ACCT_EXEMPT_VALUE.CSV",
+   "layout": "",
+   "title": "Exemption amounts"
+  },
+  "c26-APPLIED_STD_EXEMPT": {
+   "download": "2026-certified-data-files-at-certificati",
+   "raw": "APPLIED_STD_EXEMPT.CSV",
+   "layout": "",
+   "title": "Standard exemptions"
+  },
+  "c26-COM_DETAIL": {
+   "download": "2026-certified-data-files-at-certificati",
+   "raw": "COM_DETAIL.CSV",
+   "layout": "",
+   "title": "Commercial buildings"
+  },
+  "c26-FREEPORT_EXEMPTION": {
+   "download": "2026-certified-data-files-at-certificati",
+   "raw": "FREEPORT_EXEMPTION.CSV",
+   "layout": "",
+   "title": "Freeport"
+  },
+  "c26-LAND": {
+   "download": "2026-certified-data-files-at-certificati",
+   "raw": "LAND.CSV",
+   "layout": "",
+   "title": "Land sections"
+  },
+  "c26-MULTI_OWNER": {
+   "download": "2026-certified-data-files-at-certificati",
+   "raw": "MULTI_OWNER.CSV",
+   "layout": "",
+   "title": "Multiple owners"
+  },
+  "c26-RES_ADDL": {
+   "download": "2026-certified-data-files-at-certificati",
+   "raw": "RES_ADDL.CSV",
+   "layout": "",
+   "title": "Residential additions"
+  },
+  "c26-RES_DETAIL": {
+   "download": "2026-certified-data-files-at-certificati",
+   "raw": "RES_DETAIL.CSV",
+   "layout": "",
+   "title": "Residential buildings"
+  },
+  "c26-TAXABLE_OBJECT": {
+   "download": "2026-certified-data-files-at-certificati",
+   "raw": "TAXABLE_OBJECT.CSV",
+   "layout": "",
+   "title": "Taxable objects"
+  },
+  "c26-TOTAL_EXEMPTION": {
+   "download": "2026-certified-data-files-at-certificati",
+   "raw": "TOTAL_EXEMPTION.CSV",
+   "layout": "",
+   "title": "Totally exempt"
+  },
+  "bc26-BPP_DETAIL": {
+   "download": "2026-bpp-detailed-value-data-file-at-cer",
+   "raw": "DCAD2026_BPP_DETAIL_CURRENT.csv",
+   "layout": "",
+   "title": "BPP accounts"
+  },
+  "r26-BPP_ROLL": {
+   "download": "2026-bpp-certified-appraisal-roll-fixed-",
+   "raw": "BPP_APRL_ROLL_DALLAS_CO_2026.DAT",
+   "layout": "",
+   "title": "BPP roll"
+  },
+  "arb-current": {
+   "download": "2022-2026-active-appraisal-review-board-",
+   "raw": "ARB_CURRENT.csv",
+   "layout": "ARB Data Descriptions 08-16-16.xlsx",
+   "title": "Active protests"
+  },
+  "arb-archive": {
+   "download": "2022-2026-archived-history-of-appraisal-",
+   "raw": "ARB_ARCHIVE.CSV",
+   "layout": "ARB Data Descriptions 08-16-16.xlsx",
+   "title": "Archived protests"
+  }
+ },
+ "drive": {
+  "label": "Google Drive · County Playbooks › Dallas › Public Information",
+  "checked": "2026-11-23",
+  "url": "https://drive.google.com/drive/folders/1w_wD0puDMgLyxGCygYfu8mED2ZEG35yH"
+ }
+}

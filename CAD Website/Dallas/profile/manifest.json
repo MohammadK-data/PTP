@@ -1,7 +1,7 @@
 {
  "title": "Dallas Property Data Profile",
- "eyebrow": "Dallas Central Appraisal District · Data export, BPP detail &amp; certified rolls · Tax years 2026–2027",
- "intro": "Everything Dallas CAD makes available to us in bulk, from three sources: the DCAD data export (14 related tables, published as the July 23 certified export and as current 2026 and 2027 exports), the business personal property detail file, and the certified appraisal rolls. For each file you get its columns, data types, completeness and value distributions. Column descriptions come from DCAD's <code>TABLES AND FIELD NAMES.xlsx</code> and data dictionary where it has them.",
+ "eyebrow": "Dallas Central Appraisal District · Data products · Tax years 2024–2027",
+ "intro": "Everything we keep from Dallas CAD's Data Products page: the DCAD data export (14 related tables, published as the July 23 certified export and as current 2026 and 2027 exports, plus two tables each from the 2024 and 2025 current exports), the business personal property detail file, the certified appraisal rolls, and the Appraisal Review Board protest files. For each file you get its columns, data types, completeness and value distributions. Column descriptions come from DCAD's <code>TABLES AND FIELD NAMES.xlsx</code>, data dictionary and ARB field list where they have them.",
  "store_key": "dallas-view",
  "max_year": 2027,
  "foot": "Generated {date}. Files were scanned in full with DuckDB; \"Auto-detected on load\" is the type DuckDB assigns when it reads the raw file, and distinct counts there are approximate (HyperLogLog). \"Data type\" is inferred from the values: Code means digits stored as text with leading zeros, so it should stay text. Phone numbers and dates of death are not shown.",
@@ -14,7 +14,8 @@
    },
    "encoding": "CSV, Latin-1",
    "label": "Abatements",
-   "about": "Tax abatements by taxing unit: start and end years, percent, base value and exempt amount."
+   "about": "Tax abatements by taxing unit: start and end years, percent, base value and exempt amount.",
+   "raw": "ABATEMENT_EXEMPT.CSV"
   },
   "c26-ACCOUNT_APPRL_YEAR": {
    "path": "Data/DCAD2026_CERTIFIED_07232026/ACCOUNT_APPRL_YEAR.CSV",
@@ -23,7 +24,8 @@
    },
    "encoding": "CSV, Latin-1",
    "label": "Account values",
-   "about": "The central table, one row per account: land, improvement and total market value, the homestead-capped value, taxing units with their split percents, taxable values and tax ceilings, the tax agent and the state property code."
+   "about": "The central table, one row per account: land, improvement and total market value, the homestead-capped value, taxing units with their split percents, taxable values and tax ceilings, the tax agent and the state property code.",
+   "raw": "ACCOUNT_APPRL_YEAR.CSV"
   },
   "c26-ACCOUNT_INFO": {
    "path": "Data/DCAD2026_CERTIFIED_07232026/ACCOUNT_INFO.CSV",
@@ -37,7 +39,8 @@
     "The DCAD field list marks <code>PHONE_NUM</code> as not available and not used.",
     "<code>EXCLUDE_OWNER</code> = Y marks accounts whose owner is confidential under Tax Code 25.025/25.026; owner name and mailing address are blank on those rows.",
     "20 <code>DEED_TXFR_DATE</code> values fall after 2027 (the latest is 05/16/6201), typos for real dates. Dates are <code>MM/DD/YYYY</code>."
-   ]
+   ],
+   "raw": "ACCOUNT_INFO.CSV"
   },
   "c26-ACCOUNT_TIF": {
    "path": "Data/DCAD2026_CERTIFIED_07232026/ACCOUNT_TIF.CSV",
@@ -49,7 +52,8 @@
    "about": "Accounts in Tax Increment Finance (TIF) zones: the zone, its years, and the base and current values for each taxing unit.",
    "notes": [
     "A few accounts sit in more than one TIF zone, so <code>ACCOUNT_NUM</code> alone is not unique here; use <code>ACCOUNT_NUM</code> + <code>TIF_ZONE_DESC</code>."
-   ]
+   ],
+   "raw": "ACCOUNT_TIF.CSV"
   },
   "c26-ACCT_EXEMPT_VALUE": {
    "path": "Data/DCAD2026_CERTIFIED_07232026/ACCT_EXEMPT_VALUE.CSV",
@@ -58,7 +62,8 @@
    },
    "encoding": "CSV, Latin-1",
    "label": "Exemption amounts",
-   "about": "One row per exemption on an account, with the amount applied for each taxing unit."
+   "about": "One row per exemption on an account, with the amount applied for each taxing unit.",
+   "raw": "ACCT_EXEMPT_VALUE.CSV"
   },
   "c26-APPLIED_STD_EXEMPT": {
    "path": "Data/DCAD2026_CERTIFIED_07232026/APPLIED_STD_EXEMPT.CSV",
@@ -70,7 +75,8 @@
    "about": "Standard exemptions per owner: homestead, over-65, disabled and veteran exemptions, tax ceilings by taxing unit, effective dates and prorations.",
    "notes": [
     "<code>01/01/1900</code> is a placeholder for \"no date\" in <code>CITY_CEIL_DT</code>, <code>COUNTY_CEIL_DT</code>, <code>ISD_CEIL_DT</code>, <code>COLLEGE_CEIL_DT</code>, <code>DISABLE_EFF_DT</code>; it shows up as 1900 in the charts."
-   ]
+   ],
+   "raw": "APPLIED_STD_EXEMPT.CSV"
   },
   "c26-COM_DETAIL": {
    "path": "Data/DCAD2026_CERTIFIED_07232026/COM_DETAIL.CSV",
@@ -82,7 +88,8 @@
    "about": "Each commercial taxable object (building): class, year built and remodeled, gross and net leasable area, construction, quality, condition, depreciation and appraisal method.",
    "notes": [
     "The DCAD field list marks <code>IMP_VAL</code>, <code>LAND_VAL</code>, <code>MKT_VAL</code> as not available and not used."
-   ]
+   ],
+   "raw": "COM_DETAIL.CSV"
   },
   "c26-FREEPORT_EXEMPTION": {
    "path": "Data/DCAD2026_CERTIFIED_07232026/FREEPORT_EXEMPTION.CSV",
@@ -94,7 +101,8 @@
    "about": "Accounts with a freeport exemption (goods shipped out of Texas within 175 days), with late application and documentation flags.",
    "notes": [
     "Per the DCAD data dictionary the two indicator fields may or may not be filled."
-   ]
+   ],
+   "raw": "FREEPORT_EXEMPTION.CSV"
   },
   "c26-LAND": {
    "path": "Data/DCAD2026_CERTIFIED_07232026/LAND.CSV",
@@ -106,7 +114,8 @@
    "about": "Each land section of an account: state property code, zoning, dimensions, area, pricing method, unit price, market adjustment, value and agricultural use.",
    "notes": [
     "Two rows have a negative <code>DEPTH_DIM</code> and two a negative <code>AREA_SIZE</code>; treat them as data-entry errors."
-   ]
+   ],
+   "raw": "LAND.CSV"
   },
   "c26-MULTI_OWNER": {
    "path": "Data/DCAD2026_CERTIFIED_07232026/MULTI_OWNER.CSV",
@@ -115,7 +124,8 @@
    },
    "encoding": "CSV, Latin-1",
    "label": "Multiple owners",
-   "about": "One row per owner on accounts with more than one owner, with each owner's ownership percent."
+   "about": "One row per owner on accounts with more than one owner, with each owner's ownership percent.",
+   "raw": "MULTI_OWNER.CSV"
   },
   "c26-RES_ADDL": {
    "path": "Data/DCAD2026_CERTIFIED_07232026/RES_ADDL.CSV",
@@ -124,7 +134,8 @@
    },
    "encoding": "CSV, Latin-1",
    "label": "Residential additions",
-   "about": "Additional residential improvements such as detached garages, pools, storage buildings and garage enclosures, with size, value and depreciation."
+   "about": "Additional residential improvements such as detached garages, pools, storage buildings and garage enclosures, with size, value and depreciation.",
+   "raw": "RES_ADDL.CSV"
   },
   "c26-RES_DETAIL": {
    "path": "Data/DCAD2026_CERTIFIED_07232026/RES_DETAIL.CSV",
@@ -136,7 +147,8 @@
    "about": "The main improvement (usually the house) on each residential taxable object: class, year built, condition, size, construction, rooms, amenities and depreciation.",
    "notes": [
     "One row has a negative <code>ACT_AGE</code> (about −476), a bad year built."
-   ]
+   ],
+   "raw": "RES_DETAIL.CSV"
   },
   "c26-TAXABLE_OBJECT": {
    "path": "Data/DCAD2026_CERTIFIED_07232026/TAXABLE_OBJECT.CSV",
@@ -145,7 +157,8 @@
    },
    "encoding": "CSV, Latin-1",
    "label": "Taxable objects",
-   "about": "One row per taxable object (building or improvement) on an account. Links accounts to the residential and commercial detail tables."
+   "about": "One row per taxable object (building or improvement) on an account. Links accounts to the residential and commercial detail tables.",
+   "raw": "TAXABLE_OBJECT.CSV"
   },
   "c26-TOTAL_EXEMPTION": {
    "path": "Data/DCAD2026_CERTIFIED_07232026/TOTAL_EXEMPTION.CSV",
@@ -157,7 +170,8 @@
    "about": "Accounts that are totally exempt (government, religious, charitable and so on), with the reason. A link table; the values live in the account tables.",
    "notes": [
     "Per the DCAD data dictionary this is a link table: it has no values of its own, just a row to join to."
-   ]
+   ],
+   "raw": "TOTAL_EXEMPTION.CSV"
   },
   "u26-ABATEMENT_EXEMPT": {
    "path": "Data/DCAD2026_CURRENT/ABATEMENT_EXEMPT.CSV",
@@ -171,7 +185,8 @@
    "about": "Tax abatements by taxing unit: start and end years, percent, base value and exempt amount.",
    "notes": [
     "Against the July 23 certified export: 74 rows added, 0 removed and 6 changed (matched on <code>ACCOUNT_NUM</code>, every column compared as trimmed text)."
-   ]
+   ],
+   "raw": "ABATEMENT_EXEMPT.CSV"
   },
   "u26-ACCOUNT_APPRL_YEAR": {
    "path": "Data/DCAD2026_CURRENT/ACCOUNT_APPRL_YEAR.CSV",
@@ -186,7 +201,8 @@
    "notes": [
     "Against the July 23 certified export: 40,669 rows added, 157 removed and 16,032 changed (matched on <code>ACCOUNT_NUM</code>, every column compared as trimmed text).",
     "40,669 accounts here are not in the certified export ($17.7B of <code>TOT_VAL</code>, mostly residential) and are not on the certified rolls either; <code>VID_IND</code> is N on all of them, so the export gives no reason. 157 certified accounts are gone. On the accounts in both, <code>TOT_VAL</code> fell by a net $205M: 1,420 went down and 71 went up."
-   ]
+   ],
+   "raw": "ACCOUNT_APPRL_YEAR.CSV"
   },
   "u26-ACCOUNT_INFO": {
    "path": "Data/DCAD2026_CURRENT/ACCOUNT_INFO.CSV",
@@ -203,7 +219,8 @@
     "The DCAD field list marks <code>PHONE_NUM</code> as not available and not used.",
     "<code>EXCLUDE_OWNER</code> = Y marks accounts whose owner is confidential under Tax Code 25.025/25.026; owner name and mailing address are blank on those rows.",
     "20 <code>DEED_TXFR_DATE</code> values fall after 2027 (the latest is 05/16/6201), typos for real dates. Dates are <code>MM/DD/YYYY</code>."
-   ]
+   ],
+   "raw": "ACCOUNT_INFO.CSV"
   },
   "u26-ACCOUNT_TIF": {
    "path": "Data/DCAD2026_CURRENT/ACCOUNT_TIF.CSV",
@@ -218,7 +235,8 @@
    "notes": [
     "Against the July 23 certified export: 1,938 rows added, 0 removed and 641 changed (matched on <code>ACCOUNT_NUM</code> + <code>TIF_ZONE_DESC</code>, every column compared as trimmed text).",
     "A few accounts sit in more than one TIF zone, so <code>ACCOUNT_NUM</code> alone is not unique here; use <code>ACCOUNT_NUM</code> + <code>TIF_ZONE_DESC</code>."
-   ]
+   ],
+   "raw": "ACCOUNT_TIF.CSV"
   },
   "u26-ACCT_EXEMPT_VALUE": {
    "path": "Data/DCAD2026_CURRENT/ACCT_EXEMPT_VALUE.CSV",
@@ -232,7 +250,8 @@
    "about": "One row per exemption on an account, with the amount applied for each taxing unit.",
    "notes": [
     "Against the July 23 certified export: 75,943 rows added, 2,290 removed and 948 changed (matched on <code>ACCOUNT_NUM</code> + <code>EXEMPTION_CD</code>, every column compared as trimmed text)."
-   ]
+   ],
+   "raw": "ACCT_EXEMPT_VALUE.CSV"
   },
   "u26-APPLIED_STD_EXEMPT": {
    "path": "Data/DCAD2026_CURRENT/APPLIED_STD_EXEMPT.CSV",
@@ -247,7 +266,8 @@
    "notes": [
     "Against the July 23 certified export: 28,124 rows added, 1,385 removed and 3,253 changed (matched on <code>ACCOUNT_NUM</code> + <code>OWNER_SEQ_NUM</code>, every column compared as trimmed text).",
     "<code>01/01/1900</code> is a placeholder for \"no date\" in <code>CITY_CEIL_DT</code>, <code>COUNTY_CEIL_DT</code>, <code>ISD_CEIL_DT</code>, <code>COLLEGE_CEIL_DT</code>, <code>DISABLE_EFF_DT</code>; it shows up as 1900 in the charts."
-   ]
+   ],
+   "raw": "APPLIED_STD_EXEMPT.CSV"
   },
   "u26-COM_DETAIL": {
    "path": "Data/DCAD2026_CURRENT/COM_DETAIL.CSV",
@@ -262,7 +282,8 @@
    "notes": [
     "Against the July 23 certified export: 365 rows added, 1 removed and 42 changed (matched on <code>TAX_OBJ_ID</code>, every column compared as trimmed text).",
     "The DCAD field list marks <code>IMP_VAL</code>, <code>LAND_VAL</code>, <code>MKT_VAL</code> as not available and not used."
-   ]
+   ],
+   "raw": "COM_DETAIL.CSV"
   },
   "u26-FREEPORT_EXEMPTION": {
    "path": "Data/DCAD2026_CURRENT/FREEPORT_EXEMPTION.CSV",
@@ -277,7 +298,8 @@
    "notes": [
     "Against the July 23 certified export: 27 rows added, 5 removed and 3 changed (matched on <code>ACCOUNT_NUM</code>, every column compared as trimmed text).",
     "Per the DCAD data dictionary the two indicator fields may or may not be filled."
-   ]
+   ],
+   "raw": "FREEPORT_EXEMPTION.CSV"
   },
   "u26-LAND": {
    "path": "Data/DCAD2026_CURRENT/LAND.CSV",
@@ -292,7 +314,8 @@
    "notes": [
     "Against the July 23 certified export: 40,508 rows added, 4 removed and 72 changed (matched on <code>ACCOUNT_NUM</code> + <code>SECTION_NUM</code>, every column compared as trimmed text).",
     "Two rows have a negative <code>DEPTH_DIM</code> and two a negative <code>AREA_SIZE</code>; treat them as data-entry errors."
-   ]
+   ],
+   "raw": "LAND.CSV"
   },
   "u26-MULTI_OWNER": {
    "path": "Data/DCAD2026_CURRENT/MULTI_OWNER.CSV",
@@ -306,7 +329,8 @@
    "about": "One row per owner on accounts with more than one owner, with each owner's ownership percent.",
    "notes": [
     "Against the July 23 certified export: 5,894 rows added, 456 removed and 24 changed (matched on <code>ACCOUNT_NUM</code> + <code>OWNER_SEQ_NUM</code>, every column compared as trimmed text)."
-   ]
+   ],
+   "raw": "MULTI_OWNER.CSV"
   },
   "u26-RES_ADDL": {
    "path": "Data/DCAD2026_CURRENT/RES_ADDL.CSV",
@@ -320,7 +344,8 @@
    "about": "Additional residential improvements such as detached garages, pools, storage buildings and garage enclosures, with size, value and depreciation.",
    "notes": [
     "Against the July 23 certified export: 45,006 rows added, 30 removed and 9 changed (matched on <code>ACCOUNT_NUM</code> + <code>TAX_OBJ_ID</code> + <code>SEQ_NUM</code>, every column compared as trimmed text)."
-   ]
+   ],
+   "raw": "RES_ADDL.CSV"
   },
   "u26-RES_DETAIL": {
    "path": "Data/DCAD2026_CURRENT/RES_DETAIL.CSV",
@@ -335,7 +360,8 @@
    "notes": [
     "Against the July 23 certified export: 40,167 rows added, 9 removed and 33 changed (matched on <code>ACCOUNT_NUM</code> + <code>TAX_OBJ_ID</code>, every column compared as trimmed text).",
     "One row has a negative <code>ACT_AGE</code> (about −476), a bad year built."
-   ]
+   ],
+   "raw": "RES_DETAIL.CSV"
   },
   "u26-TAXABLE_OBJECT": {
    "path": "Data/DCAD2026_CURRENT/TAXABLE_OBJECT.CSV",
@@ -349,7 +375,8 @@
    "about": "One row per taxable object (building or improvement) on an account. Links accounts to the residential and commercial detail tables.",
    "notes": [
     "Against the July 23 certified export: 40,744 rows added, 163 removed and 0 changed (matched on <code>ACCOUNT_NUM</code> + <code>TAX_OBJ_ID</code>, every column compared as trimmed text)."
-   ]
+   ],
+   "raw": "TAXABLE_OBJECT.CSV"
   },
   "u26-TOTAL_EXEMPTION": {
    "path": "Data/DCAD2026_CURRENT/TOTAL_EXEMPTION.CSV",
@@ -364,7 +391,8 @@
    "notes": [
     "Against the July 23 certified export: 98 rows added, 3 removed and 1 changed (matched on <code>ACCOUNT_NUM</code>, every column compared as trimmed text).",
     "Per the DCAD data dictionary this is a link table: it has no values of its own, just a row to join to."
-   ]
+   ],
+   "raw": "TOTAL_EXEMPTION.CSV"
   },
   "u27-ABATEMENT_EXEMPT": {
    "path": "Data/DCAD2027_CURRENT/ABATEMENT_EXEMPT.CSV",
@@ -379,7 +407,8 @@
    "notes": [
     "Appraisal year 2027 has no values yet: <code>TOT_VAL</code> and every base and exemption amount are 0 in every row. Use it for accounts, ownership and property characteristics, not values.",
     "Appraisal year 2027 work in progress. 917 rows against 937 in the 2026 current export (−20)."
-   ]
+   ],
+   "raw": "ABATEMENT_EXEMPT.CSV"
   },
   "u27-ACCOUNT_APPRL_YEAR": {
    "path": "Data/DCAD2027_CURRENT/ACCOUNT_APPRL_YEAR.CSV",
@@ -394,7 +423,8 @@
    "notes": [
     "Appraisal year 2027 has no values yet: every value column (<code>TOT_VAL</code>, <code>IMPR_VAL</code>, <code>LAND_VAL</code>, the taxable and ceiling values) is 0 in every row. Use it for accounts, ownership and property characteristics, not values.",
     "Appraisal year 2027 work in progress. 863,867 rows against 847,075 in the 2026 current export (+16,792)."
-   ]
+   ],
+   "raw": "ACCOUNT_APPRL_YEAR.CSV"
   },
   "u27-ACCOUNT_INFO": {
    "path": "Data/DCAD2027_CURRENT/ACCOUNT_INFO.CSV",
@@ -411,7 +441,8 @@
     "The DCAD field list marks <code>PHONE_NUM</code> as not available and not used.",
     "<code>EXCLUDE_OWNER</code> = Y marks accounts whose owner is confidential under Tax Code 25.025/25.026; owner name and mailing address are blank on those rows.",
     "34 <code>DEED_TXFR_DATE</code> values fall after 2027 (the latest is 05/16/6201), typos for real dates. Dates are <code>MM/DD/YYYY</code>."
-   ]
+   ],
+   "raw": "ACCOUNT_INFO.CSV"
   },
   "u27-ACCOUNT_TIF": {
    "path": "Data/DCAD2027_CURRENT/ACCOUNT_TIF.CSV",
@@ -427,7 +458,8 @@
     "Appraisal year 2027 has no values yet: <code>ACCT_MKT</code> and every base and taxable amount are 0 in every row. Use it for accounts, ownership and property characteristics, not values.",
     "Appraisal year 2027 work in progress. 42,967 rows against 42,248 in the 2026 current export (+719).",
     "A few accounts sit in more than one TIF zone, so <code>ACCOUNT_NUM</code> alone is not unique here; use <code>ACCOUNT_NUM</code> + <code>TIF_ZONE_DESC</code>."
-   ]
+   ],
+   "raw": "ACCOUNT_TIF.CSV"
   },
   "u27-ACCT_EXEMPT_VALUE": {
    "path": "Data/DCAD2027_CURRENT/ACCT_EXEMPT_VALUE.CSV",
@@ -442,7 +474,8 @@
    "notes": [
     "Appraisal year 2027 has no values yet: every applied exemption amount is 0 in every row. Use it for accounts, ownership and property characteristics, not values.",
     "Appraisal year 2027 work in progress. 1,583,398 rows against 1,563,666 in the 2026 current export (+19,732)."
-   ]
+   ],
+   "raw": "ACCT_EXEMPT_VALUE.CSV"
   },
   "u27-APPLIED_STD_EXEMPT": {
    "path": "Data/DCAD2027_CURRENT/APPLIED_STD_EXEMPT.CSV",
@@ -458,7 +491,8 @@
     "Appraisal year 2027 has no values yet: <code>TOT_VAL</code> is 0 in every row. Use it for accounts, ownership and property characteristics, not values.",
     "Appraisal year 2027 work in progress. 428,352 rows against 425,265 in the 2026 current export (+3,087).",
     "<code>01/01/1900</code> is a placeholder for \"no date\" in <code>CITY_CEIL_DT</code>, <code>COUNTY_CEIL_DT</code>, <code>ISD_CEIL_DT</code>, <code>COLLEGE_CEIL_DT</code>, <code>DISABLE_EFF_DT</code>; it shows up as 1900 in the charts."
-   ]
+   ],
+   "raw": "APPLIED_STD_EXEMPT.CSV"
   },
   "u27-COM_DETAIL": {
    "path": "Data/DCAD2027_CURRENT/COM_DETAIL.CSV",
@@ -473,7 +507,8 @@
    "notes": [
     "Appraisal year 2027 work in progress. 93,214 rows against 93,297 in the 2026 current export (−83).",
     "The DCAD field list marks <code>IMP_VAL</code>, <code>LAND_VAL</code>, <code>MKT_VAL</code> as not available and not used."
-   ]
+   ],
+   "raw": "COM_DETAIL.CSV"
   },
   "u27-FREEPORT_EXEMPTION": {
    "path": "Data/DCAD2027_CURRENT/FREEPORT_EXEMPTION.CSV",
@@ -488,7 +523,8 @@
    "notes": [
     "Appraisal year 2027 work in progress. 2,097 rows against 2,109 in the 2026 current export (−12).",
     "Per the DCAD data dictionary the two indicator fields may or may not be filled."
-   ]
+   ],
+   "raw": "FREEPORT_EXEMPTION.CSV"
   },
   "u27-LAND": {
    "path": "Data/DCAD2027_CURRENT/LAND.CSV",
@@ -504,7 +540,8 @@
     "Appraisal year 2027 has no values yet: <code>VAL_AMT</code>, <code>COST_PER_UOM</code> and <code>ACCT_AG_VAL_AMT</code> are 0 in every row. Use it for accounts, ownership and property characteristics, not values.",
     "Appraisal year 2027 work in progress. 751,973 rows against 736,479 in the 2026 current export (+15,494).",
     "Two rows have a negative <code>DEPTH_DIM</code> and two a negative <code>AREA_SIZE</code>; treat them as data-entry errors."
-   ]
+   ],
+   "raw": "LAND.CSV"
   },
   "u27-MULTI_OWNER": {
    "path": "Data/DCAD2027_CURRENT/MULTI_OWNER.CSV",
@@ -518,7 +555,8 @@
    "about": "One row per owner on accounts with more than one owner, with each owner's ownership percent.",
    "notes": [
     "Appraisal year 2027 work in progress. 112,638 rows against 109,765 in the 2026 current export (+2,873)."
-   ]
+   ],
+   "raw": "MULTI_OWNER.CSV"
   },
   "u27-RES_ADDL": {
    "path": "Data/DCAD2027_CURRENT/RES_ADDL.CSV",
@@ -533,7 +571,8 @@
    "notes": [
     "Appraisal year 2027 has no values yet: <code>VAL_AMT</code> is 0 in every row. Use it for accounts, ownership and property characteristics, not values.",
     "Appraisal year 2027 work in progress. 787,240 rows against 773,397 in the 2026 current export (+13,843)."
-   ]
+   ],
+   "raw": "RES_ADDL.CSV"
   },
   "u27-RES_DETAIL": {
    "path": "Data/DCAD2027_CURRENT/RES_DETAIL.CSV",
@@ -548,7 +587,8 @@
    "notes": [
     "Appraisal year 2027 work in progress. 684,345 rows against 668,701 in the 2026 current export (+15,644).",
     "One row has a negative <code>ACT_AGE</code> (about −476), a bad year built."
-   ]
+   ],
+   "raw": "RES_DETAIL.CSV"
   },
   "u27-TAXABLE_OBJECT": {
    "path": "Data/DCAD2027_CURRENT/TAXABLE_OBJECT.CSV",
@@ -562,7 +602,8 @@
    "about": "One row per taxable object (building or improvement) on an account. Links accounts to the residential and commercial detail tables.",
    "notes": [
     "Appraisal year 2027 work in progress. 879,757 rows against 862,935 in the 2026 current export (+16,822)."
-   ]
+   ],
+   "raw": "TAXABLE_OBJECT.CSV"
   },
   "u27-TOTAL_EXEMPTION": {
    "path": "Data/DCAD2027_CURRENT/TOTAL_EXEMPTION.CSV",
@@ -577,7 +618,8 @@
    "notes": [
     "Appraisal year 2027 work in progress. 21,583 rows against 21,753 in the 2026 current export (−170).",
     "Per the DCAD data dictionary this is a link table: it has no values of its own, just a row to join to."
-   ]
+   ],
+   "raw": "TOTAL_EXEMPTION.CSV"
   },
   "bc26-BPP_DETAIL": {
    "path": "Data/DCAD2026_BPP_DETAIL_CERTIFIED_07232026/DCAD2026_BPP_DETAIL_CURRENT.csv",
@@ -591,7 +633,8 @@
     "Dates here are timestamps (<code>2024-01-01 00:00:00</code>), not <code>MM/DD/YYYY</code> like the data export. <code>1900-01-01</code> is a placeholder for \"no date\" (6,210 rows in <code>ESTABLISHED_DT</code>), and 49 <code>ESTABLISHED_DT</code> values fall after 2027 (as late as 7368), typos.",
     "Field names come from <code>BPP FIELD NAMES.txt</code>, which only lists them; descriptions here are written from the names and <code>BPP Data Explanation.doc</code>.",
     "The certified folder's file is named <code>DCAD2026_BPP_DETAIL_CURRENT.csv</code>, the same as the current file; the folder name (<code>_CERTIFIED_07232026</code>) is what tells them apart."
-   ]
+   ],
+   "raw": "DCAD2026_BPP_DETAIL_CURRENT.csv"
   },
   "bu26-BPP_DETAIL": {
    "path": "Data/DCAD2026_BPP_DETAIL_CURRENT/DCAD2026_BPP_DETAIL_CURRENT.csv",
@@ -606,7 +649,8 @@
    "notes": [
     "Dates here are timestamps (<code>2024-01-01 00:00:00</code>), not <code>MM/DD/YYYY</code> like the data export. <code>1900-01-01</code> is a placeholder for \"no date\" (6,215 rows in <code>ESTABLISHED_DT</code>), and 49 <code>ESTABLISHED_DT</code> values fall after 2027 (as late as 7368), typos.",
     "Field names come from <code>BPP FIELD NAMES.txt</code>, which only lists them; descriptions here are written from the names and <code>BPP Data Explanation.doc</code>."
-   ]
+   ],
+   "raw": "DCAD2026_BPP_DETAIL_CURRENT.csv"
   },
   "r26-REAL_ROLL": {
    "path": "output/real_roll/REAL_APRL_ROLL_DALLAS_CO_2026.csv",
@@ -615,12 +659,13 @@
    "label": "Real property roll",
    "about": "The certified appraisal roll for real property in the fixed-width layout DCAD sends to taxing units: one 3,672-character record per account with values, every exemption amount by taxing unit, ceilings, abatements, prorations and flags.",
    "notes": [
-    "DCAD ships this as a fixed-width file (<code>REAL_APRL_ROLL_DALLAS_CO_2026.DAT</code>, 3,672 characters per record). It was converted to CSV with <code>etl/bpp_roll_to_csv.py</code> using the positions in <code>Add_Change_File_Format.xls</code>: <code>OCCURS</code> groups are numbered <code>_1</code>…<code>_3</code>, FILLER is dropped, and implied decimals are divided out.",
+    "DCAD ships this as a fixed-width file (<code>REAL_APRL_ROLL_DALLAS_CO_2026.DAT</code>, 3,672 characters per record). It was converted to CSV using the positions in <code>Add_Change_File_Format.xls</code>: <code>OCCURS</code> groups are numbered <code>_1</code>…<code>_3</code>, FILLER is dropped, and implied decimals are divided out.",
     "Numeric (NU) fields are zero-filled in the raw file. The conversion strips leading zeros, so 8-digit <code>MMDDYYYY</code> dates load as numbers (<code>1012026</code> is 01/01/2026) and <code>0</code> means no date. Read them as text and pad to 8 digits before parsing.",
     "Columns 27–206 are FILLER in this layout; the owner name and mailing address are at the end of the record (<code>OWNER_NAME</code>, <code>OWNER_ADDRESS_LINE_1</code>…<code>5</code>).",
     "Accounts join to the data export on <code>DCAD_ACCOUNT_NUMBER</code> = <code>ACCOUNT_NUM</code>.",
     "<code>PROPERTY_LOCATION_ZIP_CODE</code> is 0 in every row; take the property ZIP from <code>ACCOUNT_INFO.PROPERTY_ZIPCODE</code> in the data export. Many exemption amount, percent and date fields are also 0 throughout (shown in the column table)."
-   ]
+   ],
+   "raw": "REAL_APRL_ROLL_DALLAS_CO_2026.DAT"
   },
   "r26-BPP_ROLL": {
    "path": "output/bpp_roll/BPP_APRL_ROLL_DALLAS_CO_2026.csv",
@@ -629,10 +674,80 @@
    "label": "BPP roll",
    "about": "The certified appraisal roll for business personal property, same layout as the real property roll, with the BPP-only freeport and goods-in-transit fields filled.",
    "notes": [
-    "DCAD ships this as a fixed-width file (<code>BPP_APRL_ROLL_DALLAS_CO_2026.DAT</code>, 3,672 characters per record). It was converted to CSV with <code>etl/bpp_roll_to_csv.py</code> using the positions in <code>Add_Change_File_Format.xls</code>: <code>OCCURS</code> groups are numbered <code>_1</code>…<code>_3</code>, FILLER is dropped, and implied decimals are divided out.",
+    "DCAD ships this as a fixed-width file (<code>BPP_APRL_ROLL_DALLAS_CO_2026.DAT</code>, 3,672 characters per record). It was converted to CSV using the positions in <code>Add_Change_File_Format.xls</code>: <code>OCCURS</code> groups are numbered <code>_1</code>…<code>_3</code>, FILLER is dropped, and implied decimals are divided out.",
     "Numeric (NU) fields are zero-filled in the raw file. The conversion strips leading zeros, so 8-digit <code>MMDDYYYY</code> dates load as numbers (<code>1012026</code> is 01/01/2026) and <code>0</code> means no date. Read them as text and pad to 8 digits before parsing.",
     "Columns 27–206 are FILLER in this layout; the owner name and mailing address are at the end of the record (<code>OWNER_NAME</code>, <code>OWNER_ADDRESS_LINE_1</code>…<code>5</code>).",
     "Accounts join to the data export on <code>DCAD_ACCOUNT_NUMBER</code> = <code>ACCOUNT_NUM</code>."
+   ],
+   "raw": "BPP_APRL_ROLL_DALLAS_CO_2026.DAT"
+  },
+  "u24-ACCOUNT_APPRL_YEAR": {
+   "path": "Data/dcad_download_20261114/DCAD2024_CURRENT/ACCOUNT_APPRL_YEAR.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "label": "Account values",
+   "about": "The central table, one row per account: land, improvement and total market value, the homestead-capped value, taxing units with their split percents, taxable values and tax ceilings, the tax agent and the state property code.",
+   "encoding": "CSV, Latin-1",
+   "raw": "ACCOUNT_APPRL_YEAR.CSV"
+  },
+  "u24-APPLIED_STD_EXEMPT": {
+   "path": "Data/dcad_download_20261114/DCAD2024_CURRENT/APPLIED_STD_EXEMPT.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "label": "Standard exemptions",
+   "about": "Standard exemptions per owner: homestead, over-65, disabled and veteran exemptions, tax ceilings by taxing unit, effective dates and prorations.",
+   "encoding": "CSV, Latin-1",
+   "raw": "APPLIED_STD_EXEMPT.CSV"
+  },
+  "u25-ACCOUNT_APPRL_YEAR": {
+   "path": "Data/dcad_download_20261114/DCAD2025_CURRENT/ACCOUNT_APPRL_YEAR.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "label": "Account values",
+   "about": "The central table, one row per account: land, improvement and total market value, the homestead-capped value, taxing units with their split percents, taxable values and tax ceilings, the tax agent and the state property code.",
+   "encoding": "CSV, Latin-1",
+   "raw": "ACCOUNT_APPRL_YEAR.CSV",
+   "compare": "u24-ACCOUNT_APPRL_YEAR"
+  },
+  "u25-APPLIED_STD_EXEMPT": {
+   "path": "Data/dcad_download_20261114/DCAD2025_CURRENT/APPLIED_STD_EXEMPT.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "label": "Standard exemptions",
+   "about": "Standard exemptions per owner: homestead, over-65, disabled and veteran exemptions, tax ceilings by taxing unit, effective dates and prorations.",
+   "encoding": "CSV, Latin-1",
+   "raw": "APPLIED_STD_EXEMPT.CSV",
+   "compare": "u24-APPLIED_STD_EXEMPT"
+  },
+  "arb-current": {
+   "path": "Data/dcad_download_20261114/ARB_CURRENT/ARB_CURRENT.csv",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "label": "1 · Active protests",
+   "about": "One row per active protest: the protester, hearing and ARB outcome.",
+   "encoding": "CSV, Latin-1, quoted",
+   "raw": "ARB_CURRENT.csv",
+   "layout": "ARB Data Descriptions 08-16-16.xlsx"
+  },
+  "arb-archive": {
+   "path": "Data/dcad_download_20261114/ARB_ARCHIVE/ARB_ARCHIVE.CSV",
+   "read": {
+    "opts": "encoding='latin-1'"
+   },
+   "label": "2 · Archived protests",
+   "about": "One row per protest from earlier years: the protester, hearing and ARB outcome.",
+   "encoding": "CSV, Latin-1, quoted",
+   "raw": "ARB_ARCHIVE.CSV",
+   "layout": "ARB Data Descriptions 08-16-16.xlsx",
+   "compare": "arb-current",
+   "notes": [
+    "1,057,870 lines hold 1,057,869 rows: one value contains a line break, inside quotes, so its row spans two lines.",
+    "The archive has 58 columns, three more than the active file."
    ]
   }
  },
@@ -1583,14 +1698,127 @@
   "r26-BPP_ROLL:SUITE_NUMBER": "Suite number for BPP, condo unit for real property.",
   "r26-BPP_ROLL:REGION": "DCAD appraisal region.",
   "r26-BPP_ROLL:PROPERTY_CLASS": "DCAD property class / state code group.",
-  "r26-BPP_ROLL:MBL_HOME_SER_NUM": "Mobile home serial number."
+  "r26-BPP_ROLL:MBL_HOME_SER_NUM": "Mobile home serial number.",
+  "arb-current:PROTEST_YR": "Appraisal year account was protested",
+  "arb-current:ACCOUNT_NUM": "DCAD account number / Parcel Identification",
+  "arb-current:OWNER_PROTEST_IND": "Y = Owner Protested; N= Owner did not protest but Tax Agent did protest",
+  "arb-current:MAIL_NAME": "Designated name for mailing purposes",
+  "arb-current:MAIL_ADDR_L1": "Designated Address for mailing purposes (street number, street name, suite/unit reference",
+  "arb-current:MAIL_ADDR_L2": "Designated Address for mailing purposes (street number, street name, suite/unit reference",
+  "arb-current:MAIL_ADDR_L3": "Designated Address for mailing purposes (street number, street name, suite/unit reference",
+  "arb-current:MAIL_CITY": "Designated Address for mailing purposes (City)",
+  "arb-current:MAIL_STATE_CD": "Designated Address for mailing purposes (State)",
+  "arb-current:MAIL_ZIPCODE": "Designated Address for mailing purposes (Zip Code)",
+  "arb-current:NOT_PRESENT_IND": "Owner or Agent not present at hearing nor hearing affidavit received",
+  "arb-current:LATE_PROTEST_CDX": "Protest received after protest deadline",
+  "arb-current:PROTEST_SENT_CDX": "Indicates that a notice of protest was sent to mailing address on file",
+  "arb-current:PROTEST_SENT_DT": "Indicates the date that a notice of protest was sent to mailing address on file",
+  "arb-current:PROTEST_WD_CDX": "X=Consent & withdrawn (property owner/tax representative withdrew account from protest and agreed to value)",
+  "arb-current:PROTEST_RCVD_CDX": "X =Indicates protest was received for an exemption",
+  "arb-current:PROTEST_RCVD_DT": "Indicates the date notice of protest was recieved",
+  "arb-current:CONSENT_CDX": "P=Protest consented & withdrawn (property owner/tax representative withdrew account from protest and agreed to value)",
+  "arb-current:CONSENT_DT": "Date protest was consented & withdrawn (property owner/tax representative withdrew account from protest and agreed to value)",
+  "arb-current:REINSPECT_REQ_CDX": "To reinspect a property",
+  "arb-current:REINSPECT_DT": "Date property was reinspected",
+  "arb-current:RESOLVED_CDX": "X=account was resolved with no value change or withdrawn with a value change during informal hearing",
+  "arb-current:RESOLVED_DT": "Date account was resolved",
+  "arb-current:EXEMPT_PROTEST_DESC": "Exemption protest type description",
+  "arb-current:PREV_SCH_CDX": "Account was withdrawn therefore previous scheduled information fell off was deleted",
+  "arb-current:PREV_HEARING_DT": "Account was withdrawn therefore previous scheduled date fell off was deleted",
+  "arb-current:PREV_HEARING_TM": "Account was withdrawn therefore previous scheduled time fell off was deleted",
+  "arb-current:PREV_ARB_PANEL": "Account was withdrawn therefore previous scheduled panel was deleted",
+  "arb-current:CERT_MAIL_NUM": "Account was mailed a certified Appraisl Review Board Order of Value",
+  "arb-current:LESSEE_IND": "Account has Lessee Tax Representative",
+  "arb-current:HB201_REQ_IND": "Y=property owner or Tax Representative requested HB201 documentation",
+  "arb-current:ARB_PROTEST_IND": "1",
+  "arb-current:P2525C1_IND": "flag signifying 25.25C1 protest was received from Owner or Tax Representative",
+  "arb-current:P2525D_IND": "flag signifying 25.25D protest was received Owner or Tax Representative",
+  "arb-current:P41411_IND": "flag signifying 41.411 protest was received Owner or Tax Representative",
+  "arb-current:P4208_IND": "Y=flag signifying 42.08 requirements were not made(taxes were not paid)",
+  "arb-current:TAXPAYER_INFO_IND": "na",
+  "arb-current:CONSENT_ONREQ_IND": "na",
+  "arb-current:EXEMPT_IND": "na",
+  "arb-current:AUTH_TAX_REP_ID": "DCAD Tax Representative number",
+  "arb-current:ARB_PANEL": "ARB Panel  were account is scheduled",
+  "arb-current:HEARING_DT": "ARB Hearing Date Account is scheduled",
+  "arb-current:HEARING_TM": "ARB Hearing Time Account is scheduled",
+  "arb-current:AUDIO_ACCOUNT_NUM": "ARB Reference account were several account hearings were recorded",
+  "arb-current:FINAL_ORDER_COMMENT": "ARB Order of Value with Exemption Comment",
+  "arb-current:P2525H_IND": "Indicates 25.25H protest was received from Owner or Tax Representative",
+  "arb-current:P2525C2_IND": "Indicates 25.25C2 protest was received from Owner or Tax Representative",
+  "arb-current:P2525C3_IND": "Indicates 25.25C3 protest was received form Owner or Tax Representative",
+  "arb-current:P2525B_IND": "Indicates 25.25B protest was received from Owner or Tax Representative and Chief Appraiser",
+  "arb-current:CERT_MAIL_DT": "Date Appraisal Review Board Order of Value was mailed by certified mail",
+  "arb-current:NOTIFIED_VAL": "Dallas CAD's proposed market value (also reflecterd on Notice of Appraised Value)",
+  "arb-current:NEW_VAL": "Dallas CAD's new market value resulting from informal hearing with owner or tax representative",
+  "arb-current:PANEL_VAL": "Final market value resulting from Appraisal Review Board Panel Value at formal ARB hearing",
+  "arb-current:ACCT_TYPE": "The type of account, RES, COM, or BPP",
+  "arb-archive:PROTEST_YR": "Appraisal year account was protested",
+  "arb-archive:ACCOUNT_NUM": "DCAD account number / Parcel Identification",
+  "arb-archive:OWNER_PROTEST_IND": "Y = Owner Protested; N= Owner did not protest but Tax Agent did protest",
+  "arb-archive:MAIL_NAME": "Designated name for mailing purposes",
+  "arb-archive:MAIL_ADDR_L1": "Designated Address for mailing purposes (street number, street name, suite/unit reference",
+  "arb-archive:MAIL_ADDR_L2": "Designated Address for mailing purposes (street number, street name, suite/unit reference",
+  "arb-archive:MAIL_ADDR_L3": "Designated Address for mailing purposes (street number, street name, suite/unit reference",
+  "arb-archive:MAIL_CITY": "Designated Address for mailing purposes (City)",
+  "arb-archive:MAIL_STATE_CD": "Designated Address for mailing purposes (State)",
+  "arb-archive:MAIL_ZIPCODE": "Designated Address for mailing purposes (Zip Code)",
+  "arb-archive:NOT_PRESENT_IND": "Owner or Agent not present at hearing nor hearing affidavit received",
+  "arb-archive:LATE_PROTEST_CDX": "Protest received after protest deadline",
+  "arb-archive:PROTEST_SENT_CDX": "Indicates that a notice of protest was sent to mailing address on file",
+  "arb-archive:PROTEST_SENT_DT": "Indicates the date that a notice of protest was sent to mailing address on file",
+  "arb-archive:PROTEST_WD_CDX": "X=Consent & withdrawn (property owner/tax representative withdrew account from protest and agreed to value)",
+  "arb-archive:PROTEST_RCVD_CDX": "X =Indicates protest was received for an exemption",
+  "arb-archive:PROTEST_RCVD_DT": "Indicates the date notice of protest was recieved",
+  "arb-archive:CONSENT_CDX": "P=Protest consented & withdrawn (property owner/tax representative withdrew account from protest and agreed to value)",
+  "arb-archive:CONSENT_DT": "Date protest was consented & withdrawn (property owner/tax representative withdrew account from protest and agreed to value)",
+  "arb-archive:REINSPECT_REQ_CDX": "To reinspect a property",
+  "arb-archive:REINSPECT_DT": "Date property was reinspected",
+  "arb-archive:RESOLVED_CDX": "X=account was resolved with no value change or withdrawn with a value change during informal hearing",
+  "arb-archive:RESOLVED_DT": "Date account was resolved",
+  "arb-archive:EXEMPT_PROTEST_DESC": "Exemption protest type description",
+  "arb-archive:PREV_SCH_CDX": "Account was withdrawn therefore previous scheduled information fell off was deleted",
+  "arb-archive:PREV_HEARING_DT": "Account was withdrawn therefore previous scheduled date fell off was deleted",
+  "arb-archive:PREV_HEARING_TM": "Account was withdrawn therefore previous scheduled time fell off was deleted",
+  "arb-archive:PREV_ARB_PANEL": "Account was withdrawn therefore previous scheduled panel was deleted",
+  "arb-archive:CERT_MAIL_NUM": "Account was mailed a certified Appraisl Review Board Order of Value",
+  "arb-archive:LESSEE_IND": "Account has Lessee Tax Representative",
+  "arb-archive:HB201_REQ_IND": "Y=property owner or Tax Representative requested HB201 documentation",
+  "arb-archive:ARB_PROTEST_IND": "1",
+  "arb-archive:P2525C1_IND": "flag signifying 25.25C1 protest was received from Owner or Tax Representative",
+  "arb-archive:P2525D_IND": "flag signifying 25.25D protest was received Owner or Tax Representative",
+  "arb-archive:P41411_IND": "flag signifying 41.411 protest was received Owner or Tax Representative",
+  "arb-archive:P4208_IND": "Y=flag signifying 42.08 requirements were not made(taxes were not paid)",
+  "arb-archive:TAXPAYER_INFO_IND": "na",
+  "arb-archive:CONSENT_ONREQ_IND": "na",
+  "arb-archive:EXEMPT_IND": "na",
+  "arb-archive:AUTH_TAX_REP_ID": "DCAD Tax Representative number",
+  "arb-archive:ARB_PANEL": "ARB Panel  were account is scheduled",
+  "arb-archive:HEARING_DT": "ARB Hearing Date Account is scheduled",
+  "arb-archive:HEARING_TM": "ARB Hearing Time Account is scheduled",
+  "arb-archive:AUDIO_ACCOUNT_NUM": "ARB Reference account were several account hearings were recorded",
+  "arb-archive:FINAL_ORDER_COMMENT": "ARB Order of Value with Exemption Comment",
+  "arb-archive:P2525H_IND": "Indicates 25.25H protest was received from Owner or Tax Representative",
+  "arb-archive:P2525C2_IND": "Indicates 25.25C2 protest was received from Owner or Tax Representative",
+  "arb-archive:P2525C3_IND": "Indicates 25.25C3 protest was received form Owner or Tax Representative",
+  "arb-archive:P2525B_IND": "Indicates 25.25B protest was received from Owner or Tax Representative and Chief Appraiser",
+  "arb-archive:CERT_MAIL_DT": "Date Appraisal Review Board Order of Value was mailed by certified mail",
+  "arb-archive:NOTIFIED_VAL": "Dallas CAD's proposed market value (also reflecterd on Notice of Appraised Value)",
+  "arb-archive:NEW_VAL": "Dallas CAD's new market value resulting from informal hearing with owner or tax representative",
+  "arb-archive:PANEL_VAL": "Final market value resulting from Appraisal Review Board Panel Value at formal ARB hearing",
+  "arb-archive:ACCT_TYPE": "The type of account, RES, COM, or BPP",
+  "arb-current:EXEMPT_AG_FINAL_ORDERS_CD": "Code of the final order on an exemption or agricultural-use protest (0 = none); not in DCAD's field list.",
+  "arb-archive:EXEMPT_AG_FINAL_ORDERS_CD": "Code of the final order on an exemption or agricultural-use protest (0 = none); not in DCAD's field list.",
+  "arb-archive:VALUE_PROTEST_IND": "Y when the protest is about value; not in DCAD's field list.",
+  "arb-archive:NAME": "Name of the tax agent (taxpayer representative) on the protest; UNASSIGNED when there is none. Padded with spaces.",
+  "arb-archive:TAXPAYER_REP_ID": "Id of the tax agent on the protest; blank (spaces) when there is none."
  },
  "sources": [
   {
    "id": "dcad",
    "label": "DCAD data export",
    "sub": "3 exports · 2026 certified, 2026 current, 2027 current · {n} files",
-   "desc": "DCAD's relational data product: 14 CSV tables per export that join on <code>ACCOUNT_NUM</code> (and <code>TAX_OBJ_ID</code> for building detail), with <code>ACCOUNT_APPRL_YEAR</code> as the central table. Field descriptions come from <code>TABLES AND FIELD NAMES.xlsx</code> and <code>DCAD Data Dictionary.rtf</code> shipped with each export; state codes from <code>SPTD_CD_XREF.pdf</code>. Each current-2026 file carries a note with its row-level differences from the certified export.<ul class=\"exports\"><li><b>2026 certified · Jul 23</b>: <code>Data/DCAD2026_CERTIFIED_07232026/</code>, 806,563 accounts</li><li><b>2026 current</b>: <code>Data/DCAD2026_CURRENT/</code>, 847,075 accounts</li><li><b>2027 current</b>: <code>Data/DCAD2027_CURRENT/</code>, 863,867 accounts</li></ul>",
+   "desc": "DCAD's relational data product: 14 CSV tables per export that join on <code>ACCOUNT_NUM</code> (and <code>TAX_OBJ_ID</code> for building detail), with <code>ACCOUNT_APPRL_YEAR</code> as the central table. Field descriptions come from <code>TABLES AND FIELD NAMES.xlsx</code> and <code>DCAD Data Dictionary.rtf</code> shipped with each export; state codes from <code>SPTD_CD_XREF.pdf</code>. Each current-2026 file carries a note with its row-level differences from the certified export.<ul class=\"exports\"><li><b>2026 certified · Jul 23</b>: <code>DCAD2026_CERTIFIED_07232026.zip</code>, 806,563 accounts</li><li><b>2026 current</b>: <code>DCAD2026_CURRENT.ZIP</code>, 847,075 accounts</li><li><b>2027 current</b>: <code>DCAD2027_CURRENT.zip</code>, 863,867 accounts</li><li><b>2024 and 2025 current</b>: <code>DCAD2024_CURRENT.ZIP</code> and <code>DCAD2025_CURRENT.ZIP</code>, only ACCOUNT_APPRL_YEAR and APPLIED_STD_EXEMPT kept</li></ul>",
    "start": "u26-ACCOUNT_APPRL_YEAR",
    "groups": [
     {
@@ -1598,6 +1826,18 @@
      "label": "Accounts & values",
      "desc": "The central account tables. Everything joins on <code>ACCOUNT_NUM</code>.",
      "years": [
+      {
+       "label": "2024 current",
+       "datasets": [
+        "u24-ACCOUNT_APPRL_YEAR"
+       ]
+      },
+      {
+       "label": "2025 current",
+       "datasets": [
+        "u25-ACCOUNT_APPRL_YEAR"
+       ]
+      },
       {
        "label": "2026 certified · Jul 23",
        "datasets": [
@@ -1625,6 +1865,22 @@
         "u27-TAXABLE_OBJECT"
        ]
       }
+     ],
+     "datasets": [
+      "u24-ACCOUNT_APPRL_YEAR",
+      "u25-ACCOUNT_APPRL_YEAR",
+      "c26-ACCOUNT_APPRL_YEAR",
+      "c26-ACCOUNT_INFO",
+      "c26-MULTI_OWNER",
+      "c26-TAXABLE_OBJECT",
+      "u26-ACCOUNT_APPRL_YEAR",
+      "u26-ACCOUNT_INFO",
+      "u26-MULTI_OWNER",
+      "u26-TAXABLE_OBJECT",
+      "u27-ACCOUNT_APPRL_YEAR",
+      "u27-ACCOUNT_INFO",
+      "u27-MULTI_OWNER",
+      "u27-TAXABLE_OBJECT"
      ]
     },
     {
@@ -1711,6 +1967,18 @@
      "desc": "Exemptions granted and their amounts per taxing unit.",
      "years": [
       {
+       "label": "2024 current",
+       "datasets": [
+        "u24-APPLIED_STD_EXEMPT"
+       ]
+      },
+      {
+       "label": "2025 current",
+       "datasets": [
+        "u25-APPLIED_STD_EXEMPT"
+       ]
+      },
+      {
        "label": "2026 certified · Jul 23",
        "datasets": [
         "c26-APPLIED_STD_EXEMPT",
@@ -1737,6 +2005,22 @@
         "u27-FREEPORT_EXEMPTION"
        ]
       }
+     ],
+     "datasets": [
+      "u24-APPLIED_STD_EXEMPT",
+      "u25-APPLIED_STD_EXEMPT",
+      "c26-APPLIED_STD_EXEMPT",
+      "c26-ACCT_EXEMPT_VALUE",
+      "c26-TOTAL_EXEMPTION",
+      "c26-FREEPORT_EXEMPTION",
+      "u26-APPLIED_STD_EXEMPT",
+      "u26-ACCT_EXEMPT_VALUE",
+      "u26-TOTAL_EXEMPTION",
+      "u26-FREEPORT_EXEMPTION",
+      "u27-APPLIED_STD_EXEMPT",
+      "u27-ACCT_EXEMPT_VALUE",
+      "u27-TOTAL_EXEMPTION",
+      "u27-FREEPORT_EXEMPTION"
      ]
     },
     {
@@ -1765,6 +2049,24 @@
         "u27-ACCOUNT_TIF"
        ]
       }
+     ]
+    },
+    {
+     "id": "d-arb",
+     "label": "Appraisal Review Board",
+     "desc": "Protests filed with the ARB, 2022–2026: the active file and the archived history, same columns.",
+     "years": [
+      {
+       "label": "2022–2026",
+       "datasets": [
+        "arb-current",
+        "arb-archive"
+       ]
+      }
+     ],
+     "datasets": [
+      "arb-current",
+      "arb-archive"
      ]
     }
    ]

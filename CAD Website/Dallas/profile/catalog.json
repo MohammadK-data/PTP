@@ -1,0 +1,301 @@
+{
+ "page": {
+  "label": "Dallas CAD · Data Products",
+  "url": "https://www.dallascad.org/DataProducts.aspx",
+  "short": "DCAD",
+  "checked": "2026-11-23"
+ },
+ "sections": [
+  {
+   "name": "Data Products",
+   "groups": [
+    {
+     "name": "Current and Prior Appraisal data for all accounts",
+     "desc": "DCAD's relational data product per year: 14 CSV tables that join on ACCOUNT_NUM, with supplemental changes applied, plus 2027 with the latest ownership.",
+     "files": [
+      {
+       "name": "2027 Data Files (Most Current Ownership)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2027_CURRENT.zip",
+       "role": "data",
+       "tables": [
+        "u27-*"
+       ],
+       "local": "Data/DCAD2027_CURRENT"
+      },
+      {
+       "name": "2026 Certified Data Files with Supplemental Changes (Comma Delimited)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2026_CURRENT.ZIP",
+       "role": "data",
+       "tables": [
+        "u26-*"
+       ],
+       "local": "Data/DCAD2026_CURRENT"
+      },
+      {
+       "name": "2025 Certified Data Files with Supplemental Changes (Comma Delimited)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2025_CURRENT.ZIP",
+       "role": "data",
+       "tables": [
+        "u25-*"
+       ],
+       "local": "Data/dcad_download_20261114/DCAD2025_CURRENT",
+       "note": "Only ACCOUNT_APPRL_YEAR and APPLIED_STD_EXEMPT from this download are kept locally."
+      },
+      {
+       "name": "2024 Certified Data Files with Supplemental Changes (Comma Delimited)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2024_CURRENT.ZIP",
+       "role": "data",
+       "tables": [
+        "u24-*"
+       ],
+       "local": "Data/dcad_download_20261114/DCAD2024_CURRENT",
+       "note": "Only ACCOUNT_APPRL_YEAR and APPLIED_STD_EXEMPT from this download are kept locally."
+      },
+      {
+       "name": "2023 Certified Data Files with Supplemental Changes (Comma Delimited)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2023_CURRENT.ZIP",
+       "role": "data"
+      },
+      {
+       "name": "2022 Certified Data Files with Supplemental Changes (Comma Delimited)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2022_CURRENT.zip",
+       "role": "data"
+      }
+     ]
+    },
+    {
+     "name": "Business Personal Property (BPP) Detail",
+     "desc": "One flat file per year of every business personal property account, with values by asset category and taxing unit.",
+     "files": [
+      {
+       "name": "2026 BPP Detailed Value Data File with Supplemental Changes (Comma Delimited)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2026_BPP_DETAIL_CURRENT.zip",
+       "role": "data",
+       "tables": [
+        "bu26-BPP_DETAIL"
+       ],
+       "local": "Data/DCAD2026_BPP_DETAIL_CURRENT"
+      },
+      {
+       "name": "2025 BPP Detailed Value Data File with Supplemental Changes (Comma Delimited)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2025_BPP_DETAIL_CURRENT.zip",
+       "role": "data"
+      },
+      {
+       "name": "2024 BPP Detailed Value Data File with Supplemental Changes (Comma Delimited)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2024_BPP_DETAIL_CURRENT.zip",
+       "role": "data"
+      },
+      {
+       "name": "2023 BPP Detailed Value Data File with Supplemental Changes (Comma Delimited)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2023_BPP_DETAIL_CURRENT.zip",
+       "role": "data"
+      },
+      {
+       "name": "2022 BPP Detailed Value Data File with Supplemental Changes (Comma Delimited)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2022_BPP_DETAIL_CURRENT.ZIP",
+       "role": "data"
+      }
+     ]
+    },
+    {
+     "name": "Appraisal Data at Certification",
+     "desc": "Snapshots taken at certification in July: the relational CSVs, the BPP detail file, and the fixed-format real and BPP appraisal rolls.",
+     "files": [
+      {
+       "name": "2026 Real Property Certified Appraisal Roll (Fixed Format 07/24/2026)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2026_REAL_PROPERTY_CERT_APPR_ROLL.zip",
+       "role": "data",
+       "tables": [
+        "r26-REAL_ROLL"
+       ],
+       "local": "Data/2026_REAL_PROPERTY_CERT_APPR_ROLL"
+      },
+      {
+       "name": "2026 Certified Data Files at Certification (Comma Delimited 07/24/2026)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2026_CERTIFIED_07232026.zip",
+       "role": "data",
+       "tables": [
+        "c26-*"
+       ],
+       "local": "Data/DCAD2026_CERTIFIED_07232026"
+      },
+      {
+       "name": "2026 BPP Detailed Value Data File at Certification (Comma Delimited 07/24/2026)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2026_BPP_DETAIL_CERTIFIED_07232026.zip",
+       "role": "data",
+       "tables": [
+        "bc26-BPP_DETAIL"
+       ],
+       "local": "Data/DCAD2026_BPP_DETAIL_CERTIFIED_07232026"
+      },
+      {
+       "name": "2026 BPP Certified Appraisal Roll (Fixed Format 07/24/2026)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2026_BPP_CERTIFIED_APPRAISAL_ROLL.zip",
+       "role": "data",
+       "tables": [
+        "r26-BPP_ROLL"
+       ],
+       "local": "Data/2026_BPP_CERTIFIED_APPRAISAL_ROLL"
+      },
+      {
+       "name": "2025 Real Property Certified Appraisal Roll (Fixed Format 07/24/2025)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2025_REAL_PROPERTY_CERT_APPR_ROLL.zip",
+       "role": "data"
+      },
+      {
+       "name": "2025 Certified Data Files at Certification (Comma Delimited 07/24/2025)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2025_CERTIFIED_07242025.zip",
+       "role": "data"
+      },
+      {
+       "name": "2025 BPP Detailed Value Data File at Certification (Comma Delimited 07/24/2025)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2025_BPP_DETAIL_CERTIFIED_07242025.zip",
+       "role": "data"
+      },
+      {
+       "name": "2025 BPP Certified Appraisal Roll (Fixed Format 07/24/2025)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2025_BPP_CERTIFIED_APPRAISAL_ROLL.zip",
+       "role": "data"
+      },
+      {
+       "name": "2024 Real Property Certified Appraisal Roll (Fixed Format 07/25/2024)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2024_REAL_PROPERTY_CERT_APPR_ROLL.zip",
+       "role": "data"
+      },
+      {
+       "name": "2024 Certified Data Files at Certification (Comma Delimited 07/25/2024)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2024_CERTIFIED_07252024.zip",
+       "role": "data"
+      },
+      {
+       "name": "2024 BPP Detailed Value Data File at Certification (Comma Delimited 07/25/2024)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2024_BPP_DETAIL_CERTIFIED_07252024.zip",
+       "role": "data"
+      },
+      {
+       "name": "2024 BPP Certified Appraisal Roll (Fixed Format 07/25/2024)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2024_BPP_CERTIFIED_APPRAISAL_ROLL.zip",
+       "role": "data"
+      },
+      {
+       "name": "2023 Real Property Certified Appraisal Roll (Fixed Format 07/25/2023)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2023_REAL_PROPERTY_CERT_APPR_ROLL.zip",
+       "role": "data"
+      },
+      {
+       "name": "2023 Certified Data Files at Certification (Comma Delimited 07/25/2023)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2023_CERTIFIED_07252023.zip",
+       "role": "data"
+      },
+      {
+       "name": "2023 BPP Detailed Value Data File at Certification (Comma Delimited 07/25/2023)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2023_BPP_DETAIL_CERTIFIED_07252023.zip",
+       "role": "data"
+      },
+      {
+       "name": "2023 BPP Certified Appraisal Roll (Fixed Format 07/25/2023)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2023_BPP_CERTIFIED_APPRAISAL_ROLL.zip",
+       "role": "data"
+      },
+      {
+       "name": "2022 Real Property Certified Appraisal Roll (Fixed Format 07/25/2022)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2022_REAL_PROPERTY_CERT_APPR_ROLL.zip",
+       "role": "data"
+      },
+      {
+       "name": "2022 Certified Data Files at Certification (Comma Delimited 07/25/2022)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2022_CERTIFIED_07252022.ZIP",
+       "role": "data"
+      },
+      {
+       "name": "2022 BPP Detailed Value Data File at Certification (Comma Delimited 07/25/2022)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2022_BPP_DETAIL_CERTIFIED_07252022.ZIP",
+       "role": "data"
+      },
+      {
+       "name": "2022 BPP Certified Appraisal Roll (Fixed Format 07/25/2022)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5C2022_BPP_CERTIFIED_APPRAISAL_ROLL.zip",
+       "role": "data"
+      }
+     ]
+    },
+    {
+     "name": "Appraisal Review Board (ARB) Data",
+     "desc": "Protests filed with the ARB, 2022–2026: the active file and the archived history.",
+     "files": [
+      {
+       "name": "2022 - 2026 Active Appraisal Review Board Data Files (Comma Delimited)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CARB_CURRENT.zip",
+       "role": "data",
+       "tables": [
+        "arb-current"
+       ],
+       "local": "Data/dcad_download_20261114/ARB_CURRENT"
+      },
+      {
+       "name": "2022 - 2026 Archived History of Appraisal Review Board Data Files (Comma Delimited)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CARB_ARCHIVE.zip",
+       "role": "data",
+       "tables": [
+        "arb-archive"
+       ],
+       "local": "Data/dcad_download_20261114/ARB_ARCHIVE"
+      }
+     ]
+    },
+    {
+     "name": "Annual Appraisal Notice Data",
+     "desc": "Data behind the appraisal notices mailed each spring, in three mailings per year.",
+     "files": [
+      {
+       "name": "2026 Mail 1 Appraisal Notice Data (RES and COM)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CMAIL1_APPRAISAL_NOTICE_DATA_2026.zip",
+       "role": "data"
+      },
+      {
+       "name": "2026 Mail 2 Appraisal Notice Data (BPP)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CMAIL2_APPRAISAL_NOTICE_DATA_2026.zip",
+       "role": "data"
+      },
+      {
+       "name": "2026 Mail 3 Appraisal Notice Data (RES, COM, and BPP)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CMAIL3_APPRAISAL_NOTICE_DATA_2026.zip",
+       "role": "data"
+      },
+      {
+       "name": "2025 Mail 1 Appraisal Notice Data (RES and COM)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CMAIL1_APPRAISAL_NOTICE_DATA_2025.zip",
+       "role": "data"
+      },
+      {
+       "name": "2025 Mail 2 Appraisal Notice Data (BPP)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CMAIL2_APPRAISAL_NOTICE_DATA_2025.zip",
+       "role": "data"
+      },
+      {
+       "name": "2025 Mail 3 Appraisal Notice Data (RES, COM, and BPP)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CMAIL3_APPRAISAL_NOTICE_DATA_2025.zip",
+       "role": "data"
+      },
+      {
+       "name": "2024 Mail 1 Appraisal Notice Data (RES and COM)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CMAIL1_APPRAISAL_NOTICE_DATA_2024.zip",
+       "role": "data"
+      },
+      {
+       "name": "2024 Mail 2 Appraisal Notice Data (BPP)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CMAIL2_APPRAISAL_NOTICE_DATA_2024.zip",
+       "role": "data"
+      },
+      {
+       "name": "2024 Mail 3 Appraisal Notice Data (RES, COM, and BPP)",
+       "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CMAIL3_APPRAISAL_NOTICE_DATA_2024.zip",
+       "role": "data"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
