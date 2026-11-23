@@ -1,0 +1,560 @@
+<title>__TITLE__</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: plat-sheet header, year tabs, schema ledger table, then a grid of per-column distribution cards */
+:root {
+  --bg: #f6f7f6; --surface: #ffffff; --fg: #18211f; --muted: #5b6764; --line: #dde2e0;
+  --accent: #1d6b63; --accent-soft: #d8ebe7; --bar: #2f8277; --bar-2: #b9d8d2; --warn: #a65d12; --warn-soft: #f6e6d2;
+  --t-num: #2f6db0; --t-code: #7a4fa8; --t-date: #a65d12; --t-text: #4d5856; --t-flag: #1d6b63; --t-empty: #9aa3a1;
+  --f-ui: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121816; --surface: #1a2220; --fg: #e4ebe9; --muted: #95a39f; --line: #2c3734;
+  --accent: #6cc3b6; --accent-soft: #1f3a36; --bar: #5fb3a6; --bar-2: #2e4f4a; --warn: #e3a35e; --warn-soft: #3a2b1a;
+  --t-num: #7fb1ec; --t-code: #c09be8; --t-date: #e3a35e; --t-text: #b5c0bd; --t-flag: #6cc3b6; --t-empty: #66726f;
+  color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #121816; --surface: #1a2220; --fg: #e4ebe9; --muted: #95a39f; --line: #2c3734;
+  --accent: #6cc3b6; --accent-soft: #1f3a36; --bar: #5fb3a6; --bar-2: #2e4f4a; --warn: #e3a35e; --warn-soft: #3a2b1a;
+  --t-num: #7fb1ec; --t-code: #c09be8; --t-date: #e3a35e; --t-text: #b5c0bd; --t-flag: #6cc3b6; --t-empty: #66726f;
+  color-scheme: dark }
+* { box-sizing: border-box }
+[hidden] { display: none !important }
+body { background: var(--bg); color: var(--fg); font-family: var(--f-ui); font-size: 14px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 24px 64px }
+.wrap { max-width: 1280px; margin: 0 auto; display: grid; gap: 24px }
+header { display: grid; gap: 6px }
+.eyebrow { font: 500 11px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--accent) }
+h1 { font-size: clamp(24px, 4vw, 34px); line-height: 1.15; margin: 0; font-weight: 700; text-wrap: balance; letter-spacing: -.01em }
+h2 { font-size: 18px; margin: 0; font-weight: 600; text-wrap: balance }
+.sub { color: var(--muted); max-width: 72ch; margin: 0 }
+code, .mono { font-family: var(--f-mono); font-size: 12.5px }
+
+.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); position: sticky; top: env(safe-area-inset-top, 0px); background: var(--bg); z-index: 5; padding-top: 6px; flex-wrap: wrap }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg) }
+.tab { appearance: none; border: 1px solid transparent; border-bottom: none; background: none; color: var(--muted); font: 600 15px var(--f-ui);
+  padding: 10px 18px 9px; border-radius: 6px 6px 0 0; cursor: pointer; margin-bottom: -1px; display: flex; gap: 8px; align-items: baseline }
+.tab small { font: 400 11px var(--f-mono); color: var(--muted) }
+.tab:hover { color: var(--fg) }
+.tab[aria-selected="true"] { color: var(--fg); background: var(--surface); border-color: var(--line) }
+.tab[aria-selected="true"] small { color: var(--accent) }
+.tab:focus-visible, input:focus-visible, select:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+
+.panel { display: grid; gap: 28px }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden }
+.fact { background: var(--surface); padding: 14px 16px; display: grid; gap: 2px; min-width: 0 }
+.fact b { font: 600 22px/1.2 var(--f-ui); font-variant-numeric: tabular-nums }
+.fact span { color: var(--muted); font-size: 12px }
+.fact .types { display: flex; flex-wrap: wrap; gap: 2px 10px; color: var(--fg); font-size: 12.5px }
+.fact .types b { font: 600 15px var(--f-ui) }
+.fact.file b { font: 500 13px/1.4 var(--f-mono); overflow-wrap: anywhere }
+
+.note { background: var(--warn-soft); color: var(--fg); border-radius: 8px; padding: 12px 16px; display: grid; gap: 4px }
+.note strong { color: var(--warn) }
+.note ul { margin: 0; padding-left: 18px }
+
+section { display: grid; gap: 12px; min-width: 0 }
+.sechead { display: flex; justify-content: space-between; align-items: end; gap: 12px; flex-wrap: wrap }
+.controls { display: flex; gap: 8px; flex-wrap: wrap }
+.controls input, .controls select { font: 14px var(--f-ui); color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 7px 10px }
+.controls input { width: 220px; max-width: 100% }
+
+.tablebox { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--surface) }
+table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums }
+th, td { padding: 7px 12px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; vertical-align: middle }
+th { font: 600 11px var(--f-ui); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); background: var(--surface); position: sticky; top: 0 }
+tbody tr:last-child td { border-bottom: none }
+tbody tr:hover td { background: var(--accent-soft) }
+td.num { text-align: right }
+td.name a { color: var(--fg); font-family: var(--f-mono); font-size: 13px; text-decoration: none; font-weight: 500 }
+td.name a:hover { color: var(--accent); text-decoration: underline }
+td.idx { color: var(--muted); font-family: var(--f-mono); font-size: 12px }
+td.top { max-width: 280px; overflow: hidden; text-overflow: ellipsis; color: var(--muted); font-family: var(--f-mono); font-size: 12px }
+.pill { display: inline-block; font: 600 11px/1 var(--f-ui); padding: 4px 8px; border-radius: 99px; border: 1px solid currentColor; white-space: nowrap }
+.pill.Integer, .pill.Decimal, .pill.Percent { color: var(--t-num) } .pill.Code { color: var(--t-code) } .pill.Date { color: var(--t-date) }
+.pill.Text, .pill.Array, .pill.Object { color: var(--t-text) } .pill.Flag { color: var(--t-flag) } .pill.Empty { color: var(--t-empty) }
+.loader { color: var(--muted); font-family: var(--f-mono); font-size: 12px }
+.fill { display: flex; align-items: center; gap: 8px; justify-content: flex-end }
+.fill i { display: block; width: 56px; height: 6px; background: var(--bar-2); border-radius: 3px; overflow: hidden }
+.fill i::after { content: ""; display: block; height: 100%; width: var(--w); background: var(--bar) }
+.fill.low i::after { background: var(--warn) }
+.new { font: 600 10px var(--f-ui); color: var(--warn); margin-left: 6px; letter-spacing: .04em; text-transform: uppercase }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 14px }
+@media (max-width: 420px) { .cards { grid-template-columns: 1fr } }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px 16px; display: grid; gap: 10px; align-content: start; min-width: 0; scroll-margin-top: 70px }
+.card:target { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft) }
+.card h3 { margin: 0; font: 600 14px var(--f-mono); display: flex; justify-content: space-between; gap: 8px; align-items: center; overflow-wrap: anywhere }
+.meta { display: flex; gap: 14px; flex-wrap: wrap; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums }
+.meta b { color: var(--fg); font-weight: 600 }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px 10px; font-variant-numeric: tabular-nums }
+.stats div { display: grid; min-width: 0 }
+.stats span { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em }
+.stats b { font: 500 12.5px var(--f-mono); overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.chartlabel { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em }
+.bars { display: grid; gap: 3px }
+.bar { display: grid; grid-template-columns: minmax(0, 40%) 1fr auto; gap: 8px; align-items: center; font-size: 12px }
+.bar .k { font-family: var(--f-mono); font-size: 11.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.bar .k.null { color: var(--muted); font-style: italic; font-family: var(--f-ui) }
+.bar .t { height: 12px; background: var(--bg); border-radius: 2px; overflow: hidden }
+.bar .t i { display: block; height: 100%; background: var(--bar); min-width: 1px }
+.bar .t i.null { background: var(--t-empty) }
+.bar .v { font: 11px var(--f-mono); color: var(--muted); font-variant-numeric: tabular-nums; min-width: 64px; text-align: right }
+svg.hist { width: 100%; height: auto; display: block; overflow: visible }
+svg.hist rect { fill: var(--bar) } svg.hist rect:hover { fill: var(--accent) }
+svg.hist text { fill: var(--muted); font: 10px var(--f-mono) }
+svg.hist line { stroke: var(--line) }
+.foot { font-size: 11.5px; color: var(--muted) }
+.empty { color: var(--muted); font-style: italic; font-size: 12.5px }
+.group { display: grid; gap: 14px; margin-top: -8px }
+.gdesc { margin: 0; color: var(--muted); max-width: 90ch }
+.subtabs { display: flex; flex-wrap: wrap; gap: 6px }
+.soon { border: 1px dashed var(--line); border-radius: 10px; padding: 28px 24px; display: grid; gap: 6px; background: var(--surface) }
+.soon b { font: 600 16px var(--f-ui) }
+.soon span { color: var(--muted) }
+.years { display: flex; gap: 0; border: 1px solid var(--line); border-radius: 8px; width: fit-content; overflow: hidden; background: var(--surface) }
+.yr { appearance: none; border: none; border-right: 1px solid var(--line); background: none; color: var(--fg); font: 600 13px var(--f-ui); padding: 7px 16px; cursor: pointer; display: flex; gap: 8px; align-items: baseline }
+.yr:last-child { border-right: none }
+.yr small { font: 400 11px var(--f-mono); color: var(--muted) }
+.yr:hover { color: var(--accent) }
+.yr[aria-selected="true"] { background: var(--fg); color: var(--bg) }
+.yr[aria-selected="true"] small { color: var(--bg); opacity: .8 }
+.yr:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px }
+.sub-t { appearance: none; border: 1px solid var(--line); background: var(--surface); color: var(--fg); font: 500 13px var(--f-ui);
+  padding: 6px 12px; border-radius: 99px; cursor: pointer; display: flex; gap: 8px; align-items: baseline }
+.sub-t small { font: 400 11px var(--f-mono); color: var(--muted) }
+.sub-t:hover { border-color: var(--accent) }
+.sub-t[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg) }
+.sub-t[aria-selected="true"] small { color: var(--bg); opacity: .85 }
+.sub-t:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.overview td.name button { appearance: none; background: none; border: none; padding: 0; color: var(--fg); font: 500 13px var(--f-mono); cursor: pointer; text-align: left }
+.overview td.name button:hover { color: var(--accent); text-decoration: underline }
+.overview td.desc { white-space: normal; min-width: 260px; color: var(--muted) }
+.sources { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px }
+.src { appearance: none; text-align: left; border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 8px;
+  padding: 12px 16px; cursor: pointer; display: grid; gap: 2px; font-family: var(--f-ui) }
+.src b { font: 600 16px var(--f-ui) } .src small { color: var(--muted); font-size: 12.5px }
+.src:hover { border-color: var(--accent) }
+.src[aria-selected="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); background: var(--accent-soft) }
+.src:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+#sdesc { margin-top: -4px }
+.endpoint { display: grid; gap: 6px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; min-width: 0 }
+.ep-line { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; min-width: 0 }
+.ep-path { font: 500 14.5px var(--f-mono); overflow-wrap: anywhere; min-width: 0 }
+.ep-server { color: var(--muted); font-size: 12px; overflow-wrap: anywhere }
+.ep-about { margin: 4px 0 0; max-width: 80ch }
+.verb { font: 600 11px/1 var(--f-mono); font-style: normal; padding: 4px 7px; border-radius: 4px; letter-spacing: .04em; color: var(--surface); background: var(--t-num) }
+.verb.POST { background: var(--t-date) }
+.sub-t .verb { padding: 2px 5px; font-size: 9.5px; align-self: center }
+.sub-t[aria-selected="true"] .verb { background: var(--bg); color: var(--accent) }
+.about { margin: 0 0 12px; color: var(--muted); max-width: 72ch }
+[data-tip] { text-decoration: underline dotted color-mix(in srgb, currentColor 45%, transparent); text-underline-offset: 3px; cursor: help }
+td.name a[data-tip] { cursor: pointer }
+#tip { position: fixed; z-index: 50; max-width: min(320px, calc(100vw - 24px)); padding: 7px 10px; border-radius: 6px; background: var(--fg); color: var(--bg);
+  font: 400 12.5px/1.45 var(--f-ui); box-shadow: 0 4px 14px rgb(0 0 0 / .18); pointer-events: none; opacity: 0; transition: opacity .12s }
+#tip.on { opacity: 1 }
+.fact b.auth { font: 500 13px/1.4 var(--f-ui) }
+.fact b.auth code { font-size: 12px }
+.hid { color: var(--muted); font-style: italic; font-family: var(--f-ui) }
+td.top { max-width: 420px }
+details.sample { min-width: 0 }
+details.sample > summary { cursor: pointer; list-style: none; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap }
+details.sample > summary::-webkit-details-marker { display: none }
+details.sample > summary h2::before { content: "▸"; display: inline-block; width: 1.1em; color: var(--muted); transition: transform .15s }
+details.sample[open] > summary h2::before { transform: rotate(90deg) }
+details.sample > summary span { color: var(--muted); font-size: 12.5px }
+details.sample > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px }
+details.sample .tablebox { max-height: 520px; overflow: auto; margin-top: 12px }
+details.sample th { font: 600 11.5px var(--f-mono); letter-spacing: 0; text-transform: none; z-index: 1 }
+details.sample td { font: 12px var(--f-mono); white-space: pre; max-width: 260px; overflow: hidden; text-overflow: ellipsis }
+details.sample td.blank { color: var(--t-empty) }
+footer { color: var(--muted); font-size: 12px; border-top: 1px solid var(--line); padding-top: 14px }
+@media (prefers-reduced-motion: no-preference) { .card { transition: border-color .2s } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">__EYEBROW__</div>
+    <h1>__TITLE__</h1>
+    <p class="sub">__INTRO__</p>
+  </header>
+  <div class="sources" role="tablist" id="sources" aria-label="Data source"></div>
+  <p class="gdesc" id="sdesc"></p>
+  <nav class="tabs" role="tablist" id="tabs" aria-label="Dataset groups"></nav>
+  <div class="group" id="group">
+    <p class="gdesc" id="gdesc"></p>
+    <div class="years" role="tablist" id="years" aria-label="Year"></div>
+    <div class="subtabs" role="tablist" id="subtabs" aria-label="Files in this group"></div>
+  </div>
+  <main id="panels"></main>
+  <footer id="foot"></footer>
+</div>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>
+const DATA = JSON.parse(document.getElementById('data').textContent);
+const SOURCES = DATA.sources, SETS = DATA.sets;
+const GROUPS = SOURCES.flatMap(s => s.groups.map(g => ({ ...g, source: s.id })));
+const TYPE_ORDER = ['Integer', 'Decimal', 'Percent', 'Code', 'Date', 'Flag', 'Text', 'Array', 'Object', 'Empty'];
+const nf = new Intl.NumberFormat('en-US');
+const fmt = n => n == null ? '—' : nf.format(n);
+const pct = (a, b) => b ? (100 * a / b) : 0;
+const fmtPct = p => p >= 99.95 ? '100%' : p < 0.05 && p > 0 ? '<0.1%' : p.toFixed(1) + '%';
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const typeClass = t => t.split(' ')[0];
+function num(v, dec) {
+  if (v == null) return '—';
+  const a = Math.abs(v);
+  if (dec === undefined) dec = Number.isInteger(v) ? 0 : (a < 10 ? 2 : a < 1000 ? 1 : 0);
+  return v.toLocaleString('en-US', { maximumFractionDigits: dec, minimumFractionDigits: 0 });
+}
+function compact(v) {
+  const a = Math.abs(v);
+  if (a >= 1e9) return (v / 1e9).toFixed(a >= 1e10 ? 0 : 1) + 'B';
+  if (a >= 1e6) return (v / 1e6).toFixed(a >= 1e7 ? 0 : 1) + 'M';
+  if (a >= 1e4) return (v / 1e3).toFixed(0) + 'K';
+  if (a >= 1e3) return (v / 1e3).toFixed(1) + 'K';
+  return Number.isInteger(v) ? String(v) : v.toFixed(a < 10 ? 2 : 1);
+}
+const fmtSize = b => b < 1e6 ? (b / 1e3).toFixed(0) + ' KB' : nf.format(Math.round(b / 1e6)) + ' MB';
+
+function prevCols(key) {
+  const d = SETS[key], c = d.compare;
+  if (!c) return null;
+  const old = new Set(SETS[c].columns.map(x => x.name));
+  Object.entries(d.renames || {}).forEach(([n, o]) => { if (old.delete(o)) old.add(n); });
+  return old;
+}
+
+function barsHTML(top, rows, nonnull, distinct) {
+  const max = Math.max(...top.map(t => t[1]));
+  const shown = top.reduce((s, t) => s + t[1], 0);
+  const rest = rows - shown;
+  let h = '<div class="bars">' + top.map(([k, n]) => {
+    const isNull = k == null;
+    return `<div class="bar" title="${isNull ? '(blank)' : esc(k)}: ${fmt(n)}"><span class="k${isNull ? ' null' : ''}">${isNull ? '(blank)' : esc(k)}</span><span class="t"><i class="${isNull ? 'null' : ''}" style="width:${(100 * n / max).toFixed(2)}%"></i></span><span class="v">${fmtPct(pct(n, rows))}</span></div>`;
+  }).join('') + '</div>';
+  if (rest > 0) h += `<div class="foot">All other values together cover ${fmtPct(pct(rest, rows))} of rows.</div>`;
+  return h;
+}
+
+function histSVG(hist, xlab) {
+  const bins = hist.bins;
+  if (!bins.length) return '';
+  const W = 320, H = 110, pl = 4, pr = 4, pt = 6, pb = 18;
+  const max = Math.max(...bins.map(b => b[1])) || 1;
+  const bw = (W - pl - pr) / bins.length;
+  let r = '';
+  bins.forEach(([x, n], i) => {
+    const h = (H - pt - pb) * n / max;
+    const label = hist.kind === 'range' ? `${compact(x)} – ${compact(x + hist.w)}` : String(x);
+    r += `<rect x="${(pl + i * bw + 0.5).toFixed(1)}" y="${(H - pb - h).toFixed(1)}" width="${Math.max(bw - 1, 0.5).toFixed(1)}" height="${Math.max(h, n ? 1 : 0).toFixed(1)}"><title>${esc(label)}: ${fmt(n)} rows</title></rect>`;
+  });
+  // ticks: first, middle, last
+  const ticks = [0, Math.floor(bins.length / 2), bins.length - 1].filter((v, i, a) => a.indexOf(v) === i);
+  let t = '';
+  ticks.forEach((i, j) => {
+    const x = hist.kind === 'range' ? (j === ticks.length - 1 ? bins[i][0] + hist.w : bins[i][0]) : bins[i][0];
+    const cx = hist.kind === 'range' ? (j === ticks.length - 1 ? W - pr : pl + i * bw) : pl + (i + 0.5) * bw;
+    const anchor = j === 0 ? 'start' : j === ticks.length - 1 ? 'end' : 'middle';
+    t += `<text x="${cx.toFixed(1)}" y="${H - 4}" text-anchor="${anchor}">${esc(hist.kind === 'range' ? compact(x) : x)}</text>`;
+  });
+  return `<svg class="hist" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(xlab)}"><line x1="${pl}" x2="${W - pr}" y1="${H - pb + 0.5}" y2="${H - pb + 0.5}"/>${r}${t}</svg>`;
+}
+
+function cardHTML(key, c, rows, isNew) {
+  const fillP = pct(c.nonnull, rows);
+  let body = `<div class="meta"><span>Filled <b>${fmtPct(fillP)}</b></span><span>Blank <b>${fmt(c.nulls)}</b></span><span>Distinct <b>≈${fmt(c.distinct)}</b></span><span>Length <b>${c.minlen ?? '—'}–${c.maxlen ?? '—'}</b></span></div>`;
+  const s = c.stats;
+  if (c.type === 'Integer' || c.type === 'Decimal' || c.type === 'Percent') {
+    const p = s.p || [];
+    body += `<div class="stats">
+      <div><span>Min</span><b>${num(s.min)}</b></div><div><span>Median</span><b>${num(p[3])}</b></div>
+      <div><span>Mean</span><b>${num(s.mean)}</b></div><div><span>Max</span><b>${num(s.max)}</b></div>
+      <div><span>P5</span><b>${num(p[1])}</b></div><div><span>P25</span><b>${num(p[2])}</b></div>
+      <div><span>P75</span><b>${num(p[4])}</b></div><div><span>P95</span><b>${num(p[5])}</b></div></div>`;
+    if (c.hist) {
+      body += `<div class="chartlabel">Distribution of values${c.hist.kind === 'range' ? ' (1st–99th percentile)' : ''}</div>` + histSVG(c.hist, c.name + ' distribution');
+      if (s.zeros) body += `<div class="foot">${fmt(s.zeros)} values are zero (${fmtPct(pct(s.zeros, rows))}), included in the chart.</div>`;
+      const notes = [];
+      if (c.hist.outside) notes.push(`${fmt(c.hist.outside)} outliers outside the chart range`);
+      if (s.unparsed) notes.push(`${fmt(s.unparsed)} values that are not numbers`);
+      if (notes.length) body += `<div class="foot">Not charted: ${notes.join(', ')}.</div>`;
+    } else if (s.zeros) {
+      body += `<div class="foot">${fmt(s.zeros)} values are zero.</div>`;
+    }
+    body += `<div class="chartlabel">Most common values</div>` + barsHTML(c.top.slice(0, 6), rows, c.nonnull, c.distinct);
+  } else if (c.type === 'Date') {
+    body += `<div class="stats"><div><span>Earliest</span><b>${esc(s.min)}</b></div><div><span>Latest</span><b>${esc(s.max)}</b></div></div>`;
+    const bins = c.hist.bins;
+    if (bins.length) body += `<div class="chartlabel">${c.hist.monthly ? 'Records by month' : 'Rows by year'}</div>` + histSVG({ kind: 'year', bins }, c.name + ' by year');
+    if (s.future) body += `<div class="foot">${fmt(s.future)} dates are after 2026, included in the chart.</div>`;
+    if (s.unparsed) body += `<div class="foot">Not charted: ${fmt(s.unparsed)} values that are not dates.</div>`;
+    body += `<div class="chartlabel">Most common values</div>` + barsHTML(c.top.slice(0, 6), rows, c.nonnull, c.distinct);
+  } else if (c.type === 'Empty') {
+    body += `<p class="empty">Every row is blank in this file.</p>`;
+  } else {
+    body += `<div class="chartlabel">Most common values</div>` + barsHTML(c.top.slice(0, 10), rows, c.nonnull, c.distinct);
+  }
+  return `<article class="card" id="${key}.${esc(c.name)}"><h3><span><span class="tipname"${c.desc ? ` data-tip="${esc(c.desc)}" aria-description="${esc(c.desc)}" tabindex="0"` : ''}>${esc(c.name)}</span>${isNew ? '<span class="new">new</span>' : ''}</span><span class="pill ${typeClass(c.type)}">${esc(c.type)}</span></h3>${body}</article>`;
+}
+
+function columnsSection(key, d, prev, heading, loaderLabel) {
+  const rows = d.rows;
+  const counts = {};
+  d.columns.forEach(c => counts[typeClass(c.type)] = (counts[typeClass(c.type)] || 0) + 1);
+  const typeOpts = TYPE_ORDER.filter(t => counts[t]).map(t => `<option value="${t}">${t} (${counts[t]})</option>`).join('');
+  const single = rows < 2;
+  return `<section>
+    <div class="sechead"><h2>${heading}</h2>
+      <div class="controls"><input type="search" id="q-${key}" placeholder="Filter columns" aria-label="Filter columns">
+      <select id="t-${key}" aria-label="Filter by type"><option value="">All types</option>${typeOpts}</select></div></div>
+    <div class="tablebox"><table>
+      <thead><tr><th>#</th><th>${single ? 'Field' : 'Column'}</th><th>Data type</th><th>${loaderLabel}</th>${single ? '<th>Example value</th>' :
+        '<th style="text-align:right">Filled</th><th style="text-align:right">Distinct</th><th style="text-align:right">Max length</th><th>Most common value</th>'}</tr></thead>
+      <tbody class="crow">${d.columns.map((c, i) => {
+        const fp = pct(c.nonnull, rows);
+        const topv = c.top.find(t => t[0] != null);
+        const tip = c.desc ? ` data-tip="${esc(c.desc)}" aria-description="${esc(c.desc)}"` : '';
+        const link = single ? `<span class="mono"${tip} tabindex="0">${esc(c.name)}</span>` : `<a href="#${key}.${esc(c.name)}"${tip}>${esc(c.name)}</a>`;
+        const cells = single
+          ? `<td class="top" title="${esc(c.example ?? '')}">${c.example != null ? esc(c.example) : '<span class="hid">blank</span>'}</td>`
+          : `<td class="num"><span class="fill${fp < 50 ? ' low' : ''}"><span>${fmtPct(fp)}</span><i style="--w:${fp.toFixed(1)}%"></i></span></td>
+             <td class="num">${fmt(c.distinct)}</td><td class="num">${c.maxlen ?? '—'}</td>
+             <td class="top" title="${topv ? esc(topv[0]) : ''}">${topv ? esc(topv[0]) + ` <span>(${fmtPct(pct(topv[1], rows))})</span>` : '—'}</td>`;
+        return `<tr data-name="${esc(c.name.toLowerCase())}" data-type="${typeClass(c.type)}"><td class="idx">${i + 1}</td>
+        <td class="name">${link}${prev && !prev.has(c.name) ? '<span class="new">new</span>' : ''}</td>
+        <td><span class="pill ${typeClass(c.type)}">${esc(c.type)}</span></td>
+        <td class="loader">${esc(c.loader)}</td>${cells}</tr>`;
+      }).join('')}</tbody></table></div>
+  </section>` + sampleHTML(d) + (single ? '' : `<section>
+    <div class="sechead"><h2>Value distribution by ${d.api ? 'field' : 'column'}</h2></div>
+    <div class="cards">${d.columns.map(c => cardHTML(key, c, rows, prev && !prev.has(c.name))).join('')}</div>
+  </section>`);
+}
+
+function sampleHTML(d) {
+  const sm = d.sample;
+  if (!sm || !sm.rows.length) return '';
+  const what = d.api ? `${sm.rows.length} records from the example response` : `${fmt(sm.rows.length)} random rows of ${fmt(d.rows)}`;
+  return `<section><details class="sample"><summary><h2>Sample ${d.api ? 'records' : 'rows'}</h2><span>${what}</span></summary>
+    <div class="tablebox"><table><thead><tr><th>#</th>${d.columns.map(c => `<th title="${esc(c.desc || '')}">${esc(c.name)}</th>`).join('')}</tr></thead>
+    <tbody>${sm.rows.map((r, i) => `<tr><td class="idx">${i + 1}</td>${r.map(v => v == null ? '<td class="blank">·</td>' : `<td title="${esc(v)}">${esc(v)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+  </details></section>`;
+}
+
+function notesHTML(d, prev) {
+  const notes = [];
+  const prevLabel = d.compare ? d.compareLabel || SETS[d.compare].label : '';
+  const ren = Object.entries(d.renames || {});
+  if (ren.length) notes.push(`Renamed since ${prevLabel}: ${ren.map(([n, o]) => `<code>${esc(o)}</code> → <code>${esc(n)}</code>`).join(', ')}.`);
+  if (prev) {
+    const added = d.columns.filter(c => !prev.has(c.name)).map(c => c.name);
+    const removed = [...prev].filter(n => !d.columns.some(c => c.name === n));
+    if (added.length) notes.push(`New columns compared with ${prevLabel}: ${added.map(n => `<code>${esc(n)}</code>`).join(', ')}.`);
+    if (removed.length) notes.push(`Columns dropped since ${prevLabel}: ${removed.map(n => `<code>${esc(n)}</code>`).join(', ')}.`);
+  }
+  const empties = d.columns.filter(c => c.type === 'Empty').map(c => c.name);
+  if (empties.length && d.rows > 1) notes.push(`Blank in every ${d.api ? 'example record' : 'row'}: ${empties.map(n => `<code>${esc(n)}</code>`).join(', ')}.`);
+  (d.notes || []).forEach(n => notes.push(n));
+  return notes.length ? `<div class="note"><strong>Things to know about this ${d.api ? 'endpoint' : 'file'}</strong><ul>${notes.map(n => `<li>${n}</li>`).join('')}</ul></div>` : '';
+}
+
+function typeTiles(d) {
+  const counts = {};
+  d.columns.forEach(c => counts[typeClass(c.type)] = (counts[typeClass(c.type)] || 0) + 1);
+  return TYPE_ORDER.filter(t => counts[t]).map(t => `<span><b>${counts[t]}</b> ${t}</span>`).join('');
+}
+
+function panelHTML(key) {
+  const d = SETS[key];
+  if (d.api) return apiPanelHTML(key);
+  if (d.placeholder) return `<div class="soon"><b>Not provided on the website yet</b><span>${esc(d.about)}</span></div>`;
+  const prev = prevCols(key);
+  return `${d.about ? `<p class="about">${esc(d.about)}</p>` : ''}
+  <div class="facts">
+    <div class="fact"><b>${fmt(d.rows)}</b><span>Rows</span></div>
+    <div class="fact"><b>${d.columns.length}</b><span>Columns</span></div>
+    <div class="fact"><b>${fmtSize(d.size)}</b><span>File size${d.encoding ? ' · ' + esc(d.encoding) : ''}</span></div>
+    <div class="fact"><span class="types">${typeTiles(d)}</span><span>Columns by data type</span></div>
+    <div class="fact file"><b>${esc(d.file)}</b><span>Source file</span></div>
+  </div>
+  ${notesHTML(d, prev)}
+  ${columnsSection(key, d, prev, 'Columns and data types', 'Auto-detected on load')}`;
+}
+
+function kvTable(rows, head) {
+  return `<div class="tablebox"><table><thead><tr>${head.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r =>
+    `<tr>${r.map((v, i) => `<td class="${i === 0 ? 'name mono' : 'top'}">${v}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+}
+
+function apiPanelHTML(key) {
+  const d = SETS[key], a = d.api;
+  const KIND = { records: 'JSON', error: 'Error JSON', file: 'Link / file', empty: 'No content' };
+  let h = `<div class="endpoint">
+    <div class="ep-line"><span class="verb ${a.method}">${a.method}</span><code class="ep-path">${esc(a.path)}</code></div>
+    <div class="ep-server mono">${esc(a.server)}</div>
+    <p class="ep-about">${esc(d.about)}</p>
+  </div>
+  <div class="facts">
+    <div class="fact"><b>${esc(a.status)}</b><span>Status in the example</span></div>
+    <div class="fact"><b>${a.kind === 'records' ? fmt(d.rows) : '—'}</b><span>Records in the example${a.totalRecords != null ? ` · total ${fmt(a.totalRecords)}` : ''}</span></div>
+    <div class="fact"><b>${d.columns.length || '—'}</b><span>Fields per record</span></div>
+    <div class="fact"><b class="auth">${esc(a.auth)}</b><span>Authentication</span></div>
+    <div class="fact"><b class="auth">${KIND[a.kind]}${a.recordsPath ? ` · <code>${esc(a.recordsPath)}</code>` : ''}</b><span>Response${a.recordsPath ? ' · where the records are' : ''}</span></div>
+  </div>
+  ${notesHTML(d, null)}`;
+  if (a.params.length) h += `<section><h2>Parameters</h2>${kvTable(a.params.map(p => [esc(p.name), esc(p.loc), p.required ? 'Yes' : 'No', `<span class="mono">${esc(p.example)}</span>`]), ['Name', 'In', 'Required', 'Example'])}</section>`;
+  if (a.body) h += `<section><h2>Request body</h2>${a.body.fields.length ? kvTable(a.body.fields.map(f => [esc(f.name), esc(f.type), `<span class="mono">${esc(f.example)}</span>`]), ['Field', 'Type', 'Example']) : `<p class="empty">Sent as an empty JSON object <code>${esc(a.body.example)}</code>. ${a.filters ? 'The filters below can be added to narrow the list.' : ''}</p>`}</section>`;
+  if (a.filters) h += `<section><h2>Filters you can send in the body</h2>${kvTable(a.filters.fields.map(f => [esc(f.name), esc(f.type), `<span class="mono">${esc(f.example)}</span>`]), ['Filter', 'Type', 'Default'])}</section>`;
+  if (a.example && !d.columns.length) h += `<section><h2>Example response</h2>${kvTable(Object.entries(a.example).map(([k, v]) => [esc(k), esc(v)]), ['Field', 'Value'])}</section>`;
+  if (a.kind === 'empty') h += `<section><h2>Example response</h2><p class="empty">The saved example has no body (status ${esc(a.status)}). ${a.status === '200' ? 'This call returns a file (PDF), so the docs keep no JSON example.' : 'Nothing was available for the sample property.'}</p></section>`;
+  if (a.kind === 'records' && !d.columns.length) h += `<section><h2>Example response</h2><p class="empty">The example returned an empty list, so no fields are documented yet.</p></section>`;
+  if (d.columns.length) h += columnsSection(key, d, null, d.rows < 2 ? 'Fields returned' : 'Fields returned and their values', 'JSON type');
+  return h;
+}
+
+function overviewHTML(g) {
+  return '';
+  if (g.source === 'api') return `<section class="overview"><div class="tablebox"><table>
+    <thead><tr><th>Endpoint</th><th>Call</th><th>What it returns</th><th style="text-align:right">Example records</th><th style="text-align:right">Fields</th></tr></thead>
+    <tbody>${g.datasets.map(k => { const d = SETS[k], a = d.api; return `<tr><td class="name"><button type="button" data-key="${k}">${esc(d.label)}</button></td>
+      <td class="loader"><i class="verb ${a.method}">${a.method}</i> ${esc(a.path)}</td>
+      <td class="desc">${esc(d.about)}</td><td class="num">${a.kind === 'records' ? fmt(d.rows) : '—'}</td><td class="num">${d.columns.length || '—'}</td></tr>`; }).join('')}
+    </tbody></table></div></section>`;
+  return `<section class="overview"><div class="tablebox"><table>
+    <thead><tr><th>File</th><th>What it holds</th><th style="text-align:right">Rows</th><th style="text-align:right">Columns</th><th style="text-align:right">Size</th></tr></thead>
+    <tbody>${g.datasets.map(k => { const d = SETS[k]; return `<tr><td class="name"><button type="button" data-key="${k}">${esc(d.label)}</button></td>
+      <td class="desc">${esc(d.about || '')}</td><td class="num">${fmt(d.rows)}</td><td class="num">${d.columns.length}</td><td class="num">${fmtSize(d.size)}</td></tr>`; }).join('')}
+    </tbody></table></div></section>`;
+}
+
+const tipEl = document.createElement('div');
+tipEl.id = 'tip'; tipEl.setAttribute('role', 'tooltip'); document.body.appendChild(tipEl);
+function showTip(el) {
+  tipEl.textContent = el.dataset.tip; tipEl.classList.add('on');
+  const r = el.getBoundingClientRect(), t = tipEl.getBoundingClientRect();
+  let top = r.bottom + 6; if (top + t.height > innerHeight - 8) top = r.top - t.height - 6;
+  tipEl.style.top = top + 'px';
+  tipEl.style.left = Math.max(8, Math.min(r.left, innerWidth - t.width - 8)) + 'px';
+}
+const hideTip = () => tipEl.classList.remove('on');
+document.addEventListener('mouseover', e => { const el = e.target.closest('[data-tip]'); el ? showTip(el) : hideTip(); });
+document.addEventListener('focusin', e => { const el = e.target.closest('[data-tip]'); el ? showTip(el) : hideTip(); });
+document.addEventListener('focusout', hideTip);
+addEventListener('scroll', hideTip, true);
+
+const sourcesEl = document.getElementById('sources'), tabs = document.getElementById('tabs'), subtabs = document.getElementById('subtabs');
+const yearsEl = document.getElementById('years'), gdesc = document.getElementById('gdesc'), sdesc = document.getElementById('sdesc'), panels = document.getElementById('panels');
+const groupOf = {};
+GROUPS.forEach(g => g.datasets.forEach(k => groupOf[k] = g));
+const lastInGroup = {}, lastInSource = {};
+const built = {};
+
+SOURCES.forEach(s => {
+  const b = document.createElement('button');
+  b.className = 'src'; b.role = 'tab'; b.id = 'src-' + s.id; b.dataset.source = s.id;
+  b.innerHTML = `<b>${esc(s.label)}</b><small>${esc(s.sub)}</small>`;
+  sourcesEl.appendChild(b);
+});
+GROUPS.forEach(g => {
+  const b = document.createElement('button');
+  b.className = 'tab'; b.role = 'tab'; b.id = 'tab-' + g.id; b.dataset.group = g.id;
+  const total = g.datasets.reduce((s, k) => s + SETS[k].rows, 0);
+  const unit = g.source === 'api' ? (g.datasets.length > 1 ? ' endpoints' : ' endpoint') : ' files';
+  b.innerHTML = g.years ? `${esc(g.label)} <small>${g.years.length} ${g.years.length > 1 ? 'years' : 'year'}</small>` : `${esc(g.label)} <small>${g.datasets.length > 1 || g.source === 'api' ? g.datasets.length + unit : compact(total) + ' rows'}</small>`;
+  tabs.appendChild(b);
+});
+
+function buildPanel(key) {
+  if (built[key]) return built[key];
+  const p = document.createElement('div');
+  p.className = 'panel'; p.id = 'panel-' + key; p.role = 'tabpanel'; p.hidden = true;
+  p.innerHTML = panelHTML(key);
+  panels.appendChild(p);
+  const q = p.querySelector('#q-' + CSS.escape(key)), t = p.querySelector('#t-' + CSS.escape(key));
+  if (q) {
+    const trs = [...p.querySelectorAll('.crow tr')], cards = [...p.querySelectorAll('.card')];
+    const apply = () => {
+      const s = q.value.trim().toLowerCase(), ty = t.value;
+      trs.forEach((tr, i) => { tr.hidden = !(tr.dataset.name.includes(s) && (!ty || tr.dataset.type === ty)); if (cards[i]) cards[i].hidden = tr.hidden; });
+    };
+    q.addEventListener('input', apply); t.addEventListener('change', apply);
+  }
+  return built[key] = p;
+}
+
+let current = null;
+function show(key) {
+  if (!SETS[key]) return;
+  const g = groupOf[key], src = SOURCES.find(s => s.id === g.source);
+  lastInGroup[g.id] = key; lastInSource[src.id] = key;
+  SOURCES.forEach(s => document.getElementById('src-' + s.id).setAttribute('aria-selected', s === src));
+  sdesc.innerHTML = src.desc;
+  GROUPS.forEach(x => {
+    const b = document.getElementById('tab-' + x.id);
+    b.hidden = x.source !== src.id;
+    b.setAttribute('aria-selected', x === g); b.tabIndex = x === g ? 0 : -1;
+  });
+  gdesc.innerHTML = g.desc || '';
+  gdesc.hidden = !g.desc;
+  const yr = g.years ? g.years.find(y => y.datasets.includes(key)) : null;
+  const list = yr ? yr.datasets : g.datasets;
+  yearsEl.hidden = !yr;
+  yearsEl.innerHTML = yr ? g.years.map(y => {
+    const i = yr.datasets.indexOf(key), k = y.datasets[i] || y.datasets[0];
+    return `<button type="button" class="yr" role="tab" aria-selected="${y === yr}" data-key="${k}">${esc(y.label)} <small>${y.pending ? 'coming soon' : y.datasets.length > 1 ? y.datasets.length + ' files' : compact(SETS[y.datasets[0]].rows) + ' rows'}</small></button>`; }).join('') : '';
+  subtabs.hidden = list.length < 2;
+  subtabs.innerHTML = list.map(k => { const d = SETS[k];
+    const tag = d.api ? `<i class="verb ${d.api.method}">${d.api.method}</i>` : '';
+    return `<button type="button" class="sub-t" role="tab" aria-selected="${k === key}" data-key="${k}">${tag}${esc(d.label)} <small>${d.api ? (d.rows > 1 ? compact(d.rows) + ' rec' : '') : compact(d.rows)}</small></button>`; }).join('');
+  let ov = document.getElementById('ov');
+  if (!ov) { ov = document.createElement('div'); ov.id = 'ov'; document.getElementById('group').appendChild(ov); }
+  ov.innerHTML = overviewHTML(g);
+  buildPanel(key);
+  Object.entries(built).forEach(([k, p]) => p.hidden = k !== key);
+  current = key;
+  try { localStorage.setItem('__STORE_KEY__', key) } catch (e) {}
+}
+
+sourcesEl.addEventListener('click', e => {
+  const b = e.target.closest('.src'); if (!b) return;
+  const s = SOURCES.find(x => x.id === b.dataset.source);
+  show(lastInSource[s.id] || s.start);
+});
+tabs.addEventListener('click', e => {
+  const b = e.target.closest('.tab'); if (!b) return;
+  const g = GROUPS.find(x => x.id === b.dataset.group);
+  show(lastInGroup[g.id] || g.datasets[0]);
+});
+tabs.addEventListener('keydown', e => {
+  if (!['ArrowLeft', 'ArrowRight'].includes(e.key)) return;
+  const vis = GROUPS.filter(x => x.source === groupOf[current].source);
+  const i = vis.indexOf(groupOf[current]);
+  const n = vis[(i + (e.key === 'ArrowRight' ? 1 : vis.length - 1)) % vis.length];
+  show(lastInGroup[n.id] || n.datasets[0]); document.getElementById('tab-' + n.id).focus();
+});
+document.getElementById('group').addEventListener('click', e => {
+  const b = e.target.closest('[data-key]'); if (b) show(b.dataset.key);
+});
+function fromHash() {
+  const h = decodeURIComponent(location.hash.slice(1));
+  if (!h) return null;
+  const key = h.split('.')[0];
+  if (SETS[key]) return key;
+  if (h === 'api') return SOURCES[1].start;
+  const old = h.match(/^y(\d{4})/);
+  return old && SETS['y' + old[1]] ? 'y' + old[1] : null;
+}
+window.addEventListener('hashchange', () => {
+  const k = fromHash();
+  if (k && k !== current) { show(k); const el = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (el) el.scrollIntoView(); }
+});
+let start = fromHash();
+if (!start) { try { const s = localStorage.getItem('__STORE_KEY__'); if (s && SETS[s]) start = s } catch (e) {} }
+show(start || SOURCES[0].start);
+document.getElementById('foot').textContent = __FOOT__;
+</script>

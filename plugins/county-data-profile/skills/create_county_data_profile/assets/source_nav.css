@@ -1,0 +1,264 @@
+/* Workspace: sidebar of tables beside the selected table */
+#sources, #sdesc, #tabs, #group { display: none !important }
+.wrap { max-width: 1480px }
+.ws { display: grid; grid-template-columns: 310px minmax(0, 1fr); gap: 20px; align-items: start; min-width: 0 }
+.ws-side { position: sticky; top: 8px; max-height: calc(100vh - 16px); display: grid; grid-template-rows: auto auto minmax(0, 1fr); gap: 8px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px; min-width: 0 }
+.ws-q { width: 100%; font: 14px var(--f-ui); color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px }
+.ws-q:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px }
+.ws-bar { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; font-size: 12.5px }
+.ws-mode { appearance: none; border: 1px solid var(--line); background: none; color: var(--muted); font: 500 12.5px var(--f-ui); padding: 4px 10px; border-radius: 99px; cursor: pointer }
+.ws-mode[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--fg) }
+.ws-bar label { color: var(--muted); display: flex; gap: 5px; align-items: center; margin-left: auto; cursor: pointer }
+.ws-list { overflow: auto; position: relative; margin: 0 -6px; padding: 0 6px 6px; min-height: 0 }
+.ws-sec { border-top: 1px solid var(--line) }
+.ws-sec:first-child { border-top: none }
+.ws-sech { appearance: none; background: none; border: none; width: 100%; text-align: left; display: flex; gap: 8px; align-items: baseline; padding: 9px 2px; cursor: pointer; color: var(--fg); font-family: var(--f-ui) }
+.ws-sech i { font-style: normal; color: var(--muted); transition: transform .15s; display: inline-block }
+.ws-sec.open .ws-sech i { transform: rotate(90deg) }
+.ws-sech span { display: grid; min-width: 0 }
+.ws-sech b { font: 600 13.5px/1.3 var(--f-ui) }
+.ws-sech small { color: var(--muted); font-size: 11.5px }
+.ws-sub { font: 600 10.5px var(--f-ui); letter-spacing: .07em; text-transform: uppercase; color: var(--muted); padding: 8px 6px 3px }
+.ws-item, .ws-col { appearance: none; background: none; border: none; width: 100%; text-align: left; display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 8px;
+  padding: 5px 6px; border-radius: 6px; cursor: pointer; color: var(--fg); font-family: var(--f-ui) }
+.ws-item:hover, .ws-col:hover { background: var(--bg) }
+.ws-item.on { background: var(--accent-soft); box-shadow: inset 3px 0 0 var(--accent) }
+.ws-item:focus-visible, .ws-col:focus-visible, .ws-sech:focus-visible, .ws-mode:focus-visible, .ws-tab:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px }
+.ws-raw { font: 500 12px var(--f-mono); overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.ws-lab { grid-column: 1; font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.ws-prog { grid-column: 2; grid-row: 1 / span 2; align-self: center; font: 500 11px var(--f-mono); color: var(--muted); padding: 2px 6px; border-radius: 99px; background: var(--bg) }
+.ws-prog.part { color: var(--warn); background: var(--warn-soft) }
+.ws-prog.full { color: var(--accent); background: var(--accent-soft) }
+.ws-col { grid-template-columns: 1fr }
+.ws-col code { font-size: 12px; overflow-wrap: anywhere }
+.ws-col span { font-size: 11.5px; color: var(--muted) }
+.ws-empty { color: var(--muted); font-size: 12.5px; margin: 6px }
+.ws-doc { padding: 8px 2px; border-top: 1px solid var(--line); font-size: 13px }
+.ws-doc ul { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 6px }
+.ws-doc li { display: grid; grid-template-columns: auto 1fr; column-gap: 6px; font-size: 12.5px }
+.ws-doc .ws-dl { grid-column: 2 }
+.ws-ext { font: 600 9.5px/1 var(--f-mono); padding: 3px 4px; border-radius: 3px; border: 1px solid var(--line); color: var(--muted); align-self: start; margin-top: 2px }
+.ws-dl { display: inline-flex; gap: 10px; flex-wrap: wrap; font-size: 12px }
+.ws-dl a, .ws-doc a { color: var(--accent) }
+.ws-docbtn { appearance: none; background: none; border: none; width: 100%; text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 6px; align-items: start;
+  padding: 4px 6px; border-radius: 6px; cursor: pointer; color: var(--fg); font: 12.5px/1.35 var(--f-ui) }
+.ws-docbtn:hover { background: var(--bg) }
+.ws-docbtn.on { background: var(--accent-soft); box-shadow: inset 3px 0 0 var(--accent) }
+.ws-docbtn:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px }
+.ws-doc ul { gap: 1px }
+.ws-ext-lg { font-size: 11px; padding: 4px 6px; align-self: center; margin: 0 }
+.ws-docact { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 4px }
+.ws-btn { display: inline-block; text-decoration: none; font: 600 13.5px var(--f-ui); padding: 9px 16px; border-radius: 8px; border: 1px solid var(--accent); color: var(--accent); background: var(--surface) }
+.ws-btn.primary { background: var(--accent); color: var(--bg) }
+.ws-btn:hover { box-shadow: 0 0 0 3px var(--accent-soft) }
+.ws-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.ws-nodrive { color: var(--muted); font-size: 12.5px; font-style: italic }
+.ws-dfacts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; margin: 6px 0 0 }
+.ws-dfacts > div { background: var(--surface); padding: 10px 14px; min-width: 0 }
+.ws-dfacts dt { font: 600 10.5px var(--f-ui); letter-spacing: .06em; text-transform: uppercase; color: var(--muted) }
+.ws-dfacts dd { margin: 2px 0 0; font-size: 13px; overflow-wrap: anywhere }
+.ws-dfacts a { color: var(--accent) }
+.ws-dnote { margin: 4px 0 0; background: var(--warn-soft); border-radius: 8px; padding: 10px 14px; font-size: 13px; max-width: 90ch }
+.ws-dsec { display: grid; gap: 6px; margin-top: 10px; min-width: 0 }
+.ws-head > * { min-width: 0 }
+.ws-dsec h3 { margin: 0; font: 600 14px var(--f-ui) }
+.ws-dtables { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 4px; max-width: 900px }
+.ws-dtables .ws-item { border: 1px solid var(--line) }
+.ws-dlist { margin: 0; padding-left: 18px; columns: 2 260px; font-size: 12.5px }
+.ws-dsib { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 2px; max-width: 900px; min-width: 0 }
+.ws-main { display: grid; gap: 16px; min-width: 0; scroll-margin-top: 8px }
+/* compact header: title with an "About this page" popover */
+header.ws-top { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; position: relative }
+header.ws-top .eyebrow { flex-basis: 100% }
+header.ws-top h1 { font-size: clamp(22px, 3vw, 28px) }
+header.ws-top .rv-off { flex-basis: 100% }
+.ws-info > summary { list-style: none; cursor: pointer; font: 600 12.5px var(--f-ui); color: var(--accent); border: 1px solid var(--line); border-radius: 99px; padding: 4px 12px; background: var(--surface) }
+.ws-info > summary::-webkit-details-marker { display: none }
+.ws-info > summary::after { content: " ▾" }
+.ws-info[open] > summary::after { content: " ▴" }
+.ws-info > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.ws-info-body { position: absolute; z-index: 20; left: 0; right: 0; top: calc(100% + 6px); max-width: 760px; display: grid; gap: 8px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; box-shadow: 0 10px 30px rgb(0 0 0 / .18) }
+.ws-info-body p { margin: 0 }
+/* breadcrumb */
+.ws-bc { position: sticky; top: 0; z-index: 6; background: var(--bg); padding: 8px 0; margin-bottom: -8px; border-bottom: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 0; font-size: 13px; min-width: 0 }
+.ws-bc:empty { display: none }
+.ws-bc i { font-style: normal; color: var(--muted); margin: 0 7px }
+.ws-bc-link { appearance: none; background: none; border: none; padding: 0; font: inherit; color: var(--accent); cursor: pointer; text-align: left }
+.ws-bc-link:hover { text-decoration: underline }
+.ws-bc-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px }
+.ws-bc-here { color: var(--fg); font-weight: 600 }
+.ws-doc.ws-flash-doc { background: var(--accent-soft); border-radius: 6px; transition: background .4s }
+/* sidebar tree: section › group › file › tables */
+.ws-sidetop { display: flex; gap: 6px; align-items: center }
+.ws-sidetop .ws-q { flex: 1; min-width: 0 }
+.ws-collapse { appearance: none; flex: none; width: 34px; height: 34px; display: grid; place-items: center; border: none; background: none;
+  color: var(--muted); border-radius: 8px; cursor: pointer; transition: background .15s, color .15s }
+.ws-collapse:hover { background: var(--bg); color: var(--fg) }
+.ws-collapse:active { transform: scale(.96) }
+.ws.collapsed .ws-collapse { color: var(--fg) }
+.ws-collapse:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.ws-bar-k { font: 600 10.5px var(--f-ui); letter-spacing: .07em; text-transform: uppercase; color: var(--muted) }
+.ws-sec-k { font: 700 11px var(--f-ui); letter-spacing: .08em; text-transform: uppercase; color: var(--fg); padding: 12px 4px 2px; border-top: 1px solid var(--line); margin-top: 6px }
+.ws-sec-k:first-child { border-top: none; margin-top: 0; padding-top: 4px }
+.ws-doc { border-top: none; padding: 6px 0 2px }
+.ws-gname { display: flex; gap: 8px; align-items: baseline; padding: 0 4px 2px; font-size: 12.5px }
+.ws-gname b { font-weight: 600; color: var(--muted) }
+.ws-gname a { font-size: 11.5px }
+.ws-docbtn .ws-dname { display: grid; min-width: 0 }
+.ws-docbtn .ws-dname small { color: var(--muted); font-size: 11px }
+.ws-hastables { grid-template-columns: auto 1fr auto }
+.ws-hastables .ws-dname { font-weight: 600 }
+.ws-hastables > i { font-style: normal; color: var(--muted); transition: transform .15s; align-self: center }
+.ws-file.open > .ws-hastables > i { transform: rotate(90deg) }
+.ws-doc li, .ws-doc li.ws-file { display: block }
+.ws-tables { margin: 2px 0 6px 14px; padding-left: 8px; border-left: 2px solid var(--line); display: grid; gap: 1px }
+.ws-tables .ws-sub { padding-top: 6px }
+/* sidebar groups: one separated, collapsible block per website group */
+.ws-side { grid-template-rows: auto minmax(0, 1fr) }
+.ws-list { display: block }
+.ws-grp { border: 1px solid var(--line); border-radius: 10px; padding: 0; background: var(--surface); overflow: hidden; margin-bottom: 6px }
+.ws-grp.open { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)) }
+.ws-grph { appearance: none; width: 100%; background: none; border: none; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 10px; align-items: center;
+  padding: 10px 12px; cursor: pointer; text-align: left; color: var(--fg); font-family: var(--f-ui) }
+.ws-grph:hover { background: var(--bg) }
+.ws-grph:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; border-radius: 10px }
+.ws-gicon { width: 28px; height: 28px; border-radius: 7px; display: grid; place-items: center; background: var(--bg); color: var(--muted) }
+.ws-grp.data .ws-gicon { background: var(--accent-soft); color: var(--accent) }
+.ws-gtext { display: grid; min-width: 0 }
+.ws-gtext b { font: 600 13.5px/1.3 var(--f-ui) }
+.ws-gtext small { color: var(--muted); font-size: 11.5px }
+.ws-grph > i { font-style: normal; color: var(--muted); transition: transform .15s }
+.ws-grp.open .ws-grph > i { transform: rotate(90deg) }
+.ws-grp.open .ws-grph { border-bottom: 1px solid var(--line) }
+.ws-grp > ul { padding: 6px 6px 4px; margin: 0 }
+.ws-gdrive { display: inline-block; font-size: 12px; color: var(--accent); padding: 2px 12px 10px }
+.ws-grp.ws-flash-doc { box-shadow: 0 0 0 2px var(--accent) }
+/* top of the sidebar: home, search, collapse */
+.ws-homebtn { appearance: none; flex: none; width: 34px; height: 34px; display: grid; place-items: center; border: none; background: none;
+  color: var(--muted); border-radius: 8px; cursor: pointer; transition: background .15s, color .15s }
+.ws-homebtn:hover { background: var(--bg); color: var(--fg) }
+.ws-homebtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.ws.collapsed .ws-sidetop { flex-direction: column }
+.ws.collapsed .ws-homebtn { color: var(--fg) }
+/* home view */
+.ws-home { display: grid; gap: 10px }
+.ws-hcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 10px }
+.ws-hcard { appearance: none; text-align: left; border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 10px; padding: 12px 14px;
+  display: grid; gap: 4px; cursor: pointer; font-family: var(--f-ui) }
+.ws-hcard:hover { border-color: var(--accent) }
+.ws-hcard:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.ws-hcard small { color: var(--muted); font-size: 11.5px }
+.ws-hcard b { font: 600 14px/1.3 var(--f-ui) }
+.ws-hmeta { color: var(--muted); font-size: 12px }
+.ws-track { display: block; height: 5px; border-radius: 3px; background: var(--bar-2); overflow: hidden; margin-top: 2px }
+.ws-track i { display: block; height: 100%; background: var(--bar) }
+.ws-hgroups { display: flex; flex-wrap: wrap; gap: 8px }
+.ws-hgrp { appearance: none; display: inline-flex; gap: 8px; align-items: center; border: 1px solid var(--line); background: var(--surface); color: var(--fg);
+  border-radius: 99px; padding: 6px 12px; cursor: pointer; font: 500 13px var(--f-ui) }
+.ws-hgrp:hover { border-color: var(--accent) }
+.ws-hgrp svg { color: var(--muted) }
+.ws-hgrp small { color: var(--muted); font-size: 11.5px }
+/* collapsed sidebar: a slim strip with the expand button */
+.ws.collapsed { grid-template-columns: 46px minmax(0, 1fr) }
+.ws.collapsed .ws-side { padding: 8px 6px; grid-template-rows: auto }
+.ws.collapsed .ws-side > :not(.ws-sidetop), .ws.collapsed .ws-q { display: none }
+@media (max-width: 900px) { .ws-collapse { display: none } .ws.collapsed { grid-template-columns: minmax(0, 1fr) } .ws.collapsed .ws-side > *, .ws.collapsed .ws-q { display: revert } }
+.ws-head { display: grid; gap: 6px; padding-bottom: 12px; border-bottom: 1px solid var(--line) }
+.ws-crumb { font-size: 12.5px; color: var(--muted); display: flex; gap: 10px; flex-wrap: wrap; align-items: baseline }
+.ws-title { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap }
+.ws-title h2 { font-size: 22px; margin: 0 }
+.ws-title code { font-size: 13px; background: var(--accent-soft); padding: 2px 7px; border-radius: 4px }
+.ws-about { margin: 0; color: var(--muted); max-width: 90ch }
+.ws-chips { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; font-size: 12.5px }
+.ws-chips > span { border: 1px solid var(--line); border-radius: 99px; padding: 3px 10px; background: var(--surface) }
+.ws-chips > span.ok { border-color: var(--accent); color: var(--accent) }
+.ws-chips > .ws-twins { border: none; background: none; padding: 0 0 0 4px; color: var(--muted); display: flex; gap: 6px; align-items: center; flex-wrap: wrap }
+.ws-twin { appearance: none; border: 1px solid var(--accent); background: none; color: var(--accent); font: 500 12px var(--f-ui); padding: 3px 9px; border-radius: 99px; cursor: pointer }
+.ws-twin:hover { background: var(--accent-soft) }
+.ws-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); flex-wrap: wrap }
+.ws-tab { appearance: none; border: 1px solid transparent; border-bottom: none; background: none; color: var(--muted); font: 600 14px var(--f-ui); padding: 8px 14px 7px; border-radius: 6px 6px 0 0; margin-bottom: -1px; cursor: pointer }
+.ws-tab:hover { color: var(--fg) }
+.ws-tab[aria-selected="true"] { color: var(--fg); background: var(--surface); border-color: var(--line) }
+.panel { gap: 18px }
+.ws-sample { display: grid; gap: 8px; min-width: 0 }
+.ws-cap { margin: 0; color: var(--muted); font-size: 12.5px }
+.ws-sample .tablebox { max-height: 70vh; overflow: auto }
+.ws-sample th { font: 600 11.5px var(--f-mono); letter-spacing: 0; text-transform: none; z-index: 1 }
+.ws-sample td { font: 12px var(--f-mono); white-space: pre; max-width: 260px; overflow: hidden; text-overflow: ellipsis }
+.ws-sample td.blank { color: var(--t-empty) }
+.ws-th { appearance: none; background: none; border: none; padding: 0; font: inherit; color: var(--accent); cursor: pointer;
+  text-decoration: underline dotted; text-underline-offset: 3px }
+.ws-th:hover { text-decoration-style: solid }
+.ws-th:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px }
+/* Columns tab: the column table laid out as one card per column, with its chart on the right */
+.ws-cbox { border: none; background: none; overflow: visible }
+.ws-ctable, .ws-ctable > tbody { display: block }
+.ws-ctable > thead { display: none }
+.ws-ctable > tbody { display: grid; gap: 12px }
+.ws-ctable > tbody > tr:not(.nrow) { display: grid; grid-template-columns: repeat(2, minmax(0, 190px)) minmax(0, 1fr); grid-auto-flow: row dense;
+  gap: 10px 16px; align-items: start; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px }
+.ws-ctable > tbody > tr:not(.nrow):hover { border-color: var(--accent) }
+.ws-ctable td { display: block; border: none; padding: 0; white-space: normal; background: none !important; min-width: 0; max-width: none; text-align: left }
+.ws-ctable td.ws-idx { display: none }
+.ws-ctable td.ws-name { grid-column: 1 / 3; font-size: 16px; overflow-wrap: anywhere }
+.ws-ctable td.ws-name a, .ws-ctable td.ws-name span.mono { font-size: 15px; font-weight: 600; cursor: default; text-decoration: none }
+.ws-ctable td.rv-dec, .ws-ctable td.rv-notes, .ws-ctable td.ws-top { grid-column: 1 / 3 }
+.ws-ctable td.rv-dec::before { content: "Decision" }
+.ws-ctable td.rv-notes::before { content: "Notes" }
+.ws-ctable td[data-label]:not(.ws-name):not([data-label=""])::before { content: attr(data-label) }
+.ws-ctable td.rv-dec::before, .ws-ctable td.rv-notes::before, .ws-ctable td[data-label]:not(.ws-name):not([data-label=""])::before {
+  display: block; font: 600 10.5px var(--f-ui); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px }
+.ws-ctable td.ws-stat .fill { justify-content: flex-start }
+.ws-ctable td.ws-top { overflow-wrap: anywhere }
+.ws-ctable .rv-nb { max-width: 100%; padding-left: 0 }
+.ws-ctable td.ws-chart { grid-column: 3; grid-row: 1 / span 12 }
+.ws-ctable td.ws-chart .card { border: none; padding: 0; background: none; box-shadow: none }
+.ws-ctable td.ws-chart .card h3, .ws-ctable td.ws-chart .card > .meta, .ws-ctable td.ws-top { display: none }
+.ws-ctable > tbody > tr:has(+ tr.nrow) { border-radius: 10px 10px 0 0 }
+.ws-ctable > tbody > tr.nrow { display: block; margin-top: -13px; background: var(--bg); border: 1px solid var(--line); border-top: none; border-radius: 0 0 10px 10px }
+.ws-ctable > tbody > tr.nrow > td { display: block; padding: 10px 16px 14px }
+.ws-ctable .rv-thread { position: static; width: auto; max-width: 760px }
+.ws-ctable > tbody > tr.ws-flash { border-color: var(--warn); box-shadow: 0 0 0 2px var(--warn-soft) }
+@media (max-width: 700px) {
+  .ws-ctable > tbody > tr:not(.nrow) { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+  .ws-ctable td.ws-chart { grid-column: 1 / 3; grid-row: auto }
+}
+.ws-toggle { display: none; appearance: none; border: 1px solid var(--line); background: var(--surface); color: var(--fg); font: 600 13px var(--f-ui); padding: 8px 12px; border-radius: 8px; cursor: pointer; justify-self: start }
+@media (max-width: 900px) {
+  .ws { grid-template-columns: minmax(0, 1fr) }
+  .ws-toggle { display: inline-block }
+  .ws-side { display: none; position: static; max-height: 70vh }
+  .ws-side.show { display: grid }
+}
+/* category summary */
+.ws-grp.on .ws-grph { background: var(--accent-soft) }
+.ws-title .ws-gicon { width: 32px; height: 32px; align-self: center }
+.ws-title .ws-gicon.data { background: var(--accent-soft); color: var(--accent) }
+.ws-chip-link { color: var(--accent); font-size: 12.5px; padding: 3px 6px }
+.ws-hcard.doc b { font-weight: 500 }
+.ws-hcard small .ws-ext { font-size: 9.5px }
+/* breadcrumb menus: every level opens a list of what is inside it */
+.ws-bc .ws-bc-sep { font-style: normal; color: var(--muted); margin: 0 4px }
+.ws-bcw { position: relative; display: inline-flex; min-width: 0 }
+.ws-bc-item { appearance: none; background: none; border: none; font: inherit; color: var(--accent); cursor: pointer; padding: 2px 6px; border-radius: 6px;
+  display: inline-flex; gap: 4px; align-items: baseline; text-align: left; max-width: 100% }
+.ws-bc-item:hover, .ws-bc-item[aria-expanded="true"] { background: var(--accent-soft) }
+.ws-bc-item.here { color: var(--fg); font-weight: 600 }
+.ws-bc-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px }
+.ws-caret { font-style: normal; font-size: 10px; color: var(--muted) }
+.ws-bc-link { padding: 2px 6px }
+.ws-bcmenu { position: absolute; top: calc(100% + 4px); left: 0; z-index: 40; min-width: 240px; max-width: min(420px, 80vw); max-height: 60vh; overflow: auto;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 6px; box-shadow: 0 12px 32px rgb(0 0 0 / .22); display: grid; gap: 1px }
+.ws-bcmenu[hidden] { display: none }
+.ws-bcm { appearance: none; background: none; border: none; text-align: left; font: 13px/1.35 var(--f-ui); color: var(--fg); padding: 7px 10px; border-radius: 6px; cursor: pointer }
+.ws-bcm:hover, .ws-bcm:focus-visible { background: var(--bg); outline: none }
+.ws-bcm.on { background: var(--accent-soft); font-weight: 600 }
+.ws-bcm.on::after { content: " ✓"; color: var(--accent) }
+.ws-bcm-open { color: var(--accent); font-weight: 600 }
+.ws-bcm-sep { height: 1px; background: var(--line); margin: 4px 2px }
+/* home: a single quiet hint */
+.ws-hint-home { margin: 0; padding: 72px 16px; text-align: center; color: var(--muted); font-size: 15px }
+.ws-head:has(.ws-hint-home) { border-bottom: none }
