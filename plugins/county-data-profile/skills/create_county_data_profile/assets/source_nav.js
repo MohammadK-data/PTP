@@ -6,7 +6,9 @@ const SRCMAP = JSON.parse(document.getElementById('srcmap').textContent);
 const WS = { ready: false, home: false, group: null, started: false, gopen: new Set(), q: '', open: new Set(), tab: 'sample', dec: {}, decReady: false };
 const wsExt = url => (url.split('?')[0].match(/\.([a-z0-9]+)$/i) || [, 'link'])[1].toUpperCase();
 const WS_SITE = SRCMAP.page.short || 'website';
-const wsLinks = f => `<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(WS_SITE)} ↗</a>${f.drive ? `<a href="${esc(f.drive)}" target="_blank" rel="noopener">Our Drive ↗</a>` : ''}`;
+const wsSite = f => f.site || WS_SITE;
+const wsKind = f => f.status === 'layout' ? 'Layout document' : f.status === 'data' ? 'Data file · not downloaded' : 'Document';
+const wsLinks = f => `<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(wsSite(f))} ↗</a>${f.drive ? `<a href="${esc(f.drive)}" target="_blank" rel="noopener">Our Drive ↗</a>` : ''}`;
 
 // the table's name in the sidebar and breadcrumb: the source map's title, picked from the manifest when the map is built
 function wsLabel(key) {
@@ -112,7 +114,7 @@ function wsRenderHomeView() {
 function wsFileCard(g, gi, f, fi) {
   const t = wsFileTables(f);
   if (!t.length) return `<button type="button" class="ws-hcard doc" data-g="${gi}" data-f="${fi}"><small><span class="ws-ext">${wsExt(f.url)}</span></small><b>${esc(f.name)}</b>
-    <span class="ws-hmeta">${f.status === 'layout' ? 'Layout document' : 'Document'} · ${f.drive ? 'in our Drive' : 'not in our Drive'}</span></button>`;
+    <span class="ws-hmeta">${wsKind(f)} · ${f.drive ? 'in our Drive' : 'not in our Drive'}</span></button>`;
   const cols = t.reduce((a, k) => a + SETS[k].columns.length, 0), done = t.reduce((a, k) => a + Math.min(wsDone(k), SETS[k].columns.length), 0);
   const pct = Math.round(100 * done / (cols || 1));
   return `<button type="button" class="ws-hcard" data-g="${gi}" data-f="${fi}"><small><span class="ws-ext">${wsExt(f.url)}</span></small><b>${esc(f.name)}</b>
@@ -200,12 +202,12 @@ function wsRenderDoc() {
   const [gi, fi] = WS.doc, g = SRCMAP.groups[gi], f = g.files[fi];
   const file = decodeURIComponent(f.url.split('/').pop());
   const tables = f.export ? GROUPS.flatMap(gr => gr.datasets).filter(k => SRCMAP.tables[k] && SRCMAP.tables[k].download === f.export) : [];
-  const status = f.export ? `${tables.length} ${tables.length === 1 ? 'table' : 'tables'} on this page` : f.status === 'layout' ? 'Layout document for the exports' : 'A document; no tables on this page';
+  const status = f.export ? `${tables.length} ${tables.length === 1 ? 'table' : 'tables'} on this page` : f.status === 'layout' ? 'Layout document for the exports' : f.status === 'data' ? 'A data file we have not downloaded; no tables on this page' : 'A document; no tables on this page';
   document.getElementById('panels').hidden = true;
   wsRenderBc([['Home', 'home'], [g.name, 'group', gi], [f.name, 'doc', gi, fi]]);
   document.getElementById('ws-head').innerHTML = `    <div class="ws-title"><span class="ws-ext ws-ext-lg">${wsExt(f.url)}</span><h2>${esc(f.name)}</h2></div>
     ${g.desc ? `<p class="ws-about">${esc(g.desc)}</p>` : ''}
-    <div class="ws-docact"><a class="ws-btn primary" href="${esc(f.url)}" target="_blank" rel="noopener">Open on ${esc(WS_SITE)} ↗</a>
+    <div class="ws-docact"><a class="ws-btn primary" href="${esc(f.url)}" target="_blank" rel="noopener">Open on ${esc(wsSite(f))} ↗</a>
       ${f.drive ? `<a class="ws-btn" href="${esc(f.drive)}" target="_blank" rel="noopener">Open our Drive copy ↗</a>` : '<span class="ws-nodrive">Not in our Drive</span>'}</div>
     <dl class="ws-dfacts"><div><dt>File</dt><dd><code>${esc(file)}</code></dd></div><div><dt>On this page</dt><dd>${esc(status)}</dd></div>
       ${g.drive ? `<div><dt>Drive folder</dt><dd><a href="${esc(g.drive)}" target="_blank" rel="noopener">${esc(g.name)} ↗</a></dd></div>` : ''}</dl>

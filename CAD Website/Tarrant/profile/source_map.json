@@ -1,0 +1,1856 @@
+{
+ "page": {
+  "label": "Tarrant Appraisal District · Data Downloads",
+  "url": "https://www.tad.org/resources/data-downloads",
+  "short": "TAD",
+  "checked": "2026-11-23"
+ },
+ "groups": [
+  {
+   "name": "True Prodigy Extract Data",
+   "files": [
+    {
+     "name": "TP Appraisal Export Layout",
+     "url": "https://www.tad.org/content/data-download/TP_Legacy8.0.33-AppraisalExportLayout.zip",
+     "status": "layout",
+     "note": "The website now serves layout 8.0.33. Our copy of the export came with 8.0.32, whose record widths don't match the files; the 8.0.33 layout matches them and was used to read the tables."
+    },
+    {
+     "name": "True Prodigy Data-FullSet",
+     "url": "https://www.tad.org/content/data-download/000_Tarrant_All_Taxing_Units.zip",
+     "status": "used",
+     "note": "Revised weekly. This page was profiled from the export of Nov 13, 2026.",
+     "contents": [
+      "2026-11-13_2026_APPRAISAL_ABSTRACT_SUBDV.TXT",
+      "2026-11-13_2026_APPRAISAL_AGENT.TXT",
+      "2026-11-13_2026_APPRAISAL_ARB.TXT",
+      "2026-11-13_2026_APPRAISAL_COUNTRY_CODE.TXT",
+      "2026-11-13_2026_APPRAISAL_ENTITY.TXT",
+      "2026-11-13_2026_APPRAISAL_ENTITY_INFO.TXT",
+      "2026-11-13_2026_APPRAISAL_ENTITY_TOTALS.TXT",
+      "2026-11-13_2026_APPRAISAL_HEADER.TXT",
+      "2026-11-13_2026_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+      "2026-11-13_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+      "2026-11-13_2026_APPRAISAL_IMPROVEMENT_INFO.TXT",
+      "2026-11-13_2026_APPRAISAL_INFO.TXT",
+      "2026-11-13_2026_APPRAISAL_LAND_DETAIL.TXT",
+      "2026-11-13_2026_APPRAISAL_LAWSUIT.TXT",
+      "2026-11-13_2026_APPRAISAL_MOBILE_HOME_INFO.TXT",
+      "2026-11-13_2026_APPRAISAL_SB12.TXT",
+      "2026-11-13_2026_APPRAISAL_SKETCH_INFO.TXT",
+      "2026-11-13_2026_APPRAISAL_STATE_CODE.TXT",
+      "2026-11-13_2026_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+      "2026-11-13_2026_ARBITRATION_LAWSUIT.TXT",
+      "385f08be-dfbf-11f1-9f13-0242ac11000c_exportTotals.pdf",
+      "TP_Legacy8.0.32-AppraisalExportLayout.xlsx"
+     ],
+     "export": "true-prodigy-data-fullset"
+    }
+   ],
+   "section": "Standard Data",
+   "desc": "The full appraisal roll from TAD's True Prodigy system in the PACS Legacy appraisal export layout (fixed-width .TXT files), revised weekly."
+  },
+  {
+   "name": "Property Data",
+   "files": [
+    {
+     "name": "PropertyData & PropertyLocation layouts",
+     "url": "https://www.tad.org/content/forms/PropertyData%26PropertyLocationLayouts.pdf",
+     "status": "layout"
+    },
+    {
+     "name": "2026 PropertyData-FullSet (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData(Delimited).ZIP",
+     "status": "used",
+     "export": "2026-propertydata-fullset-certified"
+    },
+    {
+     "name": "2026 PropertyData-Residential (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData(Delimited)_R.ZIP",
+     "status": "data",
+     "note": "Have it locally; same layout as the full set, residential accounts only. Not profiled separately."
+    },
+    {
+     "name": "2026 PropertyData-Commercial (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData(Delimited)_C.ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2026 PropertyData-Personal Property (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData(Delimited)_P.ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2026 PropertyData-Minerals (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData(Delimited)_M.ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2025 PropertyData-FullSet (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_2025(Certified).ZIP",
+     "status": "used",
+     "export": "2025-propertydata-fullset-certified"
+    },
+    {
+     "name": "2025 PropertyData-Residential (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_R_2025(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2025 PropertyData-Commercial (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_C_2025(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2025 PropertyData-Personal Property (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_P_2025(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2025 PropertyData-Minerals (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_M_2025(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2024 PropertyData-FullSet (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_2024(Certified).ZIP",
+     "status": "used",
+     "export": "2024-propertydata-fullset-certified"
+    },
+    {
+     "name": "2024 PropertyData-Residential (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_R_2024(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2024 PropertyData-Commercial (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_C_2024(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2024 PropertyData-Personal Property (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_P_2024(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2024 PropertyData-Minerals (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_M_2024(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2023 PropertyData-FullSet (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_2023(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2023 PropertyData-Residential (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_R_2023(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2023 PropertyData-Commercial (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_C_2023(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2023 PropertyData-Personal Property (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_P_2023(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2023 PropertyData-Minerals (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_M_2023(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2022 PropertyData-FullSet (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_2022(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2022 PropertyData-Residential (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_R_2022(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2022 PropertyData-Commercial (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_C_2022(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2022 PropertyData-Personal Property (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_P_2022(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2022 PropertyData-Minerals (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_M_2022(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2021 PropertyData-FullSet (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_2021(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2021 PropertyData-Residential (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_R_2021(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2021 PropertyData-Commercial (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_C_2021(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2021 PropertyData-Personal Property (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_P_2021(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2021 PropertyData-Minerals (Certified)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_M_2021(Certified).ZIP",
+     "status": "data"
+    }
+   ],
+   "section": "Standard Data",
+   "desc": "The certified roll as pipe-delimited text, one file per property class (full set, residential, commercial, personal property, minerals) per year."
+  },
+  {
+   "name": "Property Data - Supplemental",
+   "files": [
+    {
+     "name": "2025 PropertyData Supplemental-Residential",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_R_2025(Certified).ZIP",
+     "status": "used",
+     "export": "2025-propertydata-supplemental-residenti"
+    },
+    {
+     "name": "2025 PropertyData Supplemental-Commercial",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_C_2025(Certified).ZIP",
+     "status": "used",
+     "export": "2025-propertydata-supplemental-commercia"
+    },
+    {
+     "name": "2025 PropertyData Supplemental-Personal Property",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_P_2025(Certified).ZIP",
+     "status": "used",
+     "export": "2025-propertydata-supplemental-personal-"
+    },
+    {
+     "name": "2025 PropertyData Supplemental-Minerals",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_M_2025(Certified).ZIP",
+     "status": "used",
+     "export": "2025-propertydata-supplemental-minerals"
+    },
+    {
+     "name": "2024 PropertyData Supplemental-Residential",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_R_2024(Certified).ZIP",
+     "status": "used",
+     "export": "2024-propertydata-supplemental-residenti"
+    },
+    {
+     "name": "2024 PropertyData Supplemental-Commercial",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_C_2024(Certified).ZIP",
+     "status": "used",
+     "export": "2024-propertydata-supplemental-commercia"
+    },
+    {
+     "name": "2024 PropertyData Supplemental-Personal Property",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_P_2024(Certified).ZIP",
+     "status": "used",
+     "export": "2024-propertydata-supplemental-personal-"
+    },
+    {
+     "name": "2024 PropertyData Supplemental-Minerals",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_M_2024(Certified).ZIP",
+     "status": "used",
+     "export": "2024-propertydata-supplemental-minerals"
+    },
+    {
+     "name": "2023 PropertyData Supplemental-Residential",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_R_2023(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2023 PropertyData Supplemental-Commercial",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_C_2023(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2023 PropertyData Supplemental-Personal Property",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_P_2023(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2023 PropertyData Supplemental-Minerals",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_M_2023(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2022 PropertyData Supplemental-Residential",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_R_2022(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2022 PropertyData Supplemental-Commercial",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_C_2022(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2022 PropertyData Supplemental-Personal Property",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_P_2022(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2022 PropertyData Supplemental-Minerals",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_M_2022(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2021 PropertyData Supplemental-Residential",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_R_2021(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2021 PropertyData Supplemental-Commercial",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_C_2021(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2021 PropertyData Supplemental-Personal Property",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_P_2021(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2021 PropertyData Supplemental-Minerals",
+     "url": "https://www.tad.org/content/data-download/PropertyDataSupplemental_M_2021(Certified).ZIP",
+     "status": "data"
+    }
+   ],
+   "section": "Standard Data",
+   "desc": "Extra fields not in Property Data, one pipe-delimited file per property class and year."
+  },
+  {
+   "name": "Property Data - Exemptions (Delimited)",
+   "files": [
+    {
+     "name": "2025 PropertyData Exemptions (Delimited)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_Exemptions_2025(Certified).ZIP",
+     "status": "used",
+     "export": "2025-propertydata-exemptions-delimited"
+    },
+    {
+     "name": "2024 PropertyData Exemptions (Delimited)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_Exemptions_2024(Certified).ZIP",
+     "status": "used",
+     "export": "2024-propertydata-exemptions-delimited"
+    },
+    {
+     "name": "2023 PropertyData Exemptions (Delimited)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_Exemptions_2023(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2022 PropertyData Exemptions (Delimited)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_Exemptions_2022(Certified).ZIP",
+     "status": "data"
+    },
+    {
+     "name": "2021 PropertyData Exemptions (Delimited)",
+     "url": "https://www.tad.org/content/data-download/PropertyData_Exemptions_2021(Certified).ZIP",
+     "status": "data"
+    }
+   ],
+   "section": "Standard Data",
+   "desc": "Exemptions per account and taxing unit. TAD is phasing this export out in favor of the True Prodigy and Property Data downloads."
+  },
+  {
+   "name": "Property Location (formerly LOCA.txt)",
+   "files": [
+    {
+     "name": "PropertyLocation (formerly LOCA.txt)",
+     "url": "https://www.tad.org/content/data-download/PropertyLocation.ZIP",
+     "status": "data"
+    },
+    {
+     "name": "Property Location layout (formerly LOCA)",
+     "url": "https://www.tad.org/content/forms/PropertyData%26PropertyLocationLayouts.pdf",
+     "status": "layout"
+    },
+    {
+     "name": "PropertyLocation (Delimited)",
+     "url": "https://www.tad.org/content/data-download/PropertyLocation(Delimited).ZIP",
+     "status": "data"
+    }
+   ],
+   "section": "Standard Data",
+   "desc": "Property location records. Being phased out in favor of the True Prodigy and Property Data downloads."
+  },
+  {
+   "name": "Mineral Appraisal Roll",
+   "files": [
+    {
+     "name": "2024 Mineral Appraisal Roll (PDF)",
+     "url": "https://www.tad.org/content/data-download/2024MineralAppraisalRoll.pdf",
+     "status": "not"
+    },
+    {
+     "name": "2024 Mineral Appraisal Roll (Record Layout)",
+     "url": "https://www.tad.org/content/data-download/2024MineralAppraisalRollRecordLayout.pdf",
+     "status": "layout"
+    },
+    {
+     "name": "2024 Mineral Appraisal Roll (TXT)",
+     "url": "https://www.tad.org/content/data-download/2024MineralAppraisalRoll.zip",
+     "status": "data"
+    },
+    {
+     "name": "2023 Mineral Appraisal Roll (PDF)",
+     "url": "https://www.tad.org/content/data-download/2023MineralAppraisalRoll.pdf",
+     "status": "not"
+    },
+    {
+     "name": "2023 Mineral Appraisal Roll (Record Layout)",
+     "url": "https://www.tad.org/content/data-download/2023MineralAppraisalRollRecordLayout.pdf",
+     "status": "layout"
+    },
+    {
+     "name": "2023 Mineral Appraisal Roll (TXT)",
+     "url": "https://www.tad.org/content/data-download/2023MineralAppraisalRoll.zip",
+     "status": "data"
+    },
+    {
+     "name": "2022 Mineral Appraisal Roll (PDF)",
+     "url": "https://www.tad.org/content/data-download/2022MineralAppraisalRoll.pdf",
+     "status": "not"
+    },
+    {
+     "name": "2022 Mineral Appraisal Roll (Record Layout)",
+     "url": "https://www.tad.org/content/data-download/2022MineralAppraisalRollRecordLayout.pdf",
+     "status": "layout"
+    },
+    {
+     "name": "2022 Mineral Appraisal Roll (TXT)",
+     "url": "https://www.tad.org/content/data-download/2022MineralAppraisalRoll.zip",
+     "status": "data"
+    },
+    {
+     "name": "2021 Mineral Appraisal Roll (PDF)",
+     "url": "https://www.tad.org/content/data-download/2021MineralAppraisalRoll.pdf",
+     "status": "not"
+    },
+    {
+     "name": "2021 Mineral Appraisal Roll (Record Layout)",
+     "url": "https://www.tad.org/content/data-download/2021MineralAppraisalRollRecordLayout.pdf",
+     "status": "layout"
+    },
+    {
+     "name": "2021 Mineral Appraisal Roll (TXT)",
+     "url": "https://www.tad.org/content/data-download/2021MineralAppraisalRoll.zip",
+     "status": "data"
+    },
+    {
+     "name": "2020 Mineral Appraisal Roll (PDF)",
+     "url": "https://www.tad.org/content/data-download/2020MineralAppraisalRoll.pdf",
+     "status": "not"
+    },
+    {
+     "name": "2020 Mineral Appraisal Roll (Record Layout)",
+     "url": "https://www.tad.org/content/data-download/2020MineralAppraisalRollRecordLayout.pdf",
+     "status": "layout"
+    },
+    {
+     "name": "2020 Mineral Appraisal Roll (TXT)",
+     "url": "https://www.tad.org/content/data-download/2020MineralAppraisalRoll.zip",
+     "status": "data"
+    },
+    {
+     "name": "2019 Mineral Appraisal Roll (PDF)",
+     "url": "https://www.tad.org/content/data-download/2019MineralAppraisalRoll.pdf",
+     "status": "not"
+    },
+    {
+     "name": "2019 Mineral Appraisal Roll (Record Layout)",
+     "url": "https://www.tad.org/content/data-download/2019MineralAppraisalRollRecordLayout.pdf",
+     "status": "layout"
+    },
+    {
+     "name": "2019 Mineral Appraisal Roll (TXT)",
+     "url": "https://www.tad.org/content/data-download/2019MineralAppraisalRoll.zip",
+     "status": "data"
+    }
+   ],
+   "section": "Standard Data",
+   "desc": "The mineral roll each year as a PDF, a fixed-width text file and its record layout."
+  },
+  {
+   "name": "Agent Summary Data",
+   "files": [
+    {
+     "name": "Agent Summary Data 2025",
+     "url": "https://www.tad.org/content/data-download/AgentSummaryData_2025.ZIP",
+     "status": "used",
+     "export": "agent-summary-data-2025"
+    },
+    {
+     "name": "Agent Summary Data 2024",
+     "url": "https://www.tad.org/content/data-download/AgentSummaryData_2024.ZIP",
+     "status": "used",
+     "export": "agent-summary-data-2024"
+    },
+    {
+     "name": "Agent Summary Data 2023",
+     "url": "https://www.tad.org/content/data-download/AgentSummaryData_2023.ZIP",
+     "status": "data"
+    },
+    {
+     "name": "Agent Summary Data 2022",
+     "url": "https://www.tad.org/content/data-download/AgentSummaryData_2022.ZIP",
+     "status": "data"
+    },
+    {
+     "name": "Agent Summary Data 2021",
+     "url": "https://www.tad.org/content/data-download/AgentSummaryData_2021.ZIP",
+     "status": "data"
+    }
+   ],
+   "section": "Standard Data",
+   "desc": "Ten related files per year (account, building, feature, land, permits, exemptions, review board ...). Being phased out."
+  },
+  {
+   "name": "Residential Comp Attribute Data",
+   "files": [
+    {
+     "name": "2026 Residential Comp Attribute Data",
+     "url": "https://www.tad.org/content/data-download/2026ResidentialCompAttributeData_1.zip",
+     "status": "used",
+     "export": "2026-residential-comp-attribute-data"
+    },
+    {
+     "name": "2025 Residential Comp Attribute Data",
+     "url": "https://www.tad.org/content/data-download/2025ResidentialCompAttributeData.zip",
+     "status": "used",
+     "export": "2025-residential-comp-attribute-data"
+    },
+    {
+     "name": "2024 Residential Comp Attribute Data",
+     "url": "https://www.tad.org/content/data-download/2024ResidentialCompAttributeData.zip",
+     "status": "used",
+     "export": "2024-residential-comp-attribute-data"
+    },
+    {
+     "name": "2023 Residential Comp Attribute Data",
+     "url": "https://www.tad.org/content/data-download/2023ResidentialCompAttributeData.zip",
+     "status": "data"
+    },
+    {
+     "name": "2022 Residential Comp Attribute Data",
+     "url": "https://www.tad.org/content/data-download/2022ResidentialCompAttributeData.zip",
+     "status": "data"
+    },
+    {
+     "name": "2021 Residential Comp Attribute Data",
+     "url": "https://www.tad.org/content/data-download/2021ResidentialCompAttributeData.zip",
+     "status": "data"
+    },
+    {
+     "name": "2020 Residential Comp Attribute Data",
+     "url": "https://www.tad.org/content/data-download/2020ResidentialCompAttributeData.zip",
+     "status": "data"
+    },
+    {
+     "name": "2019 Residential Comp Attribute Data",
+     "url": "https://www.tad.org/content/data-download/2019ResidentialCompAttributeData.zip",
+     "status": "data"
+    }
+   ],
+   "section": "Residential Property Data",
+   "desc": "Residential comparable attributes per account, one workbook per year."
+  },
+  {
+   "name": "Residential Features Value Data",
+   "files": [
+    {
+     "name": "2026 Residential Features Value Data",
+     "url": "https://www.tad.org/content/data-download/2026ResidentialFeaturesValue.zip",
+     "status": "used",
+     "note": "The 2026 download holds 2026ResidentialImprovementDetails.xlsx: the file was renamed from Features Value to Improvement Details.",
+     "export": "2026-residential-features-value-data"
+    },
+    {
+     "name": "2025 Residential Features Value Data",
+     "url": "https://www.tad.org/content/data-download/2025ResidentialFeaturesValue.zip",
+     "status": "used",
+     "export": "2025-residential-features-value-data"
+    },
+    {
+     "name": "2024 Residential Features Value Data",
+     "url": "https://www.tad.org/content/data-download/2024ResidentialFeaturesValue.zip",
+     "status": "used",
+     "export": "2024-residential-features-value-data"
+    },
+    {
+     "name": "2023 Residential Features Value Data",
+     "url": "https://www.tad.org/content/data-download/2023ResidentialFeaturesValue.zip",
+     "status": "data"
+    },
+    {
+     "name": "2022 Residential Features Value Data",
+     "url": "https://www.tad.org/content/data-download/2022ResidentialFeaturesValue.zip",
+     "status": "data"
+    }
+   ],
+   "section": "Residential Property Data",
+   "desc": "Residential feature and improvement detail values per account, one workbook per year."
+  },
+  {
+   "name": "Median Ratios",
+   "files": [
+    {
+     "name": "2026 Median Ratios by ISD - Single Family",
+     "url": "https://www.tad.org/content/data-download/2026MedianRatiosbyISD_SingleFamily.pdf",
+     "status": "not"
+    },
+    {
+     "name": "2025 Median Ratios by ISD - Single Family",
+     "url": "https://www.tad.org/content/data-download/2025MedianRatiosbyISD_SingleFamily.pdf",
+     "status": "not"
+    },
+    {
+     "name": "2024 Median Ratios by ISD - Single Family",
+     "url": "https://www.tad.org/content/data-download/2024MedianRatiosbyISD_SingleFamily.pdf",
+     "status": "not"
+    },
+    {
+     "name": "2023 Median Ratios by ISD - Single Family",
+     "url": "https://www.tad.org/content/data-download/2023MedianRatiosbyISD_SingleFamily.pdf",
+     "status": "not"
+    },
+    {
+     "name": "2022 Median Ratios by ISD - Single Family",
+     "url": "https://www.tad.org/content/data-download/2022MedianRatiosbyISD_SingleFamily.pdf",
+     "status": "not"
+    },
+    {
+     "name": "2021 Median Ratios by ISD - Single Family",
+     "url": "https://www.tad.org/content/data-download/2021MedianRatiosbyISD_SingleFamily.pdf",
+     "status": "not"
+    },
+    {
+     "name": "2020 Median Ratios by ISD - Single Family",
+     "url": "https://www.tad.org/content/data-download/2020MedianRatiosbyISD_SingleFamily.pdf",
+     "status": "not"
+    }
+   ],
+   "section": "Residential Property Data",
+   "desc": "Single-family median appraisal ratios by school district, each year."
+  },
+  {
+   "name": "Residential Appraisal Manual",
+   "files": [
+    {
+     "name": "2026 Residential Appraisal Manual",
+     "url": "https://www.tad.org/content/data-download/2026ResidentialAppraisalManual.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1eoPHVMQgLnJGIt-7nZUsmST2BGzS54Ql/view"
+    },
+    {
+     "name": "2025 Residential Appraisal Manual",
+     "url": "https://www.tad.org/content/data-download/2025ResidentialAppraisalManual.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1bGUAQNuwnt0A5cS-pvhe_FqRzC8QpBAO/view"
+    },
+    {
+     "name": "2024 Residential Appraisal Manual",
+     "url": "https://www.tad.org/content/data-download/2024ResidentialAppraisalManual.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1P5I-92YVadCfHcDUyAcnqlQnkHID3pbt/view"
+    },
+    {
+     "name": "2023 Residential Appraisal Manual",
+     "url": "https://www.tad.org/content/data-download/2023ResidentialAppraisalManual.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1_XViDPXd8LUI8OYDqY80tYWKPdLZ3cXt/view"
+    }
+   ],
+   "section": "Residential Property Data",
+   "desc": "How TAD values residential property: schedules, classes and adjustments.",
+   "drive": "https://drive.google.com/drive/folders/1-yEwLhWq2aLxQkNbd04yBz35I5CzGTer"
+  },
+  {
+   "name": "2026 Commercial Property Documentation",
+   "files": [
+    {
+     "name": "2026 Comm Equal Uniform",
+     "url": "https://www.tad.org/content/data-download/2026CommercialEqualandUniform.zip",
+     "status": "data"
+    },
+    {
+     "name": "2026 Comm Improved Sales",
+     "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+     "status": "data"
+    },
+    {
+     "name": "2026 Comm Income Expense Comps",
+     "url": "https://www.tad.org/content/data-download/2026CommIncomeandExpense.zip",
+     "status": "data"
+    },
+    {
+     "name": "2026 Comm Market Data Cap Rate",
+     "url": "https://www.tad.org/content/data-download/2026CommMarketDataandCapRates.zip",
+     "status": "data"
+    },
+    {
+     "name": "2026 Comm Land Sales",
+     "url": "https://www.tad.org/content/data-download/2026CommLandSales.zip",
+     "status": "data"
+    },
+    {
+     "name": "2026 Comm Permits",
+     "url": "https://www.tad.org/content/data-download/2026CommPermits.zip",
+     "status": "data"
+    }
+   ],
+   "section": "Commercial Property Data",
+   "desc": "TAD's 2026 commercial valuation support: equal-and-uniform, sales, income and expense, cap rates, land and permits."
+  },
+  {
+   "name": "2025 Commercial Property Documentation",
+   "files": [
+    {
+     "name": "2025 Comm Equal Uniform",
+     "url": "https://www.tad.org/content/data-download/2025CommercialEqualandUniform.zip",
+     "status": "data"
+    },
+    {
+     "name": "2025 Comm Improved Sales",
+     "url": "https://www.tad.org/content/data-download/2025CommImprovedSales.zip",
+     "status": "data"
+    },
+    {
+     "name": "2025 Comm Income Expense Comps",
+     "url": "https://www.tad.org/content/data-download/2025CommIncomeandExpense.zip",
+     "status": "data"
+    },
+    {
+     "name": "2025 Comm Market Data Cap Rate",
+     "url": "https://www.tad.org/content/data-download/2025CommMarketDataandCapRates.zip",
+     "status": "data"
+    },
+    {
+     "name": "2025 Comm Land Sales",
+     "url": "https://www.tad.org/content/data-download/2025CommLandSales.zip",
+     "status": "data"
+    },
+    {
+     "name": "2025 Comm Permits",
+     "url": "https://www.tad.org/content/data-download/2025CommPermits.zip",
+     "status": "data"
+    }
+   ],
+   "section": "Commercial Property Data",
+   "desc": "TAD's 2025 commercial valuation support: equal-and-uniform, sales, income and expense, cap rates, land and permits."
+  },
+  {
+   "name": "2024 Commercial Property Documentation",
+   "files": [
+    {
+     "name": "2024 Comm Equal Uniform",
+     "url": "https://www.tad.org/content/data-download/2024CommEqualandUniform.zip",
+     "status": "data"
+    },
+    {
+     "name": "2024 Comm Improved Sales",
+     "url": "https://www.tad.org/content/data-download/2024CommImprovedSales.zip",
+     "status": "data"
+    },
+    {
+     "name": "2024 Comm Income Expense Comps",
+     "url": "https://www.tad.org/content/data-download/2024CommIncomeandExpense.zip",
+     "status": "data"
+    },
+    {
+     "name": "2024 Comm Market Data Cap Rate",
+     "url": "https://www.tad.org/content/data-download/2024CommMarketDataandCapRates.zip",
+     "status": "data"
+    },
+    {
+     "name": "2024 Comm Land Sales",
+     "url": "https://www.tad.org/content/data-download/2024CommLandSales.zip",
+     "status": "data"
+    },
+    {
+     "name": "2024 Comm Permits",
+     "url": "https://www.tad.org/content/data-download/2024CommPermits.zip",
+     "status": "data"
+    }
+   ],
+   "section": "Commercial Property Data",
+   "desc": "TAD's 2024 commercial valuation support: equal-and-uniform, sales, income and expense, cap rates, land and permits."
+  },
+  {
+   "name": "2023 Commercial Property Documentation",
+   "files": [
+    {
+     "name": "2023 Comm Equal Uniform",
+     "url": "https://www.tad.org/content/data-download/2023CommEqualandUniform.zip",
+     "status": "data"
+    },
+    {
+     "name": "2023 Comm Improved Sales",
+     "url": "https://www.tad.org/content/data-download/2023CommImprovedSales.zip",
+     "status": "data"
+    },
+    {
+     "name": "2023 Comm Income Expense Comps",
+     "url": "https://www.tad.org/content/data-download/2023CommIncomeandExpense.zip",
+     "status": "data"
+    },
+    {
+     "name": "2023 Comm Land Maps",
+     "url": "https://www.tad.org/content/data-download/2023CommLandSalesandListingsMaps_Non-proprietary.zip",
+     "status": "data"
+    },
+    {
+     "name": "2023 Comm Market Data Cap Rate",
+     "url": "https://www.tad.org/content/data-download/2023CommMarketDataandCapRates.zip",
+     "status": "data"
+    },
+    {
+     "name": "2023 Comm Land Sales",
+     "url": "https://www.tad.org/content/data-download/2023CommLandSales_Non-proprietary.zip",
+     "status": "data"
+    },
+    {
+     "name": "2023 Comm Permits",
+     "url": "https://www.tad.org/content/data-download/2023CommPermits.zip",
+     "status": "data"
+    }
+   ],
+   "section": "Commercial Property Data",
+   "desc": "TAD's 2023 commercial valuation support: equal-and-uniform, sales, income and expense, cap rates, land and permits."
+  },
+  {
+   "name": "2022 Commercial Property Documentation",
+   "files": [
+    {
+     "name": "2022 Comm Equal Uniform",
+     "url": "https://www.tad.org/content/data-download/2022CommEqualandUniform.zip",
+     "status": "data"
+    },
+    {
+     "name": "2022 Comm Improved Sales",
+     "url": "https://www.tad.org/content/data-download/2022CommImprovedSales.zip",
+     "status": "data"
+    },
+    {
+     "name": "2022 Comm Income Expense Comps",
+     "url": "https://www.tad.org/content/data-download/2022CommIncomeandExpense.zip",
+     "status": "data"
+    },
+    {
+     "name": "2022 Comm Land Maps",
+     "url": "https://www.tad.org/content/data-download/2022CommLandSaleandListingMaps_Proprietary.zip",
+     "status": "data"
+    },
+    {
+     "name": "2022 Comm Market Data Cap Rate",
+     "url": "https://www.tad.org/content/data-download/2022CommMarketDataandCapRates.zip",
+     "status": "data"
+    },
+    {
+     "name": "2022 Comm Land Sales",
+     "url": "https://www.tad.org/content/data-download/2022CommLandSales_Non-proprietary.zip",
+     "status": "data"
+    },
+    {
+     "name": "2022 Comm Permits",
+     "url": "https://www.tad.org/content/data-download/2022CommPermits.zip",
+     "status": "data"
+    }
+   ],
+   "section": "Commercial Property Data",
+   "desc": "TAD's 2022 commercial valuation support: equal-and-uniform, sales, income and expense, cap rates, land and permits."
+  },
+  {
+   "name": "2021 Commercial Property Documentation",
+   "files": [
+    {
+     "name": "2021 Comm Equal Uniform",
+     "url": "https://www.tad.org/content/data-download/2021CommericalEqualAndUniform.zip",
+     "status": "data"
+    },
+    {
+     "name": "2021 Comm Improved Sales",
+     "url": "https://www.tad.org/content/data-download/2018-2021ImprovedSales-Non-Proprietary.zip",
+     "status": "data"
+    },
+    {
+     "name": "2021 Comm Income Expense Comps",
+     "url": "https://www.tad.org/content/data-download/2018-2021%20Rent%20Comps_%20In%20Place%20Leases%20and%20Asking%20Rents.zip",
+     "status": "data"
+    },
+    {
+     "name": "2021 Comm Land Maps",
+     "url": "https://www.tad.org/content/data-download/2021CommercialLandMaps.zip",
+     "status": "data"
+    },
+    {
+     "name": "2021 Comm Market Data Cap Rate",
+     "url": "https://www.tad.org/content/data-download/2021CommercialMarketAndCapRateData.zip",
+     "status": "data"
+    },
+    {
+     "name": "2021 Comm Land Sales",
+     "url": "https://www.tad.org/content/data-download/2021CommercialLandSales.zip",
+     "status": "data"
+    },
+    {
+     "name": "2021 Comm Permits",
+     "url": "https://www.tad.org/content/data-download/2021CommercialBuildingPermits.zip",
+     "status": "data"
+    }
+   ],
+   "section": "Commercial Property Data",
+   "desc": "TAD's 2021 commercial valuation support: equal-and-uniform, sales, income and expense, cap rates, land and permits."
+  },
+  {
+   "name": "2020 Commercial Property Documentation",
+   "files": [
+    {
+     "name": "2020 Comm Equal Uniform",
+     "url": "https://www.tad.org/content/data-download/2020CommericalEqualAndUniform.zip",
+     "status": "data"
+    },
+    {
+     "name": "2020 Comm Improved Sales",
+     "url": "https://www.tad.org/content/data-download/2020CommercialImprovedSales%26HotelandMotelERRMsAndValues.zip",
+     "status": "data"
+    },
+    {
+     "name": "2020 Comm Income Expense Comps",
+     "url": "https://www.tad.org/content/data-download/2020IncomeAndExpenseComparables.zip",
+     "status": "data"
+    },
+    {
+     "name": "2020 Comm Land Maps",
+     "url": "https://www.tad.org/content/data-download/2020CommercialLandMaps.zip",
+     "status": "data"
+    },
+    {
+     "name": "2020 Comm Market Data Cap Rate",
+     "url": "https://www.tad.org/content/data-download/2020CommercialMarketAndCapRateData.zip",
+     "status": "data"
+    },
+    {
+     "name": "2020 Comm Permits",
+     "url": "https://www.tad.org/content/data-download/2020CommercialBuildingPermits.zip",
+     "status": "data"
+    }
+   ],
+   "section": "Commercial Property Data",
+   "desc": "TAD's 2020 commercial valuation support: equal-and-uniform, sales, income and expense, cap rates, land and permits."
+  },
+  {
+   "name": "2019 Commercial Property Documentation",
+   "files": [
+    {
+     "name": "2019 Comm Equal Uniform",
+     "url": "https://www.tad.org/content/data-download/2019CommericalEqualAndUniform.zip",
+     "status": "data"
+    },
+    {
+     "name": "2019 Comm Improved Sales",
+     "url": "https://www.tad.org/content/data-download/2019CommercialImprovedSales.zip",
+     "status": "data"
+    },
+    {
+     "name": "2019 Comm Income Expense Comps",
+     "url": "https://www.tad.org/content/data-download/2019IncomeAndExpenseComparables.zip",
+     "status": "data"
+    },
+    {
+     "name": "2019 Comm Land Maps",
+     "url": "https://www.tad.org/content/data-download/2019CommercialLandMaps.zip",
+     "status": "data"
+    },
+    {
+     "name": "2019 Comm Market Data Cap Rate",
+     "url": "https://www.tad.org/content/data-download/2019CommercialMarketAndCapRateData.zip",
+     "status": "data"
+    },
+    {
+     "name": "2019 Comm Permits",
+     "url": "https://www.tad.org/content/data-download/2019CommercialPermits.zip",
+     "status": "data"
+    }
+   ],
+   "section": "Commercial Property Data",
+   "desc": "TAD's 2019 commercial valuation support: equal-and-uniform, sales, income and expense, cap rates, land and permits."
+  },
+  {
+   "name": "MAP Reviews",
+   "files": [
+    {
+     "name": "2024 MAP Review",
+     "url": "https://www.tad.org/content/data-download/tarrant-2024.pdf",
+     "status": "not"
+    },
+    {
+     "name": "2022 MAP Review",
+     "url": "https://comptroller.texas.gov/taxes/property-tax/map/2022/tarrant-2022.pdf",
+     "status": "not"
+    },
+    {
+     "name": "2020 MAP Review",
+     "url": "https://comptroller.texas.gov/taxes/property-tax/map/2020/tarrant-2020.pdf",
+     "status": "not"
+    },
+    {
+     "name": "2018 MAP Review",
+     "url": "https://comptroller.texas.gov/taxes/property-tax/map/2018/tarrant-2018.pdf",
+     "status": "not"
+    },
+    {
+     "name": "2016 MAP Review",
+     "url": "https://comptroller.texas.gov/taxes/property-tax/map/2016/tarrant-2016.pdf",
+     "status": "not"
+    }
+   ],
+   "section": "Methods and Assistance Program (MAP)",
+   "desc": "The Comptroller's biennial review of TAD's governance, taxpayer assistance, procedures and appraisal standards."
+  },
+  {
+   "name": "Pre-Generated Maps",
+   "files": [
+    {
+     "name": "Homestead Exemption QC Review Map",
+     "url": "https://www.tad.org/content/gis-data/QC%20Exemption%20Sector%20map01.pdf",
+     "status": "not"
+    },
+    {
+     "name": "2026 Tax Maps",
+     "url": "https://www.tad.org/content/gis-data/2026TaxMaps.zip",
+     "status": "data"
+    },
+    {
+     "name": "2025 Tax Maps",
+     "url": "https://www.tad.org/content/gis-data/2025TaxMaps.zip",
+     "status": "data"
+    },
+    {
+     "name": "2024 Tax Maps",
+     "url": "https://www.tad.org/content/gis-data/2024TaxMaps.zip",
+     "status": "data"
+    },
+    {
+     "name": "2023 Tax Maps",
+     "url": "https://www.tad.org/content/gis-data/2023TaxMaps.zip",
+     "status": "data"
+    },
+    {
+     "name": "2022 Tax Maps",
+     "url": "https://www.tad.org/content/gis-data/2022TaxMaps.zip",
+     "status": "data"
+    },
+    {
+     "name": "2021 Tax Maps",
+     "url": "https://www.tad.org/content/gis-data/2021TaxMaps.zip",
+     "status": "data"
+    },
+    {
+     "name": "2020 Tax Maps",
+     "url": "https://www.tad.org/content/gis-data/2020TaxMaps.zip",
+     "status": "data"
+    },
+    {
+     "name": "2019 Tax Maps",
+     "url": "https://www.tad.org/content/gis-data/2019TaxMaps.zip",
+     "status": "data"
+    },
+    {
+     "name": "2018 Tax Maps",
+     "url": "https://www.tad.org/content/gis-data/2018TaxMaps.zip",
+     "status": "data"
+    },
+    {
+     "name": "Abstracts",
+     "url": "https://www.tad.org/content/gis-data/Tarr-Co-Abstracts-2010.pdf",
+     "status": "not"
+    },
+    {
+     "name": "City Limits",
+     "url": "https://www.tad.org/content/gis-data/Tarr_Co_Cities.pdf",
+     "status": "not"
+    },
+    {
+     "name": "School Districts",
+     "url": "https://www.tad.org/content/gis-data/Tarr_Co_Schools.pdf",
+     "status": "not"
+    },
+    {
+     "name": "Neighborhood",
+     "url": "https://www.tad.org/content/gis-data/Tarr_Co_NBHD.pdf",
+     "status": "not"
+    },
+    {
+     "name": "TIFs",
+     "url": "https://www.tad.org/content/gis-data/Tarr_Co_TIFs.pdf",
+     "status": "not"
+    },
+    {
+     "name": "PIDs",
+     "url": "https://www.tad.org/content/gis-data/Tarr_Co_PIDs.pdf",
+     "status": "not"
+    },
+    {
+     "name": "TAD's Map Grid",
+     "url": "https://www.tad.org/content/gis-data/MapGrid.pdf",
+     "status": "not"
+    },
+    {
+     "name": "County Map with Street Names",
+     "url": "https://www.tad.org/content/gis-data/Tarr%20Co%20Streets%202010.pdf",
+     "status": "not"
+    },
+    {
+     "name": "Utility Districts",
+     "url": "https://www.tad.org/content/gis-data/Tarrant-Co-Utility-Dist.pdf",
+     "status": "not"
+    }
+   ],
+   "section": "GIS Data",
+   "desc": "Ready-made PDF maps and yearly tax map sets."
+  },
+  {
+   "name": "ESRI Map Packages (.Mpk)",
+   "files": [
+    {
+     "name": "2025 Parcels",
+     "url": "https://www.tad.org/content/gis-data/2025ESRI_Parcels.zip",
+     "status": "data"
+    },
+    {
+     "name": "2024 Parcels",
+     "url": "https://www.tad.org/content/gis-data/2024ESRI_Parcels.zip",
+     "status": "data"
+    },
+    {
+     "name": "2023 Parcels",
+     "url": "https://www.tad.org/content/gis-data/2023ESRI_Parcels.zip",
+     "status": "data"
+    },
+    {
+     "name": "2022 Parcels",
+     "url": "https://www.tad.org/content/gis-data/2022ESRI_Parcels.zip",
+     "status": "data"
+    },
+    {
+     "name": "2021 Parcels",
+     "url": "https://www.tad.org/content/gis-data/2021ESRI_Parcels.zip",
+     "status": "data"
+    },
+    {
+     "name": "2020 Parcels",
+     "url": "https://www.tad.org/content/gis-data/2020ESRI_Parcels.zip",
+     "status": "data"
+    },
+    {
+     "name": "2019 Parcels",
+     "url": "https://www.tad.org/content/gis-data/2019ESRI_Parcels.zip",
+     "status": "data"
+    },
+    {
+     "name": "2018 Parcels",
+     "url": "https://www.tad.org/content/gis-data/2018ESRI_Parcels.zip",
+     "status": "data"
+    }
+   ],
+   "section": "GIS Data",
+   "desc": "Parcel map packages for ESRI software, one per year."
+  },
+  {
+   "name": "Geodatabase Files",
+   "files": [
+    {
+     "name": "Abstracts",
+     "url": "https://www.tad.org/content/gis-data/Abstracts.zip",
+     "status": "data"
+    },
+    {
+     "name": "Cities",
+     "url": "https://www.tad.org/content/gis-data/Cities.zip",
+     "status": "data"
+    },
+    {
+     "name": "County",
+     "url": "https://www.tad.org/content/gis-data/County.zip",
+     "status": "data"
+    },
+    {
+     "name": "Creeks",
+     "url": "https://www.tad.org/content/gis-data/Creeks.zip",
+     "status": "data"
+    },
+    {
+     "name": "ECU",
+     "url": "https://www.tad.org/content/gis-data/ECU.zip",
+     "status": "data"
+    },
+    {
+     "name": "Lakes",
+     "url": "https://www.tad.org/content/gis-data/Lakes.zip",
+     "status": "data"
+    },
+    {
+     "name": "MUDS",
+     "url": "https://www.tad.org/content/gis-data/MUDS.zip",
+     "status": "data"
+    },
+    {
+     "name": "MapGrid",
+     "url": "https://www.tad.org/content/gis-data/MapGrid.zip",
+     "status": "data"
+    },
+    {
+     "name": "Neighborhoods",
+     "url": "https://www.tad.org/content/gis-data/Neighborhoods.zip",
+     "status": "data"
+    },
+    {
+     "name": "PIDS",
+     "url": "https://www.tad.org/content/gis-data/PIDS.zip",
+     "status": "data"
+    },
+    {
+     "name": "ParcelView",
+     "url": "https://www.tad.org/content/gis-data/ParcelView.zip",
+     "status": "data"
+    },
+    {
+     "name": "Parcels",
+     "url": "https://www.tad.org/content/gis-data/Parcels.zip",
+     "status": "data"
+    },
+    {
+     "name": "Parcels GeoDatabase",
+     "url": "https://www.tad.org/content/gis-data/Parcels_GeoDatabase.zip",
+     "status": "data"
+    },
+    {
+     "name": "Railroads",
+     "url": "https://www.tad.org/content/gis-data/Railroads.zip",
+     "status": "data"
+    },
+    {
+     "name": "Schools",
+     "url": "https://www.tad.org/content/gis-data/Schools.zip",
+     "status": "data"
+    },
+    {
+     "name": "Subdivisions",
+     "url": "https://www.tad.org/content/gis-data/Subdivisions.zip",
+     "status": "data"
+    },
+    {
+     "name": "TIFS",
+     "url": "https://www.tad.org/content/gis-data/TIFS.zip",
+     "status": "data"
+    },
+    {
+     "name": "TarrRegWD",
+     "url": "https://www.tad.org/content/gis-data/TarrRegWD.zip",
+     "status": "data"
+    },
+    {
+     "name": "Viridian MMD",
+     "url": "https://www.tad.org/content/gis-data/Viridian_MMD.zip",
+     "status": "data"
+    }
+   ],
+   "section": "GIS Data",
+   "desc": "GIS layers as zipped geodatabase files: parcels, boundaries, districts and features."
+  },
+  {
+   "name": "Agent Portal API",
+   "files": [
+    {
+     "name": "Sign-in",
+     "url": "https://claude.ai/artifact/48aBPV9cFz3EQWsLxHDfrR",
+     "status": "used",
+     "site": "API docs",
+     "export": "api-auth"
+    },
+    {
+     "name": "Agent account",
+     "url": "https://claude.ai/artifact/48aBPV9cFz3EQWsLxHDfrR",
+     "status": "used",
+     "site": "API docs",
+     "export": "api-account"
+    },
+    {
+     "name": "Properties & protests",
+     "url": "https://claude.ai/artifact/48aBPV9cFz3EQWsLxHDfrR",
+     "status": "used",
+     "site": "API docs",
+     "export": "api-props"
+    },
+    {
+     "name": "Notices & evidence",
+     "url": "https://claude.ai/artifact/48aBPV9cFz3EQWsLxHDfrR",
+     "status": "used",
+     "site": "API docs",
+     "export": "api-docs"
+    },
+    {
+     "name": "Hearings & case activity",
+     "url": "https://claude.ai/artifact/48aBPV9cFz3EQWsLxHDfrR",
+     "status": "used",
+     "site": "API docs",
+     "export": "api-hearings"
+    },
+    {
+     "name": "Appointment of agent",
+     "url": "https://claude.ai/artifact/48aBPV9cFz3EQWsLxHDfrR",
+     "status": "used",
+     "site": "API docs",
+     "export": "api-aoa"
+    },
+    {
+     "name": "Mass downloads",
+     "url": "https://claude.ai/artifact/48aBPV9cFz3EQWsLxHDfrR",
+     "status": "used",
+     "site": "API docs",
+     "export": "api-mass"
+    },
+    {
+     "name": "Mass protests",
+     "url": "https://claude.ai/artifact/48aBPV9cFz3EQWsLxHDfrR",
+     "status": "used",
+     "site": "API docs",
+     "export": "api-protest"
+    }
+   ],
+   "section": "Agent Portal API (not on this page)",
+   "desc": "TAD's True Prodigy agent portal endpoints, profiled from the API documentation's example responses (a sample, not the full data)."
+  }
+ ],
+ "tables": {
+  "tp26-appraisal-abstract-subdv": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_APPRAISAL_ABSTRACT_SUBDV.TXT",
+   "layout": "File #5 · Abstract/Subdivision List (APPRAISAL_ABSTRACT_SUBDV.TXT)",
+   "title": "Abstract/Subdivision List"
+  },
+  "tp26-appraisal-agent": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_APPRAISAL_AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)",
+   "title": "Agent"
+  },
+  "tp26-appraisal-arb": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_APPRAISAL_ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)",
+   "title": "Active ARB Properties"
+  },
+  "tp26-appraisal-country-code": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_APPRAISAL_COUNTRY_CODE.TXT",
+   "layout": "File #16 · Country Codes (APPRAISAL_COUNTRY_CODE.TXT)",
+   "title": "Country Codes"
+  },
+  "tp26-appraisal-entity": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_APPRAISAL_ENTITY.TXT",
+   "layout": "File #14 · Entity (APPRAISAL_ENTITY.TXT)",
+   "title": "Entity"
+  },
+  "tp26-appraisal-entity-info": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_APPRAISAL_ENTITY_INFO.TXT",
+   "layout": "File #3 · Property-Entity Association (APPRAISAL_ENTITY_INFO.TXT)",
+   "title": "Property-Entity Association"
+  },
+  "tp26-appraisal-entity-totals": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_APPRAISAL_ENTITY_TOTALS.TXT",
+   "layout": "File #4 · Entity Totals (APPRAISAL_ENTITY_TOTALS.TXT)",
+   "title": "Entity Totals"
+  },
+  "tp26-appraisal-header": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_APPRAISAL_HEADER.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)",
+   "title": "Header File"
+  },
+  "tp26-appraisal-improvement-detail": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+   "layout": "File #8 · Improvement Detail (APPRAISAL_IMPROVEMENT_DETAIL.TXT)",
+   "title": "Improvement Detail"
+  },
+  "tp26-appraisal-improvement-detail-attr": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+   "layout": "File #9 · Improvement Features (APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT)",
+   "title": "Improvement Features"
+  },
+  "tp26-appraisal-improvement-info": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_APPRAISAL_IMPROVEMENT_INFO.TXT",
+   "layout": "File #7 · Improvements (APPRAISAL_IMPROVEMENT_INFO.TXT)",
+   "title": "Improvements"
+  },
+  "tp26-appraisal-info": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_APPRAISAL_INFO.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)",
+   "title": "Property"
+  },
+  "tp26-appraisal-land-detail": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_APPRAISAL_LAND_DETAIL.TXT",
+   "layout": "File #10 · Land (APPRAISAL_LAND_DETAIL.TXT)",
+   "title": "Land"
+  },
+  "tp26-appraisal-lawsuit": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_APPRAISAL_LAWSUIT.TXT",
+   "layout": "File #13 · Active Lawsuit Properties (APPRAISAL_LAWSUIT.TXT)",
+   "title": "Active Lawsuit Properties"
+  },
+  "tp26-appraisal-mobile-home-info": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_APPRAISAL_MOBILE_HOME_INFO.TXT",
+   "layout": "File #18 · Mobile Home Info (APPRAISAL_MOBILE_HOME_INFO.TXT)",
+   "title": "Mobile Home Info"
+  },
+  "tp26-appraisal-sb12": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_APPRAISAL_SB12.TXT",
+   "layout": "Tab-separated, no header; column names as in the Denton and Travis exports",
+   "title": "SB12"
+  },
+  "tp26-appraisal-sketch-info": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_APPRAISAL_SKETCH_INFO.TXT",
+   "layout": "File #20 · Sketches (APPRAISAL_SKETCH_INFO.TXT)",
+   "title": "Sketches"
+  },
+  "tp26-appraisal-state-code": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_APPRAISAL_STATE_CODE.TXT",
+   "layout": "File #6 · Property Tax Division Codes (APPRAISAL_STATE_CODE.TXT)",
+   "title": "Property Tax Division Codes"
+  },
+  "tp26-appraisal-tax-deferral-info": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+   "layout": "File #19 · Tax Deferral  Info (APPRAISAL_TAX_DEFERRAL_INFO.TXT)",
+   "title": "Tax Deferral Info"
+  },
+  "tp26-arbitration-lawsuit": {
+   "download": "true-prodigy-data-fullset",
+   "raw": "2026-11-13_2026_ARBITRATION_LAWSUIT.TXT",
+   "layout": "File #17 · Properties in Arbitration (ARBITRATION_LAWSUIT.TXT)",
+   "title": "Properties in Arbitration"
+  },
+  "y2026": {
+   "download": "2026-propertydata-fullset-certified",
+   "raw": "PropertyData(Delimited)_2026.txt",
+   "layout": "PropertyData & PropertyLocation layouts (PDF)",
+   "title": "Property Data"
+  },
+  "y2025": {
+   "download": "2025-propertydata-fullset-certified",
+   "raw": "PropertyData_2025.txt",
+   "layout": "PropertyData & PropertyLocation layouts (PDF)",
+   "title": "Property Data"
+  },
+  "y2024": {
+   "download": "2024-propertydata-fullset-certified",
+   "raw": "PropertyData_2024.txt",
+   "layout": "PropertyData & PropertyLocation layouts (PDF)",
+   "title": "Property Data"
+  },
+  "supp-R": {
+   "download": "2025-propertydata-supplemental-residenti",
+   "raw": "PropertyDataSupplemental_R_2025.txt",
+   "layout": "Header row in the file",
+   "title": "R · Residential"
+  },
+  "supp-C": {
+   "download": "2025-propertydata-supplemental-commercia",
+   "raw": "PropertyDataSupplemental_C_2025.txt",
+   "layout": "Header row in the file",
+   "title": "C · Commercial"
+  },
+  "supp-P": {
+   "download": "2025-propertydata-supplemental-personal-",
+   "raw": "PropertyDataSupplemental_P_2025.txt",
+   "layout": "Header row in the file",
+   "title": "P · Business personal property"
+  },
+  "supp-M": {
+   "download": "2025-propertydata-supplemental-minerals",
+   "raw": "PropertyDataSupplemental_M_2025.txt",
+   "layout": "Header row in the file",
+   "title": "M · Mineral"
+  },
+  "supp24-R": {
+   "download": "2024-propertydata-supplemental-residenti",
+   "raw": "PropertyDataSupplemental_R_2024.txt",
+   "layout": "Header row in the file",
+   "title": "R · Residential"
+  },
+  "supp24-C": {
+   "download": "2024-propertydata-supplemental-commercia",
+   "raw": "PropertyDataSupplemental_C_2024.txt",
+   "layout": "Header row in the file",
+   "title": "C · Commercial"
+  },
+  "supp24-P": {
+   "download": "2024-propertydata-supplemental-personal-",
+   "raw": "PropertyDataSupplemental_P_2024.txt",
+   "layout": "Header row in the file",
+   "title": "P · Business personal property"
+  },
+  "supp24-M": {
+   "download": "2024-propertydata-supplemental-minerals",
+   "raw": "PropertyDataSupplemental_M_2024.txt",
+   "layout": "Header row in the file",
+   "title": "M · Mineral"
+  },
+  "exempt-2025": {
+   "download": "2025-propertydata-exemptions-delimited",
+   "raw": "PropertyData_Exemptions_2025.txt",
+   "layout": "Header row in the file",
+   "title": "Exemptions 2025"
+  },
+  "exempt-2024": {
+   "download": "2024-propertydata-exemptions-delimited",
+   "raw": "PropertyData_Exemptions_2024.txt",
+   "layout": "Header row in the file",
+   "title": "Exemptions 2024"
+  },
+  "agent25-1_Account": {
+   "download": "agent-summary-data-2025",
+   "raw": "AgentSummaryData_1_Account.txt",
+   "layout": "Header row in the file",
+   "title": "Account"
+  },
+  "agent25-2_Building": {
+   "download": "agent-summary-data-2025",
+   "raw": "AgentSummaryData_2_Building.txt",
+   "layout": "Header row in the file",
+   "title": "Building"
+  },
+  "agent25-3_Feature": {
+   "download": "agent-summary-data-2025",
+   "raw": "AgentSummaryData_3_Feature.txt",
+   "layout": "Header row in the file",
+   "title": "Feature"
+  },
+  "agent25-4_CAccount": {
+   "download": "agent-summary-data-2025",
+   "raw": "AgentSummaryData_4_CAccount.txt",
+   "layout": "Header row in the file",
+   "title": "Commercial account"
+  },
+  "agent25-5_LandSegment": {
+   "download": "agent-summary-data-2025",
+   "raw": "AgentSummaryData_5_LandSegment.txt",
+   "layout": "Header row in the file",
+   "title": "Land segment"
+  },
+  "agent25-6_BuildingPermit": {
+   "download": "agent-summary-data-2025",
+   "raw": "AgentSummaryData_6_BuildingPermit.txt",
+   "layout": "Header row in the file",
+   "title": "Building permit"
+  },
+  "agent25-7_XYGeo": {
+   "download": "agent-summary-data-2025",
+   "raw": "AgentSummaryData_7_XYGeo.txt",
+   "layout": "Header row in the file",
+   "title": "XY geo"
+  },
+  "agent25-8_Exemption": {
+   "download": "agent-summary-data-2025",
+   "raw": "AgentSummaryData_8_Exemption.txt",
+   "layout": "Header row in the file",
+   "title": "Exemption"
+  },
+  "agent25-9_ReviewBoard": {
+   "download": "agent-summary-data-2025",
+   "raw": "AgentSummaryData_9_ReviewBoard.txt",
+   "layout": "Header row in the file",
+   "title": "Review board"
+  },
+  "agent25-10_Basement": {
+   "download": "agent-summary-data-2025",
+   "raw": "AgentSummaryData_10_Basement.txt",
+   "layout": "Header row in the file",
+   "title": "Basement"
+  },
+  "agent-1_Account": {
+   "download": "agent-summary-data-2024",
+   "raw": "AgentSummaryData_1_Account.txt",
+   "layout": "Header row in the file",
+   "title": "Account"
+  },
+  "agent-2_Building": {
+   "download": "agent-summary-data-2024",
+   "raw": "AgentSummaryData_2_Building.txt",
+   "layout": "Header row in the file",
+   "title": "Building"
+  },
+  "agent-3_Feature": {
+   "download": "agent-summary-data-2024",
+   "raw": "AgentSummaryData_3_Feature.txt",
+   "layout": "Header row in the file",
+   "title": "Feature"
+  },
+  "agent-4_CAccount": {
+   "download": "agent-summary-data-2024",
+   "raw": "AgentSummaryData_4_CAccount.txt",
+   "layout": "Header row in the file",
+   "title": "Commercial account"
+  },
+  "agent-5_LandSegment": {
+   "download": "agent-summary-data-2024",
+   "raw": "AgentSummaryData_5_LandSegment.txt",
+   "layout": "Header row in the file",
+   "title": "Land segment"
+  },
+  "agent-6_BuildingPermit": {
+   "download": "agent-summary-data-2024",
+   "raw": "AgentSummaryData_6_BuildingPermit.txt",
+   "layout": "Header row in the file",
+   "title": "Building permit"
+  },
+  "agent-7_XYGeo": {
+   "download": "agent-summary-data-2024",
+   "raw": "AgentSummaryData_7_XYGeo.txt",
+   "layout": "Header row in the file",
+   "title": "XY geo"
+  },
+  "agent-8_Exemption": {
+   "download": "agent-summary-data-2024",
+   "raw": "AgentSummaryData_8_Exemption.txt",
+   "layout": "Header row in the file",
+   "title": "Exemption"
+  },
+  "agent-9_ReviewBoard": {
+   "download": "agent-summary-data-2024",
+   "raw": "AgentSummaryData_9_ReviewBoard.txt",
+   "layout": "Header row in the file",
+   "title": "Review board"
+  },
+  "agent-10_Basement": {
+   "download": "agent-summary-data-2024",
+   "raw": "AgentSummaryData_10_Basement.txt",
+   "layout": "Header row in the file",
+   "title": "Basement"
+  },
+  "comp-2026": {
+   "download": "2026-residential-comp-attribute-data",
+   "raw": "2026ResidentialCompAttributeData.xlsx",
+   "layout": "Header row in the workbook",
+   "title": "Residential Comp Attributes"
+  },
+  "comp-2025": {
+   "download": "2025-residential-comp-attribute-data",
+   "raw": "2025ResidentialCompAttributeData.xlsx",
+   "layout": "Header row in the workbook",
+   "title": "Residential Comp Attributes"
+  },
+  "comp-2024": {
+   "download": "2024-residential-comp-attribute-data",
+   "raw": "2024ResidentialCompAttributeData.xlsx",
+   "layout": "Header row in the workbook",
+   "title": "Residential Comp Attributes"
+  },
+  "feat-2026": {
+   "download": "2026-residential-features-value-data",
+   "raw": "2026ResidentialImprovementDetails.xlsx",
+   "layout": "Header row in the workbook",
+   "title": "Residential Features"
+  },
+  "feat-2025": {
+   "download": "2025-residential-features-value-data",
+   "raw": "2025ResidentialFeaturesValue.xlsx",
+   "layout": "Header row in the workbook",
+   "title": "Residential Features"
+  },
+  "feat-2024": {
+   "download": "2024-residential-features-value-data",
+   "raw": "2024ResidentialFeaturesValue.xlsx",
+   "layout": "Header row in the workbook",
+   "title": "Residential Features"
+  },
+  "api-office-token": {
+   "download": "api-auth",
+   "raw": "POST /trueprodigy/cadpublic/auth/token",
+   "layout": "Portal API docs: Office Token",
+   "title": "Office Token"
+  },
+  "api-agent-token": {
+   "download": "api-auth",
+   "raw": "POST /trueprodigy/auth/token",
+   "layout": "Portal API docs: Agent Token",
+   "title": "Agent Token"
+  },
+  "api-agent-info": {
+   "download": "api-account",
+   "raw": "GET /public/agent/{agent_id}",
+   "layout": "Portal API docs: Agent Info",
+   "title": "Agent Info"
+  },
+  "api-agent-summary": {
+   "download": "api-account",
+   "raw": "GET /public/agent/{agent_id}/summary",
+   "layout": "Portal API docs: Agent Summary",
+   "title": "Agent Summary"
+  },
+  "api-agent-profile": {
+   "download": "api-account",
+   "raw": "GET /trueprodigy/user/{user_id}/publicprofile",
+   "layout": "Portal API docs: Agent Profile",
+   "title": "Agent Profile"
+  },
+  "api-agent-confrence-configuration": {
+   "download": "api-account",
+   "raw": "GET /conference/configuration",
+   "layout": "Portal API docs: Agent Confrence Configuration",
+   "title": "Conference configuration"
+  },
+  "api-agent-properties": {
+   "download": "api-props",
+   "raw": "POST /public/agent/{agent_id}/properties",
+   "layout": "Portal API docs: Agent Properties",
+   "title": "Agent Properties"
+  },
+  "api-agent-prior-year-appeals": {
+   "download": "api-props",
+   "raw": "POST /public/agent/{agent_id}/properties/prioryears",
+   "layout": "Portal API docs: Agent Prior Year Appeals",
+   "title": "Agent Prior Year Appeals"
+  },
+  "api-view-current-fiduciary-info": {
+   "download": "api-props",
+   "raw": "GET /public/agent/{agent_id}/property/{property_id}/fiduciary",
+   "layout": "Portal API docs: View Current Fiduciary Info",
+   "title": "Fiduciary (agent appointment)"
+  },
+  "api-view-appraisal-notice": {
+   "download": "api-docs",
+   "raw": "GET /public/agent/{agent_id}/property/{property_id}/appraisalnotice",
+   "layout": "Portal API docs: View Appraisal Notice",
+   "title": "View Appraisal Notice"
+  },
+  "api-view-notice-of-hearing": {
+   "download": "api-docs",
+   "raw": "GET /public/agent/{agent_id}/property/{property_id}/hearingnotice",
+   "layout": "Portal API docs: View Notice of Hearing",
+   "title": "View Notice of Hearing"
+  },
+  "api-view-board-order": {
+   "download": "api-docs",
+   "raw": "GET /public/agent/{agent_id}/property/{property_id}/boardorder",
+   "layout": "Portal API docs: View Board Order",
+   "title": "View Board Order"
+  },
+  "api-view-cad-evidence": {
+   "download": "api-docs",
+   "raw": "GET /prodigyappeals/appeal/{appeal_id}/presentation/file",
+   "layout": "Portal API docs: View Cad Evidence",
+   "title": "CAD evidence"
+  },
+  "api-agent-meetings-that-need-checkin": {
+   "download": "api-hearings",
+   "raw": "GET /public/agent/{agent_id}/meetingsthatneedcheckin",
+   "layout": "Portal API docs: Agent Meetings that need checkin",
+   "title": "Meetings to check in"
+  },
+  "api-agent-informal-meetings-that-needs-checkin": {
+   "download": "api-hearings",
+   "raw": "GET /public/agent/{agent_id}/informalmeetingsthatneedcheckin",
+   "layout": "Portal API docs: Agent Informal Meetings that needs checkin",
+   "title": "Informal meetings to check in"
+  },
+  "api-case-activity": {
+   "download": "api-hearings",
+   "raw": "GET /prodigyappeals/appeal/{appeal_id}/portalactivity",
+   "layout": "Portal API docs: Case Activity",
+   "title": "Case Activity"
+  },
+  "api-download-activity-attachment": {
+   "download": "api-hearings",
+   "raw": "GET /prodigyappeals/appealactivity/{activity_id}/file/tarrant/{file_id}",
+   "layout": "Portal API docs: Download Activity Attachment",
+   "title": "Download Activity Attachment"
+  },
+  "api-appoinment-of-agent": {
+   "download": "api-aoa",
+   "raw": "GET /prodigyappeals/agent/{agent_id}/massaoa",
+   "layout": "Portal API docs: Appoinment of Agent",
+   "title": "Mass AOA jobs"
+  },
+  "api-appointment-of-agents-processed-details": {
+   "download": "api-aoa",
+   "raw": "GET /prodigyappeals/agentmassaoa/{mass_id}/properties",
+   "layout": "Portal API docs: Appointment of Agents processed details",
+   "title": "AOA job properties"
+  },
+  "api-download-log": {
+   "download": "api-mass",
+   "raw": "GET /prodigyappeals/appeal/agent/{agent_id}/massdownloads",
+   "layout": "Portal API docs: Download Log",
+   "title": "Download Log"
+  },
+  "api-download-log-success": {
+   "download": "api-mass",
+   "raw": "GET /prodigyappeals/appeal/agent/{agent_id}/massdownload/{run_id}/completed",
+   "layout": "Portal API docs: Download log Success",
+   "title": "Download log: completed"
+  },
+  "api-download-log-error": {
+   "download": "api-mass",
+   "raw": "GET /prodigyappeals/appeal/agent/{agent_id}/massdownload/{run_id}/errored",
+   "layout": "Portal API docs: Download log error",
+   "title": "Download log: errored"
+  },
+  "api-download-file-of-download-logs": {
+   "download": "api-mass",
+   "raw": "GET /export/fileurl/tarrant/{file_id}",
+   "layout": "Portal API docs: Download file of Download Logs",
+   "title": "Download file"
+  },
+  "api-mass-protest-history": {
+   "download": "api-protest",
+   "raw": "GET /prodigyappeals/agent/{agent_id}/massprotestlistings",
+   "layout": "Portal API docs: Mass Protest History",
+   "title": "Mass Protest History"
+  },
+  "api-mass-protest-history-properties": {
+   "download": "api-protest",
+   "raw": "GET /prodigyappeals/agent/massprotestlisting/15550/Mass%20Create/properties",
+   "layout": "Portal API docs: Mass Protest History Properties",
+   "title": "Mass protest properties"
+  },
+  "api-mass-protest-history-errors": {
+   "download": "api-protest",
+   "raw": "GET /prodigyappeals/agent/massprotestlisting/{run_id}/Mass%20Create/errors",
+   "layout": "Portal API docs: Mass Protest History Errors",
+   "title": "Mass protest errors"
+  }
+ },
+ "drive": {
+  "label": "Google Drive · County Playbooks › Tarrant › Public Information",
+  "checked": "2026-11-23",
+  "url": "https://drive.google.com/drive/folders/1T_MqjVYKwNwdY5GH-buCIrQFjgi1Xdxr"
+ }
+}

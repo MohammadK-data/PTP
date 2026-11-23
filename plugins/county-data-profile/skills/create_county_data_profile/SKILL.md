@@ -33,7 +33,7 @@ an absolute path, a script name, or the manifest's root or data folders.
 | List anomalies worth a note | `find_anomalies.py manifest.json profile.json [KEY...]` | stdout |
 | Build the profile page | `build_page.py manifest.json profile.json api.json\|- out.html [--allow-missing]` | the page |
 | Make the column-review copy | `add_column_review.py <county>-data-profile.html` | `review/<county>-column-review.html` |
-| Map every table to the website file it comes from | `build_source_map.py catalog.json manifest.json source_map.json [--drive drive.json]` | source_map.json |
+| Map every table to the website file it comes from | `build_source_map.py catalog.json manifest.json source_map.json [--drive drive.json] [--api api.json]` | source_map.json |
 | Turn the review copy into the workspace | `add_source_nav.py <review.html> source_map.json <out.html> manifest.json` | workspace page |
 
 Each script's docstring has its full options. Assets: `template.html` (profile page), `review.css`/`review.js`
@@ -102,7 +102,8 @@ is the same; don't copy its groups, keys or file list - every county's are its o
     - `build_source_map.py catalog.json manifest.json source_map.json --drive drive.json`. It fails until every
       profiled dataset belongs to exactly one catalog file (`tables` patterns): that is the check that every table
       is traced to a website file. The Drive listing comes from the Google Drive connector (`references/sources.md`);
-      leave out `--drive` if the team keeps no copies.
+      leave out `--drive` if the team keeps no copies. With a portal API, pass `--api api.json` and give the portal its
+      own catalog section (one file per endpoint group, `link_label` for the docs link), so endpoints appear too.
     - `add_source_nav.py review/<county>-column-review.html source_map.json review/<county>-column-review.html manifest.json`
       (in place; it refuses a page that already has a map, so always start from a fresh `add_column_review.py` copy).
     - Check it in the browser: Home shows only the hint; a group shows its summary; a data file expands into its

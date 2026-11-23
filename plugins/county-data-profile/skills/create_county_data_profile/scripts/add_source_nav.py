@@ -85,11 +85,14 @@ def build(page: pathlib.Path, srcmap: pathlib.Path, out: pathlib.Path, manifest:
 
 
 def find_leaks(s, manifest=None):
-    """Local file locations in the page: absolute paths, script names, and (with the manifest) its root and the
+    """Local file locations in the page: absolute paths, our script names, and (with the manifest) its root and the
     folders of every dataset path. Names of the CAD's own files (PROP.TXT, x.csv) are fine; our folders are not."""
     # this machine's own locations; a Windows-style path in the CAD's data (Q:\\...) is the CAD's, not ours
-    pats = [r"(?<![\w.])/(?:Users|home|private|tmp|var/folders|mnt|Volumes)/[\w./ -]+", r"\b\w+\.py\b", r"\bvenv/",
+    pats = [r"(?<![\w.])/(?:Users|home|private|tmp|var/folders|mnt|Volumes)/[\w./ -]+", r"\bvenv/",
             re.escape(str(pathlib.Path.home()))]
+    # our own scripts by name (the skill's, and the county folder's when the manifest is given); a script name
+    # inside the CAD's data or API examples is theirs, not ours
+    scripts = {x.name for x in pathlib.Path(__file__).resolve().parent.glob("*.py")}
     if os.name == "nt":
         pats.append(r"\b[A-Za-z]:\\(?:Users|Documents and Settings)\\[\w\\. -]+")
     if manifest:
@@ -97,8 +100,11 @@ def find_leaks(s, manifest=None):
         root = m.get("root", "").rstrip("/")
         if root:
             pats += [re.escape(root), re.escape(pathlib.Path(root).name) + "/"]
+        if root and pathlib.Path(root).is_dir():
+            scripts |= {x.name for x in pathlib.Path(root).rglob("*.py") if "venv" not in x.parts and "site-packages" not in x.parts}
         dirs = {str(pathlib.PurePosixPath(d["path"]).parent) for d in m.get("datasets", {}).values() if d.get("path")}
         pats += [r"(?<![\w.])" + re.escape(x) + "/" for x in sorted(dirs) if x not in (".", "")]
+    pats += [r"\b" + re.escape(n) + r"\b" for n in sorted(scripts)]
     return sorted(set(re.findall("|".join(pats), s)))
 
 

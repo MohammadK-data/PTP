@@ -6,6 +6,7 @@ Inputs, all per county (nothing here knows any county):
                   "sections": [{"name", "groups": [{"name", "desc", "files": [
                       {"name", "url", "role": "data" | "layout" | "doc", "note",
                        "contents": [...] | "local": "<folder or .zip, relative to the manifest root>",
+                       "link_label": "<link text instead of page.short, for files hosted elsewhere>",
                        "tables": ["<dataset key or glob>", ...], "layout": "<default layout text for its tables>"}]}]}]}
                  "tables" ties a download to the datasets profiled from it. "local" is listed here (folder files or
                  zip members) to fill "contents" and is never written out.
@@ -17,7 +18,11 @@ Inputs, all per county (nothing here knows any county):
                   "files": {"<file name>": id}}. Files match by the website file name, ignoring a "-<digit>"
                  suffix (duplicate uploads) on either side.
 
-Usage: python3 -I build_source_map.py catalog.json manifest.json source_map.json [--drive drive.json]
+  api.json       Optional (--api): the portal endpoints profiled by profile_api.py. Their keys can then be listed in
+                 a catalog file's "tables" like any dataset (a section for the portal, a file per endpoint group with
+                 the docs link). Each endpoint's raw name is "<METHOD> <path>".
+
+Usage: python3 -I build_source_map.py catalog.json manifest.json source_map.json [--drive drive.json] [--api api.json]
 """
 import fnmatch
 import json
@@ -86,18 +91,29 @@ def add_drive(groups, drive):
     return out if "url" in out else None
 
 
-def main(catalog_path, manifest_path, out_path, drive_path=None):
+def main(catalog_path, manifest_path, out_path, drive_path=None, api_path=None):
     cat = json.loads(Path(catalog_path).read_text())
     man = json.loads(Path(manifest_path).read_text())
     root = man.get("root", str(Path(manifest_path).parent))
-    sets = {k: d for k, d in man["datasets"].items() if not d.get("placeholder")}
+    sets = {k: d for k, d in man["datasets"].items() if not d.get("placeholder") and "path" in d}
+    if api_path:
+        for k, a in json.loads(Path(api_path).read_text())["sets"].items():
+            api = a.get("api", {})
+            sets[k] = dict(man["datasets"].get(k, {}), label=a.get("label", k), path=k,
+                           raw=f"{api.get('method', '')} {api.get('path', '')}".strip() or k,
+                           layout=f"Portal API docs: {api.get('name', a.get('label', k))}")
     name = titles(man)
+    for k, d in sets.items():
+        if name.get(k, k) == k:
+            name[k] = d.get("nav_label") or re.sub(r"^\d+ · ", "", d.get("label", k))
     groups, tables, ids, claimed = [], {}, set(), {}
     for sec in cat["sections"]:
         for g in sec["groups"]:
             files = []
             for f in g["files"]:
                 row = {"name": f["name"], "url": f["url"], "status": "used" if f.get("tables") else f.get("role", "doc")}
+                if f.get("link_label"):
+                    row["site"] = f["link_label"]
                 if row["status"] == "doc":
                     row["status"] = "not"
                 if f.get("note"):
@@ -139,11 +155,12 @@ def main(catalog_path, manifest_path, out_path, drive_path=None):
 
 if __name__ == "__main__":
     a = sys.argv[1:]
-    drive = None
-    if "--drive" in a:
-        i = a.index("--drive")
-        drive = a[i + 1]
-        del a[i:i + 2]
+    opt = {}
+    for flag in ("--drive", "--api"):
+        if flag in a:
+            i = a.index(flag)
+            opt[flag] = a[i + 1]
+            del a[i:i + 2]
     if len(a) != 3:
         raise SystemExit(__doc__)
-    main(*a, drive_path=drive)
+    main(*a, drive_path=opt.get("--drive"), api_path=opt.get("--api"))

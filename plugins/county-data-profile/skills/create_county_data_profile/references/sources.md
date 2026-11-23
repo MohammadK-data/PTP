@@ -28,7 +28,8 @@ own words for section, group and file names, in the website's order.
           "note": "<what someone should know: which snapshot we profiled, a newer upload we don't have ...>",
           "tables": ["<dataset key or glob>", ...],  // the manifest datasets profiled from this download
           "layout": "<what documents its tables>",   // default for datasets without their own "layout"
-          "contents": ["<file inside the zip>", ...] // or "local": "<folder or .zip under the manifest root>"
+          "contents": ["<file inside the zip>", ...], // or "local": "<folder or .zip under the manifest root>"
+          "link_label": "API docs"                 // optional link text for a file not hosted on the CAD site
          }]}]}]
 }
 ```
@@ -43,6 +44,10 @@ own words for section, group and file names, in the website's order.
   `layout` names the document and entry that describes it (`"File #2 · Property (<layout file>)"`).
   `nav_label` overrides the sidebar name. By default it is the dataset label without its `N · ` prefix, or the
   group label when the dataset is the only one in its year and its label only repeats that year's label.
+- **Portal API**: with `build_source_map.py --api api.json`, endpoint keys can be listed in `tables` like datasets.
+  Add a section for the portal (it isn't on the website page) with one file per endpoint group, linking the docs.
+- Data files we haven't downloaded stay in the catalog with `"role": "data"` and no `tables`; the page labels
+  them "not downloaded" so the team sees what else exists.
 - When the website now links a newer upload than the one we profiled, keep the website link and say so in `note`.
 
 ## drive.json - the team's copies (optional)
