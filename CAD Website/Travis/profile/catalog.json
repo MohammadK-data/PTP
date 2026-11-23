@@ -1,0 +1,543 @@
+{
+ "page": {
+  "label": "Travis CAD · Public Information",
+  "url": "https://traviscad.org/publicinformation",
+  "checked": "2026-11-23",
+  "short": "TCAD"
+ },
+ "sections": [
+  {
+   "name": "Publicly Available Data",
+   "groups": [
+    {
+     "name": "Export Layout File Explanation",
+     "desc": "The field-by-field layout of every file in the PACS appraisal exports: positions, lengths and meanings.",
+     "files": [
+      {
+       "name": "Export Layouts",
+       "url": "https://traviscad.org/wp-content/largefiles/Website_Legacy8.0.33-AppraisalExportLayout_06182026.zip",
+       "role": "layout",
+       "note": "Field-by-field layout of every .TXT in the appraisal exports.",
+       "contents": [
+        "Legacy8.0.33-AppraisalExportLayout.xlsx",
+        "Legacy8.0.33-AppraisalExportLayout.pdf"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Other Exports",
+     "desc": "The bulk data exports: the certified and supplemental appraisal roll (fixed-width .TXT files) and the JSON special exports.",
+     "files": [
+      {
+       "name": "2026 Certified Appraisal Export (July)",
+       "url": "https://traviscad.org/wp-content/largefiles/2026%20Certified%20Appraisal%20Export%20Supp%200_07182026.zip",
+       "note": "The certified roll, exported July 18.",
+       "id": "cert",
+       "local": "Data/2026 Certified Appraisal Export Supp 0_07182026/",
+       "tables": [
+        "c26-*"
+       ]
+      },
+      {
+       "name": "2026 Certified Special Export (JSON) (July)",
+       "url": "https://traviscad.org/wp-content/largefiles/2026%20Certified%20JSON%20SUPP%200%2007182026.zip",
+       "note": "One JSON object per property. Each nested list in it is its own table on this page.",
+       "id": "json-cert",
+       "contents": [
+        "Travis-protaxExport-20260719.json"
+       ],
+       "tables": [
+        "jc-*"
+       ]
+      },
+      {
+       "name": "2026 Supplemental Appraisal Roll Export",
+       "url": "https://traviscad.org/wp-content/largefiles/travis_SUPP%20336_2026_WEBSITE%20EXPORT_Renamed.zip",
+       "note": "Supplement 3, exported October 6. This page was profiled from SUPP 335, downloaded earlier. The website link now points to a newer upload, SUPP 336.",
+       "id": "supp",
+       "local": "Data/travis_SUPP 335_2026_WEBSITE EXPORT_Renamed/",
+       "tables": [
+        "s26-*"
+       ]
+      },
+      {
+       "name": "2026 Supplemental Special Export (JSON)",
+       "url": "https://traviscad.org/wp-content/largefiles/2026%20Special%20export%20Supp%204%2011062026.zip",
+       "note": "Profiled from our earlier download of this export (Oct 6). The website link now points to a newer upload, Supp 4 of Nov 6, which is not on this page.",
+       "id": "json-oct",
+       "contents": [
+        "Travis-protaxExport-20261006.json"
+       ],
+       "tables": [
+        "jo-*"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Protest Information",
+     "desc": "Guides and policies for tax agents: hearing check-in, the agent portal, ARB policy and letters, and residential class guidelines.",
+     "files": [
+      {
+       "name": "Agent Formal Hearing Check In Instructions",
+       "url": "https://traviscad.org/wp-content/uploads/Agent-ARB-Hearing-Instructions.pdf"
+      },
+      {
+       "name": "Agent Portal Tutorial",
+       "url": "https://traviscad.org/wp-content/uploads/Agent-Portal-Tutorial-Updated-1.pdf"
+      },
+      {
+       "name": "TCAD Updates for Tax Agents 2026 Presentation",
+       "url": "https://traviscad.org/wp-content/uploads/Agent-Meeting_2026.pdf"
+      },
+      {
+       "name": "ARB Agent Policy",
+       "url": "https://traviscad.org/wp-content/uploads/Revised-Agent-Policy-April-16-2025-1.pdf"
+      },
+      {
+       "name": "2026 ARB Letter to Agents",
+       "url": "https://traviscad.org/wp-content/uploads/2026-TARB-Agent-Letter.pdf"
+      },
+      {
+       "name": "Single Family Residence Class and Conditions Guidelines",
+       "url": "https://traviscad.org/wp-content/uploads/Single-Family-Construction.pdf"
+      }
+     ]
+    },
+    {
+     "name": "Certified Totals Reports",
+     "desc": "Roll totals by taxing unit as certified each July: market, exempt and taxable values. Useful to check our totals against the CAD's.",
+     "files": [
+      {
+       "name": "2026 Certified Totals Report",
+       "url": "https://traviscad.org/wp-content/uploads/totals_2026_AsOfRollCorr_0_RunID_6885_20260718_171007.pdf"
+      },
+      {
+       "name": "2025 Certified Totals Report",
+       "url": "https://traviscad.org/wp-content/uploads/totals_2025_AsOfRollCorr_15_RunID_6881_20260717_195104.pdf"
+      },
+      {
+       "name": "2024 Certified Totals Report",
+       "url": "https://traviscad.org/wp-content/uploads/totals_2024_AsOfRollCorr_29_RunID_6880_20260717_192846.pdf"
+      },
+      {
+       "name": "2023 Certified Totals Report",
+       "url": "https://traviscad.org/wp-content/uploads/totals_2023_AsOfRollCorr_42_RunID_6879_20260717_191041.pdf"
+      },
+      {
+       "name": "2022 Certified Totals Report",
+       "url": "https://traviscad.org/wp-content/uploads/totals_2022_AsOfRollCorr_53_RunID_6878_20260717_184951.pdf"
+      }
+     ]
+    },
+    {
+     "name": "Electronic Appraisal Roll Submission (EARS) to Comptroller",
+     "desc": "The appraisal roll the CAD sends the Comptroller each August, with totals PDFs; the data files are profiled on this page.",
+     "files": [
+      {
+       "name": "Electronic Records Submission Manual",
+       "url": "https://traviscad.org/wp-content/uploads/96-1051-Electronic-Appraisal-Roll-Submission-Manual.pdf"
+      },
+      {
+       "name": "2026 EARS Submission",
+       "url": "https://traviscad.org/wp-content/largefiles/227EARS082626.zip",
+       "note": "Comptroller (PTD) submission: totals PDFs plus a nested data .zip. The nested 227EARS .csv mixes three record types (AJR, AUD, TU2); each is its own table on this page, with column names from the Comptroller's manual 96-1051.",
+       "id": "ears-2026",
+       "contents": [
+        "2026 Tax Rates.xlsx",
+        "2026-2 Totals_PTD.pdf",
+        "2026_2_PTD_50_253_TOTALS.pdf",
+        "2026_2_PTD_ACREAGE_DETAIL_TOTALS.pdf",
+        "2026_2_PTD_ACREAGE_TOTALS.pdf",
+        "2026_2_PTD_ASSUMPTION.pdf",
+        "2026_2_PTD_CITY_50_109_TOTALS.pdf",
+        "2026_2_PTD_COUNTY_50_105_TOTALS.pdf",
+        "2026_2_PTD_SCHOOL_50_108_TOTALS.pdf",
+        "2026_2_PTD_SCHOOL_LIMITATION_DETAIL_TOTALS.pdf",
+        "2026_2_PTD_SPECIAL_DISTRICT_50_868_TOTALS.pdf",
+        "227EARS082626.zip",
+        "227_50_897_082626_Revised.xlsx",
+        "227_EARS_MIF_082626_Signed.pdf",
+        "Tax Office Files for Abated Lawsuits, Sales & Deferrals/ (5 files)"
+       ],
+       "tables": [
+        "ears26-*"
+       ]
+      },
+      {
+       "name": "2025 EARS Submission",
+       "url": "https://traviscad.org/wp-content/largefiles/227EARS090425.zip",
+       "note": "Comptroller (PTD) submission: totals PDFs plus a nested data .zip. The nested 227EARS .csv mixes three record types (AJR, AUD, TU2); each is its own table on this page, with column names from the Comptroller's manual 96-1051.",
+       "id": "ears-2025",
+       "contents": [
+        "2025-3 Totals PTD.pdf",
+        "2025_PTD_50_253_TOTALS.pdf",
+        "2025_PTD_50_897.zip",
+        "2025_PTD_ACREAGE_DETAIL_TOTALS.pdf",
+        "2025_PTD_ACREAGE_TOTALS.pdf",
+        "2025_PTD_ASSUMPTION.pdf",
+        "2025_PTD_CITY_50_109_TOTALS.pdf",
+        "2025_PTD_COUNTY_50_105_TOTALS.pdf",
+        "2025_PTD_SCHOOL_50_108_TOTALS.pdf",
+        "2025_PTD_SCHOOL_LIMITATION_DETAIL_TOTALS.pdf",
+        "2025_PTD_SPECIAL_DISTRICT_50_868_TOTALS.pdf",
+        "227_EARS_MIF_090425_Signed.pdf",
+        "227EARS090425.zip"
+       ],
+       "tables": [
+        "ears25-*"
+       ]
+      },
+      {
+       "name": "2024 EARS Submission",
+       "url": "https://traviscad.org/wp-content/largefiles/227EARS082824%20%282%29.zip",
+       "note": "Comptroller (PTD) submission: totals PDFs plus a nested data .zip. The nested 227EARS .csv mixes three record types (AJR, AUD, TU2); each is its own table on this page, with column names from the Comptroller's manual 96-1051.",
+       "id": "ears-2024",
+       "contents": [
+        "2024 Totals supp 1 PTD.pdf",
+        "2024_PTD_50_253_TOTALS.pdf",
+        "2024_PTD_50_897.zip",
+        "2024_PTD_ACREAGE_DETAIL_TOTALS.pdf",
+        "2024_PTD_ACREAGE_TOTALS.pdf",
+        "2024_PTD_ASSUMPTION.pdf",
+        "2024_PTD_CITY_50_109_TOTALS.pdf",
+        "2024_PTD_COUNTY_50_105_TOTALS.pdf",
+        "2024_PTD_SCHOOL_50_108_TOTALS.pdf",
+        "2024_PTD_SCHOOL_LIMITATION_DETAIL_TOTALS.pdf",
+        "2024_PTD_SPECIAL_DISTRICT_50_868_TOTALS.pdf",
+        "227_EARS_MIF_082824_Signed.pdf",
+        "227EARS082824.zip"
+       ],
+       "tables": [
+        "ears24-*"
+       ]
+      },
+      {
+       "name": "2023 EARS Submission",
+       "url": "https://traviscad.org/wp-content/largefiles/227EARS082923%20%282%29.zip",
+       "note": "Comptroller (PTD) submission: totals PDFs plus a nested data .zip. The nested 227EARS .csv mixes three record types (AJR, AUD, TU2); each is its own table on this page, with column names from the Comptroller's manual 96-1051.",
+       "id": "ears-2023",
+       "contents": [
+        "2023 Totals supp 2 PTD.pdf",
+        "2023_PTD_50_253_TOTALS.pdf",
+        "2023_PTD_ACREAGE_DETAIL_TOTALS.pdf",
+        "2023_PTD_ACREAGE_TOTALS.pdf",
+        "2023_PTD_ASSUMPTION.pdf",
+        "2023_PTD_CITY_50_109_TOTALS.pdf",
+        "2023_PTD_COUNTY_50_105_TOTALS.pdf",
+        "2023_PTD_SCHOOL_50_108_TOTALS.pdf",
+        "2023_PTD_SCHOOL_LIMITATION_DETAIL_TOTALS.pdf",
+        "2023_PTD_SPECIAL_DISTRICT_50_868_TOTALS.pdf",
+        "227EARS082923.zip (holds 227EARS083023.csv)",
+        "227_EARS_MIF_082923_Signed.pdf"
+       ],
+       "tables": [
+        "ears23-*"
+       ]
+      },
+      {
+       "name": "2022 EARS Submission",
+       "url": "https://traviscad.org/wp-content/largefiles/227EARS092822%20%282%29.zip",
+       "note": "Comptroller (PTD) submission: totals PDFs plus a nested data .zip. The nested 227EARS .csv mixes three record types (AJR, AUD, TU2); each is its own table on this page, with column names from the Comptroller's manual 96-1051.",
+       "id": "ears-2022",
+       "contents": [
+        "2022 Totals supp 2.pdf",
+        "2022_PTD_50_253.pdf",
+        "2022_PTD_ACREAGE.pdf",
+        "2022_PTD_ACREAGE_DETAIL.pdf",
+        "2022_PTD_ASSUMPTION.pdf",
+        "2022_PTD_CITY_50_109.pdf",
+        "2022_PTD_COUNTY_50_105.pdf",
+        "2022_PTD_SCHOOL_50_108.pdf",
+        "2022_PTD_SCHOOL_LIMITATION_DETAIL.pdf",
+        "2022_PTD_SPECIAL_DISTRICT_50_868.pdf",
+        "227EARS092822.zip",
+        "227_2022 EARS Tax Rate Submission.xlsx",
+        "227_EARS_MIF_092822_Signed.pdf"
+       ],
+       "tables": [
+        "ears22-*"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Property Reports",
+     "desc": "Property-level reports: new subdivisions and condos, ag activity, land comments, improvement details and waterfront front footage.",
+     "files": [
+      {
+       "name": "Subdivision and Condominium Report 2026",
+       "url": "https://traviscad.org/wp-content/uploads/2026-NewSubdivisionListReport.pdf"
+      },
+      {
+       "name": "AG Activities Report 2026",
+       "url": "https://traviscad.org/wp-content/uploads/ag_activities_2026.csv",
+       "id": "rpt-ag",
+       "tables": [
+        "rpt-ag"
+       ]
+      },
+      {
+       "name": "Land Comment Report 2026",
+       "url": "https://traviscad.org/wp-content/uploads/land_comments_2026.csv",
+       "id": "rpt-land",
+       "tables": [
+        "rpt-land"
+       ]
+      },
+      {
+       "name": "Improvement Details Report 2026",
+       "url": "https://traviscad.org/wp-content/largefiles/improvement_detail_2026.zip",
+       "note": "Four CSVs with the same columns, shown as one table.",
+       "id": "rpt-impdet",
+       "contents": [
+        "improvement_detail_2026_1.csv",
+        "improvement_detail_2026_2.csv",
+        "improvement_detail_2026_3.csv",
+        "improvement_detail_2026_4.csv"
+       ],
+       "tables": [
+        "rpt-impdet"
+       ]
+      },
+      {
+       "name": "Waterfront Effective Front Foot 2026",
+       "url": "https://traviscad.org/wp-content/uploads/waterfront_effective_front_foot_report_2026.csv",
+       "id": "rpt-water",
+       "tables": [
+        "rpt-water"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Appraisal Reports",
+   "groups": [
+    {
+     "name": "Reappraisal Plans",
+     "desc": "The CAD's two-year plan for which areas and property types it reappraises, and how.",
+     "files": [
+      {
+       "name": "2027/2028 Proposed Reappraisal Plan Summary",
+       "url": "https://traviscad.org/wp-content/uploads/2027-2028-Reappraisal-Plan-Summary_Adopted.pdf"
+      },
+      {
+       "name": "2027/2028 Reappraisal Plan",
+       "url": "https://traviscad.org/wp-content/uploads/2027-2028-Reappraisal-Plan_Adopted-20260903-1.pdf"
+      },
+      {
+       "name": "2025/2026 Reappraisal Plan",
+       "url": "https://traviscad.org/wp-content/uploads/2025-2026-Reappraisal-Plan.pdf"
+      },
+      {
+       "name": "2025/2026 Reappraisal Plan Summary",
+       "url": "https://traviscad.org/wp-content/uploads/2025-2026-Reappraisal-Plan-Summary.pdf"
+      },
+      {
+       "name": "2023/2024 Reappraisal Plan",
+       "url": "https://traviscad.org/wp-content/uploads/2023-2024-Reappraisal-Plan_20220824.pdf"
+      },
+      {
+       "name": "2023/2024 Reappraisal Plan Summary",
+       "url": "https://traviscad.org/wp-content/uploads/2023-2024-Reappraisal-Plan-Summary_20220824.pdf"
+      },
+      {
+       "name": "2021/2022 Reappraisal Plan",
+       "url": "https://traviscad.org/wp-content/uploads/2021_2022-Reappraisal-Plan.pdf"
+      },
+      {
+       "name": "2019/2020 Reappraisal Plan",
+       "url": "https://traviscad.org/wp-content/uploads/8b_Reappraisal-Plan_20180808.pdf"
+      }
+     ]
+    },
+    {
+     "name": "Annual Reports",
+     "desc": "The CAD's yearly summary of the appraisal season: values, protests, staffing and performance.",
+     "files": [
+      {
+       "name": "2025 Annual Report",
+       "url": "https://traviscad.org/wp-content/uploads/2025-Annual-Report.pdf"
+      },
+      {
+       "name": "2024 Annual Report",
+       "url": "https://traviscad.org/wp-content/uploads/2024-Annual-Report.pdf"
+      },
+      {
+       "name": "2023 Annual Report",
+       "url": "https://traviscad.org/wp-content/uploads/2023-Annual-Report.pdf"
+      },
+      {
+       "name": "2022 Annual Report",
+       "url": "https://traviscad.org/wp-content/uploads/2022-Annual-Report_20230414.pdf"
+      },
+      {
+       "name": "2021 Annual Report",
+       "url": "https://traviscad.org/wp-content/uploads/2021-Annual-Report.pdf"
+      }
+     ]
+    },
+    {
+     "name": "Mass Appraisal Reports",
+     "desc": "How the CAD values property: models, schedules and methods by property type, under USPAP Standard 6.",
+     "files": [
+      {
+       "name": "2026 Mass Appraisal Report",
+       "url": "https://traviscad.org/wp-content/uploads/2026_Mass-Appraisal-Report.pdf"
+      },
+      {
+       "name": "2025 Mass Appraisal Report",
+       "url": "https://traviscad.org/wp-content/uploads/2025_Mass-Appraisal-Report.pdf"
+      },
+      {
+       "name": "2024 Mass Appraisal Report",
+       "url": "https://traviscad.org/wp-content/uploads/2024_Mass-Appraisal-Report20240424.pdf"
+      },
+      {
+       "name": "2023 Mass Appraisal Report",
+       "url": "https://traviscad.org/wp-content/uploads/2023_Mass-Appraisal-Report_20230414.pdf"
+      },
+      {
+       "name": "2022 Mass Appraisal Report",
+       "url": "https://traviscad.org/wp-content/uploads/2022_Mass-Appraisal-Report_20220421.pdf"
+      }
+     ]
+    },
+    {
+     "name": "Utility Usage Reports",
+     "desc": "The CAD's own energy and water use, a report state law requires.",
+     "files": [
+      {
+       "name": "SEC. 2265.001 Energy Usage Report – 2025",
+       "url": "https://traviscad.org/wp-content/uploads/Utility-Usage-Report-2025-1.pdf"
+      },
+      {
+       "name": "SEC. 2265.001 Energy Usage Report – 2024",
+       "url": "https://traviscad.org/wp-content/uploads/HB-3693-Utility-Usage-Report-2024.pdf"
+      },
+      {
+       "name": "SEC. 2265.001 Energy Usage Report – 2023",
+       "url": "https://traviscad.org/wp-content/uploads/HB-3693-Utility-Usage-Report-2023.pdf"
+      },
+      {
+       "name": "SEC. 2265.001 Energy Usage Report – 2022",
+       "url": "https://traviscad.org/wp-content/uploads/HB-3693-Utility-Usage-Report-2022.pdf"
+      },
+      {
+       "name": "SEC. 2265.001 Energy Usage Report – 2021",
+       "url": "https://traviscad.org/wp-content/uploads/HB-3693-Utility-Usage-Report-2021.pdf"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Financial Reports",
+   "groups": [
+    {
+     "name": "Adopted Budgets",
+     "desc": "The CAD's operating budget for each fiscal year.",
+     "files": [
+      {
+       "name": "2027 Adopted Budget",
+       "url": "https://traviscad.org/wp-content/uploads/FY-2027-Adopted-Budget.pdf"
+      },
+      {
+       "name": "2026 Adopted Budget",
+       "url": "https://traviscad.org/wp-content/uploads/FY-2026-Adopted-Budget.pdf"
+      },
+      {
+       "name": "2025 Adopted Budget",
+       "url": "https://traviscad.org/wp-content/uploads/FY-2025-Adopted-Budget.pdf"
+      },
+      {
+       "name": "2024 Adopted Budget",
+       "url": "https://traviscad.org/wp-content/uploads/FY-2024-Proposed-Budget-1.pdf"
+      },
+      {
+       "name": "2023 Adopted Budget",
+       "url": "https://traviscad.org/wp-content/uploads/FY-2023-Adopted-Budget.pdf"
+      },
+      {
+       "name": "2022 Adopted Budget",
+       "url": "https://traviscad.org/wp-content/uploads/FY-2022-Adopted-Budget.pdf"
+      }
+     ]
+    },
+    {
+     "name": "Popular Annual Financial Reports",
+     "desc": "A short, plain-language version of the CAD's annual financial report.",
+     "files": [
+      {
+       "name": "2025 Popular Annual Financial Report",
+       "url": "https://traviscad.org/wp-content/uploads/FY-2025-Popular-Annual-Financial-Report-1.pdf"
+      },
+      {
+       "name": "2024 Popular Annual Financial Report",
+       "url": "https://traviscad.org/wp-content/uploads/FY-2024-Popular-Annual-Financial-Report.pdf"
+      },
+      {
+       "name": "2023 Popular Annual Financial Report",
+       "url": "https://traviscad.org/wp-content/uploads/FY-2023-Popular-Annual-Financial-Report.pdf"
+      },
+      {
+       "name": "2022 Popular Annual Financial Report",
+       "url": "https://traviscad.org/wp-content/uploads/FY-2022-Popular-Annual-Financial-Report.pdf"
+      },
+      {
+       "name": "2021 Popular Annual Financial Report",
+       "url": "https://traviscad.org/wp-content/uploads/FY-2021-Popular-Annual-Financial-Report.pdf"
+      }
+     ]
+    },
+    {
+     "name": "Annual Comprehensive Financial Reports",
+     "desc": "The CAD's audited annual financial statements.",
+     "files": [
+      {
+       "name": "2025 Annual Comprehensive Financial Report",
+       "url": "https://traviscad.org/wp-content/uploads/2025-ACFR_Final.pdf"
+      },
+      {
+       "name": "2024 Annual Comprehensive Financial Report",
+       "url": "https://traviscad.org/wp-content/uploads/2024-ACFR_FINAL-1.pdf"
+      },
+      {
+       "name": "2023 Annual Comprehensive Financial Report",
+       "url": "https://traviscad.org/wp-content/uploads/2023-Annual-Comprehensive-Financial-Report_FINAL-1.pdf"
+      },
+      {
+       "name": "2022 Annual Comprehensive Financial Report",
+       "url": "https://traviscad.org/wp-content/uploads/2022-Annual-Comprehensive-Financial-Report.pdf"
+      },
+      {
+       "name": "2021 Annual Comprehensive Financial Report",
+       "url": "https://traviscad.org/wp-content/uploads/2021-Annual-Comprehensive-Financial-Report-ACFR.pdf"
+      }
+     ]
+    },
+    {
+     "name": "Open Bid Requests / Requests for Proposals",
+     "desc": "Open requests for bids and proposals from the CAD, with their addenda.",
+     "files": [
+      {
+       "name": "RFQ 2026-01 Professional Audit Services (Revised 10.22.2026)",
+       "url": "https://traviscad.org/wp-content/uploads/RFQ-2026-01-Professional-Audit-Services-Revised-10.22.2026.pdf"
+      },
+      {
+       "name": "RFQ 2026-01 – Addendum No. 1 (10.22.2026)",
+       "url": "https://traviscad.org/wp-content/uploads/RFQ-2026-01-Addendum-No.-1-10.22.2026.pdf"
+      },
+      {
+       "name": "RFQ 2026-01 – Addendum No. 2",
+       "url": "https://traviscad.org/wp-content/uploads/RFQ-2026-01-Addendum-No.-2-QA-11.12.2026.pdf"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

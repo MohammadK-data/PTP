@@ -1,9 +1,9 @@
 {
  "title": "Travis Property Data Profile",
- "eyebrow": "Travis Central Appraisal District · PACS appraisal export files",
- "intro": "Everything in Travis CAD's 2026 PACS <b>Appraisal Export</b>, downloaded from the CAD website: 20 files per export, in two snapshots — the <b>certified</b> roll exported July 18 and <b>supplement 3</b> exported October 6. The year switch on every tab picks the snapshot. For each file you get its columns, data types, completeness and value distributions.",
+ "eyebrow": "Travis Central Appraisal District · Public information data files",
+ "intro": "The data files Travis CAD publishes on its Public Information page: the 2026 PACS <b>appraisal exports</b> (certified roll of July 18 and supplement 3 of October 6), the <b>JSON special exports</b> (July 19 and October 6), the <b>EARS</b> submissions to the Comptroller for 2022–2026, and the <b>property reports</b>. For each table you get its columns, data types, completeness and value distributions.",
  "store_key": "travis-view",
- "foot": "Generated {date}. Files were scanned in full with DuckDB from the gzipped CSVs that <code>etl/travis_appraisal_export_etl.py</code> writes from the raw PACS .TXT files, using Denton's layout (the two counties publish the same PACS 8.0.0.33 export); \"Auto-detected on load\" is the type DuckDB assigns, and distinct counts there are approximate (HyperLogLog). \"Data type\" is inferred from the values: Code means digits stored as text with leading zeros.",
+ "foot": "Generated {date}. Every file was scanned in full with DuckDB; the fixed-width PACS .TXT files use the PACS 8.0.0.33 layout, and the JSON exports are split into one table per nested list. \"Loaded as\" is the type DuckDB assigns, and distinct counts are approximate (HyperLogLog). \"Data type\" is inferred from the values: Code means digits stored as text with leading zeros.",
  "max_year": 2026,
  "root": "/Users/user2/PTP/CAD Website/Travis/",
  "sample": {
@@ -110,7 +110,9 @@
     "frss_qualify_yr": "Integer",
     "late_correction_val": "Integer",
     "nhs_cap_loss": "Integer"
-   }
+   },
+   "raw": "PROP.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)"
   },
   "s26-info": {
    "path": "output/2026-10-06_2026_APPRAISAL_INFO.csv.gz",
@@ -213,7 +215,9 @@
     "frss_qualify_yr": "Integer",
     "late_correction_val": "Integer",
     "nhs_cap_loss": "Integer"
-   }
+   },
+   "raw": "PROP.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)"
   },
   "c26-entinfo": {
    "path": "output/2026-07-18_2026_APPRAISAL_ENTITY_INFO.csv.gz",
@@ -398,7 +402,9 @@
     "med_allocation_factor": "Integer",
     "jeti_amt": "Integer",
     "jeti_allocation_factor": "Integer"
-   }
+   },
+   "raw": "PROP_ENT.TXT",
+   "layout": "File #3 · Property-Entity Association (APPRAISAL_ENTITY_INFO.TXT)"
   },
   "s26-entinfo": {
    "path": "output/2026-10-06_2026_APPRAISAL_ENTITY_INFO.csv.gz",
@@ -585,7 +591,9 @@
     "med_allocation_factor": "Integer",
     "jeti_amt": "Integer",
     "jeti_allocation_factor": "Integer"
-   }
+   },
+   "raw": "PROP_ENT.TXT",
+   "layout": "File #3 · Property-Entity Association (APPRAISAL_ENTITY_INFO.TXT)"
   },
   "c26-enttot": {
    "path": "output/2026-07-18_2026_APPRAISAL_ENTITY_TOTALS.csv.gz",
@@ -747,7 +755,9 @@
     "med_amt": "Integer",
     "jeti_count": "Integer",
     "jeti_amt": "Integer"
-   }
+   },
+   "raw": "TOTALS.TXT",
+   "layout": "File #4 · Entity Totals (APPRAISAL_ENTITY_TOTALS.TXT)"
   },
   "s26-enttot": {
    "path": "output/2026-10-06_2026_APPRAISAL_ENTITY_TOTALS.csv.gz",
@@ -911,7 +921,9 @@
     "med_amt": "Integer",
     "jeti_count": "Integer",
     "jeti_amt": "Integer"
-   }
+   },
+   "raw": "TOTALS.TXT",
+   "layout": "File #4 · Entity Totals (APPRAISAL_ENTITY_TOTALS.TXT)"
   },
   "c26-entity": {
    "path": "output/2026-07-18_2026_APPRAISAL_ENTITY.csv.gz",
@@ -923,7 +935,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "295 unit ids, but only 227 have a row in Unit totals; the other 68 have no property on the roll."
-   ]
+   ],
+   "raw": "ENTITY.TXT",
+   "layout": "File #14 · Entity (APPRAISAL_ENTITY.TXT)"
   },
   "s26-entity": {
    "path": "output/2026-10-06_2026_APPRAISAL_ENTITY.csv.gz",
@@ -937,7 +951,9 @@
     "300 unit ids, but only 232 have a row in Unit totals; the other 68 have no property on the roll."
    ],
    "compare": "c26-entity",
-   "compareLabel": "the Jul 27 certified export"
+   "compareLabel": "the Jul 27 certified export",
+   "raw": "ENTITY.TXT",
+   "layout": "File #14 · Entity (APPRAISAL_ENTITY.TXT)"
   },
   "c26-imprinfo": {
    "path": "output/2026-07-18_2026_APPRAISAL_IMPROVEMENT_INFO.csv.gz",
@@ -952,7 +968,9 @@
    ],
    "force": {
     "omitted_imprv_val": "Integer"
-   }
+   },
+   "raw": "IMP_INFO.TXT",
+   "layout": "File #7 · Improvements (APPRAISAL_IMPROVEMENT_INFO.TXT)"
   },
   "s26-imprinfo": {
    "path": "output/2026-10-06_2026_APPRAISAL_IMPROVEMENT_INFO.csv.gz",
@@ -969,7 +987,9 @@
    "compareLabel": "the Jul 27 certified export",
    "force": {
     "omitted_imprv_val": "Integer"
-   }
+   },
+   "raw": "IMP_INFO.TXT",
+   "layout": "File #7 · Improvements (APPRAISAL_IMPROVEMENT_INFO.TXT)"
   },
   "c26-imprdet": {
    "path": "output/2026-07-18_2026_APPRAISAL_IMPROVEMENT_DETAIL.csv.gz",
@@ -986,7 +1006,9 @@
    "force": {
     "yr_built": "Integer",
     "depreciation_yr": "Integer"
-   }
+   },
+   "raw": "IMP_DET.TXT",
+   "layout": "File #8 · Improvement Detail (APPRAISAL_IMPROVEMENT_DETAIL.TXT)"
   },
   "s26-imprdet": {
    "path": "output/2026-10-06_2026_APPRAISAL_IMPROVEMENT_DETAIL.csv.gz",
@@ -1005,7 +1027,9 @@
    "force": {
     "yr_built": "Integer",
     "depreciation_yr": "Integer"
-   }
+   },
+   "raw": "IMP_DET.TXT",
+   "layout": "File #8 · Improvement Detail (APPRAISAL_IMPROVEMENT_DETAIL.TXT)"
   },
   "c26-imprattr": {
    "path": "output/2026-07-18_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.csv.gz",
@@ -1017,7 +1041,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "One row per attribute; pivot <code>imprv_attr_desc</code> to get one column per attribute. The common ones are Shape, Floor and Grade Factor, Foundation, Roof Style and Roof Covering."
-   ]
+   ],
+   "raw": "IMP_ATR.TXT",
+   "layout": "File #9 · Improvement Features (APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT)"
   },
   "s26-imprattr": {
    "path": "output/2026-10-06_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.csv.gz",
@@ -1031,7 +1057,9 @@
     "One row per attribute; pivot <code>imprv_attr_desc</code> to get one column per attribute. The common ones are Shape, Floor and Grade Factor, Foundation, Roof Style and Roof Covering."
    ],
    "compare": "c26-imprattr",
-   "compareLabel": "the Jul 27 certified export"
+   "compareLabel": "the Jul 27 certified export",
+   "raw": "IMP_ATR.TXT",
+   "layout": "File #9 · Improvement Features (APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT)"
   },
   "c26-sketch": {
    "path": "output/2026-07-18_2026_APPRAISAL_SKETCH_INFO.csv.gz",
@@ -1044,7 +1072,9 @@
    "notes": [
     "Tab-separated in the source, with ids not zero-padded: pad <code>prop_id</code> and <code>imprv_det_id</code> to 12 digits to join. All 1,526,299 Legacy sketches match an improvement detail after padding.",
     "86,277 Enhanced sketches have <code>sketch_json</code> (up to 6.1 MB per row) and a blank <code>imprv_det_id</code>; they attach to the improvement, not a segment. Raise your CSV reader's maximum line size to load them."
-   ]
+   ],
+   "raw": "SKETCH_INFO.TXT",
+   "layout": "File #20 · Sketches (APPRAISAL_SKETCH_INFO.TXT)"
   },
   "s26-sketch": {
    "path": "output/2026-10-06_2026_APPRAISAL_SKETCH_INFO.csv.gz",
@@ -1059,7 +1089,9 @@
     "65,892 Enhanced sketches have <code>sketch_json</code> (up to 6.1 MB per row) and a blank <code>imprv_det_id</code>. Raise your CSV reader's maximum line size to load them."
    ],
    "compare": "c26-sketch",
-   "compareLabel": "the Jul 27 certified export"
+   "compareLabel": "the Jul 27 certified export",
+   "raw": "SKETCH_INFO.TXT",
+   "layout": "File #20 · Sketches (APPRAISAL_SKETCH_INFO.TXT)"
   },
   "c26-mobile": {
    "path": "output/2026-07-18_2026_APPRAISAL_MOBILE_HOME_INFO.csv.gz",
@@ -1069,7 +1101,9 @@
    "label": "5 · Mobile homes",
    "about": "Make, model, title, serial and HUD numbers for mobile-home improvements.",
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
-   "notes": []
+   "notes": [],
+   "raw": "MOBILE_HOME_INFO.TXT",
+   "layout": "File #18 · Mobile Home Info (APPRAISAL_MOBILE_HOME_INFO.TXT)"
   },
   "s26-mobile": {
    "path": "output/2026-10-06_2026_APPRAISAL_MOBILE_HOME_INFO.csv.gz",
@@ -1081,7 +1115,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [],
    "compare": "c26-mobile",
-   "compareLabel": "the Jul 27 certified export"
+   "compareLabel": "the Jul 27 certified export",
+   "raw": "MOBILE_HOME_INFO.TXT",
+   "layout": "File #18 · Mobile Home Info (APPRAISAL_MOBILE_HOME_INFO.TXT)"
   },
   "c26-land": {
    "path": "output/2026-07-18_2026_APPRAISAL_LAND_DETAIL.csv.gz",
@@ -1100,7 +1136,9 @@
     "effective_front": "Integer",
     "effective_depth": "Integer",
     "land_seg_mkt_val": "Integer"
-   }
+   },
+   "raw": "LAND_DET.TXT",
+   "layout": "File #10 · Land (APPRAISAL_LAND_DETAIL.TXT)"
   },
   "s26-land": {
    "path": "output/2026-10-06_2026_APPRAISAL_LAND_DETAIL.csv.gz",
@@ -1122,7 +1160,9 @@
     "effective_front": "Integer",
     "effective_depth": "Integer",
     "land_seg_mkt_val": "Integer"
-   }
+   },
+   "raw": "LAND_DET.TXT",
+   "layout": "File #10 · Land (APPRAISAL_LAND_DETAIL.TXT)"
   },
   "c26-sb12": {
    "path": "output/2026-07-18_2026_APPRAISAL_SB12.csv.gz",
@@ -1135,7 +1175,9 @@
    "notes": [
     "Tab-separated in the source, with <code>prop_id</code> not zero-padded: all 233,294 rows match the roll once padded to 12 digits (76,640 properties).",
     "Three record types: 153,182 <code>SB12</code> (one per tax year 2025–2026), 76,718 <code>SUMMARY</code> and 3,394 <code>NEW_VALUE</code>. 3 rows have <code>tax_yr</code> 0. The ETL could not identify <code>col_11</code>–<code>col_18</code>; their tooltips are best guesses."
-   ]
+   ],
+   "raw": "SB12.TXT",
+   "layout": "File #21 · SB12 (APPRAISAL_SB12.TXT)"
   },
   "s26-sb12": {
    "path": "output/2026-10-06_2026_APPRAISAL_SB12.csv.gz",
@@ -1150,7 +1192,9 @@
     "Three record types: 153,443 <code>SB12</code>, 76,895 <code>SUMMARY</code> and 3,416 <code>NEW_VALUE</code>. The ETL could not identify <code>col_11</code>–<code>col_18</code>; their tooltips are best guesses."
    ],
    "compare": "c26-sb12",
-   "compareLabel": "the Jul 27 certified export"
+   "compareLabel": "the Jul 27 certified export",
+   "raw": "SB12.TXT",
+   "layout": "File #21 · SB12 (APPRAISAL_SB12.TXT)"
   },
   "c26-defer": {
    "path": "output/2026-07-18_2026_APPRAISAL_TAX_DEFERRAL_INFO.csv.gz",
@@ -1162,7 +1206,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "3,344 deferrals. Dates are <code>MM-DD-YYYY</code>; <code>deferral_end_date</code> is blank on every row."
-   ]
+   ],
+   "raw": "TAX_DEFERRAL_INFO.TXT",
+   "layout": "File #19 · Tax Deferral Info (APPRAISAL_TAX_DEFERRAL_INFO.TXT)"
   },
   "s26-defer": {
    "path": "output/2026-10-06_2026_APPRAISAL_TAX_DEFERRAL_INFO.csv.gz",
@@ -1176,7 +1222,9 @@
     "3,332 deferrals. Dates are <code>MM-DD-YYYY</code>; <code>deferral_end_date</code> is blank on every row."
    ],
    "compare": "c26-defer",
-   "compareLabel": "the Jul 27 certified export"
+   "compareLabel": "the Jul 27 certified export",
+   "raw": "TAX_DEFERRAL_INFO.TXT",
+   "layout": "File #19 · Tax Deferral Info (APPRAISAL_TAX_DEFERRAL_INFO.TXT)"
   },
   "c26-arb": {
    "path": "output/2026-07-18_2026_APPRAISAL_ARB.csv.gz",
@@ -1191,7 +1239,9 @@
    ],
    "force": {
     "prop_val_yr": "Integer"
-   }
+   },
+   "raw": "ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)"
   },
   "s26-arb": {
    "path": "output/2026-10-06_2026_APPRAISAL_ARB.csv.gz",
@@ -1209,7 +1259,9 @@
    "compareLabel": "the Jul 27 certified export",
    "force": {
     "prop_val_yr": "Integer"
-   }
+   },
+   "raw": "ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)"
   },
   "c26-lawsuit": {
    "path": "output/2026-07-18_2026_APPRAISAL_LAWSUIT.csv.gz",
@@ -1224,7 +1276,9 @@
    ],
    "force": {
     "prop_val_yr": "Integer"
-   }
+   },
+   "raw": "LAWSUIT.TXT",
+   "layout": "File #13 · Active Lawsuit Properties (APPRAISAL_LAWSUIT.TXT)"
   },
   "s26-lawsuit": {
    "path": "output/2026-10-06_2026_APPRAISAL_LAWSUIT.csv.gz",
@@ -1241,7 +1295,9 @@
    "compareLabel": "the Jul 27 certified export",
    "force": {
     "prop_val_yr": "Integer"
-   }
+   },
+   "raw": "LAWSUIT.TXT",
+   "layout": "File #13 · Active Lawsuit Properties (APPRAISAL_LAWSUIT.TXT)"
   },
   "c26-arblaw": {
    "path": "output/2026-07-18_2026_ARBITRATION_LAWSUIT.csv.gz",
@@ -1256,7 +1312,9 @@
    ],
    "force": {
     "prop_val_yr": "Integer"
-   }
+   },
+   "raw": "ARBITRATION.TXT",
+   "layout": "File #17 · Properties in Arbitration (ARBITRATION_LAWSUIT.TXT)"
   },
   "s26-arblaw": {
    "path": "output/2026-10-06_2026_ARBITRATION_LAWSUIT.csv.gz",
@@ -1273,7 +1331,9 @@
    "compareLabel": "the Jul 27 certified export",
    "force": {
     "prop_val_yr": "Integer"
-   }
+   },
+   "raw": "ARBITRATION.TXT",
+   "layout": "File #17 · Properties in Arbitration (ARBITRATION_LAWSUIT.TXT)"
   },
   "c26-agent": {
    "path": "output/2026-07-18_2026_APPRAISAL_AGENT.csv.gz",
@@ -1285,7 +1345,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "1,993 agents. <code>agent_id</code> is 12-digit zero-padded and joins to <code>ca_agent_id</code>, <code>arb_agent_id</code> and <code>entity_agent_id</code> on the property roll; ids start at <code>000000002000</code>."
-   ]
+   ],
+   "raw": "AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)"
   },
   "s26-agent": {
    "path": "output/2026-10-06_2026_APPRAISAL_AGENT.csv.gz",
@@ -1299,7 +1361,9 @@
     "2,011 agents (18 more than at certification). <code>agent_id</code> is 12-digit zero-padded and joins to the agent ids on the property roll."
    ],
    "compare": "c26-agent",
-   "compareLabel": "the Jul 27 certified export"
+   "compareLabel": "the Jul 27 certified export",
+   "raw": "AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)"
   },
   "c26-abs": {
    "path": "output/2026-07-18_2026_APPRAISAL_ABSTRACT_SUBDV.csv.gz",
@@ -1311,7 +1375,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "28,378 abstract and subdivision codes. Names contain commas and apostrophes, so read the CSV with <code>\"</code> as the quote character."
-   ]
+   ],
+   "raw": "ABS_SUBD.TXT",
+   "layout": "File #5 · Abstract/Subdivision List (APPRAISAL_ABSTRACT_SUBDV.TXT)"
   },
   "s26-abs": {
    "path": "output/2026-10-06_2026_APPRAISAL_ABSTRACT_SUBDV.csv.gz",
@@ -1325,7 +1391,9 @@
     "28,458 codes (80 more than at certification)."
    ],
    "compare": "c26-abs",
-   "compareLabel": "the Jul 27 certified export"
+   "compareLabel": "the Jul 27 certified export",
+   "raw": "ABS_SUBD.TXT",
+   "layout": "File #5 · Abstract/Subdivision List (APPRAISAL_ABSTRACT_SUBDV.TXT)"
   },
   "c26-state": {
    "path": "output/2026-07-18_2026_APPRAISAL_STATE_CODE.csv.gz",
@@ -1340,7 +1408,9 @@
    ],
    "force": {
     "state_cd_year": "Integer"
-   }
+   },
+   "raw": "STATE_CD.TXT",
+   "layout": "File #6 · Property Tax Division Codes (APPRAISAL_STATE_CODE.TXT)"
   },
   "s26-state": {
    "path": "output/2026-10-06_2026_APPRAISAL_STATE_CODE.csv.gz",
@@ -1357,7 +1427,9 @@
    "compareLabel": "the Jul 27 certified export",
    "force": {
     "state_cd_year": "Integer"
-   }
+   },
+   "raw": "STATE_CD.TXT",
+   "layout": "File #6 · Property Tax Division Codes (APPRAISAL_STATE_CODE.TXT)"
   },
   "c26-country": {
    "path": "output/2026-07-18_2026_APPRAISAL_COUNTRY_CODE.csv.gz",
@@ -1367,7 +1439,9 @@
    "label": "3 · Country codes",
    "about": "Lookup of country codes used in addresses.",
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
-   "notes": []
+   "notes": [],
+   "raw": "COUNTRY.TXT",
+   "layout": "File #16 · Country Codes (APPRAISAL_COUNTRY_CODE.TXT)"
   },
   "s26-country": {
    "path": "output/2026-10-06_2026_APPRAISAL_COUNTRY_CODE.csv.gz",
@@ -1379,7 +1453,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [],
    "compare": "c26-country",
-   "compareLabel": "the Jul 27 certified export"
+   "compareLabel": "the Jul 27 certified export",
+   "raw": "COUNTRY.TXT",
+   "layout": "File #16 · Country Codes (APPRAISAL_COUNTRY_CODE.TXT)"
   },
   "c26-header": {
    "path": "output/2026-07-18_2026_APPRAISAL_HEADER.csv.gz",
@@ -1394,7 +1470,9 @@
    ],
    "force": {
     "supplement_number": "Integer"
-   }
+   },
+   "raw": "APPR_HDR.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)"
   },
   "s26-header": {
    "path": "output/2026-10-06_2026_APPRAISAL_HEADER.csv.gz",
@@ -1411,7 +1489,1341 @@
    "compareLabel": "the Jul 27 certified export",
    "force": {
     "supplement_number": "Integer"
-   }
+   },
+   "raw": "APPR_HDR.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)"
+  },
+  "ears24-ajr": {
+   "path": "output/ears/2024/AJR.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "1 · Account records (AJR)",
+   "about": "One row per account, taxing unit and property category: values, exemptions, caps, ceilings and ARB changes as reported to the Comptroller.",
+   "encoding": "Gzipped CSV, UTF-8 (split from 227EARS082824.csv)",
+   "notes": [
+    "Several rows per property: one per taxing unit (<code>AJR004_taxing_unit_id_number</code>) and property category (<code>AJR031_category</code>). <code>AJR008_short_account_number</code> is the property id (pID / prop_id without padding); <code>AJR007_account_number</code> is the 10-digit geo id.",
+    "The source file has no header row. Column names come from the Comptroller's manual 96-1051; each year has only the fields its manual release had (2024: 97, 2025: 102, 2026: 111), so newer fields show as new."
+   ],
+   "compare": "ears23-ajr",
+   "raw": "227EARS082824.csv · AJR rows",
+   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1"
+  },
+  "ears24-aud": {
+   "path": "output/ears/2024/AUD.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "2 · Ag-use detail (AUD)",
+   "about": "One row per account and taxing unit with land under ag or timber use: acres and productivity values by land class.",
+   "encoding": "Gzipped CSV, UTF-8 (split from 227EARS082824.csv)",
+   "notes": [
+    "One row per account and taxing unit with land under ag or timber use. Most land-class columns are timber and orchard classes Travis County does not have."
+   ],
+   "compare": "ears23-aud",
+   "raw": "227EARS082824.csv · AUD rows",
+   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3"
+  },
+  "ears24-tu2": {
+   "path": "output/ears/2024/TU2.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "3 · Top-10 taxpayers (TU2)",
+   "about": "The ten largest taxpayers in each taxing unit, with market and taxable value.",
+   "encoding": "Gzipped CSV, UTF-8 (split from 227EARS082824.csv)",
+   "notes": [
+    "Up to ten rows per taxing unit (<code>TU206_taxpayer_ranking</code> 1–10)."
+   ],
+   "compare": "ears23-tu2",
+   "raw": "227EARS082824.csv · TU2 rows",
+   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5"
+  },
+  "ears24-897": {
+   "path": "output/ears/2024/50_897.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "4 · Tax office file (50-897)",
+   "about": "Per-account values, exemptions and tax ceilings by taxing unit, the 50-897 file the CAD sends with the submission.",
+   "encoding": "Gzipped CSV, UTF-8 (from 227_50_897_082924.csv)",
+   "notes": [
+    "Has its own header row (camelCase names, not the EARS field ids). <code>shortNumber</code> is the property id; a few properties have more than one row."
+   ],
+   "raw": "227_50_897_082924.csv",
+   "layout": "Form 50-897 tax office file, sent with the EARS submission"
+  },
+  "ears25-ajr": {
+   "path": "output/ears/2025/AJR.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "1 · Account records (AJR)",
+   "about": "One row per account, taxing unit and property category: values, exemptions, caps, ceilings and ARB changes as reported to the Comptroller.",
+   "encoding": "Gzipped CSV, UTF-8 (split from 227EARS090425.csv)",
+   "compare": "ears24-ajr",
+   "notes": [
+    "Several rows per property: one per taxing unit (<code>AJR004_taxing_unit_id_number</code>) and property category (<code>AJR031_category</code>). <code>AJR008_short_account_number</code> is the property id (pID / prop_id without padding); <code>AJR007_account_number</code> is the 10-digit geo id.",
+    "The source file has no header row. Column names come from the Comptroller's manual 96-1051; each year has only the fields its manual release had (2024: 97, 2025: 102, 2026: 111), so newer fields show as new."
+   ],
+   "raw": "227EARS090425.csv · AJR rows",
+   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1"
+  },
+  "ears25-aud": {
+   "path": "output/ears/2025/AUD.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "2 · Ag-use detail (AUD)",
+   "about": "One row per account and taxing unit with land under ag or timber use: acres and productivity values by land class.",
+   "encoding": "Gzipped CSV, UTF-8 (split from 227EARS090425.csv)",
+   "compare": "ears24-aud",
+   "notes": [
+    "One row per account and taxing unit with land under ag or timber use. Most land-class columns are timber and orchard classes Travis County does not have."
+   ],
+   "raw": "227EARS090425.csv · AUD rows",
+   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3"
+  },
+  "ears25-tu2": {
+   "path": "output/ears/2025/TU2.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "3 · Top-10 taxpayers (TU2)",
+   "about": "The ten largest taxpayers in each taxing unit, with market and taxable value.",
+   "encoding": "Gzipped CSV, UTF-8 (split from 227EARS090425.csv)",
+   "compare": "ears24-tu2",
+   "notes": [
+    "Up to ten rows per taxing unit (<code>TU206_taxpayer_ranking</code> 1–10)."
+   ],
+   "raw": "227EARS090425.csv · TU2 rows",
+   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5"
+  },
+  "ears25-897": {
+   "path": "output/ears/2025/50_897.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "4 · Tax office file (50-897)",
+   "about": "Per-account values, exemptions and tax ceilings by taxing unit, the 50-897 file the CAD sends with the submission.",
+   "encoding": "Gzipped CSV, UTF-8 (from 227_50_897_090425.xlsx)",
+   "compare": "ears24-897",
+   "notes": [
+    "Has its own header row (camelCase names, not the EARS field ids). <code>shortNumber</code> is the property id; a few properties have more than one row."
+   ],
+   "raw": "227_50_897_090425.xlsx",
+   "layout": "Form 50-897 tax office file, sent with the EARS submission"
+  },
+  "ears26-ajr": {
+   "path": "output/ears/2026/AJR.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "1 · Account records (AJR)",
+   "about": "One row per account, taxing unit and property category: values, exemptions, caps, ceilings and ARB changes as reported to the Comptroller.",
+   "encoding": "Gzipped CSV, UTF-8 (split from 227EARS082626.csv)",
+   "compare": "ears25-ajr",
+   "notes": [
+    "Several rows per property: one per taxing unit (<code>AJR004_taxing_unit_id_number</code>) and property category (<code>AJR031_category</code>). <code>AJR008_short_account_number</code> is the property id (pID / prop_id without padding); <code>AJR007_account_number</code> is the 10-digit geo id.",
+    "The source file has no header row. Column names come from the Comptroller's manual 96-1051; each year has only the fields its manual release had (2024: 97, 2025: 102, 2026: 111), so newer fields show as new.",
+    "2026: 2,612,863 rows for 494,638 distinct properties, 131 taxing units and 33 categories. 493,074 of those ids match a property in the certified JSON export. 12 of the 111 columns are filled but always zero."
+   ],
+   "raw": "227EARS082626.csv · AJR rows",
+   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1"
+  },
+  "ears26-aud": {
+   "path": "output/ears/2026/AUD.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "2 · Ag-use detail (AUD)",
+   "about": "One row per account and taxing unit with land under ag or timber use: acres and productivity values by land class.",
+   "encoding": "Gzipped CSV, UTF-8 (split from 227EARS082626.csv)",
+   "compare": "ears25-aud",
+   "notes": [
+    "One row per account and taxing unit with land under ag or timber use. Most land-class columns are timber and orchard classes Travis County does not have.",
+    "2026: 123 of the 159 columns are filled but always zero."
+   ],
+   "raw": "227EARS082626.csv · AUD rows",
+   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3"
+  },
+  "ears26-tu2": {
+   "path": "output/ears/2026/TU2.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "3 · Top-10 taxpayers (TU2)",
+   "about": "The ten largest taxpayers in each taxing unit, with market and taxable value.",
+   "encoding": "Gzipped CSV, UTF-8 (split from 227EARS082626.csv)",
+   "compare": "ears25-tu2",
+   "notes": [
+    "Up to ten rows per taxing unit (<code>TU206_taxpayer_ranking</code> 1–10)."
+   ],
+   "raw": "227EARS082626.csv · TU2 rows",
+   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5"
+  },
+  "ears26-897": {
+   "path": "output/ears/2026/50_897.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "4 · Tax office file (50-897)",
+   "about": "Per-account values, exemptions and tax ceilings by taxing unit, the 50-897 file the CAD sends with the submission.",
+   "encoding": "Gzipped CSV, UTF-8 (from 227_50_897_082626_Revised.xlsx)",
+   "compare": "ears25-897",
+   "notes": [
+    "Has its own header row (camelCase names, not the EARS field ids). <code>shortNumber</code> is the property id; a few properties have more than one row.",
+    "2026 comes from <code>227_50_897_082626_Revised.xlsx</code>: 77,483 rows for 77,403 properties, with 5 more columns than 2025."
+   ],
+   "raw": "227_50_897_082626_Revised.xlsx",
+   "layout": "Form 50-897 tax office file, sent with the EARS submission"
+  },
+  "rpt-ag": {
+   "path": "Data/ag_activities_2026.csv",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "1 · AG activities",
+   "about": "One row per ag-use event on a property (application requested, approved, denied ...), with its date.",
+   "encoding": "CSV, UTF-8",
+   "notes": [
+    "One row per ag event, not per property: 103,253 events on 10,601 properties, dated 2012-01-04 to 2026-03-26. Most common types: Ag Received App (27,968), Ag Application Request (26,298), Ag Approved (16,915), Ag Information Request, Ag Denied, Ag Comment, Ag Rollback Initiated.",
+    "<code>PID</code> is the property id; 8,379 of the 10,601 ids match a property in the certified JSON export."
+   ],
+   "raw": "ag_activities_2026.csv",
+   "layout": "TCAD property report (CSV, header row)"
+  },
+  "rpt-land": {
+   "path": "Data/land_comments_2026.csv",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "2 · Land comments",
+   "about": "One row per land comment the CAD recorded on a property, with its date and text.",
+   "encoding": "CSV, UTF-8",
+   "notes": [
+    "One row per comment: 206,938 comments on 160,167 properties, dated 2012-01-03 to 2026-03-26. <code>Date</code> mixes plain dates and date-times.",
+    "<code>PID</code> is the property id; 132,792 of the ids match a property in the certified JSON export."
+   ],
+   "raw": "land_comments_2026.csv",
+   "layout": "TCAD property report (CSV, header row)"
+  },
+  "rpt-impdet": {
+   "path": "output/reports/improvement_detail_2026.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "3 · Improvement details",
+   "about": "One row per improvement segment: type, class, area, year built, condition and cost values. Four CSVs in the .zip, read together.",
+   "encoding": "Gzipped CSV, UTF-8 (the 4 CSVs in improvement_detail_2026.zip, joined)",
+   "notes": [
+    "3,318,907 improvement segments on 390,721 properties, all <code>pYear</code> 2026 (written <code>2026.0</code>). The .zip splits the rows over four CSVs with the same columns; this page reads them as one.",
+    "<code>DeprecGood</code> and <code>imprvDetailModifier</code> go negative (min -20 and -0.2).",
+    "<code>pID</code> is the property id; 389,255 of the ids match a property in the certified JSON export."
+   ],
+   "raw": "improvement_detail_2026_1-4.csv",
+   "layout": "TCAD property report (CSV, header row)"
+  },
+  "rpt-water": {
+   "path": "Data/waterfront_effective_front_foot_report_2026.csv",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "4 · Waterfront front feet",
+   "about": "One row per waterfront property with its effective front footage.",
+   "encoding": "CSV, UTF-8",
+   "notes": [
+    "5,372 rows for 5,365 properties; 60 have an effective front of 0. <code>pyear</code> is written as a decimal (<code>2026.0</code>).",
+    "<code>pid</code> is the property id; 5,186 of the ids match a property in the certified JSON export."
+   ],
+   "raw": "waterfront_effective_front_foot_report_2026.csv",
+   "layout": "TCAD property report (CSV, header row)"
+  },
+  "jc-links": {
+   "path": "output/json_2026-07-19/links.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "links",
+   "label": "links",
+   "about": "One row per item in the links list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "links[]",
+   "layout": "JSON list links in Travis-protaxExport-20260719.json"
+  },
+  "jc-property": {
+   "path": "output/json_2026-07-19/property.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "property",
+   "label": "property (top level)",
+   "about": "One row per property: its top-level fields.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text.",
+    "493,246 properties; the Oct 6 file has 493,110. <code>pID</code> is the PACS <code>prop_id</code> without padding."
+   ],
+   "raw": "property",
+   "layout": "JSON top-level fields of each property in Travis-protaxExport-20260719.json",
+   "nav_label": "property"
+  },
+  "jc-propertycharacteristics": {
+   "path": "output/json_2026-07-19/propertyCharacteristics.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "propertyCharacteristics",
+   "label": "propertyCharacteristics",
+   "about": "One row per item in the propertyCharacteristics list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "propertyCharacteristics[]",
+   "layout": "JSON list propertyCharacteristics in Travis-protaxExport-20260719.json"
+  },
+  "jc-propertyidentification": {
+   "path": "output/json_2026-07-19/propertyIdentification.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "propertyIdentification",
+   "label": "propertyIdentification",
+   "about": "One row per item in the propertyIdentification list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "propertyIdentification[]",
+   "layout": "JSON list propertyIdentification in Travis-protaxExport-20260719.json"
+  },
+  "jc-propertylegaldescription": {
+   "path": "output/json_2026-07-19/propertyLegalDescription.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "propertyLegalDescription",
+   "label": "propertyLegalDescription",
+   "about": "One row per item in the propertyLegalDescription list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "propertyLegalDescription[]",
+   "layout": "JSON list propertyLegalDescription in Travis-protaxExport-20260719.json"
+  },
+  "jc-propertyprofile": {
+   "path": "output/json_2026-07-19/propertyProfile.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "propertyProfile",
+   "label": "propertyProfile",
+   "about": "One row per item in the propertyProfile list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "propertyProfile[]",
+   "layout": "JSON list propertyProfile in Travis-protaxExport-20260719.json"
+  },
+  "jc-situses": {
+   "path": "output/json_2026-07-19/situses.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "situses",
+   "label": "situses",
+   "about": "One row per item in the situses list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "situses[]",
+   "layout": "JSON list situses in Travis-protaxExport-20260719.json"
+  },
+  "jc-smartgroups": {
+   "path": "output/json_2026-07-19/smartgroups.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "smartgroups",
+   "label": "smartgroups",
+   "about": "One row per item in the smartgroups list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "smartgroups[]",
+   "layout": "JSON list smartgroups in Travis-protaxExport-20260719.json"
+  },
+  "jc-tags": {
+   "path": "output/json_2026-07-19/tags.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "tags",
+   "label": "tags",
+   "about": "One row per item in the tags list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "tags[]",
+   "layout": "JSON list tags in Travis-protaxExport-20260719.json"
+  },
+  "jc-owners": {
+   "path": "output/json_2026-07-19/owners.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "owners",
+   "label": "owners",
+   "about": "One row per item in the owners list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text.",
+    "493,324 rows, the same count as the certified PACS property file (<code>PROP.TXT</code>): one row per property and owner."
+   ],
+   "raw": "owners[]",
+   "layout": "JSON list owners in Travis-protaxExport-20260719.json"
+  },
+  "jc-owners-agents": {
+   "path": "output/json_2026-07-19/owners.agents.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "owners.agents",
+   "label": "owners › agents",
+   "about": "One row per item in the owners › agents list of each property. Joins back on pID and owners_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "owners[].agents[]",
+   "layout": "JSON list owners › agents in Travis-protaxExport-20260719.json"
+  },
+  "jc-owners-exemptions": {
+   "path": "output/json_2026-07-19/owners.exemptions.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "owners.exemptions",
+   "label": "owners › exemptions",
+   "about": "One row per item in the owners › exemptions list of each property. Joins back on pID and owners_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "owners[].exemptions[]",
+   "layout": "JSON list owners › exemptions in Travis-protaxExport-20260719.json"
+  },
+  "jc-owners-ownertaxable": {
+   "path": "output/json_2026-07-19/owners.ownerTaxable.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "owners.ownerTaxable",
+   "label": "owners › ownerTaxable",
+   "about": "One row per item in the owners › ownerTaxable list of each property. Joins back on pID and owners_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "owners[].ownerTaxable[]",
+   "layout": "JSON list owners › ownerTaxable in Travis-protaxExport-20260719.json"
+  },
+  "jc-owners-ownertaxable-exemptions": {
+   "path": "output/json_2026-07-19/owners.ownerTaxable.exemptions.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "owners.ownerTaxable.exemptions",
+   "label": "owners › ownerTaxable › exemptions",
+   "about": "One row per item in the owners › ownerTaxable › exemptions list of each property. Joins back on pID and owners_i, ownerTaxable_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "owners[].ownerTaxable[].exemptions[]",
+   "layout": "JSON list owners › ownerTaxable › exemptions in Travis-protaxExport-20260719.json"
+  },
+  "jc-owners-ownervalue": {
+   "path": "output/json_2026-07-19/owners.ownerValue.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "owners.ownerValue",
+   "label": "owners › ownerValue",
+   "about": "One row per item in the owners › ownerValue list of each property. Joins back on pID and owners_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "owners[].ownerValue[]",
+   "layout": "JSON list owners › ownerValue in Travis-protaxExport-20260719.json"
+  },
+  "jc-taxingunits": {
+   "path": "output/json_2026-07-19/taxingunits.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "taxingunits",
+   "label": "taxingunits",
+   "about": "One row per item in the taxingunits list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "taxingunits[]",
+   "layout": "JSON list taxingunits in Travis-protaxExport-20260719.json"
+  },
+  "jc-val": {
+   "path": "output/json_2026-07-19/valuations.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "valuations",
+   "label": "valuations",
+   "about": "One row per item in the valuations list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "valuations[]",
+   "layout": "JSON list valuations in Travis-protaxExport-20260719.json"
+  },
+  "jc-val-cost-improvements": {
+   "path": "output/json_2026-07-19/valuations.details.cost-local.improvements.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "valuations.details.cost-local.improvements",
+   "label": "valuations › improvements",
+   "about": "One row per item in the valuations › details › cost-local › improvements list of each property. Joins back on pID and valuations_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "valuations[].details[].cost-local[].improvements[]",
+   "layout": "JSON list valuations › details › cost-local › improvements in Travis-protaxExport-20260719.json"
+  },
+  "jc-val-cost-improvements-adjustments": {
+   "path": "output/json_2026-07-19/valuations.details.cost-local.improvements.adjustments.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "valuations.details.cost-local.improvements.adjustments",
+   "label": "valuations › improvements › adjustments",
+   "about": "One row per item in the valuations › details › cost-local › improvements › adjustments list of each property. Joins back on pID and valuations_i, improvements_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "valuations[].details[].cost-local[].improvements[].adjustments[]",
+   "layout": "JSON list valuations › details › cost-local › improvements › adjustments in Travis-protaxExport-20260719.json"
+  },
+  "jc-val-cost-improvements-details": {
+   "path": "output/json_2026-07-19/valuations.details.cost-local.improvements.details.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "valuations.details.cost-local.improvements.details",
+   "label": "valuations › improvements",
+   "about": "One row per item in the valuations › details › cost-local › improvements › details list of each property. Joins back on pID and valuations_i, improvements_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text.",
+    "3,310,160 rows, the same count as <code>IMP_DET.TXT</code> in the certified PACS export."
+   ],
+   "raw": "valuations[].details[].cost-local[].improvements[].details[]",
+   "layout": "JSON list valuations › details › cost-local › improvements › details in Travis-protaxExport-20260719.json"
+  },
+  "jc-val-cost-improvements-details-adjustments": {
+   "path": "output/json_2026-07-19/valuations.details.cost-local.improvements.details.adjustments.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "valuations.details.cost-local.improvements.details.adjustments",
+   "label": "valuations › improvements › adjustments",
+   "about": "One row per item in the valuations › details › cost-local › improvements › details › adjustments list of each property. Joins back on pID and valuations_i, improvements_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "valuations[].details[].cost-local[].improvements[].details[].adjustments[]",
+   "layout": "JSON list valuations › details › cost-local › improvements › details › adjustments in Travis-protaxExport-20260719.json"
+  },
+  "jc-val-cost-improvements-details-features": {
+   "path": "output/json_2026-07-19/valuations.details.cost-local.improvements.details.features.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "valuations.details.cost-local.improvements.details.features",
+   "label": "valuations › improvements › features",
+   "about": "One row per item in the valuations › details › cost-local › improvements › details › features list of each property. Joins back on pID and valuations_i, improvements_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "valuations[].details[].cost-local[].improvements[].details[].features[]",
+   "layout": "JSON list valuations › details › cost-local › improvements › details › features in Travis-protaxExport-20260719.json"
+  },
+  "jc-val-cost-land": {
+   "path": "output/json_2026-07-19/valuations.details.cost-local.land.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "valuations.details.cost-local.land",
+   "label": "valuations › land",
+   "about": "One row per item in the valuations › details › cost-local › land list of each property. Joins back on pID and valuations_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "valuations[].details[].cost-local[].land[]",
+   "layout": "JSON list valuations › details › cost-local › land in Travis-protaxExport-20260719.json"
+  },
+  "jc-val-cost-land-adjustments": {
+   "path": "output/json_2026-07-19/valuations.details.cost-local.land.adjustments.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "valuations.details.cost-local.land.adjustments",
+   "label": "valuations › land › adjustments",
+   "about": "One row per item in the valuations › details › cost-local › land › adjustments list of each property. Joins back on pID and valuations_i, land_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "valuations[].details[].cost-local[].land[].adjustments[]",
+   "layout": "JSON list valuations › details › cost-local › land › adjustments in Travis-protaxExport-20260719.json"
+  },
+  "jc-val-cost-land-notes": {
+   "path": "output/json_2026-07-19/valuations.details.cost-local.land.notes.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "valuations.details.cost-local.land.notes",
+   "label": "valuations › land › notes",
+   "about": "One row per item in the valuations › details › cost-local › land › notes list of each property. Joins back on pID and valuations_i, land_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "valuations[].details[].cost-local[].land[].notes[]",
+   "layout": "JSON list valuations › details › cost-local › land › notes in Travis-protaxExport-20260719.json"
+  },
+  "jc-deeds": {
+   "path": "output/json_2026-07-19/deeds.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "deeds",
+   "label": "deeds",
+   "about": "One row per item in the deeds list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "deeds[]",
+   "layout": "JSON list deeds in Travis-protaxExport-20260719.json"
+  },
+  "jc-events": {
+   "path": "output/json_2026-07-19/events.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "events",
+   "label": "events",
+   "about": "One row per item in the events list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "events[]",
+   "layout": "JSON list events in Travis-protaxExport-20260719.json"
+  },
+  "jc-inspections": {
+   "path": "output/json_2026-07-19/inspections.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "inspections",
+   "label": "inspections",
+   "about": "One row per item in the inspections list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "inspections[]",
+   "layout": "JSON list inspections in Travis-protaxExport-20260719.json"
+  },
+  "jc-notes": {
+   "path": "output/json_2026-07-19/notes.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "notes",
+   "label": "notes",
+   "about": "One row per item in the notes list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "notes[]",
+   "layout": "JSON list notes in Travis-protaxExport-20260719.json"
+  },
+  "jc-permits": {
+   "path": "output/json_2026-07-19/permits.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "permits",
+   "label": "permits",
+   "about": "One row per item in the permits list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "permits[]",
+   "layout": "JSON list permits in Travis-protaxExport-20260719.json"
+  },
+  "jc-sales": {
+   "path": "output/json_2026-07-19/sales.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "sales",
+   "label": "sales",
+   "about": "One row per item in the sales list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "sales[]",
+   "layout": "JSON list sales in Travis-protaxExport-20260719.json"
+  },
+  "jc-appeals": {
+   "path": "output/json_2026-07-19/appeals.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "appeals",
+   "label": "appeals",
+   "about": "One row per item in the appeals list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20260719.json)",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "appeals[]",
+   "layout": "JSON list appeals in Travis-protaxExport-20260719.json"
+  },
+  "jo-links": {
+   "path": "output/json_2026-10-06/links.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "links",
+   "label": "links",
+   "about": "One row per item in the links list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-links",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "links[]",
+   "layout": "JSON list links in Travis-protaxExport-20261006.json"
+  },
+  "jo-property": {
+   "path": "output/json_2026-10-06/property.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "property",
+   "label": "property (top level)",
+   "about": "One row per property: its top-level fields.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-property",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "property",
+   "layout": "JSON top-level fields of each property in Travis-protaxExport-20261006.json",
+   "nav_label": "property"
+  },
+  "jo-propertycharacteristics": {
+   "path": "output/json_2026-10-06/propertyCharacteristics.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "propertyCharacteristics",
+   "label": "propertyCharacteristics",
+   "about": "One row per item in the propertyCharacteristics list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-propertycharacteristics",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "propertyCharacteristics[]",
+   "layout": "JSON list propertyCharacteristics in Travis-protaxExport-20261006.json"
+  },
+  "jo-propertyidentification": {
+   "path": "output/json_2026-10-06/propertyIdentification.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "propertyIdentification",
+   "label": "propertyIdentification",
+   "about": "One row per item in the propertyIdentification list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-propertyidentification",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "propertyIdentification[]",
+   "layout": "JSON list propertyIdentification in Travis-protaxExport-20261006.json"
+  },
+  "jo-propertylegaldescription": {
+   "path": "output/json_2026-10-06/propertyLegalDescription.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "propertyLegalDescription",
+   "label": "propertyLegalDescription",
+   "about": "One row per item in the propertyLegalDescription list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-propertylegaldescription",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "propertyLegalDescription[]",
+   "layout": "JSON list propertyLegalDescription in Travis-protaxExport-20261006.json"
+  },
+  "jo-propertyprofile": {
+   "path": "output/json_2026-10-06/propertyProfile.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "propertyProfile",
+   "label": "propertyProfile",
+   "about": "One row per item in the propertyProfile list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-propertyprofile",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "propertyProfile[]",
+   "layout": "JSON list propertyProfile in Travis-protaxExport-20261006.json"
+  },
+  "jo-situses": {
+   "path": "output/json_2026-10-06/situses.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "situses",
+   "label": "situses",
+   "about": "One row per item in the situses list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-situses",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "situses[]",
+   "layout": "JSON list situses in Travis-protaxExport-20261006.json"
+  },
+  "jo-smartgroups": {
+   "path": "output/json_2026-10-06/smartgroups.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "smartgroups",
+   "label": "smartgroups",
+   "about": "One row per item in the smartgroups list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-smartgroups",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "smartgroups[]",
+   "layout": "JSON list smartgroups in Travis-protaxExport-20261006.json"
+  },
+  "jo-tags": {
+   "path": "output/json_2026-10-06/tags.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "tags",
+   "label": "tags",
+   "about": "One row per item in the tags list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-tags",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "tags[]",
+   "layout": "JSON list tags in Travis-protaxExport-20261006.json"
+  },
+  "jo-owners": {
+   "path": "output/json_2026-10-06/owners.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "owners",
+   "label": "owners",
+   "about": "One row per item in the owners list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-owners",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "owners[]",
+   "layout": "JSON list owners in Travis-protaxExport-20261006.json"
+  },
+  "jo-owners-agents": {
+   "path": "output/json_2026-10-06/owners.agents.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "owners.agents",
+   "label": "owners › agents",
+   "about": "One row per item in the owners › agents list of each property. Joins back on pID and owners_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-owners-agents",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "owners[].agents[]",
+   "layout": "JSON list owners › agents in Travis-protaxExport-20261006.json"
+  },
+  "jo-owners-exemptions": {
+   "path": "output/json_2026-10-06/owners.exemptions.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "owners.exemptions",
+   "label": "owners › exemptions",
+   "about": "One row per item in the owners › exemptions list of each property. Joins back on pID and owners_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-owners-exemptions",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "owners[].exemptions[]",
+   "layout": "JSON list owners › exemptions in Travis-protaxExport-20261006.json"
+  },
+  "jo-owners-ownertaxable": {
+   "path": "output/json_2026-10-06/owners.ownerTaxable.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "owners.ownerTaxable",
+   "label": "owners › ownerTaxable",
+   "about": "One row per item in the owners › ownerTaxable list of each property. Joins back on pID and owners_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-owners-ownertaxable",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "owners[].ownerTaxable[]",
+   "layout": "JSON list owners › ownerTaxable in Travis-protaxExport-20261006.json"
+  },
+  "jo-owners-ownertaxable-exemptions": {
+   "path": "output/json_2026-10-06/owners.ownerTaxable.exemptions.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "owners.ownerTaxable.exemptions",
+   "label": "owners › ownerTaxable › exemptions",
+   "about": "One row per item in the owners › ownerTaxable › exemptions list of each property. Joins back on pID and owners_i, ownerTaxable_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-owners-ownertaxable-exemptions",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "owners[].ownerTaxable[].exemptions[]",
+   "layout": "JSON list owners › ownerTaxable › exemptions in Travis-protaxExport-20261006.json"
+  },
+  "jo-owners-ownervalue": {
+   "path": "output/json_2026-10-06/owners.ownerValue.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "owners.ownerValue",
+   "label": "owners › ownerValue",
+   "about": "One row per item in the owners › ownerValue list of each property. Joins back on pID and owners_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-owners-ownervalue",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "owners[].ownerValue[]",
+   "layout": "JSON list owners › ownerValue in Travis-protaxExport-20261006.json"
+  },
+  "jo-taxingunits": {
+   "path": "output/json_2026-10-06/taxingunits.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "taxingunits",
+   "label": "taxingunits",
+   "about": "One row per item in the taxingunits list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-taxingunits",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "taxingunits[]",
+   "layout": "JSON list taxingunits in Travis-protaxExport-20261006.json"
+  },
+  "jo-val": {
+   "path": "output/json_2026-10-06/valuations.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "valuations",
+   "label": "valuations",
+   "about": "One row per item in the valuations list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-val",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "valuations[]",
+   "layout": "JSON list valuations in Travis-protaxExport-20261006.json"
+  },
+  "jo-val-cost-improvements": {
+   "path": "output/json_2026-10-06/valuations.details.cost-local.improvements.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "valuations.details.cost-local.improvements",
+   "label": "valuations › improvements",
+   "about": "One row per item in the valuations › details › cost-local › improvements list of each property. Joins back on pID and valuations_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-val-cost-improvements",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "valuations[].details[].cost-local[].improvements[]",
+   "layout": "JSON list valuations › details › cost-local › improvements in Travis-protaxExport-20261006.json"
+  },
+  "jo-val-cost-improvements-adjustments": {
+   "path": "output/json_2026-10-06/valuations.details.cost-local.improvements.adjustments.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "valuations.details.cost-local.improvements.adjustments",
+   "label": "valuations › improvements › adjustments",
+   "about": "One row per item in the valuations › details › cost-local › improvements › adjustments list of each property. Joins back on pID and valuations_i, improvements_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-val-cost-improvements-adjustments",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "valuations[].details[].cost-local[].improvements[].adjustments[]",
+   "layout": "JSON list valuations › details › cost-local › improvements › adjustments in Travis-protaxExport-20261006.json"
+  },
+  "jo-val-cost-improvements-details": {
+   "path": "output/json_2026-10-06/valuations.details.cost-local.improvements.details.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "valuations.details.cost-local.improvements.details",
+   "label": "valuations › improvements",
+   "about": "One row per item in the valuations › details › cost-local › improvements › details list of each property. Joins back on pID and valuations_i, improvements_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-val-cost-improvements-details",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "valuations[].details[].cost-local[].improvements[].details[]",
+   "layout": "JSON list valuations › details › cost-local › improvements › details in Travis-protaxExport-20261006.json"
+  },
+  "jo-val-cost-improvements-details-adjustments": {
+   "path": "output/json_2026-10-06/valuations.details.cost-local.improvements.details.adjustments.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "valuations.details.cost-local.improvements.details.adjustments",
+   "label": "valuations › improvements › adjustments",
+   "about": "One row per item in the valuations › details › cost-local › improvements › details › adjustments list of each property. Joins back on pID and valuations_i, improvements_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-val-cost-improvements-details-adjustments",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "valuations[].details[].cost-local[].improvements[].details[].adjustments[]",
+   "layout": "JSON list valuations › details › cost-local › improvements › details › adjustments in Travis-protaxExport-20261006.json"
+  },
+  "jo-val-cost-improvements-details-features": {
+   "path": "output/json_2026-10-06/valuations.details.cost-local.improvements.details.features.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "valuations.details.cost-local.improvements.details.features",
+   "label": "valuations › improvements › features",
+   "about": "One row per item in the valuations › details › cost-local › improvements › details › features list of each property. Joins back on pID and valuations_i, improvements_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-val-cost-improvements-details-features",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "valuations[].details[].cost-local[].improvements[].details[].features[]",
+   "layout": "JSON list valuations › details › cost-local › improvements › details › features in Travis-protaxExport-20261006.json"
+  },
+  "jo-val-cost-land": {
+   "path": "output/json_2026-10-06/valuations.details.cost-local.land.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "valuations.details.cost-local.land",
+   "label": "valuations › land",
+   "about": "One row per item in the valuations › details › cost-local › land list of each property. Joins back on pID and valuations_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-val-cost-land",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "valuations[].details[].cost-local[].land[]",
+   "layout": "JSON list valuations › details › cost-local › land in Travis-protaxExport-20261006.json"
+  },
+  "jo-val-cost-land-adjustments": {
+   "path": "output/json_2026-10-06/valuations.details.cost-local.land.adjustments.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "valuations.details.cost-local.land.adjustments",
+   "label": "valuations › land › adjustments",
+   "about": "One row per item in the valuations › details › cost-local › land › adjustments list of each property. Joins back on pID and valuations_i, land_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-val-cost-land-adjustments",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "valuations[].details[].cost-local[].land[].adjustments[]",
+   "layout": "JSON list valuations › details › cost-local › land › adjustments in Travis-protaxExport-20261006.json"
+  },
+  "jo-val-cost-land-notes": {
+   "path": "output/json_2026-10-06/valuations.details.cost-local.land.notes.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "valuations.details.cost-local.land.notes",
+   "label": "valuations › land › notes",
+   "about": "One row per item in the valuations › details › cost-local › land › notes list of each property. Joins back on pID and valuations_i, land_i.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-val-cost-land-notes",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "valuations[].details[].cost-local[].land[].notes[]",
+   "layout": "JSON list valuations › details › cost-local › land › notes in Travis-protaxExport-20261006.json"
+  },
+  "jo-deeds": {
+   "path": "output/json_2026-10-06/deeds.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "deeds",
+   "label": "deeds",
+   "about": "One row per item in the deeds list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-deeds",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "deeds[]",
+   "layout": "JSON list deeds in Travis-protaxExport-20261006.json"
+  },
+  "jo-events": {
+   "path": "output/json_2026-10-06/events.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "events",
+   "label": "events",
+   "about": "One row per item in the events list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-events",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "events[]",
+   "layout": "JSON list events in Travis-protaxExport-20261006.json"
+  },
+  "jo-inspections": {
+   "path": "output/json_2026-10-06/inspections.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "inspections",
+   "label": "inspections",
+   "about": "One row per item in the inspections list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-inspections",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "inspections[]",
+   "layout": "JSON list inspections in Travis-protaxExport-20261006.json"
+  },
+  "jo-notes": {
+   "path": "output/json_2026-10-06/notes.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "notes",
+   "label": "notes",
+   "about": "One row per item in the notes list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-notes",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "notes[]",
+   "layout": "JSON list notes in Travis-protaxExport-20261006.json"
+  },
+  "jo-permits": {
+   "path": "output/json_2026-10-06/permits.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "permits",
+   "label": "permits",
+   "about": "One row per item in the permits list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-permits",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "permits[]",
+   "layout": "JSON list permits in Travis-protaxExport-20261006.json"
+  },
+  "jo-sales": {
+   "path": "output/json_2026-10-06/sales.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "sales",
+   "label": "sales",
+   "about": "One row per item in the sales list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-sales",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "sales[]",
+   "layout": "JSON list sales in Travis-protaxExport-20261006.json"
+  },
+  "jo-appeals": {
+   "path": "output/json_2026-10-06/appeals.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=200000000"
+   },
+   "json_path": "appeals",
+   "label": "appeals",
+   "about": "One row per item in the appeals list of each property. Joins back on pID.",
+   "encoding": "Gzipped CSV, UTF-8 (flattened from Travis-protaxExport-20261006.json)",
+   "compare": "jc-appeals",
+   "notes": [
+    "Flattened from the JSON export: each nested list in a property record is its own table; every row carries <code>pID</code>, <code>pYear</code> and one <code>&lt;list&gt;_i</code> position column per enclosing list. Nested plain objects become dotted column names; lists of plain values are kept as JSON text."
+   ],
+   "raw": "appeals[]",
+   "layout": "JSON list appeals in Travis-protaxExport-20261006.json"
+  },
+  "ears22-ajr": {
+   "path": "output/ears/2022/AJR.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "1 · Account records (AJR)",
+   "about": "One row per account, taxing unit and property category: values, exemptions, caps, ceilings and ARB changes as reported to the Comptroller.",
+   "encoding": "Gzipped CSV, UTF-8 (split from 227EARS092822.csv)",
+   "notes": [
+    "Several rows per property: one per taxing unit (<code>AJR004_taxing_unit_id_number</code>) and property category (<code>AJR031_category</code>). <code>AJR008_short_account_number</code> is the property id (pID / prop_id without padding); <code>AJR007_account_number</code> is the 10-digit geo id.",
+    "The source file has no header row. 2022 has 85 AJR fields, the first 85 of the current manual's layout; field-by-field values for the same property match 2024 position for position. Zero amounts are written blank in 2022, where 2024 onward writes 0."
+   ],
+   "raw": "227EARS092822.csv · AJR rows",
+   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1"
+  },
+  "ears22-aud": {
+   "path": "output/ears/2022/AUD.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "2 · Ag-use detail (AUD)",
+   "about": "One row per account and taxing unit with land under ag or timber use: acres and productivity values by land class.",
+   "encoding": "Gzipped CSV, UTF-8 (split from 227EARS092822.csv)",
+   "notes": [
+    "One row per account and taxing unit with land under ag or timber use. Most land-class columns are timber and orchard classes Travis County does not have."
+   ],
+   "raw": "227EARS092822.csv · AUD rows",
+   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3"
+  },
+  "ears22-tu2": {
+   "path": "output/ears/2022/TU2.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "3 · Top-10 taxpayers (TU2)",
+   "about": "The ten largest taxpayers in each taxing unit, with market and taxable value.",
+   "encoding": "Gzipped CSV, UTF-8 (split from 227EARS092822.csv)",
+   "notes": [
+    "Up to ten rows per taxing unit (<code>TU206_taxpayer_ranking</code> 1–10)."
+   ],
+   "raw": "227EARS092822.csv · TU2 rows",
+   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5"
+  },
+  "ears23-ajr": {
+   "path": "output/ears/2023/AJR.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "1 · Account records (AJR)",
+   "about": "One row per account, taxing unit and property category: values, exemptions, caps, ceilings and ARB changes as reported to the Comptroller.",
+   "encoding": "Gzipped CSV, UTF-8 (split from 227EARS083023.csv)",
+   "notes": [
+    "Several rows per property: one per taxing unit (<code>AJR004_taxing_unit_id_number</code>) and property category (<code>AJR031_category</code>). <code>AJR008_short_account_number</code> is the property id (pID / prop_id without padding); <code>AJR007_account_number</code> is the 10-digit geo id.",
+    "The source file has no header row. 2023 has 86 AJR fields, the first 86 of the current manual's layout; field-by-field values for the same property match 2024 position for position. Zero amounts are written blank in 2023, where 2024 onward writes 0."
+   ],
+   "compare": "ears22-ajr",
+   "raw": "227EARS083023.csv · AJR rows",
+   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1"
+  },
+  "ears23-aud": {
+   "path": "output/ears/2023/AUD.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "2 · Ag-use detail (AUD)",
+   "about": "One row per account and taxing unit with land under ag or timber use: acres and productivity values by land class.",
+   "encoding": "Gzipped CSV, UTF-8 (split from 227EARS083023.csv)",
+   "notes": [
+    "One row per account and taxing unit with land under ag or timber use. Most land-class columns are timber and orchard classes Travis County does not have."
+   ],
+   "compare": "ears22-aud",
+   "raw": "227EARS083023.csv · AUD rows",
+   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3"
+  },
+  "ears23-tu2": {
+   "path": "output/ears/2023/TU2.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "3 · Top-10 taxpayers (TU2)",
+   "about": "The ten largest taxpayers in each taxing unit, with market and taxable value.",
+   "encoding": "Gzipped CSV, UTF-8 (split from 227EARS083023.csv)",
+   "notes": [
+    "Up to ten rows per taxing unit (<code>TU206_taxpayer_ranking</code> 1–10)."
+   ],
+   "compare": "ears22-tu2",
+   "raw": "227EARS083023.csv · TU2 rows",
+   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5"
   }
  },
  "descriptions": {
@@ -2198,7 +3610,317 @@
   "med_amt": "Dollar amount of the medical or biomedical property (11.23) for this taxing unit.",
   "med_allocation_factor": "Share of the medical or biomedical property (11.23) allocated to this owner and taxing unit (1 = all of it).",
   "jeti_amt": "Dollar amount of the JETI jobs, energy, technology and innovation agreement for this taxing unit.",
-  "jeti_allocation_factor": "Share of the JETI jobs, energy, technology and innovation agreement allocated to this owner and taxing unit (1 = all of it)."
+  "jeti_allocation_factor": "Share of the JETI jobs, energy, technology and innovation agreement allocated to this owner and taxing unit (1 = all of it).",
+  "AJR001_record_type": "Record Type (EARS field AJR001, Comptroller manual 96-1051).",
+  "AJR002_sdpvs_year": "SDPVS Year (EARS field AJR002, Comptroller manual 96-1051).",
+  "AJR003_appraisal_district_id_number": "Appraisal District ID Number (EARS field AJR003, Comptroller manual 96-1051).",
+  "AJR004_taxing_unit_id_number": "Taxing Unit ID Number (EARS field AJR004, Comptroller manual 96-1051).",
+  "AJR005_taxing_unit_type": "Taxing Unit Type (EARS field AJR005, Comptroller manual 96-1051).",
+  "AJR006_county_fund_type": "County Fund Type (EARS field AJR006, Comptroller manual 96-1051).",
+  "AJR007_account_number": "Account Number (EARS field AJR007, Comptroller manual 96-1051).",
+  "AJR008_short_account_number": "Short Account Number (EARS field AJR008, Comptroller manual 96-1051).",
+  "AJR009_parent_account_number": "Parent Account Number (EARS field AJR009, Comptroller manual 96-1051).",
+  "AJR010_parcel_address_street": "Parcel Address Street (EARS field AJR010, Comptroller manual 96-1051).",
+  "AJR011_confidentiality_code": "Confidentiality Code (EARS field AJR011, Comptroller manual 96-1051).",
+  "AJR012_legal_description": "Legal Description (EARS field AJR012, Comptroller manual 96-1051).",
+  "AJR013_most_recent_date_of_sale": "Most Recent Date of Sale (EARS field AJR013, Comptroller manual 96-1051).",
+  "AJR014_second_most_recent_date_of_sale": "Second Most Recent Date of Sale (EARS field AJR014, Comptroller manual 96-1051).",
+  "AJR015_new_property_indicator": "New Property Indicator (EARS field AJR015, Comptroller manual 96-1051).",
+  "AJR016_verified_sale_by_appraisal_district_indicator": "Verified Sale by Appraisal District Indicator (EARS field AJR016, Comptroller manual 96-1051).",
+  "AJR017_market_area_code": "Market Area Code (EARS field AJR017, Comptroller manual 96-1051).",
+  "AJR018_neighborhood_code": "Neighborhood Code (EARS field AJR018, Comptroller manual 96-1051).",
+  "AJR019_new_construction_amount": "New Construction Amount (EARS field AJR019, Comptroller manual 96-1051).",
+  "AJR020_sic_code": "SIC Code (EARS field AJR020, Comptroller manual 96-1051).",
+  "AJR021_naics_code": "NAICS Code (EARS field AJR021, Comptroller manual 96-1051).",
+  "AJR022_square_footage_size_of_main_improvement": "Square Footage Size of Main Improvement (EARS field AJR022, Comptroller manual 96-1051).",
+  "AJR023_year_built": "Year Built (EARS field AJR023, Comptroller manual 96-1051).",
+  "AJR024_central_air_and_heat_code": "Central Air and Heat Code (EARS field AJR024, Comptroller manual 96-1051).",
+  "AJR025_construction_type_class_code": "Construction Type Class Code (EARS field AJR025, Comptroller manual 96-1051).",
+  "AJR026_percent_ownership": "Percent Ownership (EARS field AJR026, Comptroller manual 96-1051).",
+  "AJR027_last_reappraisal_year": "Last Reappraisal Year (EARS field AJR027, Comptroller manual 96-1051).",
+  "AJR028_land_units": "Land Units (EARS field AJR028, Comptroller manual 96-1051).",
+  "AJR029_land_size": "Land Size (EARS field AJR029, Comptroller manual 96-1051).",
+  "AJR030_owner_id_code": "Owner ID Code (EARS field AJR030, Comptroller manual 96-1051).",
+  "AJR031_category": "Category (EARS field AJR031, Comptroller manual 96-1051).",
+  "AJR032_previous_year_s_category_code": "Previous Year’s Category Code (EARS field AJR032, Comptroller manual 96-1051).",
+  "AJR033_previous_year_s_total_market_value": "Previous Year’s Total Market Value (EARS field AJR033, Comptroller manual 96-1051).",
+  "AJR034_totally_exempt_amount": "Totally Exempt Amount (EARS field AJR034, Comptroller manual 96-1051).",
+  "AJR035_land_market_value_before_cap_is_applied": "Land Market Value (Before Cap is Applied) (EARS field AJR035, Comptroller manual 96-1051).",
+  "AJR036_improvement_market_value_before_cap_is_applied": "Improvement Market Value (Before Cap is Applied) (EARS field AJR036, Comptroller manual 96-1051).",
+  "AJR037_mineral_market_value_before_cap_is_applied": "Mineral Market Value (Before Cap is Applied) (EARS field AJR037, Comptroller manual 96-1051).",
+  "AJR038_personal_property_market_value_before_cap_is_app": "Personal Property Market Value (Before Cap is Applied) (EARS field AJR038, Comptroller manual 96-1051).",
+  "AJR039_homestead_indicator": "Homestead Indicator (EARS field AJR039, Comptroller manual 96-1051).",
+  "AJR040_over_65_homestead_exemption_indicator": "Over 65 Homestead Exemption Indicator (EARS field AJR040, Comptroller manual 96-1051).",
+  "AJR041_disabled_homestead_exemption_indicator": "Disabled Homestead Exemption Indicator (EARS field AJR041, Comptroller manual 96-1051).",
+  "AJR042_state_mandated_homestead_exemption_amount": "State-Mandated Homestead Exemption Amount (EARS field AJR042, Comptroller manual 96-1051).",
+  "AJR043_state_mandated_over_65_homestead_exemption_amoun": "State-Mandated Over 65 Homestead Exemption Amount (EARS field AJR043, Comptroller manual 96-1051).",
+  "AJR044_state_mandated_disabled_homestead_exemption_amou": "State-Mandated Disabled Homestead Exemption Amount (EARS field AJR044, Comptroller manual 96-1051).",
+  "AJR045_local_optional_percentage_homestead_exemption_am": "Local Optional Percentage Homestead Exemption Amount (EARS field AJR045, Comptroller manual 96-1051).",
+  "AJR046_local_optional_percentage_homestead_percentage_o": "Local Optional Percentage Homestead Percentage Offered (EARS field AJR046, Comptroller manual 96-1051).",
+  "AJR047_local_optional_over_65_homestead_exemption_amoun": "Local Optional Over 65 Homestead Exemption Amount (EARS field AJR047, Comptroller manual 96-1051).",
+  "AJR048_local_optional_disabled_homestead_exemption_amou": "Local Optional Disabled Homestead Exemption Amount (EARS field AJR048, Comptroller manual 96-1051).",
+  "AJR049_100_pct_disabled_veteran_homestead_exemption_amo": "100% Disabled Veteran Homestead Exemption Amount (EARS field AJR049, Comptroller manual 96-1051).",
+  "AJR050_surviving_spouse_100_pct_disabled_veteran_exempt": "Surviving Spouse 100% Disabled Veteran Exemption Amount (EARS field AJR050, Comptroller manual 96-1051).",
+  "AJR051_surviving_spouse_service_member_killed_in_action": "Surviving Spouse Service Member Killed in Action Exemption Amount (EARS field AJR051, Comptroller manual 96-1051).",
+  "AJR052_home_donated_by_charity_to_disabled_vet_homestea": "Home Donated by Charity to Disabled Vet Homestead Exemption Amount (EARS field AJR052, Comptroller manual 96-1051).",
+  "AJR053_partially_disabled_veteran_exemption_amount": "Partially Disabled Veteran Exemption Amount (EARS field AJR053, Comptroller manual 96-1051).",
+  "AJR054_surviving_spouse_first_responder_killed_line_of": "Surviving Spouse First Responder Killed Line of Duty Exemption Amount (EARS field AJR054, Comptroller manual 96-1051).",
+  "AJR055_local_optional_historical_exemption_amount": "Local Optional Historical Exemption Amount (EARS field AJR055, Comptroller manual 96-1051).",
+  "AJR056_solar_wind_power_exemption_amount": "Solar/Wind Power Exemption Amount (EARS field AJR056, Comptroller manual 96-1051).",
+  "AJR057_freeport_exemption_amount": "Freeport Exemption Amount (EARS field AJR057, Comptroller manual 96-1051).",
+  "AJR058_goods_in_transit_exemption_amount": "Goods in Transit Exemption Amount (EARS field AJR058, Comptroller manual 96-1051).",
+  "AJR059_pollution_control_exemption_amount": "Pollution Control Exemption Amount (EARS field AJR059, Comptroller manual 96-1051).",
+  "AJR060_proration_amount": "Proration Amount (EARS field AJR060, Comptroller manual 96-1051).",
+  "AJR061_energy_storage_system_exemption_amount": "Energy Storage System Exemption Amount (EARS field AJR061, Comptroller manual 96-1051).",
+  "AJR062_water_conservation_initiatives_exemption_amount": "Water Conservation Initiatives Exemption Amount (EARS field AJR062, Comptroller manual 96-1051).",
+  "AJR063_optional_low_income_housing_partial_exemption_am": "Optional Low-Income Housing Partial Exemption Amount (EARS field AJR063, Comptroller manual 96-1051).",
+  "AJR064_mandatory_low_income_housing_partial_exemption_a": "Mandatory Low-Income Housing Partial Exemption Amount (EARS field AJR064, Comptroller manual 96-1051).",
+  "AJR065_community_land_trust_exemption_amount": "Community Land Trust Exemption Amount (EARS field AJR065, Comptroller manual 96-1051).",
+  "AJR066_methane_gas_capture_at_a_landfill_exemption_amou": "Methane Gas Capture at a Landfill Exemption Amount (EARS field AJR066, Comptroller manual 96-1051).",
+  "AJR067_loss_to_cap_on_homestead_increase_amount": "Loss to Cap on Homestead Increase Amount (EARS field AJR067, Comptroller manual 96-1051).",
+  "AJR068_abatement_loss_amount": "Abatement Loss Amount (EARS field AJR068, Comptroller manual 96-1051).",
+  "AJR069_property_located_in_a_tirz_indicator": "Property Located in a TIRZ Indicator (EARS field AJR069, Comptroller manual 96-1051).",
+  "AJR070_property_covered_by_a_chapter_313_agreement_indi": "Property Covered by a Chapter 313 Agreement Indicator (EARS field AJR070, Comptroller manual 96-1051).",
+  "AJR071_tax_ceiling_exists_on_property_because_homeowner": "Tax Ceiling Exists on Property Because Homeowner is Over 65 or Disabled Indicator (EARS field AJR071, Comptroller manual 96-1051).",
+  "AJR072_tax_ceiling_amount": "Tax Ceiling Amount (EARS field AJR072, Comptroller manual 96-1051).",
+  "AJR073_arb_hearing_code": "ARB Hearing Code (EARS field AJR073, Comptroller manual 96-1051).",
+  "AJR074_arb_adjustment_code": "ARB Adjustment Code (EARS field AJR074, Comptroller manual 96-1051).",
+  "AJR075_property_market_value_before_arb_adjustment": "Property Market Value Before ARB Adjustment (EARS field AJR075, Comptroller manual 96-1051).",
+  "AJR076_amount_of_arb_adjustment": "Amount of ARB Adjustment (EARS field AJR076, Comptroller manual 96-1051).",
+  "AJR077_property_damaged_in_a_previous_year_disaster_and": "Property Damaged in a Previous Year Disaster and Not Fully Repaired Indicator (EARS field AJR077, Comptroller manual 96-1051).",
+  "AJR078_property_reappraised_due_to_a_disaster_this_year": "Property Reappraised Due to a Disaster This Year Indicator (EARS field AJR078, Comptroller manual 96-1051).",
+  "AJR079_amount_of_loss_for_damage_caused_by_disaster_tem": "Amount of Loss for Damage Caused by Disaster Temporary Exemption (EARS field AJR079, Comptroller manual 96-1051).",
+  "AJR080_field_not_used_leave_blank": "Field Not Used (leave blank) (EARS field AJR080, Comptroller manual 96-1051).",
+  "AJR081_county_located_in": "County Located In (EARS field AJR081, Comptroller manual 96-1051).",
+  "AJR082_most_recent_sales_price": "Most Recent Sales Price (EARS field AJR082, Comptroller manual 96-1051).",
+  "AJR083_second_most_recent_sales_price": "Second Most Recent Sales Price (EARS field AJR083, Comptroller manual 96-1051).",
+  "AJR084_loss_to_special_valuation": "Loss to Special Valuation (EARS field AJR084, Comptroller manual 96-1051).",
+  "AJR085_bullion_depository": "Bullion Depository (EARS field AJR085, Comptroller manual 96-1051).",
+  "AJR086_construction_status": "Construction Status (EARS field AJR086, Comptroller manual 96-1051).",
+  "AJR087_child_care_facility_exemption_percentage_offered": "Child-Care Facility Exemption Percentage Offered (EARS field AJR087, Comptroller manual 96-1051).",
+  "AJR088_child_care_facility_exemption_amount": "Child-Care Facility Exemption Amount (EARS field AJR088, Comptroller manual 96-1051).",
+  "AJR089_medical_or_biomedical_property_exemption": "Medical or Biomedical Property Exemption (EARS field AJR089, Comptroller manual 96-1051).",
+  "AJR090_loss_to_cap_on_non_homestead_real_property_incre": "Loss to Cap on Non-Homestead Real Property Increase Amount (EARS field AJR090, Comptroller manual 96-1051).",
+  "AJR091_tax_deferral_amount": "Tax Deferral Amount (EARS field AJR091, Comptroller manual 96-1051).",
+  "AJR092_tax_ceiling_amount_adjusted_for_rate_compression": "Tax Ceiling Amount (Adjusted for Rate Compression) (EARS field AJR092, Comptroller manual 96-1051).",
+  "AJR093_jeti_agreement_loss_amount": "JETI Agreement Loss Amount (EARS field AJR093, Comptroller manual 96-1051).",
+  "AJR094_current_year_percentage_complete": "Current Year Percentage Complete (EARS field AJR094, Comptroller manual 96-1051).",
+  "AJR095_previous_year_percentage_complete": "Previous Year Percentage Complete (EARS field AJR095, Comptroller manual 96-1051).",
+  "AJR096_previous_year_land_value": "Previous Year Land Value (EARS field AJR096, Comptroller manual 96-1051).",
+  "AJR097_previous_year_improvement_value": "Previous Year Improvement Value (EARS field AJR097, Comptroller manual 96-1051).",
+  "AJR098_parcel_address_city": "Parcel Address City (EARS field AJR098, Comptroller manual 96-1051).",
+  "AJR099_parcel_address_zip_code": "Parcel Address Zip Code (EARS field AJR099, Comptroller manual 96-1051).",
+  "AJR100_parcel_latitude": "Parcel Latitude (EARS field AJR100, Comptroller manual 96-1051).",
+  "AJR101_parcel_longitude": "Parcel Longitude (EARS field AJR101, Comptroller manual 96-1051).",
+  "AJR102_gis_parcel_id": "GIS Parcel ID (EARS field AJR102, Comptroller manual 96-1051).",
+  "AJR103_personal_property_first_125_000": "Personal Property First $125,000 (EARS field AJR103, Comptroller manual 96-1051).",
+  "AJR104_animal_feed_held_for_sale": "Animal Feed Held for Sale (EARS field AJR104, Comptroller manual 96-1051).",
+  "AJR105_homestead_destroyed_by_a_fire": "Homestead Destroyed by a Fire (EARS field AJR105, Comptroller manual 96-1051).",
+  "AJR106_border_security_infrastructure": "Border Security Infrastructure (EARS field AJR106, Comptroller manual 96-1051).",
+  "AJR107_surviving_spouse_of_a_veteran_with_a_qualifying": "Surviving Spouse of a Veteran with a Qualifying Condition (EARS field AJR107, Comptroller manual 96-1051).",
+  "AJR108_delinquent_tax_lawsuit_abated_indicator": "Delinquent Tax Lawsuit Abated Indicator (EARS field AJR108, Comptroller manual 96-1051).",
+  "AJR109_sale_to_foreclose_a_tax_lien_abated_indicator": "Sale to Foreclose a Tax Lien Abated Indicator (EARS field AJR109, Comptroller manual 96-1051).",
+  "AJR110_mineral_interest_valued_under_500": "Mineral Interest Valued under $500 (EARS field AJR110, Comptroller manual 96-1051).",
+  "AJR111_data_center_indicator": "Data Center Indicator (EARS field AJR111, Comptroller manual 96-1051).",
+  "AUD001_record_type": "Record Type (EARS field AUD001, Comptroller manual 96-1051).",
+  "AUD002_sdpvs_year": "SDPVS Year (EARS field AUD002, Comptroller manual 96-1051).",
+  "AUD003_appraisal_district_id_number": "Appraisal District ID Number (EARS field AUD003, Comptroller manual 96-1051).",
+  "AUD004_taxing_unit_id_number": "Taxing Unit ID Number (EARS field AUD004, Comptroller manual 96-1051).",
+  "AUD005_taxing_unit_type": "Taxing Unit Type (EARS field AUD005, Comptroller manual 96-1051).",
+  "AUD006_county_fund_type": "County Fund Type (EARS field AUD006, Comptroller manual 96-1051).",
+  "AUD007_account_number": "Account Number (EARS field AUD007, Comptroller manual 96-1051).",
+  "AUD008_short_account_number": "Short Account Number (EARS field AUD008, Comptroller manual 96-1051).",
+  "AUD009_dryland_cropland_acres": "Dryland Cropland Acres (EARS field AUD009, Comptroller manual 96-1051).",
+  "AUD010_improved_pasture_acres": "Improved Pasture Acres (EARS field AUD010, Comptroller manual 96-1051).",
+  "AUD011_irrigated_cropland_acres": "Irrigated Cropland Acres (EARS field AUD011, Comptroller manual 96-1051).",
+  "AUD012_native_pasture_acres": "Native Pasture Acres (EARS field AUD012, Comptroller manual 96-1051).",
+  "AUD013_quarantined_land_acres": "Quarantined Land Acres (EARS field AUD013, Comptroller manual 96-1051).",
+  "AUD014_barren_wasteland_acres": "Barren Wasteland Acres (EARS field AUD014, Comptroller manual 96-1051).",
+  "AUD015_orchard_acres": "Orchard Acres (EARS field AUD015, Comptroller manual 96-1051).",
+  "AUD016_other_land_acres": "Other Land Acres (EARS field AUD016, Comptroller manual 96-1051).",
+  "AUD017_wildlife_management_previously_dryland_cropland": "Wildlife Management Previously Dryland Cropland Acres (EARS field AUD017, Comptroller manual 96-1051).",
+  "AUD018_wildlife_management_previously_improved_pasture": "Wildlife Management Previously Improved Pasture Acres (EARS field AUD018, Comptroller manual 96-1051).",
+  "AUD019_wildlife_management_previously_irrigated_croplan": "Wildlife Management Previously Irrigated Cropland Acres (EARS field AUD019, Comptroller manual 96-1051).",
+  "AUD020_wildlife_management_previously_native_pasture_ac": "Wildlife Management Previously Native Pasture Acres (EARS field AUD020, Comptroller manual 96-1051).",
+  "AUD021_wildlife_management_previously_quarantined_land": "Wildlife Management Previously Quarantined Land Acres (EARS field AUD021, Comptroller manual 96-1051).",
+  "AUD022_wildlife_management_previously_barren_wasteland": "Wildlife Management Previously Barren Wasteland Acres (EARS field AUD022, Comptroller manual 96-1051).",
+  "AUD023_wildlife_management_previously_orchard_acres": "Wildlife Management Previously Orchard Acres (EARS field AUD023, Comptroller manual 96-1051).",
+  "AUD024_wildlife_management_previously_other_land_acres": "Wildlife Management Previously Other Land Acres (EARS field AUD024, Comptroller manual 96-1051).",
+  "AUD025_timber_in_transition_previously_dryland_cropland": "Timber in Transition Previously Dryland Cropland Acres (EARS field AUD025, Comptroller manual 96-1051).",
+  "AUD026_timber_in_transition_previously_improved_pasture": "Timber in Transition Previously Improved Pasture Acres (EARS field AUD026, Comptroller manual 96-1051).",
+  "AUD027_timber_in_transition_previously_irrigated_cropla": "Timber in Transition Previously Irrigated Cropland Acres (EARS field AUD027, Comptroller manual 96-1051).",
+  "AUD028_timber_in_transition_previously_native_pasture_a": "Timber in Transition Previously Native Pasture Acres (EARS field AUD028, Comptroller manual 96-1051).",
+  "AUD029_timber_in_transition_previously_quarantined_land": "Timber in Transition Previously Quarantined Land Acres (EARS field AUD029, Comptroller manual 96-1051).",
+  "AUD030_timber_in_transition_previously_barren_wasteland": "Timber in Transition Previously Barren Wasteland Acres (EARS field AUD030, Comptroller manual 96-1051).",
+  "AUD031_timber_in_transition_previously_orchard_acres": "Timber in Transition Previously Orchard Acres (EARS field AUD031, Comptroller manual 96-1051).",
+  "AUD032_timber_in_transition_previously_other_land_acres": "Timber in Transition Previously Other Land Acres (EARS field AUD032, Comptroller manual 96-1051).",
+  "AUD033_timber_in_transition_previously_wildlife_acres": "Timber in Transition Previously Wildlife Acres (EARS field AUD033, Comptroller manual 96-1051).",
+  "AUD034_timber_at_1978_market_acres": "Timber at 1978 Market Acres (EARS field AUD034, Comptroller manual 96-1051).",
+  "AUD035_timber_at_productivity_hardwood_class_1_acres": "Timber at Productivity Hardwood Class 1 Acres (EARS field AUD035, Comptroller manual 96-1051).",
+  "AUD036_timber_at_productivity_hardwood_class_2_acres": "Timber at Productivity Hardwood Class 2 Acres (EARS field AUD036, Comptroller manual 96-1051).",
+  "AUD037_timber_at_productivity_hardwood_class_3_acres": "Timber at Productivity Hardwood Class 3 Acres (EARS field AUD037, Comptroller manual 96-1051).",
+  "AUD038_timber_at_productivity_hardwood_class_4_acres": "Timber at Productivity Hardwood Class 4 Acres (EARS field AUD038, Comptroller manual 96-1051).",
+  "AUD039_timber_at_productivity_mixed_wood_class_1_acres": "Timber at Productivity Mixed Wood Class 1 Acres (EARS field AUD039, Comptroller manual 96-1051).",
+  "AUD040_timber_at_productivity_mixed_wood_class_2_acres": "Timber at Productivity Mixed Wood Class 2 Acres (EARS field AUD040, Comptroller manual 96-1051).",
+  "AUD041_timber_at_productivity_mixed_wood_class_3_acres": "Timber at Productivity Mixed Wood Class 3 Acres (EARS field AUD041, Comptroller manual 96-1051).",
+  "AUD042_timber_at_productivity_mixed_wood_class_4_acres": "Timber at Productivity Mixed Wood Class 4 Acres (EARS field AUD042, Comptroller manual 96-1051).",
+  "AUD043_timber_at_productivity_pine_class_1_acres": "Timber at Productivity Pine Class 1 Acres (EARS field AUD043, Comptroller manual 96-1051).",
+  "AUD044_timber_at_productivity_pine_class_2_acres": "Timber at Productivity Pine Class 2 Acres (EARS field AUD044, Comptroller manual 96-1051).",
+  "AUD045_timber_at_productivity_pine_class_3_acres": "Timber at Productivity Pine Class 3 Acres (EARS field AUD045, Comptroller manual 96-1051).",
+  "AUD046_timber_at_productivity_pine_class_4_acres": "Timber at Productivity Pine Class 4 Acres (EARS field AUD046, Comptroller manual 96-1051).",
+  "AUD047_timber_at_restricted_use_hardwood_class_1_acres": "Timber at Restricted Use Hardwood Class 1 Acres (EARS field AUD047, Comptroller manual 96-1051).",
+  "AUD048_timber_at_restricted_use_hardwood_class_2_acres": "Timber at Restricted Use Hardwood Class 2 Acres (EARS field AUD048, Comptroller manual 96-1051).",
+  "AUD049_timber_at_restricted_use_hardwood_class_3_acres": "Timber at Restricted Use Hardwood Class 3 Acres (EARS field AUD049, Comptroller manual 96-1051).",
+  "AUD050_timber_at_restricted_use_hardwood_class_4_acres": "Timber at Restricted Use Hardwood Class 4 Acres (EARS field AUD050, Comptroller manual 96-1051).",
+  "AUD051_timber_at_restricted_use_mixed_wood_class_1_acre": "Timber at Restricted Use Mixed Wood Class 1 Acres (EARS field AUD051, Comptroller manual 96-1051).",
+  "AUD052_timber_at_restricted_use_mixed_wood_class_2_acre": "Timber at Restricted Use Mixed Wood Class 2 Acres (EARS field AUD052, Comptroller manual 96-1051).",
+  "AUD053_timber_at_restricted_use_mixed_wood_class_3_acre": "Timber at Restricted Use Mixed Wood Class 3 Acres (EARS field AUD053, Comptroller manual 96-1051).",
+  "AUD054_timber_at_restricted_use_mixed_wood_class_4_acre": "Timber at Restricted Use Mixed Wood Class 4 Acres (EARS field AUD054, Comptroller manual 96-1051).",
+  "AUD055_timber_at_restricted_use_pine_class_1_acres": "Timber at Restricted Use Pine Class 1 Acres (EARS field AUD055, Comptroller manual 96-1051).",
+  "AUD056_timber_at_restricted_use_pine_class_2_acres": "Timber at Restricted Use Pine Class 2 Acres (EARS field AUD056, Comptroller manual 96-1051).",
+  "AUD057_timber_at_restricted_use_pine_class_3_acres": "Timber at Restricted Use Pine Class 3 Acres (EARS field AUD057, Comptroller manual 96-1051).",
+  "AUD058_timber_at_restricted_use_pine_class_4_acres": "Timber at Restricted Use Pine Class 4 Acres (EARS field AUD058, Comptroller manual 96-1051).",
+  "AUD059_dryland_cropland_market_value": "Dryland Cropland Market Value (EARS field AUD059, Comptroller manual 96-1051).",
+  "AUD060_improved_pasture_market_value": "Improved Pasture Market Value (EARS field AUD060, Comptroller manual 96-1051).",
+  "AUD061_irrigated_cropland_market_value": "Irrigated Cropland Market Value (EARS field AUD061, Comptroller manual 96-1051).",
+  "AUD062_native_pasture_market_value": "Native Pasture Market Value (EARS field AUD062, Comptroller manual 96-1051).",
+  "AUD063_quarantined_land_market_value": "Quarantined Land Market Value (EARS field AUD063, Comptroller manual 96-1051).",
+  "AUD064_barren_wasteland_market_value": "Barren Wasteland Market Value (EARS field AUD064, Comptroller manual 96-1051).",
+  "AUD065_orchard_market_value": "Orchard Market Value (EARS field AUD065, Comptroller manual 96-1051).",
+  "AUD066_other_land_market_value": "Other Land Market Value (EARS field AUD066, Comptroller manual 96-1051).",
+  "AUD067_wildlife_management_previously_dryland_cropland": "Wildlife Management Previously Dryland Cropland Market Value (EARS field AUD067, Comptroller manual 96-1051).",
+  "AUD068_wildlife_management_previously_improved_pasture": "Wildlife Management Previously Improved Pasture Market Value (EARS field AUD068, Comptroller manual 96-1051).",
+  "AUD069_wildlife_management_previously_irrigated_croplan": "Wildlife Management Previously Irrigated Cropland Market Value (EARS field AUD069, Comptroller manual 96-1051).",
+  "AUD070_wildlife_management_previously_native_pasture_ma": "Wildlife Management Previously Native Pasture Market Value (EARS field AUD070, Comptroller manual 96-1051).",
+  "AUD071_wildlife_management_previously_quarantined_land": "Wildlife Management Previously Quarantined Land Market Value (EARS field AUD071, Comptroller manual 96-1051).",
+  "AUD072_wildlife_management_previously_barren_wasteland": "Wildlife Management Previously Barren Wasteland Market Value (EARS field AUD072, Comptroller manual 96-1051).",
+  "AUD073_wildlife_management_previously_orchard_market_va": "Wildlife Management Previously Orchard Market Value (EARS field AUD073, Comptroller manual 96-1051).",
+  "AUD074_wildlife_management_previously_other_land_market": "Wildlife Management Previously Other Land Market Value (EARS field AUD074, Comptroller manual 96-1051).",
+  "AUD075_timber_in_transition_previously_dryland_cropland": "Timber in Transition Previously Dryland Cropland Market Value (EARS field AUD075, Comptroller manual 96-1051).",
+  "AUD076_timber_in_transition_previously_improved_pasture": "Timber in Transition Previously Improved Pasture Market Value (EARS field AUD076, Comptroller manual 96-1051).",
+  "AUD077_timber_in_transition_previously_irrigated_cropla": "Timber in Transition Previously Irrigated Cropland Market Value (EARS field AUD077, Comptroller manual 96-1051).",
+  "AUD078_timber_in_transition_previously_native_pasture_m": "Timber in Transition Previously Native Pasture Market Value (EARS field AUD078, Comptroller manual 96-1051).",
+  "AUD079_timber_in_transition_previously_quarantined_land": "Timber in Transition Previously Quarantined Land Market Value (EARS field AUD079, Comptroller manual 96-1051).",
+  "AUD080_timber_in_transition_previously_barren_wasteland": "Timber in Transition Previously Barren Wasteland Market Value (EARS field AUD080, Comptroller manual 96-1051).",
+  "AUD081_timber_in_transition_previously_orchard_market_v": "Timber in Transition Previously Orchard Market Value (EARS field AUD081, Comptroller manual 96-1051).",
+  "AUD082_timber_in_transition_previously_other_land_marke": "Timber in Transition Previously Other Land Market Value (EARS field AUD082, Comptroller manual 96-1051).",
+  "AUD083_timber_in_transition_previously_wildlife_market": "Timber in Transition Previously Wildlife Market Value (EARS field AUD083, Comptroller manual 96-1051).",
+  "AUD084_timber_at_1978_market_value": "Timber at 1978 Market Value (EARS field AUD084, Comptroller manual 96-1051).",
+  "AUD085_timber_at_productivity_hardwood_class_1_market_v": "Timber at Productivity Hardwood Class 1 Market Value (EARS field AUD085, Comptroller manual 96-1051).",
+  "AUD086_timber_at_productivity_hardwood_class_2_market_v": "Timber at Productivity Hardwood Class 2 Market Value (EARS field AUD086, Comptroller manual 96-1051).",
+  "AUD087_timber_at_productivity_hardwood_class_3_market_v": "Timber at Productivity Hardwood Class 3 Market Value (EARS field AUD087, Comptroller manual 96-1051).",
+  "AUD088_timber_at_productivity_hardwood_class_4_market_v": "Timber at Productivity Hardwood Class 4 Market Value (EARS field AUD088, Comptroller manual 96-1051).",
+  "AUD089_timber_at_productivity_mixed_wood_class_1_market": "Timber at Productivity Mixed Wood Class 1 Market Value (EARS field AUD089, Comptroller manual 96-1051).",
+  "AUD090_timber_at_productivity_mixed_wood_class_2_market": "Timber at Productivity Mixed Wood Class 2 Market Value (EARS field AUD090, Comptroller manual 96-1051).",
+  "AUD091_timber_at_productivity_mixed_wood_class_3_market": "Timber at Productivity Mixed Wood Class 3 Market Value (EARS field AUD091, Comptroller manual 96-1051).",
+  "AUD092_timber_at_productivity_mixed_wood_class_4_market": "Timber at Productivity Mixed Wood Class 4 Market Value (EARS field AUD092, Comptroller manual 96-1051).",
+  "AUD093_timber_at_productivity_pine_class_1_market_value": "Timber at Productivity Pine Class 1 Market Value (EARS field AUD093, Comptroller manual 96-1051).",
+  "AUD094_timber_at_productivity_pine_class_2_market_value": "Timber at Productivity Pine Class 2 Market Value (EARS field AUD094, Comptroller manual 96-1051).",
+  "AUD095_timber_at_productivity_pine_class_3_market_value": "Timber at Productivity Pine Class 3 Market Value (EARS field AUD095, Comptroller manual 96-1051).",
+  "AUD096_timber_at_productivity_pine_class_4_market_value": "Timber at Productivity Pine Class 4 Market Value (EARS field AUD096, Comptroller manual 96-1051).",
+  "AUD097_timber_at_restricted_use_hardwood_class_1_market": "Timber at Restricted Use Hardwood Class 1 Market Value (EARS field AUD097, Comptroller manual 96-1051).",
+  "AUD098_timber_at_restricted_use_hardwood_class_2_market": "Timber at Restricted Use Hardwood Class 2 Market Value (EARS field AUD098, Comptroller manual 96-1051).",
+  "AUD099_timber_at_restricted_use_hardwood_class_3_market": "Timber at Restricted Use Hardwood Class 3 Market Value (EARS field AUD099, Comptroller manual 96-1051).",
+  "AUD100_timber_at_restricted_use_hardwood_class_4_market": "Timber at Restricted Use Hardwood Class 4 Market Value (EARS field AUD100, Comptroller manual 96-1051).",
+  "AUD101_timber_at_restricted_use_mixed_wood_class_1_mark": "Timber at Restricted Use Mixed Wood Class 1 Market Value (EARS field AUD101, Comptroller manual 96-1051).",
+  "AUD102_timber_at_restricted_use_mixed_wood_class_2_mark": "Timber at Restricted Use Mixed Wood Class 2 Market Value (EARS field AUD102, Comptroller manual 96-1051).",
+  "AUD103_timber_at_restricted_use_mixed_wood_class_3_mark": "Timber at Restricted Use Mixed Wood Class 3 Market Value (EARS field AUD103, Comptroller manual 96-1051).",
+  "AUD104_timber_at_restricted_use_mixed_wood_class_4_mark": "Timber at Restricted Use Mixed Wood Class 4 Market Value (EARS field AUD104, Comptroller manual 96-1051).",
+  "AUD105_timber_at_restricted_use_pine_class_1_market_val": "Timber at Restricted Use Pine Class 1 Market Value (EARS field AUD105, Comptroller manual 96-1051).",
+  "AUD106_timber_at_restricted_use_pine_class_2_market_val": "Timber at Restricted Use Pine Class 2 Market Value (EARS field AUD106, Comptroller manual 96-1051).",
+  "AUD107_timber_at_restricted_use_pine_class_3_market_val": "Timber at Restricted Use Pine Class 3 Market Value (EARS field AUD107, Comptroller manual 96-1051).",
+  "AUD108_timber_at_restricted_use_pine_class_4_market_val": "Timber at Restricted Use Pine Class 4 Market Value (EARS field AUD108, Comptroller manual 96-1051).",
+  "AUD109_dryland_cropland_productivity_value": "Dryland Cropland Productivity Value (EARS field AUD109, Comptroller manual 96-1051).",
+  "AUD110_improved_pasture_productivity_value": "Improved Pasture Productivity Value (EARS field AUD110, Comptroller manual 96-1051).",
+  "AUD111_irrigated_cropland_productivity_value": "Irrigated Cropland Productivity Value (EARS field AUD111, Comptroller manual 96-1051).",
+  "AUD112_native_pasture_productivity_value": "Native Pasture Productivity Value (EARS field AUD112, Comptroller manual 96-1051).",
+  "AUD113_quarantined_land_productivity_value": "Quarantined Land Productivity Value (EARS field AUD113, Comptroller manual 96-1051).",
+  "AUD114_barren_wasteland_productivity_value": "Barren Wasteland Productivity Value (EARS field AUD114, Comptroller manual 96-1051).",
+  "AUD115_orchard_productivity_value": "Orchard Productivity Value (EARS field AUD115, Comptroller manual 96-1051).",
+  "AUD116_other_land_productivity_value": "Other Land Productivity Value (EARS field AUD116, Comptroller manual 96-1051).",
+  "AUD117_wildlife_management_previously_dryland_cropland": "Wildlife Management Previously Dryland Cropland Productivity Value (EARS field AUD117, Comptroller manual 96-1051).",
+  "AUD118_wildlife_management_previously_improved_pasture": "Wildlife Management Previously Improved Pasture Productivity Value (EARS field AUD118, Comptroller manual 96-1051).",
+  "AUD119_wildlife_management_previously_irrigated_croplan": "Wildlife Management Previously Irrigated Cropland Productivity Value (EARS field AUD119, Comptroller manual 96-1051).",
+  "AUD120_wildlife_management_previously_native_pasture_pr": "Wildlife Management Previously Native Pasture Productivity Value (EARS field AUD120, Comptroller manual 96-1051).",
+  "AUD121_wildlife_management_previously_quarantined_land": "Wildlife Management Previously Quarantined Land Productivity Value (EARS field AUD121, Comptroller manual 96-1051).",
+  "AUD122_wildlife_management_previously_barren_wasteland": "Wildlife Management Previously Barren Wasteland Productivity Value (EARS field AUD122, Comptroller manual 96-1051).",
+  "AUD123_wildlife_management_previously_orchard_productiv": "Wildlife Management Previously Orchard Productivity Value (EARS field AUD123, Comptroller manual 96-1051).",
+  "AUD124_wildlife_management_previously_other_land_produc": "Wildlife Management Previously Other Land Productivity Value (EARS field AUD124, Comptroller manual 96-1051).",
+  "AUD125_timber_in_transition_previously_dryland_cropland": "Timber in Transition Previously Dryland Cropland Productivity Value (EARS field AUD125, Comptroller manual 96-1051).",
+  "AUD126_timber_in_transition_previously_improved_pasture": "Timber in Transition Previously Improved Pasture Productivity Value (EARS field AUD126, Comptroller manual 96-1051).",
+  "AUD127_timber_in_transition_previously_irrigated_cropla": "Timber in Transition Previously Irrigated Cropland Productivity Value (EARS field AUD127, Comptroller manual 96-1051).",
+  "AUD128_timber_in_transition_previously_native_pasture_p": "Timber in Transition Previously Native Pasture Productivity Value (EARS field AUD128, Comptroller manual 96-1051).",
+  "AUD129_timber_in_transition_previously_quarantined_land": "Timber in Transition Previously Quarantined Land Productivity Value (EARS field AUD129, Comptroller manual 96-1051).",
+  "AUD130_timber_in_transition_previously_barren_wasteland": "Timber in Transition Previously Barren Wasteland Productivity Value (EARS field AUD130, Comptroller manual 96-1051).",
+  "AUD131_timber_in_transition_previously_orchard_producti": "Timber in Transition Previously Orchard Productivity Value (EARS field AUD131, Comptroller manual 96-1051).",
+  "AUD132_timber_in_transition_previously_other_land_produ": "Timber in Transition Previously Other Land Productivity Value (EARS field AUD132, Comptroller manual 96-1051).",
+  "AUD133_timber_in_transition_previously_wildlife_product": "Timber in Transition Previously Wildlife Productivity Value (EARS field AUD133, Comptroller manual 96-1051).",
+  "AUD134_timber_at_1978_market_current_productivity_value": "Timber at 1978 Market Current Productivity Value (EARS field AUD134, Comptroller manual 96-1051).",
+  "AUD135_timber_at_productivity_hardwood_class_1_producti": "Timber at Productivity Hardwood Class 1 Productivity Value (EARS field AUD135, Comptroller manual 96-1051).",
+  "AUD136_timber_at_productivity_hardwood_class_2_producti": "Timber at Productivity Hardwood Class 2 Productivity Value (EARS field AUD136, Comptroller manual 96-1051).",
+  "AUD137_timber_at_productivity_hardwood_class_3_producti": "Timber at Productivity Hardwood Class 3 Productivity Value (EARS field AUD137, Comptroller manual 96-1051).",
+  "AUD138_timber_at_productivity_hardwood_class_4_producti": "Timber at Productivity Hardwood Class 4 Productivity Value (EARS field AUD138, Comptroller manual 96-1051).",
+  "AUD139_timber_at_productivity_mixed_wood_class_1_produc": "Timber at Productivity Mixed Wood Class 1 Productivity Value (EARS field AUD139, Comptroller manual 96-1051).",
+  "AUD140_timber_at_productivity_mixed_wood_class_2_produc": "Timber at Productivity Mixed Wood Class 2 Productivity Value (EARS field AUD140, Comptroller manual 96-1051).",
+  "AUD141_timber_at_productivity_mixed_wood_class_3_produc": "Timber at Productivity Mixed Wood Class 3 Productivity Value (EARS field AUD141, Comptroller manual 96-1051).",
+  "AUD142_timber_at_productivity_mixed_wood_class_4_produc": "Timber at Productivity Mixed Wood Class 4 Productivity Value (EARS field AUD142, Comptroller manual 96-1051).",
+  "AUD143_timber_at_productivity_pine_class_1_productivity": "Timber at Productivity Pine Class 1 Productivity Value (EARS field AUD143, Comptroller manual 96-1051).",
+  "AUD144_timber_at_productivity_pine_class_2_productivity": "Timber at Productivity Pine Class 2 Productivity Value (EARS field AUD144, Comptroller manual 96-1051).",
+  "AUD145_timber_at_productivity_pine_class_3_productivity": "Timber at Productivity Pine Class 3 Productivity Value (EARS field AUD145, Comptroller manual 96-1051).",
+  "AUD146_timber_at_productivity_pine_class_4_productivity": "Timber at Productivity Pine Class 4 Productivity Value (EARS field AUD146, Comptroller manual 96-1051).",
+  "AUD147_timber_at_restricted_use_hardwood_class_1_produc": "Timber at Restricted Use Hardwood Class 1 Productivity Value (EARS field AUD147, Comptroller manual 96-1051).",
+  "AUD148_timber_at_restricted_use_hardwood_class_2_produc": "Timber at Restricted Use Hardwood Class 2 Productivity Value (EARS field AUD148, Comptroller manual 96-1051).",
+  "AUD149_timber_at_restricted_use_hardwood_class_3_produc": "Timber at Restricted Use Hardwood Class 3 Productivity Value (EARS field AUD149, Comptroller manual 96-1051).",
+  "AUD150_timber_at_restricted_use_hardwood_class_4_produc": "Timber at Restricted Use Hardwood Class 4 Productivity Value (EARS field AUD150, Comptroller manual 96-1051).",
+  "AUD151_timber_at_restricted_use_mixed_wood_class_1_prod": "Timber at Restricted Use Mixed Wood Class 1 Productivity Value (EARS field AUD151, Comptroller manual 96-1051).",
+  "AUD152_timber_at_restricted_use_mixed_wood_class_2_prod": "Timber at Restricted Use Mixed Wood Class 2 Productivity Value (EARS field AUD152, Comptroller manual 96-1051).",
+  "AUD153_timber_at_restricted_use_mixed_wood_class_3_prod": "Timber at Restricted Use Mixed Wood Class 3 Productivity Value (EARS field AUD153, Comptroller manual 96-1051).",
+  "AUD154_timber_at_restricted_use_mixed_wood_class_4_prod": "Timber at Restricted Use Mixed Wood Class 4 Productivity Value (EARS field AUD154, Comptroller manual 96-1051).",
+  "AUD155_timber_at_restricted_use_pine_class_1_productivi": "Timber at Restricted Use Pine Class 1 Productivity Value (EARS field AUD155, Comptroller manual 96-1051).",
+  "AUD156_timber_at_restricted_use_pine_class_2_productivi": "Timber at Restricted Use Pine Class 2 Productivity Value (EARS field AUD156, Comptroller manual 96-1051).",
+  "AUD157_timber_at_restricted_use_pine_class_3_productivi": "Timber at Restricted Use Pine Class 3 Productivity Value (EARS field AUD157, Comptroller manual 96-1051).",
+  "AUD158_timber_at_restricted_use_pine_class_4_productivi": "Timber at Restricted Use Pine Class 4 Productivity Value (EARS field AUD158, Comptroller manual 96-1051).",
+  "AUD159_county_located_in": "County Located In (EARS field AUD159, Comptroller manual 96-1051).",
+  "TU201_record_type": "Record Type (EARS field TU201, Comptroller manual 96-1051).",
+  "TU202_sdpvs_year": "SDPVS Year (EARS field TU202, Comptroller manual 96-1051).",
+  "TU203_appraisal_district_id_number": "Appraisal District ID Number (EARS field TU203, Comptroller manual 96-1051).",
+  "TU204_taxing_unit_id_number": "Taxing Unit ID Number (EARS field TU204, Comptroller manual 96-1051).",
+  "TU205_taxing_unit_type": "Taxing Unit Type (EARS field TU205, Comptroller manual 96-1051).",
+  "TU206_taxpayer_ranking": "Taxpayer Ranking (EARS field TU206, Comptroller manual 96-1051).",
+  "TU207_taxpayer_name": "Taxpayer name (EARS field TU207, Comptroller manual 96-1051).",
+  "TU208_market_value": "Market Value (EARS field TU208, Comptroller manual 96-1051).",
+  "TU209_taxable_value": "Taxable Value (EARS field TU209, Comptroller manual 96-1051).",
+  "TU210_county_located_in": "County Located In (EARS field TU210, Comptroller manual 96-1051).",
+  "pID": "Travis CAD property id; the same number as prop_id in the appraisal export (unpadded).",
+  "pYear": "Appraisal (tax) year.",
+  "links_i": "Position of the row in its links list (0 = first); with pID it links child rows to this row.",
+  "property_i": "Position of the row in its property list (0 = first); with pID it links child rows to this row.",
+  "propertyCharacteristics_i": "Position of the row in its propertyCharacteristics list (0 = first); with pID it links child rows to this row.",
+  "propertyIdentification_i": "Position of the row in its propertyIdentification list (0 = first); with pID it links child rows to this row.",
+  "propertyLegalDescription_i": "Position of the row in its propertyLegalDescription list (0 = first); with pID it links child rows to this row.",
+  "propertyProfile_i": "Position of the row in its propertyProfile list (0 = first); with pID it links child rows to this row.",
+  "situses_i": "Position of the row in its situses list (0 = first); with pID it links child rows to this row.",
+  "smartgroups_i": "Position of the row in its smartgroups list (0 = first); with pID it links child rows to this row.",
+  "tags_i": "Position of the row in its tags list (0 = first); with pID it links child rows to this row.",
+  "owners_i": "Position of the row in its owners list (0 = first); with pID it links child rows to this row.",
+  "agents_i": "Position of the row in its agents list (0 = first); with pID it links child rows to this row.",
+  "exemptions_i": "Position of the row in its exemptions list (0 = first); with pID it links child rows to this row.",
+  "ownerTaxable_i": "Position of the row in its ownerTaxable list (0 = first); with pID it links child rows to this row.",
+  "ownerValue_i": "Position of the row in its ownerValue list (0 = first); with pID it links child rows to this row.",
+  "taxingunits_i": "Position of the row in its taxingunits list (0 = first); with pID it links child rows to this row.",
+  "valuations_i": "Position of the row in its valuations list (0 = first); with pID it links child rows to this row.",
+  "improvements_i": "Position of the row in its improvements list (0 = first); with pID it links child rows to this row.",
+  "adjustments_i": "Position of the row in its adjustments list (0 = first); with pID it links child rows to this row.",
+  "details_i": "Position of the row in its details list (0 = first); with pID it links child rows to this row.",
+  "features_i": "Position of the row in its features list (0 = first); with pID it links child rows to this row.",
+  "land_i": "Position of the row in its land list (0 = first); with pID it links child rows to this row.",
+  "notes_i": "Position of the row in its notes list (0 = first); with pID it links child rows to this row.",
+  "deeds_i": "Position of the row in its deeds list (0 = first); with pID it links child rows to this row.",
+  "events_i": "Position of the row in its events list (0 = first); with pID it links child rows to this row.",
+  "inspections_i": "Position of the row in its inspections list (0 = first); with pID it links child rows to this row.",
+  "permits_i": "Position of the row in its permits list (0 = first); with pID it links child rows to this row.",
+  "sales_i": "Position of the row in its sales list (0 = first); with pID it links child rows to this row.",
+  "appeals_i": "Position of the row in its appeals list (0 = first); with pID it links child rows to this row."
  },
  "descriptions_by_set": {
   "c26-enttot:land_hstd_val": "Unit total: homestead land market value.",
@@ -2451,7 +4173,7 @@
    "label": "CAD website files",
    "sub": "{n} files · every property in the county",
    "start": "s26-info",
-   "desc": "PACS Appraisal Export from the Travis CAD website, saved in <code>CAD Website/Travis/Data</code> and converted to gzipped CSV in <code>output/</code>. Fixed-width source files (two are tab-separated); every property in the county.",
+   "desc": "Data files from the Travis CAD Public Information page; every property in the county.",
    "groups": [
     {
      "id": "property",
@@ -2662,6 +4384,321 @@
         "s26-state",
         "s26-country",
         "s26-header"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "reports",
+     "label": "Property Reports",
+     "desc": "TCAD's property reports: four CSV reports, one of them zipped. All join on the property id.",
+     "datasets": [
+      "rpt-ag",
+      "rpt-land",
+      "rpt-impdet",
+      "rpt-water"
+     ],
+     "years": [
+      {
+       "label": "2026",
+       "datasets": [
+        "rpt-ag",
+        "rpt-land",
+        "rpt-impdet",
+        "rpt-water"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ears",
+     "label": "EARS Submissions",
+     "desc": "The appraisal roll the CAD submits to the Comptroller each August. Column names come from the Comptroller's EARS manual (96-1051).",
+     "datasets": [
+      "ears22-ajr",
+      "ears22-aud",
+      "ears22-tu2",
+      "ears23-ajr",
+      "ears23-aud",
+      "ears23-tu2",
+      "ears24-ajr",
+      "ears24-aud",
+      "ears24-tu2",
+      "ears24-897",
+      "ears25-ajr",
+      "ears25-aud",
+      "ears25-tu2",
+      "ears25-897",
+      "ears26-ajr",
+      "ears26-aud",
+      "ears26-tu2",
+      "ears26-897"
+     ],
+     "years": [
+      {
+       "label": "2022 · EARS 09/28",
+       "datasets": [
+        "ears22-ajr",
+        "ears22-aud",
+        "ears22-tu2"
+       ]
+      },
+      {
+       "label": "2023 · EARS 08/30",
+       "datasets": [
+        "ears23-ajr",
+        "ears23-aud",
+        "ears23-tu2"
+       ]
+      },
+      {
+       "label": "2024 · EARS 08/28",
+       "datasets": [
+        "ears24-ajr",
+        "ears24-aud",
+        "ears24-tu2",
+        "ears24-897"
+       ]
+      },
+      {
+       "label": "2025 · EARS 09/04",
+       "datasets": [
+        "ears25-ajr",
+        "ears25-aud",
+        "ears25-tu2",
+        "ears25-897"
+       ]
+      },
+      {
+       "label": "2026 · EARS 08/26",
+       "datasets": [
+        "ears26-ajr",
+        "ears26-aud",
+        "ears26-tu2",
+        "ears26-897"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "json-prop",
+     "label": "JSON · Property",
+     "desc": "Top-level property fields and the one-to-few lists that describe the property.",
+     "datasets": [
+      "jc-property",
+      "jc-propertyidentification",
+      "jc-propertylegaldescription",
+      "jc-propertycharacteristics",
+      "jc-propertyprofile",
+      "jc-situses",
+      "jc-tags",
+      "jc-smartgroups",
+      "jc-links",
+      "jo-property",
+      "jo-propertyidentification",
+      "jo-propertylegaldescription",
+      "jo-propertycharacteristics",
+      "jo-propertyprofile",
+      "jo-situses",
+      "jo-tags",
+      "jo-smartgroups",
+      "jo-links"
+     ],
+     "years": [
+      {
+       "label": "Certified JSON · Jul 19",
+       "datasets": [
+        "jc-property",
+        "jc-propertyidentification",
+        "jc-propertylegaldescription",
+        "jc-propertycharacteristics",
+        "jc-propertyprofile",
+        "jc-situses",
+        "jc-tags",
+        "jc-smartgroups",
+        "jc-links"
+       ]
+      },
+      {
+       "label": "Supplemental JSON · Oct 6",
+       "datasets": [
+        "jo-property",
+        "jo-propertyidentification",
+        "jo-propertylegaldescription",
+        "jo-propertycharacteristics",
+        "jo-propertyprofile",
+        "jo-situses",
+        "jo-tags",
+        "jo-smartgroups",
+        "jo-links"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "json-own",
+     "label": "JSON · Owners & Taxing Units",
+     "desc": "Owners, their agents, exemptions, values and taxable values per taxing unit.",
+     "datasets": [
+      "jc-owners",
+      "jc-owners-agents",
+      "jc-owners-exemptions",
+      "jc-owners-ownertaxable",
+      "jc-owners-ownertaxable-exemptions",
+      "jc-owners-ownervalue",
+      "jc-taxingunits",
+      "jo-owners",
+      "jo-owners-agents",
+      "jo-owners-exemptions",
+      "jo-owners-ownertaxable",
+      "jo-owners-ownertaxable-exemptions",
+      "jo-owners-ownervalue",
+      "jo-taxingunits"
+     ],
+     "years": [
+      {
+       "label": "Certified JSON · Jul 19",
+       "datasets": [
+        "jc-owners",
+        "jc-owners-agents",
+        "jc-owners-exemptions",
+        "jc-owners-ownertaxable",
+        "jc-owners-ownertaxable-exemptions",
+        "jc-owners-ownervalue",
+        "jc-taxingunits"
+       ]
+      },
+      {
+       "label": "Supplemental JSON · Oct 6",
+       "datasets": [
+        "jo-owners",
+        "jo-owners-agents",
+        "jo-owners-exemptions",
+        "jo-owners-ownertaxable",
+        "jo-owners-ownertaxable-exemptions",
+        "jo-owners-ownervalue",
+        "jo-taxingunits"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "json-val",
+     "label": "JSON · Valuations",
+     "desc": "Valuations and the cost-approach detail behind them: improvements, segments, features and land.",
+     "datasets": [
+      "jc-val",
+      "jc-val-cost-improvements",
+      "jc-val-cost-improvements-adjustments",
+      "jc-val-cost-improvements-details",
+      "jc-val-cost-improvements-details-adjustments",
+      "jc-val-cost-improvements-details-features",
+      "jc-val-cost-land",
+      "jc-val-cost-land-adjustments",
+      "jc-val-cost-land-notes",
+      "jo-val",
+      "jo-val-cost-improvements",
+      "jo-val-cost-improvements-adjustments",
+      "jo-val-cost-improvements-details",
+      "jo-val-cost-improvements-details-adjustments",
+      "jo-val-cost-improvements-details-features",
+      "jo-val-cost-land",
+      "jo-val-cost-land-adjustments",
+      "jo-val-cost-land-notes"
+     ],
+     "years": [
+      {
+       "label": "Certified JSON · Jul 19",
+       "datasets": [
+        "jc-val",
+        "jc-val-cost-improvements",
+        "jc-val-cost-improvements-adjustments",
+        "jc-val-cost-improvements-details",
+        "jc-val-cost-improvements-details-adjustments",
+        "jc-val-cost-improvements-details-features",
+        "jc-val-cost-land",
+        "jc-val-cost-land-adjustments",
+        "jc-val-cost-land-notes"
+       ]
+      },
+      {
+       "label": "Supplemental JSON · Oct 6",
+       "datasets": [
+        "jo-val",
+        "jo-val-cost-improvements",
+        "jo-val-cost-improvements-adjustments",
+        "jo-val-cost-improvements-details",
+        "jo-val-cost-improvements-details-adjustments",
+        "jo-val-cost-improvements-details-features",
+        "jo-val-cost-land",
+        "jo-val-cost-land-adjustments",
+        "jo-val-cost-land-notes"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "json-hist",
+     "label": "JSON · History",
+     "desc": "Deeds, sales, permits, inspections, notes and events recorded on the property.",
+     "datasets": [
+      "jc-deeds",
+      "jc-sales",
+      "jc-permits",
+      "jc-inspections",
+      "jc-notes",
+      "jc-events",
+      "jo-deeds",
+      "jo-sales",
+      "jo-permits",
+      "jo-inspections",
+      "jo-notes",
+      "jo-events"
+     ],
+     "years": [
+      {
+       "label": "Certified JSON · Jul 19",
+       "datasets": [
+        "jc-deeds",
+        "jc-sales",
+        "jc-permits",
+        "jc-inspections",
+        "jc-notes",
+        "jc-events"
+       ]
+      },
+      {
+       "label": "Supplemental JSON · Oct 6",
+       "datasets": [
+        "jo-deeds",
+        "jo-sales",
+        "jo-permits",
+        "jo-inspections",
+        "jo-notes",
+        "jo-events"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "json-appeal",
+     "label": "JSON · Appeals",
+     "desc": "Protests (appeals) with hearing, decision and value details.",
+     "datasets": [
+      "jc-appeals",
+      "jo-appeals"
+     ],
+     "years": [
+      {
+       "label": "Certified JSON · Jul 19",
+       "datasets": [
+        "jc-appeals"
+       ]
+      },
+      {
+       "label": "Supplemental JSON · Oct 6",
+       "datasets": [
+        "jo-appeals"
        ]
       }
      ]

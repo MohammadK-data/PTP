@@ -18,3 +18,18 @@ To add an export: run the ETL on the new folder, add its datasets to `manifest.j
 `venv/bin/python -I ~/.claude/skills/create_county_data_profile/scripts/profile_files.py manifest.json profile.json <keys>`,
 then `build_page.py manifest.json profile.json - travis-data-profile.html`,
 then republish to the same artifact link.
+
+## Review workspace (generic skill pipeline, from 2026-11-23)
+
+- `catalog.json`: the traviscad.org/publicinformation page (sections, groups, files, links) and which datasets each
+  download holds. `drive_files.json`: our Drive copies. Per-dataset `raw`, `layout` and `nav_label` are in `manifest.json`.
+- Rebuild (S = `~/.claude/skills/create_county_data_profile/scripts`, run with `venv/bin/python -I`):
+  1. `$S/build_page.py manifest.json profile.json - travis-data-profile.html --allow-missing`
+  2. `$S/add_column_review.py travis-data-profile.html`
+  3. `$S/build_source_map.py catalog.json manifest.json source_map.json --drive drive_files.json`
+  4. `$S/add_source_nav.py review/travis-column-review.html source_map.json review/travis-column-review.html manifest.json`
+  5. republish `review/travis-column-review.html` to https://claude.ai/artifact/R5VF8TuPcywvHkqDJke9GX (omit capabilities)
+- Superseded by the skill's generic scripts (kept for reference): `make_source_map.py`, `add_json_datasets.py`,
+  `../etl/travis_json_flatten.py` (→ `flatten_json.py --keys pID,pYear --root property`),
+  `../etl/travis_ears_split.py` (→ `split_record_types.py --fields ../Data/ears_download/ears_fields.json`),
+  and `../../_review/` (→ the skill's `add_source_nav.py` and assets).

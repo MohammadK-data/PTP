@@ -1,0 +1,1338 @@
+{
+ "page": {
+  "label": "Travis CAD · Public Information",
+  "url": "https://traviscad.org/publicinformation",
+  "checked": "2026-11-23"
+ },
+ "downloads": {
+  "cert": {
+   "id": "cert",
+   "group": "Other Exports",
+   "label": "2026 Certified Appraisal Export (July)",
+   "url": "https://traviscad.org/wp-content/largefiles/2026%20Certified%20Appraisal%20Export%20Supp%200_07182026.zip"
+  },
+  "supp": {
+   "id": "supp",
+   "group": "Other Exports",
+   "label": "2026 Supplemental Appraisal Roll Export",
+   "url": "https://traviscad.org/wp-content/largefiles/travis_SUPP%20336_2026_WEBSITE%20EXPORT_Renamed.zip",
+   "note": "This page was profiled from SUPP 335, downloaded earlier. The website link now points to a newer upload, SUPP 336."
+  }
+ },
+ "groups": [
+  {
+   "name": "Export Layout File Explanation",
+   "files": [
+    {
+     "name": "Export Layouts",
+     "url": "https://traviscad.org/wp-content/largefiles/Website_Legacy8.0.33-AppraisalExportLayout_06182026.zip",
+     "status": "layout",
+     "note": "Field-by-field layout of every .TXT in the appraisal exports.",
+     "contents": [
+      "Legacy8.0.33-AppraisalExportLayout.xlsx",
+      "Legacy8.0.33-AppraisalExportLayout.pdf"
+     ],
+     "drive": "https://drive.google.com/file/d/1qwOsrd62yzGbWkmLnuHqq0NMZHPq2r2-/view"
+    }
+   ],
+   "section": "Publicly Available Data",
+   "desc": "The field-by-field layout of every file in the PACS appraisal exports: positions, lengths and meanings.",
+   "drive": "https://drive.google.com/drive/folders/1F2GOksqJn0e8GsccbyweriyRBLjsJx15"
+  },
+  {
+   "name": "Other Exports",
+   "files": [
+    {
+     "name": "2026 Certified Appraisal Export (July)",
+     "url": "https://traviscad.org/wp-content/largefiles/2026%20Certified%20Appraisal%20Export%20Supp%200_07182026.zip",
+     "status": "used",
+     "note": "The certified roll, exported July 18.",
+     "contents": [
+      "ABS_SUBD.TXT",
+      "AGENT.TXT",
+      "APPR_HDR.TXT",
+      "ARB.TXT",
+      "ARBITRATION.TXT",
+      "COUNTRY.TXT",
+      "ENTITY.TXT",
+      "IMP_ATR.TXT",
+      "IMP_DET.TXT",
+      "IMP_INFO.TXT",
+      "LAND_DET.TXT",
+      "LAWSUIT.TXT",
+      "MOBILE_HOME_INFO.TXT",
+      "PROP.TXT",
+      "PROP_ENT.TXT",
+      "SB12.TXT",
+      "SKETCH_INFO.TXT",
+      "STATE_CD.TXT",
+      "TAX_DEFERRAL_INFO.TXT",
+      "TOTALS.TXT",
+      "f053f0b4-82fa-11f1-b455-0242ac11000a_exportTotals.pdf"
+     ],
+     "export": "cert"
+    },
+    {
+     "name": "2026 Certified Special Export (JSON) (July)",
+     "url": "https://traviscad.org/wp-content/largefiles/2026%20Certified%20JSON%20SUPP%200%2007182026.zip",
+     "status": "used",
+     "note": "One JSON object per property. Each nested list in it is its own table on this page.",
+     "contents": [
+      "Travis-protaxExport-20260719.json"
+     ],
+     "export": "json-cert"
+    },
+    {
+     "name": "2026 Supplemental Appraisal Roll Export",
+     "url": "https://traviscad.org/wp-content/largefiles/travis_SUPP%20336_2026_WEBSITE%20EXPORT_Renamed.zip",
+     "status": "used",
+     "note": "Supplement 3, exported October 6. This page was profiled from SUPP 335, downloaded earlier. The website link now points to a newer upload, SUPP 336.",
+     "contents": [
+      "ABS_SUBD.TXT",
+      "AGENT.TXT",
+      "APPR_HDR.TXT",
+      "ARB.TXT",
+      "ARBITRATION.TXT",
+      "COUNTRY.TXT",
+      "ENTITY.TXT",
+      "IMP_ATR.TXT",
+      "IMP_DET.TXT",
+      "IMP_INFO.TXT",
+      "LAND_DET.TXT",
+      "LAWSUIT.TXT",
+      "MOBILE_HOME_INFO.TXT",
+      "PROP.TXT",
+      "PROP_ENT.TXT",
+      "SB12.TXT",
+      "SKETCH_INFO.TXT",
+      "STATE_CD.TXT",
+      "TAX_DEFERRAL_INFO.TXT",
+      "TOTALS.TXT",
+      "d8615742-c1cc-11f1-8755-0242ac11000a_exportTotals.pdf"
+     ],
+     "export": "supp"
+    },
+    {
+     "name": "2026 Supplemental Special Export (JSON)",
+     "url": "https://traviscad.org/wp-content/largefiles/2026%20Special%20export%20Supp%204%2011062026.zip",
+     "status": "used",
+     "note": "Profiled from our earlier download of this export (Oct 6). The website link now points to a newer upload, Supp 4 of Nov 6, which is not on this page.",
+     "contents": [
+      "Travis-protaxExport-20261006.json"
+     ],
+     "export": "json-oct"
+    }
+   ],
+   "section": "Publicly Available Data",
+   "desc": "The bulk data exports: the certified and supplemental appraisal roll (fixed-width .TXT files) and the JSON special exports."
+  },
+  {
+   "name": "Protest Information",
+   "files": [
+    {
+     "name": "Agent Formal Hearing Check In Instructions",
+     "url": "https://traviscad.org/wp-content/uploads/Agent-ARB-Hearing-Instructions.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1vEI7-_5Nz7t6ekpu7TKUe8K8PFUYZ7M-/view"
+    },
+    {
+     "name": "Agent Portal Tutorial",
+     "url": "https://traviscad.org/wp-content/uploads/Agent-Portal-Tutorial-Updated-1.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/19JV0I4aUl64SbThHnQ58aUfLelZbY8Aw/view"
+    },
+    {
+     "name": "TCAD Updates for Tax Agents 2026 Presentation",
+     "url": "https://traviscad.org/wp-content/uploads/Agent-Meeting_2026.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1M5_VTWxPiAra12bboKjHW4fuMvri8h9b/view"
+    },
+    {
+     "name": "ARB Agent Policy",
+     "url": "https://traviscad.org/wp-content/uploads/Revised-Agent-Policy-April-16-2025-1.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1XhwE8PAgipCZHgIRa6ody-VbeQ-gM795/view"
+    },
+    {
+     "name": "2026 ARB Letter to Agents",
+     "url": "https://traviscad.org/wp-content/uploads/2026-TARB-Agent-Letter.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1ACHMLgYXWreTDojOHoezimSAEECSUt5w/view"
+    },
+    {
+     "name": "Single Family Residence Class and Conditions Guidelines",
+     "url": "https://traviscad.org/wp-content/uploads/Single-Family-Construction.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1e7IJoRUNP5MYrzjA1-X7PmpbR12oQq5Q/view"
+    }
+   ],
+   "section": "Publicly Available Data",
+   "desc": "Guides and policies for tax agents: hearing check-in, the agent portal, ARB policy and letters, and residential class guidelines.",
+   "drive": "https://drive.google.com/drive/folders/1RxDSvF84V1Qq5D4zHG8OHRixqioXPW7M"
+  },
+  {
+   "name": "Certified Totals Reports",
+   "files": [
+    {
+     "name": "2026 Certified Totals Report",
+     "url": "https://traviscad.org/wp-content/uploads/totals_2026_AsOfRollCorr_0_RunID_6885_20260718_171007.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1Dwiujhi-zum9X9thTYmnjjf8W5MgPg9a/view"
+    },
+    {
+     "name": "2025 Certified Totals Report",
+     "url": "https://traviscad.org/wp-content/uploads/totals_2025_AsOfRollCorr_15_RunID_6881_20260717_195104.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1mEJYEPOrXm3Qpgl6r-1C21assodrDFlb/view"
+    },
+    {
+     "name": "2024 Certified Totals Report",
+     "url": "https://traviscad.org/wp-content/uploads/totals_2024_AsOfRollCorr_29_RunID_6880_20260717_192846.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1ATqR94CzN9_sCwjcPoxYhpbiZBeiMxPS/view"
+    },
+    {
+     "name": "2023 Certified Totals Report",
+     "url": "https://traviscad.org/wp-content/uploads/totals_2023_AsOfRollCorr_42_RunID_6879_20260717_191041.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/18ardF1dZWTIai8L9xlElvAQakWQ2fqG-/view"
+    },
+    {
+     "name": "2022 Certified Totals Report",
+     "url": "https://traviscad.org/wp-content/uploads/totals_2022_AsOfRollCorr_53_RunID_6878_20260717_184951.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/126MZ2RdEp7NZorj9WK_ZI1N1749jK69g/view"
+    }
+   ],
+   "section": "Publicly Available Data",
+   "desc": "Roll totals by taxing unit as certified each July: market, exempt and taxable values. Useful to check our totals against the CAD's.",
+   "drive": "https://drive.google.com/drive/folders/1M8Aji6pBxO0vJwIC1m20C64YMV7zISgR"
+  },
+  {
+   "name": "Electronic Appraisal Roll Submission (EARS) to Comptroller",
+   "files": [
+    {
+     "name": "Electronic Records Submission Manual",
+     "url": "https://traviscad.org/wp-content/uploads/96-1051-Electronic-Appraisal-Roll-Submission-Manual.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1iuZcA7lSZXFu_2R7844riDtrV8xbO4e6/view"
+    },
+    {
+     "name": "2026 EARS Submission",
+     "url": "https://traviscad.org/wp-content/largefiles/227EARS082626.zip",
+     "status": "used",
+     "note": "Comptroller (PTD) submission: totals PDFs plus a nested data .zip. The nested 227EARS .csv mixes three record types (AJR, AUD, TU2); each is its own table on this page, with column names from the Comptroller's manual 96-1051.",
+     "contents": [
+      "2026 Tax Rates.xlsx",
+      "2026-2 Totals_PTD.pdf",
+      "2026_2_PTD_50_253_TOTALS.pdf",
+      "2026_2_PTD_ACREAGE_DETAIL_TOTALS.pdf",
+      "2026_2_PTD_ACREAGE_TOTALS.pdf",
+      "2026_2_PTD_ASSUMPTION.pdf",
+      "2026_2_PTD_CITY_50_109_TOTALS.pdf",
+      "2026_2_PTD_COUNTY_50_105_TOTALS.pdf",
+      "2026_2_PTD_SCHOOL_50_108_TOTALS.pdf",
+      "2026_2_PTD_SCHOOL_LIMITATION_DETAIL_TOTALS.pdf",
+      "2026_2_PTD_SPECIAL_DISTRICT_50_868_TOTALS.pdf",
+      "227EARS082626.zip",
+      "227_50_897_082626_Revised.xlsx",
+      "227_EARS_MIF_082626_Signed.pdf",
+      "Tax Office Files for Abated Lawsuits, Sales & Deferrals/ (5 files)"
+     ],
+     "export": "ears-2026"
+    },
+    {
+     "name": "2025 EARS Submission",
+     "url": "https://traviscad.org/wp-content/largefiles/227EARS090425.zip",
+     "status": "used",
+     "note": "Comptroller (PTD) submission: totals PDFs plus a nested data .zip. The nested 227EARS .csv mixes three record types (AJR, AUD, TU2); each is its own table on this page, with column names from the Comptroller's manual 96-1051.",
+     "contents": [
+      "2025-3 Totals PTD.pdf",
+      "2025_PTD_50_253_TOTALS.pdf",
+      "2025_PTD_50_897.zip",
+      "2025_PTD_ACREAGE_DETAIL_TOTALS.pdf",
+      "2025_PTD_ACREAGE_TOTALS.pdf",
+      "2025_PTD_ASSUMPTION.pdf",
+      "2025_PTD_CITY_50_109_TOTALS.pdf",
+      "2025_PTD_COUNTY_50_105_TOTALS.pdf",
+      "2025_PTD_SCHOOL_50_108_TOTALS.pdf",
+      "2025_PTD_SCHOOL_LIMITATION_DETAIL_TOTALS.pdf",
+      "2025_PTD_SPECIAL_DISTRICT_50_868_TOTALS.pdf",
+      "227_EARS_MIF_090425_Signed.pdf",
+      "227EARS090425.zip"
+     ],
+     "export": "ears-2025"
+    },
+    {
+     "name": "2024 EARS Submission",
+     "url": "https://traviscad.org/wp-content/largefiles/227EARS082824%20%282%29.zip",
+     "status": "used",
+     "note": "Comptroller (PTD) submission: totals PDFs plus a nested data .zip. The nested 227EARS .csv mixes three record types (AJR, AUD, TU2); each is its own table on this page, with column names from the Comptroller's manual 96-1051.",
+     "contents": [
+      "2024 Totals supp 1 PTD.pdf",
+      "2024_PTD_50_253_TOTALS.pdf",
+      "2024_PTD_50_897.zip",
+      "2024_PTD_ACREAGE_DETAIL_TOTALS.pdf",
+      "2024_PTD_ACREAGE_TOTALS.pdf",
+      "2024_PTD_ASSUMPTION.pdf",
+      "2024_PTD_CITY_50_109_TOTALS.pdf",
+      "2024_PTD_COUNTY_50_105_TOTALS.pdf",
+      "2024_PTD_SCHOOL_50_108_TOTALS.pdf",
+      "2024_PTD_SCHOOL_LIMITATION_DETAIL_TOTALS.pdf",
+      "2024_PTD_SPECIAL_DISTRICT_50_868_TOTALS.pdf",
+      "227_EARS_MIF_082824_Signed.pdf",
+      "227EARS082824.zip"
+     ],
+     "export": "ears-2024"
+    },
+    {
+     "name": "2023 EARS Submission",
+     "url": "https://traviscad.org/wp-content/largefiles/227EARS082923%20%282%29.zip",
+     "status": "used",
+     "note": "Comptroller (PTD) submission: totals PDFs plus a nested data .zip. The nested 227EARS .csv mixes three record types (AJR, AUD, TU2); each is its own table on this page, with column names from the Comptroller's manual 96-1051.",
+     "contents": [
+      "2023 Totals supp 2 PTD.pdf",
+      "2023_PTD_50_253_TOTALS.pdf",
+      "2023_PTD_ACREAGE_DETAIL_TOTALS.pdf",
+      "2023_PTD_ACREAGE_TOTALS.pdf",
+      "2023_PTD_ASSUMPTION.pdf",
+      "2023_PTD_CITY_50_109_TOTALS.pdf",
+      "2023_PTD_COUNTY_50_105_TOTALS.pdf",
+      "2023_PTD_SCHOOL_50_108_TOTALS.pdf",
+      "2023_PTD_SCHOOL_LIMITATION_DETAIL_TOTALS.pdf",
+      "2023_PTD_SPECIAL_DISTRICT_50_868_TOTALS.pdf",
+      "227EARS082923.zip (holds 227EARS083023.csv)",
+      "227_EARS_MIF_082923_Signed.pdf"
+     ],
+     "export": "ears-2023"
+    },
+    {
+     "name": "2022 EARS Submission",
+     "url": "https://traviscad.org/wp-content/largefiles/227EARS092822%20%282%29.zip",
+     "status": "used",
+     "note": "Comptroller (PTD) submission: totals PDFs plus a nested data .zip. The nested 227EARS .csv mixes three record types (AJR, AUD, TU2); each is its own table on this page, with column names from the Comptroller's manual 96-1051.",
+     "contents": [
+      "2022 Totals supp 2.pdf",
+      "2022_PTD_50_253.pdf",
+      "2022_PTD_ACREAGE.pdf",
+      "2022_PTD_ACREAGE_DETAIL.pdf",
+      "2022_PTD_ASSUMPTION.pdf",
+      "2022_PTD_CITY_50_109.pdf",
+      "2022_PTD_COUNTY_50_105.pdf",
+      "2022_PTD_SCHOOL_50_108.pdf",
+      "2022_PTD_SCHOOL_LIMITATION_DETAIL.pdf",
+      "2022_PTD_SPECIAL_DISTRICT_50_868.pdf",
+      "227EARS092822.zip",
+      "227_2022 EARS Tax Rate Submission.xlsx",
+      "227_EARS_MIF_092822_Signed.pdf"
+     ],
+     "export": "ears-2022"
+    }
+   ],
+   "section": "Publicly Available Data",
+   "desc": "The appraisal roll the CAD sends the Comptroller each August, with totals PDFs; the data files are profiled on this page.",
+   "drive": "https://drive.google.com/drive/folders/17ExrMINjXlDERGW7foCuUeuQI0ikxtTe"
+  },
+  {
+   "name": "Property Reports",
+   "files": [
+    {
+     "name": "Subdivision and Condominium Report 2026",
+     "url": "https://traviscad.org/wp-content/uploads/2026-NewSubdivisionListReport.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/106Yw3of9Znjd_Z89WO9l_UnAPatgNpXW/view"
+    },
+    {
+     "name": "AG Activities Report 2026",
+     "url": "https://traviscad.org/wp-content/uploads/ag_activities_2026.csv",
+     "status": "used",
+     "export": "rpt-ag",
+     "drive": "https://drive.google.com/file/d/1sUDZTOXrEhujdIxcRRWDj7qlVx7CZ2d1/view"
+    },
+    {
+     "name": "Land Comment Report 2026",
+     "url": "https://traviscad.org/wp-content/uploads/land_comments_2026.csv",
+     "status": "used",
+     "export": "rpt-land",
+     "drive": "https://drive.google.com/file/d/1o6UaTIlFUWUTWy3zuu5bKesje-kP05Ku/view"
+    },
+    {
+     "name": "Improvement Details Report 2026",
+     "url": "https://traviscad.org/wp-content/largefiles/improvement_detail_2026.zip",
+     "status": "used",
+     "note": "Four CSVs with the same columns, shown as one table.",
+     "contents": [
+      "improvement_detail_2026_1.csv",
+      "improvement_detail_2026_2.csv",
+      "improvement_detail_2026_3.csv",
+      "improvement_detail_2026_4.csv"
+     ],
+     "export": "rpt-impdet",
+     "drive": "https://drive.google.com/file/d/1sQ0ePe5ezyczFIC4K0vZw6BsB4UdCzUg/view"
+    },
+    {
+     "name": "Waterfront Effective Front Foot 2026",
+     "url": "https://traviscad.org/wp-content/uploads/waterfront_effective_front_foot_report_2026.csv",
+     "status": "used",
+     "export": "rpt-water",
+     "drive": "https://drive.google.com/file/d/1qnfZPzoLm2oG58KhyRaVOv5PsVgYqUEG/view"
+    }
+   ],
+   "section": "Publicly Available Data",
+   "desc": "Property-level reports: new subdivisions and condos, ag activity, land comments, improvement details and waterfront front footage.",
+   "drive": "https://drive.google.com/drive/folders/1My44I9QL2krjVZY_WlVN9W9lgvakFZkK"
+  },
+  {
+   "name": "Reappraisal Plans",
+   "files": [
+    {
+     "name": "2027/2028 Proposed Reappraisal Plan Summary",
+     "url": "https://traviscad.org/wp-content/uploads/2027-2028-Reappraisal-Plan-Summary_Adopted.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1rfbqc_d4hKcJjhvLuEXAaR38-3511CvL/view"
+    },
+    {
+     "name": "2027/2028 Reappraisal Plan",
+     "url": "https://traviscad.org/wp-content/uploads/2027-2028-Reappraisal-Plan_Adopted-20260903-1.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1gH9xpXpwGKvPFlPeA4vGVZuvYKfg63VN/view"
+    },
+    {
+     "name": "2025/2026 Reappraisal Plan",
+     "url": "https://traviscad.org/wp-content/uploads/2025-2026-Reappraisal-Plan.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1Jwyykp4Yx900Ge4MKygLpX24V0m2SUW0/view"
+    },
+    {
+     "name": "2025/2026 Reappraisal Plan Summary",
+     "url": "https://traviscad.org/wp-content/uploads/2025-2026-Reappraisal-Plan-Summary.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1Eh_8W6SHAG7cUdvaRLfPnSKl_1Qlskq5/view"
+    },
+    {
+     "name": "2023/2024 Reappraisal Plan",
+     "url": "https://traviscad.org/wp-content/uploads/2023-2024-Reappraisal-Plan_20220824.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1ya-vTRMygl9Jn6NlfPmEyLxMabmA6UEh/view"
+    },
+    {
+     "name": "2023/2024 Reappraisal Plan Summary",
+     "url": "https://traviscad.org/wp-content/uploads/2023-2024-Reappraisal-Plan-Summary_20220824.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1l7sg4bpMzh8ZKeA1NCsBJ7t7zeDMNEWw/view"
+    },
+    {
+     "name": "2021/2022 Reappraisal Plan",
+     "url": "https://traviscad.org/wp-content/uploads/2021_2022-Reappraisal-Plan.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/10x9WIdnOtPut8e5G-wPIWu0jDe-wGfNq/view"
+    },
+    {
+     "name": "2019/2020 Reappraisal Plan",
+     "url": "https://traviscad.org/wp-content/uploads/8b_Reappraisal-Plan_20180808.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1pdOCFHTn6Sivrib4OqK3pQ4_4mrD4lT5/view"
+    }
+   ],
+   "section": "Appraisal Reports",
+   "desc": "The CAD's two-year plan for which areas and property types it reappraises, and how.",
+   "drive": "https://drive.google.com/drive/folders/1NVbvYw4epqeemoBRRD4tyjlnDNQ_iEgd"
+  },
+  {
+   "name": "Annual Reports",
+   "files": [
+    {
+     "name": "2025 Annual Report",
+     "url": "https://traviscad.org/wp-content/uploads/2025-Annual-Report.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1dzSWKfz81V94YKw6zgknEJTT8cuB_skg/view"
+    },
+    {
+     "name": "2024 Annual Report",
+     "url": "https://traviscad.org/wp-content/uploads/2024-Annual-Report.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1fXyFg3Uj9ghpnap67P8oDOnW9jeOMC5X/view"
+    },
+    {
+     "name": "2023 Annual Report",
+     "url": "https://traviscad.org/wp-content/uploads/2023-Annual-Report.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1AD8IOBFmLRAu93LMFOVWgm5tNfbdLNu_/view"
+    },
+    {
+     "name": "2022 Annual Report",
+     "url": "https://traviscad.org/wp-content/uploads/2022-Annual-Report_20230414.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1MJrdvPLRMxzNtj94Ixa2Wj2dOoWJn4sq/view"
+    },
+    {
+     "name": "2021 Annual Report",
+     "url": "https://traviscad.org/wp-content/uploads/2021-Annual-Report.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1_E42i6Ys2y-m6Cw8qGooJLCs9yzLXy-p/view"
+    }
+   ],
+   "section": "Appraisal Reports",
+   "desc": "The CAD's yearly summary of the appraisal season: values, protests, staffing and performance.",
+   "drive": "https://drive.google.com/drive/folders/1VWGGNyxTCaeFPJgvMWEn78Rj14WsbhnF"
+  },
+  {
+   "name": "Mass Appraisal Reports",
+   "files": [
+    {
+     "name": "2026 Mass Appraisal Report",
+     "url": "https://traviscad.org/wp-content/uploads/2026_Mass-Appraisal-Report.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1BtbGwXiB54BI5td0Lh1nZ4lo1DHpDcZX/view"
+    },
+    {
+     "name": "2025 Mass Appraisal Report",
+     "url": "https://traviscad.org/wp-content/uploads/2025_Mass-Appraisal-Report.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1yx7GBT6jVHdCAGaG-0gCRa6Bu4a5Mmee/view"
+    },
+    {
+     "name": "2024 Mass Appraisal Report",
+     "url": "https://traviscad.org/wp-content/uploads/2024_Mass-Appraisal-Report20240424.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1i7LOfFnyoMd5caxymg50yIWNkBVuh4GZ/view"
+    },
+    {
+     "name": "2023 Mass Appraisal Report",
+     "url": "https://traviscad.org/wp-content/uploads/2023_Mass-Appraisal-Report_20230414.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1_ppG4f-gGn4uxtOhMCaWAXEWNxQEd7aw/view"
+    },
+    {
+     "name": "2022 Mass Appraisal Report",
+     "url": "https://traviscad.org/wp-content/uploads/2022_Mass-Appraisal-Report_20220421.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1LmYCqHtknWVfBBsj4G30mXRjQEJfk2va/view"
+    }
+   ],
+   "section": "Appraisal Reports",
+   "desc": "How the CAD values property: models, schedules and methods by property type, under USPAP Standard 6.",
+   "drive": "https://drive.google.com/drive/folders/1k3Az_VlgExcVuN4gNE4aALO5bzRmTuUH"
+  },
+  {
+   "name": "Utility Usage Reports",
+   "files": [
+    {
+     "name": "SEC. 2265.001 Energy Usage Report – 2025",
+     "url": "https://traviscad.org/wp-content/uploads/Utility-Usage-Report-2025-1.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/10b3c6tMQ-VFNxOCB9eOKXStGR9Ga1IyB/view"
+    },
+    {
+     "name": "SEC. 2265.001 Energy Usage Report – 2024",
+     "url": "https://traviscad.org/wp-content/uploads/HB-3693-Utility-Usage-Report-2024.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1J6gV0zufeiaGD_5JLjPDvwZ0gj6NWjTT/view"
+    },
+    {
+     "name": "SEC. 2265.001 Energy Usage Report – 2023",
+     "url": "https://traviscad.org/wp-content/uploads/HB-3693-Utility-Usage-Report-2023.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1b_XaKylF6jIMkbY1_iQxL_y2v23H6BPf/view"
+    },
+    {
+     "name": "SEC. 2265.001 Energy Usage Report – 2022",
+     "url": "https://traviscad.org/wp-content/uploads/HB-3693-Utility-Usage-Report-2022.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1KxCJxcZt3tk04zM4yWsm1Aoh_e7LiWTz/view"
+    },
+    {
+     "name": "SEC. 2265.001 Energy Usage Report – 2021",
+     "url": "https://traviscad.org/wp-content/uploads/HB-3693-Utility-Usage-Report-2021.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1RN1Grb0G4zYhXEZSnCMDV3W3QT79E2Hh/view"
+    }
+   ],
+   "section": "Appraisal Reports",
+   "desc": "The CAD's own energy and water use, a report state law requires.",
+   "drive": "https://drive.google.com/drive/folders/1rU7i7U55d_UBbc1vpU3LTnIlEmOZAdof"
+  },
+  {
+   "name": "Adopted Budgets",
+   "files": [
+    {
+     "name": "2027 Adopted Budget",
+     "url": "https://traviscad.org/wp-content/uploads/FY-2027-Adopted-Budget.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1K49Ne_DW4v85MWRrh3ntUYIvFLfI-RHH/view"
+    },
+    {
+     "name": "2026 Adopted Budget",
+     "url": "https://traviscad.org/wp-content/uploads/FY-2026-Adopted-Budget.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1Ii1rnYw-lovsmWh2f2pidKRvf_FWyKvG/view"
+    },
+    {
+     "name": "2025 Adopted Budget",
+     "url": "https://traviscad.org/wp-content/uploads/FY-2025-Adopted-Budget.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1wcUxPSfWz1hKgeU_eJI04pCcP5dzf4bO/view"
+    },
+    {
+     "name": "2024 Adopted Budget",
+     "url": "https://traviscad.org/wp-content/uploads/FY-2024-Proposed-Budget-1.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1M8uLlYlEJCew2ZFlfND4DA4RWN7HsEwm/view"
+    },
+    {
+     "name": "2023 Adopted Budget",
+     "url": "https://traviscad.org/wp-content/uploads/FY-2023-Adopted-Budget.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1MsrXp7nU3t7KRENNHwIYFFclHlwpwc0h/view"
+    },
+    {
+     "name": "2022 Adopted Budget",
+     "url": "https://traviscad.org/wp-content/uploads/FY-2022-Adopted-Budget.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1foA7XdRNsgx8D03AOIBfysW0zdDaN_d8/view"
+    }
+   ],
+   "section": "Financial Reports",
+   "desc": "The CAD's operating budget for each fiscal year.",
+   "drive": "https://drive.google.com/drive/folders/1MCsBQDkWQaWRofiTdvINpuGbZI4-IlMI"
+  },
+  {
+   "name": "Popular Annual Financial Reports",
+   "files": [
+    {
+     "name": "2025 Popular Annual Financial Report",
+     "url": "https://traviscad.org/wp-content/uploads/FY-2025-Popular-Annual-Financial-Report-1.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1SCivNqmi2fD10VQZNW30e6m7Qq8kT6YB/view"
+    },
+    {
+     "name": "2024 Popular Annual Financial Report",
+     "url": "https://traviscad.org/wp-content/uploads/FY-2024-Popular-Annual-Financial-Report.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1BR5J5CUChOTRS1SZ7X6OhCwFcIziZRiw/view"
+    },
+    {
+     "name": "2023 Popular Annual Financial Report",
+     "url": "https://traviscad.org/wp-content/uploads/FY-2023-Popular-Annual-Financial-Report.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1GqZnzo_xrLVBzOCT0LlbOdPdvjpFvyFp/view"
+    },
+    {
+     "name": "2022 Popular Annual Financial Report",
+     "url": "https://traviscad.org/wp-content/uploads/FY-2022-Popular-Annual-Financial-Report.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1IVxcha4Ahh_RgZHvWS5FsNJZCDPRja2I/view"
+    },
+    {
+     "name": "2021 Popular Annual Financial Report",
+     "url": "https://traviscad.org/wp-content/uploads/FY-2021-Popular-Annual-Financial-Report.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1kCy464mBKjGUwbmKbOr_sSVCCzxxvWXs/view"
+    }
+   ],
+   "section": "Financial Reports",
+   "desc": "A short, plain-language version of the CAD's annual financial report.",
+   "drive": "https://drive.google.com/drive/folders/1g08z_gqy__bJ28eyPqRrerJVvgTN8qbj"
+  },
+  {
+   "name": "Annual Comprehensive Financial Reports",
+   "files": [
+    {
+     "name": "2025 Annual Comprehensive Financial Report",
+     "url": "https://traviscad.org/wp-content/uploads/2025-ACFR_Final.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1AYVjciRhGMRRuLKtgImZQ5ZTO_yqP_cA/view"
+    },
+    {
+     "name": "2024 Annual Comprehensive Financial Report",
+     "url": "https://traviscad.org/wp-content/uploads/2024-ACFR_FINAL-1.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/18_LUPXvoFrzsNlXjjEv0su9SE_Cs6Kjo/view"
+    },
+    {
+     "name": "2023 Annual Comprehensive Financial Report",
+     "url": "https://traviscad.org/wp-content/uploads/2023-Annual-Comprehensive-Financial-Report_FINAL-1.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1j43hbUPq1FOfCgKjARsi-vruixImkwZt/view"
+    },
+    {
+     "name": "2022 Annual Comprehensive Financial Report",
+     "url": "https://traviscad.org/wp-content/uploads/2022-Annual-Comprehensive-Financial-Report.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1LH7v1QWmvUQ8WqHTjMvWkBr1hNgRRJR_/view"
+    },
+    {
+     "name": "2021 Annual Comprehensive Financial Report",
+     "url": "https://traviscad.org/wp-content/uploads/2021-Annual-Comprehensive-Financial-Report-ACFR.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1K6lxVTuRzcRQAFyF_W9kbLc5_AuWgpzr/view"
+    }
+   ],
+   "section": "Financial Reports",
+   "desc": "The CAD's audited annual financial statements.",
+   "drive": "https://drive.google.com/drive/folders/1VlsFERSFNUE6EyeUjZ5h1xRRZ3MtdD0L"
+  },
+  {
+   "name": "Open Bid Requests / Requests for Proposals",
+   "files": [
+    {
+     "name": "RFQ 2026-01 Professional Audit Services (Revised 10.22.2026)",
+     "url": "https://traviscad.org/wp-content/uploads/RFQ-2026-01-Professional-Audit-Services-Revised-10.22.2026.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1ZyvCuzM0wHdNpFejuj1aipBy7wjI5hbX/view"
+    },
+    {
+     "name": "RFQ 2026-01 – Addendum No. 1 (10.22.2026)",
+     "url": "https://traviscad.org/wp-content/uploads/RFQ-2026-01-Addendum-No.-1-10.22.2026.pdf",
+     "status": "not",
+     "drive": "https://drive.google.com/file/d/1XHfyB5Wl8mhcShRa_isO0IAwcyLiEaEt/view"
+    },
+    {
+     "name": "RFQ 2026-01 – Addendum No. 2",
+     "url": "https://traviscad.org/wp-content/uploads/RFQ-2026-01-Addendum-No.-2-QA-11.12.2026.pdf",
+     "status": "not"
+    }
+   ],
+   "section": "Financial Reports",
+   "desc": "Open requests for bids and proposals from the CAD, with their addenda.",
+   "drive": "https://drive.google.com/drive/folders/1pzT9GAtQuPKVGIaG-KAe7slNWvTyXw32"
+  }
+ ],
+ "drive": {
+  "label": "Google Drive · County Playbooks › Travis › Public Information",
+  "url": "https://drive.google.com/drive/folders/1UxRZdHqwnXa1VHzeBKjCoC66e69Imfdf",
+  "checked": "2026-11-23"
+ },
+ "tables": {
+  "c26-info": {
+   "download": "cert",
+   "raw": "PROP.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)"
+  },
+  "s26-info": {
+   "download": "supp",
+   "raw": "PROP.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)"
+  },
+  "c26-entinfo": {
+   "download": "cert",
+   "raw": "PROP_ENT.TXT",
+   "layout": "File #3 · Property-Entity Association (APPRAISAL_ENTITY_INFO.TXT)"
+  },
+  "s26-entinfo": {
+   "download": "supp",
+   "raw": "PROP_ENT.TXT",
+   "layout": "File #3 · Property-Entity Association (APPRAISAL_ENTITY_INFO.TXT)"
+  },
+  "c26-enttot": {
+   "download": "cert",
+   "raw": "TOTALS.TXT",
+   "layout": "File #4 · Entity Totals (APPRAISAL_ENTITY_TOTALS.TXT)"
+  },
+  "s26-enttot": {
+   "download": "supp",
+   "raw": "TOTALS.TXT",
+   "layout": "File #4 · Entity Totals (APPRAISAL_ENTITY_TOTALS.TXT)"
+  },
+  "c26-entity": {
+   "download": "cert",
+   "raw": "ENTITY.TXT",
+   "layout": "File #14 · Entity (APPRAISAL_ENTITY.TXT)"
+  },
+  "s26-entity": {
+   "download": "supp",
+   "raw": "ENTITY.TXT",
+   "layout": "File #14 · Entity (APPRAISAL_ENTITY.TXT)"
+  },
+  "c26-imprinfo": {
+   "download": "cert",
+   "raw": "IMP_INFO.TXT",
+   "layout": "File #7 · Improvements (APPRAISAL_IMPROVEMENT_INFO.TXT)"
+  },
+  "s26-imprinfo": {
+   "download": "supp",
+   "raw": "IMP_INFO.TXT",
+   "layout": "File #7 · Improvements (APPRAISAL_IMPROVEMENT_INFO.TXT)"
+  },
+  "c26-imprdet": {
+   "download": "cert",
+   "raw": "IMP_DET.TXT",
+   "layout": "File #8 · Improvement Detail (APPRAISAL_IMPROVEMENT_DETAIL.TXT)"
+  },
+  "s26-imprdet": {
+   "download": "supp",
+   "raw": "IMP_DET.TXT",
+   "layout": "File #8 · Improvement Detail (APPRAISAL_IMPROVEMENT_DETAIL.TXT)"
+  },
+  "c26-imprattr": {
+   "download": "cert",
+   "raw": "IMP_ATR.TXT",
+   "layout": "File #9 · Improvement Features (APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT)"
+  },
+  "s26-imprattr": {
+   "download": "supp",
+   "raw": "IMP_ATR.TXT",
+   "layout": "File #9 · Improvement Features (APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT)"
+  },
+  "c26-sketch": {
+   "download": "cert",
+   "raw": "SKETCH_INFO.TXT",
+   "layout": "File #20 · Sketches (APPRAISAL_SKETCH_INFO.TXT)"
+  },
+  "s26-sketch": {
+   "download": "supp",
+   "raw": "SKETCH_INFO.TXT",
+   "layout": "File #20 · Sketches (APPRAISAL_SKETCH_INFO.TXT)"
+  },
+  "c26-mobile": {
+   "download": "cert",
+   "raw": "MOBILE_HOME_INFO.TXT",
+   "layout": "File #18 · Mobile Home Info (APPRAISAL_MOBILE_HOME_INFO.TXT)"
+  },
+  "s26-mobile": {
+   "download": "supp",
+   "raw": "MOBILE_HOME_INFO.TXT",
+   "layout": "File #18 · Mobile Home Info (APPRAISAL_MOBILE_HOME_INFO.TXT)"
+  },
+  "c26-land": {
+   "download": "cert",
+   "raw": "LAND_DET.TXT",
+   "layout": "File #10 · Land (APPRAISAL_LAND_DETAIL.TXT)"
+  },
+  "s26-land": {
+   "download": "supp",
+   "raw": "LAND_DET.TXT",
+   "layout": "File #10 · Land (APPRAISAL_LAND_DETAIL.TXT)"
+  },
+  "c26-sb12": {
+   "download": "cert",
+   "raw": "SB12.TXT",
+   "layout": "File #21 · SB12 (APPRAISAL_SB12.TXT)"
+  },
+  "s26-sb12": {
+   "download": "supp",
+   "raw": "SB12.TXT",
+   "layout": "File #21 · SB12 (APPRAISAL_SB12.TXT)"
+  },
+  "c26-defer": {
+   "download": "cert",
+   "raw": "TAX_DEFERRAL_INFO.TXT",
+   "layout": "File #19 · Tax Deferral Info (APPRAISAL_TAX_DEFERRAL_INFO.TXT)"
+  },
+  "s26-defer": {
+   "download": "supp",
+   "raw": "TAX_DEFERRAL_INFO.TXT",
+   "layout": "File #19 · Tax Deferral Info (APPRAISAL_TAX_DEFERRAL_INFO.TXT)"
+  },
+  "c26-arb": {
+   "download": "cert",
+   "raw": "ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)"
+  },
+  "s26-arb": {
+   "download": "supp",
+   "raw": "ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)"
+  },
+  "c26-lawsuit": {
+   "download": "cert",
+   "raw": "LAWSUIT.TXT",
+   "layout": "File #13 · Active Lawsuit Properties (APPRAISAL_LAWSUIT.TXT)"
+  },
+  "s26-lawsuit": {
+   "download": "supp",
+   "raw": "LAWSUIT.TXT",
+   "layout": "File #13 · Active Lawsuit Properties (APPRAISAL_LAWSUIT.TXT)"
+  },
+  "c26-arblaw": {
+   "download": "cert",
+   "raw": "ARBITRATION.TXT",
+   "layout": "File #17 · Properties in Arbitration (ARBITRATION_LAWSUIT.TXT)"
+  },
+  "s26-arblaw": {
+   "download": "supp",
+   "raw": "ARBITRATION.TXT",
+   "layout": "File #17 · Properties in Arbitration (ARBITRATION_LAWSUIT.TXT)"
+  },
+  "c26-agent": {
+   "download": "cert",
+   "raw": "AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)"
+  },
+  "s26-agent": {
+   "download": "supp",
+   "raw": "AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)"
+  },
+  "c26-abs": {
+   "download": "cert",
+   "raw": "ABS_SUBD.TXT",
+   "layout": "File #5 · Abstract/Subdivision List (APPRAISAL_ABSTRACT_SUBDV.TXT)"
+  },
+  "s26-abs": {
+   "download": "supp",
+   "raw": "ABS_SUBD.TXT",
+   "layout": "File #5 · Abstract/Subdivision List (APPRAISAL_ABSTRACT_SUBDV.TXT)"
+  },
+  "c26-state": {
+   "download": "cert",
+   "raw": "STATE_CD.TXT",
+   "layout": "File #6 · Property Tax Division Codes (APPRAISAL_STATE_CODE.TXT)"
+  },
+  "s26-state": {
+   "download": "supp",
+   "raw": "STATE_CD.TXT",
+   "layout": "File #6 · Property Tax Division Codes (APPRAISAL_STATE_CODE.TXT)"
+  },
+  "c26-country": {
+   "download": "cert",
+   "raw": "COUNTRY.TXT",
+   "layout": "File #16 · Country Codes (APPRAISAL_COUNTRY_CODE.TXT)"
+  },
+  "s26-country": {
+   "download": "supp",
+   "raw": "COUNTRY.TXT",
+   "layout": "File #16 · Country Codes (APPRAISAL_COUNTRY_CODE.TXT)"
+  },
+  "c26-header": {
+   "download": "cert",
+   "raw": "APPR_HDR.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)"
+  },
+  "s26-header": {
+   "download": "supp",
+   "raw": "APPR_HDR.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)"
+  },
+  "ears24-ajr": {
+   "download": "ears-2024",
+   "raw": "227EARS082824.csv · AJR rows",
+   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1"
+  },
+  "ears24-aud": {
+   "download": "ears-2024",
+   "raw": "227EARS082824.csv · AUD rows",
+   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3"
+  },
+  "ears24-tu2": {
+   "download": "ears-2024",
+   "raw": "227EARS082824.csv · TU2 rows",
+   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5"
+  },
+  "ears24-897": {
+   "download": "ears-2024",
+   "raw": "227_50_897_082924.csv",
+   "layout": "Form 50-897 tax office file, sent with the EARS submission"
+  },
+  "ears25-ajr": {
+   "download": "ears-2025",
+   "raw": "227EARS090425.csv · AJR rows",
+   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1"
+  },
+  "ears25-aud": {
+   "download": "ears-2025",
+   "raw": "227EARS090425.csv · AUD rows",
+   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3"
+  },
+  "ears25-tu2": {
+   "download": "ears-2025",
+   "raw": "227EARS090425.csv · TU2 rows",
+   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5"
+  },
+  "ears25-897": {
+   "download": "ears-2025",
+   "raw": "227_50_897_090425.xlsx",
+   "layout": "Form 50-897 tax office file, sent with the EARS submission"
+  },
+  "ears26-ajr": {
+   "download": "ears-2026",
+   "raw": "227EARS082626.csv · AJR rows",
+   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1"
+  },
+  "ears26-aud": {
+   "download": "ears-2026",
+   "raw": "227EARS082626.csv · AUD rows",
+   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3"
+  },
+  "ears26-tu2": {
+   "download": "ears-2026",
+   "raw": "227EARS082626.csv · TU2 rows",
+   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5"
+  },
+  "ears26-897": {
+   "download": "ears-2026",
+   "raw": "227_50_897_082626_Revised.xlsx",
+   "layout": "Form 50-897 tax office file, sent with the EARS submission"
+  },
+  "rpt-ag": {
+   "download": "rpt-ag",
+   "raw": "ag_activities_2026.csv",
+   "layout": "TCAD property report (CSV, header row)"
+  },
+  "rpt-land": {
+   "download": "rpt-land",
+   "raw": "land_comments_2026.csv",
+   "layout": "TCAD property report (CSV, header row)"
+  },
+  "rpt-impdet": {
+   "download": "rpt-impdet",
+   "raw": "improvement_detail_2026_1-4.csv",
+   "layout": "TCAD property report (CSV, header row)"
+  },
+  "rpt-water": {
+   "download": "rpt-water",
+   "raw": "waterfront_effective_front_foot_report_2026.csv",
+   "layout": "TCAD property report (CSV, header row)"
+  },
+  "jc-links": {
+   "download": "json-cert",
+   "raw": "links[]",
+   "layout": "JSON list links in Travis-protaxExport-20260719.json"
+  },
+  "jc-property": {
+   "download": "json-cert",
+   "raw": "property",
+   "layout": "JSON top-level fields of each property in Travis-protaxExport-20260719.json"
+  },
+  "jc-propertycharacteristics": {
+   "download": "json-cert",
+   "raw": "propertyCharacteristics[]",
+   "layout": "JSON list propertyCharacteristics in Travis-protaxExport-20260719.json"
+  },
+  "jc-propertyidentification": {
+   "download": "json-cert",
+   "raw": "propertyIdentification[]",
+   "layout": "JSON list propertyIdentification in Travis-protaxExport-20260719.json"
+  },
+  "jc-propertylegaldescription": {
+   "download": "json-cert",
+   "raw": "propertyLegalDescription[]",
+   "layout": "JSON list propertyLegalDescription in Travis-protaxExport-20260719.json"
+  },
+  "jc-propertyprofile": {
+   "download": "json-cert",
+   "raw": "propertyProfile[]",
+   "layout": "JSON list propertyProfile in Travis-protaxExport-20260719.json"
+  },
+  "jc-situses": {
+   "download": "json-cert",
+   "raw": "situses[]",
+   "layout": "JSON list situses in Travis-protaxExport-20260719.json"
+  },
+  "jc-smartgroups": {
+   "download": "json-cert",
+   "raw": "smartgroups[]",
+   "layout": "JSON list smartgroups in Travis-protaxExport-20260719.json"
+  },
+  "jc-tags": {
+   "download": "json-cert",
+   "raw": "tags[]",
+   "layout": "JSON list tags in Travis-protaxExport-20260719.json"
+  },
+  "jc-owners": {
+   "download": "json-cert",
+   "raw": "owners[]",
+   "layout": "JSON list owners in Travis-protaxExport-20260719.json"
+  },
+  "jc-owners-agents": {
+   "download": "json-cert",
+   "raw": "owners[].agents[]",
+   "layout": "JSON list owners › agents in Travis-protaxExport-20260719.json"
+  },
+  "jc-owners-exemptions": {
+   "download": "json-cert",
+   "raw": "owners[].exemptions[]",
+   "layout": "JSON list owners › exemptions in Travis-protaxExport-20260719.json"
+  },
+  "jc-owners-ownertaxable": {
+   "download": "json-cert",
+   "raw": "owners[].ownerTaxable[]",
+   "layout": "JSON list owners › ownerTaxable in Travis-protaxExport-20260719.json"
+  },
+  "jc-owners-ownertaxable-exemptions": {
+   "download": "json-cert",
+   "raw": "owners[].ownerTaxable[].exemptions[]",
+   "layout": "JSON list owners › ownerTaxable › exemptions in Travis-protaxExport-20260719.json"
+  },
+  "jc-owners-ownervalue": {
+   "download": "json-cert",
+   "raw": "owners[].ownerValue[]",
+   "layout": "JSON list owners › ownerValue in Travis-protaxExport-20260719.json"
+  },
+  "jc-taxingunits": {
+   "download": "json-cert",
+   "raw": "taxingunits[]",
+   "layout": "JSON list taxingunits in Travis-protaxExport-20260719.json"
+  },
+  "jc-val": {
+   "download": "json-cert",
+   "raw": "valuations[]",
+   "layout": "JSON list valuations in Travis-protaxExport-20260719.json"
+  },
+  "jc-val-cost-improvements": {
+   "download": "json-cert",
+   "raw": "valuations[].details[].cost-local[].improvements[]",
+   "layout": "JSON list valuations › details › cost-local › improvements in Travis-protaxExport-20260719.json"
+  },
+  "jc-val-cost-improvements-adjustments": {
+   "download": "json-cert",
+   "raw": "valuations[].details[].cost-local[].improvements[].adjustments[]",
+   "layout": "JSON list valuations › details › cost-local › improvements › adjustments in Travis-protaxExport-20260719.json"
+  },
+  "jc-val-cost-improvements-details": {
+   "download": "json-cert",
+   "raw": "valuations[].details[].cost-local[].improvements[].details[]",
+   "layout": "JSON list valuations › details › cost-local › improvements › details in Travis-protaxExport-20260719.json"
+  },
+  "jc-val-cost-improvements-details-adjustments": {
+   "download": "json-cert",
+   "raw": "valuations[].details[].cost-local[].improvements[].details[].adjustments[]",
+   "layout": "JSON list valuations › details › cost-local › improvements › details › adjustments in Travis-protaxExport-20260719.json"
+  },
+  "jc-val-cost-improvements-details-features": {
+   "download": "json-cert",
+   "raw": "valuations[].details[].cost-local[].improvements[].details[].features[]",
+   "layout": "JSON list valuations › details › cost-local › improvements › details › features in Travis-protaxExport-20260719.json"
+  },
+  "jc-val-cost-land": {
+   "download": "json-cert",
+   "raw": "valuations[].details[].cost-local[].land[]",
+   "layout": "JSON list valuations › details › cost-local › land in Travis-protaxExport-20260719.json"
+  },
+  "jc-val-cost-land-adjustments": {
+   "download": "json-cert",
+   "raw": "valuations[].details[].cost-local[].land[].adjustments[]",
+   "layout": "JSON list valuations › details › cost-local › land › adjustments in Travis-protaxExport-20260719.json"
+  },
+  "jc-val-cost-land-notes": {
+   "download": "json-cert",
+   "raw": "valuations[].details[].cost-local[].land[].notes[]",
+   "layout": "JSON list valuations › details › cost-local › land › notes in Travis-protaxExport-20260719.json"
+  },
+  "jc-deeds": {
+   "download": "json-cert",
+   "raw": "deeds[]",
+   "layout": "JSON list deeds in Travis-protaxExport-20260719.json"
+  },
+  "jc-events": {
+   "download": "json-cert",
+   "raw": "events[]",
+   "layout": "JSON list events in Travis-protaxExport-20260719.json"
+  },
+  "jc-inspections": {
+   "download": "json-cert",
+   "raw": "inspections[]",
+   "layout": "JSON list inspections in Travis-protaxExport-20260719.json"
+  },
+  "jc-notes": {
+   "download": "json-cert",
+   "raw": "notes[]",
+   "layout": "JSON list notes in Travis-protaxExport-20260719.json"
+  },
+  "jc-permits": {
+   "download": "json-cert",
+   "raw": "permits[]",
+   "layout": "JSON list permits in Travis-protaxExport-20260719.json"
+  },
+  "jc-sales": {
+   "download": "json-cert",
+   "raw": "sales[]",
+   "layout": "JSON list sales in Travis-protaxExport-20260719.json"
+  },
+  "jc-appeals": {
+   "download": "json-cert",
+   "raw": "appeals[]",
+   "layout": "JSON list appeals in Travis-protaxExport-20260719.json"
+  },
+  "jo-links": {
+   "download": "json-oct",
+   "raw": "links[]",
+   "layout": "JSON list links in Travis-protaxExport-20261006.json"
+  },
+  "jo-property": {
+   "download": "json-oct",
+   "raw": "property",
+   "layout": "JSON top-level fields of each property in Travis-protaxExport-20261006.json"
+  },
+  "jo-propertycharacteristics": {
+   "download": "json-oct",
+   "raw": "propertyCharacteristics[]",
+   "layout": "JSON list propertyCharacteristics in Travis-protaxExport-20261006.json"
+  },
+  "jo-propertyidentification": {
+   "download": "json-oct",
+   "raw": "propertyIdentification[]",
+   "layout": "JSON list propertyIdentification in Travis-protaxExport-20261006.json"
+  },
+  "jo-propertylegaldescription": {
+   "download": "json-oct",
+   "raw": "propertyLegalDescription[]",
+   "layout": "JSON list propertyLegalDescription in Travis-protaxExport-20261006.json"
+  },
+  "jo-propertyprofile": {
+   "download": "json-oct",
+   "raw": "propertyProfile[]",
+   "layout": "JSON list propertyProfile in Travis-protaxExport-20261006.json"
+  },
+  "jo-situses": {
+   "download": "json-oct",
+   "raw": "situses[]",
+   "layout": "JSON list situses in Travis-protaxExport-20261006.json"
+  },
+  "jo-smartgroups": {
+   "download": "json-oct",
+   "raw": "smartgroups[]",
+   "layout": "JSON list smartgroups in Travis-protaxExport-20261006.json"
+  },
+  "jo-tags": {
+   "download": "json-oct",
+   "raw": "tags[]",
+   "layout": "JSON list tags in Travis-protaxExport-20261006.json"
+  },
+  "jo-owners": {
+   "download": "json-oct",
+   "raw": "owners[]",
+   "layout": "JSON list owners in Travis-protaxExport-20261006.json"
+  },
+  "jo-owners-agents": {
+   "download": "json-oct",
+   "raw": "owners[].agents[]",
+   "layout": "JSON list owners › agents in Travis-protaxExport-20261006.json"
+  },
+  "jo-owners-exemptions": {
+   "download": "json-oct",
+   "raw": "owners[].exemptions[]",
+   "layout": "JSON list owners › exemptions in Travis-protaxExport-20261006.json"
+  },
+  "jo-owners-ownertaxable": {
+   "download": "json-oct",
+   "raw": "owners[].ownerTaxable[]",
+   "layout": "JSON list owners › ownerTaxable in Travis-protaxExport-20261006.json"
+  },
+  "jo-owners-ownertaxable-exemptions": {
+   "download": "json-oct",
+   "raw": "owners[].ownerTaxable[].exemptions[]",
+   "layout": "JSON list owners › ownerTaxable › exemptions in Travis-protaxExport-20261006.json"
+  },
+  "jo-owners-ownervalue": {
+   "download": "json-oct",
+   "raw": "owners[].ownerValue[]",
+   "layout": "JSON list owners › ownerValue in Travis-protaxExport-20261006.json"
+  },
+  "jo-taxingunits": {
+   "download": "json-oct",
+   "raw": "taxingunits[]",
+   "layout": "JSON list taxingunits in Travis-protaxExport-20261006.json"
+  },
+  "jo-val": {
+   "download": "json-oct",
+   "raw": "valuations[]",
+   "layout": "JSON list valuations in Travis-protaxExport-20261006.json"
+  },
+  "jo-val-cost-improvements": {
+   "download": "json-oct",
+   "raw": "valuations[].details[].cost-local[].improvements[]",
+   "layout": "JSON list valuations › details › cost-local › improvements in Travis-protaxExport-20261006.json"
+  },
+  "jo-val-cost-improvements-adjustments": {
+   "download": "json-oct",
+   "raw": "valuations[].details[].cost-local[].improvements[].adjustments[]",
+   "layout": "JSON list valuations › details › cost-local › improvements › adjustments in Travis-protaxExport-20261006.json"
+  },
+  "jo-val-cost-improvements-details": {
+   "download": "json-oct",
+   "raw": "valuations[].details[].cost-local[].improvements[].details[]",
+   "layout": "JSON list valuations › details › cost-local › improvements › details in Travis-protaxExport-20261006.json"
+  },
+  "jo-val-cost-improvements-details-adjustments": {
+   "download": "json-oct",
+   "raw": "valuations[].details[].cost-local[].improvements[].details[].adjustments[]",
+   "layout": "JSON list valuations › details › cost-local › improvements › details › adjustments in Travis-protaxExport-20261006.json"
+  },
+  "jo-val-cost-improvements-details-features": {
+   "download": "json-oct",
+   "raw": "valuations[].details[].cost-local[].improvements[].details[].features[]",
+   "layout": "JSON list valuations › details › cost-local › improvements › details › features in Travis-protaxExport-20261006.json"
+  },
+  "jo-val-cost-land": {
+   "download": "json-oct",
+   "raw": "valuations[].details[].cost-local[].land[]",
+   "layout": "JSON list valuations › details › cost-local › land in Travis-protaxExport-20261006.json"
+  },
+  "jo-val-cost-land-adjustments": {
+   "download": "json-oct",
+   "raw": "valuations[].details[].cost-local[].land[].adjustments[]",
+   "layout": "JSON list valuations › details › cost-local › land › adjustments in Travis-protaxExport-20261006.json"
+  },
+  "jo-val-cost-land-notes": {
+   "download": "json-oct",
+   "raw": "valuations[].details[].cost-local[].land[].notes[]",
+   "layout": "JSON list valuations › details › cost-local › land › notes in Travis-protaxExport-20261006.json"
+  },
+  "jo-deeds": {
+   "download": "json-oct",
+   "raw": "deeds[]",
+   "layout": "JSON list deeds in Travis-protaxExport-20261006.json"
+  },
+  "jo-events": {
+   "download": "json-oct",
+   "raw": "events[]",
+   "layout": "JSON list events in Travis-protaxExport-20261006.json"
+  },
+  "jo-inspections": {
+   "download": "json-oct",
+   "raw": "inspections[]",
+   "layout": "JSON list inspections in Travis-protaxExport-20261006.json"
+  },
+  "jo-notes": {
+   "download": "json-oct",
+   "raw": "notes[]",
+   "layout": "JSON list notes in Travis-protaxExport-20261006.json"
+  },
+  "jo-permits": {
+   "download": "json-oct",
+   "raw": "permits[]",
+   "layout": "JSON list permits in Travis-protaxExport-20261006.json"
+  },
+  "jo-sales": {
+   "download": "json-oct",
+   "raw": "sales[]",
+   "layout": "JSON list sales in Travis-protaxExport-20261006.json"
+  },
+  "jo-appeals": {
+   "download": "json-oct",
+   "raw": "appeals[]",
+   "layout": "JSON list appeals in Travis-protaxExport-20261006.json"
+  },
+  "ears22-ajr": {
+   "download": "ears-2022",
+   "raw": "227EARS092822.csv · AJR rows",
+   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1"
+  },
+  "ears22-aud": {
+   "download": "ears-2022",
+   "raw": "227EARS092822.csv · AUD rows",
+   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3"
+  },
+  "ears22-tu2": {
+   "download": "ears-2022",
+   "raw": "227EARS092822.csv · TU2 rows",
+   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5"
+  },
+  "ears23-ajr": {
+   "download": "ears-2023",
+   "raw": "227EARS083023.csv · AJR rows",
+   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1"
+  },
+  "ears23-aud": {
+   "download": "ears-2023",
+   "raw": "227EARS083023.csv · AUD rows",
+   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3"
+  },
+  "ears23-tu2": {
+   "download": "ears-2023",
+   "raw": "227EARS083023.csv · TU2 rows",
+   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5"
+  }
+ }
+}
