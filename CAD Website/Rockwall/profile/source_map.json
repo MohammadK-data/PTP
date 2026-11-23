@@ -1,0 +1,933 @@
+{
+ "page": {
+  "label": "Rockwall CAD · Data Exports",
+  "url": "https://www.rockwallcad.com/data-exports",
+  "short": "RCAD",
+  "checked": "2026-11-23"
+ },
+ "groups": [
+  {
+   "name": "2026",
+   "files": [
+    {
+     "name": "2026 ADJUSTED APPRAISAL ROLL as of October 7, 2026",
+     "url": "https://drive.google.com/file/d/1NzT9s8aSLbm5_40HST-vnQrBBC0v8dlo/view",
+     "status": "used",
+     "site": "Google Drive",
+     "note": "Supplement 6; the files inside were exported on October 9, 2026.",
+     "contents": [
+      "2026-10-09_2026_APPRAISAL_ABSTRACT_SUBDV.TXT",
+      "2026-10-09_2026_APPRAISAL_AGENT.TXT",
+      "2026-10-09_2026_APPRAISAL_ARB.TXT",
+      "2026-10-09_2026_APPRAISAL_COUNTRY_CODE.TXT",
+      "2026-10-09_2026_APPRAISAL_ENTITY.TXT",
+      "2026-10-09_2026_APPRAISAL_ENTITY_INFO.TXT",
+      "2026-10-09_2026_APPRAISAL_ENTITY_TOTALS.TXT",
+      "2026-10-09_2026_APPRAISAL_HEADER.TXT",
+      "2026-10-09_2026_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+      "2026-10-09_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+      "2026-10-09_2026_APPRAISAL_IMPROVEMENT_INFO.TXT",
+      "2026-10-09_2026_APPRAISAL_INFO.TXT",
+      "2026-10-09_2026_APPRAISAL_LAND_DETAIL.TXT",
+      "2026-10-09_2026_APPRAISAL_LAWSUIT.TXT",
+      "2026-10-09_2026_APPRAISAL_MOBILE_HOME_INFO.TXT",
+      "2026-10-09_2026_APPRAISAL_SB12.TXT",
+      "2026-10-09_2026_APPRAISAL_SKETCH_INFO.TXT",
+      "2026-10-09_2026_APPRAISAL_STATE_CODE.TXT",
+      "2026-10-09_2026_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+      "2026-10-09_2026_ARBITRATION_LAWSUIT.TXT",
+      "Legacy8.0.32-AppraisalExportLayout.pdf",
+      "a7afd97c-c41d-11f1-8362-0242ac110006_exportTotals.pdf"
+     ],
+     "export": "2026-adjusted-appraisal-roll-as-of-octob"
+    },
+    {
+     "name": "2026 CERTIFIED APPRAISAL ROLL as of July 13, 2026",
+     "url": "https://drive.google.com/file/d/1Ekz8ijj32TIMF_g7JsAOq-Yy8A5jXey6/view",
+     "status": "used",
+     "site": "Google Drive",
+     "contents": [
+      "2026-07-13_2026_APPRAISAL_ABSTRACT_SUBDV.TXT",
+      "2026-07-13_2026_APPRAISAL_AGENT.TXT",
+      "2026-07-13_2026_APPRAISAL_ARB.TXT",
+      "2026-07-13_2026_APPRAISAL_COUNTRY_CODE.TXT",
+      "2026-07-13_2026_APPRAISAL_ENTITY.TXT",
+      "2026-07-13_2026_APPRAISAL_ENTITY_INFO.TXT",
+      "2026-07-13_2026_APPRAISAL_ENTITY_TOTALS.TXT",
+      "2026-07-13_2026_APPRAISAL_HEADER.TXT",
+      "2026-07-13_2026_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+      "2026-07-13_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+      "2026-07-13_2026_APPRAISAL_IMPROVEMENT_INFO.TXT",
+      "2026-07-13_2026_APPRAISAL_INFO.TXT",
+      "2026-07-13_2026_APPRAISAL_LAND_DETAIL.TXT",
+      "2026-07-13_2026_APPRAISAL_LAWSUIT.TXT",
+      "2026-07-13_2026_APPRAISAL_MOBILE_HOME_INFO.TXT",
+      "2026-07-13_2026_APPRAISAL_SB12.TXT",
+      "2026-07-13_2026_APPRAISAL_SKETCH_INFO.TXT",
+      "2026-07-13_2026_APPRAISAL_STATE_CODE.TXT",
+      "2026-07-13_2026_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+      "2026-07-13_2026_ARBITRATION_LAWSUIT.TXT",
+      "Legacy8.0.32-AppraisalExportLayout.pdf",
+      "f3a53778-7ef4-11f1-983d-0242ac110004_exportTotals.pdf"
+     ],
+     "export": "2026-certified-appraisal-roll-as-of-july"
+    },
+    {
+     "name": "2026 PRELIMINARY APPRAISAL ROLL as of March 16, 2026",
+     "url": "https://drive.google.com/file/d/1v8ROCSty1do5sgoKWWCzJ4h0UnzVwNow/view",
+     "status": "used",
+     "site": "Google Drive",
+     "contents": [
+      "1710bd72-214e-11f1-96f4-0242ac110008_exportTotals.pdf",
+      "2026-03-16_2026_APPRAISAL_ABSTRACT_SUBDV.TXT",
+      "2026-03-16_2026_APPRAISAL_AGENT.TXT",
+      "2026-03-16_2026_APPRAISAL_ARB.TXT",
+      "2026-03-16_2026_APPRAISAL_COUNTRY_CODE.TXT",
+      "2026-03-16_2026_APPRAISAL_ENTITY.TXT",
+      "2026-03-16_2026_APPRAISAL_ENTITY_INFO.TXT",
+      "2026-03-16_2026_APPRAISAL_ENTITY_TOTALS.TXT",
+      "2026-03-16_2026_APPRAISAL_HEADER.TXT",
+      "2026-03-16_2026_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+      "2026-03-16_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+      "2026-03-16_2026_APPRAISAL_IMPROVEMENT_INFO.TXT",
+      "2026-03-16_2026_APPRAISAL_INFO.TXT",
+      "2026-03-16_2026_APPRAISAL_LAND_DETAIL.TXT",
+      "2026-03-16_2026_APPRAISAL_LAWSUIT.TXT",
+      "2026-03-16_2026_APPRAISAL_MOBILE_HOME_INFO.TXT",
+      "2026-03-16_2026_APPRAISAL_SB12.TXT",
+      "2026-03-16_2026_APPRAISAL_SKETCH_INFO.TXT",
+      "2026-03-16_2026_APPRAISAL_STATE_CODE.TXT",
+      "2026-03-16_2026_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+      "2026-03-16_2026_ARBITRATION_LAWSUIT.TXT",
+      "Legacy8.0.30-AppraisalExportLayout.pdf"
+     ],
+     "export": "2026-preliminary-appraisal-roll-as-of-ma"
+    },
+    {
+     "name": "2026 PRELIMINARY APPRAISAL ROLL as of May 26, 2026",
+     "url": "https://drive.google.com/file/d/1juamoCBY39eg861J86SaUoaJJrShrAlV/view",
+     "status": "used",
+     "site": "Google Drive",
+     "contents": [
+      "2026-05-26_2026_APPRAISAL_ABSTRACT_SUBDV.TXT",
+      "2026-05-26_2026_APPRAISAL_AGENT.TXT",
+      "2026-05-26_2026_APPRAISAL_ARB.TXT",
+      "2026-05-26_2026_APPRAISAL_COUNTRY_CODE.TXT",
+      "2026-05-26_2026_APPRAISAL_ENTITY.TXT",
+      "2026-05-26_2026_APPRAISAL_ENTITY_INFO.TXT",
+      "2026-05-26_2026_APPRAISAL_ENTITY_TOTALS.TXT",
+      "2026-05-26_2026_APPRAISAL_HEADER.TXT",
+      "2026-05-26_2026_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+      "2026-05-26_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+      "2026-05-26_2026_APPRAISAL_IMPROVEMENT_INFO.TXT",
+      "2026-05-26_2026_APPRAISAL_INFO.TXT",
+      "2026-05-26_2026_APPRAISAL_LAND_DETAIL.TXT",
+      "2026-05-26_2026_APPRAISAL_LAWSUIT.TXT",
+      "2026-05-26_2026_APPRAISAL_MOBILE_HOME_INFO.TXT",
+      "2026-05-26_2026_APPRAISAL_SB12.TXT",
+      "2026-05-26_2026_APPRAISAL_SKETCH_INFO.TXT",
+      "2026-05-26_2026_APPRAISAL_STATE_CODE.TXT",
+      "2026-05-26_2026_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+      "2026-05-26_2026_ARBITRATION_LAWSUIT.TXT",
+      "Legacy8.0.32-AppraisalExportLayout.pdf",
+      "e1aab3ca-5944-11f1-ac06-0242ac11000d_exportTotals.pdf"
+     ],
+     "export": "2026-preliminary-appraisal-roll-as-of-ma-x"
+    }
+   ],
+   "section": "Appraisal Data Exports",
+   "desc": "The 2026 rolls: two preliminary, the certified roll and the latest adjusted (supplement) roll, each a PACS appraisal export of 20 files."
+  },
+  {
+   "name": "2025",
+   "files": [
+    {
+     "name": "2025 ADJUSTED APPRAISAL ROLL as of October 16, 2026",
+     "url": "https://drive.google.com/file/d/1OreFd3IF2wFHfdciDc7qdSDf06HVreVB/view",
+     "status": "data",
+     "site": "Google Drive"
+    },
+    {
+     "name": "2025 CERTIFIED APPRAISAL ROLL as of July 16, 2025 ($140k HS & $60k OV65 and DP)",
+     "url": "https://drive.google.com/file/d/1O84cpz3_7daxFCAsufvMDIzfSl5y6GFu/view",
+     "status": "data",
+     "site": "Google Drive"
+    },
+    {
+     "name": "2025 CERTIFIED APPRAISAL ROLL as of July 16, 2025 ($140k HS)",
+     "url": "https://drive.google.com/file/d/1aVamVW9fw1ivhyDRHLG541ZajWCeaY7E/view",
+     "status": "data",
+     "site": "Google Drive"
+    },
+    {
+     "name": "2025 CERTIFIED APPRAISAL ROLL as of July 14, 2025",
+     "url": "https://drive.google.com/file/d/1ZDtBCh1RaMtKGxErbc_auyKwI6uqqCQz/view",
+     "status": "used",
+     "site": "Google Drive",
+     "note": "Only the property, agent, ARB and header files of this download are kept locally.",
+     "contents": [
+      "2025-07-14_2025_APPRAISAL_AGENT.TXT",
+      "2025-07-14_2025_APPRAISAL_ARB.TXT",
+      "2025-07-14_2025_APPRAISAL_HEADER.TXT",
+      "2025-07-14_2025_APPRAISAL_INFO.TXT"
+     ],
+     "export": "2025-certified-appraisal-roll-as-of-july"
+    },
+    {
+     "name": "2025 PRELIMINARY APPRAISAL ROLL as of June 20, 2025",
+     "url": "https://drive.google.com/file/d/1KM8MdLyT-6d8tGFQmgkScDAeBCkWI1fX/view",
+     "status": "used",
+     "site": "Google Drive",
+     "note": "Only the property, agent, ARB and header files of this download are kept locally.",
+     "contents": [
+      "2025-06-20_2025_APPRAISAL_AGENT.TXT",
+      "2025-06-20_2025_APPRAISAL_ARB.TXT",
+      "2025-06-20_2025_APPRAISAL_HEADER.TXT",
+      "2025-06-20_2025_APPRAISAL_INFO.TXT"
+     ],
+     "export": "2025-preliminary-appraisal-roll-as-of-ju"
+    },
+    {
+     "name": "2025 PRELIMINARY APPRAISAL ROLL as of March 21, 2025",
+     "url": "https://drive.google.com/file/d/1zV5FgPDLUkuEOMoozLUAqcE6hDRW5yDP/view",
+     "status": "data",
+     "site": "Google Drive"
+    }
+   ],
+   "section": "Appraisal Data Exports",
+   "desc": "The 2025 appraisal rolls published on the page: preliminary, certified and adjusted, as available."
+  },
+  {
+   "name": "2024",
+   "files": [
+    {
+     "name": "2024 ADJUSTED APPRAISAL ROLL as of October 16, 2026",
+     "url": "https://drive.google.com/file/d/1cVH4YJakYGvtP_3cfb8wXP1veVtJKBXj/view",
+     "status": "data",
+     "site": "Google Drive"
+    },
+    {
+     "name": "2024 CERTIFIED APPRAISAL ROLL as of July 11, 2024",
+     "url": "https://drive.google.com/file/d/1Qynq71VAamWp-LwwEkbFiwqTYYVo5nao/view",
+     "status": "used",
+     "site": "Google Drive",
+     "note": "Our copy's files were exported on August 23, 2024, not July 11; the website file may have been replaced since. Only the property, agent, ARB and header files are kept locally.",
+     "contents": [
+      "2024-08-23_2024_APPRAISAL_AGENT.TXT",
+      "2024-08-23_2024_APPRAISAL_ARB.TXT",
+      "2024-08-23_2024_APPRAISAL_HEADER.TXT",
+      "2024-08-23_2024_APPRAISAL_INFO.TXT"
+     ],
+     "export": "2024-certified-appraisal-roll-as-of-july"
+    },
+    {
+     "name": "2024 PRELIMINARY APPRAISAL ROLL as of April 20, 2024",
+     "url": "https://drive.google.com/file/d/1ai1uFPmVJHbfcaDlVajprmlqSOTsqQLL/view",
+     "status": "data",
+     "site": "Google Drive"
+    },
+    {
+     "name": "2024 PRELIMINARY APPRAISAL ROLL as of March 19, 2024",
+     "url": "https://drive.google.com/file/d/1yMLJMzcL5xDv1qmexQKWY7Su0vrKUyrg/view",
+     "status": "data",
+     "site": "Google Drive"
+    }
+   ],
+   "section": "Appraisal Data Exports",
+   "desc": "The 2024 appraisal rolls published on the page: preliminary, certified and adjusted, as available."
+  },
+  {
+   "name": "2023",
+   "files": [
+    {
+     "name": "2023 ADJUSTED APPRAISAL ROLL as of October 16, 2026",
+     "url": "https://drive.google.com/file/d/1QwoyBeGu1sTnyrJY4JTQz_7ft1BTKruv/view",
+     "status": "data",
+     "site": "Google Drive"
+    },
+    {
+     "name": "2023 CERTIFIED APPRAISAL ROLL as of July 24, 2023 with $100k Homestead Ex",
+     "url": "https://drive.google.com/file/d/1MGC-jO0fTQp7sNnZwfCifZeNZ1vDP6QV/view",
+     "status": "data",
+     "site": "Google Drive"
+    },
+    {
+     "name": "2023 CERTIFIED APPRAISAL ROLL as of July 21, 2023 with $40k Homestead Ex",
+     "url": "https://drive.google.com/file/d/1EwslOHPjz0kMVjjnCKnEit-S39Q_gtCW/view",
+     "status": "data",
+     "site": "Google Drive"
+    },
+    {
+     "name": "2023 PRELIMINARY APPRAISAL ROLL as of June 5, 2023 updated for BPP",
+     "url": "https://drive.google.com/file/d/1I4fuLKBqxflLOOUVK2NSCt3Ai50FfiD7/view",
+     "status": "used",
+     "site": "Google Drive",
+     "note": "Only the property, agent, ARB and header files are kept locally; the property file is not on this page (export layout 8.0.25, which we don't have).",
+     "contents": [
+      "2023-06-05_2023_APPRAISAL_AGENT.TXT",
+      "2023-06-05_2023_APPRAISAL_ARB.TXT",
+      "2023-06-05_2023_APPRAISAL_HEADER.TXT",
+      "2023-06-05_2023_APPRAISAL_INFO.TXT"
+     ],
+     "export": "2023-preliminary-appraisal-roll-as-of-ju"
+    },
+    {
+     "name": "2023 PRELIMINARY APPRAISAL ROLL as of April 4, 2023",
+     "url": "https://drive.google.com/file/d/1jcKOw9lOayw6J8kjuACuHE0t2eR3Wj2t/view",
+     "status": "data",
+     "site": "Google Drive"
+    }
+   ],
+   "section": "Appraisal Data Exports",
+   "desc": "The 2023 appraisal rolls published on the page: preliminary, certified and adjusted, as available."
+  },
+  {
+   "name": "2022",
+   "files": [
+    {
+     "name": "2022 ADJUSTED APPRAISAL ROLL as of October 16, 2026",
+     "url": "https://drive.google.com/file/d/1wAHApgIXG5p0tcMKOlbLFZssLuihc6CR/view",
+     "status": "data",
+     "site": "Google Drive"
+    },
+    {
+     "name": "2022 CERTIFIED APPRAISAL ROLL as of July 19, 2022 (.txt format)",
+     "url": "https://drive.google.com/file/d/15f4Vd6u1Jnpuo2rY6ujKmjGxMUXjbec3/view",
+     "status": "data",
+     "site": "Google Drive"
+    }
+   ],
+   "section": "Appraisal Data Exports",
+   "desc": "The 2022 appraisal rolls published on the page: preliminary, certified and adjusted, as available."
+  },
+  {
+   "name": "2021",
+   "files": [
+    {
+     "name": "2021 ADJUSTED APPRAISAL ROLL as of October 16, 2026",
+     "url": "https://drive.google.com/file/d/1Vw4FtJVMgdPi4LtJVeO8KSV3FMAbWkKb/view",
+     "status": "data",
+     "site": "Google Drive"
+    }
+   ],
+   "section": "Appraisal Data Exports",
+   "desc": "The 2021 appraisal rolls published on the page: preliminary, certified and adjusted, as available."
+  },
+  {
+   "name": "2020",
+   "files": [
+    {
+     "name": "2020 ADJUSTED APPRAISAL ROLL as of December 19, 2025",
+     "url": "https://drive.google.com/file/d/1uaJEHerKOV40N7sAIlyYoquYK8FyzS9F/view",
+     "status": "data",
+     "site": "Google Drive"
+    }
+   ],
+   "section": "Appraisal Data Exports",
+   "desc": "The 2020 appraisal rolls published on the page: preliminary, certified and adjusted, as available."
+  },
+  {
+   "name": "2019",
+   "files": [
+    {
+     "name": "2019 ADJUSTED APPRAISAL ROLL as of November 19, 2024",
+     "url": "https://drive.google.com/file/d/1O37ZQUJ7gRmsK170HFSz13PH1pP1r9Sk/view",
+     "status": "data",
+     "site": "Google Drive"
+    }
+   ],
+   "section": "Appraisal Data Exports",
+   "desc": "The 2019 appraisal rolls published on the page: preliminary, certified and adjusted, as available."
+  },
+  {
+   "name": "2018",
+   "files": [
+    {
+     "name": "2018 ADJUSTED APPRAISAL ROLL as of December 22, 2023",
+     "url": "https://drive.google.com/file/d/1jXS_TbqctcezcmCO8dq6Mfd51BZOHwMa/view",
+     "status": "data",
+     "site": "Google Drive"
+    }
+   ],
+   "section": "Appraisal Data Exports",
+   "desc": "The 2018 appraisal rolls published on the page: preliminary, certified and adjusted, as available."
+  }
+ ],
+ "tables": {
+  "s26-info": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_APPRAISAL_INFO.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)",
+   "title": "Property Roll"
+  },
+  "s26-entinfo": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_APPRAISAL_ENTITY_INFO.TXT",
+   "layout": "File #3 · Property-Entity Association (APPRAISAL_ENTITY_INFO.TXT)",
+   "title": "Values by taxing unit"
+  },
+  "s26-enttot": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_APPRAISAL_ENTITY_TOTALS.TXT",
+   "layout": "File #4 · Entity Totals (APPRAISAL_ENTITY_TOTALS.TXT)",
+   "title": "Unit totals"
+  },
+  "s26-entity": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_APPRAISAL_ENTITY.TXT",
+   "layout": "File #14 · Entity (APPRAISAL_ENTITY.TXT)",
+   "title": "Unit codes"
+  },
+  "s26-imprinfo": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_APPRAISAL_IMPROVEMENT_INFO.TXT",
+   "layout": "File #7 · Improvements (APPRAISAL_IMPROVEMENT_INFO.TXT)",
+   "title": "Improvements"
+  },
+  "s26-imprdet": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+   "layout": "File #8 · Improvement Detail (APPRAISAL_IMPROVEMENT_DETAIL.TXT)",
+   "title": "Improvement details"
+  },
+  "s26-imprattr": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+   "layout": "File #9 · Improvement Features (APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT)",
+   "title": "Detail attributes"
+  },
+  "s26-sketch": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_APPRAISAL_SKETCH_INFO.TXT",
+   "layout": "File #20 · Sketches (APPRAISAL_SKETCH_INFO.TXT)",
+   "title": "Sketches"
+  },
+  "s26-mobile": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_APPRAISAL_MOBILE_HOME_INFO.TXT",
+   "layout": "File #18 · Mobile Home Info (APPRAISAL_MOBILE_HOME_INFO.TXT)",
+   "title": "Mobile homes"
+  },
+  "s26-land": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_APPRAISAL_LAND_DETAIL.TXT",
+   "layout": "File #10 · Land (APPRAISAL_LAND_DETAIL.TXT)",
+   "title": "Land"
+  },
+  "s26-sb12": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_APPRAISAL_SB12.csv.gz",
+   "layout": "",
+   "title": "Tax ceilings (SB12)"
+  },
+  "s26-defer": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+   "layout": "File #19 · Tax Deferral  Info (APPRAISAL_TAX_DEFERRAL_INFO.TXT)",
+   "title": "Tax deferrals"
+  },
+  "s26-arb": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_APPRAISAL_ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)",
+   "title": "ARB protests"
+  },
+  "s26-lawsuit": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_APPRAISAL_LAWSUIT.TXT",
+   "layout": "File #13 · Active Lawsuit Properties (APPRAISAL_LAWSUIT.TXT)",
+   "title": "Lawsuits"
+  },
+  "s26-arblaw": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_ARBITRATION_LAWSUIT.TXT",
+   "layout": "File #17 · Properties in Arbitration (ARBITRATION_LAWSUIT.TXT)",
+   "title": "Arbitration"
+  },
+  "s26-agent": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_APPRAISAL_AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)",
+   "title": "Agents"
+  },
+  "s26-abs": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_APPRAISAL_ABSTRACT_SUBDV.TXT",
+   "layout": "File #5 · Abstract/Subdivision List (APPRAISAL_ABSTRACT_SUBDV.TXT)",
+   "title": "Abstracts & subdivisions"
+  },
+  "s26-state": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_APPRAISAL_STATE_CODE.TXT",
+   "layout": "File #6 · Property Tax Division Codes (APPRAISAL_STATE_CODE.TXT)",
+   "title": "State codes"
+  },
+  "s26-country": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_APPRAISAL_COUNTRY_CODE.TXT",
+   "layout": "File #16 · Country Codes (APPRAISAL_COUNTRY_CODE.TXT)",
+   "title": "Country codes"
+  },
+  "s26-header": {
+   "download": "2026-adjusted-appraisal-roll-as-of-octob",
+   "raw": "2026-10-09_2026_APPRAISAL_HEADER.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)",
+   "title": "Export header"
+  },
+  "c26-info": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_APPRAISAL_INFO.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)",
+   "title": "Property Roll"
+  },
+  "c26-entinfo": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_APPRAISAL_ENTITY_INFO.TXT",
+   "layout": "File #3 · Property-Entity Association (APPRAISAL_ENTITY_INFO.TXT)",
+   "title": "Values by taxing unit"
+  },
+  "c26-enttot": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_APPRAISAL_ENTITY_TOTALS.TXT",
+   "layout": "File #4 · Entity Totals (APPRAISAL_ENTITY_TOTALS.TXT)",
+   "title": "Unit totals"
+  },
+  "c26-entity": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_APPRAISAL_ENTITY.TXT",
+   "layout": "File #14 · Entity (APPRAISAL_ENTITY.TXT)",
+   "title": "Unit codes"
+  },
+  "c26-imprinfo": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_APPRAISAL_IMPROVEMENT_INFO.TXT",
+   "layout": "File #7 · Improvements (APPRAISAL_IMPROVEMENT_INFO.TXT)",
+   "title": "Improvements"
+  },
+  "c26-imprdet": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+   "layout": "File #8 · Improvement Detail (APPRAISAL_IMPROVEMENT_DETAIL.TXT)",
+   "title": "Improvement details"
+  },
+  "c26-imprattr": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+   "layout": "File #9 · Improvement Features (APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT)",
+   "title": "Detail attributes"
+  },
+  "c26-sketch": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_APPRAISAL_SKETCH_INFO.TXT",
+   "layout": "File #20 · Sketches (APPRAISAL_SKETCH_INFO.TXT)",
+   "title": "Sketches"
+  },
+  "c26-mobile": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_APPRAISAL_MOBILE_HOME_INFO.TXT",
+   "layout": "File #18 · Mobile Home Info (APPRAISAL_MOBILE_HOME_INFO.TXT)",
+   "title": "Mobile homes"
+  },
+  "c26-land": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_APPRAISAL_LAND_DETAIL.TXT",
+   "layout": "File #10 · Land (APPRAISAL_LAND_DETAIL.TXT)",
+   "title": "Land"
+  },
+  "c26-sb12": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_APPRAISAL_SB12.csv.gz",
+   "layout": "",
+   "title": "Tax ceilings (SB12)"
+  },
+  "c26-defer": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+   "layout": "File #19 · Tax Deferral  Info (APPRAISAL_TAX_DEFERRAL_INFO.TXT)",
+   "title": "Tax deferrals"
+  },
+  "c26-arb": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_APPRAISAL_ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)",
+   "title": "ARB protests"
+  },
+  "c26-lawsuit": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_APPRAISAL_LAWSUIT.TXT",
+   "layout": "File #13 · Active Lawsuit Properties (APPRAISAL_LAWSUIT.TXT)",
+   "title": "Lawsuits"
+  },
+  "c26-arblaw": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_ARBITRATION_LAWSUIT.TXT",
+   "layout": "File #17 · Properties in Arbitration (ARBITRATION_LAWSUIT.TXT)",
+   "title": "Arbitration"
+  },
+  "c26-agent": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_APPRAISAL_AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)",
+   "title": "Agents"
+  },
+  "c26-abs": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_APPRAISAL_ABSTRACT_SUBDV.TXT",
+   "layout": "File #5 · Abstract/Subdivision List (APPRAISAL_ABSTRACT_SUBDV.TXT)",
+   "title": "Abstracts & subdivisions"
+  },
+  "c26-state": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_APPRAISAL_STATE_CODE.TXT",
+   "layout": "File #6 · Property Tax Division Codes (APPRAISAL_STATE_CODE.TXT)",
+   "title": "State codes"
+  },
+  "c26-country": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_APPRAISAL_COUNTRY_CODE.TXT",
+   "layout": "File #16 · Country Codes (APPRAISAL_COUNTRY_CODE.TXT)",
+   "title": "Country codes"
+  },
+  "c26-header": {
+   "download": "2026-certified-appraisal-roll-as-of-july",
+   "raw": "2026-07-13_2026_APPRAISAL_HEADER.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)",
+   "title": "Export header"
+  },
+  "p26a-info": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_APPRAISAL_INFO.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)",
+   "title": "Property Roll"
+  },
+  "p26a-entinfo": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_APPRAISAL_ENTITY_INFO.TXT",
+   "layout": "File #3 · Property-Entity Association (APPRAISAL_ENTITY_INFO.TXT)",
+   "title": "Values by taxing unit"
+  },
+  "p26a-enttot": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_APPRAISAL_ENTITY_TOTALS.TXT",
+   "layout": "File #4 · Entity Totals (APPRAISAL_ENTITY_TOTALS.TXT)",
+   "title": "Unit totals"
+  },
+  "p26a-entity": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_APPRAISAL_ENTITY.TXT",
+   "layout": "File #14 · Entity (APPRAISAL_ENTITY.TXT)",
+   "title": "Unit codes"
+  },
+  "p26a-imprinfo": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_APPRAISAL_IMPROVEMENT_INFO.TXT",
+   "layout": "File #7 · Improvements (APPRAISAL_IMPROVEMENT_INFO.TXT)",
+   "title": "Improvements"
+  },
+  "p26a-imprdet": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+   "layout": "File #8 · Improvement Detail (APPRAISAL_IMPROVEMENT_DETAIL.TXT)",
+   "title": "Improvement details"
+  },
+  "p26a-imprattr": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+   "layout": "File #9 · Improvement Features (APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT)",
+   "title": "Detail attributes"
+  },
+  "p26a-sketch": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_APPRAISAL_SKETCH_INFO.TXT",
+   "layout": "File #20 · Sketches (APPRAISAL_SKETCH_INFO.TXT)",
+   "title": "Sketches"
+  },
+  "p26a-mobile": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_APPRAISAL_MOBILE_HOME_INFO.TXT",
+   "layout": "File #18 · Mobile Home Info (APPRAISAL_MOBILE_HOME_INFO.TXT)",
+   "title": "Mobile homes"
+  },
+  "p26a-land": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_APPRAISAL_LAND_DETAIL.TXT",
+   "layout": "File #10 · Land (APPRAISAL_LAND_DETAIL.TXT)",
+   "title": "Land"
+  },
+  "p26a-sb12": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_APPRAISAL_SB12.csv.gz",
+   "layout": "",
+   "title": "Tax ceilings (SB12)"
+  },
+  "p26a-defer": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+   "layout": "File #19 · Tax Deferral  Info (APPRAISAL_TAX_DEFERRAL_INFO.TXT)",
+   "title": "Tax deferrals"
+  },
+  "p26a-arb": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_APPRAISAL_ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)",
+   "title": "ARB protests"
+  },
+  "p26a-lawsuit": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_APPRAISAL_LAWSUIT.TXT",
+   "layout": "File #13 · Active Lawsuit Properties (APPRAISAL_LAWSUIT.TXT)",
+   "title": "Lawsuits"
+  },
+  "p26a-arblaw": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_ARBITRATION_LAWSUIT.TXT",
+   "layout": "File #17 · Properties in Arbitration (ARBITRATION_LAWSUIT.TXT)",
+   "title": "Arbitration"
+  },
+  "p26a-agent": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_APPRAISAL_AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)",
+   "title": "Agents"
+  },
+  "p26a-abs": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_APPRAISAL_ABSTRACT_SUBDV.TXT",
+   "layout": "File #5 · Abstract/Subdivision List (APPRAISAL_ABSTRACT_SUBDV.TXT)",
+   "title": "Abstracts & subdivisions"
+  },
+  "p26a-state": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_APPRAISAL_STATE_CODE.TXT",
+   "layout": "File #6 · Property Tax Division Codes (APPRAISAL_STATE_CODE.TXT)",
+   "title": "State codes"
+  },
+  "p26a-country": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_APPRAISAL_COUNTRY_CODE.TXT",
+   "layout": "File #16 · Country Codes (APPRAISAL_COUNTRY_CODE.TXT)",
+   "title": "Country codes"
+  },
+  "p26a-header": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma",
+   "raw": "2026-03-16_2026_APPRAISAL_HEADER.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)",
+   "title": "Export header"
+  },
+  "p26b-info": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_APPRAISAL_INFO.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)",
+   "title": "Property Roll"
+  },
+  "p26b-entinfo": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_APPRAISAL_ENTITY_INFO.TXT",
+   "layout": "File #3 · Property-Entity Association (APPRAISAL_ENTITY_INFO.TXT)",
+   "title": "Values by taxing unit"
+  },
+  "p26b-enttot": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_APPRAISAL_ENTITY_TOTALS.TXT",
+   "layout": "File #4 · Entity Totals (APPRAISAL_ENTITY_TOTALS.TXT)",
+   "title": "Unit totals"
+  },
+  "p26b-entity": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_APPRAISAL_ENTITY.TXT",
+   "layout": "File #14 · Entity (APPRAISAL_ENTITY.TXT)",
+   "title": "Unit codes"
+  },
+  "p26b-imprinfo": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_APPRAISAL_IMPROVEMENT_INFO.TXT",
+   "layout": "File #7 · Improvements (APPRAISAL_IMPROVEMENT_INFO.TXT)",
+   "title": "Improvements"
+  },
+  "p26b-imprdet": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+   "layout": "File #8 · Improvement Detail (APPRAISAL_IMPROVEMENT_DETAIL.TXT)",
+   "title": "Improvement details"
+  },
+  "p26b-imprattr": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+   "layout": "File #9 · Improvement Features (APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT)",
+   "title": "Detail attributes"
+  },
+  "p26b-sketch": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_APPRAISAL_SKETCH_INFO.TXT",
+   "layout": "File #20 · Sketches (APPRAISAL_SKETCH_INFO.TXT)",
+   "title": "Sketches"
+  },
+  "p26b-mobile": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_APPRAISAL_MOBILE_HOME_INFO.TXT",
+   "layout": "File #18 · Mobile Home Info (APPRAISAL_MOBILE_HOME_INFO.TXT)",
+   "title": "Mobile homes"
+  },
+  "p26b-land": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_APPRAISAL_LAND_DETAIL.TXT",
+   "layout": "File #10 · Land (APPRAISAL_LAND_DETAIL.TXT)",
+   "title": "Land"
+  },
+  "p26b-sb12": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_APPRAISAL_SB12.csv.gz",
+   "layout": "",
+   "title": "Tax ceilings (SB12)"
+  },
+  "p26b-defer": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+   "layout": "File #19 · Tax Deferral  Info (APPRAISAL_TAX_DEFERRAL_INFO.TXT)",
+   "title": "Tax deferrals"
+  },
+  "p26b-arb": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_APPRAISAL_ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)",
+   "title": "ARB protests"
+  },
+  "p26b-lawsuit": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_APPRAISAL_LAWSUIT.TXT",
+   "layout": "File #13 · Active Lawsuit Properties (APPRAISAL_LAWSUIT.TXT)",
+   "title": "Lawsuits"
+  },
+  "p26b-arblaw": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_ARBITRATION_LAWSUIT.TXT",
+   "layout": "File #17 · Properties in Arbitration (ARBITRATION_LAWSUIT.TXT)",
+   "title": "Arbitration"
+  },
+  "p26b-agent": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_APPRAISAL_AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)",
+   "title": "Agents"
+  },
+  "p26b-abs": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_APPRAISAL_ABSTRACT_SUBDV.TXT",
+   "layout": "File #5 · Abstract/Subdivision List (APPRAISAL_ABSTRACT_SUBDV.TXT)",
+   "title": "Abstracts & subdivisions"
+  },
+  "p26b-state": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_APPRAISAL_STATE_CODE.TXT",
+   "layout": "File #6 · Property Tax Division Codes (APPRAISAL_STATE_CODE.TXT)",
+   "title": "State codes"
+  },
+  "p26b-country": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_APPRAISAL_COUNTRY_CODE.TXT",
+   "layout": "File #16 · Country Codes (APPRAISAL_COUNTRY_CODE.TXT)",
+   "title": "Country codes"
+  },
+  "p26b-header": {
+   "download": "2026-preliminary-appraisal-roll-as-of-ma-x",
+   "raw": "2026-05-26_2026_APPRAISAL_HEADER.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)",
+   "title": "Export header"
+  },
+  "c25-header": {
+   "download": "2025-certified-appraisal-roll-as-of-july",
+   "raw": "2025-07-14_2025_APPRAISAL_HEADER.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)",
+   "title": "Export header"
+  },
+  "c25-agent": {
+   "download": "2025-certified-appraisal-roll-as-of-july",
+   "raw": "2025-07-14_2025_APPRAISAL_AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)",
+   "title": "Agents"
+  },
+  "c25-arb": {
+   "download": "2025-certified-appraisal-roll-as-of-july",
+   "raw": "2025-07-14_2025_APPRAISAL_ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)",
+   "title": "ARB protests"
+  },
+  "c25-info": {
+   "download": "2025-certified-appraisal-roll-as-of-july",
+   "raw": "2025-07-14_2025_APPRAISAL_INFO.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)",
+   "title": "Property Roll"
+  },
+  "p25-header": {
+   "download": "2025-preliminary-appraisal-roll-as-of-ju",
+   "raw": "2025-06-20_2025_APPRAISAL_HEADER.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)",
+   "title": "Export header"
+  },
+  "p25-agent": {
+   "download": "2025-preliminary-appraisal-roll-as-of-ju",
+   "raw": "2025-06-20_2025_APPRAISAL_AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)",
+   "title": "Agents"
+  },
+  "p25-arb": {
+   "download": "2025-preliminary-appraisal-roll-as-of-ju",
+   "raw": "2025-06-20_2025_APPRAISAL_ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)",
+   "title": "ARB protests"
+  },
+  "p25-info": {
+   "download": "2025-preliminary-appraisal-roll-as-of-ju",
+   "raw": "2025-06-20_2025_APPRAISAL_INFO.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)",
+   "title": "Property Roll"
+  },
+  "c24-header": {
+   "download": "2024-certified-appraisal-roll-as-of-july",
+   "raw": "2024-08-23_2024_APPRAISAL_HEADER.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)",
+   "title": "Export header"
+  },
+  "c24-agent": {
+   "download": "2024-certified-appraisal-roll-as-of-july",
+   "raw": "2024-08-23_2024_APPRAISAL_AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)",
+   "title": "Agents"
+  },
+  "c24-arb": {
+   "download": "2024-certified-appraisal-roll-as-of-july",
+   "raw": "2024-08-23_2024_APPRAISAL_ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)",
+   "title": "ARB protests"
+  },
+  "c24-info": {
+   "download": "2024-certified-appraisal-roll-as-of-july",
+   "raw": "2024-08-23_2024_APPRAISAL_INFO.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)",
+   "title": "Property Roll"
+  },
+  "p23-header": {
+   "download": "2023-preliminary-appraisal-roll-as-of-ju",
+   "raw": "2023-06-05_2023_APPRAISAL_HEADER.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)",
+   "title": "Export header"
+  },
+  "p23-agent": {
+   "download": "2023-preliminary-appraisal-roll-as-of-ju",
+   "raw": "2023-06-05_2023_APPRAISAL_AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)",
+   "title": "Agents"
+  },
+  "p23-arb": {
+   "download": "2023-preliminary-appraisal-roll-as-of-ju",
+   "raw": "2023-06-05_2023_APPRAISAL_ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)",
+   "title": "ARB protests"
+  }
+ },
+ "drive": {
+  "label": "Google Drive · County Playbooks › Rockwall › Public Information",
+  "checked": "2026-11-23",
+  "url": "https://drive.google.com/drive/folders/1IQ3wiAntpeHhDcXRgQwFtibLE_htNudF"
+ }
+}

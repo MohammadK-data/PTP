@@ -19,3 +19,15 @@ To add an export: run the ETL on the new folder, add its datasets to `manifest.j
 `venv/bin/python -I ~/.claude/skills/create_county_data_profile/scripts/profile_files.py manifest.json profile.json <keys>`,
 then `build_page.py manifest.json profile.json - rockwall-data-profile.html`,
 then republish to the same artifact link.
+
+## Review workspace (from 2026-11-23)
+
+- Column review: https://claude.ai/artifact/TEQbUErFh3QeXAQy9c6DkZ
+- `catalog.json`: rockwallcad.com/data-exports (each roll is a Google Drive link; checked 2026-11-23). `drive.json`: County Playbooks › Rockwall › Public Information.
+- Added: the header, agent and ARB files of the 2023 prelim (Jun 5), 2024 certified (exported Aug 23 although the folder says Jul 11),
+  2025 prelim (Jun 20) and 2025 certified (Jul 14) exports (`p23-*`, `c24-*`, `p25-*`, `c25-*`, group "Earlier Exports"), and their
+  property files in Property Roll. The 2023 property file is layout 8.0.25 (9,067 chars) and is not read: no 8.0.25 layout on hand.
+- Sketch tables keep 25 sample rows (`sample_rows` in the manifest) so the page stays under the 16 MB artifact limit.
+- Rebuild (S = `~/.claude/skills/create_county_data_profile/scripts`): build_page.py manifest.json profile.json - rockwall-data-profile.html
+  → add_column_review.py → build_source_map.py catalog.json manifest.json source_map.json --drive drive.json
+  → add_source_nav.py review/rockwall-column-review.html source_map.json review/rockwall-column-review.html manifest.json → republish.

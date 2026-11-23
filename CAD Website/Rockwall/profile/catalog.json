@@ -1,0 +1,256 @@
+{
+ "page": {
+  "label": "Rockwall CAD · Data Exports",
+  "url": "https://www.rockwallcad.com/data-exports",
+  "short": "RCAD",
+  "checked": "2026-11-23"
+ },
+ "sections": [
+  {
+   "name": "Appraisal Data Exports",
+   "groups": [
+    {
+     "name": "2026",
+     "desc": "The 2026 rolls: two preliminary, the certified roll and the latest adjusted (supplement) roll, each a PACS appraisal export of 20 files.",
+     "files": [
+      {
+       "name": "2026 ADJUSTED APPRAISAL ROLL as of October 7, 2026",
+       "url": "https://drive.google.com/file/d/1NzT9s8aSLbm5_40HST-vnQrBBC0v8dlo/view",
+       "role": "data",
+       "link_label": "Google Drive",
+       "tables": [
+        "s26-*"
+       ],
+       "local": "Data/RCAD ADJ 2026 (RC6) APP ROLL 100726",
+       "note": "Supplement 6; the files inside were exported on October 9, 2026."
+      },
+      {
+       "name": "2026 CERTIFIED APPRAISAL ROLL as of July 13, 2026",
+       "url": "https://drive.google.com/file/d/1Ekz8ijj32TIMF_g7JsAOq-Yy8A5jXey6/view",
+       "role": "data",
+       "link_label": "Google Drive",
+       "tables": [
+        "c26-*"
+       ],
+       "local": "Data/RCAD CERT 2026 APP ROLL 07_13_2026"
+      },
+      {
+       "name": "2026 PRELIMINARY APPRAISAL ROLL as of March 16, 2026",
+       "url": "https://drive.google.com/file/d/1v8ROCSty1do5sgoKWWCzJ4h0UnzVwNow/view",
+       "role": "data",
+       "link_label": "Google Drive",
+       "tables": [
+        "p26a-*"
+       ],
+       "local": "Data/RCAD PRELIM 2026 APP ROLL 03_16_2026"
+      },
+      {
+       "name": "2026 PRELIMINARY APPRAISAL ROLL as of May 26, 2026",
+       "url": "https://drive.google.com/file/d/1juamoCBY39eg861J86SaUoaJJrShrAlV/view",
+       "role": "data",
+       "link_label": "Google Drive",
+       "tables": [
+        "p26b-*"
+       ],
+       "local": "Data/RCAD PRELIM 2026 APP ROLL 05_26_2026"
+      }
+     ]
+    },
+    {
+     "name": "2025",
+     "desc": "The 2025 appraisal rolls published on the page: preliminary, certified and adjusted, as available.",
+     "files": [
+      {
+       "name": "2025 ADJUSTED APPRAISAL ROLL as of October 16, 2026",
+       "url": "https://drive.google.com/file/d/1OreFd3IF2wFHfdciDc7qdSDf06HVreVB/view",
+       "role": "data",
+       "link_label": "Google Drive"
+      },
+      {
+       "name": "2025 CERTIFIED APPRAISAL ROLL as of July 16, 2025 ($140k HS & $60k OV65 and DP)",
+       "url": "https://drive.google.com/file/d/1O84cpz3_7daxFCAsufvMDIzfSl5y6GFu/view",
+       "role": "data",
+       "link_label": "Google Drive"
+      },
+      {
+       "name": "2025 CERTIFIED APPRAISAL ROLL as of July 16, 2025 ($140k HS)",
+       "url": "https://drive.google.com/file/d/1aVamVW9fw1ivhyDRHLG541ZajWCeaY7E/view",
+       "role": "data",
+       "link_label": "Google Drive"
+      },
+      {
+       "name": "2025 CERTIFIED APPRAISAL ROLL as of July 14, 2025",
+       "url": "https://drive.google.com/file/d/1ZDtBCh1RaMtKGxErbc_auyKwI6uqqCQz/view",
+       "role": "data",
+       "link_label": "Google Drive",
+       "tables": [
+        "c25-*"
+       ],
+       "local": "Data/rockwall_prior_download/rc_2025_cert",
+       "note": "Only the property, agent, ARB and header files of this download are kept locally."
+      },
+      {
+       "name": "2025 PRELIMINARY APPRAISAL ROLL as of June 20, 2025",
+       "url": "https://drive.google.com/file/d/1KM8MdLyT-6d8tGFQmgkScDAeBCkWI1fX/view",
+       "role": "data",
+       "link_label": "Google Drive",
+       "tables": [
+        "p25-*"
+       ],
+       "local": "Data/rockwall_prior_download/rc_2025_prelim_0620",
+       "note": "Only the property, agent, ARB and header files of this download are kept locally."
+      },
+      {
+       "name": "2025 PRELIMINARY APPRAISAL ROLL as of March 21, 2025",
+       "url": "https://drive.google.com/file/d/1zV5FgPDLUkuEOMoozLUAqcE6hDRW5yDP/view",
+       "role": "data",
+       "link_label": "Google Drive"
+      }
+     ]
+    },
+    {
+     "name": "2024",
+     "desc": "The 2024 appraisal rolls published on the page: preliminary, certified and adjusted, as available.",
+     "files": [
+      {
+       "name": "2024 ADJUSTED APPRAISAL ROLL as of October 16, 2026",
+       "url": "https://drive.google.com/file/d/1cVH4YJakYGvtP_3cfb8wXP1veVtJKBXj/view",
+       "role": "data",
+       "link_label": "Google Drive"
+      },
+      {
+       "name": "2024 CERTIFIED APPRAISAL ROLL as of July 11, 2024",
+       "url": "https://drive.google.com/file/d/1Qynq71VAamWp-LwwEkbFiwqTYYVo5nao/view",
+       "role": "data",
+       "link_label": "Google Drive",
+       "tables": [
+        "c24-*"
+       ],
+       "local": "Data/rockwall_prior_download/rc_2024_cert_0711",
+       "note": "Our copy's files were exported on August 23, 2024, not July 11; the website file may have been replaced since. Only the property, agent, ARB and header files are kept locally."
+      },
+      {
+       "name": "2024 PRELIMINARY APPRAISAL ROLL as of April 20, 2024",
+       "url": "https://drive.google.com/file/d/1ai1uFPmVJHbfcaDlVajprmlqSOTsqQLL/view",
+       "role": "data",
+       "link_label": "Google Drive"
+      },
+      {
+       "name": "2024 PRELIMINARY APPRAISAL ROLL as of March 19, 2024",
+       "url": "https://drive.google.com/file/d/1yMLJMzcL5xDv1qmexQKWY7Su0vrKUyrg/view",
+       "role": "data",
+       "link_label": "Google Drive"
+      }
+     ]
+    },
+    {
+     "name": "2023",
+     "desc": "The 2023 appraisal rolls published on the page: preliminary, certified and adjusted, as available.",
+     "files": [
+      {
+       "name": "2023 ADJUSTED APPRAISAL ROLL as of October 16, 2026",
+       "url": "https://drive.google.com/file/d/1QwoyBeGu1sTnyrJY4JTQz_7ft1BTKruv/view",
+       "role": "data",
+       "link_label": "Google Drive"
+      },
+      {
+       "name": "2023 CERTIFIED APPRAISAL ROLL as of July 24, 2023 with $100k Homestead Ex",
+       "url": "https://drive.google.com/file/d/1MGC-jO0fTQp7sNnZwfCifZeNZ1vDP6QV/view",
+       "role": "data",
+       "link_label": "Google Drive"
+      },
+      {
+       "name": "2023 CERTIFIED APPRAISAL ROLL as of July 21, 2023 with $40k Homestead Ex",
+       "url": "https://drive.google.com/file/d/1EwslOHPjz0kMVjjnCKnEit-S39Q_gtCW/view",
+       "role": "data",
+       "link_label": "Google Drive"
+      },
+      {
+       "name": "2023 PRELIMINARY APPRAISAL ROLL as of June 5, 2023 updated for BPP",
+       "url": "https://drive.google.com/file/d/1I4fuLKBqxflLOOUVK2NSCt3Ai50FfiD7/view",
+       "role": "data",
+       "link_label": "Google Drive",
+       "tables": [
+        "p23-*"
+       ],
+       "local": "Data/rockwall_prior_download/rc_2023_prelim_0605",
+       "note": "Only the property, agent, ARB and header files are kept locally; the property file is not on this page (export layout 8.0.25, which we don't have)."
+      },
+      {
+       "name": "2023 PRELIMINARY APPRAISAL ROLL as of April 4, 2023",
+       "url": "https://drive.google.com/file/d/1jcKOw9lOayw6J8kjuACuHE0t2eR3Wj2t/view",
+       "role": "data",
+       "link_label": "Google Drive"
+      }
+     ]
+    },
+    {
+     "name": "2022",
+     "desc": "The 2022 appraisal rolls published on the page: preliminary, certified and adjusted, as available.",
+     "files": [
+      {
+       "name": "2022 ADJUSTED APPRAISAL ROLL as of October 16, 2026",
+       "url": "https://drive.google.com/file/d/1wAHApgIXG5p0tcMKOlbLFZssLuihc6CR/view",
+       "role": "data",
+       "link_label": "Google Drive"
+      },
+      {
+       "name": "2022 CERTIFIED APPRAISAL ROLL as of July 19, 2022 (.txt format)",
+       "url": "https://drive.google.com/file/d/15f4Vd6u1Jnpuo2rY6ujKmjGxMUXjbec3/view",
+       "role": "data",
+       "link_label": "Google Drive"
+      }
+     ]
+    },
+    {
+     "name": "2021",
+     "desc": "The 2021 appraisal rolls published on the page: preliminary, certified and adjusted, as available.",
+     "files": [
+      {
+       "name": "2021 ADJUSTED APPRAISAL ROLL as of October 16, 2026",
+       "url": "https://drive.google.com/file/d/1Vw4FtJVMgdPi4LtJVeO8KSV3FMAbWkKb/view",
+       "role": "data",
+       "link_label": "Google Drive"
+      }
+     ]
+    },
+    {
+     "name": "2020",
+     "desc": "The 2020 appraisal rolls published on the page: preliminary, certified and adjusted, as available.",
+     "files": [
+      {
+       "name": "2020 ADJUSTED APPRAISAL ROLL as of December 19, 2025",
+       "url": "https://drive.google.com/file/d/1uaJEHerKOV40N7sAIlyYoquYK8FyzS9F/view",
+       "role": "data",
+       "link_label": "Google Drive"
+      }
+     ]
+    },
+    {
+     "name": "2019",
+     "desc": "The 2019 appraisal rolls published on the page: preliminary, certified and adjusted, as available.",
+     "files": [
+      {
+       "name": "2019 ADJUSTED APPRAISAL ROLL as of November 19, 2024",
+       "url": "https://drive.google.com/file/d/1O37ZQUJ7gRmsK170HFSz13PH1pP1r9Sk/view",
+       "role": "data",
+       "link_label": "Google Drive"
+      }
+     ]
+    },
+    {
+     "name": "2018",
+     "desc": "The 2018 appraisal rolls published on the page: preliminary, certified and adjusted, as available.",
+     "files": [
+      {
+       "name": "2018 ADJUSTED APPRAISAL ROLL as of December 22, 2023",
+       "url": "https://drive.google.com/file/d/1jXS_TbqctcezcmCO8dq6Mfd51BZOHwMa/view",
+       "role": "data",
+       "link_label": "Google Drive"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

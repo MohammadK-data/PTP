@@ -1,9 +1,9 @@
 {
  "title": "Rockwall Property Data Profile",
- "eyebrow": "Rockwall Central Appraisal District · PACS appraisal export files",
- "intro": "Everything in Rockwall CAD's 2026 PACS <b>Appraisal Export</b>, downloaded from the CAD website: 20 files per export, in four snapshots — the <b>preliminary</b> rolls exported March 16 and May 26, the <b>certified</b> roll exported July 13 and <b>supplement 6</b> exported October 9. The year switch on every tab picks the snapshot. For each file you get its columns, data types, completeness and value distributions.",
+ "eyebrow": "Rockwall Central Appraisal District · PACS appraisal export files · 2023–2026",
+ "intro": "Everything we keep from Rockwall CAD's Data Exports page: the 2026 PACS <b>Appraisal Export</b> in four snapshots — the <b>preliminary</b> rolls of March 16 and May 26, the <b>certified</b> roll of July 13 and <b>supplement 6</b> of October 9 (20 files each) — plus the property, agent, ARB and header files kept from the 2023 preliminary, 2024 certified and 2025 preliminary and certified exports. For each file you get its columns, data types, completeness and value distributions.",
  "store_key": "rockwall-view",
- "foot": "Generated {date}. Files were scanned in full with DuckDB from the gzipped CSVs that <code>etl/rockwall_appraisal_export_etl.py</code> writes from the raw PACS .TXT files, using Denton's 8.0.30 layout (Rockwall publishes the same PACS export; fields added in 8.0.32 and 8.0.33 stay in <code>unmapped_tail</code>); \"Auto-detected on load\" is the type DuckDB assigns, and distinct counts there are approximate (HyperLogLog). \"Data type\" is inferred from the values: Code means digits stored as text with leading zeros.",
+ "foot": "Generated {date}. Files were scanned in full with DuckDB from gzipped CSVs converted from the raw PACS .TXT files, using Denton's 8.0.30 layout (Rockwall publishes the same PACS export; fields added in 8.0.32 and 8.0.33 stay in <code>unmapped_tail</code>); \"Auto-detected on load\" is the type DuckDB assigns, and distinct counts there are approximate (HyperLogLog). \"Data type\" is inferred from the values: Code means digits stored as text with leading zeros.",
  "max_year": 2026,
  "root": "/Users/user2/PTP/CAD Website/Rockwall/",
  "sample": {
@@ -897,7 +897,9 @@
     "frss_qualify_yr": "Integer",
     "late_correction_val": "Integer",
     "nhs_cap_loss": "Integer"
-   }
+   },
+   "raw": "2026-03-16_2026_APPRAISAL_INFO.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)"
   },
   "p26a-entinfo": {
    "path": "output/2026-03-16_2026_APPRAISAL_ENTITY_INFO.csv.gz",
@@ -1082,7 +1084,9 @@
     "med_allocation_factor": "Integer",
     "jeti_amt": "Integer",
     "jeti_allocation_factor": "Integer"
-   }
+   },
+   "raw": "2026-03-16_2026_APPRAISAL_ENTITY_INFO.TXT",
+   "layout": "File #3 · Property-Entity Association (APPRAISAL_ENTITY_INFO.TXT)"
   },
   "p26a-enttot": {
    "path": "output/2026-03-16_2026_APPRAISAL_ENTITY_TOTALS.csv.gz",
@@ -1244,7 +1248,9 @@
     "med_amt": "Integer",
     "jeti_count": "Integer",
     "jeti_amt": "Integer"
-   }
+   },
+   "raw": "2026-03-16_2026_APPRAISAL_ENTITY_TOTALS.TXT",
+   "layout": "File #4 · Entity Totals (APPRAISAL_ENTITY_TOTALS.TXT)"
   },
   "p26a-entity": {
    "path": "output/2026-03-16_2026_APPRAISAL_ENTITY.csv.gz",
@@ -1256,7 +1262,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "105 unit ids, but only 63 have a row in Unit totals; the other 42 have no property on the roll. Codes are letters, not numbers: <code>GRW</code> Rockwall County, <code>SRW</code> Rockwall ISD, <code>CRW</code> City of Rockwall, <code>CAD</code> the appraisal district."
-   ]
+   ],
+   "raw": "2026-03-16_2026_APPRAISAL_ENTITY.TXT",
+   "layout": "File #14 · Entity (APPRAISAL_ENTITY.TXT)"
   },
   "p26a-imprinfo": {
    "path": "output/2026-03-16_2026_APPRAISAL_IMPROVEMENT_INFO.csv.gz",
@@ -1271,7 +1279,9 @@
    ],
    "force": {
     "omitted_imprv_val": "Integer"
-   }
+   },
+   "raw": "2026-03-16_2026_APPRAISAL_IMPROVEMENT_INFO.TXT",
+   "layout": "File #7 · Improvements (APPRAISAL_IMPROVEMENT_INFO.TXT)"
   },
   "p26a-imprdet": {
    "path": "output/2026-03-16_2026_APPRAISAL_IMPROVEMENT_DETAIL.csv.gz",
@@ -1288,7 +1298,9 @@
    "force": {
     "yr_built": "Integer",
     "depreciation_yr": "Integer"
-   }
+   },
+   "raw": "2026-03-16_2026_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+   "layout": "File #8 · Improvement Detail (APPRAISAL_IMPROVEMENT_DETAIL.TXT)"
   },
   "p26a-imprattr": {
    "path": "output/2026-03-16_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.csv.gz",
@@ -1300,7 +1312,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "One row per attribute; pivot <code>imprv_attr_desc</code> to get one column per attribute. The common ones are Roof Style, Exterior Wall, Heating/Cooling, Foundation, Fireplace, Plumbing and Number of Bedrooms."
-   ]
+   ],
+   "raw": "2026-03-16_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+   "layout": "File #9 · Improvement Features (APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT)"
   },
   "p26a-sketch": {
    "path": "output/2026-03-16_2026_APPRAISAL_SKETCH_INFO.csv.gz",
@@ -1313,7 +1327,10 @@
    "notes": [
     "Tab-separated in the source, with ids not zero-padded: pad <code>prop_id</code> and <code>imprv_det_id</code> to 12 digits to join. All 187,045 Legacy sketches match an improvement detail after padding.",
     "11,469 Enhanced sketches have <code>sketch_json</code> (up to 6.6 MB per row) and a blank <code>imprv_det_id</code>; they attach to the improvement, not a segment. Raise your CSV reader's maximum line size to load them. The file is about 1.8 GB raw, the largest in the export."
-   ]
+   ],
+   "raw": "2026-03-16_2026_APPRAISAL_SKETCH_INFO.TXT",
+   "layout": "File #20 · Sketches (APPRAISAL_SKETCH_INFO.TXT)",
+   "sample_rows": 25
   },
   "p26a-mobile": {
    "path": "output/2026-03-16_2026_APPRAISAL_MOBILE_HOME_INFO.csv.gz",
@@ -1325,7 +1342,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "1,504 rows for 1,456 properties, all on the property roll. Serial and HUD numbers fill <code>_2</code>/<code>_3</code> only for multi-section homes (7 rows have a third)."
-   ]
+   ],
+   "raw": "2026-03-16_2026_APPRAISAL_MOBILE_HOME_INFO.TXT",
+   "layout": "File #18 · Mobile Home Info (APPRAISAL_MOBILE_HOME_INFO.TXT)"
   },
   "p26a-land": {
    "path": "output/2026-03-16_2026_APPRAISAL_LAND_DETAIL.csv.gz",
@@ -1345,7 +1364,9 @@
     "effective_front": "Integer",
     "effective_depth": "Integer",
     "land_seg_mkt_val": "Integer"
-   }
+   },
+   "raw": "2026-03-16_2026_APPRAISAL_LAND_DETAIL.TXT",
+   "layout": "File #10 · Land (APPRAISAL_LAND_DETAIL.TXT)"
   },
   "p26a-sb12": {
    "path": "output/2026-03-16_2026_APPRAISAL_SB12.csv.gz",
@@ -1370,7 +1391,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "109 deferrals. Dates are <code>MM-DD-YYYY</code>; <code>deferral_end_date</code> is blank on every row and so is <code>last_change_date</code>."
-   ]
+   ],
+   "raw": "2026-03-16_2026_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+   "layout": "File #19 · Tax Deferral  Info (APPRAISAL_TAX_DEFERRAL_INFO.TXT)"
   },
   "p26a-arb": {
    "path": "output/2026-03-16_2026_APPRAISAL_ARB.csv.gz",
@@ -1385,7 +1408,9 @@
    ],
    "force": {
     "prop_val_yr": "Integer"
-   }
+   },
+   "raw": "2026-03-16_2026_APPRAISAL_ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)"
   },
   "p26a-lawsuit": {
    "path": "output/2026-03-16_2026_APPRAISAL_LAWSUIT.csv.gz",
@@ -1400,7 +1425,9 @@
    ],
    "force": {
     "prop_val_yr": "Integer"
-   }
+   },
+   "raw": "2026-03-16_2026_APPRAISAL_LAWSUIT.TXT",
+   "layout": "File #13 · Active Lawsuit Properties (APPRAISAL_LAWSUIT.TXT)"
   },
   "p26a-arblaw": {
    "path": "output/2026-03-16_2026_ARBITRATION_LAWSUIT.csv.gz",
@@ -1415,7 +1442,9 @@
    ],
    "force": {
     "prop_val_yr": "Integer"
-   }
+   },
+   "raw": "2026-03-16_2026_ARBITRATION_LAWSUIT.TXT",
+   "layout": "File #17 · Properties in Arbitration (ARBITRATION_LAWSUIT.TXT)"
   },
   "p26a-agent": {
    "path": "output/2026-03-16_2026_APPRAISAL_AGENT.csv.gz",
@@ -1427,7 +1456,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "3,104 agents. <code>agent_id</code> is 12-digit zero-padded and joins to <code>ca_agent_id</code>, <code>arb_agent_id</code> and <code>entity_agent_id</code> on the property roll; ids run from <code>000000097557</code> up. <code>agent_zip_rt</code> is blank on every row."
-   ]
+   ],
+   "raw": "2026-03-16_2026_APPRAISAL_AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)"
   },
   "p26a-abs": {
    "path": "output/2026-03-16_2026_APPRAISAL_ABSTRACT_SUBDV.csv.gz",
@@ -1439,7 +1470,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "2,056 abstract and subdivision codes. 48 names contain commas or apostrophes, so read the CSV with <code>\"</code> as the quote character."
-   ]
+   ],
+   "raw": "2026-03-16_2026_APPRAISAL_ABSTRACT_SUBDV.TXT",
+   "layout": "File #5 · Abstract/Subdivision List (APPRAISAL_ABSTRACT_SUBDV.TXT)"
   },
   "p26a-state": {
    "path": "output/2026-03-16_2026_APPRAISAL_STATE_CODE.csv.gz",
@@ -1454,7 +1487,9 @@
    ],
    "force": {
     "state_cd_year": "Integer"
-   }
+   },
+   "raw": "2026-03-16_2026_APPRAISAL_STATE_CODE.TXT",
+   "layout": "File #6 · Property Tax Division Codes (APPRAISAL_STATE_CODE.TXT)"
   },
   "p26a-country": {
    "path": "output/2026-03-16_2026_APPRAISAL_COUNTRY_CODE.csv.gz",
@@ -1466,7 +1501,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "246 country codes; the same file in all four exports."
-   ]
+   ],
+   "raw": "2026-03-16_2026_APPRAISAL_COUNTRY_CODE.TXT",
+   "layout": "File #16 · Country Codes (APPRAISAL_COUNTRY_CODE.TXT)"
   },
   "p26a-header": {
    "path": "output/2026-03-16_2026_APPRAISAL_HEADER.csv.gz",
@@ -1481,7 +1518,9 @@
    ],
    "force": {
     "supplement_number": "Integer"
-   }
+   },
+   "raw": "2026-03-16_2026_APPRAISAL_HEADER.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)"
   },
   "p26b-info": {
    "path": "output/2026-05-26_2026_APPRAISAL_INFO.csv.gz",
@@ -1585,7 +1624,9 @@
     "nhs_cap_loss": "Integer"
    },
    "compare": "p26a-info",
-   "compareLabel": "the Mar 16 prelim export"
+   "compareLabel": "the Mar 16 prelim export",
+   "raw": "2026-05-26_2026_APPRAISAL_INFO.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)"
   },
   "p26b-entinfo": {
    "path": "output/2026-05-26_2026_APPRAISAL_ENTITY_INFO.csv.gz",
@@ -1772,7 +1813,9 @@
     "jeti_allocation_factor": "Integer"
    },
    "compare": "p26a-entinfo",
-   "compareLabel": "the Mar 16 prelim export"
+   "compareLabel": "the Mar 16 prelim export",
+   "raw": "2026-05-26_2026_APPRAISAL_ENTITY_INFO.TXT",
+   "layout": "File #3 · Property-Entity Association (APPRAISAL_ENTITY_INFO.TXT)"
   },
   "p26b-enttot": {
    "path": "output/2026-05-26_2026_APPRAISAL_ENTITY_TOTALS.csv.gz",
@@ -1936,7 +1979,9 @@
     "jeti_amt": "Integer"
    },
    "compare": "p26a-enttot",
-   "compareLabel": "the Mar 16 prelim export"
+   "compareLabel": "the Mar 16 prelim export",
+   "raw": "2026-05-26_2026_APPRAISAL_ENTITY_TOTALS.TXT",
+   "layout": "File #4 · Entity Totals (APPRAISAL_ENTITY_TOTALS.TXT)"
   },
   "p26b-entity": {
    "path": "output/2026-05-26_2026_APPRAISAL_ENTITY.csv.gz",
@@ -1950,7 +1995,9 @@
     "106 unit ids, but only 63 have a row in Unit totals; the other 43 have no property on the roll. Codes are letters, not numbers: <code>GRW</code> Rockwall County, <code>SRW</code> Rockwall ISD, <code>CRW</code> City of Rockwall, <code>CAD</code> the appraisal district."
    ],
    "compare": "p26a-entity",
-   "compareLabel": "the Mar 16 prelim export"
+   "compareLabel": "the Mar 16 prelim export",
+   "raw": "2026-05-26_2026_APPRAISAL_ENTITY.TXT",
+   "layout": "File #14 · Entity (APPRAISAL_ENTITY.TXT)"
   },
   "p26b-imprinfo": {
    "path": "output/2026-05-26_2026_APPRAISAL_IMPROVEMENT_INFO.csv.gz",
@@ -1968,7 +2015,9 @@
     "omitted_imprv_val": "Integer"
    },
    "compare": "p26a-imprinfo",
-   "compareLabel": "the Mar 16 prelim export"
+   "compareLabel": "the Mar 16 prelim export",
+   "raw": "2026-05-26_2026_APPRAISAL_IMPROVEMENT_INFO.TXT",
+   "layout": "File #7 · Improvements (APPRAISAL_IMPROVEMENT_INFO.TXT)"
   },
   "p26b-imprdet": {
    "path": "output/2026-05-26_2026_APPRAISAL_IMPROVEMENT_DETAIL.csv.gz",
@@ -1987,7 +2036,9 @@
     "depreciation_yr": "Integer"
    },
    "compare": "p26a-imprdet",
-   "compareLabel": "the Mar 16 prelim export"
+   "compareLabel": "the Mar 16 prelim export",
+   "raw": "2026-05-26_2026_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+   "layout": "File #8 · Improvement Detail (APPRAISAL_IMPROVEMENT_DETAIL.TXT)"
   },
   "p26b-imprattr": {
    "path": "output/2026-05-26_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.csv.gz",
@@ -2001,7 +2052,9 @@
     "One row per attribute; pivot <code>imprv_attr_desc</code> to get one column per attribute. The common ones are Roof Style, Exterior Wall, Heating/Cooling, Foundation, Fireplace, Plumbing and Number of Bedrooms."
    ],
    "compare": "p26a-imprattr",
-   "compareLabel": "the Mar 16 prelim export"
+   "compareLabel": "the Mar 16 prelim export",
+   "raw": "2026-05-26_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+   "layout": "File #9 · Improvement Features (APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT)"
   },
   "p26b-sketch": {
    "path": "output/2026-05-26_2026_APPRAISAL_SKETCH_INFO.csv.gz",
@@ -2016,7 +2069,10 @@
     "11,484 Enhanced sketches have <code>sketch_json</code> (up to 6.6 MB per row) and a blank <code>imprv_det_id</code>; they attach to the improvement, not a segment. Raise your CSV reader's maximum line size to load them. The file is about 1.8 GB raw, the largest in the export."
    ],
    "compare": "p26a-sketch",
-   "compareLabel": "the Mar 16 prelim export"
+   "compareLabel": "the Mar 16 prelim export",
+   "raw": "2026-05-26_2026_APPRAISAL_SKETCH_INFO.TXT",
+   "layout": "File #20 · Sketches (APPRAISAL_SKETCH_INFO.TXT)",
+   "sample_rows": 25
   },
   "p26b-mobile": {
    "path": "output/2026-05-26_2026_APPRAISAL_MOBILE_HOME_INFO.csv.gz",
@@ -2031,7 +2087,9 @@
     "303 fewer rows than March (1,504): the 303 March rows that are gone from May on had no make, model or serial number."
    ],
    "compare": "p26a-mobile",
-   "compareLabel": "the Mar 16 prelim export"
+   "compareLabel": "the Mar 16 prelim export",
+   "raw": "2026-05-26_2026_APPRAISAL_MOBILE_HOME_INFO.TXT",
+   "layout": "File #18 · Mobile Home Info (APPRAISAL_MOBILE_HOME_INFO.TXT)"
   },
   "p26b-land": {
    "path": "output/2026-05-26_2026_APPRAISAL_LAND_DETAIL.csv.gz",
@@ -2053,7 +2111,9 @@
     "land_seg_mkt_val": "Integer"
    },
    "compare": "p26a-land",
-   "compareLabel": "the Mar 16 prelim export"
+   "compareLabel": "the Mar 16 prelim export",
+   "raw": "2026-05-26_2026_APPRAISAL_LAND_DETAIL.TXT",
+   "layout": "File #10 · Land (APPRAISAL_LAND_DETAIL.TXT)"
   },
   "p26b-sb12": {
    "path": "output/2026-05-26_2026_APPRAISAL_SB12.csv.gz",
@@ -2082,7 +2142,9 @@
     "112 deferrals. Dates are <code>MM-DD-YYYY</code>; <code>deferral_end_date</code> is blank on every row."
    ],
    "compare": "p26a-defer",
-   "compareLabel": "the Mar 16 prelim export"
+   "compareLabel": "the Mar 16 prelim export",
+   "raw": "2026-05-26_2026_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+   "layout": "File #19 · Tax Deferral  Info (APPRAISAL_TAX_DEFERRAL_INFO.TXT)"
   },
   "p26b-arb": {
    "path": "output/2026-05-26_2026_APPRAISAL_ARB.csv.gz",
@@ -2100,7 +2162,9 @@
     "prop_val_yr": "Integer"
    },
    "compare": "p26a-arb",
-   "compareLabel": "the Mar 16 prelim export"
+   "compareLabel": "the Mar 16 prelim export",
+   "raw": "2026-05-26_2026_APPRAISAL_ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)"
   },
   "p26b-lawsuit": {
    "path": "output/2026-05-26_2026_APPRAISAL_LAWSUIT.csv.gz",
@@ -2117,7 +2181,9 @@
     "prop_val_yr": "Integer"
    },
    "compare": "p26a-lawsuit",
-   "compareLabel": "the Mar 16 prelim export"
+   "compareLabel": "the Mar 16 prelim export",
+   "raw": "2026-05-26_2026_APPRAISAL_LAWSUIT.TXT",
+   "layout": "File #13 · Active Lawsuit Properties (APPRAISAL_LAWSUIT.TXT)"
   },
   "p26b-arblaw": {
    "path": "output/2026-05-26_2026_ARBITRATION_LAWSUIT.csv.gz",
@@ -2134,7 +2200,9 @@
     "prop_val_yr": "Integer"
    },
    "compare": "p26a-arblaw",
-   "compareLabel": "the Mar 16 prelim export"
+   "compareLabel": "the Mar 16 prelim export",
+   "raw": "2026-05-26_2026_ARBITRATION_LAWSUIT.TXT",
+   "layout": "File #17 · Properties in Arbitration (ARBITRATION_LAWSUIT.TXT)"
   },
   "p26b-agent": {
    "path": "output/2026-05-26_2026_APPRAISAL_AGENT.csv.gz",
@@ -2148,7 +2216,9 @@
     "3,135 agents. <code>agent_id</code> is 12-digit zero-padded and joins to <code>ca_agent_id</code>, <code>arb_agent_id</code> and <code>entity_agent_id</code> on the property roll; ids run from <code>000000097557</code> up. <code>agent_zip_rt</code> is blank on every row."
    ],
    "compare": "p26a-agent",
-   "compareLabel": "the Mar 16 prelim export"
+   "compareLabel": "the Mar 16 prelim export",
+   "raw": "2026-05-26_2026_APPRAISAL_AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)"
   },
   "p26b-abs": {
    "path": "output/2026-05-26_2026_APPRAISAL_ABSTRACT_SUBDV.csv.gz",
@@ -2162,7 +2232,9 @@
     "2,056 abstract and subdivision codes. 48 names contain commas or apostrophes, so read the CSV with <code>\"</code> as the quote character."
    ],
    "compare": "p26a-abs",
-   "compareLabel": "the Mar 16 prelim export"
+   "compareLabel": "the Mar 16 prelim export",
+   "raw": "2026-05-26_2026_APPRAISAL_ABSTRACT_SUBDV.TXT",
+   "layout": "File #5 · Abstract/Subdivision List (APPRAISAL_ABSTRACT_SUBDV.TXT)"
   },
   "p26b-state": {
    "path": "output/2026-05-26_2026_APPRAISAL_STATE_CODE.csv.gz",
@@ -2179,7 +2251,9 @@
     "state_cd_year": "Integer"
    },
    "compare": "p26a-state",
-   "compareLabel": "the Mar 16 prelim export"
+   "compareLabel": "the Mar 16 prelim export",
+   "raw": "2026-05-26_2026_APPRAISAL_STATE_CODE.TXT",
+   "layout": "File #6 · Property Tax Division Codes (APPRAISAL_STATE_CODE.TXT)"
   },
   "p26b-country": {
    "path": "output/2026-05-26_2026_APPRAISAL_COUNTRY_CODE.csv.gz",
@@ -2193,7 +2267,9 @@
     "246 country codes; the same file in all four exports."
    ],
    "compare": "p26a-country",
-   "compareLabel": "the Mar 16 prelim export"
+   "compareLabel": "the Mar 16 prelim export",
+   "raw": "2026-05-26_2026_APPRAISAL_COUNTRY_CODE.TXT",
+   "layout": "File #16 · Country Codes (APPRAISAL_COUNTRY_CODE.TXT)"
   },
   "p26b-header": {
    "path": "output/2026-05-26_2026_APPRAISAL_HEADER.csv.gz",
@@ -2210,7 +2286,9 @@
     "supplement_number": "Integer"
    },
    "compare": "p26a-header",
-   "compareLabel": "the Mar 16 prelim export"
+   "compareLabel": "the Mar 16 prelim export",
+   "raw": "2026-05-26_2026_APPRAISAL_HEADER.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)"
   },
   "c26-info": {
    "path": "output/2026-07-13_2026_APPRAISAL_INFO.csv.gz",
@@ -2314,7 +2392,9 @@
     "nhs_cap_loss": "Integer"
    },
    "compare": "p26b-info",
-   "compareLabel": "the May 26 prelim export"
+   "compareLabel": "the May 26 prelim export",
+   "raw": "2026-07-13_2026_APPRAISAL_INFO.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)"
   },
   "c26-entinfo": {
    "path": "output/2026-07-13_2026_APPRAISAL_ENTITY_INFO.csv.gz",
@@ -2501,7 +2581,9 @@
     "jeti_allocation_factor": "Integer"
    },
    "compare": "p26b-entinfo",
-   "compareLabel": "the May 26 prelim export"
+   "compareLabel": "the May 26 prelim export",
+   "raw": "2026-07-13_2026_APPRAISAL_ENTITY_INFO.TXT",
+   "layout": "File #3 · Property-Entity Association (APPRAISAL_ENTITY_INFO.TXT)"
   },
   "c26-enttot": {
    "path": "output/2026-07-13_2026_APPRAISAL_ENTITY_TOTALS.csv.gz",
@@ -2665,7 +2747,9 @@
     "jeti_amt": "Integer"
    },
    "compare": "p26b-enttot",
-   "compareLabel": "the May 26 prelim export"
+   "compareLabel": "the May 26 prelim export",
+   "raw": "2026-07-13_2026_APPRAISAL_ENTITY_TOTALS.TXT",
+   "layout": "File #4 · Entity Totals (APPRAISAL_ENTITY_TOTALS.TXT)"
   },
   "c26-entity": {
    "path": "output/2026-07-13_2026_APPRAISAL_ENTITY.csv.gz",
@@ -2679,7 +2763,9 @@
     "106 unit ids, but only 61 have a row in Unit totals; the other 45 have no property on the roll. Codes are letters, not numbers: <code>GRW</code> Rockwall County, <code>SRW</code> Rockwall ISD, <code>CRW</code> City of Rockwall, <code>CAD</code> the appraisal district."
    ],
    "compare": "p26b-entity",
-   "compareLabel": "the May 26 prelim export"
+   "compareLabel": "the May 26 prelim export",
+   "raw": "2026-07-13_2026_APPRAISAL_ENTITY.TXT",
+   "layout": "File #14 · Entity (APPRAISAL_ENTITY.TXT)"
   },
   "c26-imprinfo": {
    "path": "output/2026-07-13_2026_APPRAISAL_IMPROVEMENT_INFO.csv.gz",
@@ -2697,7 +2783,9 @@
     "omitted_imprv_val": "Integer"
    },
    "compare": "p26b-imprinfo",
-   "compareLabel": "the May 26 prelim export"
+   "compareLabel": "the May 26 prelim export",
+   "raw": "2026-07-13_2026_APPRAISAL_IMPROVEMENT_INFO.TXT",
+   "layout": "File #7 · Improvements (APPRAISAL_IMPROVEMENT_INFO.TXT)"
   },
   "c26-imprdet": {
    "path": "output/2026-07-13_2026_APPRAISAL_IMPROVEMENT_DETAIL.csv.gz",
@@ -2716,7 +2804,9 @@
     "depreciation_yr": "Integer"
    },
    "compare": "p26b-imprdet",
-   "compareLabel": "the May 26 prelim export"
+   "compareLabel": "the May 26 prelim export",
+   "raw": "2026-07-13_2026_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+   "layout": "File #8 · Improvement Detail (APPRAISAL_IMPROVEMENT_DETAIL.TXT)"
   },
   "c26-imprattr": {
    "path": "output/2026-07-13_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.csv.gz",
@@ -2730,7 +2820,9 @@
     "One row per attribute; pivot <code>imprv_attr_desc</code> to get one column per attribute. The common ones are Roof Style, Exterior Wall, Heating/Cooling, Foundation, Fireplace, Plumbing and Number of Bedrooms."
    ],
    "compare": "p26b-imprattr",
-   "compareLabel": "the May 26 prelim export"
+   "compareLabel": "the May 26 prelim export",
+   "raw": "2026-07-13_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+   "layout": "File #9 · Improvement Features (APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT)"
   },
   "c26-sketch": {
    "path": "output/2026-07-13_2026_APPRAISAL_SKETCH_INFO.csv.gz",
@@ -2745,7 +2837,10 @@
     "11,487 Enhanced sketches have <code>sketch_json</code> (up to 6.6 MB per row) and a blank <code>imprv_det_id</code>; they attach to the improvement, not a segment. Raise your CSV reader's maximum line size to load them. The file is about 1.8 GB raw, the largest in the export."
    ],
    "compare": "p26b-sketch",
-   "compareLabel": "the May 26 prelim export"
+   "compareLabel": "the May 26 prelim export",
+   "raw": "2026-07-13_2026_APPRAISAL_SKETCH_INFO.TXT",
+   "layout": "File #20 · Sketches (APPRAISAL_SKETCH_INFO.TXT)",
+   "sample_rows": 25
   },
   "c26-mobile": {
    "path": "output/2026-07-13_2026_APPRAISAL_MOBILE_HOME_INFO.csv.gz",
@@ -2759,7 +2854,9 @@
     "1,200 rows for 1,185 properties, all on the property roll. Serial and HUD numbers fill <code>_2</code>/<code>_3</code> only for multi-section homes (7 rows have a third)."
    ],
    "compare": "p26b-mobile",
-   "compareLabel": "the May 26 prelim export"
+   "compareLabel": "the May 26 prelim export",
+   "raw": "2026-07-13_2026_APPRAISAL_MOBILE_HOME_INFO.TXT",
+   "layout": "File #18 · Mobile Home Info (APPRAISAL_MOBILE_HOME_INFO.TXT)"
   },
   "c26-land": {
    "path": "output/2026-07-13_2026_APPRAISAL_LAND_DETAIL.csv.gz",
@@ -2781,7 +2878,9 @@
     "land_seg_mkt_val": "Integer"
    },
    "compare": "p26b-land",
-   "compareLabel": "the May 26 prelim export"
+   "compareLabel": "the May 26 prelim export",
+   "raw": "2026-07-13_2026_APPRAISAL_LAND_DETAIL.TXT",
+   "layout": "File #10 · Land (APPRAISAL_LAND_DETAIL.TXT)"
   },
   "c26-sb12": {
    "path": "output/2026-07-13_2026_APPRAISAL_SB12.csv.gz",
@@ -2810,7 +2909,9 @@
     "112 deferrals. Dates are <code>MM-DD-YYYY</code>; <code>deferral_end_date</code> is blank on every row."
    ],
    "compare": "p26b-defer",
-   "compareLabel": "the May 26 prelim export"
+   "compareLabel": "the May 26 prelim export",
+   "raw": "2026-07-13_2026_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+   "layout": "File #19 · Tax Deferral  Info (APPRAISAL_TAX_DEFERRAL_INFO.TXT)"
   },
   "c26-arb": {
    "path": "output/2026-07-13_2026_APPRAISAL_ARB.csv.gz",
@@ -2828,7 +2929,9 @@
     "prop_val_yr": "Integer"
    },
    "compare": "p26b-arb",
-   "compareLabel": "the May 26 prelim export"
+   "compareLabel": "the May 26 prelim export",
+   "raw": "2026-07-13_2026_APPRAISAL_ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)"
   },
   "c26-lawsuit": {
    "path": "output/2026-07-13_2026_APPRAISAL_LAWSUIT.csv.gz",
@@ -2845,7 +2948,9 @@
     "prop_val_yr": "Integer"
    },
    "compare": "p26b-lawsuit",
-   "compareLabel": "the May 26 prelim export"
+   "compareLabel": "the May 26 prelim export",
+   "raw": "2026-07-13_2026_APPRAISAL_LAWSUIT.TXT",
+   "layout": "File #13 · Active Lawsuit Properties (APPRAISAL_LAWSUIT.TXT)"
   },
   "c26-arblaw": {
    "path": "output/2026-07-13_2026_ARBITRATION_LAWSUIT.csv.gz",
@@ -2862,7 +2967,9 @@
     "prop_val_yr": "Integer"
    },
    "compare": "p26b-arblaw",
-   "compareLabel": "the May 26 prelim export"
+   "compareLabel": "the May 26 prelim export",
+   "raw": "2026-07-13_2026_ARBITRATION_LAWSUIT.TXT",
+   "layout": "File #17 · Properties in Arbitration (ARBITRATION_LAWSUIT.TXT)"
   },
   "c26-agent": {
    "path": "output/2026-07-13_2026_APPRAISAL_AGENT.csv.gz",
@@ -2877,7 +2984,9 @@
     "559 more agents than in May (3,135): agents appointed during protest season."
    ],
    "compare": "p26b-agent",
-   "compareLabel": "the May 26 prelim export"
+   "compareLabel": "the May 26 prelim export",
+   "raw": "2026-07-13_2026_APPRAISAL_AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)"
   },
   "c26-abs": {
    "path": "output/2026-07-13_2026_APPRAISAL_ABSTRACT_SUBDV.csv.gz",
@@ -2891,7 +3000,9 @@
     "2,056 abstract and subdivision codes. 48 names contain commas or apostrophes, so read the CSV with <code>\"</code> as the quote character."
    ],
    "compare": "p26b-abs",
-   "compareLabel": "the May 26 prelim export"
+   "compareLabel": "the May 26 prelim export",
+   "raw": "2026-07-13_2026_APPRAISAL_ABSTRACT_SUBDV.TXT",
+   "layout": "File #5 · Abstract/Subdivision List (APPRAISAL_ABSTRACT_SUBDV.TXT)"
   },
   "c26-state": {
    "path": "output/2026-07-13_2026_APPRAISAL_STATE_CODE.csv.gz",
@@ -2908,7 +3019,9 @@
     "state_cd_year": "Integer"
    },
    "compare": "p26b-state",
-   "compareLabel": "the May 26 prelim export"
+   "compareLabel": "the May 26 prelim export",
+   "raw": "2026-07-13_2026_APPRAISAL_STATE_CODE.TXT",
+   "layout": "File #6 · Property Tax Division Codes (APPRAISAL_STATE_CODE.TXT)"
   },
   "c26-country": {
    "path": "output/2026-07-13_2026_APPRAISAL_COUNTRY_CODE.csv.gz",
@@ -2922,7 +3035,9 @@
     "246 country codes; the same file in all four exports."
    ],
    "compare": "p26b-country",
-   "compareLabel": "the May 26 prelim export"
+   "compareLabel": "the May 26 prelim export",
+   "raw": "2026-07-13_2026_APPRAISAL_COUNTRY_CODE.TXT",
+   "layout": "File #16 · Country Codes (APPRAISAL_COUNTRY_CODE.TXT)"
   },
   "c26-header": {
    "path": "output/2026-07-13_2026_APPRAISAL_HEADER.csv.gz",
@@ -2939,7 +3054,9 @@
     "supplement_number": "Integer"
    },
    "compare": "p26b-header",
-   "compareLabel": "the May 26 prelim export"
+   "compareLabel": "the May 26 prelim export",
+   "raw": "2026-07-13_2026_APPRAISAL_HEADER.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)"
   },
   "s26-info": {
    "path": "output/2026-10-09_2026_APPRAISAL_INFO.csv.gz",
@@ -3043,7 +3160,9 @@
     "nhs_cap_loss": "Integer"
    },
    "compare": "c26-info",
-   "compareLabel": "the Jul 13 certified export"
+   "compareLabel": "the Jul 13 certified export",
+   "raw": "2026-10-09_2026_APPRAISAL_INFO.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)"
   },
   "s26-entinfo": {
    "path": "output/2026-10-09_2026_APPRAISAL_ENTITY_INFO.csv.gz",
@@ -3230,7 +3349,9 @@
     "jeti_allocation_factor": "Integer"
    },
    "compare": "c26-entinfo",
-   "compareLabel": "the Jul 13 certified export"
+   "compareLabel": "the Jul 13 certified export",
+   "raw": "2026-10-09_2026_APPRAISAL_ENTITY_INFO.TXT",
+   "layout": "File #3 · Property-Entity Association (APPRAISAL_ENTITY_INFO.TXT)"
   },
   "s26-enttot": {
    "path": "output/2026-10-09_2026_APPRAISAL_ENTITY_TOTALS.csv.gz",
@@ -3394,7 +3515,9 @@
     "jeti_amt": "Integer"
    },
    "compare": "c26-enttot",
-   "compareLabel": "the Jul 13 certified export"
+   "compareLabel": "the Jul 13 certified export",
+   "raw": "2026-10-09_2026_APPRAISAL_ENTITY_TOTALS.TXT",
+   "layout": "File #4 · Entity Totals (APPRAISAL_ENTITY_TOTALS.TXT)"
   },
   "s26-entity": {
    "path": "output/2026-10-09_2026_APPRAISAL_ENTITY.csv.gz",
@@ -3408,7 +3531,9 @@
     "111 unit ids, but only 62 have a row in Unit totals; the other 49 have no property on the roll. Codes are letters, not numbers: <code>GRW</code> Rockwall County, <code>SRW</code> Rockwall ISD, <code>CRW</code> City of Rockwall, <code>CAD</code> the appraisal district."
    ],
    "compare": "c26-entity",
-   "compareLabel": "the Jul 13 certified export"
+   "compareLabel": "the Jul 13 certified export",
+   "raw": "2026-10-09_2026_APPRAISAL_ENTITY.TXT",
+   "layout": "File #14 · Entity (APPRAISAL_ENTITY.TXT)"
   },
   "s26-imprinfo": {
    "path": "output/2026-10-09_2026_APPRAISAL_IMPROVEMENT_INFO.csv.gz",
@@ -3426,7 +3551,9 @@
     "omitted_imprv_val": "Integer"
    },
    "compare": "c26-imprinfo",
-   "compareLabel": "the Jul 13 certified export"
+   "compareLabel": "the Jul 13 certified export",
+   "raw": "2026-10-09_2026_APPRAISAL_IMPROVEMENT_INFO.TXT",
+   "layout": "File #7 · Improvements (APPRAISAL_IMPROVEMENT_INFO.TXT)"
   },
   "s26-imprdet": {
    "path": "output/2026-10-09_2026_APPRAISAL_IMPROVEMENT_DETAIL.csv.gz",
@@ -3445,7 +3572,9 @@
     "depreciation_yr": "Integer"
    },
    "compare": "c26-imprdet",
-   "compareLabel": "the Jul 13 certified export"
+   "compareLabel": "the Jul 13 certified export",
+   "raw": "2026-10-09_2026_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+   "layout": "File #8 · Improvement Detail (APPRAISAL_IMPROVEMENT_DETAIL.TXT)"
   },
   "s26-imprattr": {
    "path": "output/2026-10-09_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.csv.gz",
@@ -3459,7 +3588,9 @@
     "One row per attribute; pivot <code>imprv_attr_desc</code> to get one column per attribute. The common ones are Roof Style, Exterior Wall, Heating/Cooling, Foundation, Fireplace, Plumbing and Number of Bedrooms."
    ],
    "compare": "c26-imprattr",
-   "compareLabel": "the Jul 13 certified export"
+   "compareLabel": "the Jul 13 certified export",
+   "raw": "2026-10-09_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+   "layout": "File #9 · Improvement Features (APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT)"
   },
   "s26-sketch": {
    "path": "output/2026-10-09_2026_APPRAISAL_SKETCH_INFO.csv.gz",
@@ -3474,7 +3605,10 @@
     "11,068 Enhanced sketches have <code>sketch_json</code> (up to 6.6 MB per row) and a blank <code>imprv_det_id</code>; they attach to the improvement, not a segment. Raise your CSV reader's maximum line size to load them. The file is about 1.8 GB raw, the largest in the export."
    ],
    "compare": "c26-sketch",
-   "compareLabel": "the Jul 13 certified export"
+   "compareLabel": "the Jul 13 certified export",
+   "raw": "2026-10-09_2026_APPRAISAL_SKETCH_INFO.TXT",
+   "layout": "File #20 · Sketches (APPRAISAL_SKETCH_INFO.TXT)",
+   "sample_rows": 25
   },
   "s26-mobile": {
    "path": "output/2026-10-09_2026_APPRAISAL_MOBILE_HOME_INFO.csv.gz",
@@ -3488,7 +3622,9 @@
     "1,200 rows for 1,185 properties, all on the property roll. Serial and HUD numbers fill <code>_2</code>/<code>_3</code> only for multi-section homes (7 rows have a third)."
    ],
    "compare": "c26-mobile",
-   "compareLabel": "the Jul 13 certified export"
+   "compareLabel": "the Jul 13 certified export",
+   "raw": "2026-10-09_2026_APPRAISAL_MOBILE_HOME_INFO.TXT",
+   "layout": "File #18 · Mobile Home Info (APPRAISAL_MOBILE_HOME_INFO.TXT)"
   },
   "s26-land": {
    "path": "output/2026-10-09_2026_APPRAISAL_LAND_DETAIL.csv.gz",
@@ -3511,7 +3647,9 @@
     "land_seg_mkt_val": "Integer"
    },
    "compare": "c26-land",
-   "compareLabel": "the Jul 13 certified export"
+   "compareLabel": "the Jul 13 certified export",
+   "raw": "2026-10-09_2026_APPRAISAL_LAND_DETAIL.TXT",
+   "layout": "File #10 · Land (APPRAISAL_LAND_DETAIL.TXT)"
   },
   "s26-sb12": {
    "path": "output/2026-10-09_2026_APPRAISAL_SB12.csv.gz",
@@ -3540,7 +3678,9 @@
     "111 deferrals. Dates are <code>MM-DD-YYYY</code>; <code>deferral_end_date</code> is blank on every row."
    ],
    "compare": "c26-defer",
-   "compareLabel": "the Jul 13 certified export"
+   "compareLabel": "the Jul 13 certified export",
+   "raw": "2026-10-09_2026_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+   "layout": "File #19 · Tax Deferral  Info (APPRAISAL_TAX_DEFERRAL_INFO.TXT)"
   },
   "s26-arb": {
    "path": "output/2026-10-09_2026_APPRAISAL_ARB.csv.gz",
@@ -3557,7 +3697,9 @@
     "prop_val_yr": "Integer"
    },
    "compare": "c26-arb",
-   "compareLabel": "the Jul 13 certified export"
+   "compareLabel": "the Jul 13 certified export",
+   "raw": "2026-10-09_2026_APPRAISAL_ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)"
   },
   "s26-lawsuit": {
    "path": "output/2026-10-09_2026_APPRAISAL_LAWSUIT.csv.gz",
@@ -3574,7 +3716,9 @@
     "prop_val_yr": "Integer"
    },
    "compare": "c26-lawsuit",
-   "compareLabel": "the Jul 13 certified export"
+   "compareLabel": "the Jul 13 certified export",
+   "raw": "2026-10-09_2026_APPRAISAL_LAWSUIT.TXT",
+   "layout": "File #13 · Active Lawsuit Properties (APPRAISAL_LAWSUIT.TXT)"
   },
   "s26-arblaw": {
    "path": "output/2026-10-09_2026_ARBITRATION_LAWSUIT.csv.gz",
@@ -3591,7 +3735,9 @@
     "prop_val_yr": "Integer"
    },
    "compare": "c26-arblaw",
-   "compareLabel": "the Jul 13 certified export"
+   "compareLabel": "the Jul 13 certified export",
+   "raw": "2026-10-09_2026_ARBITRATION_LAWSUIT.TXT",
+   "layout": "File #17 · Properties in Arbitration (ARBITRATION_LAWSUIT.TXT)"
   },
   "s26-agent": {
    "path": "output/2026-10-09_2026_APPRAISAL_AGENT.csv.gz",
@@ -3605,7 +3751,9 @@
     "3,695 agents. <code>agent_id</code> is 12-digit zero-padded and joins to <code>ca_agent_id</code>, <code>arb_agent_id</code> and <code>entity_agent_id</code> on the property roll; ids run from <code>000000097557</code> up. <code>agent_zip_rt</code> is blank on every row."
    ],
    "compare": "c26-agent",
-   "compareLabel": "the Jul 13 certified export"
+   "compareLabel": "the Jul 13 certified export",
+   "raw": "2026-10-09_2026_APPRAISAL_AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)"
   },
   "s26-abs": {
    "path": "output/2026-10-09_2026_APPRAISAL_ABSTRACT_SUBDV.csv.gz",
@@ -3619,7 +3767,9 @@
     "2,095 abstract and subdivision codes (39 more than at certification). 48 names contain commas or apostrophes, so read the CSV with <code>\"</code> as the quote character."
    ],
    "compare": "c26-abs",
-   "compareLabel": "the Jul 13 certified export"
+   "compareLabel": "the Jul 13 certified export",
+   "raw": "2026-10-09_2026_APPRAISAL_ABSTRACT_SUBDV.TXT",
+   "layout": "File #5 · Abstract/Subdivision List (APPRAISAL_ABSTRACT_SUBDV.TXT)"
   },
   "s26-state": {
    "path": "output/2026-10-09_2026_APPRAISAL_STATE_CODE.csv.gz",
@@ -3636,7 +3786,9 @@
     "state_cd_year": "Integer"
    },
    "compare": "c26-state",
-   "compareLabel": "the Jul 13 certified export"
+   "compareLabel": "the Jul 13 certified export",
+   "raw": "2026-10-09_2026_APPRAISAL_STATE_CODE.TXT",
+   "layout": "File #6 · Property Tax Division Codes (APPRAISAL_STATE_CODE.TXT)"
   },
   "s26-country": {
    "path": "output/2026-10-09_2026_APPRAISAL_COUNTRY_CODE.csv.gz",
@@ -3650,7 +3802,9 @@
     "246 country codes; the same file in all four exports."
    ],
    "compare": "c26-country",
-   "compareLabel": "the Jul 13 certified export"
+   "compareLabel": "the Jul 13 certified export",
+   "raw": "2026-10-09_2026_APPRAISAL_COUNTRY_CODE.TXT",
+   "layout": "File #16 · Country Codes (APPRAISAL_COUNTRY_CODE.TXT)"
   },
   "s26-header": {
    "path": "output/2026-10-09_2026_APPRAISAL_HEADER.csv.gz",
@@ -3667,7 +3821,484 @@
     "supplement_number": "Integer"
    },
    "compare": "c26-header",
-   "compareLabel": "the Jul 13 certified export"
+   "compareLabel": "the Jul 13 certified export",
+   "raw": "2026-10-09_2026_APPRAISAL_HEADER.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)"
+  },
+  "p23-header": {
+   "path": "output/2023-06-05_2023_APPRAISAL_HEADER.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "1 · Export header",
+   "about": "One row describing the export: run time, appraisal year, supplement number, PACS and export version.",
+   "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
+   "force": {
+    "supplement_number": "Integer"
+   },
+   "raw": "2023-06-05_2023_APPRAISAL_HEADER.TXT",
+   "notes": [
+    "This 2023 export uses export layout 8.0.25. Its property file (<code>2023-06-05_2023_APPRAISAL_INFO.TXT</code>, 9,067 characters per record) is not on this page: no 8.0.25 layout is on hand, and the 8.0.30 positions do not fit it."
+   ],
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)"
+  },
+  "p23-agent": {
+   "path": "output/2023-06-05_2023_APPRAISAL_AGENT.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "2 · Agents",
+   "about": "Every tax agent on file: id, name and mailing address. Joins to the agent ids on the property roll.",
+   "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
+   "raw": "2023-06-05_2023_APPRAISAL_AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)"
+  },
+  "p23-arb": {
+   "path": "output/2023-06-05_2023_APPRAISAL_ARB.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "3 · ARB protests",
+   "about": "Properties with an Appraisal Review Board protest and its status.",
+   "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
+   "force": {
+    "prop_val_yr": "Integer"
+   },
+   "raw": "2023-06-05_2023_APPRAISAL_ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)"
+  },
+  "c24-header": {
+   "path": "output/2024-08-23_2024_APPRAISAL_HEADER.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "1 · Export header",
+   "about": "One row describing the export: run time, appraisal year, supplement number, PACS and export version.",
+   "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
+   "force": {
+    "supplement_number": "Integer"
+   },
+   "raw": "2024-08-23_2024_APPRAISAL_HEADER.TXT",
+   "compare": "p23-header",
+   "compareLabel": "the 2023 prelim · Jun 5 export",
+   "notes": [
+    "The folder this export was saved in is named for the July 11, 2024 certified roll, but every file in it was exported on August 23, 2024 (run date in this header)."
+   ],
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)"
+  },
+  "c24-agent": {
+   "path": "output/2024-08-23_2024_APPRAISAL_AGENT.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "2 · Agents",
+   "about": "Every tax agent on file: id, name and mailing address. Joins to the agent ids on the property roll.",
+   "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
+   "raw": "2024-08-23_2024_APPRAISAL_AGENT.TXT",
+   "compare": "p23-agent",
+   "compareLabel": "the 2023 prelim · Jun 5 export",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)"
+  },
+  "c24-arb": {
+   "path": "output/2024-08-23_2024_APPRAISAL_ARB.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "3 · ARB protests",
+   "about": "Properties with an Appraisal Review Board protest and its status.",
+   "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
+   "force": {
+    "prop_val_yr": "Integer"
+   },
+   "raw": "2024-08-23_2024_APPRAISAL_ARB.TXT",
+   "compare": "p23-arb",
+   "compareLabel": "the 2023 prelim · Jun 5 export",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)"
+  },
+  "c24-info": {
+   "path": "output/2024-08-23_2024_APPRAISAL_INFO.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "Aug 23 · certified",
+   "about": "One row per property and owner: owner and mailing address, situs, legal description, land/improvement/market/appraised values, exemptions with qualify years, agents and ARB flags.",
+   "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
+   "force": {
+    "prop_val_yr": "Integer",
+    "sup_num": "Integer",
+    "legal_acreage": "Integer",
+    "land_hstd_val": "Integer",
+    "land_non_hstd_val": "Integer",
+    "imprv_hstd_val": "Integer",
+    "imprv_non_hstd_val": "Integer",
+    "ag_use_val": "Integer",
+    "ag_market": "Integer",
+    "timber_use": "Integer",
+    "timber_market": "Integer",
+    "appraised_val": "Integer",
+    "ten_percent_cap": "Integer",
+    "assessed_val": "Integer",
+    "land_acres": "Integer",
+    "mineral_int_pct": "Integer",
+    "timber_78_market": "Integer",
+    "ag_late_loss": "Integer",
+    "late_freeport_penalty": "Integer",
+    "market_value": "Integer",
+    "rendition_penalty": "Integer",
+    "rendition_fraud_penalty": "Integer",
+    "exemption_percentage": "Integer",
+    "hs_qualify_yr": "Integer",
+    "ov65_qualify_yr": "Integer",
+    "ov65s_qualify_yr": "Integer",
+    "dp_qualify_yr": "Integer",
+    "dps_qualify_yr": "Integer",
+    "dv1_qualify_yr": "Integer",
+    "dv1s_qualify_yr": "Integer",
+    "dv2_qualify_yr": "Integer",
+    "dv2s_qualify_yr": "Integer",
+    "dv3_qualify_yr": "Integer",
+    "dv3s_qualify_yr": "Integer",
+    "dv4_qualify_yr": "Integer",
+    "dv4s_qualify_yr": "Integer",
+    "dvhs_qualify_yr": "Integer",
+    "ex_qualify_yr": "Integer",
+    "ab_qualify_yr": "Integer",
+    "en_qualify_yr": "Integer",
+    "fr_qualify_yr": "Integer",
+    "ht_qualify_yr": "Integer",
+    "pro_qualify_yr": "Integer",
+    "pc_qualify_yr": "Integer",
+    "so_qualify_yr": "Integer",
+    "ex366_qualify_yr": "Integer",
+    "ch_qualify_yr": "Integer",
+    "eco_qualify_yr": "Integer",
+    "chodo_qualify_yr": "Integer",
+    "lih_qualify_yr": "Integer",
+    "git_qualify_yr": "Integer",
+    "clt_qualify_yr": "Integer",
+    "dvhss_qualify_yr": "Integer",
+    "omitted_imprv_hstd_val": "Integer",
+    "omitted_imprv_non_hstd_val": "Integer",
+    "ex_xd_qualify_yr": "Integer",
+    "ex_xf_qualify_yr": "Integer",
+    "ex_xg_qualify_yr": "Integer",
+    "ex_xh_qualify_yr": "Integer",
+    "ex_xi_qualify_yr": "Integer",
+    "ex_xj_qualify_yr": "Integer",
+    "ex_xl_qualify_yr": "Integer",
+    "ex_xm_qualify_yr": "Integer",
+    "ex_xn_qualify_yr": "Integer",
+    "ex_xo_qualify_yr": "Integer",
+    "ex_xp_qualify_yr": "Integer",
+    "ex_xq_qualify_yr": "Integer",
+    "ex_xr_qualify_yr": "Integer",
+    "ex_xs_qualify_yr": "Integer",
+    "ex_xt_qualify_yr": "Integer",
+    "ex_xu_qualify_yr": "Integer",
+    "ex_xv_qualify_yr": "Integer",
+    "ex_xa_qualify_yr": "Integer",
+    "lve_qualify_yr": "Integer",
+    "ppv_qualify_yr": "Integer",
+    "dvch_qualify_yr": "Integer",
+    "dvchs_qualify_yr": "Integer",
+    "masss_qualify_yr": "Integer",
+    "pp_late_interstate_allocation_val": "Integer",
+    "appraised_val_reflecting_productivity_loss": "Integer",
+    "assessed_val_reflecting_productivity_loss": "Integer",
+    "frss_qualify_yr": "Integer",
+    "late_correction_val": "Integer",
+    "nhs_cap_loss": "Integer"
+   },
+   "raw": "2024-08-23_2024_APPRAISAL_INFO.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)"
+  },
+  "p25-header": {
+   "path": "output/2025-06-20_2025_APPRAISAL_HEADER.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "1 · Export header",
+   "about": "One row describing the export: run time, appraisal year, supplement number, PACS and export version.",
+   "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
+   "force": {
+    "supplement_number": "Integer"
+   },
+   "raw": "2025-06-20_2025_APPRAISAL_HEADER.TXT",
+   "compare": "c24-header",
+   "compareLabel": "the 2024 certified · Aug 23 export",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)"
+  },
+  "p25-agent": {
+   "path": "output/2025-06-20_2025_APPRAISAL_AGENT.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "2 · Agents",
+   "about": "Every tax agent on file: id, name and mailing address. Joins to the agent ids on the property roll.",
+   "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
+   "raw": "2025-06-20_2025_APPRAISAL_AGENT.TXT",
+   "compare": "c24-agent",
+   "compareLabel": "the 2024 certified · Aug 23 export",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)"
+  },
+  "p25-arb": {
+   "path": "output/2025-06-20_2025_APPRAISAL_ARB.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "3 · ARB protests",
+   "about": "Properties with an Appraisal Review Board protest and its status.",
+   "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
+   "force": {
+    "prop_val_yr": "Integer"
+   },
+   "raw": "2025-06-20_2025_APPRAISAL_ARB.TXT",
+   "compare": "c24-arb",
+   "compareLabel": "the 2024 certified · Aug 23 export",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)"
+  },
+  "p25-info": {
+   "path": "output/2025-06-20_2025_APPRAISAL_INFO.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "Jun 20 · prelim",
+   "about": "One row per property and owner: owner and mailing address, situs, legal description, land/improvement/market/appraised values, exemptions with qualify years, agents and ARB flags.",
+   "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
+   "force": {
+    "prop_val_yr": "Integer",
+    "sup_num": "Integer",
+    "legal_acreage": "Integer",
+    "land_hstd_val": "Integer",
+    "land_non_hstd_val": "Integer",
+    "imprv_hstd_val": "Integer",
+    "imprv_non_hstd_val": "Integer",
+    "ag_use_val": "Integer",
+    "ag_market": "Integer",
+    "timber_use": "Integer",
+    "timber_market": "Integer",
+    "appraised_val": "Integer",
+    "ten_percent_cap": "Integer",
+    "assessed_val": "Integer",
+    "land_acres": "Integer",
+    "mineral_int_pct": "Integer",
+    "timber_78_market": "Integer",
+    "ag_late_loss": "Integer",
+    "late_freeport_penalty": "Integer",
+    "market_value": "Integer",
+    "rendition_penalty": "Integer",
+    "rendition_fraud_penalty": "Integer",
+    "exemption_percentage": "Integer",
+    "hs_qualify_yr": "Integer",
+    "ov65_qualify_yr": "Integer",
+    "ov65s_qualify_yr": "Integer",
+    "dp_qualify_yr": "Integer",
+    "dps_qualify_yr": "Integer",
+    "dv1_qualify_yr": "Integer",
+    "dv1s_qualify_yr": "Integer",
+    "dv2_qualify_yr": "Integer",
+    "dv2s_qualify_yr": "Integer",
+    "dv3_qualify_yr": "Integer",
+    "dv3s_qualify_yr": "Integer",
+    "dv4_qualify_yr": "Integer",
+    "dv4s_qualify_yr": "Integer",
+    "dvhs_qualify_yr": "Integer",
+    "ex_qualify_yr": "Integer",
+    "ab_qualify_yr": "Integer",
+    "en_qualify_yr": "Integer",
+    "fr_qualify_yr": "Integer",
+    "ht_qualify_yr": "Integer",
+    "pro_qualify_yr": "Integer",
+    "pc_qualify_yr": "Integer",
+    "so_qualify_yr": "Integer",
+    "ex366_qualify_yr": "Integer",
+    "ch_qualify_yr": "Integer",
+    "eco_qualify_yr": "Integer",
+    "chodo_qualify_yr": "Integer",
+    "lih_qualify_yr": "Integer",
+    "git_qualify_yr": "Integer",
+    "clt_qualify_yr": "Integer",
+    "dvhss_qualify_yr": "Integer",
+    "omitted_imprv_hstd_val": "Integer",
+    "omitted_imprv_non_hstd_val": "Integer",
+    "ex_xd_qualify_yr": "Integer",
+    "ex_xf_qualify_yr": "Integer",
+    "ex_xg_qualify_yr": "Integer",
+    "ex_xh_qualify_yr": "Integer",
+    "ex_xi_qualify_yr": "Integer",
+    "ex_xj_qualify_yr": "Integer",
+    "ex_xl_qualify_yr": "Integer",
+    "ex_xm_qualify_yr": "Integer",
+    "ex_xn_qualify_yr": "Integer",
+    "ex_xo_qualify_yr": "Integer",
+    "ex_xp_qualify_yr": "Integer",
+    "ex_xq_qualify_yr": "Integer",
+    "ex_xr_qualify_yr": "Integer",
+    "ex_xs_qualify_yr": "Integer",
+    "ex_xt_qualify_yr": "Integer",
+    "ex_xu_qualify_yr": "Integer",
+    "ex_xv_qualify_yr": "Integer",
+    "ex_xa_qualify_yr": "Integer",
+    "lve_qualify_yr": "Integer",
+    "ppv_qualify_yr": "Integer",
+    "dvch_qualify_yr": "Integer",
+    "dvchs_qualify_yr": "Integer",
+    "masss_qualify_yr": "Integer",
+    "pp_late_interstate_allocation_val": "Integer",
+    "appraised_val_reflecting_productivity_loss": "Integer",
+    "assessed_val_reflecting_productivity_loss": "Integer",
+    "frss_qualify_yr": "Integer",
+    "late_correction_val": "Integer",
+    "nhs_cap_loss": "Integer"
+   },
+   "raw": "2025-06-20_2025_APPRAISAL_INFO.TXT",
+   "compare": "c24-info",
+   "compareLabel": "the 2024 certified · Aug 23 export",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)"
+  },
+  "c25-header": {
+   "path": "output/2025-07-14_2025_APPRAISAL_HEADER.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "1 · Export header",
+   "about": "One row describing the export: run time, appraisal year, supplement number, PACS and export version.",
+   "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
+   "force": {
+    "supplement_number": "Integer"
+   },
+   "raw": "2025-07-14_2025_APPRAISAL_HEADER.TXT",
+   "compare": "p25-header",
+   "compareLabel": "the 2025 prelim · Jun 20 export",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)"
+  },
+  "c25-agent": {
+   "path": "output/2025-07-14_2025_APPRAISAL_AGENT.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "2 · Agents",
+   "about": "Every tax agent on file: id, name and mailing address. Joins to the agent ids on the property roll.",
+   "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
+   "raw": "2025-07-14_2025_APPRAISAL_AGENT.TXT",
+   "compare": "p25-agent",
+   "compareLabel": "the 2025 prelim · Jun 20 export",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)"
+  },
+  "c25-arb": {
+   "path": "output/2025-07-14_2025_APPRAISAL_ARB.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "3 · ARB protests",
+   "about": "Properties with an Appraisal Review Board protest and its status.",
+   "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
+   "force": {
+    "prop_val_yr": "Integer"
+   },
+   "raw": "2025-07-14_2025_APPRAISAL_ARB.TXT",
+   "compare": "p25-arb",
+   "compareLabel": "the 2025 prelim · Jun 20 export",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)"
+  },
+  "c25-info": {
+   "path": "output/2025-07-14_2025_APPRAISAL_INFO.csv.gz",
+   "read": {
+    "opts": "delim=',', quote='\"', escape='\"', max_line_size=20000000"
+   },
+   "label": "Jul 14 · certified",
+   "about": "One row per property and owner: owner and mailing address, situs, legal description, land/improvement/market/appraised values, exemptions with qualify years, agents and ARB flags.",
+   "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
+   "force": {
+    "prop_val_yr": "Integer",
+    "sup_num": "Integer",
+    "legal_acreage": "Integer",
+    "land_hstd_val": "Integer",
+    "land_non_hstd_val": "Integer",
+    "imprv_hstd_val": "Integer",
+    "imprv_non_hstd_val": "Integer",
+    "ag_use_val": "Integer",
+    "ag_market": "Integer",
+    "timber_use": "Integer",
+    "timber_market": "Integer",
+    "appraised_val": "Integer",
+    "ten_percent_cap": "Integer",
+    "assessed_val": "Integer",
+    "land_acres": "Integer",
+    "mineral_int_pct": "Integer",
+    "timber_78_market": "Integer",
+    "ag_late_loss": "Integer",
+    "late_freeport_penalty": "Integer",
+    "market_value": "Integer",
+    "rendition_penalty": "Integer",
+    "rendition_fraud_penalty": "Integer",
+    "exemption_percentage": "Integer",
+    "hs_qualify_yr": "Integer",
+    "ov65_qualify_yr": "Integer",
+    "ov65s_qualify_yr": "Integer",
+    "dp_qualify_yr": "Integer",
+    "dps_qualify_yr": "Integer",
+    "dv1_qualify_yr": "Integer",
+    "dv1s_qualify_yr": "Integer",
+    "dv2_qualify_yr": "Integer",
+    "dv2s_qualify_yr": "Integer",
+    "dv3_qualify_yr": "Integer",
+    "dv3s_qualify_yr": "Integer",
+    "dv4_qualify_yr": "Integer",
+    "dv4s_qualify_yr": "Integer",
+    "dvhs_qualify_yr": "Integer",
+    "ex_qualify_yr": "Integer",
+    "ab_qualify_yr": "Integer",
+    "en_qualify_yr": "Integer",
+    "fr_qualify_yr": "Integer",
+    "ht_qualify_yr": "Integer",
+    "pro_qualify_yr": "Integer",
+    "pc_qualify_yr": "Integer",
+    "so_qualify_yr": "Integer",
+    "ex366_qualify_yr": "Integer",
+    "ch_qualify_yr": "Integer",
+    "eco_qualify_yr": "Integer",
+    "chodo_qualify_yr": "Integer",
+    "lih_qualify_yr": "Integer",
+    "git_qualify_yr": "Integer",
+    "clt_qualify_yr": "Integer",
+    "dvhss_qualify_yr": "Integer",
+    "omitted_imprv_hstd_val": "Integer",
+    "omitted_imprv_non_hstd_val": "Integer",
+    "ex_xd_qualify_yr": "Integer",
+    "ex_xf_qualify_yr": "Integer",
+    "ex_xg_qualify_yr": "Integer",
+    "ex_xh_qualify_yr": "Integer",
+    "ex_xi_qualify_yr": "Integer",
+    "ex_xj_qualify_yr": "Integer",
+    "ex_xl_qualify_yr": "Integer",
+    "ex_xm_qualify_yr": "Integer",
+    "ex_xn_qualify_yr": "Integer",
+    "ex_xo_qualify_yr": "Integer",
+    "ex_xp_qualify_yr": "Integer",
+    "ex_xq_qualify_yr": "Integer",
+    "ex_xr_qualify_yr": "Integer",
+    "ex_xs_qualify_yr": "Integer",
+    "ex_xt_qualify_yr": "Integer",
+    "ex_xu_qualify_yr": "Integer",
+    "ex_xv_qualify_yr": "Integer",
+    "ex_xa_qualify_yr": "Integer",
+    "lve_qualify_yr": "Integer",
+    "ppv_qualify_yr": "Integer",
+    "dvch_qualify_yr": "Integer",
+    "dvchs_qualify_yr": "Integer",
+    "masss_qualify_yr": "Integer",
+    "pp_late_interstate_allocation_val": "Integer",
+    "appraised_val_reflecting_productivity_loss": "Integer",
+    "assessed_val_reflecting_productivity_loss": "Integer",
+    "frss_qualify_yr": "Integer",
+    "late_correction_val": "Integer",
+    "nhs_cap_loss": "Integer"
+   },
+   "raw": "2025-07-14_2025_APPRAISAL_INFO.TXT",
+   "compare": "p25-info",
+   "compareLabel": "the 2025 prelim · Jun 20 export",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)"
   }
  },
  "descriptions_by_set": {
@@ -4162,19 +4793,40 @@
    "label": "CAD website files",
    "sub": "{n} files · every property in the county",
    "start": "s26-info",
-   "desc": "PACS Appraisal Export from the Rockwall CAD website, saved in <code>CAD Website/Rockwall/Data</code> and converted to gzipped CSV in <code>output/</code>. Fixed-width source files (two are tab-separated); every property in the county.",
+   "desc": "PACS Appraisal Export downloads from the Rockwall CAD website's Data Exports page (published as Google Drive links). Fixed-width source files (two are tab-separated); every property in the county.",
    "groups": [
     {
      "id": "property",
      "label": "Property Roll",
      "desc": "The main roll file, <code>APPRAISAL_INFO</code>. One row per <code>prop_id</code> and owner.",
      "datasets": [
+      "c24-info",
+      "p25-info",
+      "c25-info",
       "p26a-info",
       "p26b-info",
       "c26-info",
       "s26-info"
      ],
      "years": [
+      {
+       "label": "2024 certified · Aug 23",
+       "datasets": [
+        "c24-info"
+       ]
+      },
+      {
+       "label": "2025 prelim · Jun 20",
+       "datasets": [
+        "p25-info"
+       ]
+      },
+      {
+       "label": "2025 certified · Jul 14",
+       "datasets": [
+        "c25-info"
+       ]
+      },
       {
        "label": "2026 prelim · Mar 16",
        "datasets": [
@@ -4525,6 +5177,59 @@
         "s26-header"
        ]
       }
+     ]
+    },
+    {
+     "id": "older",
+     "label": "Earlier Exports",
+     "desc": "The header, agent and ARB files kept from the 2023–2025 exports (their property files are in Property Roll).",
+     "years": [
+      {
+       "label": "2023 prelim · Jun 5",
+       "datasets": [
+        "p23-header",
+        "p23-agent",
+        "p23-arb"
+       ]
+      },
+      {
+       "label": "2024 certified · Aug 23",
+       "datasets": [
+        "c24-header",
+        "c24-agent",
+        "c24-arb"
+       ]
+      },
+      {
+       "label": "2025 prelim · Jun 20",
+       "datasets": [
+        "p25-header",
+        "p25-agent",
+        "p25-arb"
+       ]
+      },
+      {
+       "label": "2025 certified · Jul 14",
+       "datasets": [
+        "c25-header",
+        "c25-agent",
+        "c25-arb"
+       ]
+      }
+     ],
+     "datasets": [
+      "p23-header",
+      "p23-agent",
+      "p23-arb",
+      "c24-header",
+      "c24-agent",
+      "c24-arb",
+      "p25-header",
+      "p25-agent",
+      "p25-arb",
+      "c25-header",
+      "c25-agent",
+      "c25-arb"
      ]
     }
    ]
