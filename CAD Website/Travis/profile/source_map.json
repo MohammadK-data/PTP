@@ -2,22 +2,8 @@
  "page": {
   "label": "Travis CAD · Public Information",
   "url": "https://traviscad.org/publicinformation",
-  "checked": "2026-11-23"
- },
- "downloads": {
-  "cert": {
-   "id": "cert",
-   "group": "Other Exports",
-   "label": "2026 Certified Appraisal Export (July)",
-   "url": "https://traviscad.org/wp-content/largefiles/2026%20Certified%20Appraisal%20Export%20Supp%200_07182026.zip"
-  },
-  "supp": {
-   "id": "supp",
-   "group": "Other Exports",
-   "label": "2026 Supplemental Appraisal Roll Export",
-   "url": "https://traviscad.org/wp-content/largefiles/travis_SUPP%20336_2026_WEBSITE%20EXPORT_Renamed.zip",
-   "note": "This page was profiled from SUPP 335, downloaded earlier. The website link now points to a newer upload, SUPP 336."
-  }
+  "checked": "2026-11-23",
+  "short": "TCAD"
  },
  "groups": [
   {
@@ -698,641 +684,767 @@
    "drive": "https://drive.google.com/drive/folders/1pzT9GAtQuPKVGIaG-KAe7slNWvTyXw32"
   }
  ],
- "drive": {
-  "label": "Google Drive · County Playbooks › Travis › Public Information",
-  "url": "https://drive.google.com/drive/folders/1UxRZdHqwnXa1VHzeBKjCoC66e69Imfdf",
-  "checked": "2026-11-23"
- },
  "tables": {
   "c26-info": {
    "download": "cert",
    "raw": "PROP.TXT",
-   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)"
-  },
-  "s26-info": {
-   "download": "supp",
-   "raw": "PROP.TXT",
-   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)"
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)",
+   "title": "Property Roll"
   },
   "c26-entinfo": {
    "download": "cert",
    "raw": "PROP_ENT.TXT",
-   "layout": "File #3 · Property-Entity Association (APPRAISAL_ENTITY_INFO.TXT)"
-  },
-  "s26-entinfo": {
-   "download": "supp",
-   "raw": "PROP_ENT.TXT",
-   "layout": "File #3 · Property-Entity Association (APPRAISAL_ENTITY_INFO.TXT)"
+   "layout": "File #3 · Property-Entity Association (APPRAISAL_ENTITY_INFO.TXT)",
+   "title": "Values by taxing unit"
   },
   "c26-enttot": {
    "download": "cert",
    "raw": "TOTALS.TXT",
-   "layout": "File #4 · Entity Totals (APPRAISAL_ENTITY_TOTALS.TXT)"
-  },
-  "s26-enttot": {
-   "download": "supp",
-   "raw": "TOTALS.TXT",
-   "layout": "File #4 · Entity Totals (APPRAISAL_ENTITY_TOTALS.TXT)"
+   "layout": "File #4 · Entity Totals (APPRAISAL_ENTITY_TOTALS.TXT)",
+   "title": "Unit totals"
   },
   "c26-entity": {
    "download": "cert",
    "raw": "ENTITY.TXT",
-   "layout": "File #14 · Entity (APPRAISAL_ENTITY.TXT)"
-  },
-  "s26-entity": {
-   "download": "supp",
-   "raw": "ENTITY.TXT",
-   "layout": "File #14 · Entity (APPRAISAL_ENTITY.TXT)"
+   "layout": "File #14 · Entity (APPRAISAL_ENTITY.TXT)",
+   "title": "Unit codes"
   },
   "c26-imprinfo": {
    "download": "cert",
    "raw": "IMP_INFO.TXT",
-   "layout": "File #7 · Improvements (APPRAISAL_IMPROVEMENT_INFO.TXT)"
-  },
-  "s26-imprinfo": {
-   "download": "supp",
-   "raw": "IMP_INFO.TXT",
-   "layout": "File #7 · Improvements (APPRAISAL_IMPROVEMENT_INFO.TXT)"
+   "layout": "File #7 · Improvements (APPRAISAL_IMPROVEMENT_INFO.TXT)",
+   "title": "Improvements"
   },
   "c26-imprdet": {
    "download": "cert",
    "raw": "IMP_DET.TXT",
-   "layout": "File #8 · Improvement Detail (APPRAISAL_IMPROVEMENT_DETAIL.TXT)"
-  },
-  "s26-imprdet": {
-   "download": "supp",
-   "raw": "IMP_DET.TXT",
-   "layout": "File #8 · Improvement Detail (APPRAISAL_IMPROVEMENT_DETAIL.TXT)"
+   "layout": "File #8 · Improvement Detail (APPRAISAL_IMPROVEMENT_DETAIL.TXT)",
+   "title": "Improvement details"
   },
   "c26-imprattr": {
    "download": "cert",
    "raw": "IMP_ATR.TXT",
-   "layout": "File #9 · Improvement Features (APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT)"
-  },
-  "s26-imprattr": {
-   "download": "supp",
-   "raw": "IMP_ATR.TXT",
-   "layout": "File #9 · Improvement Features (APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT)"
+   "layout": "File #9 · Improvement Features (APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT)",
+   "title": "Detail attributes"
   },
   "c26-sketch": {
    "download": "cert",
    "raw": "SKETCH_INFO.TXT",
-   "layout": "File #20 · Sketches (APPRAISAL_SKETCH_INFO.TXT)"
-  },
-  "s26-sketch": {
-   "download": "supp",
-   "raw": "SKETCH_INFO.TXT",
-   "layout": "File #20 · Sketches (APPRAISAL_SKETCH_INFO.TXT)"
+   "layout": "File #20 · Sketches (APPRAISAL_SKETCH_INFO.TXT)",
+   "title": "Sketches"
   },
   "c26-mobile": {
    "download": "cert",
    "raw": "MOBILE_HOME_INFO.TXT",
-   "layout": "File #18 · Mobile Home Info (APPRAISAL_MOBILE_HOME_INFO.TXT)"
-  },
-  "s26-mobile": {
-   "download": "supp",
-   "raw": "MOBILE_HOME_INFO.TXT",
-   "layout": "File #18 · Mobile Home Info (APPRAISAL_MOBILE_HOME_INFO.TXT)"
+   "layout": "File #18 · Mobile Home Info (APPRAISAL_MOBILE_HOME_INFO.TXT)",
+   "title": "Mobile homes"
   },
   "c26-land": {
    "download": "cert",
    "raw": "LAND_DET.TXT",
-   "layout": "File #10 · Land (APPRAISAL_LAND_DETAIL.TXT)"
-  },
-  "s26-land": {
-   "download": "supp",
-   "raw": "LAND_DET.TXT",
-   "layout": "File #10 · Land (APPRAISAL_LAND_DETAIL.TXT)"
+   "layout": "File #10 · Land (APPRAISAL_LAND_DETAIL.TXT)",
+   "title": "Land"
   },
   "c26-sb12": {
    "download": "cert",
    "raw": "SB12.TXT",
-   "layout": "File #21 · SB12 (APPRAISAL_SB12.TXT)"
-  },
-  "s26-sb12": {
-   "download": "supp",
-   "raw": "SB12.TXT",
-   "layout": "File #21 · SB12 (APPRAISAL_SB12.TXT)"
+   "layout": "File #21 · SB12 (APPRAISAL_SB12.TXT)",
+   "title": "Tax ceilings (SB12)"
   },
   "c26-defer": {
    "download": "cert",
    "raw": "TAX_DEFERRAL_INFO.TXT",
-   "layout": "File #19 · Tax Deferral Info (APPRAISAL_TAX_DEFERRAL_INFO.TXT)"
-  },
-  "s26-defer": {
-   "download": "supp",
-   "raw": "TAX_DEFERRAL_INFO.TXT",
-   "layout": "File #19 · Tax Deferral Info (APPRAISAL_TAX_DEFERRAL_INFO.TXT)"
+   "layout": "File #19 · Tax Deferral Info (APPRAISAL_TAX_DEFERRAL_INFO.TXT)",
+   "title": "Tax deferrals"
   },
   "c26-arb": {
    "download": "cert",
    "raw": "ARB.TXT",
-   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)"
-  },
-  "s26-arb": {
-   "download": "supp",
-   "raw": "ARB.TXT",
-   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)"
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)",
+   "title": "ARB protests"
   },
   "c26-lawsuit": {
    "download": "cert",
    "raw": "LAWSUIT.TXT",
-   "layout": "File #13 · Active Lawsuit Properties (APPRAISAL_LAWSUIT.TXT)"
-  },
-  "s26-lawsuit": {
-   "download": "supp",
-   "raw": "LAWSUIT.TXT",
-   "layout": "File #13 · Active Lawsuit Properties (APPRAISAL_LAWSUIT.TXT)"
+   "layout": "File #13 · Active Lawsuit Properties (APPRAISAL_LAWSUIT.TXT)",
+   "title": "Lawsuits"
   },
   "c26-arblaw": {
    "download": "cert",
    "raw": "ARBITRATION.TXT",
-   "layout": "File #17 · Properties in Arbitration (ARBITRATION_LAWSUIT.TXT)"
-  },
-  "s26-arblaw": {
-   "download": "supp",
-   "raw": "ARBITRATION.TXT",
-   "layout": "File #17 · Properties in Arbitration (ARBITRATION_LAWSUIT.TXT)"
+   "layout": "File #17 · Properties in Arbitration (ARBITRATION_LAWSUIT.TXT)",
+   "title": "Arbitration"
   },
   "c26-agent": {
    "download": "cert",
    "raw": "AGENT.TXT",
-   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)"
-  },
-  "s26-agent": {
-   "download": "supp",
-   "raw": "AGENT.TXT",
-   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)"
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)",
+   "title": "Agents"
   },
   "c26-abs": {
    "download": "cert",
    "raw": "ABS_SUBD.TXT",
-   "layout": "File #5 · Abstract/Subdivision List (APPRAISAL_ABSTRACT_SUBDV.TXT)"
-  },
-  "s26-abs": {
-   "download": "supp",
-   "raw": "ABS_SUBD.TXT",
-   "layout": "File #5 · Abstract/Subdivision List (APPRAISAL_ABSTRACT_SUBDV.TXT)"
+   "layout": "File #5 · Abstract/Subdivision List (APPRAISAL_ABSTRACT_SUBDV.TXT)",
+   "title": "Abstracts & subdivisions"
   },
   "c26-state": {
    "download": "cert",
    "raw": "STATE_CD.TXT",
-   "layout": "File #6 · Property Tax Division Codes (APPRAISAL_STATE_CODE.TXT)"
-  },
-  "s26-state": {
-   "download": "supp",
-   "raw": "STATE_CD.TXT",
-   "layout": "File #6 · Property Tax Division Codes (APPRAISAL_STATE_CODE.TXT)"
+   "layout": "File #6 · Property Tax Division Codes (APPRAISAL_STATE_CODE.TXT)",
+   "title": "State codes"
   },
   "c26-country": {
    "download": "cert",
    "raw": "COUNTRY.TXT",
-   "layout": "File #16 · Country Codes (APPRAISAL_COUNTRY_CODE.TXT)"
-  },
-  "s26-country": {
-   "download": "supp",
-   "raw": "COUNTRY.TXT",
-   "layout": "File #16 · Country Codes (APPRAISAL_COUNTRY_CODE.TXT)"
+   "layout": "File #16 · Country Codes (APPRAISAL_COUNTRY_CODE.TXT)",
+   "title": "Country codes"
   },
   "c26-header": {
    "download": "cert",
    "raw": "APPR_HDR.TXT",
-   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)"
-  },
-  "s26-header": {
-   "download": "supp",
-   "raw": "APPR_HDR.TXT",
-   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)"
-  },
-  "ears24-ajr": {
-   "download": "ears-2024",
-   "raw": "227EARS082824.csv · AJR rows",
-   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1"
-  },
-  "ears24-aud": {
-   "download": "ears-2024",
-   "raw": "227EARS082824.csv · AUD rows",
-   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3"
-  },
-  "ears24-tu2": {
-   "download": "ears-2024",
-   "raw": "227EARS082824.csv · TU2 rows",
-   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5"
-  },
-  "ears24-897": {
-   "download": "ears-2024",
-   "raw": "227_50_897_082924.csv",
-   "layout": "Form 50-897 tax office file, sent with the EARS submission"
-  },
-  "ears25-ajr": {
-   "download": "ears-2025",
-   "raw": "227EARS090425.csv · AJR rows",
-   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1"
-  },
-  "ears25-aud": {
-   "download": "ears-2025",
-   "raw": "227EARS090425.csv · AUD rows",
-   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3"
-  },
-  "ears25-tu2": {
-   "download": "ears-2025",
-   "raw": "227EARS090425.csv · TU2 rows",
-   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5"
-  },
-  "ears25-897": {
-   "download": "ears-2025",
-   "raw": "227_50_897_090425.xlsx",
-   "layout": "Form 50-897 tax office file, sent with the EARS submission"
-  },
-  "ears26-ajr": {
-   "download": "ears-2026",
-   "raw": "227EARS082626.csv · AJR rows",
-   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1"
-  },
-  "ears26-aud": {
-   "download": "ears-2026",
-   "raw": "227EARS082626.csv · AUD rows",
-   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3"
-  },
-  "ears26-tu2": {
-   "download": "ears-2026",
-   "raw": "227EARS082626.csv · TU2 rows",
-   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5"
-  },
-  "ears26-897": {
-   "download": "ears-2026",
-   "raw": "227_50_897_082626_Revised.xlsx",
-   "layout": "Form 50-897 tax office file, sent with the EARS submission"
-  },
-  "rpt-ag": {
-   "download": "rpt-ag",
-   "raw": "ag_activities_2026.csv",
-   "layout": "TCAD property report (CSV, header row)"
-  },
-  "rpt-land": {
-   "download": "rpt-land",
-   "raw": "land_comments_2026.csv",
-   "layout": "TCAD property report (CSV, header row)"
-  },
-  "rpt-impdet": {
-   "download": "rpt-impdet",
-   "raw": "improvement_detail_2026_1-4.csv",
-   "layout": "TCAD property report (CSV, header row)"
-  },
-  "rpt-water": {
-   "download": "rpt-water",
-   "raw": "waterfront_effective_front_foot_report_2026.csv",
-   "layout": "TCAD property report (CSV, header row)"
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)",
+   "title": "Export header"
   },
   "jc-links": {
    "download": "json-cert",
    "raw": "links[]",
-   "layout": "JSON list links in Travis-protaxExport-20260719.json"
+   "layout": "JSON list links in Travis-protaxExport-20260719.json",
+   "title": "links"
   },
   "jc-property": {
    "download": "json-cert",
    "raw": "property",
-   "layout": "JSON top-level fields of each property in Travis-protaxExport-20260719.json"
+   "layout": "JSON top-level fields of each property in Travis-protaxExport-20260719.json",
+   "title": "property"
   },
   "jc-propertycharacteristics": {
    "download": "json-cert",
    "raw": "propertyCharacteristics[]",
-   "layout": "JSON list propertyCharacteristics in Travis-protaxExport-20260719.json"
+   "layout": "JSON list propertyCharacteristics in Travis-protaxExport-20260719.json",
+   "title": "propertyCharacteristics"
   },
   "jc-propertyidentification": {
    "download": "json-cert",
    "raw": "propertyIdentification[]",
-   "layout": "JSON list propertyIdentification in Travis-protaxExport-20260719.json"
+   "layout": "JSON list propertyIdentification in Travis-protaxExport-20260719.json",
+   "title": "propertyIdentification"
   },
   "jc-propertylegaldescription": {
    "download": "json-cert",
    "raw": "propertyLegalDescription[]",
-   "layout": "JSON list propertyLegalDescription in Travis-protaxExport-20260719.json"
+   "layout": "JSON list propertyLegalDescription in Travis-protaxExport-20260719.json",
+   "title": "propertyLegalDescription"
   },
   "jc-propertyprofile": {
    "download": "json-cert",
    "raw": "propertyProfile[]",
-   "layout": "JSON list propertyProfile in Travis-protaxExport-20260719.json"
+   "layout": "JSON list propertyProfile in Travis-protaxExport-20260719.json",
+   "title": "propertyProfile"
   },
   "jc-situses": {
    "download": "json-cert",
    "raw": "situses[]",
-   "layout": "JSON list situses in Travis-protaxExport-20260719.json"
+   "layout": "JSON list situses in Travis-protaxExport-20260719.json",
+   "title": "situses"
   },
   "jc-smartgroups": {
    "download": "json-cert",
    "raw": "smartgroups[]",
-   "layout": "JSON list smartgroups in Travis-protaxExport-20260719.json"
+   "layout": "JSON list smartgroups in Travis-protaxExport-20260719.json",
+   "title": "smartgroups"
   },
   "jc-tags": {
    "download": "json-cert",
    "raw": "tags[]",
-   "layout": "JSON list tags in Travis-protaxExport-20260719.json"
+   "layout": "JSON list tags in Travis-protaxExport-20260719.json",
+   "title": "tags"
   },
   "jc-owners": {
    "download": "json-cert",
    "raw": "owners[]",
-   "layout": "JSON list owners in Travis-protaxExport-20260719.json"
+   "layout": "JSON list owners in Travis-protaxExport-20260719.json",
+   "title": "owners"
   },
   "jc-owners-agents": {
    "download": "json-cert",
    "raw": "owners[].agents[]",
-   "layout": "JSON list owners › agents in Travis-protaxExport-20260719.json"
+   "layout": "JSON list owners › agents in Travis-protaxExport-20260719.json",
+   "title": "owners › agents"
   },
   "jc-owners-exemptions": {
    "download": "json-cert",
    "raw": "owners[].exemptions[]",
-   "layout": "JSON list owners › exemptions in Travis-protaxExport-20260719.json"
+   "layout": "JSON list owners › exemptions in Travis-protaxExport-20260719.json",
+   "title": "owners › exemptions"
   },
   "jc-owners-ownertaxable": {
    "download": "json-cert",
    "raw": "owners[].ownerTaxable[]",
-   "layout": "JSON list owners › ownerTaxable in Travis-protaxExport-20260719.json"
+   "layout": "JSON list owners › ownerTaxable in Travis-protaxExport-20260719.json",
+   "title": "owners › ownerTaxable"
   },
   "jc-owners-ownertaxable-exemptions": {
    "download": "json-cert",
    "raw": "owners[].ownerTaxable[].exemptions[]",
-   "layout": "JSON list owners › ownerTaxable › exemptions in Travis-protaxExport-20260719.json"
+   "layout": "JSON list owners › ownerTaxable › exemptions in Travis-protaxExport-20260719.json",
+   "title": "owners › ownerTaxable › exemptions"
   },
   "jc-owners-ownervalue": {
    "download": "json-cert",
    "raw": "owners[].ownerValue[]",
-   "layout": "JSON list owners › ownerValue in Travis-protaxExport-20260719.json"
+   "layout": "JSON list owners › ownerValue in Travis-protaxExport-20260719.json",
+   "title": "owners › ownerValue"
   },
   "jc-taxingunits": {
    "download": "json-cert",
    "raw": "taxingunits[]",
-   "layout": "JSON list taxingunits in Travis-protaxExport-20260719.json"
+   "layout": "JSON list taxingunits in Travis-protaxExport-20260719.json",
+   "title": "taxingunits"
   },
   "jc-val": {
    "download": "json-cert",
    "raw": "valuations[]",
-   "layout": "JSON list valuations in Travis-protaxExport-20260719.json"
+   "layout": "JSON list valuations in Travis-protaxExport-20260719.json",
+   "title": "valuations"
   },
   "jc-val-cost-improvements": {
    "download": "json-cert",
    "raw": "valuations[].details[].cost-local[].improvements[]",
-   "layout": "JSON list valuations › details › cost-local › improvements in Travis-protaxExport-20260719.json"
+   "layout": "JSON list valuations › details › cost-local › improvements in Travis-protaxExport-20260719.json",
+   "title": "valuations › improvements"
   },
   "jc-val-cost-improvements-adjustments": {
    "download": "json-cert",
    "raw": "valuations[].details[].cost-local[].improvements[].adjustments[]",
-   "layout": "JSON list valuations › details › cost-local › improvements › adjustments in Travis-protaxExport-20260719.json"
+   "layout": "JSON list valuations › details › cost-local › improvements › adjustments in Travis-protaxExport-20260719.json",
+   "title": "valuations › improvements › adjustments"
   },
   "jc-val-cost-improvements-details": {
    "download": "json-cert",
    "raw": "valuations[].details[].cost-local[].improvements[].details[]",
-   "layout": "JSON list valuations › details › cost-local › improvements › details in Travis-protaxExport-20260719.json"
+   "layout": "JSON list valuations › details › cost-local › improvements › details in Travis-protaxExport-20260719.json",
+   "title": "valuations › improvements"
   },
   "jc-val-cost-improvements-details-adjustments": {
    "download": "json-cert",
    "raw": "valuations[].details[].cost-local[].improvements[].details[].adjustments[]",
-   "layout": "JSON list valuations › details › cost-local › improvements › details › adjustments in Travis-protaxExport-20260719.json"
+   "layout": "JSON list valuations › details › cost-local › improvements › details › adjustments in Travis-protaxExport-20260719.json",
+   "title": "valuations › improvements › adjustments"
   },
   "jc-val-cost-improvements-details-features": {
    "download": "json-cert",
    "raw": "valuations[].details[].cost-local[].improvements[].details[].features[]",
-   "layout": "JSON list valuations › details › cost-local › improvements › details › features in Travis-protaxExport-20260719.json"
+   "layout": "JSON list valuations › details › cost-local › improvements › details › features in Travis-protaxExport-20260719.json",
+   "title": "valuations › improvements › features"
   },
   "jc-val-cost-land": {
    "download": "json-cert",
    "raw": "valuations[].details[].cost-local[].land[]",
-   "layout": "JSON list valuations › details › cost-local › land in Travis-protaxExport-20260719.json"
+   "layout": "JSON list valuations › details › cost-local › land in Travis-protaxExport-20260719.json",
+   "title": "valuations › land"
   },
   "jc-val-cost-land-adjustments": {
    "download": "json-cert",
    "raw": "valuations[].details[].cost-local[].land[].adjustments[]",
-   "layout": "JSON list valuations › details › cost-local › land › adjustments in Travis-protaxExport-20260719.json"
+   "layout": "JSON list valuations › details › cost-local › land › adjustments in Travis-protaxExport-20260719.json",
+   "title": "valuations › land › adjustments"
   },
   "jc-val-cost-land-notes": {
    "download": "json-cert",
    "raw": "valuations[].details[].cost-local[].land[].notes[]",
-   "layout": "JSON list valuations › details › cost-local › land › notes in Travis-protaxExport-20260719.json"
+   "layout": "JSON list valuations › details › cost-local › land › notes in Travis-protaxExport-20260719.json",
+   "title": "valuations › land › notes"
   },
   "jc-deeds": {
    "download": "json-cert",
    "raw": "deeds[]",
-   "layout": "JSON list deeds in Travis-protaxExport-20260719.json"
+   "layout": "JSON list deeds in Travis-protaxExport-20260719.json",
+   "title": "deeds"
   },
   "jc-events": {
    "download": "json-cert",
    "raw": "events[]",
-   "layout": "JSON list events in Travis-protaxExport-20260719.json"
+   "layout": "JSON list events in Travis-protaxExport-20260719.json",
+   "title": "events"
   },
   "jc-inspections": {
    "download": "json-cert",
    "raw": "inspections[]",
-   "layout": "JSON list inspections in Travis-protaxExport-20260719.json"
+   "layout": "JSON list inspections in Travis-protaxExport-20260719.json",
+   "title": "inspections"
   },
   "jc-notes": {
    "download": "json-cert",
    "raw": "notes[]",
-   "layout": "JSON list notes in Travis-protaxExport-20260719.json"
+   "layout": "JSON list notes in Travis-protaxExport-20260719.json",
+   "title": "notes"
   },
   "jc-permits": {
    "download": "json-cert",
    "raw": "permits[]",
-   "layout": "JSON list permits in Travis-protaxExport-20260719.json"
+   "layout": "JSON list permits in Travis-protaxExport-20260719.json",
+   "title": "permits"
   },
   "jc-sales": {
    "download": "json-cert",
    "raw": "sales[]",
-   "layout": "JSON list sales in Travis-protaxExport-20260719.json"
+   "layout": "JSON list sales in Travis-protaxExport-20260719.json",
+   "title": "sales"
   },
   "jc-appeals": {
    "download": "json-cert",
    "raw": "appeals[]",
-   "layout": "JSON list appeals in Travis-protaxExport-20260719.json"
+   "layout": "JSON list appeals in Travis-protaxExport-20260719.json",
+   "title": "appeals"
+  },
+  "s26-info": {
+   "download": "supp",
+   "raw": "PROP.TXT",
+   "layout": "File #2 · Property (APPRAISAL_INFO.TXT)",
+   "title": "Property Roll"
+  },
+  "s26-entinfo": {
+   "download": "supp",
+   "raw": "PROP_ENT.TXT",
+   "layout": "File #3 · Property-Entity Association (APPRAISAL_ENTITY_INFO.TXT)",
+   "title": "Values by taxing unit"
+  },
+  "s26-enttot": {
+   "download": "supp",
+   "raw": "TOTALS.TXT",
+   "layout": "File #4 · Entity Totals (APPRAISAL_ENTITY_TOTALS.TXT)",
+   "title": "Unit totals"
+  },
+  "s26-entity": {
+   "download": "supp",
+   "raw": "ENTITY.TXT",
+   "layout": "File #14 · Entity (APPRAISAL_ENTITY.TXT)",
+   "title": "Unit codes"
+  },
+  "s26-imprinfo": {
+   "download": "supp",
+   "raw": "IMP_INFO.TXT",
+   "layout": "File #7 · Improvements (APPRAISAL_IMPROVEMENT_INFO.TXT)",
+   "title": "Improvements"
+  },
+  "s26-imprdet": {
+   "download": "supp",
+   "raw": "IMP_DET.TXT",
+   "layout": "File #8 · Improvement Detail (APPRAISAL_IMPROVEMENT_DETAIL.TXT)",
+   "title": "Improvement details"
+  },
+  "s26-imprattr": {
+   "download": "supp",
+   "raw": "IMP_ATR.TXT",
+   "layout": "File #9 · Improvement Features (APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT)",
+   "title": "Detail attributes"
+  },
+  "s26-sketch": {
+   "download": "supp",
+   "raw": "SKETCH_INFO.TXT",
+   "layout": "File #20 · Sketches (APPRAISAL_SKETCH_INFO.TXT)",
+   "title": "Sketches"
+  },
+  "s26-mobile": {
+   "download": "supp",
+   "raw": "MOBILE_HOME_INFO.TXT",
+   "layout": "File #18 · Mobile Home Info (APPRAISAL_MOBILE_HOME_INFO.TXT)",
+   "title": "Mobile homes"
+  },
+  "s26-land": {
+   "download": "supp",
+   "raw": "LAND_DET.TXT",
+   "layout": "File #10 · Land (APPRAISAL_LAND_DETAIL.TXT)",
+   "title": "Land"
+  },
+  "s26-sb12": {
+   "download": "supp",
+   "raw": "SB12.TXT",
+   "layout": "File #21 · SB12 (APPRAISAL_SB12.TXT)",
+   "title": "Tax ceilings (SB12)"
+  },
+  "s26-defer": {
+   "download": "supp",
+   "raw": "TAX_DEFERRAL_INFO.TXT",
+   "layout": "File #19 · Tax Deferral Info (APPRAISAL_TAX_DEFERRAL_INFO.TXT)",
+   "title": "Tax deferrals"
+  },
+  "s26-arb": {
+   "download": "supp",
+   "raw": "ARB.TXT",
+   "layout": "File #12 · Active ARB Properties (APPRAISAL_ARB.TXT)",
+   "title": "ARB protests"
+  },
+  "s26-lawsuit": {
+   "download": "supp",
+   "raw": "LAWSUIT.TXT",
+   "layout": "File #13 · Active Lawsuit Properties (APPRAISAL_LAWSUIT.TXT)",
+   "title": "Lawsuits"
+  },
+  "s26-arblaw": {
+   "download": "supp",
+   "raw": "ARBITRATION.TXT",
+   "layout": "File #17 · Properties in Arbitration (ARBITRATION_LAWSUIT.TXT)",
+   "title": "Arbitration"
+  },
+  "s26-agent": {
+   "download": "supp",
+   "raw": "AGENT.TXT",
+   "layout": "File #11 · Agent (APPRAISAL_AGENT.TXT)",
+   "title": "Agents"
+  },
+  "s26-abs": {
+   "download": "supp",
+   "raw": "ABS_SUBD.TXT",
+   "layout": "File #5 · Abstract/Subdivision List (APPRAISAL_ABSTRACT_SUBDV.TXT)",
+   "title": "Abstracts & subdivisions"
+  },
+  "s26-state": {
+   "download": "supp",
+   "raw": "STATE_CD.TXT",
+   "layout": "File #6 · Property Tax Division Codes (APPRAISAL_STATE_CODE.TXT)",
+   "title": "State codes"
+  },
+  "s26-country": {
+   "download": "supp",
+   "raw": "COUNTRY.TXT",
+   "layout": "File #16 · Country Codes (APPRAISAL_COUNTRY_CODE.TXT)",
+   "title": "Country codes"
+  },
+  "s26-header": {
+   "download": "supp",
+   "raw": "APPR_HDR.TXT",
+   "layout": "File #1 · Header File (APPRAISAL_HEADER.TXT)",
+   "title": "Export header"
   },
   "jo-links": {
    "download": "json-oct",
    "raw": "links[]",
-   "layout": "JSON list links in Travis-protaxExport-20261006.json"
+   "layout": "JSON list links in Travis-protaxExport-20261006.json",
+   "title": "links"
   },
   "jo-property": {
    "download": "json-oct",
    "raw": "property",
-   "layout": "JSON top-level fields of each property in Travis-protaxExport-20261006.json"
+   "layout": "JSON top-level fields of each property in Travis-protaxExport-20261006.json",
+   "title": "property"
   },
   "jo-propertycharacteristics": {
    "download": "json-oct",
    "raw": "propertyCharacteristics[]",
-   "layout": "JSON list propertyCharacteristics in Travis-protaxExport-20261006.json"
+   "layout": "JSON list propertyCharacteristics in Travis-protaxExport-20261006.json",
+   "title": "propertyCharacteristics"
   },
   "jo-propertyidentification": {
    "download": "json-oct",
    "raw": "propertyIdentification[]",
-   "layout": "JSON list propertyIdentification in Travis-protaxExport-20261006.json"
+   "layout": "JSON list propertyIdentification in Travis-protaxExport-20261006.json",
+   "title": "propertyIdentification"
   },
   "jo-propertylegaldescription": {
    "download": "json-oct",
    "raw": "propertyLegalDescription[]",
-   "layout": "JSON list propertyLegalDescription in Travis-protaxExport-20261006.json"
+   "layout": "JSON list propertyLegalDescription in Travis-protaxExport-20261006.json",
+   "title": "propertyLegalDescription"
   },
   "jo-propertyprofile": {
    "download": "json-oct",
    "raw": "propertyProfile[]",
-   "layout": "JSON list propertyProfile in Travis-protaxExport-20261006.json"
+   "layout": "JSON list propertyProfile in Travis-protaxExport-20261006.json",
+   "title": "propertyProfile"
   },
   "jo-situses": {
    "download": "json-oct",
    "raw": "situses[]",
-   "layout": "JSON list situses in Travis-protaxExport-20261006.json"
+   "layout": "JSON list situses in Travis-protaxExport-20261006.json",
+   "title": "situses"
   },
   "jo-smartgroups": {
    "download": "json-oct",
    "raw": "smartgroups[]",
-   "layout": "JSON list smartgroups in Travis-protaxExport-20261006.json"
+   "layout": "JSON list smartgroups in Travis-protaxExport-20261006.json",
+   "title": "smartgroups"
   },
   "jo-tags": {
    "download": "json-oct",
    "raw": "tags[]",
-   "layout": "JSON list tags in Travis-protaxExport-20261006.json"
+   "layout": "JSON list tags in Travis-protaxExport-20261006.json",
+   "title": "tags"
   },
   "jo-owners": {
    "download": "json-oct",
    "raw": "owners[]",
-   "layout": "JSON list owners in Travis-protaxExport-20261006.json"
+   "layout": "JSON list owners in Travis-protaxExport-20261006.json",
+   "title": "owners"
   },
   "jo-owners-agents": {
    "download": "json-oct",
    "raw": "owners[].agents[]",
-   "layout": "JSON list owners › agents in Travis-protaxExport-20261006.json"
+   "layout": "JSON list owners › agents in Travis-protaxExport-20261006.json",
+   "title": "owners › agents"
   },
   "jo-owners-exemptions": {
    "download": "json-oct",
    "raw": "owners[].exemptions[]",
-   "layout": "JSON list owners › exemptions in Travis-protaxExport-20261006.json"
+   "layout": "JSON list owners › exemptions in Travis-protaxExport-20261006.json",
+   "title": "owners › exemptions"
   },
   "jo-owners-ownertaxable": {
    "download": "json-oct",
    "raw": "owners[].ownerTaxable[]",
-   "layout": "JSON list owners › ownerTaxable in Travis-protaxExport-20261006.json"
+   "layout": "JSON list owners › ownerTaxable in Travis-protaxExport-20261006.json",
+   "title": "owners › ownerTaxable"
   },
   "jo-owners-ownertaxable-exemptions": {
    "download": "json-oct",
    "raw": "owners[].ownerTaxable[].exemptions[]",
-   "layout": "JSON list owners › ownerTaxable › exemptions in Travis-protaxExport-20261006.json"
+   "layout": "JSON list owners › ownerTaxable › exemptions in Travis-protaxExport-20261006.json",
+   "title": "owners › ownerTaxable › exemptions"
   },
   "jo-owners-ownervalue": {
    "download": "json-oct",
    "raw": "owners[].ownerValue[]",
-   "layout": "JSON list owners › ownerValue in Travis-protaxExport-20261006.json"
+   "layout": "JSON list owners › ownerValue in Travis-protaxExport-20261006.json",
+   "title": "owners › ownerValue"
   },
   "jo-taxingunits": {
    "download": "json-oct",
    "raw": "taxingunits[]",
-   "layout": "JSON list taxingunits in Travis-protaxExport-20261006.json"
+   "layout": "JSON list taxingunits in Travis-protaxExport-20261006.json",
+   "title": "taxingunits"
   },
   "jo-val": {
    "download": "json-oct",
    "raw": "valuations[]",
-   "layout": "JSON list valuations in Travis-protaxExport-20261006.json"
+   "layout": "JSON list valuations in Travis-protaxExport-20261006.json",
+   "title": "valuations"
   },
   "jo-val-cost-improvements": {
    "download": "json-oct",
    "raw": "valuations[].details[].cost-local[].improvements[]",
-   "layout": "JSON list valuations › details › cost-local › improvements in Travis-protaxExport-20261006.json"
+   "layout": "JSON list valuations › details › cost-local › improvements in Travis-protaxExport-20261006.json",
+   "title": "valuations › improvements"
   },
   "jo-val-cost-improvements-adjustments": {
    "download": "json-oct",
    "raw": "valuations[].details[].cost-local[].improvements[].adjustments[]",
-   "layout": "JSON list valuations › details › cost-local › improvements › adjustments in Travis-protaxExport-20261006.json"
+   "layout": "JSON list valuations › details › cost-local › improvements › adjustments in Travis-protaxExport-20261006.json",
+   "title": "valuations › improvements › adjustments"
   },
   "jo-val-cost-improvements-details": {
    "download": "json-oct",
    "raw": "valuations[].details[].cost-local[].improvements[].details[]",
-   "layout": "JSON list valuations › details › cost-local › improvements › details in Travis-protaxExport-20261006.json"
+   "layout": "JSON list valuations › details › cost-local › improvements › details in Travis-protaxExport-20261006.json",
+   "title": "valuations › improvements"
   },
   "jo-val-cost-improvements-details-adjustments": {
    "download": "json-oct",
    "raw": "valuations[].details[].cost-local[].improvements[].details[].adjustments[]",
-   "layout": "JSON list valuations › details › cost-local › improvements › details › adjustments in Travis-protaxExport-20261006.json"
+   "layout": "JSON list valuations › details › cost-local › improvements › details › adjustments in Travis-protaxExport-20261006.json",
+   "title": "valuations › improvements › adjustments"
   },
   "jo-val-cost-improvements-details-features": {
    "download": "json-oct",
    "raw": "valuations[].details[].cost-local[].improvements[].details[].features[]",
-   "layout": "JSON list valuations › details › cost-local › improvements › details › features in Travis-protaxExport-20261006.json"
+   "layout": "JSON list valuations › details › cost-local › improvements › details › features in Travis-protaxExport-20261006.json",
+   "title": "valuations › improvements › features"
   },
   "jo-val-cost-land": {
    "download": "json-oct",
    "raw": "valuations[].details[].cost-local[].land[]",
-   "layout": "JSON list valuations › details › cost-local › land in Travis-protaxExport-20261006.json"
+   "layout": "JSON list valuations › details › cost-local › land in Travis-protaxExport-20261006.json",
+   "title": "valuations › land"
   },
   "jo-val-cost-land-adjustments": {
    "download": "json-oct",
    "raw": "valuations[].details[].cost-local[].land[].adjustments[]",
-   "layout": "JSON list valuations › details › cost-local › land › adjustments in Travis-protaxExport-20261006.json"
+   "layout": "JSON list valuations › details › cost-local › land › adjustments in Travis-protaxExport-20261006.json",
+   "title": "valuations › land › adjustments"
   },
   "jo-val-cost-land-notes": {
    "download": "json-oct",
    "raw": "valuations[].details[].cost-local[].land[].notes[]",
-   "layout": "JSON list valuations › details › cost-local › land › notes in Travis-protaxExport-20261006.json"
+   "layout": "JSON list valuations › details › cost-local › land › notes in Travis-protaxExport-20261006.json",
+   "title": "valuations › land › notes"
   },
   "jo-deeds": {
    "download": "json-oct",
    "raw": "deeds[]",
-   "layout": "JSON list deeds in Travis-protaxExport-20261006.json"
+   "layout": "JSON list deeds in Travis-protaxExport-20261006.json",
+   "title": "deeds"
   },
   "jo-events": {
    "download": "json-oct",
    "raw": "events[]",
-   "layout": "JSON list events in Travis-protaxExport-20261006.json"
+   "layout": "JSON list events in Travis-protaxExport-20261006.json",
+   "title": "events"
   },
   "jo-inspections": {
    "download": "json-oct",
    "raw": "inspections[]",
-   "layout": "JSON list inspections in Travis-protaxExport-20261006.json"
+   "layout": "JSON list inspections in Travis-protaxExport-20261006.json",
+   "title": "inspections"
   },
   "jo-notes": {
    "download": "json-oct",
    "raw": "notes[]",
-   "layout": "JSON list notes in Travis-protaxExport-20261006.json"
+   "layout": "JSON list notes in Travis-protaxExport-20261006.json",
+   "title": "notes"
   },
   "jo-permits": {
    "download": "json-oct",
    "raw": "permits[]",
-   "layout": "JSON list permits in Travis-protaxExport-20261006.json"
+   "layout": "JSON list permits in Travis-protaxExport-20261006.json",
+   "title": "permits"
   },
   "jo-sales": {
    "download": "json-oct",
    "raw": "sales[]",
-   "layout": "JSON list sales in Travis-protaxExport-20261006.json"
+   "layout": "JSON list sales in Travis-protaxExport-20261006.json",
+   "title": "sales"
   },
   "jo-appeals": {
    "download": "json-oct",
    "raw": "appeals[]",
-   "layout": "JSON list appeals in Travis-protaxExport-20261006.json"
+   "layout": "JSON list appeals in Travis-protaxExport-20261006.json",
+   "title": "appeals"
   },
-  "ears22-ajr": {
-   "download": "ears-2022",
-   "raw": "227EARS092822.csv · AJR rows",
-   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1"
+  "ears26-ajr": {
+   "download": "ears-2026",
+   "raw": "227EARS082626.csv · AJR rows",
+   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1",
+   "title": "Account records (AJR)"
   },
-  "ears22-aud": {
-   "download": "ears-2022",
-   "raw": "227EARS092822.csv · AUD rows",
-   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3"
+  "ears26-aud": {
+   "download": "ears-2026",
+   "raw": "227EARS082626.csv · AUD rows",
+   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3",
+   "title": "Ag-use detail (AUD)"
   },
-  "ears22-tu2": {
-   "download": "ears-2022",
-   "raw": "227EARS092822.csv · TU2 rows",
-   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5"
+  "ears26-tu2": {
+   "download": "ears-2026",
+   "raw": "227EARS082626.csv · TU2 rows",
+   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5",
+   "title": "Top-10 taxpayers (TU2)"
+  },
+  "ears26-897": {
+   "download": "ears-2026",
+   "raw": "227_50_897_082626_Revised.xlsx",
+   "layout": "Form 50-897 tax office file, sent with the EARS submission",
+   "title": "Tax office file (50-897)"
+  },
+  "ears25-ajr": {
+   "download": "ears-2025",
+   "raw": "227EARS090425.csv · AJR rows",
+   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1",
+   "title": "Account records (AJR)"
+  },
+  "ears25-aud": {
+   "download": "ears-2025",
+   "raw": "227EARS090425.csv · AUD rows",
+   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3",
+   "title": "Ag-use detail (AUD)"
+  },
+  "ears25-tu2": {
+   "download": "ears-2025",
+   "raw": "227EARS090425.csv · TU2 rows",
+   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5",
+   "title": "Top-10 taxpayers (TU2)"
+  },
+  "ears25-897": {
+   "download": "ears-2025",
+   "raw": "227_50_897_090425.xlsx",
+   "layout": "Form 50-897 tax office file, sent with the EARS submission",
+   "title": "Tax office file (50-897)"
+  },
+  "ears24-ajr": {
+   "download": "ears-2024",
+   "raw": "227EARS082824.csv · AJR rows",
+   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1",
+   "title": "Account records (AJR)"
+  },
+  "ears24-aud": {
+   "download": "ears-2024",
+   "raw": "227EARS082824.csv · AUD rows",
+   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3",
+   "title": "Ag-use detail (AUD)"
+  },
+  "ears24-tu2": {
+   "download": "ears-2024",
+   "raw": "227EARS082824.csv · TU2 rows",
+   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5",
+   "title": "Top-10 taxpayers (TU2)"
+  },
+  "ears24-897": {
+   "download": "ears-2024",
+   "raw": "227_50_897_082924.csv",
+   "layout": "Form 50-897 tax office file, sent with the EARS submission",
+   "title": "Tax office file (50-897)"
   },
   "ears23-ajr": {
    "download": "ears-2023",
    "raw": "227EARS083023.csv · AJR rows",
-   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1"
+   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1",
+   "title": "Account records (AJR)"
   },
   "ears23-aud": {
    "download": "ears-2023",
    "raw": "227EARS083023.csv · AUD rows",
-   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3"
+   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3",
+   "title": "Ag-use detail (AUD)"
   },
   "ears23-tu2": {
    "download": "ears-2023",
    "raw": "227EARS083023.csv · TU2 rows",
-   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5"
+   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5",
+   "title": "Top-10 taxpayers (TU2)"
+  },
+  "ears22-ajr": {
+   "download": "ears-2022",
+   "raw": "227EARS092822.csv · AJR rows",
+   "layout": "AJR record layout, EARS manual 96-1051 Appendix 1",
+   "title": "Account records (AJR)"
+  },
+  "ears22-aud": {
+   "download": "ears-2022",
+   "raw": "227EARS092822.csv · AUD rows",
+   "layout": "AUD record layout, EARS manual 96-1051 Appendix 3",
+   "title": "Ag-use detail (AUD)"
+  },
+  "ears22-tu2": {
+   "download": "ears-2022",
+   "raw": "227EARS092822.csv · TU2 rows",
+   "layout": "TU2 record layout, EARS manual 96-1051 Appendix 5",
+   "title": "Top-10 taxpayers (TU2)"
+  },
+  "rpt-ag": {
+   "download": "rpt-ag",
+   "raw": "ag_activities_2026.csv",
+   "layout": "TCAD property report (CSV, header row)",
+   "title": "AG activities"
+  },
+  "rpt-land": {
+   "download": "rpt-land",
+   "raw": "land_comments_2026.csv",
+   "layout": "TCAD property report (CSV, header row)",
+   "title": "Land comments"
+  },
+  "rpt-impdet": {
+   "download": "rpt-impdet",
+   "raw": "improvement_detail_2026_1-4.csv",
+   "layout": "TCAD property report (CSV, header row)",
+   "title": "Improvement details"
+  },
+  "rpt-water": {
+   "download": "rpt-water",
+   "raw": "waterfront_effective_front_foot_report_2026.csv",
+   "layout": "TCAD property report (CSV, header row)",
+   "title": "Waterfront front feet"
   }
+ },
+ "drive": {
+  "label": "Google Drive · County Playbooks › Travis › Public Information",
+  "checked": "2026-11-23",
+  "url": "https://drive.google.com/drive/folders/1UxRZdHqwnXa1VHzeBKjCoC66e69Imfdf"
  }
 }

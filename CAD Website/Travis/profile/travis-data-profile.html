@@ -556,5 +556,5 @@ window.addEventListener('hashchange', () => {
 let start = fromHash();
 if (!start) { try { const s = localStorage.getItem('travis-view'); if (s && SETS[s]) start = s } catch (e) {} }
 show(start || SOURCES[0].start);
-document.getElementById('foot').textContent = "Generated November 23, 2026. Every file was scanned in full with DuckDB; the fixed-width PACS .TXT files use the PACS 8.0.0.33 layout, and the JSON exports are split into one table per nested list. \"Loaded as\" is the type DuckDB assigns, and distinct counts are approximate (HyperLogLog). \"Data type\" is inferred from the values: Code means digits stored as text with leading zeros.";
+document.getElementById('foot').textContent = "Generated November 26, 2026. Every file was scanned in full with DuckDB; the fixed-width PACS .TXT files use the PACS 8.0.0.33 layout, and the JSON exports are split into one table per nested list. \"Loaded as\" is the type DuckDB assigns, and distinct counts are approximate (HyperLogLog). \"Data type\" is inferred from the values: Code means digits stored as text with leading zeros.";
 </script>

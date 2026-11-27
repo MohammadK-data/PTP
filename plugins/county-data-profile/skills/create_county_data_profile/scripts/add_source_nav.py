@@ -36,12 +36,18 @@ def build(page: pathlib.Path, srcmap: pathlib.Path, out: pathlib.Path, manifest:
     sources = (f'<p class="rv-intro">Sources: <a href="{pg['url']}" target="_blank" rel="noopener">{pg['url'].split('//')[1]}</a>'
                f' (checked {pg['checked']})'
                + (f' · our copies in <a href="{drive['url']}" target="_blank" rel="noopener">{drive['label']}</a>' if drive else '')
-               + '. Pick a table on the left, or search for a table or column.</p>\n')
-    ws = """<div class="ws" id="ws">
-    <button type="button" class="ws-toggle" id="ws-toggle">Tables and search</button>
+               + '. Pick a file below, or search for a table or column at the top.</p>\n')
+    ws = """<div class="ws-topbar"><button type="button" class="ws-homebtn" id="ws-home" aria-label="Home" title="Home"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9v11h4.5v-6h4v6h4.5V9"/></svg></button>
+  <div class="ws-search" id="ws-search" role="search">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input type="search" class="ws-q" id="ws-q" placeholder="Search tables and columns" aria-label="Search tables and columns" autocomplete="off">
+    <div class="ws-results" id="ws-results" hidden></div>
+  </div>
+  </div>
+  <div class="ws" id="ws">
+    <button type="button" class="ws-toggle" id="ws-toggle">Contents</button>
     <aside class="ws-side" id="ws-side" aria-label="Tables">
-      <div class="ws-sidetop"><button type="button" class="ws-homebtn" id="ws-home" aria-label="Home" title="Home"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9v11h4.5v-6h4v6h4.5V9"/></svg></button><input type="search" class="ws-q" id="ws-q" placeholder="Find a table or column" aria-label="Find a table or column">
-        <button type="button" class="ws-collapse" id="ws-collapse" aria-label="Hide sidebar" title="Hide sidebar" aria-expanded="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9.5 4v16"/></svg></button></div>
+      <div class="ws-sidetop"><span class="ws-toc-title">Contents</span></div>
       <div class="ws-list" id="ws-list"></div>
     </aside>
     <div class="ws-main" id="ws-main">

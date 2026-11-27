@@ -108,9 +108,12 @@ is the same; don't copy its groups, keys or file list - every county's are its o
       own catalog section (one file per endpoint group, `link_label` for the docs link), so endpoints appear too.
     - `add_source_nav.py review/<county>-column-review.html source_map.json review/<county>-column-review.html manifest.json`
       (in place; it refuses a page that already has a map, so always start from a fresh `add_column_review.py` copy).
-    - Check it in the browser: Home shows only the hint; a group shows its summary; a data file expands into its
-      tables; breadcrumb menus list each level's children; the Data preview / Columns / About tabs work; no
-      console errors.
+    - Check it in the browser. Layout: a top bar with a Home button and the search bar (tables and columns, results
+      in a dropdown); a Contents sidebar (section headings, groups, files, tables; no collapse) that scrolls to the
+      selected row; a breadcrumb of plain links with a Back button (previous view, else one level up). Home mirrors
+      the website: section headings, group labels and a clickable card per file (type badge, counts, progress,
+      Open →). A group shows its summary; a data file lists its tables; the Data preview / Columns / About tabs
+      work; "About this page" opens above the search bar; no console errors, desktop and phone widths.
     - **Every decision and every comment starts blank.** Never pick Need / Maybe / Drop and never write comments,
       not in the page and not in its database.
     - Publish as its own artifact with icon `checklist` and `capabilities: {"db": {}, "user": {"scopes": ["profile"]}}`

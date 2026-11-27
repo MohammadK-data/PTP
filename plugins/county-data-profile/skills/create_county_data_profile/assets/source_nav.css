@@ -262,3 +262,100 @@ header.ws-top .rv-off { flex-basis: 100% }
 /* home: a single quiet hint */
 .ws-hint-home { margin: 0; padding: 72px 16px; text-align: center; color: var(--muted); font-size: 15px }
 .ws-head:has(.ws-hint-home) { border-bottom: none }
+
+/* Home: the website's page - section headings, group labels, file cards */
+.ws-whome { display: grid; gap: 28px }
+.ws-wintro { margin: 0; color: var(--muted); font-size: 13px }
+.ws-wintro a { color: var(--accent) }
+.ws-wsec { display: grid; gap: 22px }
+.ws-wsec > h2 { margin: 0; font-size: 20px; padding-bottom: 8px; border-bottom: 1px solid var(--line) }
+.ws-wgrp { display: grid; gap: 10px }
+.ws-wglab { appearance: none; background: none; border: none; padding: 0; text-align: left; cursor: pointer; justify-self: start;
+  font: 600 11.5px var(--f-ui); letter-spacing: .08em; text-transform: uppercase; color: var(--muted) }
+.ws-wglab:hover { color: var(--accent) }
+.ws-wglab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.ws-wgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 14px }
+.ws-wcard { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; min-width: 0 }
+.ws-wcard.doc { gap: 6px }
+.ws-wtop { display: flex; justify-content: space-between; align-items: center; gap: 10px }
+.ws-wtop small { color: var(--muted); font-size: 12px; text-align: right }
+.ws-wname { font-size: 15px; line-height: 1.3; overflow-wrap: anywhere }
+.ws-wfile { color: var(--accent); font-size: 12px; overflow-wrap: anywhere }
+.ws-wnote { margin: 0; color: var(--muted); font-size: 12.5px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden }
+.ws-wprog { display: grid; gap: 6px; margin-top: auto; padding-top: 4px }
+.ws-wprog .ws-track { display: block; height: 6px; border-radius: 3px; background: var(--bg); overflow: hidden }
+.ws-wprog .ws-track i { display: block; height: 100%; background: var(--accent) }
+.ws-wprog small { color: var(--muted); font-size: 12.5px }
+.ws-wprog small b { color: var(--fg) }
+.ws-wact { display: flex; gap: 12px; align-items: center; margin-top: auto; padding-top: 2px }
+.ws-wcard:not(.doc) .ws-wact { margin-top: 0 }
+.ws-wopen { display: inline-block; border: 1px solid var(--accent); background: var(--accent); color: var(--bg); font: 600 13px var(--f-ui);
+  padding: 7px 14px; border-radius: 7px }
+.ws-wcard.doc .ws-wopen { background: var(--surface); color: var(--accent) }
+.ws-wopen:hover { box-shadow: 0 0 0 3px var(--accent-soft) }
+.ws-wopen:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.ws-wlink { color: var(--accent); font-size: 12.5px }
+
+/* whole card is the link to the file */
+.ws-wcard { cursor: pointer; transition: border-color .15s, box-shadow .15s }
+.ws-wcard:hover { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft) }
+.ws-wcard:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.ws-wcard .ws-wopen:hover { box-shadow: none }
+
+/* search: one bar across the top of the page, results drop down under it */
+.ws-search { position: relative; display: flex; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--line);
+  border-radius: 12px; padding: 4px 14px; color: var(--muted); z-index: 30 }
+.ws-search:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft) }
+.ws-search .ws-q { flex: 1; border: none; background: none; padding: 10px 0; font-size: 15px; min-width: 0 }
+.ws-search .ws-q:focus-visible { outline: none }
+.ws-results { position: absolute; left: 0; right: 0; top: calc(100% + 6px); max-height: min(70vh, 560px); overflow: auto; background: var(--surface);
+  border: 1px solid var(--line); border-radius: 12px; padding: 8px; box-shadow: 0 14px 36px rgb(0 0 0 / .24); display: grid; gap: 1px; align-content: start }
+.ws-results[hidden] { display: none }
+.ws-results .ws-col { grid-template-columns: 1fr }
+
+/* sidebar: a plain table of contents */
+.ws-side { grid-template-rows: auto minmax(0, 1fr); padding: 10px 8px }
+.ws-sidetop { align-items: center; padding: 0 2px 6px; border-bottom: 1px solid var(--line) }
+.ws-toc-title { flex: 1; font: 700 11px var(--f-ui); letter-spacing: .08em; text-transform: uppercase; color: var(--muted) }
+.ws-toc-sec { font: 700 11px var(--f-ui); letter-spacing: .07em; text-transform: uppercase; color: var(--fg); padding: 14px 8px 4px }
+.ws-toc-sec:first-child { padding-top: 6px }
+.ws-grp, .ws-grp.open { border: none; border-radius: 0; background: none; margin: 0; overflow: visible }
+.ws-grp.open .ws-grph { border-bottom: none }
+.ws-grph { grid-template-columns: minmax(0, 1fr) auto; gap: 6px; padding: 5px 8px; border-radius: 6px }
+.ws-grph .ws-gicon, .ws-gtext small { display: none }
+.ws-gtext b { font: 500 13px/1.35 var(--f-ui) }
+.ws-grph > i { font-size: 10px }
+.ws-grp.on .ws-grph, .ws-grp.on .ws-grph:hover { background: none; box-shadow: inset 2px 0 0 var(--accent) }
+.ws-grp.on .ws-gtext b { color: var(--accent); font-weight: 600 }
+.ws-grp > ul { padding: 0 0 4px 12px; margin: 0 0 0 8px; border-left: 1px solid var(--line) }
+.ws-docbtn { padding: 3px 8px; font-size: 12.5px }
+.ws-docbtn .ws-ext { display: none }
+.ws-docbtn, .ws-hastables { grid-template-columns: minmax(0, 1fr) auto }
+.ws-hastables .ws-dname { font-weight: 500 }
+.ws-docbtn .ws-dname small { display: none }
+.ws-tables { margin: 0 0 4px 8px; border-left: 1px solid var(--line) }
+.ws-gdrive { padding: 2px 8px 6px }
+
+/* top bar: Home beside the search */
+.ws-topbar { display: flex; gap: 10px; align-items: stretch }
+.ws-topbar .ws-search { flex: 1; min-width: 0 }
+.ws-topbar .ws-homebtn { width: auto; height: auto; min-width: 48px; padding: 0 14px; gap: 8px; display: inline-flex; align-items: center;
+  border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 12px; font: 600 14px var(--f-ui) }
+.ws-topbar .ws-homebtn:hover { border-color: var(--accent); color: var(--accent); background: var(--surface) }
+.ws-topbar .ws-homebtn::after { content: "Home" }
+@media (max-width: 520px) { .ws-topbar .ws-homebtn::after { content: none } .ws-topbar .ws-homebtn { padding: 0 12px } }
+.ws-sidetop { padding: 2px 6px 8px }
+
+/* the "About this page" panel opens above the search bar */
+header.ws-top { z-index: 50 }
+.ws-info-body { z-index: 60 }
+
+/* breadcrumb: Back button, then plain links up the path (no menus) */
+.ws-bc { align-items: center; gap: 6px 10px; flex-wrap: nowrap }
+.ws-bc-path { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 0; min-width: 0 }
+.ws-bc-link { padding: 2px 4px; border-radius: 6px }
+.ws-bc-here { padding: 2px 4px }
+.ws-back { appearance: none; flex: none; display: inline-flex; align-items: center; gap: 4px; font: 600 13px/1 var(--f-ui); color: var(--fg);
+  background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px 6px 7px; cursor: pointer }
+.ws-back:hover { border-color: var(--accent); color: var(--accent) }
+.ws-back:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }

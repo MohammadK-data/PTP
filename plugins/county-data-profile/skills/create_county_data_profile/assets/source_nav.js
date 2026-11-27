@@ -93,11 +93,13 @@ function wsFileRow(g, gi, f, fi) {
     ${open ? `<div class="ws-tables">${body}</div>` : ''}</li>`;
 }
 function wsRenderTree() {
+  let sec = null;
   return SRCMAP.groups.map((g, gi) => {
+    const head = g.section !== sec ? `<div class="ws-toc-sec">${esc(sec = g.section)}</div>` : '';
     const open = WS.gopen.has(gi);
     const nTables = g.files.reduce((a, f) => a + wsFileTables(f).length, 0);
     const meta = `${g.files.length} ${g.files.length === 1 ? 'file' : 'files'}${nTables ? ` · ${nTables} ${nTables === 1 ? 'table' : 'tables'}` : ''}`;
-    return `<div class="ws-doc ws-grp${open ? ' open' : ''}${nTables ? ' data' : ''}${WS.group === gi ? ' on' : ''}" data-gi="${gi}">
+    return head + `<div class="ws-doc ws-grp${open ? ' open' : ''}${nTables ? ' data' : ''}${WS.group === gi ? ' on' : ''}" data-gi="${gi}">
       <button type="button" class="ws-grph" data-gi="${gi}" aria-expanded="${open}"><span class="ws-gicon">${nTables ? WS_ICON.data : WS_ICON.docs}</span>
         <span class="ws-gtext"><b>${esc(g.name)}</b><small>${meta}</small></span><i aria-hidden="true">▸</i></button>
       ${open ? `<ul>${g.files.map((f, fi) => wsFileRow(g, gi, f, fi)).join('')}</ul>${g.drive ? `<a class="ws-gdrive" href="${esc(g.drive)}" target="_blank" rel="noopener">Drive folder ↗</a>` : ''}` : ''}</div>`;
@@ -105,9 +107,36 @@ function wsRenderTree() {
 }
 
 // home: nothing selected, so the right side stays empty
+// Home: the CAD website's page as it looks there - section headings, group labels, and a card per file with its
+// counts, the team's progress and an Open button. Everything else (sidebar, search, breadcrumb, tables) is unchanged.
+const wsFileName = f => { try { return decodeURIComponent(f.url.split('?')[0].replace(/\/+$/, '').split('/').pop()); } catch (e) { return f.url; } };
+function wsHomeCard(gi, f, fi) {
+  const t = wsFileTables(f), open = `<span class="ws-wopen" aria-hidden="true">Open →</span>`;
+  const ext = `<span class="ws-ext ws-ext-lg">${esc(wsExt(f.url))}</span>`, name = wsFileName(f);
+  const file = name && name !== f.name ? `<code class="ws-wfile">${esc(name)}</code>` : '';
+  if (!t.length) return `<div class="ws-wcard doc" role="button" tabindex="0" data-g="${gi}" data-f="${fi}"><div class="ws-wtop">${ext}<small>${esc(wsKind(f))}</small></div>
+    <b class="ws-wname">${esc(f.name)}</b>${file}<div class="ws-wact">${open}<a class="ws-wlink" href="${esc(f.url)}" target="_blank" rel="noopener">${esc(wsSite(f))} ↗</a></div></div>`;
+  const cols = t.reduce((a, k) => a + SETS[k].columns.length, 0), done = t.reduce((a, k) => a + Math.min(wsDone(k), SETS[k].columns.length), 0);
+  const nfiles = (f.contents || []).length;
+  const meta = (nfiles ? `${nfiles} ${nfiles === 1 ? 'file' : 'files'} · ` : '') + `${t.length} ${t.length === 1 ? 'table' : 'tables'} · ${cols.toLocaleString()} fields`;
+  return `<div class="ws-wcard" role="button" tabindex="0" data-g="${gi}" data-f="${fi}"><div class="ws-wtop">${ext}<small>${meta}</small></div>
+    <b class="ws-wname">${esc(f.name)}</b>${file}${f.note ? `<p class="ws-wnote">${esc(f.note)}</p>` : ''}
+    <div class="ws-wprog"><span class="ws-track"><i style="width:${Math.round(100 * done / (cols || 1))}%"></i></span>
+    <small>${WS.decReady ? `<b>${done.toLocaleString()}</b> of ${cols.toLocaleString()} decided` : `${cols.toLocaleString()} fields to review`}</small></div>
+    <div class="ws-wact">${open}</div></div>`;
+}
 function wsRenderHomeView() {
-  document.getElementById('ws-bc').innerHTML = '';
-  document.getElementById('ws-head').innerHTML = '<p class="ws-hint-home">Choose a category on the left to begin.</p>';
+  wsVisit(['Home', 'home']);
+  document.getElementById('ws-bc').innerHTML = WS.hist && WS.hist.length ? '<button type="button" class="ws-back" id="ws-back" aria-label="Back"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Back</button>' : '';
+  WS.bc = [['Home', 'home']];
+  let sec = null, html = '';
+  SRCMAP.groups.forEach((g, gi) => {
+    if (g.section !== sec) { if (sec !== null) html += '</section>'; sec = g.section; html += `<section class="ws-wsec"><h2>${esc(sec)}</h2>`; }
+    html += `<div class="ws-wgrp"><button type="button" class="ws-hgrp ws-wglab" data-gi="${gi}">${esc(g.name)}</button>
+      <div class="ws-wgrid">${g.files.map((f, fi) => wsHomeCard(gi, f, fi)).join('')}</div></div>`;
+  });
+  document.getElementById('ws-head').innerHTML = `<div class="ws-whome"><p class="ws-wintro">Pick a file to review its tables, or a category for its summary. Laid out like
+    <a href="${esc(SRCMAP.page.url)}" target="_blank" rel="noopener">${esc(SRCMAP.page.label)} ↗</a>.</p>${html}${sec !== null ? '</section>' : ''}</div>`;
 }
 
 // a category (website group) opened in the sidebar: its summary, with a card per file
@@ -141,53 +170,50 @@ function wsOpenGroup(gi, scroll = true) {
   WS.group = +gi; WS.home = false; WS.doc = null;
   WS.gopen.add(+gi);
   document.getElementById('panels').hidden = true;
-  wsRenderSide(); wsRenderGroupView();
+  wsRenderSide(); wsRenderGroupView(); wsScrollSide();
   if (scroll) document.getElementById('ws-main').scrollIntoView({ block: 'start' });
 }
 
 function wsHome(scroll = true) {
   WS.home = true; WS.doc = null; WS.group = null;
   document.getElementById('panels').hidden = true;
-  wsRenderSide(); wsRenderHomeView();
+  wsRenderSide(); wsRenderHomeView(); wsScrollSide();
   if (scroll) document.getElementById('ws-main').scrollIntoView({ block: 'start' });
 }
 function wsGoGroup(gi) {
   const side = document.getElementById('ws-side'), list = document.getElementById('ws-list');
   WS.q = ''; document.getElementById('ws-q').value = '';
   wsOpenGroup(gi, false);
-  side.classList.add('show');
-  if (document.getElementById('ws').classList.contains('collapsed')) document.getElementById('ws-collapse').click();
+  side.classList.add('show'); wsScrollSide();
   const target = list.querySelector(`.ws-grp[data-gi="${gi}"]`);
-  if (target) { list.scrollTop = target.offsetTop - 4; target.classList.add('ws-flash-doc'); setTimeout(() => target.classList.remove('ws-flash-doc'), 1600); }
+  if (target) { target.classList.add('ws-flash-doc'); setTimeout(() => target.classList.remove('ws-flash-doc'), 1600); }
   if (innerWidth <= 900) side.scrollIntoView({ block: 'start' });
 }
 
-// breadcrumb: each part is [label, action, ...args]. Every part opens a menu of what is inside it (the categories,
-// a category's files, a file's tables, a table's tabs), so you can jump sideways at any level.
+// breadcrumb: each part is [label, action, ...args], shown as plain links to each level above, with a Back button
+// that returns to the view you came from (or, with no history, one level up).
 const WS_TABS = [['sample', 'Data preview'], ['cols', 'Columns'], ['about', 'About']];
-function wsBcKids(part) {
-  const [, a, x, y] = part;
-  if (a === 'home') return SRCMAP.groups.map((g, gi) => [g.name, 'group', gi]);
-  if (a === 'group') return SRCMAP.groups[x].files.map((f, fi) => [f.name, 'doc', x, fi]);
-  if (a === 'doc') return wsFileTables(SRCMAP.groups[x].files[y]).map(k => [`${wsLabel(k)} · ${SRCMAP.tables[k].raw}`, 'table', k]);
-  if (a === 'table') { const p = built[x]; return WS_TABS.filter(([id]) => p && p.querySelector(`[data-wst="${id}"]`)).map(([id, l]) => [l, 'tab', id]); }
-  return [];
+const wsSame = (a, b) => !!(a && b) && a[1] === b[1] && String(a.slice(2)) === String(b.slice(2));
+function wsVisit(part) {   // remember each view (not tab switches) so Back can return to it
+  WS.hist = WS.hist || [];
+  if (WS.backing) WS.backing = false;
+  else if (WS.cur && !wsSame(WS.cur, part)) { WS.hist.push(WS.cur); if (WS.hist.length > 50) WS.hist.shift(); }
+  WS.cur = part;
+}
+function wsBack() {
+  let prev = (WS.hist || []).pop();
+  if (!prev) { const up = WS.bc.filter(x => x[1] !== 'tab'); prev = up[up.length - 2] || ['Home', 'home']; }
+  WS.backing = true;
+  wsBcGo(prev[1], prev.slice(2));
 }
 function wsRenderBc(parts) {
   WS.bc = parts.filter(x => x[0]);
-  const same = (a, b) => b && a[1] === b[1] && String(a.slice(2)) === String(b.slice(2));
-  document.getElementById('ws-bc').innerHTML = WS.bc.map((x, i, all) => {
-    const last = i === all.length - 1, kids = wsBcKids(x);
-    if (!kids.length) return last ? `<span class="ws-bc-here" aria-current="page">${esc(x[0])}</span>`
-      : `<button type="button" class="ws-bc-link" data-i="${i}">${esc(x[0])}</button>`;
-    const menu = (last ? '' : `<button type="button" class="ws-bcm ws-bcm-open" role="menuitem" data-i="${i}">Open ${esc(x[0])}</button><div class="ws-bcm-sep"></div>`) +
-      kids.map((k, j) => `<button type="button" class="ws-bcm${same(k, all[i + 1]) ? ' on' : ''}" role="menuitem" data-i="${i}" data-k="${j}">${esc(k[0])}</button>`).join('');
-    return `<span class="ws-bcw"><button type="button" class="ws-bc-item${last ? ' here' : ''}" data-i="${i}" aria-haspopup="menu" aria-expanded="false"${last ? ' aria-current="page"' : ''}>${esc(x[0])}<i class="ws-caret" aria-hidden="true">▾</i></button>
-      <div class="ws-bcmenu" role="menu" hidden>${menu}</div></span>`;
-  }).join('<i class="ws-bc-sep" aria-hidden="true">›</i>');
-}
-function wsBcClose() {
-  document.querySelectorAll('.ws-bcmenu:not([hidden])').forEach(m => { m.hidden = true; m.previousElementSibling.setAttribute('aria-expanded', 'false'); });
+  const view = WS.bc.filter(x => x[1] !== 'tab');
+  wsVisit(view[view.length - 1]);
+  const back = `<button type="button" class="ws-back" id="ws-back" aria-label="Back"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Back</button>`;
+  document.getElementById('ws-bc').innerHTML = back + '<span class="ws-bc-path">' + WS.bc.map((x, i, all) => i === all.length - 1
+    ? `<span class="ws-bc-here" aria-current="page">${esc(x[0])}</span>`
+    : `<button type="button" class="ws-bc-link" data-i="${i}">${esc(x[0])}</button>`).join('<i class="ws-bc-sep" aria-hidden="true">›</i>') + '</span>';
 }
 function wsBcGo(a, args) {
   if (a === 'table') return show(args[0]);
@@ -222,14 +248,30 @@ function wsOpenDoc(gi, fi) {
   WS.gopen.add(+gi);
   const f = SRCMAP.groups[gi].files[fi];
   if (f.export) WS.open.add(f.export);
-  wsRenderSide(); wsRenderDoc();
+  wsRenderSide(); wsRenderDoc(); wsScrollSide();
   document.getElementById('ws-main').scrollIntoView({ block: 'start' });
 }
 
 function wsRenderSide() {
   const list = document.getElementById('ws-list');
-  list.innerHTML = WS.q.length >= 2 ? wsRenderSearch() : wsRenderTree();
+  list.innerHTML = wsRenderTree();
 }
+// scroll the sidebar so the selected row (table, else file, else category) is in view, without moving the page
+function wsScrollSide() {
+  const list = document.getElementById('ws-list');
+  const on = list.querySelector('.ws-item.on') || list.querySelector('.ws-docbtn.on') || list.querySelector('.ws-grp.on > .ws-grph');
+  if (!on) { if (WS.home) list.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+  const lr = list.getBoundingClientRect(), r = on.getBoundingClientRect();
+  if (r.top >= lr.top + 4 && r.bottom <= lr.bottom - 4) return;
+  list.scrollTo({ top: list.scrollTop + r.top - lr.top - (list.clientHeight - r.height) / 2, behavior: 'smooth' });
+}
+// search: the bar at the top of the page, results in a dropdown under it
+function wsRenderResults() {
+  const box = document.getElementById('ws-results');
+  if (WS.q.length < 2) { box.hidden = true; box.innerHTML = ''; return; }
+  box.innerHTML = wsRenderSearch(); box.hidden = false;
+}
+function wsCloseResults() { document.getElementById('ws-results').hidden = true; }
 
 function wsRenderHead() {
   if (WS.home) return wsRenderHomeView();
@@ -366,53 +408,39 @@ function wsInit() {
     if (!f.export) side.classList.remove('show');
   });
   const q = document.getElementById('ws-q');
-  q.addEventListener('input', () => { WS.q = q.value.trim(); wsRenderSide(); });
+  q.addEventListener('input', () => { WS.q = q.value.trim(); wsRenderResults(); });
+  q.addEventListener('focus', () => { if (WS.q.length >= 2) wsRenderResults(); });
+  q.addEventListener('keydown', e => { if (e.key === 'Escape') { wsCloseResults(); q.blur(); } });
+  const res = document.getElementById('ws-results');
+  res.addEventListener('click', e => {
+    const it = e.target.closest('.ws-item'), c = e.target.closest('.ws-col');
+    if (it) show(it.dataset.key); else if (c) wsGoColumn(c.dataset.key, c.dataset.col); else return;
+    wsCloseResults(); document.getElementById('ws-main').scrollIntoView({ block: 'start' });
+  });
+  document.addEventListener('click', e => { if (!e.target.closest('#ws-search')) wsCloseResults(); });
   document.getElementById('ws-toggle').addEventListener('click', () => side.classList.toggle('show'));
-  // collapse the sidebar to a slim strip on wide screens; remembered per viewer in this browser
-  const ws = document.getElementById('ws'), col = document.getElementById('ws-collapse');
-  const setCollapsed = c => {
-    ws.classList.toggle('collapsed', c);
-    col.setAttribute('aria-expanded', String(!c));
-    col.setAttribute('aria-label', c ? 'Show sidebar' : 'Hide sidebar'); col.title = col.getAttribute('aria-label');
-    try { localStorage.setItem('ws-side-collapsed', c ? '1' : '') } catch (e) {}
-  };
-  col.addEventListener('click', () => setCollapsed(!ws.classList.contains('collapsed')));
-  try { if (localStorage.getItem('ws-side-collapsed')) setCollapsed(true) } catch (e) {}
   document.addEventListener('click', e => {   // the "About this page" popover closes on any click outside it
     const info = document.querySelector('.ws-info[open]');
     if (info && !info.contains(e.target)) info.open = false;
   });
-  const bcEl = document.getElementById('ws-bc');
-  bcEl.addEventListener('click', e => {
-    const item = e.target.closest('.ws-bc-item');
-    if (item) {   // open this level's menu (and close any other)
-      const menu = item.nextElementSibling, was = !menu.hidden;
-      wsBcClose();
-      if (!was) { menu.hidden = false; item.setAttribute('aria-expanded', 'true'); (menu.querySelector('.on') || menu.querySelector('.ws-bcm')).focus(); }
-      return;
-    }
-    const m = e.target.closest('.ws-bcm, .ws-bc-link');
+  document.getElementById('ws-bc').addEventListener('click', e => {
+    if (e.target.closest('#ws-back')) return wsBack();
+    const m = e.target.closest('.ws-bc-link');
     if (!m) return;
-    const part = WS.bc[m.dataset.i], go = m.dataset.k !== undefined ? wsBcKids(part)[m.dataset.k] : part;
-    wsBcClose();
-    wsBcGo(go[1], go.slice(2));
+    const part = WS.bc[m.dataset.i];
+    wsBcGo(part[1], part.slice(2));
   });
-  bcEl.addEventListener('keydown', e => {
-    if (e.key === 'Escape') { const open = bcEl.querySelector('.ws-bcmenu:not([hidden])'); if (open) { wsBcClose(); open.previousElementSibling.focus(); } }
-    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-      const items = [...(e.target.closest('.ws-bcmenu') || { querySelectorAll: () => [] }).querySelectorAll('.ws-bcm')];
-      const i = items.indexOf(e.target);
-      if (i >= 0) { e.preventDefault(); items[(i + (e.key === 'ArrowDown' ? 1 : items.length - 1)) % items.length].focus(); }
-    }
-  });
-  document.addEventListener('click', e => { if (!e.target.closest('.ws-bcw')) wsBcClose(); });
   document.getElementById('ws-head').addEventListener('click', e => {
     const b = e.target.closest('.ws-twin, .ws-item');
     if (b) { show(b.dataset.key); return; }
-    const d = e.target.closest('.ws-docbtn, .ws-hcard');
-    if (d) { wsOpenDoc(d.dataset.g, d.dataset.f); return; }
+    const d = e.target.closest('.ws-docbtn, .ws-hcard, .ws-wcard');
+    if (d && !e.target.closest('a')) { wsOpenDoc(d.dataset.g, d.dataset.f); return; }
     const hg = e.target.closest('.ws-hgrp');
     if (hg) wsGoGroup(hg.dataset.gi);
+  });
+  document.getElementById('ws-head').addEventListener('keydown', e => {
+    const c = e.target.closest('.ws-wcard');
+    if (c && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); wsOpenDoc(c.dataset.g, c.dataset.f); }
   });
   document.getElementById('ws-home').addEventListener('click', () => { wsHome(); side.classList.remove('show'); });
   addEventListener('hashchange', () => {   // an old #key.column link points at that column's card
@@ -437,6 +465,5 @@ function navSync(key) {
   wsRenderSide(); wsRenderHead();
   const p = built[key];
   if (p && p.dataset.wsTabs) wsTab(p, p.querySelector(`[data-wst="${WS.tab}"]`) ? WS.tab : 'sample');
-  const on = document.querySelector('.ws-item.on'), box = document.getElementById('ws-list');
-  if (on && !WS.q && (on.offsetTop < box.scrollTop || on.offsetTop > box.scrollTop + box.clientHeight - 40)) box.scrollTop = on.offsetTop - 80;
+  wsScrollSide();
 }

@@ -494,6 +494,103 @@ header.ws-top .rv-off { flex-basis: 100% }
 /* home: a single quiet hint */
 .ws-hint-home { margin: 0; padding: 72px 16px; text-align: center; color: var(--muted); font-size: 15px }
 .ws-head:has(.ws-hint-home) { border-bottom: none }
+
+/* Home: the website's page - section headings, group labels, file cards */
+.ws-whome { display: grid; gap: 28px }
+.ws-wintro { margin: 0; color: var(--muted); font-size: 13px }
+.ws-wintro a { color: var(--accent) }
+.ws-wsec { display: grid; gap: 22px }
+.ws-wsec > h2 { margin: 0; font-size: 20px; padding-bottom: 8px; border-bottom: 1px solid var(--line) }
+.ws-wgrp { display: grid; gap: 10px }
+.ws-wglab { appearance: none; background: none; border: none; padding: 0; text-align: left; cursor: pointer; justify-self: start;
+  font: 600 11.5px var(--f-ui); letter-spacing: .08em; text-transform: uppercase; color: var(--muted) }
+.ws-wglab:hover { color: var(--accent) }
+.ws-wglab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.ws-wgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 14px }
+.ws-wcard { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; min-width: 0 }
+.ws-wcard.doc { gap: 6px }
+.ws-wtop { display: flex; justify-content: space-between; align-items: center; gap: 10px }
+.ws-wtop small { color: var(--muted); font-size: 12px; text-align: right }
+.ws-wname { font-size: 15px; line-height: 1.3; overflow-wrap: anywhere }
+.ws-wfile { color: var(--accent); font-size: 12px; overflow-wrap: anywhere }
+.ws-wnote { margin: 0; color: var(--muted); font-size: 12.5px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden }
+.ws-wprog { display: grid; gap: 6px; margin-top: auto; padding-top: 4px }
+.ws-wprog .ws-track { display: block; height: 6px; border-radius: 3px; background: var(--bg); overflow: hidden }
+.ws-wprog .ws-track i { display: block; height: 100%; background: var(--accent) }
+.ws-wprog small { color: var(--muted); font-size: 12.5px }
+.ws-wprog small b { color: var(--fg) }
+.ws-wact { display: flex; gap: 12px; align-items: center; margin-top: auto; padding-top: 2px }
+.ws-wcard:not(.doc) .ws-wact { margin-top: 0 }
+.ws-wopen { display: inline-block; border: 1px solid var(--accent); background: var(--accent); color: var(--bg); font: 600 13px var(--f-ui);
+  padding: 7px 14px; border-radius: 7px }
+.ws-wcard.doc .ws-wopen { background: var(--surface); color: var(--accent) }
+.ws-wopen:hover { box-shadow: 0 0 0 3px var(--accent-soft) }
+.ws-wopen:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.ws-wlink { color: var(--accent); font-size: 12.5px }
+
+/* whole card is the link to the file */
+.ws-wcard { cursor: pointer; transition: border-color .15s, box-shadow .15s }
+.ws-wcard:hover { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft) }
+.ws-wcard:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.ws-wcard .ws-wopen:hover { box-shadow: none }
+
+/* search: one bar across the top of the page, results drop down under it */
+.ws-search { position: relative; display: flex; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--line);
+  border-radius: 12px; padding: 4px 14px; color: var(--muted); z-index: 30 }
+.ws-search:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft) }
+.ws-search .ws-q { flex: 1; border: none; background: none; padding: 10px 0; font-size: 15px; min-width: 0 }
+.ws-search .ws-q:focus-visible { outline: none }
+.ws-results { position: absolute; left: 0; right: 0; top: calc(100% + 6px); max-height: min(70vh, 560px); overflow: auto; background: var(--surface);
+  border: 1px solid var(--line); border-radius: 12px; padding: 8px; box-shadow: 0 14px 36px rgb(0 0 0 / .24); display: grid; gap: 1px; align-content: start }
+.ws-results[hidden] { display: none }
+.ws-results .ws-col { grid-template-columns: 1fr }
+
+/* sidebar: a plain table of contents */
+.ws-side { grid-template-rows: auto minmax(0, 1fr); padding: 10px 8px }
+.ws-sidetop { align-items: center; padding: 0 2px 6px; border-bottom: 1px solid var(--line) }
+.ws-toc-title { flex: 1; font: 700 11px var(--f-ui); letter-spacing: .08em; text-transform: uppercase; color: var(--muted) }
+.ws-toc-sec { font: 700 11px var(--f-ui); letter-spacing: .07em; text-transform: uppercase; color: var(--fg); padding: 14px 8px 4px }
+.ws-toc-sec:first-child { padding-top: 6px }
+.ws-grp, .ws-grp.open { border: none; border-radius: 0; background: none; margin: 0; overflow: visible }
+.ws-grp.open .ws-grph { border-bottom: none }
+.ws-grph { grid-template-columns: minmax(0, 1fr) auto; gap: 6px; padding: 5px 8px; border-radius: 6px }
+.ws-grph .ws-gicon, .ws-gtext small { display: none }
+.ws-gtext b { font: 500 13px/1.35 var(--f-ui) }
+.ws-grph > i { font-size: 10px }
+.ws-grp.on .ws-grph, .ws-grp.on .ws-grph:hover { background: none; box-shadow: inset 2px 0 0 var(--accent) }
+.ws-grp.on .ws-gtext b { color: var(--accent); font-weight: 600 }
+.ws-grp > ul { padding: 0 0 4px 12px; margin: 0 0 0 8px; border-left: 1px solid var(--line) }
+.ws-docbtn { padding: 3px 8px; font-size: 12.5px }
+.ws-docbtn .ws-ext { display: none }
+.ws-docbtn, .ws-hastables { grid-template-columns: minmax(0, 1fr) auto }
+.ws-hastables .ws-dname { font-weight: 500 }
+.ws-docbtn .ws-dname small { display: none }
+.ws-tables { margin: 0 0 4px 8px; border-left: 1px solid var(--line) }
+.ws-gdrive { padding: 2px 8px 6px }
+
+/* top bar: Home beside the search */
+.ws-topbar { display: flex; gap: 10px; align-items: stretch }
+.ws-topbar .ws-search { flex: 1; min-width: 0 }
+.ws-topbar .ws-homebtn { width: auto; height: auto; min-width: 48px; padding: 0 14px; gap: 8px; display: inline-flex; align-items: center;
+  border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 12px; font: 600 14px var(--f-ui) }
+.ws-topbar .ws-homebtn:hover { border-color: var(--accent); color: var(--accent); background: var(--surface) }
+.ws-topbar .ws-homebtn::after { content: "Home" }
+@media (max-width: 520px) { .ws-topbar .ws-homebtn::after { content: none } .ws-topbar .ws-homebtn { padding: 0 12px } }
+.ws-sidetop { padding: 2px 6px 8px }
+
+/* the "About this page" panel opens above the search bar */
+header.ws-top { z-index: 50 }
+.ws-info-body { z-index: 60 }
+
+/* breadcrumb: Back button, then plain links up the path (no menus) */
+.ws-bc { align-items: center; gap: 6px 10px; flex-wrap: nowrap }
+.ws-bc-path { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 0; min-width: 0 }
+.ws-bc-link { padding: 2px 4px; border-radius: 6px }
+.ws-bc-here { padding: 2px 4px }
+.ws-back { appearance: none; flex: none; display: inline-flex; align-items: center; gap: 4px; font: 600 13px/1 var(--f-ui); color: var(--fg);
+  background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px 6px 7px; cursor: pointer }
+.ws-back:hover { border-color: var(--accent); color: var(--accent) }
+.ws-back:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
 </style>
 
 <div class="wrap">
@@ -504,7 +601,7 @@ header.ws-top .rv-off { flex-basis: 100% }
     <p class="sub">Everything we keep from Denton CAD's Data Downloads page: the 2026 PACS <b>Appraisal Export</b> in two snapshots (the <b>certified</b> roll of July 27 and <b>supplement 3</b> of October 14), the 2026 certified <b>JSON export</b> flattened into one table per list, the <b>ProTax</b> protest exports for 2022–2024, and the agent files of the 2024 and 2025 exports. For each file you get its columns, data types, completeness and value distributions.</p>
   <p class="rv-intro">Team review: mark each column <b>Need</b>, <b>Maybe</b> or <b>Drop</b> and leave notes in the column table.
   A decision or note on a column applies to the same raw file in every download that has it. Everyone with access sees changes live.</p>
-  <p class="rv-intro">Sources: <a href="https://www.dentoncad.com/data-downloads" target="_blank" rel="noopener">www.dentoncad.com/data-downloads</a> (checked 2026-11-23) · our copies in <a href="https://drive.google.com/drive/folders/1OSUMzUacqv51HXycxIj7fidisyK4qwI9" target="_blank" rel="noopener">Google Drive · County Playbooks › Denton › CAD Reports</a>. Pick a table on the left, or search for a table or column.</p>
+  <p class="rv-intro">Sources: <a href="https://www.dentoncad.com/data-downloads" target="_blank" rel="noopener">www.dentoncad.com/data-downloads</a> (checked 2026-11-23) · our copies in <a href="https://drive.google.com/drive/folders/1OSUMzUacqv51HXycxIj7fidisyK4qwI9" target="_blank" rel="noopener">Google Drive · County Playbooks › Denton › CAD Reports</a>. Pick a file below, or search for a table or column at the top.</p>
     </div></details>
   <p class="rv-off" id="rv-off" hidden>Notes and decisions load when this page is opened on claude.ai.</p>
   </header>
@@ -516,11 +613,17 @@ header.ws-top .rv-off { flex-basis: 100% }
     <div class="years" role="tablist" id="years" aria-label="Year"></div>
     <div class="subtabs" role="tablist" id="subtabs" aria-label="Files in this group"></div>
   </div>
+  <div class="ws-topbar"><button type="button" class="ws-homebtn" id="ws-home" aria-label="Home" title="Home"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9v11h4.5v-6h4v6h4.5V9"/></svg></button>
+  <div class="ws-search" id="ws-search" role="search">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input type="search" class="ws-q" id="ws-q" placeholder="Search tables and columns" aria-label="Search tables and columns" autocomplete="off">
+    <div class="ws-results" id="ws-results" hidden></div>
+  </div>
+  </div>
   <div class="ws" id="ws">
-    <button type="button" class="ws-toggle" id="ws-toggle">Tables and search</button>
+    <button type="button" class="ws-toggle" id="ws-toggle">Contents</button>
     <aside class="ws-side" id="ws-side" aria-label="Tables">
-      <div class="ws-sidetop"><button type="button" class="ws-homebtn" id="ws-home" aria-label="Home" title="Home"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9v11h4.5v-6h4v6h4.5V9"/></svg></button><input type="search" class="ws-q" id="ws-q" placeholder="Find a table or column" aria-label="Find a table or column">
-        <button type="button" class="ws-collapse" id="ws-collapse" aria-label="Hide sidebar" title="Hide sidebar" aria-expanded="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9.5 4v16"/></svg></button></div>
+      <div class="ws-sidetop"><span class="ws-toc-title">Contents</span></div>
       <div class="ws-list" id="ws-list"></div>
     </aside>
     <div class="ws-main" id="ws-main">
@@ -901,11 +1004,13 @@ function wsFileRow(g, gi, f, fi) {
     ${open ? `<div class="ws-tables">${body}</div>` : ''}</li>`;
 }
 function wsRenderTree() {
+  let sec = null;
   return SRCMAP.groups.map((g, gi) => {
+    const head = g.section !== sec ? `<div class="ws-toc-sec">${esc(sec = g.section)}</div>` : '';
     const open = WS.gopen.has(gi);
     const nTables = g.files.reduce((a, f) => a + wsFileTables(f).length, 0);
     const meta = `${g.files.length} ${g.files.length === 1 ? 'file' : 'files'}${nTables ? ` · ${nTables} ${nTables === 1 ? 'table' : 'tables'}` : ''}`;
-    return `<div class="ws-doc ws-grp${open ? ' open' : ''}${nTables ? ' data' : ''}${WS.group === gi ? ' on' : ''}" data-gi="${gi}">
+    return head + `<div class="ws-doc ws-grp${open ? ' open' : ''}${nTables ? ' data' : ''}${WS.group === gi ? ' on' : ''}" data-gi="${gi}">
       <button type="button" class="ws-grph" data-gi="${gi}" aria-expanded="${open}"><span class="ws-gicon">${nTables ? WS_ICON.data : WS_ICON.docs}</span>
         <span class="ws-gtext"><b>${esc(g.name)}</b><small>${meta}</small></span><i aria-hidden="true">▸</i></button>
       ${open ? `<ul>${g.files.map((f, fi) => wsFileRow(g, gi, f, fi)).join('')}</ul>${g.drive ? `<a class="ws-gdrive" href="${esc(g.drive)}" target="_blank" rel="noopener">Drive folder ↗</a>` : ''}` : ''}</div>`;
@@ -913,9 +1018,36 @@ function wsRenderTree() {
 }
 
 // home: nothing selected, so the right side stays empty
+// Home: the CAD website's page as it looks there - section headings, group labels, and a card per file with its
+// counts, the team's progress and an Open button. Everything else (sidebar, search, breadcrumb, tables) is unchanged.
+const wsFileName = f => { try { return decodeURIComponent(f.url.split('?')[0].replace(/\/+$/, '').split('/').pop()); } catch (e) { return f.url; } };
+function wsHomeCard(gi, f, fi) {
+  const t = wsFileTables(f), open = `<span class="ws-wopen" aria-hidden="true">Open →</span>`;
+  const ext = `<span class="ws-ext ws-ext-lg">${esc(wsExt(f.url))}</span>`, name = wsFileName(f);
+  const file = name && name !== f.name ? `<code class="ws-wfile">${esc(name)}</code>` : '';
+  if (!t.length) return `<div class="ws-wcard doc" role="button" tabindex="0" data-g="${gi}" data-f="${fi}"><div class="ws-wtop">${ext}<small>${esc(wsKind(f))}</small></div>
+    <b class="ws-wname">${esc(f.name)}</b>${file}<div class="ws-wact">${open}<a class="ws-wlink" href="${esc(f.url)}" target="_blank" rel="noopener">${esc(wsSite(f))} ↗</a></div></div>`;
+  const cols = t.reduce((a, k) => a + SETS[k].columns.length, 0), done = t.reduce((a, k) => a + Math.min(wsDone(k), SETS[k].columns.length), 0);
+  const nfiles = (f.contents || []).length;
+  const meta = (nfiles ? `${nfiles} ${nfiles === 1 ? 'file' : 'files'} · ` : '') + `${t.length} ${t.length === 1 ? 'table' : 'tables'} · ${cols.toLocaleString()} fields`;
+  return `<div class="ws-wcard" role="button" tabindex="0" data-g="${gi}" data-f="${fi}"><div class="ws-wtop">${ext}<small>${meta}</small></div>
+    <b class="ws-wname">${esc(f.name)}</b>${file}${f.note ? `<p class="ws-wnote">${esc(f.note)}</p>` : ''}
+    <div class="ws-wprog"><span class="ws-track"><i style="width:${Math.round(100 * done / (cols || 1))}%"></i></span>
+    <small>${WS.decReady ? `<b>${done.toLocaleString()}</b> of ${cols.toLocaleString()} decided` : `${cols.toLocaleString()} fields to review`}</small></div>
+    <div class="ws-wact">${open}</div></div>`;
+}
 function wsRenderHomeView() {
-  document.getElementById('ws-bc').innerHTML = '';
-  document.getElementById('ws-head').innerHTML = '<p class="ws-hint-home">Choose a category on the left to begin.</p>';
+  wsVisit(['Home', 'home']);
+  document.getElementById('ws-bc').innerHTML = WS.hist && WS.hist.length ? '<button type="button" class="ws-back" id="ws-back" aria-label="Back"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Back</button>' : '';
+  WS.bc = [['Home', 'home']];
+  let sec = null, html = '';
+  SRCMAP.groups.forEach((g, gi) => {
+    if (g.section !== sec) { if (sec !== null) html += '</section>'; sec = g.section; html += `<section class="ws-wsec"><h2>${esc(sec)}</h2>`; }
+    html += `<div class="ws-wgrp"><button type="button" class="ws-hgrp ws-wglab" data-gi="${gi}">${esc(g.name)}</button>
+      <div class="ws-wgrid">${g.files.map((f, fi) => wsHomeCard(gi, f, fi)).join('')}</div></div>`;
+  });
+  document.getElementById('ws-head').innerHTML = `<div class="ws-whome"><p class="ws-wintro">Pick a file to review its tables, or a category for its summary. Laid out like
+    <a href="${esc(SRCMAP.page.url)}" target="_blank" rel="noopener">${esc(SRCMAP.page.label)} ↗</a>.</p>${html}${sec !== null ? '</section>' : ''}</div>`;
 }
 
 // a category (website group) opened in the sidebar: its summary, with a card per file
@@ -949,53 +1081,50 @@ function wsOpenGroup(gi, scroll = true) {
   WS.group = +gi; WS.home = false; WS.doc = null;
   WS.gopen.add(+gi);
   document.getElementById('panels').hidden = true;
-  wsRenderSide(); wsRenderGroupView();
+  wsRenderSide(); wsRenderGroupView(); wsScrollSide();
   if (scroll) document.getElementById('ws-main').scrollIntoView({ block: 'start' });
 }
 
 function wsHome(scroll = true) {
   WS.home = true; WS.doc = null; WS.group = null;
   document.getElementById('panels').hidden = true;
-  wsRenderSide(); wsRenderHomeView();
+  wsRenderSide(); wsRenderHomeView(); wsScrollSide();
   if (scroll) document.getElementById('ws-main').scrollIntoView({ block: 'start' });
 }
 function wsGoGroup(gi) {
   const side = document.getElementById('ws-side'), list = document.getElementById('ws-list');
   WS.q = ''; document.getElementById('ws-q').value = '';
   wsOpenGroup(gi, false);
-  side.classList.add('show');
-  if (document.getElementById('ws').classList.contains('collapsed')) document.getElementById('ws-collapse').click();
+  side.classList.add('show'); wsScrollSide();
   const target = list.querySelector(`.ws-grp[data-gi="${gi}"]`);
-  if (target) { list.scrollTop = target.offsetTop - 4; target.classList.add('ws-flash-doc'); setTimeout(() => target.classList.remove('ws-flash-doc'), 1600); }
+  if (target) { target.classList.add('ws-flash-doc'); setTimeout(() => target.classList.remove('ws-flash-doc'), 1600); }
   if (innerWidth <= 900) side.scrollIntoView({ block: 'start' });
 }
 
-// breadcrumb: each part is [label, action, ...args]. Every part opens a menu of what is inside it (the categories,
-// a category's files, a file's tables, a table's tabs), so you can jump sideways at any level.
+// breadcrumb: each part is [label, action, ...args], shown as plain links to each level above, with a Back button
+// that returns to the view you came from (or, with no history, one level up).
 const WS_TABS = [['sample', 'Data preview'], ['cols', 'Columns'], ['about', 'About']];
-function wsBcKids(part) {
-  const [, a, x, y] = part;
-  if (a === 'home') return SRCMAP.groups.map((g, gi) => [g.name, 'group', gi]);
-  if (a === 'group') return SRCMAP.groups[x].files.map((f, fi) => [f.name, 'doc', x, fi]);
-  if (a === 'doc') return wsFileTables(SRCMAP.groups[x].files[y]).map(k => [`${wsLabel(k)} · ${SRCMAP.tables[k].raw}`, 'table', k]);
-  if (a === 'table') { const p = built[x]; return WS_TABS.filter(([id]) => p && p.querySelector(`[data-wst="${id}"]`)).map(([id, l]) => [l, 'tab', id]); }
-  return [];
+const wsSame = (a, b) => !!(a && b) && a[1] === b[1] && String(a.slice(2)) === String(b.slice(2));
+function wsVisit(part) {   // remember each view (not tab switches) so Back can return to it
+  WS.hist = WS.hist || [];
+  if (WS.backing) WS.backing = false;
+  else if (WS.cur && !wsSame(WS.cur, part)) { WS.hist.push(WS.cur); if (WS.hist.length > 50) WS.hist.shift(); }
+  WS.cur = part;
+}
+function wsBack() {
+  let prev = (WS.hist || []).pop();
+  if (!prev) { const up = WS.bc.filter(x => x[1] !== 'tab'); prev = up[up.length - 2] || ['Home', 'home']; }
+  WS.backing = true;
+  wsBcGo(prev[1], prev.slice(2));
 }
 function wsRenderBc(parts) {
   WS.bc = parts.filter(x => x[0]);
-  const same = (a, b) => b && a[1] === b[1] && String(a.slice(2)) === String(b.slice(2));
-  document.getElementById('ws-bc').innerHTML = WS.bc.map((x, i, all) => {
-    const last = i === all.length - 1, kids = wsBcKids(x);
-    if (!kids.length) return last ? `<span class="ws-bc-here" aria-current="page">${esc(x[0])}</span>`
-      : `<button type="button" class="ws-bc-link" data-i="${i}">${esc(x[0])}</button>`;
-    const menu = (last ? '' : `<button type="button" class="ws-bcm ws-bcm-open" role="menuitem" data-i="${i}">Open ${esc(x[0])}</button><div class="ws-bcm-sep"></div>`) +
-      kids.map((k, j) => `<button type="button" class="ws-bcm${same(k, all[i + 1]) ? ' on' : ''}" role="menuitem" data-i="${i}" data-k="${j}">${esc(k[0])}</button>`).join('');
-    return `<span class="ws-bcw"><button type="button" class="ws-bc-item${last ? ' here' : ''}" data-i="${i}" aria-haspopup="menu" aria-expanded="false"${last ? ' aria-current="page"' : ''}>${esc(x[0])}<i class="ws-caret" aria-hidden="true">▾</i></button>
-      <div class="ws-bcmenu" role="menu" hidden>${menu}</div></span>`;
-  }).join('<i class="ws-bc-sep" aria-hidden="true">›</i>');
-}
-function wsBcClose() {
-  document.querySelectorAll('.ws-bcmenu:not([hidden])').forEach(m => { m.hidden = true; m.previousElementSibling.setAttribute('aria-expanded', 'false'); });
+  const view = WS.bc.filter(x => x[1] !== 'tab');
+  wsVisit(view[view.length - 1]);
+  const back = `<button type="button" class="ws-back" id="ws-back" aria-label="Back"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Back</button>`;
+  document.getElementById('ws-bc').innerHTML = back + '<span class="ws-bc-path">' + WS.bc.map((x, i, all) => i === all.length - 1
+    ? `<span class="ws-bc-here" aria-current="page">${esc(x[0])}</span>`
+    : `<button type="button" class="ws-bc-link" data-i="${i}">${esc(x[0])}</button>`).join('<i class="ws-bc-sep" aria-hidden="true">›</i>') + '</span>';
 }
 function wsBcGo(a, args) {
   if (a === 'table') return show(args[0]);
@@ -1030,14 +1159,30 @@ function wsOpenDoc(gi, fi) {
   WS.gopen.add(+gi);
   const f = SRCMAP.groups[gi].files[fi];
   if (f.export) WS.open.add(f.export);
-  wsRenderSide(); wsRenderDoc();
+  wsRenderSide(); wsRenderDoc(); wsScrollSide();
   document.getElementById('ws-main').scrollIntoView({ block: 'start' });
 }
 
 function wsRenderSide() {
   const list = document.getElementById('ws-list');
-  list.innerHTML = WS.q.length >= 2 ? wsRenderSearch() : wsRenderTree();
+  list.innerHTML = wsRenderTree();
 }
+// scroll the sidebar so the selected row (table, else file, else category) is in view, without moving the page
+function wsScrollSide() {
+  const list = document.getElementById('ws-list');
+  const on = list.querySelector('.ws-item.on') || list.querySelector('.ws-docbtn.on') || list.querySelector('.ws-grp.on > .ws-grph');
+  if (!on) { if (WS.home) list.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+  const lr = list.getBoundingClientRect(), r = on.getBoundingClientRect();
+  if (r.top >= lr.top + 4 && r.bottom <= lr.bottom - 4) return;
+  list.scrollTo({ top: list.scrollTop + r.top - lr.top - (list.clientHeight - r.height) / 2, behavior: 'smooth' });
+}
+// search: the bar at the top of the page, results in a dropdown under it
+function wsRenderResults() {
+  const box = document.getElementById('ws-results');
+  if (WS.q.length < 2) { box.hidden = true; box.innerHTML = ''; return; }
+  box.innerHTML = wsRenderSearch(); box.hidden = false;
+}
+function wsCloseResults() { document.getElementById('ws-results').hidden = true; }
 
 function wsRenderHead() {
   if (WS.home) return wsRenderHomeView();
@@ -1174,53 +1319,39 @@ function wsInit() {
     if (!f.export) side.classList.remove('show');
   });
   const q = document.getElementById('ws-q');
-  q.addEventListener('input', () => { WS.q = q.value.trim(); wsRenderSide(); });
+  q.addEventListener('input', () => { WS.q = q.value.trim(); wsRenderResults(); });
+  q.addEventListener('focus', () => { if (WS.q.length >= 2) wsRenderResults(); });
+  q.addEventListener('keydown', e => { if (e.key === 'Escape') { wsCloseResults(); q.blur(); } });
+  const res = document.getElementById('ws-results');
+  res.addEventListener('click', e => {
+    const it = e.target.closest('.ws-item'), c = e.target.closest('.ws-col');
+    if (it) show(it.dataset.key); else if (c) wsGoColumn(c.dataset.key, c.dataset.col); else return;
+    wsCloseResults(); document.getElementById('ws-main').scrollIntoView({ block: 'start' });
+  });
+  document.addEventListener('click', e => { if (!e.target.closest('#ws-search')) wsCloseResults(); });
   document.getElementById('ws-toggle').addEventListener('click', () => side.classList.toggle('show'));
-  // collapse the sidebar to a slim strip on wide screens; remembered per viewer in this browser
-  const ws = document.getElementById('ws'), col = document.getElementById('ws-collapse');
-  const setCollapsed = c => {
-    ws.classList.toggle('collapsed', c);
-    col.setAttribute('aria-expanded', String(!c));
-    col.setAttribute('aria-label', c ? 'Show sidebar' : 'Hide sidebar'); col.title = col.getAttribute('aria-label');
-    try { localStorage.setItem('ws-side-collapsed', c ? '1' : '') } catch (e) {}
-  };
-  col.addEventListener('click', () => setCollapsed(!ws.classList.contains('collapsed')));
-  try { if (localStorage.getItem('ws-side-collapsed')) setCollapsed(true) } catch (e) {}
   document.addEventListener('click', e => {   // the "About this page" popover closes on any click outside it
     const info = document.querySelector('.ws-info[open]');
     if (info && !info.contains(e.target)) info.open = false;
   });
-  const bcEl = document.getElementById('ws-bc');
-  bcEl.addEventListener('click', e => {
-    const item = e.target.closest('.ws-bc-item');
-    if (item) {   // open this level's menu (and close any other)
-      const menu = item.nextElementSibling, was = !menu.hidden;
-      wsBcClose();
-      if (!was) { menu.hidden = false; item.setAttribute('aria-expanded', 'true'); (menu.querySelector('.on') || menu.querySelector('.ws-bcm')).focus(); }
-      return;
-    }
-    const m = e.target.closest('.ws-bcm, .ws-bc-link');
+  document.getElementById('ws-bc').addEventListener('click', e => {
+    if (e.target.closest('#ws-back')) return wsBack();
+    const m = e.target.closest('.ws-bc-link');
     if (!m) return;
-    const part = WS.bc[m.dataset.i], go = m.dataset.k !== undefined ? wsBcKids(part)[m.dataset.k] : part;
-    wsBcClose();
-    wsBcGo(go[1], go.slice(2));
+    const part = WS.bc[m.dataset.i];
+    wsBcGo(part[1], part.slice(2));
   });
-  bcEl.addEventListener('keydown', e => {
-    if (e.key === 'Escape') { const open = bcEl.querySelector('.ws-bcmenu:not([hidden])'); if (open) { wsBcClose(); open.previousElementSibling.focus(); } }
-    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-      const items = [...(e.target.closest('.ws-bcmenu') || { querySelectorAll: () => [] }).querySelectorAll('.ws-bcm')];
-      const i = items.indexOf(e.target);
-      if (i >= 0) { e.preventDefault(); items[(i + (e.key === 'ArrowDown' ? 1 : items.length - 1)) % items.length].focus(); }
-    }
-  });
-  document.addEventListener('click', e => { if (!e.target.closest('.ws-bcw')) wsBcClose(); });
   document.getElementById('ws-head').addEventListener('click', e => {
     const b = e.target.closest('.ws-twin, .ws-item');
     if (b) { show(b.dataset.key); return; }
-    const d = e.target.closest('.ws-docbtn, .ws-hcard');
-    if (d) { wsOpenDoc(d.dataset.g, d.dataset.f); return; }
+    const d = e.target.closest('.ws-docbtn, .ws-hcard, .ws-wcard');
+    if (d && !e.target.closest('a')) { wsOpenDoc(d.dataset.g, d.dataset.f); return; }
     const hg = e.target.closest('.ws-hgrp');
     if (hg) wsGoGroup(hg.dataset.gi);
+  });
+  document.getElementById('ws-head').addEventListener('keydown', e => {
+    const c = e.target.closest('.ws-wcard');
+    if (c && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); wsOpenDoc(c.dataset.g, c.dataset.f); }
   });
   document.getElementById('ws-home').addEventListener('click', () => { wsHome(); side.classList.remove('show'); });
   addEventListener('hashchange', () => {   // an old #key.column link points at that column's card
@@ -1245,8 +1376,7 @@ function navSync(key) {
   wsRenderSide(); wsRenderHead();
   const p = built[key];
   if (p && p.dataset.wsTabs) wsTab(p, p.querySelector(`[data-wst="${WS.tab}"]`) ? WS.tab : 'sample');
-  const on = document.querySelector('.ws-item.on'), box = document.getElementById('ws-list');
-  if (on && !WS.q && (on.offsetTop < box.scrollTop || on.offsetTop > box.scrollTop + box.clientHeight - 40)) box.scrollTop = on.offsetTop - 80;
+  wsScrollSide();
 }
 </script>
 
