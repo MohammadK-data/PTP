@@ -1,0 +1,750 @@
+{
+ "page": {
+  "label": "Bexar Central Appraisal District · Public Information Act requests (data exports on request, via BCAD's FTP server)",
+  "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request",
+  "short": "BCAD",
+  "checked": "2026-11-27"
+ },
+ "groups": [
+  {
+   "name": "Appraisal Data Export",
+   "files": [
+    {
+     "name": "2026 Appraisal Data Export as of 2026-03-28_1st Notice Run Preliminary.zip",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026%20Appraisal%20Data%20Export%20as%20of%202026-03-28_1st%20Notice%20Run%20Preliminary.zip",
+     "status": "used",
+     "site": "BCAD (on request)",
+     "note": "First-notice preliminary roll, run March 28, 2026 (export version 8.0.0.33). APPRAISAL_UDI.TXT is empty and has no table.",
+     "contents": [
+      "2026-03-28_007264_APPRAISAL_ABSTRACT_SUBDV.TXT",
+      "2026-03-28_007264_APPRAISAL_AGENT.TXT",
+      "2026-03-28_007264_APPRAISAL_ARB.TXT",
+      "2026-03-28_007264_APPRAISAL_COUNTRY_CODE.TXT",
+      "2026-03-28_007264_APPRAISAL_ENTITY.TXT",
+      "2026-03-28_007264_APPRAISAL_ENTITY_INFO.TXT",
+      "2026-03-28_007264_APPRAISAL_ENTITY_TOTALS.TXT",
+      "2026-03-28_007264_APPRAISAL_HEADER.TXT",
+      "2026-03-28_007264_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+      "2026-03-28_007264_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+      "2026-03-28_007264_APPRAISAL_IMPROVEMENT_INFO.TXT",
+      "2026-03-28_007264_APPRAISAL_INFO.TXT",
+      "2026-03-28_007264_APPRAISAL_LAND_DETAIL.TXT",
+      "2026-03-28_007264_APPRAISAL_LAWSUIT.TXT",
+      "2026-03-28_007264_APPRAISAL_MOBILE_HOME_INFO.TXT",
+      "2026-03-28_007264_APPRAISAL_STATE_CODE.TXT",
+      "2026-03-28_007264_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+      "2026-03-28_007264_APPRAISAL_UDI.TXT",
+      "2026-03-28_007264_ARBITRATION_LAWSUIT.TXT"
+     ],
+     "export": "ade-2026-03-28"
+    },
+    {
+     "name": "2026 Appraisal Data Export as of 2026-10-08_Sup 298.zip",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026%20Appraisal%20Data%20Export%20as%20of%202026-10-08_Sup%20298.zip",
+     "status": "used",
+     "site": "BCAD (on request)",
+     "note": "Whole roll as of supplement 298. The files inside are dated October 15, 2026 (export version 8.0.0.34). APPRAISAL_UDI.TXT is empty and has no table.",
+     "contents": [
+      "2026-10-15_007456_APPRAISAL_ABSTRACT_SUBDV.TXT",
+      "2026-10-15_007456_APPRAISAL_AGENT.TXT",
+      "2026-10-15_007456_APPRAISAL_ARB.TXT",
+      "2026-10-15_007456_APPRAISAL_COUNTRY_CODE.TXT",
+      "2026-10-15_007456_APPRAISAL_ENTITY.TXT",
+      "2026-10-15_007456_APPRAISAL_ENTITY_INFO.TXT",
+      "2026-10-15_007456_APPRAISAL_ENTITY_TOTALS.TXT",
+      "2026-10-15_007456_APPRAISAL_HEADER.TXT",
+      "2026-10-15_007456_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+      "2026-10-15_007456_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+      "2026-10-15_007456_APPRAISAL_IMPROVEMENT_INFO.TXT",
+      "2026-10-15_007456_APPRAISAL_INFO.TXT",
+      "2026-10-15_007456_APPRAISAL_LAND_DETAIL.TXT",
+      "2026-10-15_007456_APPRAISAL_LAWSUIT.TXT",
+      "2026-10-15_007456_APPRAISAL_MOBILE_HOME_INFO.TXT",
+      "2026-10-15_007456_APPRAISAL_STATE_CODE.TXT",
+      "2026-10-15_007456_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+      "2026-10-15_007456_APPRAISAL_UDI.TXT",
+      "2026-10-15_007456_ARBITRATION_LAWSUIT.TXT"
+     ],
+     "export": "ade-2026-10-08"
+    },
+    {
+     "name": "Appraisal Export Layout - 8.0.31.xlsx",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/Appraisal%20Export%20Layout%20-%208.0.31.xlsx",
+     "status": "layout",
+     "site": "BCAD (on request)",
+     "note": "Shipped with the March 28 export."
+    },
+    {
+     "name": "Layout Changes 8_0_31.pdf",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/Layout%20Changes%208_0_31.pdf",
+     "status": "layout",
+     "site": "BCAD (on request)"
+    },
+    {
+     "name": "Appraisal Export Layout - 8.0.34.xlsx",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/Appraisal%20Export%20Layout%20-%208.0.34.xlsx",
+     "status": "layout",
+     "site": "BCAD (on request)",
+     "note": "Shipped with the supplement 298 export; used to convert both snapshots."
+    },
+    {
+     "name": "Layout Changes 8_0_34.pdf",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/Layout%20Changes%208_0_34.pdf",
+     "status": "layout",
+     "site": "BCAD (on request)"
+    },
+    {
+     "name": "2026 X25.19A - Accounts not Ready for Notice as of 2026-04-01.xlsx",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026%20X25.19A%20-%20Accounts%20not%20Ready%20for%20Notice%20as%20of%202026-04-01.xlsx",
+     "status": "not",
+     "site": "BCAD (on request)",
+     "note": "Shipped with the March 28 export.",
+     "drive": "https://drive.google.com/file/d/1U7_ncFohEe4iRllrDFiuipVYsewds3tf/view"
+    }
+   ],
+   "section": "Data exports (on request, via BCAD's FTP server)",
+   "desc": "BCAD's PACS Appraisal Export: 19 fixed-width .TXT files covering every property, with the layout workbook and change notes for each release."
+  },
+  {
+   "name": "Agent Export",
+   "files": [
+    {
+     "name": "2026 Agent Export as of 2026-10-26.zip",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026%20Agent%20Export%20as%20of%202026-10-26.zip",
+     "status": "used",
+     "site": "BCAD (on request)",
+     "note": "Profiled from CSV copies that add the column names from the layout PDF; values unchanged.",
+     "contents": [
+      "FID_ARBExport.txt",
+      "FID_ARBInquiryExport.txt",
+      "FID_ARBInquiryLetterHistory.txt",
+      "FID_ARBLetterHistory.txt",
+      "FID_ApprNoticeExport.txt",
+      "FID_BPPExport.txt",
+      "FID_BPPRealLinkExport.txt",
+      "FID_BuildingPermitExport.txt",
+      "FID_BuildingPermitPropertyExport.txt",
+      "FID_CommentsExport.txt",
+      "FID_EventsExport.txt",
+      "FID_ImprovementExport.txt",
+      "FID_ImprovementFeaturesExport.txt",
+      "FID_IncomeExport.txt",
+      "FID_LandExport.txt",
+      "FID_PropDataExport.txt",
+      "FID_ProtesterExport.txt",
+      "FID_SalesExport.txt",
+      "FID_SalesImprovementExport.txt",
+      "FID_SalesLandExport.txt",
+      "FID_SharedPropExport.txt"
+     ],
+     "export": "agent-2026-10-26"
+    },
+    {
+     "name": "Agent Export File Layout for Agents.pdf",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/Agent%20Export%20File%20Layout%20for%20Agents.pdf",
+     "status": "layout",
+     "site": "BCAD (on request)",
+     "drive": "https://drive.google.com/file/d/1lOp3NgIlk3mXfDdFrZkvzFePtEaqzgGa/view"
+    }
+   ],
+   "section": "Data exports (on request, via BCAD's FTP server)",
+   "desc": "BCAD's Agent Export: 21 headerless pipe-delimited files on property, improvements, land, sales, BPP, permits and protests, for every property in the county."
+  },
+  {
+   "name": "Non-Agent Export",
+   "files": [
+    {
+     "name": "2026 Non-Agent Export as of 2026-10-21.zip",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026%20Non-Agent%20Export%20as%20of%202026-10-21.zip",
+     "status": "data",
+     "site": "BCAD (on request)",
+     "note": "We have this file but don't profile it: its files match the Agent Export of October 26, which is profiled.",
+     "contents": [
+      "NON_AGENT_ARBExport.txt",
+      "NON_AGENT_ARBInquiryExport.txt",
+      "NON_AGENT_ARBInquiryLetterHistory.txt",
+      "NON_AGENT_ARBLetterHistory.txt",
+      "NON_AGENT_ApprNoticeExport.txt",
+      "NON_AGENT_BPPExport.txt",
+      "NON_AGENT_BPPRealLinkExport.txt",
+      "NON_AGENT_BuildingPermitExport.txt",
+      "NON_AGENT_BuildingPermitPropertyExport.txt",
+      "NON_AGENT_CommentsExport.txt",
+      "NON_AGENT_EventsExport.txt",
+      "NON_AGENT_ImprovementExport.txt",
+      "NON_AGENT_ImprovementFeaturesExport.txt",
+      "NON_AGENT_IncomeExport.txt",
+      "NON_AGENT_LandExport.txt",
+      "NON_AGENT_PropDataExport.txt",
+      "NON_AGENT_ProtesterExport.txt",
+      "NON_AGENT_SharedPropExport.txt"
+     ]
+    },
+    {
+     "name": "Non-Agent Export File Layout.pdf",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/Non-Agent%20Export%20File%20Layout.pdf",
+     "status": "layout",
+     "site": "BCAD (on request)"
+    }
+   ],
+   "section": "Data exports (on request, via BCAD's FTP server)",
+   "desc": "The Agent Export's files without the three sales files (18 headerless pipe-delimited files)."
+  },
+  {
+   "name": "Property Summary Export",
+   "files": [
+    {
+     "name": "2026 Property Summary Export as of 2026-03-28__1st Notice Run Preliminary.zip",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026%20Property%20Summary%20Export%20as%20of%202026-03-28__1st%20Notice%20Run%20Preliminary.zip",
+     "status": "used",
+     "site": "BCAD (on request)",
+     "note": "The CSV inside has no header line; the profile adds BCAD's header from the header-line file.",
+     "contents": [
+      "2026 Property Summary Export as of 2026-03-28__1st Notice Run Preliminary.csv"
+     ],
+     "export": "ps-2026-03-28"
+    },
+    {
+     "name": "2026 Property Summary Export as of 2026-10-08_Sup 298.zip",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026%20Property%20Summary%20Export%20as%20of%202026-10-08_Sup%20298.zip",
+     "status": "used",
+     "site": "BCAD (on request)",
+     "note": "The CSV inside is dated October 13, 2026.",
+     "contents": [
+      "2026 Property Summary Export as of 2026-10-13_Sup 298.csv"
+     ],
+     "export": "ps-2026-10-08"
+    },
+    {
+     "name": "2025-09-04 Export Property Summary Layout.pdf",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2025-09-04%20Export%20Property%20Summary%20Layout.pdf",
+     "status": "layout",
+     "site": "BCAD (on request)"
+    },
+    {
+     "name": "2025-09-04 Property Summary Export Layout Changes.pdf",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2025-09-04%20Property%20Summary%20Export%20Layout%20Changes.pdf",
+     "status": "layout",
+     "site": "BCAD (on request)"
+    },
+    {
+     "name": "2025-09-04 Property Summary File With Improvements Header line.csv",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2025-09-04%20Property%20Summary%20File%20With%20Improvements%20Header%20line.csv",
+     "status": "layout",
+     "site": "BCAD (on request)"
+    },
+    {
+     "name": "Residential Class.pdf",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/Residential%20Class.pdf",
+     "status": "not",
+     "site": "BCAD (on request)"
+    },
+    {
+     "name": "Commercial Construction Class - Subclass Descriptions.pdf",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/Commercial%20Construction%20Class%20-%20Subclass%20Descriptions.pdf",
+     "status": "not",
+     "site": "BCAD (on request)"
+    }
+   ],
+   "section": "Data exports (on request, via BCAD's FTP server)",
+   "desc": "BCAD's flat one-row-per-property CSV (layout of 2025-09-04), with the layout, its change notes and the class guides."
+  },
+  {
+   "name": "Code lists",
+   "files": [
+    {
+     "name": "2026 Metadata - ARB Status Codes.xlsx",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026%20Metadata%20-%20ARB%20Status%20Codes.xlsx",
+     "status": "layout",
+     "site": "BCAD (on request)"
+    },
+    {
+     "name": "2026 Metadata - BPP Segment Codes.xlsx",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026%20Metadata%20-%20BPP%20Segment%20Codes.xlsx",
+     "status": "layout",
+     "site": "BCAD (on request)"
+    },
+    {
+     "name": "2026 Metadata - Exemption Codes.xlsx",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026%20Metadata%20-%20Exemption%20Codes.xlsx",
+     "status": "layout",
+     "site": "BCAD (on request)"
+    },
+    {
+     "name": "2026 Metadata - Improvement Detail Codes.xlsx",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026%20Metadata%20-%20Improvement%20Detail%20Codes.xlsx",
+     "status": "layout",
+     "site": "BCAD (on request)"
+    },
+    {
+     "name": "2026 Metadata - Improvement SubClass Codes.xlsx",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026%20Metadata%20-%20Improvement%20SubClass%20Codes.xlsx",
+     "status": "layout",
+     "site": "BCAD (on request)"
+    },
+    {
+     "name": "2026 Metadata - Land Type Codes.xlsx",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026%20Metadata%20-%20Land%20Type%20Codes.xlsx",
+     "status": "layout",
+     "site": "BCAD (on request)"
+    },
+    {
+     "name": "2026 Metadata - Property Group Codes.xlsx",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026%20Metadata%20-%20Property%20Group%20Codes.xlsx",
+     "status": "layout",
+     "site": "BCAD (on request)"
+    },
+    {
+     "name": "2026 Metadata - Property Use Codes.xlsx",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026%20Metadata%20-%20Property%20Use%20Codes.xlsx",
+     "status": "layout",
+     "site": "BCAD (on request)"
+    },
+    {
+     "name": "2026 Metadata - State Codes.xlsx",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026%20Metadata%20-%20State%20Codes.xlsx",
+     "status": "layout",
+     "site": "BCAD (on request)"
+    },
+    {
+     "name": "2026 NBHD Codes.xlsx",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026%20NBHD%20Codes.xlsx",
+     "status": "layout",
+     "site": "BCAD (on request)"
+    },
+    {
+     "name": "Improvement attribute codes.xls",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/Improvement%20attribute%20codes.xls",
+     "status": "layout",
+     "site": "BCAD (on request)"
+    }
+   ],
+   "section": "Data exports (on request, via BCAD's FTP server)",
+   "desc": "Lookup workbooks BCAD ships with every export: what the codes in the data files mean."
+  },
+  {
+   "name": "Sales reports and schedules",
+   "files": [
+    {
+     "name": "Single Family Residential Sales Report.pdf",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/Single%20Family%20Residential%20Sales%20Report.pdf",
+     "status": "not",
+     "site": "BCAD (on request)",
+     "drive": "https://drive.google.com/file/d/1rgFeN2iVqwIe9kGI8SEb67NP3V06W61S/view"
+    },
+    {
+     "name": "Multi Family Residence Sales Report.pdf",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/Multi%20Family%20Residence%20Sales%20Report.pdf",
+     "status": "not",
+     "site": "BCAD (on request)",
+     "drive": "https://drive.google.com/file/d/1H3BhJIiU0w7lrTnLGg29IIVzYONkR9NO/view"
+    },
+    {
+     "name": "Land Only Sales Report 2026.pdf",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/Land%20Only%20Sales%20Report%202026.pdf",
+     "status": "not",
+     "site": "BCAD (on request)",
+     "drive": "https://drive.google.com/file/d/1iok8Xi6c7ADRMzLZn4maqj3CKa4TBwQ8/view"
+    },
+    {
+     "name": "TAC Section 552.149b - Confidential Sales Information.pdf",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/TAC%20Section%20552.149b%20-%20Confidential%20Sales%20Information.pdf",
+     "status": "not",
+     "site": "BCAD (on request)",
+     "drive": "https://drive.google.com/file/d/1v3mPuLNDuZuXsJbGlaxgBa12frYol5BE/view"
+    },
+    {
+     "name": "2026 Neighborhood Codes.xlsx",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026%20Neighborhood%20Codes.xlsx",
+     "status": "not",
+     "site": "BCAD (on request)",
+     "drive": "https://drive.google.com/file/d/1PdkFSWNgAARWrmveAl2SyFij3AfilqLt/view"
+    },
+    {
+     "name": "Res Schedules 2026",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/Res%20Schedules%202026",
+     "status": "not",
+     "site": "BCAD (on request)",
+     "note": "11 XML schedule grids (residential, multifamily and manufactured-home improvement schedules)."
+    },
+    {
+     "name": "2026 Land DCF Analysis",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026%20Land%20DCF%20Analysis",
+     "status": "not",
+     "site": "BCAD (on request)",
+     "note": "Land discounted-cash-flow analyses, one PDF per neighborhood."
+    },
+    {
+     "name": "2026_Disclaimer_BCAD_Data_docx.pdf",
+     "url": "https://help.bcad.org/hc/en-us/articles/55264219130899-What-is-a-Public-Information-Act-Request#/2026_Disclaimer_BCAD_Data_docx.pdf",
+     "status": "not",
+     "site": "BCAD (on request)",
+     "drive": "https://drive.google.com/file/d/1JWCL9lyQSLx2W1VQ8ohAjKutMKyyKQYQ/view"
+    }
+   ],
+   "section": "Other files from BCAD",
+   "desc": "Reports and schedules BCAD provided alongside the exports, kept as documents (not profiled)."
+  }
+ ],
+ "tables": {
+  "p26-info": {
+   "download": "ade-2026-03-28",
+   "raw": "2026-03-28_007264_APPRAISAL_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_INFO",
+   "title": "Property Roll"
+  },
+  "p26-entinfo": {
+   "download": "ade-2026-03-28",
+   "raw": "2026-03-28_007264_APPRAISAL_ENTITY_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_ENTITY_INFO",
+   "title": "Values by taxing unit"
+  },
+  "p26-enttot": {
+   "download": "ade-2026-03-28",
+   "raw": "2026-03-28_007264_APPRAISAL_ENTITY_TOTALS.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_ENTITY_TOTALS",
+   "title": "Unit totals"
+  },
+  "p26-entity": {
+   "download": "ade-2026-03-28",
+   "raw": "2026-03-28_007264_APPRAISAL_ENTITY.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_ENTITY",
+   "title": "Unit codes"
+  },
+  "p26-imprinfo": {
+   "download": "ade-2026-03-28",
+   "raw": "2026-03-28_007264_APPRAISAL_IMPROVEMENT_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_IMPROVEMENT_INFO",
+   "title": "Improvements"
+  },
+  "p26-imprdet": {
+   "download": "ade-2026-03-28",
+   "raw": "2026-03-28_007264_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_IMPROVEMENT_DETAIL",
+   "title": "Improvement details"
+  },
+  "p26-imprattr": {
+   "download": "ade-2026-03-28",
+   "raw": "2026-03-28_007264_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_IMPROVEMENT_DETAIL_ATTR",
+   "title": "Detail attributes"
+  },
+  "p26-mobile": {
+   "download": "ade-2026-03-28",
+   "raw": "2026-03-28_007264_APPRAISAL_MOBILE_HOME_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_MOBILE_HOME_INFO",
+   "title": "Mobile homes"
+  },
+  "p26-land": {
+   "download": "ade-2026-03-28",
+   "raw": "2026-03-28_007264_APPRAISAL_LAND_DETAIL.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_LAND_DETAIL",
+   "title": "Land"
+  },
+  "p26-defer": {
+   "download": "ade-2026-03-28",
+   "raw": "2026-03-28_007264_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_TAX_DEFERRAL_INFO",
+   "title": "Tax deferrals"
+  },
+  "p26-arb": {
+   "download": "ade-2026-03-28",
+   "raw": "2026-03-28_007264_APPRAISAL_ARB.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_ARB",
+   "title": "ARB protests"
+  },
+  "p26-lawsuit": {
+   "download": "ade-2026-03-28",
+   "raw": "2026-03-28_007264_APPRAISAL_LAWSUIT.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_LAWSUIT",
+   "title": "Lawsuits"
+  },
+  "p26-arblaw": {
+   "download": "ade-2026-03-28",
+   "raw": "2026-03-28_007264_ARBITRATION_LAWSUIT.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · ARBITRATION_LAWSUIT",
+   "title": "Arbitration"
+  },
+  "p26-agent": {
+   "download": "ade-2026-03-28",
+   "raw": "2026-03-28_007264_APPRAISAL_AGENT.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_AGENT",
+   "title": "Agents"
+  },
+  "p26-abs": {
+   "download": "ade-2026-03-28",
+   "raw": "2026-03-28_007264_APPRAISAL_ABSTRACT_SUBDV.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_ABSTRACT_SUBDV",
+   "title": "Abstracts & subdivisions"
+  },
+  "p26-state": {
+   "download": "ade-2026-03-28",
+   "raw": "2026-03-28_007264_APPRAISAL_STATE_CODE.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_STATE_CODE",
+   "title": "State codes"
+  },
+  "p26-country": {
+   "download": "ade-2026-03-28",
+   "raw": "2026-03-28_007264_APPRAISAL_COUNTRY_CODE.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_COUNTRY_CODE",
+   "title": "Country codes"
+  },
+  "p26-header": {
+   "download": "ade-2026-03-28",
+   "raw": "2026-03-28_007264_APPRAISAL_HEADER.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_HEADER",
+   "title": "Export header"
+  },
+  "s26-info": {
+   "download": "ade-2026-10-08",
+   "raw": "2026-10-15_007456_APPRAISAL_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_INFO",
+   "title": "Property Roll"
+  },
+  "s26-entinfo": {
+   "download": "ade-2026-10-08",
+   "raw": "2026-10-15_007456_APPRAISAL_ENTITY_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_ENTITY_INFO",
+   "title": "Values by taxing unit"
+  },
+  "s26-enttot": {
+   "download": "ade-2026-10-08",
+   "raw": "2026-10-15_007456_APPRAISAL_ENTITY_TOTALS.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_ENTITY_TOTALS",
+   "title": "Unit totals"
+  },
+  "s26-entity": {
+   "download": "ade-2026-10-08",
+   "raw": "2026-10-15_007456_APPRAISAL_ENTITY.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_ENTITY",
+   "title": "Unit codes"
+  },
+  "s26-imprinfo": {
+   "download": "ade-2026-10-08",
+   "raw": "2026-10-15_007456_APPRAISAL_IMPROVEMENT_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_IMPROVEMENT_INFO",
+   "title": "Improvements"
+  },
+  "s26-imprdet": {
+   "download": "ade-2026-10-08",
+   "raw": "2026-10-15_007456_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_IMPROVEMENT_DETAIL",
+   "title": "Improvement details"
+  },
+  "s26-imprattr": {
+   "download": "ade-2026-10-08",
+   "raw": "2026-10-15_007456_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_IMPROVEMENT_DETAIL_ATTR",
+   "title": "Detail attributes"
+  },
+  "s26-mobile": {
+   "download": "ade-2026-10-08",
+   "raw": "2026-10-15_007456_APPRAISAL_MOBILE_HOME_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_MOBILE_HOME_INFO",
+   "title": "Mobile homes"
+  },
+  "s26-land": {
+   "download": "ade-2026-10-08",
+   "raw": "2026-10-15_007456_APPRAISAL_LAND_DETAIL.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_LAND_DETAIL",
+   "title": "Land"
+  },
+  "s26-defer": {
+   "download": "ade-2026-10-08",
+   "raw": "2026-10-15_007456_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_TAX_DEFERRAL_INFO",
+   "title": "Tax deferrals"
+  },
+  "s26-arb": {
+   "download": "ade-2026-10-08",
+   "raw": "2026-10-15_007456_APPRAISAL_ARB.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_ARB",
+   "title": "ARB protests"
+  },
+  "s26-lawsuit": {
+   "download": "ade-2026-10-08",
+   "raw": "2026-10-15_007456_APPRAISAL_LAWSUIT.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_LAWSUIT",
+   "title": "Lawsuits"
+  },
+  "s26-arblaw": {
+   "download": "ade-2026-10-08",
+   "raw": "2026-10-15_007456_ARBITRATION_LAWSUIT.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · ARBITRATION_LAWSUIT",
+   "title": "Arbitration"
+  },
+  "s26-agent": {
+   "download": "ade-2026-10-08",
+   "raw": "2026-10-15_007456_APPRAISAL_AGENT.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_AGENT",
+   "title": "Agents"
+  },
+  "s26-abs": {
+   "download": "ade-2026-10-08",
+   "raw": "2026-10-15_007456_APPRAISAL_ABSTRACT_SUBDV.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_ABSTRACT_SUBDV",
+   "title": "Abstracts & subdivisions"
+  },
+  "s26-state": {
+   "download": "ade-2026-10-08",
+   "raw": "2026-10-15_007456_APPRAISAL_STATE_CODE.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_STATE_CODE",
+   "title": "State codes"
+  },
+  "s26-country": {
+   "download": "ade-2026-10-08",
+   "raw": "2026-10-15_007456_APPRAISAL_COUNTRY_CODE.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_COUNTRY_CODE",
+   "title": "Country codes"
+  },
+  "s26-header": {
+   "download": "ade-2026-10-08",
+   "raw": "2026-10-15_007456_APPRAISAL_HEADER.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_HEADER",
+   "title": "Export header"
+  },
+  "ag-propdata": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_PropDataExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "Property data"
+  },
+  "ag-notice": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_ApprNoticeExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "Appraisal notices"
+  },
+  "ag-comments": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_CommentsExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "Comments"
+  },
+  "ag-events": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_EventsExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "Events"
+  },
+  "ag-shared": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_SharedPropExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "Shared properties"
+  },
+  "ag-impr": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_ImprovementExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "Improvements"
+  },
+  "ag-feat": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_ImprovementFeaturesExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "Improvement features"
+  },
+  "ag-income": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_IncomeExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "Income"
+  },
+  "ag-land": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_LandExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "Oct 26 · agent export"
+  },
+  "ag-sales": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_SalesExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "Sales"
+  },
+  "ag-saleland": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_SalesLandExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "Sale land"
+  },
+  "ag-saleimpr": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_SalesImprovementExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "Sale improvements"
+  },
+  "ag-bpp": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_BPPExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "BPP segments"
+  },
+  "ag-bpplink": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_BPPRealLinkExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "BPP to real link"
+  },
+  "ag-permit": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_BuildingPermitExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "Permits"
+  },
+  "ag-permitprop": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_BuildingPermitPropertyExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "Permit to property"
+  },
+  "ag-arb": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_ARBExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "ARB protests"
+  },
+  "ag-arbletter": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_ARBLetterHistory.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "ARB letters"
+  },
+  "ag-protester": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_ProtesterExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "Protesters"
+  },
+  "ag-inq": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_ARBInquiryExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "Inquiries"
+  },
+  "ag-inqletter": {
+   "download": "agent-2026-10-26",
+   "raw": "FID_ARBInquiryLetterHistory.txt",
+   "layout": "Agent Export File Layout for Agents.pdf",
+   "title": "Inquiry letters"
+  },
+  "ps26a": {
+   "download": "ps-2026-03-28",
+   "raw": "2026 Property Summary Export as of 2026-03-28__1st Notice Run Preliminary.csv",
+   "layout": "2025-09-04 Export Property Summary Layout.pdf (header from 2025-09-04 Property Summary File With Improvements Header line.csv)",
+   "title": "Property Summary"
+  },
+  "ps26s": {
+   "download": "ps-2026-10-08",
+   "raw": "2026 Property Summary Export as of 2026-10-13_Sup 298.csv",
+   "layout": "2025-09-04 Export Property Summary Layout.pdf",
+   "title": "Property Summary"
+  }
+ },
+ "drive": {
+  "label": "Google Drive · Bexar › Public Information",
+  "checked": "2026-11-27",
+  "url": "https://drive.google.com/drive/folders/19F359bUO1ffO8lGPQ0008TugCJ3K5I5s"
+ }
+}

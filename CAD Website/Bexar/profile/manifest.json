@@ -1,9 +1,9 @@
 {
  "title": "Bexar Property Data Profile",
- "eyebrow": "Bexar Appraisal District · Website data exports",
+ "eyebrow": "Bexar Appraisal District · Data exports (on request)",
  "intro": "Everything Bexar Appraisal District gives us as bulk files, from three exports: the PACS <b>Appraisal Export</b> (18 files, two snapshots: the March 28 first-notice preliminary roll and the October 15 export as of supplement 298), the <b>Agent Export</b> (21 CSV files, October 26) and the <b>Property Summary</b> file (March 28 and October 13). The year switch on every tab picks the snapshot. For each file you get its columns, data types, completeness, value distributions and 100 sample rows.",
  "store_key": "bexar-view",
- "foot": "Generated {date}. Files were scanned in full with DuckDB. The PACS files are read from the gzipped CSVs that <code>etl/bexar_appraisal_export_etl.py</code> writes from the raw fixed-width .TXT files, using BCAD's own 8.0.34 layout workbook (the March export is 8.0.0.33, the same layout without the FEED fields); the Agent Export and Property Summary CSVs are read as published. \"Auto-detected on load\" is the type DuckDB assigns, and distinct counts there are approximate (HyperLogLog). \"Data type\" is inferred from the values: Code means digits stored as text with leading zeros.",
+ "foot": "Generated {date}. Files were scanned in full with DuckDB. The PACS files are converted from the raw fixed-width .TXT files to CSV using BCAD's own 8.0.34 layout workbook (the March export is 8.0.0.33, the same layout without the FEED fields); the Agent Export and Property Summary files are read as published. \"Auto-detected on load\" is the type DuckDB assigns, and distinct counts there are approximate (HyperLogLog). \"Data type\" is inferred from the values: Code means digits stored as text with leading zeros.",
  "max_year": 2026,
  "root": "/Users/user2/PTP/CAD Website/Bexar/",
  "sample": {
@@ -810,7 +810,9 @@
     "795,468 rows, one per <code>prop_id</code> (no property has more than one owner row): 730,947 real, 45,005 personal, 18,178 mobile home and 1,338 mineral.",
     "<code>sup_num</code> is 0 on every row (preliminary roll). <code>arb_protest_flag</code> is T on only 1 row: the export ran March 28, before protests opened.",
     "<code>market_value</code>, <code>appraised_val</code> and <code>assessed_val</code> are exactly 100 on 11,470 rows: BCAD's minimum value, not a real appraisal. 123,493 rows have an appraisal agent (<code>ca_agent_id</code>) and 132,154 an ARB agent; no agent is written <code>000000000000</code>, and every id is in the Agents file. <code>deed_dt</code> is <code>MMDDYYYY</code> with no separators (1881–2026)."
-   ]
+   ],
+   "raw": "2026-03-28_007264_APPRAISAL_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_INFO"
   },
   "p26-entinfo": {
    "path": "output/2026-03-28_2026_APPRAISAL_ENTITY_INFO.csv.gz",
@@ -825,7 +827,9 @@
     "6,429,129 rows: one per property, owner and taxing unit, about 8 units per property and up to 62. Every property on the roll has rows here.",
     "Value columns are the values for that unit, so they can differ from the roll (partial units, unit-specific exemptions). Most <code>*_amt</code> and every <code>*_allocation_factor</code> column is zero or 1.0 on almost every row.",
     "<code>filler_134</code> is unnamed in BCAD's layout but holds a T/F flag (T on 627 rows in October, 8 in March)."
-   ]
+   ],
+   "raw": "2026-03-28_007264_APPRAISAL_ENTITY_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_ENTITY_INFO"
   },
   "p26-enttot": {
    "path": "output/2026-03-28_2026_APPRAISAL_ENTITY_TOTALS.csv.gz",
@@ -837,7 +841,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "170 taxing units, one row each. Totals are roll-wide per unit; many exemption columns are zero for every unit."
-   ]
+   ],
+   "raw": "2026-03-28_007264_APPRAISAL_ENTITY_TOTALS.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_ENTITY_TOTALS"
   },
   "p26-entity": {
    "path": "output/2026-03-28_2026_APPRAISAL_ENTITY.csv.gz",
@@ -849,7 +855,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "170 unit ids. Codes are CAD (the appraisal district) and 2-digit numbers; the names are in Unit totals (<code>entity_name</code>)."
-   ]
+   ],
+   "raw": "2026-03-28_007264_APPRAISAL_ENTITY.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_ENTITY"
   },
   "p26-imprinfo": {
    "path": "output/2026-03-28_2026_APPRAISAL_IMPROVEMENT_INFO.csv.gz",
@@ -862,7 +870,9 @@
    "notes": [
     "Every number is zero-padded text (<code>000000000070931</code>); the page profiles value columns as numbers, but load them as text or cast them yourself. <code>prop_id</code> is 12 digits with leading zeros.",
     "1,131,482 improvements on 671,814 properties. <code>imprv_type_cd</code> R residential, C commercial, M mobile home are most rows."
-   ]
+   ],
+   "raw": "2026-03-28_007264_APPRAISAL_IMPROVEMENT_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_IMPROVEMENT_INFO"
   },
   "p26-imprdet": {
    "path": "output/2026-03-28_2026_APPRAISAL_IMPROVEMENT_DETAIL.csv.gz",
@@ -876,7 +886,9 @@
     "Every number is zero-padded text (<code>000000000070931</code>); the page profiles value columns as numbers, but load them as text or cast them yourself. <code>prop_id</code> is 12 digits with leading zeros.",
     "3,246,627 segments. <code>imprv_det_type_cd</code> codes: LA living area, LA2 second floor, OP open porch, AG attached garage, PA patio. Decode them with <code>2026 Metadata - Improvement Detail Codes.xlsx</code>.",
     "<code>sketch_cmds</code> holds the legacy sketch drawing commands on 86% of rows (Bexar's export has no separate sketch file)."
-   ]
+   ],
+   "raw": "2026-03-28_007264_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_IMPROVEMENT_DETAIL"
   },
   "p26-imprattr": {
    "path": "output/2026-03-28_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.csv.gz",
@@ -889,7 +901,9 @@
    "notes": [
     "Every number is zero-padded text (<code>000000000070931</code>); the page profiles value columns as numbers, but load them as text or cast them yourself. <code>prop_id</code> is 12 digits with leading zeros.",
     "One row per attribute: <code>imprv_attr_desc</code> names it (foundation, roof, exterior wall ...) and <code>imprv_attr_cd</code> holds the code; see <code>Improvement attribute codes.xls</code>."
-   ]
+   ],
+   "raw": "2026-03-28_007264_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_IMPROVEMENT_DETAIL_ATTR"
   },
   "p26-mobile": {
    "path": "output/2026-03-28_2026_APPRAISAL_MOBILE_HOME_INFO.csv.gz",
@@ -902,7 +916,9 @@
    "notes": [
     "Every number is zero-padded text (<code>000000000070931</code>); the page profiles value columns as numbers, but load them as text or cast them yourself. <code>prop_id</code> is 12 digits with leading zeros.",
     "Mobile-home detail for improvements of type M. Title numbers are on only 3% of rows."
-   ]
+   ],
+   "raw": "2026-03-28_007264_APPRAISAL_MOBILE_HOME_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_MOBILE_HOME_INFO"
   },
   "p26-land": {
    "path": "output/2026-03-28_2026_APPRAISAL_LAND_DETAIL.csv.gz",
@@ -915,7 +931,9 @@
    "notes": [
     "Every number is zero-padded text (<code>000000000070931</code>); the page profiles value columns as numbers, but load them as text or cast them yourself. <code>prop_id</code> is 12 digits with leading zeros.",
     "772,129 land segments on 728,496 properties. <code>size_acres</code> carries 4 implied decimals (<code>00000000001377</code> = 0.1377 ac)."
-   ]
+   ],
+   "raw": "2026-03-28_007264_APPRAISAL_LAND_DETAIL.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_LAND_DETAIL"
   },
   "p26-defer": {
    "path": "output/2026-03-28_2026_APPRAISAL_TAX_DEFERRAL_INFO.csv.gz",
@@ -927,7 +945,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "Over-65 / disabled tax deferrals: these owners are not paying tax now, so a protest saves them little today."
-   ]
+   ],
+   "raw": "2026-03-28_007264_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_TAX_DEFERRAL_INFO"
   },
   "p26-arb": {
    "path": "output/2026-03-28_2026_APPRAISAL_ARB.csv.gz",
@@ -939,7 +959,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "Only 400 rows, almost all older protests still open (<code>arb_status</code> OP for 2020–2025): the March export ran before 2026 protests were filed. The Agent Export's ARB file has every protest."
-   ]
+   ],
+   "raw": "2026-03-28_007264_APPRAISAL_ARB.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_ARB"
   },
   "p26-lawsuit": {
    "path": "output/2026-03-28_2026_APPRAISAL_LAWSUIT.csv.gz",
@@ -951,7 +973,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "Properties under a value lawsuit, tax years 2013–2025 (3,183 properties)."
-   ]
+   ],
+   "raw": "2026-03-28_007264_APPRAISAL_LAWSUIT.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_LAWSUIT"
   },
   "p26-arblaw": {
    "path": "output/2026-03-28_2026_ARBITRATION_LAWSUIT.csv.gz",
@@ -963,7 +987,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "18 properties in binding arbitration in March."
-   ]
+   ],
+   "raw": "2026-03-28_007264_ARBITRATION_LAWSUIT.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · ARBITRATION_LAWSUIT"
   },
   "p26-agent": {
    "path": "output/2026-03-28_2026_APPRAISAL_AGENT.csv.gz",
@@ -975,7 +1001,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "11,111 agents. Every agent id on the property roll is here."
-   ]
+   ],
+   "raw": "2026-03-28_007264_APPRAISAL_AGENT.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_AGENT"
   },
   "p26-abs": {
    "path": "output/2026-03-28_2026_APPRAISAL_ABSTRACT_SUBDV.csv.gz",
@@ -987,7 +1015,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "Six lines break inside a description, so a few records read as two lines in the raw file (the ETL keeps them as they are)."
-   ]
+   ],
+   "raw": "2026-03-28_007264_APPRAISAL_ABSTRACT_SUBDV.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_ABSTRACT_SUBDV"
   },
   "p26-state": {
    "path": "output/2026-03-28_2026_APPRAISAL_STATE_CODE.csv.gz",
@@ -999,7 +1029,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "The 2026 state-code table. Several codes are marked NOT IN USE."
-   ]
+   ],
+   "raw": "2026-03-28_007264_APPRAISAL_STATE_CODE.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_STATE_CODE"
   },
   "p26-country": {
    "path": "output/2026-03-28_2026_APPRAISAL_COUNTRY_CODE.csv.gz",
@@ -1011,7 +1043,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "Country codes for mailing addresses."
-   ]
+   ],
+   "raw": "2026-03-28_007264_APPRAISAL_COUNTRY_CODE.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_COUNTRY_CODE"
   },
   "p26-header": {
    "path": "output/2026-03-28_2026_APPRAISAL_HEADER.csv.gz",
@@ -1023,7 +1057,9 @@
    "encoding": "Gzipped CSV, UTF-8 (from fixed-width PACS .TXT)",
    "notes": [
     "<code>pacs_version</code> / <code>export_version</code>: March is 8.51.2.6 / 8.0.0.33, October 8.52.0.14 / 8.0.0.34."
-   ]
+   ],
+   "raw": "2026-03-28_007264_APPRAISAL_HEADER.TXT",
+   "layout": "Appraisal Export Layout - 8.0.31.xlsx (shipped with this export; the header says 8.0.0.33) · APPRAISAL_HEADER"
   },
   "s26-info": {
    "path": "output/2026-10-15_2026_APPRAISAL_INFO.csv.gz",
@@ -1041,7 +1077,9 @@
     "Version 8.0.0.34 adds the FEED (animal feed) exemption fields at the end of the record; they are F / blank everywhere."
    ],
    "compare": "p26-info",
-   "compareLabel": "the Mar 28 prelim export"
+   "compareLabel": "the Mar 28 prelim export",
+   "raw": "2026-10-15_007456_APPRAISAL_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_INFO"
   },
   "s26-entinfo": {
    "path": "output/2026-10-15_2026_APPRAISAL_ENTITY_INFO.csv.gz",
@@ -1058,7 +1096,9 @@
     "<code>filler_134</code> is unnamed in BCAD's layout but holds a T/F flag (T on 627 rows in October, 8 in March)."
    ],
    "compare": "p26-entinfo",
-   "compareLabel": "the Mar 28 prelim export"
+   "compareLabel": "the Mar 28 prelim export",
+   "raw": "2026-10-15_007456_APPRAISAL_ENTITY_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_ENTITY_INFO"
   },
   "s26-enttot": {
    "path": "output/2026-10-15_2026_APPRAISAL_ENTITY_TOTALS.csv.gz",
@@ -1072,7 +1112,9 @@
     "170 taxing units, one row each. Totals are roll-wide per unit; many exemption columns are zero for every unit."
    ],
    "compare": "p26-enttot",
-   "compareLabel": "the Mar 28 prelim export"
+   "compareLabel": "the Mar 28 prelim export",
+   "raw": "2026-10-15_007456_APPRAISAL_ENTITY_TOTALS.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_ENTITY_TOTALS"
   },
   "s26-entity": {
    "path": "output/2026-10-15_2026_APPRAISAL_ENTITY.csv.gz",
@@ -1086,7 +1128,9 @@
     "170 unit ids. Codes are CAD (the appraisal district) and 2-digit numbers; the names are in Unit totals (<code>entity_name</code>)."
    ],
    "compare": "p26-entity",
-   "compareLabel": "the Mar 28 prelim export"
+   "compareLabel": "the Mar 28 prelim export",
+   "raw": "2026-10-15_007456_APPRAISAL_ENTITY.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_ENTITY"
   },
   "s26-imprinfo": {
    "path": "output/2026-10-15_2026_APPRAISAL_IMPROVEMENT_INFO.csv.gz",
@@ -1101,7 +1145,9 @@
     "1,131,813 improvements on 672,003 properties."
    ],
    "compare": "p26-imprinfo",
-   "compareLabel": "the Mar 28 prelim export"
+   "compareLabel": "the Mar 28 prelim export",
+   "raw": "2026-10-15_007456_APPRAISAL_IMPROVEMENT_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_IMPROVEMENT_INFO"
   },
   "s26-imprdet": {
    "path": "output/2026-10-15_2026_APPRAISAL_IMPROVEMENT_DETAIL.csv.gz",
@@ -1117,7 +1163,9 @@
     "<code>sketch_cmds</code> holds the legacy sketch drawing commands on 86% of rows (Bexar's export has no separate sketch file)."
    ],
    "compare": "p26-imprdet",
-   "compareLabel": "the Mar 28 prelim export"
+   "compareLabel": "the Mar 28 prelim export",
+   "raw": "2026-10-15_007456_APPRAISAL_IMPROVEMENT_DETAIL.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_IMPROVEMENT_DETAIL"
   },
   "s26-imprattr": {
    "path": "output/2026-10-15_2026_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.csv.gz",
@@ -1132,7 +1180,9 @@
     "One row per attribute: <code>imprv_attr_desc</code> names it (foundation, roof, exterior wall ...) and <code>imprv_attr_cd</code> holds the code; see <code>Improvement attribute codes.xls</code>."
    ],
    "compare": "p26-imprattr",
-   "compareLabel": "the Mar 28 prelim export"
+   "compareLabel": "the Mar 28 prelim export",
+   "raw": "2026-10-15_007456_APPRAISAL_IMPROVEMENT_DETAIL_ATTR.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_IMPROVEMENT_DETAIL_ATTR"
   },
   "s26-mobile": {
    "path": "output/2026-10-15_2026_APPRAISAL_MOBILE_HOME_INFO.csv.gz",
@@ -1147,7 +1197,9 @@
     "Mobile-home detail for improvements of type M. Title numbers are on only 3% of rows."
    ],
    "compare": "p26-mobile",
-   "compareLabel": "the Mar 28 prelim export"
+   "compareLabel": "the Mar 28 prelim export",
+   "raw": "2026-10-15_007456_APPRAISAL_MOBILE_HOME_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_MOBILE_HOME_INFO"
   },
   "s26-land": {
    "path": "output/2026-10-15_2026_APPRAISAL_LAND_DETAIL.csv.gz",
@@ -1162,7 +1214,9 @@
     "772,079 land segments on 728,457 properties. <code>effective_front</code> and <code>effective_depth</code> are zero on 59% of segments."
    ],
    "compare": "p26-land",
-   "compareLabel": "the Mar 28 prelim export"
+   "compareLabel": "the Mar 28 prelim export",
+   "raw": "2026-10-15_007456_APPRAISAL_LAND_DETAIL.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_LAND_DETAIL"
   },
   "s26-defer": {
    "path": "output/2026-10-15_2026_APPRAISAL_TAX_DEFERRAL_INFO.csv.gz",
@@ -1176,7 +1230,9 @@
     "Over-65 / disabled tax deferrals: these owners are not paying tax now, so a protest saves them little today."
    ],
    "compare": "p26-defer",
-   "compareLabel": "the Mar 28 prelim export"
+   "compareLabel": "the Mar 28 prelim export",
+   "raw": "2026-10-15_007456_APPRAISAL_TAX_DEFERRAL_INFO.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_TAX_DEFERRAL_INFO"
   },
   "s26-arb": {
    "path": "output/2026-10-15_2026_APPRAISAL_ARB.csv.gz",
@@ -1190,7 +1246,9 @@
     "1,114 rows: 2026 protests still open or rescheduled at the October export (OP 495, CG 228, RO 67 ...) plus open prior-year cases. Use the Agent Export's ARB file for outcomes."
    ],
    "compare": "p26-arb",
-   "compareLabel": "the Mar 28 prelim export"
+   "compareLabel": "the Mar 28 prelim export",
+   "raw": "2026-10-15_007456_APPRAISAL_ARB.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_ARB"
   },
   "s26-lawsuit": {
    "path": "output/2026-10-15_2026_APPRAISAL_LAWSUIT.csv.gz",
@@ -1204,7 +1262,9 @@
     "Tax years 2013–2026, 3,847 properties."
    ],
    "compare": "p26-lawsuit",
-   "compareLabel": "the Mar 28 prelim export"
+   "compareLabel": "the Mar 28 prelim export",
+   "raw": "2026-10-15_007456_APPRAISAL_LAWSUIT.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_LAWSUIT"
   },
   "s26-arblaw": {
    "path": "output/2026-10-15_2026_ARBITRATION_LAWSUIT.csv.gz",
@@ -1218,7 +1278,9 @@
     "950 properties in binding arbitration by October (all 2026 cases)."
    ],
    "compare": "p26-arblaw",
-   "compareLabel": "the Mar 28 prelim export"
+   "compareLabel": "the Mar 28 prelim export",
+   "raw": "2026-10-15_007456_ARBITRATION_LAWSUIT.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · ARBITRATION_LAWSUIT"
   },
   "s26-agent": {
    "path": "output/2026-10-15_2026_APPRAISAL_AGENT.csv.gz",
@@ -1232,7 +1294,9 @@
     "11,374 agents. Every agent id on the property roll is here."
    ],
    "compare": "p26-agent",
-   "compareLabel": "the Mar 28 prelim export"
+   "compareLabel": "the Mar 28 prelim export",
+   "raw": "2026-10-15_007456_APPRAISAL_AGENT.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_AGENT"
   },
   "s26-abs": {
    "path": "output/2026-10-15_2026_APPRAISAL_ABSTRACT_SUBDV.csv.gz",
@@ -1246,7 +1310,9 @@
     "Six lines break inside a description, so a few records read as two lines in the raw file (the ETL keeps them as they are)."
    ],
    "compare": "p26-abs",
-   "compareLabel": "the Mar 28 prelim export"
+   "compareLabel": "the Mar 28 prelim export",
+   "raw": "2026-10-15_007456_APPRAISAL_ABSTRACT_SUBDV.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_ABSTRACT_SUBDV"
   },
   "s26-state": {
    "path": "output/2026-10-15_2026_APPRAISAL_STATE_CODE.csv.gz",
@@ -1260,7 +1326,9 @@
     "The 2026 state-code table. Several codes are marked NOT IN USE."
    ],
    "compare": "p26-state",
-   "compareLabel": "the Mar 28 prelim export"
+   "compareLabel": "the Mar 28 prelim export",
+   "raw": "2026-10-15_007456_APPRAISAL_STATE_CODE.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_STATE_CODE"
   },
   "s26-country": {
    "path": "output/2026-10-15_2026_APPRAISAL_COUNTRY_CODE.csv.gz",
@@ -1274,7 +1342,9 @@
     "Country codes for mailing addresses."
    ],
    "compare": "p26-country",
-   "compareLabel": "the Mar 28 prelim export"
+   "compareLabel": "the Mar 28 prelim export",
+   "raw": "2026-10-15_007456_APPRAISAL_COUNTRY_CODE.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_COUNTRY_CODE"
   },
   "s26-header": {
    "path": "output/2026-10-15_2026_APPRAISAL_HEADER.csv.gz",
@@ -1288,7 +1358,9 @@
     "<code>pacs_version</code> / <code>export_version</code>: March is 8.51.2.6 / 8.0.0.33, October 8.52.0.14 / 8.0.0.34."
    ],
    "compare": "p26-header",
-   "compareLabel": "the Mar 28 prelim export"
+   "compareLabel": "the Mar 28 prelim export",
+   "raw": "2026-10-15_007456_APPRAISAL_HEADER.TXT",
+   "layout": "Appraisal Export Layout - 8.0.34.xlsx · APPRAISAL_HEADER"
   },
   "ag-propdata": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_PropDataExport.csv",
@@ -1299,10 +1371,12 @@
    "about": "One row per property and year: year built, living area, land size, region, neighborhood, map id, appraisers and comments.",
    "encoding": "CSV, UTF-8",
    "notes": [
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "807,201 rows, one per property, all <code>Year</code> 2026. 12,287 Property IDs are not in the October 15 PACS roll (properties created or deleted after that export).",
     "<code>Valuation Method Code</code> says how BCAD valued the property (C cost, I income, A ARB, D distributed, S shared); the PACS export does not have it. <code>Zoning</code> is only here."
-   ]
+   ],
+   "raw": "FID_PropDataExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-notice": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_ApprNoticeExport.csv",
@@ -1313,10 +1387,12 @@
    "about": "One row per appraisal notice: this year's and last year's appraised, assessed, market, land, improvement, ag and cap values, and exemptions.",
    "encoding": "CSV, UTF-8",
    "notes": [
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "252,587 notices for 217,343 properties, all <code>Notice_yr</code> 2026: only properties that got a notice of appraised value. A property can have several notices (<code>Notice_num</code>).",
     "Timber columns are zero on every row."
-   ]
+   ],
+   "raw": "FID_ApprNoticeExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-comments": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_CommentsExport.csv",
@@ -1327,9 +1403,11 @@
    "about": "Free-text appraiser and property comments, one row per comment.",
    "encoding": "CSV, UTF-8",
    "notes": [
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "676,829 comments. Long comments were written over several lines by BCAD and are joined into one value."
-   ]
+   ],
+   "raw": "FID_CommentsExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-events": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_EventsExport.csv",
@@ -1340,9 +1418,11 @@
    "about": "Property history events: date, event type code and description (value changes, e-file, exemption actions ...).",
    "encoding": "CSV, UTF-8",
    "notes": [
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "4,460,518 events, all <code>Event Year</code> 2026."
-   ]
+   ],
+   "raw": "FID_EventsExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-shared": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_SharedPropExport.csv",
@@ -1353,9 +1433,11 @@
    "about": "Properties that sit in two counties, with the other appraisal district's code and property id.",
    "encoding": "CSV, UTF-8",
    "notes": [
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "421 properties that also sit in a neighboring appraisal district."
-   ]
+   ],
+   "raw": "FID_SharedPropExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-impr": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_ImprovementExport.csv",
@@ -1366,10 +1448,12 @@
    "about": "One row per improvement segment (detail): improvement type, state code, year built, depreciation, class, method, unit price, area and values.",
    "encoding": "CSV, UTF-8",
    "notes": [
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "3,271,380 segment rows for 676,597 properties, all 2026: one row per improvement <b>detail</b>, so improvement-level columns repeat on each detail.",
     "<code>Effective Year Built</code> has typo years up to 2077 and zeros."
-   ]
+   ],
+   "raw": "FID_ImprovementExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-feat": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_ImprovementFeaturesExport.csv",
@@ -1380,9 +1464,11 @@
    "about": "One row per feature of an improvement segment: feature type (exterior wall, roof, use category ...) and its code.",
    "encoding": "CSV, UTF-8",
    "notes": [
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "5,618,902 rows: <code>Feature Type</code> + <code>Feature Description</code> pairs per improvement detail."
-   ]
+   ],
+   "raw": "FID_ImprovementFeaturesExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-income": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_IncomeExport.csv",
@@ -1393,9 +1479,11 @@
    "about": "Income-approach records for commercial properties: economic area, property type, class, building and net rentable area, property name.",
    "encoding": "CSV, UTF-8",
    "notes": [
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "14,133 commercial properties with an income worksheet, one row each."
-   ]
+   ],
+   "raw": "FID_IncomeExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-land": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_LandExport.csv",
@@ -1406,9 +1494,11 @@
    "about": "One row per land segment: state code, land type, size in sq ft and acres, pricing method and table, unit price, market and ag values.",
    "encoding": "CSV, UTF-8",
    "notes": [
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "942,063 land segments for 733,429 properties, all 2026. Adds unit prices and pricing tables that the PACS land file lacks. <code>Ag Loss</code> has a few negative values (down to -430)."
-   ]
+   ],
+   "raw": "FID_LandExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-sales": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_SalesExport.csv",
@@ -1420,10 +1510,12 @@
    "encoding": "CSV, UTF-8",
    "notes": [
     "<b>Confidential:</b> BCAD releases sales under Tex. Gov. Code 552.149(b); they may be used only as evidence at a protest hearing. Do not put sale prices in shared reports.",
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "789,886 rows for 772,880 sales (a sale can cover several properties); 777,264 have a price. Sale dates run 1971–September 24, 2026: 22,114 priced sales in 2025 and 8,455 so far in 2026.",
     "<code>Deed Date</code> and <code>Recorded Date</code> have placeholder and typo dates (1782, 9999-12-31)."
-   ]
+   ],
+   "raw": "FID_SalesExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-saleland": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_SalesLandExport.csv",
@@ -1435,9 +1527,11 @@
    "encoding": "CSV, UTF-8",
    "notes": [
     "<b>Confidential:</b> BCAD releases sales under Tex. Gov. Code 552.149(b); they may be used only as evidence at a protest hearing. Do not put sale prices in shared reports.",
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "Land on each sold property as of the sale year. <code>Year</code> has 1 zero and runs up to 2027."
-   ]
+   ],
+   "raw": "FID_SalesLandExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-saleimpr": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_SalesImprovementExport.csv",
@@ -1449,9 +1543,11 @@
    "encoding": "CSV, UTF-8",
    "notes": [
     "<b>Confidential:</b> BCAD releases sales under Tex. Gov. Code 552.149(b); they may be used only as evidence at a protest hearing. Do not put sale prices in shared reports.",
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "Improvements on each sold property as of the sale year. <code>Year</code> has 3 zeros and runs up to 2027."
-   ]
+   ],
+   "raw": "FID_SalesImprovementExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-bpp": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_BPPExport.csv",
@@ -1462,9 +1558,11 @@
    "about": "One row per BPP segment: segment type, value, quality, density, area and late-rendition penalty.",
    "encoding": "CSV, UTF-8",
    "notes": [
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "146,650 BPP segments, all 2026. Decode <code>Segment_type</code> with <code>2026 Metadata - BPP Segment Codes.xlsx</code>."
-   ]
+   ],
+   "raw": "FID_BPPExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-bpplink": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_BPPRealLinkExport.csv",
@@ -1475,9 +1573,11 @@
    "about": "Each business personal property account and the real property it sits on.",
    "encoding": "CSV, UTF-8",
    "notes": [
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "45,501 links from a business personal property account to the real property it sits on. BCAD's layout lists a third column, <code>Personal_area</code>, which is not in the file."
-   ]
+   ],
+   "raw": "FID_BPPRealLinkExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-permit": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_BuildingPermitExport.csv",
@@ -1488,10 +1588,12 @@
    "about": "One row per permit: issuer, number, dates, type, address, builder, value, appraiser and completion status.",
    "encoding": "CSV, UTF-8",
    "notes": [
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "1,827,963 permits going back decades. <code>Issue Date</code> has typo years (1812, 3038, 9999).",
     "Address fields are blank on two-thirds of permits; join to the property through Permit to property."
-   ]
+   ],
+   "raw": "FID_BuildingPermitExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-permitprop": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_BuildingPermitPropertyExport.csv",
@@ -1502,9 +1604,11 @@
    "about": "Links each permit to the properties it covers.",
    "encoding": "CSV, UTF-8",
    "notes": [
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "1,855,326 permit-to-property links."
-   ]
+   ],
+   "raw": "FID_BuildingPermitPropertyExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-arb": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_ARBExport.csv",
@@ -1515,10 +1619,12 @@
    "about": "One row per protest case: owner, agent, protest type, status and reasons, hearing docket, panel, motions, values before and after, and final decision.",
    "encoding": "CSV, UTF-8",
    "notes": [
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "2,744,831 protest rows from 1998 to 2026 (about 185,000–207,000 a year; 186,062 for 2026), plus 2 rows dated 2027. 4,746 rows repeat a property + year + case.",
     "2026 <code>Protest Status</code>: VA 86,356, ORD.A 41,887, ORD.A-BULK 23,017, EVA 12,967, PFNS 9,849. This is the file behind the Bexar protest scorecard."
-   ]
+   ],
+   "raw": "FID_ARBExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-arbletter": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_ARBLetterHistory.csv",
@@ -1529,9 +1635,11 @@
    "about": "Letters sent on each protest case, with date and time.",
    "encoding": "CSV, UTF-8",
    "notes": [
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "5,347,290 letters on protest cases, 2001–2026."
-   ]
+   ],
+   "raw": "FID_ARBLetterHistory.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-protester": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_ProtesterExport.csv",
@@ -1542,10 +1650,12 @@
    "about": "Who filed each protest case: name, type (owner, agent ...) and whether they are the primary protester.",
    "encoding": "CSV, UTF-8",
    "notes": [
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "2,796,724 rows. For 2026, <code>Protest by Type</code> is AG (agent) on 147,856 cases and OW (owner) on 37,177.",
     "4 rows have <code>Year</code> 0 and 23 rows have <code>Property ID</code> -1."
-   ]
+   ],
+   "raw": "FID_ProtesterExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-inq": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_ARBInquiryExport.csv",
@@ -1556,9 +1666,11 @@
    "about": "One row per informal inquiry case: type, status, reason, comments, appraiser meeting and values before and after.",
    "encoding": "CSV, UTF-8",
    "notes": [
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "279,861 informal inquiries, 1998–2027 (16,516 for 2026), mostly exemption questions. Owner names are <code>CONFIDENTIAL OWNER</code> where protected."
-   ]
+   ],
+   "raw": "FID_ARBInquiryExport.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ag-inqletter": {
    "path": "Data/2026 Agent Export as of 2026-10-26 CSV/FID_ARBInquiryLetterHistory.csv",
@@ -1569,9 +1681,11 @@
    "about": "Letters sent on each inquiry case.",
    "encoding": "CSV, UTF-8",
    "notes": [
-    "Converted from BCAD's pipe-delimited .txt by <code>etl/bexar_agent_export_to_csv.py</code> (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
+    "Converted from BCAD's pipe-delimited .txt to CSV (NUL bytes removed, records split by line breaks joined back, values trimmed). <code>Property ID</code> has no leading zeros: pad to 12 digits to join the PACS files.",
     "62,167 letters on informal inquiries."
-   ]
+   ],
+   "raw": "FID_ARBInquiryLetterHistory.txt",
+   "layout": "Agent Export File Layout for Agents.pdf"
   },
   "ps26a": {
    "path": "output/2026 Property Summary Export as of 2026-03-28__1st Notice Run Preliminary (with header).csv",
@@ -1582,10 +1696,12 @@
    "encoding": "CSV, UTF-8 with BOM",
    "about": "One row per property: owner and mailing address, situs, values (homestead and non-homestead, prior year), school and city, exemptions, main building traits (type, wall, roof, foundation, beds, baths), class, agent.",
    "notes": [
-    "BCAD ships this file <b>without a header row</b> (the header is in <code>2025-09-04 Property Summary File With Improvements Header line.csv</code>); the profiled copy in <code>output/</code> is the file with that header line put on top, nothing else changed.",
+    "BCAD ships this file <b>without a header row</b> (the header is in <code>2025-09-04 Property Summary File With Improvements Header line.csv</code>); the profiled copy is the file with that header line put on top, nothing else changed.",
     "802,073 rows for 800,230 distinct <code>Prop_id</code>. <code>Market_val</code> and the other current-year values are the text <code>NULL</code> on 47,265 rows (prior-year values are filled): BCAD's layout says these values were still in progress.",
     "Text fields are wrapped in an extra pair of double quotes (<code>\"00002-000-0013\"</code>), and the first row's <code>Prop_id</code> starts with a byte-order mark. 5,959 Prop_ids are not in the October PACS roll."
-   ]
+   ],
+   "raw": "2026 Property Summary Export as of 2026-03-28__1st Notice Run Preliminary.csv",
+   "layout": "2025-09-04 Export Property Summary Layout.pdf (header from 2025-09-04 Property Summary File With Improvements Header line.csv)"
   },
   "ps26s": {
    "path": "Data/2026 Property Summary Export as of 2026-10-08_Sup 298/2026 Property Summary Export as of 2026-10-13_Sup 298.csv",
@@ -1601,7 +1717,9 @@
     "Lists such as <code>Imprv_Type</code>, <code>Bedrooms</code> and <code>Whole_Bath</code> hold one entry per improvement, separated by two spaces."
    ],
    "compare": "ps26a",
-   "compareLabel": "the Mar 28 prelim file"
+   "compareLabel": "the Mar 28 prelim file",
+   "raw": "2026 Property Summary Export as of 2026-10-13_Sup 298.csv",
+   "layout": "2025-09-04 Export Property Summary Layout.pdf"
   }
  },
  "descriptions_by_set": {
@@ -2586,7 +2704,7 @@
    "label": "PACS Appraisal Export",
    "sub": "{n} files · every property in the county",
    "start": "s26-info",
-   "desc": "PACS Appraisal Export from the BCAD website, saved in <code>CAD Website/Bexar/Data</code> (one zip per snapshot) and converted to gzipped CSV in <code>output/</code>. Fixed-width source files; every property in the county. <code>prop_id</code> is the BCAD property id used by every other Bexar file.",
+   "desc": "BCAD's PACS Appraisal Export, provided on request through BCAD's FTP server (one zip per snapshot). Fixed-width .TXT files, converted to CSV for profiling with BCAD's own layout workbook; every property in the county. <code>prop_id</code> is the BCAD property id used by every other Bexar file.",
    "groups": [
     {
      "id": "property",
@@ -2800,7 +2918,7 @@
    "label": "Agent Export",
    "sub": "{n} CSV files · every property in the county",
    "start": "ag-propdata",
-   "desc": "BCAD's Agent Export as of October 26, 2026, saved as CSV in <code>Data/2026 Agent Export as of 2026-10-26 CSV</code>. Despite the name it covers every property in the county, and several files reach back to the 1990s. <code>Property ID</code> is the PACS <code>prop_id</code>. The Non-Agent Export of October 21 carries the same files as headerless pipe-delimited text and is not profiled separately.",
+   "desc": "BCAD's Agent Export as of October 26, 2026 (<code>2026 Agent Export as of 2026-10-26.zip</code>, headerless pipe-delimited .txt files, converted to CSV with the column names from BCAD's layout PDF; values are unchanged). Despite the name it covers every property in the county, and several files reach back to the 1990s. <code>Property ID</code> is the PACS <code>prop_id</code>. The Non-Agent Export of October 21 carries the same files minus the three sales files and is not profiled separately.",
    "groups": [
     {
      "id": "ag-prop",
